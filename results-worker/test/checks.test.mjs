@@ -138,7 +138,7 @@ test('tick: a blocked read keeps the previous good read as the baseline', async 
     '/127396/400002/json/en/summary.json': 'clarity-dallas-june.summary.json',
     '/127396/400002/json/en/electionsettings.json': 'clarity-dallas-june.electionsettings.json',
   };
-  const t2 = '2026-11-04T02:01:00.000Z';
+  const t2 = '2026-11-04T02:03:00.000Z'; // a preview-only source is read at most every 3 minutes
   const out = await runTick({ fetch: fakeFetch(wrong), store, archive: null, maps: [map], now: t2 });
   assert.equal(out.ran[0].outcome, 'election mismatch');
   const kept = JSON.parse(await store.get('src:dallas-county-tx'));

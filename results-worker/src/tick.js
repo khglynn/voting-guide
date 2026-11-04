@@ -8,7 +8,7 @@
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
-import { nextEntry, dueSources, clampElectionNight } from './schedule.js';
+import { nextEntry, dueSources, clampElectionNight, previewFloor } from './schedule.js';
 import { fingerprint, mapHash, checkHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
@@ -34,7 +34,7 @@ export async function loadSched(store) {
   return s && s.sources ? s : { sources: {}, meta: {} };
 }
 
-async function runSource({ map, fetch, store, archive, sched, now, ping, log }) {
+async function runSource({ map, fetch, store, archive, sched, now, ping, log, hasTime = () => true }) {
   const adapter = ADAPTERS[map.feed.adapter];
   const S = sched.sources;
   const prevRec = await readJson(store, `src:${map.id}`);
@@ -47,7 +47,8 @@ async function runSource({ map, fetch, store, archive, sched, now, ping, log }) 
   r = await attempt();
   // One quick retry inside the tick for a blip (a timeout, a 5xx, a version whose files aren't up yet); never for a
   // refusal. Election night, Nov 3: three blips in a row parked Bexar in back-off while it posted its first numbers.
-  if (r.verdict === 'error') { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
+  // Not once the tick's clock has run out: the retry would only fail again.
+  if (r.verdict === 'error' && hasTime()) { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
   if (r.verdict === 'refused') {
     S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error, mapHash: mh }, now, map);
     // Stopped, never past it: say so in the log as well as the ping (pings need the Worker secrets).
@@ -202,16 +203,46 @@ export async function checkThroughSite({ maps, fetch, store, sched, now, ping })
   }
 }
 
+/* Each source's schedule entry and each meta key as JSON, to tell later which ones this tick changed. */
+const snapshot = (sched) => ({ sources: Object.fromEntries(Object.entries(sched.sources).map(([k, v]) => [k, JSON.stringify(v)])), meta: Object.fromEntries(Object.entries(sched.meta || {}).map(([k, v]) => [k, JSON.stringify(v)])) });
+
+/* Save only what this tick changed, over what is stored now: a tick that ran long never puts back an older copy of a
+   source another tick ran since (pre-deploy review, Nov 3: an older tick's save could undo a newer tick's refusal and
+   start a stopped source again). KV is eventually consistent across locations, so this guards the common case; the
+   tick's own clock (runTick) is what keeps ticks from overlapping at all. */
+async function saveSched(store, sched, loaded) {
+  const stored = await loadSched(store);
+  const out = { ...sched, sources: { ...stored.sources }, meta: { ...(stored.meta || {}) } };
+  for (const [id, mine] of Object.entries(sched.sources)) {
+    if (loaded.sources[id] === JSON.stringify(mine) && stored.sources[id]) continue; // untouched here: keep the stored one
+    const theirs = stored.sources[id];
+    if (theirs && Date.parse(theirs.last_run || 0) > Date.parse(mine.last_run || 0)) continue; // a newer tick ran it
+    out.sources[id] = mine;
+  }
+  for (const [k, v] of Object.entries(sched.meta || {})) if (loaded.meta[k] !== JSON.stringify(v) || !(k in out.meta)) out.meta[k] = v;
+  for (const k of Object.keys(loaded.meta)) if (!(k in (sched.meta || {}))) delete out.meta[k]; // deleted here (republish)
+  await store.put(SCHED_KEY, JSON.stringify(out));
+}
+
+/* Either signal aborts the request. */
+function both(a, b) {
+  if (typeof AbortSignal.any === 'function') return AbortSignal.any([a, b]);
+  const c = new AbortController();
+  for (const s of [a, b]) { if (s.aborted) { c.abort(s.reason); break; } s.addEventListener('abort', () => c.abort(s.reason), { once: true }); }
+  return c.signal;
+}
+
 /* One cron tick. A failure in one source or one state's file (a KV 429, an R2 5xx, an adapter bug) is logged and
    turned into that source's or that state's error; every other source and state still runs and publishes, and the
    schedule is still saved (overnight review, Nov 3: one throw used to stop every state for that minute). */
-export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, ping: rawPing = async () => false, budgetMs = 40_000, log = console.log }) {
+export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, ping: rawPing = async () => false, budgetMs = 25_000, deadlineMs = 40_000, workers = 6, limit, log = console.log }) {
   // A ping that fails (its KV dedupe key, Slack) never takes a source or a tick down with it.
   const ping = async (...a) => { try { return await rawPing(...a); } catch (e) { log(JSON.stringify({ ping_failed: a.slice(0, 2).join(':'), error: String(e?.message || e) })); return false; } };
   if (!only && (await store.get('stop'))) return { stopped: true };
   const started = Date.now();
   const sched = await loadSched(store);
   sched.meta ??= {};
+  const loaded = snapshot(sched);
   const live = maps.filter((m) => ADAPTERS[m.feed.adapter]);
   // A refusal stops a source until a person acts (overnight review, Nov 3: it used to stay stopped for good). A changed
   // map, which means a deploy, clears it here; a run by hand clears it on a good read (schedule.js).
@@ -228,12 +259,51 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
     }
   }
   const clamped = (!only && clampElectionNight(sched.sources, live, now)) || unstuck;
-  const ids = only ? live.filter((m) => m.id === only).map((m) => m.id) : dueSources(sched.sources, live.map((m) => m.id), now);
+  // Sources whose numbers are public (a first-run check stored) go first; the rest are preview-only (schedule.js).
+  const checkedIds = new Set(Object.keys(sched.meta.checked || {}).filter((k) => sched.meta.checked[k]));
+  const ids = only ? live.filter((m) => m.id === only).map((m) => m.id) : dueSources(sched.sources, live.map((m) => m.id), now, limit, checkedIds);
   const byId = Object.fromEntries(maps.map((m) => [m.id, m]));
-  const ran = (await Promise.all(ids.map(async (id) => {
-    if (Date.now() - started > budgetMs) return null;
+
+  // The tick's own clock (pre-deploy review, Nov 3: every due source ran in one Promise.all and no state published until
+  // the slowest settled; NYC alone is 14 pages at up to 15 s each, so ticks could run into each other). At most
+  // `workers` sources read at once (the six connections a Worker run may hold open); none starts after budgetMs; any
+  // fetch still open at deadlineMs is cut, so its source ends as an error and backs off; and a source still running five
+  // seconds after that is recorded as an error, so nothing waits on it. Each state goes out as soon as its own due
+  // sources are done, so one slow source holds back only its own state.
+  const timers = [];
+  const after = (ms) => new Promise((ok) => timers.push(setTimeout(ok, Math.max(0, ms))));
+  const ctl = new AbortController();
+  after(deadlineMs - (Date.now() - started)).then(() => ctl.abort(new Error(`the tick ran out of time (${deadlineMs / 1000} s)`)));
+  const late = after(deadlineMs + 5_000 - (Date.now() - started)).then(() => 'late');
+  const tickFetch = (u, o = {}) => fetch(u, { ...o, signal: o.signal ? both(o.signal, ctl.signal) : ctl.signal });
+  const hasTime = () => !ctl.signal.aborted;
+
+  const published = [];
+  const failed = [];
+  const out_ = new Set(); // states published this tick
+  const publish = async (st) => {
+    if (out_.has(st)) return;
+    out_.add(st);
+    try { published.push(await publishState({ state: st, maps, store, archive, sched, now, ping, log })); } catch (e) {
+      const error = `crashed: ${String(e?.message || e)}`;
+      log(JSON.stringify({ state: st, error }));
+      published.push({ state: st, error });
+      failed.push(st);
+    }
+  };
+  const left = {};
+  for (const id of ids) left[byId[id].state] = (left[byId[id].state] || 0) + 1;
+  const ran = [];
+  const skipped = [];
+  const runOne = async (id) => {
+    let res;
     try {
-      return await runSource({ map: byId[id], fetch, store, archive, sched, now, ping, log });
+      res = await Promise.race([runSource({ map: byId[id], fetch: tickFetch, store, archive, sched, now, ping, log, hasTime }), late]);
+      if (res === 'late') {
+        res = { id, outcome: 'error', error: 'still running when the tick ran out of time' };
+        log(JSON.stringify({ source: id, error: res.error }));
+        sched.sources[id] = nextEntry(sched.sources[id], { kind: 'error', error: res.error }, now, byId[id]);
+      }
     } catch (e) {
       const error = `crashed: ${String(e?.message || e)}`;
       log(JSON.stringify({ source: id, error }));
@@ -241,57 +311,68 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
       const e0 = sched.sources[id];
       const refusedNow = e0?.stopped === 'refused' && e0?.last_run === now;
       if (!refusedNow) sched.sources[id] = nextEntry(e0, { kind: 'error', error }, now, byId[id]);
-      return { id, outcome: 'error', error };
+      res = { id, outcome: 'error', error };
     }
-  }))).filter(Boolean);
-
+    if (!checkedIds.has(id)) previewFloor(sched.sources[id], now);
+    ran.push(res);
+    if (--left[byId[id].state] === 0) await publish(byId[id].state);
+  };
   let fpChanged = false;
   let metaChanged = clamped;
-  if (!only && (!sched.meta.fp_at || Date.parse(now) - Date.parse(sched.meta.fp_at) >= 60 * 60_000)) {
-    const before = JSON.stringify(sched.meta.fp || {});
-    try { await checkFingerprints({ maps, fetch, sched, now, ping }); } catch (e) { log(JSON.stringify({ fingerprints_failed: String(e?.message || e) })); }
-    fpChanged = before !== JSON.stringify(sched.meta.fp);
-    metaChanged = true;
-  }
-
-  if (!only && (!sched.meta.site_at || Date.parse(now) - Date.parse(sched.meta.site_at) >= 10 * 60_000)) {
-    try { await checkThroughSite({ maps, fetch, store, sched, now, ping }); } catch (e) { log(JSON.stringify({ site_check_failed: String(e?.message || e) })); }
-    metaChanged = true;
-  }
-
-  const states = new Set(ran.map((r) => byId[r.id].state));
-  // A first-run check that passes sets checked:{id} by hand; rebuild that state's files on the next tick rather than
-  // waiting for its source's next change (DC's poll had backed off toward an hour when it was checked, Nov 3).
-  if (!only) {
-    sched.meta.checked ??= {};
-    for (const m of maps) {
-      let v;
-      try { v = (await store.get(`checked:${m.id}`)) || ''; } catch (e) { log(JSON.stringify({ source: m.id, checked_read_failed: String(e?.message || e) })); continue; }
-      if (sched.meta.checked[m.id] !== v) { sched.meta.checked[m.id] = v; states.add(m.state); metaChanged = true; }
-    }
-  }
-  if (fpChanged) for (const m of maps) states.add(m.state);
-  // A state whose last publish crashed is tried again every tick until it goes out, even when none of its sources is
-  // due: a refusal written on a tick whose file write failed would otherwise leave old numbers public (Codex, Nov 3).
+  const states = new Set();
   const retry = sched.meta.republish || [];
-  for (const st of retry) states.add(st);
-  const published = [];
-  const failed = [];
-  for (const st of states) {
-    try { published.push(await publishState({ state: st, maps, store, archive, sched, now, ping, log })); } catch (e) {
-      const error = `crashed: ${String(e?.message || e)}`;
-      log(JSON.stringify({ state: st, error }));
-      published.push({ state: st, error });
-      failed.push(st);
+  try {
+    const queue = [...ids];
+    await Promise.all(Array.from({ length: Math.min(workers, queue.length) }, async () => {
+      while (queue.length) {
+        const id = queue.shift();
+        // Left due, so it is first in line next tick.
+        if (Date.now() - started > budgetMs || !hasTime()) { skipped.push(id); left[byId[id].state]--; continue; }
+        await runOne(id);
+      }
+    }));
+    if (skipped.length) log(JSON.stringify({ skipped, reason: `no source starts after ${budgetMs / 1000} s; they stay due for the next tick` }));
+
+    if (!only && (!sched.meta.fp_at || Date.parse(now) - Date.parse(sched.meta.fp_at) >= 60 * 60_000)) {
+      const before = JSON.stringify(sched.meta.fp || {});
+      try { await checkFingerprints({ maps, fetch: tickFetch, sched, now, ping }); } catch (e) { log(JSON.stringify({ fingerprints_failed: String(e?.message || e) })); }
+      fpChanged = before !== JSON.stringify(sched.meta.fp);
+      metaChanged = true;
     }
+
+    if (!only && (!sched.meta.site_at || Date.parse(now) - Date.parse(sched.meta.site_at) >= 10 * 60_000)) {
+      try { await checkThroughSite({ maps, fetch: tickFetch, store, sched, now, ping }); } catch (e) { log(JSON.stringify({ site_check_failed: String(e?.message || e) })); }
+      metaChanged = true;
+    }
+
+    // A source whose state had a skipped source still gets its state published.
+    for (const r of ran) states.add(byId[r.id].state);
+    // A first-run check that passes sets checked:{id} by hand; rebuild that state's files on the next tick rather than
+    // waiting for its source's next change (DC's poll had backed off toward an hour when it was checked, Nov 3).
+    if (!only) {
+      sched.meta.checked ??= {};
+      for (const m of maps) {
+        let v;
+        try { v = (await store.get(`checked:${m.id}`)) || ''; } catch (e) { log(JSON.stringify({ source: m.id, checked_read_failed: String(e?.message || e) })); continue; }
+        if (sched.meta.checked[m.id] !== v) { sched.meta.checked[m.id] = v; states.add(m.state); out_.delete(m.state); metaChanged = true; }
+      }
+    }
+    if (fpChanged) for (const m of maps) { states.add(m.state); out_.delete(m.state); }
+    // A state whose last publish crashed is tried again every tick until it goes out, even when none of its sources is
+    // due: a refusal written on a tick whose file write failed would otherwise leave old numbers public (Codex, Nov 3).
+    for (const st of retry) states.add(st);
+    for (const st of states) await publish(st);
+  } finally {
+    for (const t of timers) clearTimeout(t);
   }
-  if (failed.length) sched.meta.republish = failed; else delete sched.meta.republish;
-  if (failed.join() !== retry.join()) metaChanged = true;
+  const stillFailing = [...new Set(failed.filter((st) => !published.some((p) => p.state === st && !p.error)))];
+  if (stillFailing.length) sched.meta.republish = stillFailing; else delete sched.meta.republish;
+  if (stillFailing.join() !== retry.join()) metaChanged = true;
 
   if (live.length && live.every((m) => sched.sources[m.id]?.stopped) && !sched.meta.done_pinged) {
     sched.meta.done_pinged = now;
     await ping('all', 'done', 'every source has stopped (official, past certification, or refused). The fetcher is done for 2026-11-03.');
   }
-  if (ran.length || fpChanged || metaChanged) { sched.meta.last_tick = now; await store.put(SCHED_KEY, JSON.stringify(sched)); }
-  return { ran, published };
+  if (ran.length || fpChanged || metaChanged) { sched.meta.last_tick = now; await saveSched(store, sched, loaded); }
+  return { ran, published, ...(skipped.length ? { skipped } : {}) };
 }

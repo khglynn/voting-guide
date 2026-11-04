@@ -2,7 +2,7 @@
    in the workbench's claude-plans/2026-11-03-results. One test or more per finding, in the order they were fixed. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { fakeFetch, fixture, mapFor } from './helpers.mjs';
+import { fakeFetch, fixture, mapFor, memStore } from './helpers.mjs';
 import * as clarity from '../src/adapters/clarity.js';
 import * as nyc from '../src/adapters/nyc_enr.js';
 import * as multco from '../src/adapters/multco.js';
@@ -12,6 +12,10 @@ import * as ev from '../src/adapters/enhanced_voting.js';
 import * as orsos from '../src/adapters/or_sos.js';
 import { checkFile } from '../src/checks.js';
 import { checkHash } from '../src/fingerprint.js';
+import { runTick } from '../src/tick.js';
+import { nextEntry, dueSources, clampElectionNight, previewFloor, TICK_LIMIT } from '../src/schedule.js';
+import { MAPS } from '../src/maps.gen.js';
+import { ADAPTERS } from '../src/adapters/index.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
 const route = (eid, ver, pre) => ({ [`/${eid}/current_ver.txt`]: `${pre}.current_ver.txt`, [`/${eid}/${ver}/json/en/summary.json`]: `${pre}.summary.json`, [`/${eid}/${ver}/json/en/electionsettings.json`]: `${pre}.electionsettings.json` });
@@ -258,4 +262,90 @@ test('Georgia: every one-seat race in Fulton, DeKalb and the state needs more th
   const f = buildStateFile({ state: 'GA', maps: [{ ...map, contests: [mc] }], srcs: { [map.id]: { record: { read, fetched: '2026-11-08T00:00:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-08T00:10:00.000Z' });
   assert.equal(f.items[mc.item].status, 'complete');
   assert.equal(f.items[mc.item].final, null, 'a 38% leader is headed to a runoff, not a winner');
+});
+
+/* A fetch that never answers for one host until the request is cut. */
+const hangFor = (host, inner) => async (url, opts = {}) => {
+  if (!url.includes(host)) return inner(url, opts);
+  return new Promise((_, no) => { const s = opts.signal; if (s?.aborted) no(s.reason); else s?.addEventListener('abort', () => no(s.reason), { once: true }); });
+};
+const DC_OK = { 'getElectionInfo/2026-General-Election': 'dc.info.json', 'getCityWide/2026-General-Election': 'dc.citywide.json' };
+
+test('tick: a source that hangs holds back only its own state; its fetches are cut at the deadline and it backs off', async () => {
+  const dc = mapFor('results-DC');
+  const nycMap = mapFor('results-NY-nyc');
+  const store = memStore();
+  const put = store.put.bind(store);
+  const at = {};
+  store.put = async (k, v) => { at[k] ??= Date.now(); return put(k, v); };
+  const t0 = Date.now();
+  const out = await runTick({ fetch: hangFor('boenyc.gov', fakeFetch(DC_OK)), store, archive: null, maps: [dc, nycMap], now: '2026-11-04T05:00:00.000Z', deadlineMs: 400, log: () => {} });
+  const took = Date.now() - t0;
+  assert.ok(took < 2000, `the tick ends soon after its deadline (${took} ms)`);
+  assert.ok(at['preview:DC'] - t0 < 300, 'DC went out before the NYC read was cut');
+  const ny = out.ran.find((r) => r.id === nycMap.id);
+  assert.equal(ny.outcome, 'error');
+  assert.match(ny.error, /ran out of time/);
+  assert.doesNotMatch(ny.error, /before the retry/, 'no in-tick retry once the clock has run out');
+  const s = JSON.parse(await store.get('sched:2026-11-03')).sources[nycMap.id];
+  assert.equal(s.fail_count, 1);
+  assert.ok(Date.parse(s.next_due) > Date.parse('2026-11-04T05:00:00.000Z'));
+});
+
+test('tick: no source starts after the budget; it stays due and goes first next tick', async () => {
+  const dc = mapFor('results-DC');
+  const nycMap = mapFor('results-NY-nyc');
+  const store = memStore();
+  // One worker: NYC first (earlier next_due), hanging past the 100 ms budget, so DC never starts this tick.
+  await store.put('sched:2026-11-03', JSON.stringify({ sources: { [nycMap.id]: { next_due: '2026-11-04T04:00:00.000Z' }, [dc.id]: { next_due: '2026-11-04T04:30:00.000Z' } }, meta: {} }));
+  const out = await runTick({ fetch: hangFor('boenyc.gov', fakeFetch(DC_OK)), store, archive: null, maps: [dc, nycMap], now: '2026-11-04T05:00:00.000Z', workers: 1, budgetMs: 100, deadlineMs: 300, log: () => {} });
+  assert.deepEqual(out.skipped, [dc.id]);
+  assert.deepEqual(out.ran.map((r) => r.id), [nycMap.id]);
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  assert.equal(sched.sources[dc.id].next_due, '2026-11-04T04:30:00.000Z', 'untouched, still due');
+  const next = await runTick({ fetch: fakeFetch(DC_OK), store, archive: null, maps: [dc, nycMap], now: '2026-11-04T05:01:00.000Z', workers: 1, log: () => {} });
+  assert.equal(next.ran[0].id, dc.id);
+});
+
+test('schedule: with all 36 sources, every source whose numbers are public is read at least every 5 minutes, and previews every 10', async () => {
+  const CHECKED = new Set(['dallas-county-tx', 'williamson-tx', 'bexar-tx', 'harris-county-tx', 'travis-tx', 'results-TX', 'results-CO-jefferson', 'results-CO-adams', 'arapahoe-co', 'results-CO-douglas', 'results-DC']);
+  const live = MAPS.filter((m) => ADAPTERS[m.feed.adapter]);
+  assert.equal(live.length, 36);
+  let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const sched = {}; const runs = {};
+  for (let t = 0; t < 90; t++) {
+    const now = new Date(Date.parse('2026-11-04T04:40:00Z') + t * 60_000).toISOString();
+    clampElectionNight(sched, live, now);
+    const ids = dueSources(sched, live.map((m) => m.id), now, undefined, CHECKED);
+    assert.ok(ids.length <= TICK_LIMIT);
+    for (const id of ids) {
+      (runs[id] ??= []).push(t);
+      sched[id] = nextEntry(sched[id], { kind: 'ok', changed: rnd() < 0.7, status: 'counting' }, now, live.find((m) => m.id === id));
+      if (!CHECKED.has(id)) previewFloor(sched[id], now);
+    }
+  }
+  const gap = (id) => { const r = runs[id] || []; let g = r.length ? r[0] : 90; for (let i = 1; i < r.length; i++) g = Math.max(g, r[i] - r[i - 1]); return g; };
+  for (const id of CHECKED) assert.ok(gap(id) <= 5, `${id}: ${gap(id)} minutes`);
+  for (const m of live) if (!CHECKED.has(m.id)) assert.ok(gap(m.id) <= 10, `${m.id}: ${gap(m.id)} minutes`);
+  // Right after a deploy, 24 new sources with no schedule entry never go ahead of the public ones.
+  const fresh = dueSources({}, live.map((m) => m.id), '2026-11-04T05:00:00.000Z', undefined, CHECKED);
+  assert.deepEqual(fresh.slice(0, CHECKED.size).sort(), [...CHECKED].sort());
+});
+
+test('tick: an older tick that saves last never undoes a newer tick\'s refusal', async () => {
+  const dc = mapFor('results-DC');
+  const store = memStore();
+  let inner = null;
+  // Tick A (05:00) loads the schedule, then, while its DC read is in flight, tick B (05:01) runs DC, is refused, and saves.
+  const fetchA = async (url, opts) => {
+    if (!inner) inner = runTick({ fetch: fakeFetch({ 'getElectionInfo/': { status: 403, body: '' } }), store, archive: null, maps: [dc], now: '2026-11-04T05:01:00.000Z', log: () => {} });
+    await inner;
+    return fakeFetch(DC_OK)(url, opts);
+  };
+  const a = await runTick({ fetch: fetchA, store, archive: null, maps: [dc], now: '2026-11-04T05:00:00.000Z', log: () => {} });
+  assert.equal(a.ran[0].outcome, 'changed', 'A read DC fine');
+  assert.equal((await inner).ran[0].outcome, 'refused', 'B was refused');
+  const s = JSON.parse(await store.get('sched:2026-11-03')).sources[dc.id];
+  assert.equal(s.stopped, 'refused', "A's later save kept B's newer refusal");
+  assert.equal(s.last_run, '2026-11-04T05:01:00.000Z');
 });

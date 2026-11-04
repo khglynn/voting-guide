@@ -88,12 +88,28 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   return e;
 }
 
-/* Sources due now, earliest first, at most `limit`. A stopped source is never due. */
-export function dueSources(sched, ids, now, limit = 6) {
+/* Sources due now, at most `limit`: those in `first` (sources whose numbers are public) before the rest, then earliest
+   first. A stopped source is never due. Pre-deploy review, Nov 3: with 36 sources and six a tick, earliest-first left
+   the live Texas, Colorado and DC sources up to 9 minutes between reads, and 24 new preview-only sources (no schedule
+   entry yet, so due "first") would have taken the first ticks after the deploy. Simulated over 90 ticks with every
+   source changing on 70% of reads: 14 a tick, public sources first and preview-only sources at most every
+   PREVIEW_MINUTES, keeps every public source within 5 minutes and every preview within 10. */
+export const TICK_LIMIT = 14;
+export const PREVIEW_MINUTES = 3;
+export function dueSources(sched, ids, now, limit = TICK_LIMIT, first = null) {
+  const rank = (id) => (first && first.has(id) ? 0 : 1);
   return ids
     .filter((id) => { const s = sched[id]; return !s || (!s.stopped && (!s.next_due || Date.parse(s.next_due) <= Date.parse(now))); })
-    .sort((a, b) => Date.parse(sched[a]?.next_due || 0) - Date.parse(sched[b]?.next_due || 0))
+    .sort((a, b) => rank(a) - rank(b) || Date.parse(sched[a]?.next_due || 0) - Date.parse(sched[b]?.next_due || 0))
     .slice(0, limit);
+}
+
+/* A preview-only source (its numbers aren't public yet) is read at most every PREVIEW_MINUTES. */
+export function previewFloor(entry, now) {
+  if (!entry || entry.stopped || !entry.next_due) return entry;
+  const floor = Date.parse(now) + PREVIEW_MINUTES * MIN;
+  if (Date.parse(entry.next_due) < floor) entry.next_due = new Date(floor).toISOString();
+  return entry;
 }
 
 /* The election-night cap applied to schedules written before it existed: on each tick, any source whose stored

@@ -12,7 +12,9 @@
     "places": [
       "dana-point-ca",
       "fullerton-ca"
-    ]
+    ],
+    "fingerprint": "71066bd96ba4b1f7",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:34:36.163Z"
   },
   "feed": {
     "adapter": "lvt",
@@ -32,7 +34,363 @@
   "count_closes": "2026-12-04T07:59:00Z",
   "complete_marker": null,
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "1300",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 59th District",
+      "item": "ca-assembly-59",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*PHILLIP CHEN (REP)": "Phillip Chen",
+        "VICTOR HERNANDEZ (GRN)": "Victor Hernandez"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1320",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 67th District",
+      "item": "ca-assembly-67",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARK PULIDO (DEM)": "Mark Pulido",
+        "PAULO MORALES (REP)": "Paulo Morales"
+      },
+      "reaches": [
+        "Orange",
+        "Los Angeles"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1380",
+      "feed_name": "MEMBER OF THE STATE ASSEMBLY 74th District",
+      "item": "ca-assembly-74",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*LAURIE DAVIES (REP)": "Laurie Davies",
+        "SERGIO FARIAS (DEM)": "Sergio Farias"
+      },
+      "reaches": [
+        "Orange",
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1220",
+      "feed_name": "STATE SENATOR 34th District",
+      "item": "ca-state-senate-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AVELINO VALENCIA (DEM)": "Avelino Valencia",
+        "RHONDA SHADER (REP)": "Rhonda Shader"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1230",
+      "feed_name": "STATE SENATOR 36th District",
+      "item": "ca-state-senate-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS DUNCAN (DEM)": "Chris Duncan",
+        "*TONY STRICKLAND (REP)": "Tony Strickland"
+      },
+      "reaches": [
+        "Orange",
+        "other counties",
+        "Los Angeles"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1250",
+      "feed_name": "STATE SENATOR 38th District",
+      "item": "ca-state-senate-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*CATHERINE S. BLAKESPEAR (DEM)": "Catherine S. Blakespear",
+        "LAURA BASSETT (REP)": "Laura Bassett"
+      },
+      "reaches": [
+        "Orange",
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1145",
+      "feed_name": "UNITED STATES REPRESENTATIVE 41st District",
+      "item": "ca-us-house-41",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LINDA SÁNCHEZ (DEM)": "Linda Sánchez",
+        "MITCH CLEMMONS (REP)": "Mitch Clemmons"
+      },
+      "reaches": [
+        "Orange",
+        "Los Angeles"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1165",
+      "feed_name": "UNITED STATES REPRESENTATIVE 45th District",
+      "item": "ca-us-house-45",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DEREK TRAN (DEM)": "Derek Tran",
+        "CHUONG V. VO (REP)": "Chuong V. Vo"
+      },
+      "reaches": [
+        "Orange",
+        "Los Angeles"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1175",
+      "feed_name": "UNITED STATES REPRESENTATIVE 46th District",
+      "item": "ca-us-house-46",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LOU CORREA (DEM)": "Lou Correa",
+        "DAVID PAN (REP)": "David Pan"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1185",
+      "feed_name": "UNITED STATES REPRESENTATIVE 47th District",
+      "item": "ca-us-house-47",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAVE MIN (DEM)": "Dave Min",
+        "JENNY RAE LE ROUX (REP)": "Jenny Rae Le Roux"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1195",
+      "feed_name": "UNITED STATES REPRESENTATIVE 49th District",
+      "item": "ca-us-house-49",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MIKE LEVIN (DEM)": "Mike Levin",
+        "ARMEN KURDIAN (REP)": "Armen Kurdian"
+      },
+      "reaches": [
+        "Orange",
+        "San Diego"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "5073",
+      "feed_name": "CITY OF FULLERTON Member, City Council District 3",
+      "item": "fullerton-council-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*SHANA CHARLES": "Shana Charles",
+        "DANIEL H. KIM": "Daniel Kim"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "5075",
+      "feed_name": "CITY OF FULLERTON Member, City Council District 5",
+      "item": "fullerton-council-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "OSCAR VALADEZ": "Oscar Valadez",
+        "JOZEF MALDONADO": "Jozef Maldonado",
+        "DAVID FISCHBEIN": "David Fischbein"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3233",
+      "feed_name": "FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area 1",
+      "item": "fullerton-fjuhsd-area-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REGINA CUADRA": "Regina Cuadra",
+        "MATTHEW MATIAS": "Matthew Matias"
+      },
+      "reaches": [
+        "Orange",
+        "Los Angeles"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3237",
+      "feed_name": "FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area 5",
+      "item": "fullerton-fjuhsd-area-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*MARILYN BUCHI": "Marilyn Buchi",
+        "AMY DUDICH": "Amy Dudich"
+      },
+      "reaches": [
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3305",
+      "feed_name": "FULLERTON SCHOOL DISTRICT Governing Board Member, Trustee Area 3",
+      "item": "fullerton-fsd-area-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AMY CHOI-WON": "Amy Choi-Won",
+        "JORDAN ABUSHAWISH": "Jordan Abushawish"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "6177",
+      "feed_name": "MOULTON NIGUEL WATER DISTRICT Director, Full Term",
+      "item": "mnwd-directors",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "*WILLIAM \"BILL\" MOORHEAD": "William \"Bill\" Moorhead",
+        "*BRIAN PARKER": "Brian Parker",
+        "JENNIFER ENGLE": "Jennifer Engle",
+        "PATRICIA \"TRISH\" KELLEY": "Patricia \"Trish\" Kelley",
+        "MICHAEL CRUIKSHANK": "Michael Cruikshank",
+        "KURT LIND": "Kurt Lind",
+        "LEENA RAY": "Leena Ray"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "6178",
+      "feed_name": "MOULTON NIGUEL WATER DISTRICT Director, Short Term",
+      "item": "mnwd-short-term",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PATRICIA C. 'PAT' BATES": "Patricia C. \"Pat\" Bates",
+        "DAVID PETTY": "David Petty",
+        "JOEL BISHOP": "Joel Bishop"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3039",
+      "feed_name": "NORTH ORANGE COUNTY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area 6",
+      "item": "nocccd-area-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PAULETTE CHAFFEE": "Paulette Chaffee",
+        "JESUS SILVA": "Jesus Silva",
+        "ZONYA TOWNSEND": "Zonya Townsend",
+        "*JEFFREY P. BROWN": "Jeffrey P. Brown"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "4004",
+      "feed_name": "County Supervisor 4th District",
+      "item": "oc-supervisor-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CONNOR TRAUT": "Connor Traut",
+        "TIM SHAW": "Tim Shaw"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "4005",
+      "feed_name": "County Supervisor 5th District",
+      "item": "oc-supervisor-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "*KATRINA FOLEY": "Katrina Foley",
+        "DIANE DIXON": "Diane Dixon"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3061",
+      "feed_name": "SOUTH ORANGE COUNTY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area 4",
+      "item": "socccd-area-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOHN BLACK": "John Black",
+        "GILA JONES": "Gila Jones",
+        "KARIMA FELDHUS": "Karima Feldhus",
+        "NARGES RAKIN": "Narges Rakin"
+      },
+      "reaches": [
+        "Orange"
+      ],
+      "item_url": null
+    }
+  ],
   "unmatched_feed": [],
   "unmatched_guide": [],
   "not_here": []

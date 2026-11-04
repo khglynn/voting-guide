@@ -52,6 +52,7 @@ export interface UI {
   view: View;
   addrFilled: string | null;  // after a lookup on a filled ballot, what the fill did with the races it added ("Filled both from your sources."), for this visit
   lensEmptied: boolean;       // you turned your last chip or party off by hand, not "Show endorsements": the chips stay so you can choose again
+  takeWas?: { sources: string[] | null; party: string | null } | null; // the lens before "Make these my picks", restored by its Undo
   cmp?: string | null;        // what the results card compares with, this visit only: 'mine', a chip key, 'party:<name>'; null for nothing chosen, undefined for the default (model/results.ts cmpSel)
   open: Set<string>;          // generic disclosures ("More", what-ifs, lean basis)
   row: string | null;         // the one open row: an item id or "q:<group key>"

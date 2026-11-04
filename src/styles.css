@@ -1284,3 +1284,10 @@ a.st-go { display: inline-block; padding: 6px 0; font-size: 14.5px; color: var(-
 .nv-srcs a.nv-go { flex: none; color: var(--ink-2); padding: 4px 0; }
 .vz .vz-key { gap: 4px 12px; font-size: 13px; }
 .cmp-hint { color: var(--muted); }
+/* Compare with, compact (PR #139 review): pill chips, two rows at most at 390 px with Your picks. */
+.cmp .chip.cmp-c { min-height: 34px; padding: 0 11px; font-size: 14px; border-width: 1px; border-radius: 17px; gap: 5px; }
+.cmp .chip.cmp-c .tick { width: 11px; height: 11px; }
+.cmp .chip.cmp-back { color: var(--muted); }
+.cmp-chips { gap: 6px; }
+.vz-st:focus { outline: none; }
+.foot-res.f1 .fr-at.dn { display: none; }

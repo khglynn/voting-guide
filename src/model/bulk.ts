@@ -11,7 +11,7 @@
    your own picks would vote for too many), and every fill is checked against the seat count
    before it lands. Undo puts back only what the batch changed, so a pick you make while the
    Undo toast is up survives it. */
-import type { Item } from '../types';
+import type { Endorser, Item } from '../types';
 import { S } from '../state';
 import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe } from '../ballot';
 import { lineup, weighedIn, agreed, FILL_SOURCES } from './tally';
@@ -40,12 +40,14 @@ function visibleOpen(): Item[] {
   return out;
 }
 
-export function planAgree(): Plan {
+/* `sources`: plan for that set instead of the ballot's own (the results card's "Make these my picks" says how many it
+   fills before it changes anything). */
+export function planAgree(sources?: Endorser[]): Plan {
   const fills: Fill[] = [];
   let skippedPartial = 0;
   for (const it of visibleOpen()) {
     if (it.kind === 'contest' && (isRCV(it) || isMultiJudge(it))) continue;
-    const l = lineup(it);
+    const l = lineup(it, sources);
     const w = weighedIn(l);
     const ag = agreed(l);
     if (!Array.isArray(ag)) continue;

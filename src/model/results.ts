@@ -12,10 +12,11 @@
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
 import { S } from '../state';
-import { isRCV, isMultiSeat, isMultiJudge, isPartisan, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
+import { isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe, status, pageWalk, ranksOf, type SectionKey } from '../ballot';
 import { lineup, agreed } from './tally';
 import { chipMembers, CHIPS, type ChipKey } from './lens';
 import { pickShort } from './labels';
+import { todayISO } from '../util';
 import { afterPolls, countyKey } from './plan';
 
 /* ---------- the file in memory ---------- */
@@ -516,12 +517,29 @@ export function shortProgress(p: string, tiny = false): string {
   const t = p.trim().replace(/\.$/, '').replace(/\s+/g, ' ');
   const noun = (x: string): string => x.trim().toLowerCase().replace(/\bpolling locations\b/, 'polling places').replace(/\bvoting locations\b/, 'voting places');
   let m = t.match(/^(.+?)\s+reporting:?\s*(\d+(?:\.\d+)?%)$/i);
-  if (m) return tiny ? m[2] : `${m[2]} of ${noun(m[1])}`;
+  // A percent keeps its noun even in the shortest form: a bare "27%" says nothing about what was counted (PR #139 review).
+  if (m) return `${m[2]} of ${noun(m[1])}`;
   m = t.match(/^(\d+(?:\.\d+)?%)\s+(?:of\s+)?(.+?)(?:\s+(?:reporting|reported))?$/i);
-  if (m) return tiny ? m[1] : `${m[1]} of ${noun(m[2])}`;
+  if (m) return `${m[1]} of ${noun(m[2])}`;
   m = t.match(/^([\d,]+)\s*(?:of|\/)\s*([\d,]+)\s+(.+?)(?:\s+(?:completely\s+)?(?:reporting|reported))?$/i);
   if (m) return tiny ? `${m[1]} of ${m[2]}` : `${m[1]} of ${m[2]} ${noun(m[3])}`;
   return t;
+}
+function footTime(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const tz = zoneOf() || undefined;
+  try {
+    const t = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: tz });
+    const day = d.toLocaleDateString('en-CA', { timeZone: tz });
+    // Today where the polls are (the page's own clock honors ?today= for checks).
+    const today = /[?&]today=\d{4}-\d{2}-\d{2}/.test(typeof location !== 'undefined' ? location.search : '') ? todayISO() : new Date().toLocaleDateString('en-CA', { timeZone: tz });
+    const date = day === today ? '' : `${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: tz })}, `;
+    const ab = tz ? ZONE_ABBR[tz] || '' : '';
+    let viewer = '';
+    try { viewer = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch { /* keep the zone */ }
+    return `${date}${t}${ab && ZONE_ABBR[viewer] !== ab ? ` ${ab}` : ''}`;
+  } catch { return fmtTime(iso); }
 }
 export function footInfo(): FootInfo | null {
   if (!resultsMode()) return null;
@@ -537,8 +555,9 @@ export function footInfo(): FootInfo | null {
   if (!f || !f.posted || !m) return { ...base, kind: 'links' };
   const down = sourceDown(m);
   const p = down ? '' : progressOf(m);
-  // The time alone: no zone and no date (the menu has both), so the line stays one line after midnight too.
-  const at = m.updated ? fmtTime(m.updated).replace(/ [A-Z]T$/, '').replace(/^[A-Z][a-z]{2} \d{1,2}, /, '') : '';
+  // The office's own time: its day whenever it isn't today where the polls are, and its zone whenever the viewer is in
+  // another one, so an old update never reads as today's (PR #139 review). fitFoot never drops it.
+  const at = m.updated ? footTime(m.updated) : '';
   return { ...base, word: f.word, who: shortCounty(officeShort(m.id)), prog: p ? shortProgress(p) : '', progShort: p ? shortProgress(p, true) : '', at, down };
 }
 /* "Hide races I've decided" only before the close (Opus review, Nov 4): after it, every row carries its count, so the
@@ -565,6 +584,8 @@ export const anyPick = (): boolean => !!S.ballot && shownItems().some((it) => pi
 /* Whether you've made any choice at all on this ballot, finished or not: a pick, a skip, a seat of several, a ranking
    started (Codex, Nov 4). "Make these my picks" is offered only without one, so it never overwrites your own work. */
 export const anyChoice = (): boolean => !!S.ballot && (Object.keys(S.b.picks || {}).length > 0 || Object.values(S.b.ranks || {}).some((r) => Array.isArray(r) && r.length > 0));
+/* Compare with starts over on each ballot: Your picks whenever it has some (PR #139 review). app.ts resetUI calls this. */
+export function resetCompare(): void { S.ui.cmp = undefined; S.ui.takeWas = null; S.ui.open.delete('cmp-party'); }
 /* What the card compares with now: what you chose this visit, else your picks when you have some, else nothing. */
 export function cmpSel(): CmpSel | null {
   const v = S.ui.cmp;
@@ -578,6 +599,8 @@ export function cmpSel(): CmpSel | null {
    (a top-two race) or none. */
 export function lensNames(it: Item, sel: CmpSel): string[] | 'split' | null {
   if (sel.kind === 'mine') return picked(it) ? pickNames(it) : null;
+  // A row that may not be on this ballot ("Maybe on your ballot") counts for nobody but you: the fill leaves it too.
+  if (isMaybe(it.id)) return null;
   if (it.kind === 'contest' && isMultiJudge(it)) return null;
   if (sel.kind === 'party') {
     if (it.kind !== 'contest' || it.is_retention || !isPartisan(it)) return null;
@@ -601,10 +624,12 @@ export function lensNames(it: Item, sel: CmpSel): string[] | 'split' | null {
     ch = top[0].choices;
   }
   if (isMeasureLike(it)) return ch.length === 1 && (ch[0] === 'YES' || ch[0] === 'NO') ? [ch[0]] : null;
-  if (it.kind !== 'contest' || isRCV(it)) return null;
+  if (it.kind !== 'contest') return null;
   const names = ch.filter((n) => it.candidates.some((c) => c.name === n));
   if (names.length !== ch.length) return null;
-  if (isMultiSeat(it)) return names.length === it.vote_for ? names : null;
+  // Several seats: up to the seat count, as for a party. Ranked choice: one agreed first choice, never compared until the
+  // final round (compareNames), as for a party or your own ranking (PR #139 review).
+  if (isMultiSeat(it)) return names.length >= 1 && names.length <= it.vote_for ? names : null;
   return names.length === 1 ? names : null;
 }
 /* How a choice is named in the card ("Your picks", "Progressive groups", "the Democratic Party"). */
@@ -691,8 +716,9 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   if (why.has('block')) notes.push('A block vote that elects everyone either way isn’t compared.');
   return { word, explain, rows, picks: Object.values(counts).reduce((a, n) => a + n, 0), counts, others, othersKinds: kinds, posted, total, links, allLinks: !posted && !pending && links > 0, questions: { n: qn, first }, notes, sel, splits };
 }
-/* The card's headline once something is chosen: "Your 16 picks: 8 ahead · 3 behind · 5 not compared yet", "Progressive
-   groups agree on 16 races: ...", "Democratic Party candidates in 12 races: ...". */
+/* The card's headline once something is chosen: "Your 16 picks: 8 ahead · 3 behind · 5 not compared yet", "Picks from
+   progressive groups in 16 races: ..." (true whether one source or several weighed in; PR #139 review), "Democratic Party
+   candidates in 12 races: ...". */
 export function countLine(f: Figure): string {
   if (!f.picks || !f.sel) return '';
   const c = f.counts;
@@ -702,7 +728,7 @@ export function countLine(f: Figure): string {
   ].filter(Boolean);
   const n = f.picks;
   const head = f.sel.kind === 'mine' ? `Your ${n === 1 ? '1 pick' : `${n} picks`}`
-    : f.sel.kind === 'group' ? `${selName(f.sel)} agree on picks in ${n === 1 ? '1 race' : `${n} races`}`
+    : f.sel.kind === 'group' ? `Picks from ${selName(f.sel).toLowerCase()} in ${n === 1 ? '1 race' : `${n} races`}`
     : `${selName(f.sel)} candidates in ${n === 1 ? '1 race' : `${n} races`}`;
   return `${head}: ${parts.join(' · ')}`;
 }

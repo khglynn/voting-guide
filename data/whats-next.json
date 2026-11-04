@@ -475,7 +475,7 @@
       "line": "Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
       "confidence": "verified",
-      "short": "Mail ballots must arrive by 5 PM"
+      "short": "Mail postmarked Nov 3 due 5 PM"
     },
     {
       "kind": "after_election",
@@ -487,7 +487,7 @@
       "line": "Overseas and military ballots sent by Nov 3 count if they arrive by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots sent by Nov 3"
     },
     {
       "kind": "after_election",
@@ -1154,7 +1154,7 @@
       "line": "Military and overseas ballots sent by Nov 3 count if they arrive by Nov 12.",
       "source": "https://www.douglasco.gov/elections/election-information/",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots sent by Nov 3"
     },
     {
       "kind": "after_election",
@@ -1839,7 +1839,7 @@
       "line": "Mail ballots postmarked Nov 3 count if they arrive by Nov 10.",
       "source": "https://electionresults.sos.ca.gov/unprocessed-ballots-status; https://www.sdvote.com/content/rov/en/election-results-explained.html",
       "confidence": "sourced",
-      "short": "Mail ballots must arrive"
+      "short": "Mail ballots postmarked Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2206,7 +2206,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://elections.ny.gov/2026-political-calendar",
       "confidence": "verified",
-      "short": "Mail ballots must arrive"
+      "short": "Mail ballots postmarked Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2218,7 +2218,7 @@
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by Nov 16.",
       "source": "https://elections.ny.gov/2026-political-calendar",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -2601,7 +2601,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 17.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K19-8",
       "confidence": "verified",
-      "short": "Mail ballots must arrive"
+      "short": "Mail ballots postmarked Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -3389,7 +3389,7 @@
       "line": "Mail ballots postmarked or dated by Nov 3 count if they arrive by Nov 13, 10 AM.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (COMAR 33.11.03.08B(2))",
       "confidence": "verified",
-      "short": "Mail ballots must arrive by 10 AM"
+      "short": "Mail postmarked Nov 3 due 10 AM"
     },
     {
       "kind": "after_election",
@@ -4011,7 +4011,7 @@
       "line": "Overseas ballots dated by Nov 3 count if they arrive by Nov 13.",
       "source": "Fla. Stat. 101.6952(5): http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.6952.html",
       "confidence": "verified",
-      "short": "Overseas ballots due"
+      "short": "Overseas ballots dated by Nov 3 due"
     },
     {
       "kind": "after_election",
@@ -4217,7 +4217,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 13.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
       "confidence": "verified",
-      "short": "Mail ballots must arrive"
+      "short": "Mail ballots postmarked Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -4744,7 +4744,7 @@
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by Nov 6.",
       "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -5065,7 +5065,7 @@
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.470) ; https://multco.us/news/nov-3-2026-election-day-information-multnomah-county",
       "confidence": "verified",
-      "short": "Mail ballots must arrive"
+      "short": "Mail ballots postmarked Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -5761,7 +5761,7 @@
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by noon Nov 10.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-11-18(b))",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -5982,7 +5982,7 @@
       "line": "Military and overseas ballots sent by Nov 2 count if they arrive by Nov 10.",
       "source": "PA DOS 2026 election calendar (URL above)",
       "confidence": "verified",
-      "short": "Overseas and military ballots due"
+      "short": "Overseas, military ballots sent by Nov 2"
     },
     {
       "kind": "after_election",

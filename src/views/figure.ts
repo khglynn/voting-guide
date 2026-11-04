@@ -11,6 +11,7 @@ import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
 import { figure, countLine, splitLine, dotLine, checkedLine, sourceLines, R, resultsMode, resultsWaiting, anyPick, anyChoice, selName, type Dot, type Figure, type CmpSel } from '../model/results';
 import { CHIPS, emptyNote, partiesOnBallot, chipMembers } from '../model/lens';
+import { planAgree, planParty } from '../model/bulk';
 import { sectionTitle, resColOf } from './ledger';
 import { ext } from './common';
 import { TICK } from './lens';
@@ -50,7 +51,7 @@ export function figureHTML(forPrint = false): string {
   }
   const hidden = !forPrint && figHidden();
   if (forPrint) return printHTML(f);
-  const hd = `<div class="vz-hd"><h3 class="vz-st" id="vz-h">${esc(f.word)}</h3><button class="linkbtn" data-act="fig-hide" data-fk="vz-hide" aria-expanded="${!hidden}" aria-controls="vz-bd">${hidden ? 'Show summary' : 'Hide summary'}</button></div>
+  const hd = `<div class="vz-hd"><h3 class="vz-st" id="vz-h" data-fk="vz-h" tabindex="-1">${esc(f.word)}</h3><button class="linkbtn" data-act="fig-hide" data-fk="vz-hide" aria-expanded="${!hidden}" aria-controls="vz-bd">${hidden ? 'Show summary' : 'Hide summary'}</button></div>
     <p class="vz-ex">${esc(f.explain)}</p>`;
   const failed = R.failed ? '<p class="vz-note">Couldn’t check the election offices just now. These are the last numbers we read.</p>' : '';
   // Every race here links to the office's own page (Manhattan): no figure, no Refresh, one line (DESIGN, link-only places).
@@ -70,20 +71,26 @@ export function figureHTML(forPrint = false): string {
 function cmpHTML(f: Figure): string {
   const sel = f.sel;
   const on = (k: string): boolean => !!sel && (sel.kind === 'mine' ? k === 'mine' : sel.kind === 'group' ? k === sel.key : k === 'party');
-  const chip = (k: string, label: string, extra = ''): string => `<button class="chip" data-act="cmp" data-k="${k}" aria-pressed="${on(k)}" data-fk="cmp-${k}"${extra}>${TICK}${esc(label)}</button>`;
-  const partyOpen = S.ui.open.has('cmp-party');
+  // Short labels so the row stays two lines at 390 px with Your picks (PR #139 review); the full name is what a screen
+  // reader hears, and the headline under the chips uses it.
+  const chip = (k: string, label: string, full = label, extra = ''): string => `<button class="chip cmp-c" data-act="cmp" data-k="${k}" aria-pressed="${on(k)}" data-fk="cmp-${k}"${full !== label ? ` aria-label="${esc(full)}"` : ''}${extra}>${TICK}${esc(label)}</button>`;
   const parties = partiesOnBallot(S.ballot!);
-  const chips = [
-    anyPick() ? chip('mine', 'Your picks') : '',
-    ...CHIPS.map((c) => chip(c.key, c.label)),
-    parties.length ? chip('party', sel && sel.kind === 'party' ? selName(sel) : 'A party', ` aria-expanded="${partyOpen}"`) : '',
-  ].join('');
-  const prow = partyOpen && parties.length ? `<div class="cmp-parties" role="group" aria-label="A party">${parties.map((p) => `<button class="chip" data-act="cmp-party" data-p="${esc(p.party)}" aria-pressed="${!!sel && sel.kind === 'party' && sel.party === p.party}" data-fk="cmp-p-${esc(p.party)}">${esc(p.party)}</button>`).join('')}</div>` : '';
+  const partyOpen = S.ui.open.has('cmp-party') && parties.length > 0;
+  // A party is a second step in the same place: its parties replace the groups, with Back, so the answer never moves.
+  const chips = partyOpen
+    ? [`<button class="chip cmp-c cmp-back" data-act="cmp" data-k="party" aria-expanded="true" data-fk="cmp-party">‹ Back</button>`,
+      ...parties.map((p) => `<button class="chip cmp-c" data-act="cmp-party" data-p="${esc(p.party)}" aria-pressed="${!!sel && sel.kind === 'party' && sel.party === p.party}" data-fk="cmp-p-${esc(p.party)}">${TICK}${esc(p.party)}</button>`)].join('')
+    : [
+      anyPick() ? chip('mine', 'Your picks') : '',
+      ...CHIPS.map((c) => chip(c.key, SHORT[c.key] || c.label, c.label)),
+      parties.length ? chip('party', sel && sel.kind === 'party' ? sel.party : 'A party', sel && sel.kind === 'party' ? selName(sel) : 'A party', ' aria-expanded="false"') : '',
+    ].join('');
   // With a group or party chosen over picks of your own, say plainly what it doesn't do (GPT copy pass).
   const own = !sel && !anyChoice() ? '<p class="cmp-own"><button class="linkbtn" data-act="picks" data-fk="cmp-own">Or make your own picks</button></p>'
     : sel && sel.kind !== 'mine' && anyChoice() ? '<p class="cmp-own cmp-hint">Your picks don’t change. Tap it again to clear.</p>' : '';
-  return `<div class="cmp" role="group" aria-labelledby="cmp-l"><p class="cmp-l" id="cmp-l">Compare with</p><div class="cmp-chips">${chips}</div>${prow}${own}</div>`;
+  return `<div class="cmp" role="group" aria-labelledby="cmp-l"><p class="cmp-l" id="cmp-l">${partyOpen ? 'Compare with a party' : 'Compare with'}</p><div class="cmp-chips">${chips}</div>${own}</div>`;
 }
+const SHORT: Record<string, string> = { papers: 'Newspapers', progressive: 'Progressive', conservative: 'Conservative', unions: 'Unions' };
 /* The answer for a choice: the count line as the headline, the dot figure by section with its key in one line above,
    and for a group or party on a ballot with no picks of your own, "Make these my picks" (today's fill, with Undo). */
 function selHTML(f: Figure, sel: CmpSel): string {
@@ -102,7 +109,10 @@ function selHTML(f: Figure, sel: CmpSel): string {
       ${open ? listHTML(dots) : ''}`;
   }).join('');
   const split = splitLine(f);
-  const take = sel.kind !== 'mine' && !anyChoice() ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>You can undo it.</span></div>` : '';
+  // "Make these my picks" says exactly what it fills: the plan it runs (today's fill leaves ranked races to rank, and a
+  // race of several seats unless the group names a full set), so the promise and the result never differ.
+  const fills = sel.kind === 'mine' || anyChoice() ? 0 : sel.kind === 'group' ? planAgree(chipMembers(S.ballot!, sel.key)).fills.length : planParty(sel.party).fills.length;
+  const take = fills ? `<div class="cmp-take"><button class="mini dark" data-act="cmp-take" data-fk="cmp-take">Make these my picks</button><span>${esc(fills === f.picks ? `Fills ${fills === 1 ? 'this race' : `these ${fills} races`}.` : `Fills ${fills} of these races.`)} You can undo it.</span></div>` : '';
   const notes = f.notes.map((n) => `<p class="vz-note">${esc(n)}</p>`).join('');
   return `<p class="vz-sum vz-head">${esc(countLine(f))}</p>${split ? `<p class="vz-more">${esc(split)}</p>` : ''}
     ${keyHTML(f)}<div class="vz-fig">${rows}</div>${take}${notes}`;
@@ -143,7 +153,7 @@ function keyHTML(f: Figure): string {
   const bits: [Dot['kind'], string][] = f.picks
     ? [['up', final ? 'Ahead or won' : 'Ahead'], ['down', final ? 'Behind or didn’t win' : 'Behind'], ['wp', 'Not compared'], ['po', f.sel && f.sel.kind === 'mine' ? 'Not picked' : 'No pick']]
     : [['po', 'Numbers posted'], ['w', 'No numbers yet']];
-  if (has('ln')) bits.push(['ln', 'Office results']);
+  if (has('ln')) bits.push(['ln', 'On office site']);
   return `<p class="vz-key">${bits.map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
 }
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;

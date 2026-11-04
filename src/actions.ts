@@ -716,7 +716,7 @@ function closePicks(): void {
   S.ui.setupFill = false;
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
-  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; }
+  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; S.ui.takeWas = null; }
   if (n || only !== S.b.hideDecided) dropBeat();
   const onlyChanged = only !== S.b.hideDecided;
   if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
@@ -946,6 +946,7 @@ const setupPlan = (plan: SetupPlan): Plan => {
   return { fills: plan.fills, single: plan.agree.single, skippedTwo: pp.skippedTwo, skippedRanked: pp.skippedRanked, skippedPartial: pp.skippedPartial + plan.agree.skippedPartial };
 };
 A.bulk = (d) => {
+  S.ui.takeWas = null; // a newer batch: its Undo is about its own picks only
   const k = d.k!;
   let plan: Plan;
   if (k === 'agree') plan = planAgree();
@@ -971,6 +972,8 @@ A.bulk = (d) => {
 A['undo-bulk'] = () => {
   if (!undoFills()) return;
   const fromLine = (document.activeElement as HTMLElement | null)?.dataset?.fk === 'filled-undo';
+  // Undoing "Make these my picks" also puts the sources and party back as they were.
+  if (S.ui.takeWas) { S.b.sources = S.ui.takeWas.sources; S.b.party = S.ui.takeWas.party; S.ui.takeWas = null; }
   S.ui.bulk = null;
   dropBeat();
   hideToast();
@@ -1059,11 +1062,15 @@ A['cmp-take'] = () => {
   const sel = cmpSel();
   if (!sel || sel.kind === 'mine' || anyChoice()) return;
   const b = B();
+  // What the lens was, so this fill's Undo puts it back exactly (PR #139 review); nothing filled, nothing changes.
+  const was = { sources: S.b.sources ? [...S.b.sources] : null, party: S.b.party };
   let sp: SetupPlan;
   if (sel.kind === 'group') { setSources(b, chipMembers(b, sel.key).map((e) => e.id)); const a = planAgree(); sp = { party: null, agree: a, fills: a.fills }; } else { setParty(b, sel.party); const p = planParty(sel.party); sp = { party: p, agree: emptyPlan(), fills: p.fills }; }
   const n = sp.fills.length ? applyFills(sp.fills) : 0;
+  if (!n) { S.b.sources = was.sources; S.b.party = was.party; persist(); return; }
   S.ui.cmp = undefined;
-  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null; }
+  S.ui.takeWas = was;
+  S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null;
   persist();
   // The rows and the card repaint; with the address form open, row by row, and the head (the endorsement line, the
   // "filled in" line with its Undo) through renderAddr, so what's typed there stays (Codex).

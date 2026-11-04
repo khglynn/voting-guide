@@ -692,8 +692,8 @@ export function ballotHeadHTML(): string {
   // controls and the rest.
   const fig = afterPolls(S.ballot?.howto) ? figureHTML() : '';
   return `<div class="bhead"><h2 class="step su-h bal-h" id="ballot-h"><span class="step-n" aria-hidden="true">3</span>Your ballot</h2>
-      ${fig}<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
-      ${cov}${filled}${box}
+      ${fig}${fig && afterPolls(S.ballot?.howto) ? '' : `<p class="picks-line"><span>Endorsements: ${esc(lensSummary())}</span><button class="mini" data-act="picks" data-fk="picks-edit">Edit</button></p>
+      ${cov}`}${filled}${box}
     </div>
     ${headsHTML(rest)}`;
 }
@@ -780,11 +780,16 @@ export function footResHTML(): string {
     const lead = f.kind === 'failed' ? `<span class="fr-p">Couldn’t check just now</span>${f.link ? DOT : ''}` : '';
     return `<div class="foot-res" data-kind="${f.kind}"><span class="fr-line">${lead}${f.link ? ext(f.link.url, f.link.text, 'fr-go') : ''}</span>${f.kind === 'failed' ? refreshIcon() : ''}</div>`;
   }
-  const at = R.failed ? 'couldn’t check for updates' : f.down ? (f.at ? `showing its ${f.at} numbers` : 'showing its last numbers') : f.at;
-  const who = f.down ? `Can’t reach ${f.who}` : f.who;
-  const mid = who || f.prog ? `<span class="fr-mid${f.prog ? '' : ' nop'}">${DOT}<span class="fr-who">${esc(who)}${f.prog ? ' ' : ''}</span>${f.prog ? `<span class="fr-pl">${esc(f.prog)}</span><span class="fr-ps">${esc(f.progShort)}</span>` : ''}</span>` : '';
-  const said = [f.word, f.down ? who : [who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
-  return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b>${mid}${at ? `<span class="fr-at">${DOT}${esc(at)}</span>` : ''}</button>${refreshIcon()}</div>`;
+  // An office we can't reach keeps "Can't reach Travis" through every fit step; only "showing its 9:12 PM numbers" can
+  // drop (the menu has it). Our own failed read keeps its words too. The office's time and day never drop.
+  if (f.down) {
+    const said = `${f.word}, can’t reach ${f.who}${f.at ? `, showing its ${f.at} numbers` : ''}`;
+    return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b><span class="fr-dn">${DOT}Can’t reach ${esc(f.who)}</span>${f.at ? `<span class="fr-at dn">${DOT}showing its ${esc(f.at)} numbers</span>` : ''}</button>${refreshIcon()}</div>`;
+  }
+  const at = R.failed ? 'couldn’t check for updates' : f.at;
+  const mid = f.who || f.prog ? `<span class="fr-mid${f.prog ? '' : ' nop'}">${DOT}<span class="fr-who">${esc(f.who)}${f.prog ? ' ' : ''}</span>${f.prog ? `<span class="fr-pl">${esc(f.prog)}</span><span class="fr-ps">${esc(f.progShort)}</span>` : ''}</span>` : '';
+  const said = [f.word, [f.who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
+  return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b>${mid}${at ? `<span class="fr-at${R.failed ? ' fr-keep' : ''}">${DOT}${esc(at)}</span>` : ''}</button>${refreshIcon()}</div>`;
 }
 /* Fit the bar's line to one line: without the office's name, then with the shortest progress words, then without them.
    Called after the bar paints and when the window resizes (render.ts, main.ts). */
@@ -871,7 +876,8 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     <ul class="nv-list nv-secs">
     ${secs}</ul>
     <div class="nv-from">${srcList}${links}</div>
-    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}</ul>
+    <ul class="nv-list nv-end nv-next-step">${row('data-act="cheat"', 'cheat', 'What’s next', '', ' nv-plan')}
+    ${row('data-act="picks"', 'picks', 'Endorsements', noEndorsements() ? 'Off' : lensSummary())}</ul>
     <ul class="nv-list nv-end"><li><button class="nv nv-report" ${reportAttrs({ fk: `${where}-report` })}><span class="nv-t">Report a problem</span><span class="nv-n"></span>${ARROW}</button></li>
     ${row('data-act="shelf" data-kind="how" aria-haspopup="dialog"', 'how', 'How this guide works', '', ' nv-how')}</ul>`;
 }

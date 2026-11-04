@@ -18,5 +18,8 @@ import * as pa_dos from './pa_dos.js';
 import * as philadelphia from './philadelphia.js';
 import * as denver from './denver.js';
 import * as boulder from './boulder.js';
+import * as stlouis_csv from './stlouis_csv.js';
+import * as or_sos from './or_sos.js';
+import * as multco from './multco.js';
 
-export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos, fl_dos, vr_enr, nyc_enr, md_sbe, pa_dos, philadelphia, denver, boulder };
+export const ADAPTERS = { clarity, harris, tx_sos, dc, enhanced_voting, la_county, lvt, ca_sos, fl_dos, vr_enr, nyc_enr, md_sbe, pa_dos, philadelphia, denver, boulder, stlouis_csv, or_sos, multco };

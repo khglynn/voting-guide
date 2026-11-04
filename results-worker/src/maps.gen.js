@@ -18751,6 +18751,749 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "results-MO-stlouis-county",
+    "state": "MO",
+    "name": "St. Louis County Board of Elections",
+    "county": "St. Louis County",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "St. Louis County media.csv, Nov 3, 2026 general",
+      "feed_name": null
+    },
+    "guide": {
+      "fingerprint": "baac939611a63632",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:45:49.403Z",
+      "places": [
+        "ballwin-mo",
+        "clayton-mo",
+        "webster-groves-mo"
+      ]
+    },
+    "feed": {
+      "adapter": "stlouis_csv",
+      "base": "https://extcontent.stlouisco.com/BOE/eResults/media",
+      "results_url": "https://extcontent.stlouisco.com/BOE/eResults/media/media.csv",
+      "results_url_note": "The county's only readable results address tonight is this CSV (a 6.6 MB download); its office site stlouiscountymo.gov refused scripted reads in capture round 1, so no friendlier page is known.",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 10:19 PM CT (200, Last-Modified 03:58:42 GMT) and a conditional read at 10:20 PM (304).",
+      "election_id_from": "The file names no election. Its Last-Modified must fall between Nov 3 and certification, and it must hold the contests below by id and title (only this election has them).",
+      "identity_contests": [
+        {
+          "id": "35",
+          "name": "ST. LOUIS COUNTY - COUNTY EXECUTIVE"
+        },
+        {
+          "id": "48",
+          "name": "ST. LOUIS COUNTY - PROPOSITION S"
+        },
+        {
+          "id": "73",
+          "name": "CITY OF WEBSTER GROVES - AMENDMENT 1"
+        }
+      ],
+      "tz": "America/Chicago"
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-18T05:59:00Z",
+    "count_closes_note": "Mail had to arrive by 7 PM Nov 3; provisional ballots are added before the canvass, so the count stays open to certification.",
+    "complete_marker": null,
+    "certify_by": "2026-11-17",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "32",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 100",
+        "item": "mo-hd-100",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PHILIP OEHLERKING": "Philip Oehlerking",
+          "MARY ANN PERKINS": "Mary Ann Perkins",
+          "KEN NEWHOUSE": "Ken Newhouse"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "33",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 101",
+        "item": "mo-hd-101",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BEN KEATHLEY": "Ben Keathley",
+          "PAUL LENTZ": "Paul Lentz",
+          "JEFF COLEMAN": "Jeff Coleman"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "34",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 110",
+        "item": "mo-hd-110",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "NILES STEPHENS": "Niles Stephens",
+          "CLAIRE HEINRICH": "Claire Heinrich"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "17",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 83",
+        "item": "mo-hd-83",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RAY REED": "Ray Reed",
+          "ANDREW BOLIN": "Andrew Bolin"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "19",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 86",
+        "item": "mo-hd-86",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JEFF HALES": "Jeff Hales"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "21",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 88",
+        "item": "mo-hd-88",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "HOLLY JONES": "Holly Jones",
+          "JENNIFER TRICKEY": "Jennifer Trickey"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "22",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 89",
+        "item": "mo-hd-89",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GEORGE HRUZA": "George Hruza",
+          "BRYAN TROOP": "Bryan Troop"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "23",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 90",
+        "item": "mo-hd-90",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK BOYKO": "Mark Boyko"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "24",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 91",
+        "item": "mo-hd-91",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JO DOLL": "Jo Doll"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "29",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 96",
+        "item": "mo-hd-96",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRAD CHRIST": "Brad Christ",
+          "MATT VITALE": "Matt Vitale",
+          "SHANE FERGUSON": "Shane Ferguson"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "30",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 98",
+        "item": "mo-hd-98",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TIMOTHY BOSCH": "Timothy Bosch",
+          "JACLYN ZIMMERMANN": "Jaclyn Zimmermann"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "31",
+        "feed_name": "STATE REPRESENTATIVE - DISTRICT 99",
+        "item": "mo-hd-99",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TORI SCHAFER": "Tori Schafer"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "5",
+        "feed_name": "STATE SENATE - DISTRICT 14",
+        "item": "mo-sd-14",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "VERNON NORMAN": "Vernon Norman",
+          "RAYCHEL PROUDIE": "Raychel Proudie"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "6",
+        "feed_name": "STATE SENATE - DISTRICT 24",
+        "item": "mo-sd-24",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LAVANNA WROBLEY": "LaVanna Wrobley",
+          "TRACY MCCREERY": "Tracy McCreery"
+        },
+        "reaches": [
+          "St. Louis County",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "4",
+        "feed_name": "STATE SENATE - DISTRICT 4",
+        "item": "mo-sd-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "GINA MITTEN": "Gina Mitten"
+        },
+        "reaches": [
+          "St. Louis County",
+          "City of St. Louis"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "1",
+        "feed_name": "U.S. REPRESENTATIVE -  DISTRICT 1",
+        "item": "mo-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAUL BERRY III": "Paul Berry III",
+          "WESLEY BELL": "Wesley Bell",
+          "TOM SCHMITZ": "Tom Schmitz"
+        },
+        "reaches": [
+          "St. Louis County",
+          "City of St. Louis"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "2",
+        "feed_name": "U.S. REPRESENTATIVE -  DISTRICT 2",
+        "item": "mo-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANN WAGNER": "Ann Wagner",
+          "FRED WELLMAN": "Fred Wellman",
+          "BRANDON COULTER DAUGHERTY": "Brandon Coulter Daugherty"
+        },
+        "reaches": [
+          "St. Louis County",
+          "St. Charles",
+          "Warren",
+          "Franklin",
+          "other counties",
+          "St. Charles County",
+          "Warren County",
+          "Franklin County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "77",
+        "feed_name": "PARKWAY SCHOOL DISTRICT - PROPOSITION P",
+        "item": "parkway-sd-prop-p",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "37",
+        "feed_name": "ST. LOUIS COUNTY - COUNTY ASSESSOR",
+        "item": "stlco-assessor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAVID MESSNER": "David Messner",
+          "DOUG CLEMENS": "Doug Clemens",
+          "AUSTIN BROWN": "Austin Brown"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "39",
+        "feed_name": "COUNTY COUNCIL - DISTRICT 3",
+        "item": "stlco-council-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANDREW KOENIG": "Andrew Koenig",
+          "MARK OSMACK": "Mark Osmack"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "40",
+        "feed_name": "COUNTY COUNCIL - DISTRICT 5",
+        "item": "stlco-council-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LISA CLANCY": "Lisa Clancy"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "41",
+        "feed_name": "COUNTY COUNCIL - DISTRICT 7",
+        "item": "stlco-council-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARK HARDER": "Mark Harder",
+          "JOHN KIEHNE": "John Kiehne"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "35",
+        "feed_name": "ST. LOUIS COUNTY - COUNTY EXECUTIVE",
+        "item": "stlco-county-executive",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DENNIS HANCOCK": "Dennis Hancock",
+          "JAKE ZIMMERMAN": "Jake Zimmerman",
+          "J D MCFARLAND": "J.D. McFarland"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "47",
+        "feed_name": "ST. LOUIS COUNTY - PROPOSITION A",
+        "item": "stlco-prop-a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "48",
+        "feed_name": "ST. LOUIS COUNTY - PROPOSITION S",
+        "item": "stlco-prop-s",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "36",
+        "feed_name": "ST. LOUIS COUNTY - PROSECUTING ATTORNEY",
+        "item": "stlco-prosecuting-attorney",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MELISSA PRICE SMITH": "Melissa Price Smith",
+          "THEO BROWN SR.": "Theo Brown Sr."
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "58",
+        "feed_name": "LORNE BAKER",
+        "item": "stlco-retention-baker",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "54",
+        "feed_name": "JOHN BORBONUS",
+        "item": "stlco-retention-borbonus",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "67",
+        "feed_name": "CHASTIDY DILLON-AMELUNG",
+        "item": "stlco-retention-dillon-amelung",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "60",
+        "feed_name": "ELLEN WYATT DUNNE",
+        "item": "stlco-retention-dunne",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "66",
+        "feed_name": "MONDONNA L. GHASEDI",
+        "item": "stlco-retention-ghasedi",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "59",
+        "feed_name": "MATT HEARNE",
+        "item": "stlco-retention-hearne",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "62",
+        "feed_name": "NICOLETTE ANTONIA KLAPP",
+        "item": "stlco-retention-klapp",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61",
+        "feed_name": "JULIA PUSATERI LASATER",
+        "item": "stlco-retention-lasater",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "64",
+        "feed_name": "JASON K. LEWIS",
+        "item": "stlco-retention-lewis",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "56",
+        "feed_name": "AMANDA B. McNELLEY",
+        "item": "stlco-retention-mcnelley",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "57",
+        "feed_name": "JEFFERY McPHERSON",
+        "item": "stlco-retention-mcpherson",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "55",
+        "feed_name": "MARY ELIZABETH OTT",
+        "item": "stlco-retention-ott",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "63",
+        "feed_name": "JUSTIN W. RUTH",
+        "item": "stlco-retention-ruth",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "65",
+        "feed_name": "KELLY SNYDER",
+        "item": "stlco-retention-snyder",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "53",
+        "feed_name": "RICHARD M. STEWART",
+        "item": "stlco-retention-stewart",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "73",
+        "feed_name": "CITY OF WEBSTER GROVES - AMENDMENT 1",
+        "item": "webster-groves-city-amendment-1",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "80",
+        "feed_name": "WEBSTER GROVES SCHOOL DISTRICT - PROPOSITION W",
+        "item": "webster-groves-sd-prop-w",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "St. Louis County"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
     "id": "results-NY-nyc",
     "state": "NY",
     "name": "New York City Board of Elections",
@@ -21420,6 +22163,1058 @@ export const MAPS = [
       "delaware-town-council-vacancy"
     ],
     "not_here": []
+  },
+  {
+    "id": "results-OR-multnomah",
+    "state": "OR",
+    "name": "Multnomah County Elections",
+    "county": "Multnomah",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "November 3, 2026 General Election",
+      "feed_name": "November 3, 2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "7708254762ce2bcd",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:46:02.299Z",
+      "places": [
+        "portland-or"
+      ]
+    },
+    "feed": {
+      "adapter": "multco",
+      "base": "https://rcvresults.multco.us",
+      "state_base": "https://results.oregonvotes.gov",
+      "county_page": "ResultsSW.aspx?type=CTYALL&cty=26&map=CTY",
+      "results_url": "https://rcvresults.multco.us/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:24 PM CT: rcvresults.multco.us home and a report page 200, the report's JSON on Azure blob storage 200, the SOS county page 200.",
+      "election_id_from": "The ranked-choice site's own election heading \"November 3, 2026 General Election\"; each report's JSON says date 2026-11-03; the SOS county page's hidden election date 11/3/2026.",
+      "tz": "America/Los_Angeles"
+    },
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-11-25T07:59:00Z",
+    "count_closes_note": "Ballots received by Nov 10 count; signature cures through Nov 24 (multco.us election results schedule).",
+    "complete_marker": null,
+    "certify_by": "2026-11-30",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "300038659",
+        "feed_name": "East Multnomah Soil and Water Conservation District, Director, At-Large, Position 2",
+        "item": "emswcd-at-large-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Alex Parise": "Alex Parise",
+          "Jeremy Wood": "Jeremy Wood",
+          "Daniel Newberry": "Daniel Newberry",
+          "Steph Routh": "Steph Routh",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300038660",
+        "feed_name": "East Multnomah Soil and Water Conservation District, Director, Zone 3",
+        "item": "emswcd-zone-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Silas Morgan": "Silas Morgan",
+          "Brad Hunter": "Brad Hunter",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "rcv:Multnomah_County_Chair",
+        "feed_name": "Multnomah County Chair",
+        "item": "multnomah-chair",
+        "kind": "rcv",
+        "seats": 1,
+        "choices": {
+          "Julia Brim-Edwards": "Julia Brim-Edwards",
+          "Shannon Singleton": "Shannon Singleton",
+          "Sharon Meieran": "Sharon Meieran",
+          "Uncertified Write In": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "rcv:Multnomah_County_Commissioner,_District_2",
+        "feed_name": "Multnomah County Commissioner, District 2",
+        "item": "multnomah-commissioner-2",
+        "kind": "rcv",
+        "seats": 1,
+        "choices": {
+          "Bri Williams": "Bri Williams",
+          "Bruce Broussard": "Bruce Broussard",
+          "Herman Greene": "Herman Greene",
+          "Nabil Zaghloul": "Nabil Zaghloul",
+          "Nathan Ong Norris": "Nathan Ong Norris",
+          "Serena Cruz": "Serena Cruz",
+          "Tony Robertson": "Tony Robertson",
+          "Uncertified Write In": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300001788",
+        "feed_name": "26-267 City of Portland: Amends Charter: Portland residents decide 2% of city's annual discretionary budget.",
+        "item": "portland-26-267",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "Clackamas"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "rcv:City_of_Portland_Auditor",
+        "feed_name": "City of Portland Auditor",
+        "item": "portland-auditor",
+        "kind": "rcv",
+        "seats": 1,
+        "choices": {
+          "Simone Rede": "Simone Rede",
+          "Uncertified Write In": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "Clackamas"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "rcv:City_of_Portland_Councilor_-_District_3",
+        "feed_name": "City of Portland Councilor - District 3",
+        "item": "portland-council-3",
+        "kind": "rcv",
+        "seats": 3,
+        "choices": {
+          "Ali Beaudoin": "Ali Beaudoin",
+          "Angelita Morillo": "Angelita Morillo",
+          "Cristal Otero": "Cristal Otero",
+          "Darren McCormick": "Darren McCormick",
+          "Esther León": "Esther León",
+          "Guy Frankenstein": "Guy Frankenstein",
+          "Heart Free Pham": "Heart Free Pham",
+          "Joel Corcoran": "Joel Corcoran",
+          "John Sweeney": "John Sweeney",
+          "Keir Legree": "Keir Legree",
+          "Kellie Torres": "Kellie Torres",
+          "Kenneth (Kent) R Landgraver III": "Kenneth (Kent) R Landgraver III",
+          "Kimberly Tucker": "Kimberly Tucker",
+          "Larry Kelly": "Larry Kelly",
+          "Martin Ward": "Martin Ward",
+          "Matthias Hallett": "Matthias Hallett",
+          "Patrick Hilton": "Patrick Hilton",
+          "Steve Novick": "Steve Novick",
+          "Terry Parker": "Terry Parker",
+          "Tiffany Koyama Lane": "Tiffany Koyama Lane",
+          "Tom Sollitt": "Tom Sollitt",
+          "Uncertified Write In": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "Clackamas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "rcv:City_of_Portland_Councilor_-_District_4",
+        "feed_name": "City of Portland Councilor - District 4",
+        "item": "portland-council-4",
+        "kind": "rcv",
+        "seats": 3,
+        "choices": {
+          "Eli Arnold": "Eli Arnold",
+          "Eric Zimmerman": "Eric Zimmerman",
+          "Jamey Evenstar": "Jamey Evenstar",
+          "Jayne Cronlund": "Jayne Cronlund",
+          "Jeremy Beausoleil Smith": "Jeremy Beausoleil Smith",
+          "John J Goldsmith": "John J Goldsmith",
+          "John McDonald": "John McDonald",
+          "Josh Leake": "Josh Leake",
+          "Matt Schulte": "Matt Schulte",
+          "Mitch Green": "Mitch Green",
+          "Olivia Clark": "Olivia Clark",
+          "Timothy (TJ) Anderson": "Timothy (TJ) Anderson",
+          "Uncertified Write In": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "Clackamas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300001793",
+        "feed_name": "26-268 Reynolds School District 7: Bonds to Increase Safety, Security; Repair, Construct Schools; Increase Accessibility",
+        "item": "reynolds-sd-26-268",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "300038673",
+        "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 2",
+        "item": "rockwood-pud-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Colby E Riley": "Colby E Riley",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300038674",
+        "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 5",
+        "item": "rockwood-pud-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Christine E Brown": "Christine E Brown",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300038661",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, At-Large, Position 2",
+        "item": "wmswcd-at-large-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ronda Zakocs": "Ronda Zakocs",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300038662",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 4",
+        "item": "wmswcd-zone-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Elizabeth Offensend": "Elizabeth Offensend",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "300038663",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 5",
+        "item": "wmswcd-zone-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Terri Preeg Riggsby": "Terri Preeg Riggsby",
+          "Joy VanDervort Fields": "Joy VanDervort Fields",
+          "Shari Freshman": "Shari Freshman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Multnomah",
+          "Washington",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "300038675",
+        "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 4 (2 Year Unexpired Term)",
+        "why": "looks like guide item rockwood-pud-4 (same candidate, Nicholas Engels), but the feed race is a 2-year unexpired term and the guide item doesn't say so; a full term and an unexpired term are different races."
+      }
+    ],
+    "unmatched_guide": [
+      "multnomah-auditor",
+      "multnomah-sheriff",
+      "rockwood-pud-4"
+    ],
+    "not_here": [
+      "multnomah-circuit-judge-14",
+      "multnomah-circuit-judge-2",
+      "multnomah-circuit-judge-6",
+      "or-hd-28",
+      "or-hd-33",
+      "or-hd-34",
+      "or-hd-38",
+      "or-hd-41",
+      "or-hd-42",
+      "or-hd-43",
+      "or-hd-44",
+      "or-hd-45",
+      "or-hd-46",
+      "or-hd-47",
+      "or-hd-48",
+      "or-hd-49",
+      "or-hd-50",
+      "or-sd-17",
+      "or-sd-19",
+      "or-sd-24",
+      "or-us-house-1",
+      "or-us-house-3",
+      "or-us-house-5"
+    ]
+  },
+  {
+    "id": "results-OR",
+    "state": "OR",
+    "name": "Oregon Secretary of State",
+    "county": "Oregon",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "General 11/3/2026",
+      "feed_name": "General Election November 3, 2026"
+    },
+    "guide": {
+      "fingerprint": "b1368a5a47889df9",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:45:58.249Z",
+      "locals": true,
+      "places": [
+        "state-OR",
+        "portland-or"
+      ]
+    },
+    "feed": {
+      "adapter": "or_sos",
+      "base": "https://results.oregonvotes.gov",
+      "pages": [
+        "resultsSW.aspx?type=FED&map=CTY",
+        "resultsSW.aspx?type=SWPAR&map=CTY",
+        "resultsSW.aspx?type=SENATE&map=CTY",
+        "resultsSW.aspx?type=HOUSE&map=CTY",
+        {
+          "page": "resultsSW.aspx?type=HOUSE&map=CTY",
+          "post": {
+            "name": "ctl00$MainContent$btnHouse4",
+            "value": "31 - 60"
+          }
+        },
+        "resultsSW.aspx?type=SWNON&map=CTY",
+        "resultsSW.aspx?type=LMEA&map=CTY",
+        "resultsSW.aspx?type=MCR&map=CTY"
+      ],
+      "results_url": "https://results.oregonvotes.gov/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent on Nov 3, 10:19 to 10:24 PM CT: 200 on the home page and all seven results pages, no challenge.",
+      "election_id_from": "The page's own hidden fields hidElectionType \"General\" and hidElectionDate \"11/3/2026\", and its header \"General Election November 3, 2026\" under \"Unofficial\".",
+      "tz": "America/Los_Angeles",
+      "pages_note": "The House page shows districts 1 to 30; 31 to 60 sit behind the page's own \"31 - 60\" button (an ASP.NET form post with the page's hidden fields), checked Nov 3 10:40 PM CT with our named User-Agent: 200, districts 31 to 60."
+    },
+    "polls_close": "2026-11-04T04:00:00Z",
+    "count_closes": "2026-11-25T07:59:00Z",
+    "count_closes_note": "Ballots postmarked by Nov 3 and received by Nov 10 count; signature cures run to Nov 24 (Multnomah's date; the statewide cure date wasn't found).",
+    "complete_marker": null,
+    "certify_by": "2026-12-10",
+    "certify_note": "The statewide certification date wasn't found (registry row results-OR); set late on purpose, so the fetcher never stops early.",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "300038778",
+        "feed_name": "Judge of the Circuit Court, 4th District, Position 14",
+        "item": "multnomah-circuit-judge-14",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Elizabeth Savage": "Elizabeth Savage",
+          "Joseph Hagedorn": "Joseph Hagedorn",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038779",
+        "feed_name": "Judge of the Circuit Court, 4th District, Position 2",
+        "item": "multnomah-circuit-judge-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Diane S Sykes": "Diane S Sykes",
+          "Laura Maurer Rowan": "Laura Maurer Rowan",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038837",
+        "feed_name": "Judge of the Circuit Court, 4th District, Position 6",
+        "item": "multnomah-circuit-judge-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sonia A Montalbano - Incumbent": "Sonia A Montalbano",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038702",
+        "feed_name": "Governor",
+        "item": "or-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brett Smith": "Brett Smith",
+          "Tina Kotek": "Tina Kotek",
+          "Christine Drazan": "Christine Drazan",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Baker",
+          "Benton",
+          "Clackamas",
+          "Clatsop",
+          "Columbia",
+          "Coos",
+          "Crook",
+          "Curry",
+          "Deschutes",
+          "Douglas",
+          "Gilliam",
+          "Grant",
+          "Harney",
+          "Hood River",
+          "Jackson",
+          "Jefferson",
+          "Josephine",
+          "Klamath",
+          "Lake",
+          "Lane",
+          "Lincoln",
+          "Linn",
+          "Malheur",
+          "Marion",
+          "Morrow",
+          "Multnomah",
+          "Polk",
+          "Sherman",
+          "Tillamook",
+          "Umatilla",
+          "Union",
+          "Wallowa",
+          "Wasco",
+          "Washington",
+          "Wheeler",
+          "Yamhill"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038745",
+        "feed_name": "State Representative, 28th District",
+        "item": "or-hd-28",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dacia Grayber": "Dacia Grayber",
+          "Randall Fryer": "Randall Fryer",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Washington"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038750",
+        "feed_name": "State Representative, 33rd District",
+        "item": "or-hd-33",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Shannon Jones Isadore": "Shannon Jones Isadore",
+          "Ciatta R Thompson": "Ciatta R Thompson",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038751",
+        "feed_name": "State Representative, 34th District",
+        "item": "or-hd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mari Watanabe": "Mari Watanabe",
+          "Shaunie Cousins": "Shaunie Cousins",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Washington",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038755",
+        "feed_name": "State Representative, 38th District",
+        "item": "or-hd-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Daniel Loc Nguyen": "Daniel Loc Nguyen",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Clackamas",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038758",
+        "feed_name": "State Representative, 41st District",
+        "item": "or-hd-41",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mark Gamba": "Mark Gamba",
+          "Elvis Clark": "Elvis Clark",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Clackamas",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038759",
+        "feed_name": "State Representative, 42nd District",
+        "item": "or-hd-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Morey Straus": "Morey Straus",
+          "Rob Nosse": "Rob Nosse",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038760",
+        "feed_name": "State Representative, 43rd District",
+        "item": "or-hd-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tawna Sanchez": "Tawna Sanchez",
+          "Tim LeMaster": "Tim LeMaster",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038761",
+        "feed_name": "State Representative, 44th District",
+        "item": "or-hd-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Travis Nelson": "Travis Nelson",
+          "Margo Logan": "Margo Logan",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038762",
+        "feed_name": "State Representative, 45th District",
+        "item": "or-hd-45",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jason Boyce": "Jason Boyce",
+          "Thuy Tran": "Thuy Tran",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038763",
+        "feed_name": "State Representative, 46th District",
+        "item": "or-hd-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Willy Chotzen": "Willy Chotzen",
+          "Leo Morley": "Leo Morley",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038764",
+        "feed_name": "State Representative, 47th District",
+        "item": "or-hd-47",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Andrea Valderrama": "Andrea Valderrama",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038765",
+        "feed_name": "State Representative, 48th District",
+        "item": "or-hd-48",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lamar Wise": "Lamar Wise",
+          "Andrew Morrison": "Andrew Morrison",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Clackamas"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038766",
+        "feed_name": "State Representative, 49th District",
+        "item": "or-hd-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ann Walker": "Ann Walker",
+          "Zach Hudson": "Zach Hudson",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038767",
+        "feed_name": "State Representative, 50th District",
+        "item": "or-hd-50",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brian Gray": "Brian Gray",
+          "Ricki Ruiz": "Ricki Ruiz",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038713",
+        "feed_name": "State Senator, 17th District",
+        "item": "or-sd-17",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John A N Chee": "John A N Chee",
+          "Lisa Reynolds": "Lisa Reynolds",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Washington"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038714",
+        "feed_name": "State Senator, 19th District",
+        "item": "or-sd-19",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rob Wagner": "Rob Wagner",
+          "Mary Dirksen": "Mary Dirksen",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Clackamas",
+          "Washington"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038716",
+        "feed_name": "State Senator, 24th District",
+        "item": "or-sd-24",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kayse Jama": "Kayse Jama",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Clackamas"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038696",
+        "feed_name": "US Representative, 1st District",
+        "item": "or-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Barbara J Kahl": "Barbara J Kahl",
+          "Suzanne Bonamici": "Suzanne Bonamici",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Washington",
+          "Columbia",
+          "Clatsop",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038698",
+        "feed_name": "US Representative, 3rd District",
+        "item": "or-us-house-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Maxine E Dexter": "Maxine E Dexter",
+          "Loran Ayles": "Loran Ayles",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Hood River",
+          "Clackamas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038700",
+        "feed_name": "US Representative, 5th District",
+        "item": "or-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Janelle S Bynum": "Janelle S Bynum",
+          "Andrea Townsend": "Andrea Townsend",
+          "Patti Adair": "Patti Adair",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Clackamas",
+          "Marion",
+          "Linn",
+          "Deschutes",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038695",
+        "feed_name": "US Senator",
+        "item": "or-us-senate",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "David Brock Smith": "David Brock Smith",
+          "Jeff Merkley": "Jeff Merkley",
+          "Gary Lyndon Dye": "Gary Lyndon Dye",
+          "Chris Henry": "Chris Henry",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Baker",
+          "Benton",
+          "Clackamas",
+          "Clatsop",
+          "Columbia",
+          "Coos",
+          "Crook",
+          "Curry",
+          "Deschutes",
+          "Douglas",
+          "Gilliam",
+          "Grant",
+          "Harney",
+          "Hood River",
+          "Jackson",
+          "Jefferson",
+          "Josephine",
+          "Klamath",
+          "Lake",
+          "Lane",
+          "Lincoln",
+          "Linn",
+          "Malheur",
+          "Marion",
+          "Morrow",
+          "Multnomah",
+          "Polk",
+          "Sherman",
+          "Tillamook",
+          "Umatilla",
+          "Union",
+          "Wallowa",
+          "Wasco",
+          "Washington",
+          "Wheeler",
+          "Yamhill"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300001788",
+        "feed_name": "26-267 City of Portland: Amends Charter: Portland residents decide 2% of city's annual discretionary budget.",
+        "item": "portland-26-267",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah",
+          "Washington",
+          "Clackamas"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "300001793",
+        "feed_name": "26-268 Reynolds School District 7: Bonds to Increase Safety, Security; Repair, Construct Schools; Increase Accessibility",
+        "item": "reynolds-sd-26-268",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "300038661",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, At-Large, Position 2",
+        "item": "wmswcd-at-large-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ronda Zakocs": "Ronda Zakocs",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038662",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 4",
+        "item": "wmswcd-zone-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Elizabeth Offensend": "Elizabeth Offensend",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "300038663",
+        "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 5",
+        "item": "wmswcd-zone-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Terri Preeg Riggsby": "Terri Preeg Riggsby",
+          "Joy VanDervort Fields": "Joy VanDervort Fields",
+          "Shari Freshman": "Shari Freshman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Oregon",
+          "Multnomah"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": [
+      "emswcd-at-large-2",
+      "emswcd-zone-3",
+      "multnomah-auditor",
+      "multnomah-chair",
+      "multnomah-commissioner-2",
+      "multnomah-sheriff",
+      "portland-auditor",
+      "portland-council-3",
+      "portland-council-4",
+      "rockwood-pud-2",
+      "rockwood-pud-4",
+      "rockwood-pud-5"
+    ]
   },
   {
     "id": "results-PA",

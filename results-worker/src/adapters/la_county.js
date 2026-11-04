@@ -2,8 +2,8 @@
    jQuery app behind Imperva that reads two JSON files (both answered our named User-Agent on Nov 3, 8:19 PM PT):
    - `ElectionResults/GetCounterData?electionID={id}`: every count as a flat list of
      {ReferenceType, ReferenceID, Value}, plus `TimeStamp` ("11/3/2026 8:17:00 PM", Pacific, no zone named), the
-     county's own "Results as of" time. CAND = one candidate's (or YES/NO's) votes, by candidate ID; CFV = the
-     contest's votes for anyone, write-ins included; WRTN-01..04 = write-in votes per seat, by contest ID; PRPT =
+     county's own "Results as of" time. CAND = one candidate's (or YES/NO's) votes, by candidate ID; CFV = ballots
+     that used every selection (for a one-seat race, every vote for someone, write-ins included; not read); WRTN-01..04 = write-in votes per seat, by contest ID; PRPT =
      precincts reporting (by contest ID, and "" for the county); EBLT and MBLT = ballots counted and vote-by-mail
      ballots, by election ID. CUV, COV and NSEL are under and over votes: votes for no one, never read.
    - `ElectionResults/GetElectionData?electionID={id}`: the election (ID, Date, Title, PrecinctCount, Locked) and its

@@ -161,11 +161,11 @@ test('vr_enr: 304 is unchanged; refusal, a 404 page and a dashed count are never
    no complete marker), whole-race counts from the state, county slices from Escambia. The real pairs wait on the judge. */
 test('florida: drafted pairs from both sources build clean preview files with no outcome', async () => {
   const now = '2026-11-04T04:30:00.000Z';
-  const fl = { ...mapFor('results-FL'), contests: [
+  const fl = { ...mapFor('results-FL'), unmatched_guide: [], contests: [
     { feed_id: 'United States Senator', feed_name: 'United States Senator', item: 'fl-us-senate-special', kind: 'plurality', seats: 1, choices: { 'Ashley Moody': 'Ashley Moody', 'Angie Nixon': 'Angie Nixon', 'Neil J. Gillespie': 'Neil J. Gillespie' }, reaches: ['Florida'], whole: true },
     { feed_id: 'Budget Stabilization Fund', feed_name: 'Budget Stabilization Fund', item: 'fl-amendment-1', kind: 'measure', seats: 1, choices: { 'Yes for Approval': 'yes', 'No for Rejection': 'no' }, reaches: ['Florida'], whole: true, pass_threshold: '60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))' },
   ] };
-  const esc = { ...mapFor('escambia-fl'), contests: [
+  const esc = { ...mapFor('escambia-fl'), unmatched_guide: [], contests: [
     { feed_id: '61251', feed_name: 'Pensacola City Council District 2', item: 'fl-pensacola-council-2', kind: 'plurality', seats: 1, choices: { 'Charles Bare (NON)': 'Charles Bare', 'Sherri Myers (NON)': 'Sherri Myers' }, reaches: ['Escambia'] },
     { feed_id: '61256', feed_name: 'County Referendum', item: 'fl-escambia-lost', kind: 'measure', seats: 1, choices: { 'FOR the one-cent sales tax (NON)': 'yes', 'AGAINST the one-cent sales tax (NON)': 'no' }, reaches: ['Escambia'], pass_threshold: 'simple majority of Escambia County voters voting on the question' },
   ] };

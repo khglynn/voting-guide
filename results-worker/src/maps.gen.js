@@ -3106,8 +3106,8 @@ export const MAPS = [
       "feed_name": "2026 General Election"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "skeleton, Nov 3 10:30 PM CT",
+      "fingerprint": "a5ce5a8407e282b6",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:32:57.610Z",
       "places": [
         "pensacola-fl"
       ]
@@ -3128,9 +3128,171 @@ export const MAPS = [
     "complete_marker_note": "None: the page's \"Completely Reported\" per vote type is election-night progress, not a finished count (cures until 5 PM Nov 5, provisionals and overseas ballots after), so Escambia reads counting until official.",
     "certify_by": "2026-11-16",
     "official": null,
-    "contests": [],
+    "contests": [
+      {
+        "feed_id": "61241",
+        "feed_name": "County Commissioner District 2",
+        "item": "fl-escambia-commission-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Mike Kohler (REP)": "Mike Kohler",
+          "DEM Mathious D. Robinson (DEM)": "Mathious Robinson",
+          "Write-in: Not Assigned (NON)": "__other"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61242",
+        "feed_name": "County Commissioner District 4",
+        "item": "fl-escambia-commission-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Ashlee Hofberger (REP)": "Ashlee Hofberger",
+          "NPA Joe Vinson (NPA)": "Joe Vinson"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61243",
+        "feed_name": "Emerald Coast Utilities Authority District 2",
+        "item": "fl-escambia-ecua-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Lois Benson (REP)": "Lois Benson",
+          "IND Gloria G. Horning (IND)": "Gloria Horning"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61244",
+        "feed_name": "Emerald Coast Utilities Authority District 4",
+        "item": "fl-escambia-ecua-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Greg Litton (REP)": "Greg Litton",
+          "DEM Jacob Cavender (DEM)": "Jacob Cavender",
+          "NPA Ralph H. Schofield Jr. (NPA)": "Ralph Schofield, Jr."
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61256",
+        "feed_name": "County Referendum",
+        "item": "fl-escambia-lost",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "FOR the one-cent sales tax (NON)": "yes",
+          "AGAINST the one-cent sales tax (NON)": "no"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority of Escambia County voters voting on the question"
+      },
+      {
+        "feed_id": "61239",
+        "feed_name": "State Representative District 1",
+        "item": "fl-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Michelle Salzman (REP)": "Michelle Salzman",
+          "DEM Francesca Yabraian (DEM)": "Francesca Yabraian"
+        },
+        "reaches": [
+          "Escambia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "61240",
+        "feed_name": "State Representative District 2",
+        "item": "fl-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Jon Fay (REP)": "Jon Fay",
+          "DEM Johnny Austin Thompson (DEM)": "Johnny Austin Thompson"
+        },
+        "reaches": [
+          "Escambia",
+          "Santa Rosa"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61251",
+        "feed_name": "Pensacola City Council District 2",
+        "item": "fl-pensacola-council-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Charles Bare (NON)": "Charles Bare",
+          "Sherri Myers (NON)": "Sherri Myers"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61252",
+        "feed_name": "Pensacola City Council District 4",
+        "item": "fl-pensacola-council-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brian Cole (NON)": "Brian Cole",
+          "Boyce White (NON)": "Boyce T. White"
+        },
+        "reaches": [
+          "Escambia"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "61234",
+        "feed_name": "Representative in Congress",
+        "item": "fl-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REP Jimmy Patronis (REP)": "Jimmy Patronis",
+          "DEM Gay Valimont (DEM)": "Gay Valimont",
+          "NPA Tyler L. Davis (NPA)": "Tyler L. Davis"
+        },
+        "reaches": [
+          "Escambia",
+          "Okaloosa",
+          "Santa Rosa",
+          "Walton"
+        ],
+        "item_url": null
+      }
+    ],
     "unmatched_feed": [],
-    "unmatched_guide": []
+    "unmatched_guide": [],
+    "not_here": []
   },
   {
     "id": "harris-county-tx",
@@ -7407,8 +7569,8 @@ export const MAPS = [
       "feed_name": null
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "skeleton, Nov 3 10:30 PM CT",
+      "fingerprint": "1a49890f42727f15",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:32:56.949Z",
       "locals": true,
       "places": [
         "state-FL",
@@ -7433,9 +7595,706 @@ export const MAPS = [
     "complete_marker_note": "None: the state file has no complete flag, and the count runs past election night (cure deadline 5 PM Nov 5, unofficial returns due noon Nov 7, overseas ballots through Nov 13), so Florida reads counting until official.",
     "certify_by": "2026-11-17",
     "official": null,
-    "contests": [],
-    "unmatched_feed": [],
-    "unmatched_guide": []
+    "contests": [
+      {
+        "feed_id": "Circuit Judge, 9th Judicial Circuit, Group 1",
+        "feed_name": "Circuit Judge, 9th Judicial Circuit, Group 1",
+        "item": "fl-9th-circuit-group-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Temika Hampton-Johnson": "Temika Hampton-Johnson",
+          "Charles Hart": "Charles Hart"
+        },
+        "reaches": [
+          "Florida",
+          "Orange",
+          "Osceola"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Commissioner of Agriculture",
+        "feed_name": "Commissioner of Agriculture",
+        "item": "fl-agriculture-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Wilton Simpson": "Wilton Simpson",
+          "Joey Mendoza Atkins": "Joey Mendoza Atkins",
+          "Kyle \"KC\" Gibson": null
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Budget Stabilization Fund",
+        "feed_name": "Budget Stabilization Fund",
+        "item": "fl-amendment-1",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes for Approval": "yes",
+          "No for Rejection": "no"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))"
+      },
+      {
+        "feed_id": "Exemption of Tangible Personal Property on Agricultural Land From Taxation",
+        "feed_name": "Exemption of Tangible Personal Property on Agricultural Land From Taxation",
+        "item": "fl-amendment-2",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes for Approval": "yes",
+          "No for Rejection": "no"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))"
+      },
+      {
+        "feed_id": "Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments",
+        "feed_name": "Increased Homestead Exemption; Lower Cap On Increases In Non-Homestead Property Assessments",
+        "item": "fl-amendment-3",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes for Approval": "yes",
+          "No for Rejection": "no"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true,
+        "pass_threshold": "60% of votes cast on the measure (Florida Constitution, Art. XI, s. 5(e))"
+      },
+      {
+        "feed_id": "Attorney General",
+        "feed_name": "Attorney General",
+        "item": "fl-attorney-general",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "James Uthmeier": "James Uthmeier",
+          "Jose Javier Rodriguez": "Jose Javier Rodriguez"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Chief Financial Officer",
+        "feed_name": "Chief Financial Officer",
+        "item": "fl-cfo",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Blaise Ingoglia": "Blaise Ingoglia",
+          "Annette Taddeo": "Annette Taddeo"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 1",
+        "feed_name": "State Representative, District 1",
+        "item": "fl-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michelle Salzman": "Michelle Salzman",
+          "Francesca Yabraian": "Francesca Yabraian"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 2",
+        "feed_name": "State Representative, District 2",
+        "item": "fl-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jon Fay": "Jon Fay",
+          "Johnny Austin Thompson": "Johnny Austin Thompson"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 35",
+        "feed_name": "State Representative, District 35",
+        "item": "fl-house-35",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Erika Booth": "Erika Booth",
+          "Eric Gray": "Eric Gray"
+        },
+        "reaches": [
+          "Florida",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 37",
+        "feed_name": "State Representative, District 37",
+        "item": "fl-house-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Robert Prater": "Robert Prater",
+          "Jane Aman": "Jane Aman"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 39",
+        "feed_name": "State Representative, District 39",
+        "item": "fl-house-39",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Doug Bankson": "Doug Bankson",
+          "Jarod Fox": "Jarod Fox"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 40",
+        "feed_name": "State Representative, District 40",
+        "item": "fl-house-40",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tuan Le": "Tuan Le",
+          "Ra'Shon Young": "Ra'Shon Young"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 42",
+        "feed_name": "State Representative, District 42",
+        "item": "fl-house-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bonnie Jackson": "Bonnie Jackson",
+          "Felipe Sousa Lazaballet": "Felipe Sousa Lazaballet"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 43",
+        "feed_name": "State Representative, District 43",
+        "item": "fl-house-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jorge Malavet": "Jorge Malavet",
+          "Samuel Vilchez Santiago": "Samuel Vilchez Santiago"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 45",
+        "feed_name": "State Representative, District 45",
+        "item": "fl-house-45",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Erin Huntley": "Erin Huntley",
+          "Leonard Spencer": "Leonard Spencer"
+        },
+        "reaches": [
+          "Florida",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Representative, District 9",
+        "feed_name": "State Representative, District 9",
+        "item": "fl-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tracy Robinson": "Tracy Robinson",
+          "Allison Tant": "Allison Tant"
+        },
+        "reaches": [
+          "Florida",
+          "Leon",
+          "Madison",
+          "Jefferson"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Judge Joseph Lewis Jr. be retained in Office?",
+        "feed_name": "Shall Judge Joseph Lewis Jr. be retained in Office?",
+        "item": "fl-retention-1dca-lewis",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton",
+          "Holmes",
+          "Washington",
+          "Bay",
+          "Jackson",
+          "Calhoun",
+          "Gulf",
+          "Gadsden",
+          "Liberty",
+          "Franklin",
+          "Leon",
+          "Wakulla",
+          "Jefferson",
+          "Madison",
+          "Taylor",
+          "Alachua",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Judge Rachel Nordby be retained in Office?",
+        "feed_name": "Shall Judge Rachel Nordby be retained in Office?",
+        "item": "fl-retention-1dca-nordby",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton",
+          "Holmes",
+          "Washington",
+          "Bay",
+          "Jackson",
+          "Calhoun",
+          "Gulf",
+          "Gadsden",
+          "Liberty",
+          "Franklin",
+          "Leon",
+          "Wakulla",
+          "Jefferson",
+          "Madison",
+          "Taylor",
+          "Alachua",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Judge Tim Osterhaus be retained in Office?",
+        "feed_name": "Shall Judge Tim Osterhaus be retained in Office?",
+        "item": "fl-retention-1dca-osterhaus",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton",
+          "Holmes",
+          "Washington",
+          "Bay",
+          "Jackson",
+          "Calhoun",
+          "Gulf",
+          "Gadsden",
+          "Liberty",
+          "Franklin",
+          "Leon",
+          "Wakulla",
+          "Jefferson",
+          "Madison",
+          "Taylor",
+          "Alachua",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Judge Clay Roberts be retained in Office?",
+        "feed_name": "Shall Judge Clay Roberts be retained in Office?",
+        "item": "fl-retention-1dca-roberts",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton",
+          "Holmes",
+          "Washington",
+          "Bay",
+          "Jackson",
+          "Calhoun",
+          "Gulf",
+          "Gadsden",
+          "Liberty",
+          "Franklin",
+          "Leon",
+          "Wakulla",
+          "Jefferson",
+          "Madison",
+          "Taylor",
+          "Alachua",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Judge Raymond Treadwell be retained in Office?",
+        "feed_name": "Shall Judge Raymond Treadwell be retained in Office?",
+        "item": "fl-retention-1dca-treadwell",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton",
+          "Holmes",
+          "Washington",
+          "Bay",
+          "Jackson",
+          "Calhoun",
+          "Gulf",
+          "Gadsden",
+          "Liberty",
+          "Franklin",
+          "Leon",
+          "Wakulla",
+          "Jefferson",
+          "Madison",
+          "Taylor",
+          "Alachua",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Shall Justice Carlos G. Muñiz be retained in Office?",
+        "feed_name": "Shall Justice Carlos G. Muñiz be retained in Office?",
+        "item": "fl-retention-muniz",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "State Senator, District 10",
+        "feed_name": "State Senator, District 10",
+        "item": "fl-senate-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jason Brodeur": "Jason Brodeur",
+          "John Lowndes": "John Lowndes"
+        },
+        "reaches": [
+          "Florida",
+          "Seminole",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Representative in Congress, District 1",
+        "feed_name": "Representative in Congress, District 1",
+        "item": "fl-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jimmy Patronis": "Jimmy Patronis",
+          "Gay Valimont": "Gay Valimont",
+          "Tyler L. Davis": "Tyler L. Davis"
+        },
+        "reaches": [
+          "Florida",
+          "Escambia",
+          "Santa Rosa",
+          "Okaloosa",
+          "Walton"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Representative in Congress, District 11",
+        "feed_name": "Representative in Congress, District 11",
+        "item": "fl-us-house-11",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Strada": "Joe Strada",
+          "James Pericola": "James Pericola",
+          "Ralph Groves": "Ralph Groves"
+        },
+        "reaches": [
+          "Florida",
+          "Lake",
+          "Sumter",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Representative in Congress, District 2",
+        "feed_name": "Representative in Congress, District 2",
+        "item": "fl-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Austin Rogers": "Austin Rogers",
+          "Amanda Marie Green": "Amanda Marie Green"
+        },
+        "reaches": [
+          "Florida",
+          "Leon",
+          "Bay",
+          "Gadsden",
+          "Wakulla",
+          "Franklin",
+          "Gulf",
+          "Calhoun",
+          "Liberty",
+          "Jackson",
+          "Washington",
+          "Holmes",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Representative in Congress, District 8",
+        "feed_name": "Representative in Congress, District 8",
+        "item": "fl-us-house-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Haridopolos": "Mike Haridopolos",
+          "Jennifer Jenkins": "Jennifer Jenkins"
+        },
+        "reaches": [
+          "Florida",
+          "Brevard",
+          "Indian River",
+          "Orange"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "Representative in Congress, District 9",
+        "feed_name": "Representative in Congress, District 9",
+        "item": "fl-us-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Dan Green": "Dan Green",
+          "Darren Soto": "Darren Soto"
+        },
+        "reaches": [
+          "Florida",
+          "Osceola",
+          "Orange",
+          "Polk"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "United States Senator",
+        "feed_name": "United States Senator",
+        "item": "fl-us-senate-special",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ashley Moody": "Ashley Moody",
+          "Angie Nixon": "Angie Nixon",
+          "Neil J. Gillespie": "Neil J. Gillespie"
+        },
+        "reaches": [
+          "Florida",
+          "all 67 Florida counties"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "Governor and Lieutenant Governor",
+        "feed_name": "Governor and Lieutenant Governor",
+        "why": "Looks like fl-governor, and each ticket's two surnames match one guide ticket (\"Donalds / Avila\" = Byron Donalds with Bryan Avila), but the state file gives tickets by surname only, and the brief pairs by full name only. Left as a link for a person to decide; the counties' own pages (e.g. Escambia's) carry the full names. Named write-in tickets in the file: \"Anderson / Nokovich\", \"Morris / Alaways\"."
+      }
+    ],
+    "unmatched_guide": [
+      "fl-2nd-circuit-group-4",
+      "fl-2nd-circuit-group-9",
+      "fl-governor",
+      "fl-house-7",
+      "fl-house-8",
+      "fl-us-house-10"
+    ],
+    "not_here": [
+      "fl-canopy-cdd-1",
+      "fl-capital-region-cdd-5",
+      "fl-escambia-commission-2",
+      "fl-escambia-commission-4",
+      "fl-escambia-ecua-2",
+      "fl-escambia-ecua-4",
+      "fl-escambia-lost",
+      "fl-leon-charter-community-impact",
+      "fl-leon-charter-county-ordinances-prevail",
+      "fl-leon-charter-human-dignity",
+      "fl-leon-charter-statutory-references",
+      "fl-leon-charter-street-naming",
+      "fl-leon-commission-1",
+      "fl-leon-commission-3",
+      "fl-leon-commission-5",
+      "fl-leon-commission-at-large-2",
+      "fl-leon-consolidation-straw-ballot",
+      "fl-leon-county-judge-5",
+      "fl-leon-school-board-1",
+      "fl-leon-school-board-3",
+      "fl-leon-school-millage",
+      "fl-leon-school-surtax",
+      "fl-leon-soil-water-1",
+      "fl-leon-soil-water-5",
+      "fl-orange-clerk",
+      "fl-orange-commission-2",
+      "fl-orange-commission-4",
+      "fl-orange-commission-6",
+      "fl-orange-commission-7",
+      "fl-orange-commission-8",
+      "fl-orange-mayor",
+      "fl-orange-ocps-millage",
+      "fl-orange-school-board-3",
+      "fl-orange-soil-water-1",
+      "fl-orange-soil-water-3",
+      "fl-orange-soil-water-5",
+      "fl-pensacola-council-2",
+      "fl-pensacola-council-4",
+      "fl-piney-z-cdd-3",
+      "fl-tallahassee-commission-3",
+      "fl-tallahassee-commission-5",
+      "fl-tallahassee-mayor",
+      "fl-vista-lakes-cdd-3"
+    ]
   },
   {
     "id": "results-TX",

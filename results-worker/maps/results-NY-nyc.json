@@ -10,8 +10,8 @@
     "feed_name": "SPECIAL NOVEMBER 3, 2026"
   },
   "guide": {
-    "fingerprint": null,
-    "made_from": null,
+    "fingerprint": "be93fae94ff389c6",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:35:34.736Z",
     "places": [
       "nyc-manhattan-ny",
       "nyc-brooklyn-ny",
@@ -52,7 +52,2415 @@
   "complete_marker": null,
   "certify_by": "2026-11-28",
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "Member of the Assembly 23rd Assembly District",
+      "feed_name": "Member of the Assembly 23rd Assembly District",
+      "item": "ny-ad-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Pesach Osina": "Pesach Osina",
+        "Thomas P. Sullivan": "Thomas P. Sullivan",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 24th Assembly District",
+      "feed_name": "Member of the Assembly 24th Assembly District",
+      "item": "ny-ad-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "David I. Weprin": "David I. Weprin",
+        "Welson Chang": "Welson Chang",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 25th Assembly District",
+      "feed_name": "Member of the Assembly 25th Assembly District",
+      "item": "ny-ad-25",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nily D. Rozic": "Nily D. Rozic",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 26th Assembly District",
+      "feed_name": "Member of the Assembly 26th Assembly District",
+      "item": "ny-ad-26",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Edward C. Braunstein": "Edward C. Braunstein",
+        "Robert J. Speranza": "Robert J. Speranza",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 27th Assembly District",
+      "feed_name": "Member of the Assembly 27th Assembly District",
+      "item": "ny-ad-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sam Berger": "Sam Berger",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 28th Assembly District",
+      "feed_name": "Member of the Assembly 28th Assembly District",
+      "item": "ny-ad-28",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Andrew D. Hevesi": "Andrew D. Hevesi",
+        "Jonathan Rinaldi": "Jonathan Rinaldi",
+        "David J. Kemp": "David J. Kemp",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 29th Assembly District",
+      "feed_name": "Member of the Assembly 29th Assembly District",
+      "item": "ny-ad-29",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alicia L. Hyndman": "Alicia L. Hyndman",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 30th Assembly District",
+      "feed_name": "Member of the Assembly 30th Assembly District",
+      "item": "ny-ad-30",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Patrick Martinez": "Patrick Martinez",
+        "Brandon P. Castro": "Brandon P. Castro",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 31st Assembly District",
+      "feed_name": "Member of the Assembly 31st Assembly District",
+      "item": "ny-ad-31",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Khaleel M. Anderson": "Khaleel M. Anderson",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 32nd Assembly District",
+      "feed_name": "Member of the Assembly 32nd Assembly District",
+      "item": "ny-ad-32",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nathaniel Hezekiah III": "Nathaniel Hezekiah III",
+        "Paul Nichols": "Paul Nichols",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 33rd Assembly District",
+      "feed_name": "Member of the Assembly 33rd Assembly District",
+      "item": "ny-ad-33",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Clyde Vanel": "Clyde Vanel",
+        "Oster Bryan": "Oster Bryan",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 34th Assembly District",
+      "feed_name": "Member of the Assembly 34th Assembly District",
+      "item": "ny-ad-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brian Romero": "Brian Romero",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 35th Assembly District",
+      "feed_name": "Member of the Assembly 35th Assembly District",
+      "item": "ny-ad-35",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Larinda C. Hooks": "Larinda C. Hooks",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 36th Assembly District",
+      "feed_name": "Member of the Assembly 36th Assembly District",
+      "item": "ny-ad-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Diana C. Moreno": "Diana C. Moreno",
+        "Edward Lee": "Edward Lee",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 37th Assembly District",
+      "feed_name": "Member of the Assembly 37th Assembly District",
+      "item": "ny-ad-37",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Samantha Kattan": "Samantha Kattan",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 38th Assembly District",
+      "feed_name": "Member of the Assembly 38th Assembly District",
+      "item": "ny-ad-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "David Orkin": "David Orkin",
+        "Ruben D. Cruz II": "Ruben D. Cruz II",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 39th Assembly District",
+      "feed_name": "Member of the Assembly 39th Assembly District",
+      "item": "ny-ad-39",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Catalina Cruz": "Catalina Cruz",
+        "Ramses S. Frias": "Ramses S. Frias",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 40th Assembly District",
+      "feed_name": "Member of the Assembly 40th Assembly District",
+      "item": "ny-ad-40",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ron Kim": "Ron Kim",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 41st Assembly District",
+      "feed_name": "Member of the Assembly 41st Assembly District",
+      "item": "ny-ad-41",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kalman Yeger": "Kalman Yeger",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 42nd Assembly District",
+      "feed_name": "Member of the Assembly 42nd Assembly District",
+      "item": "ny-ad-42",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rodneyse Bichotte": "Rodneyse Bichotte",
+        "Herman G. Hall": "Herman G. Hall",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 43rd Assembly District",
+      "feed_name": "Member of the Assembly 43rd Assembly District",
+      "item": "ny-ad-43",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brian-Christopher A. Cunningham": "Brian-Christopher A. Cunningham",
+        "Anna Shpilkovskaya": "Anna Shpilkovskaya",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 44th Assembly District",
+      "feed_name": "Member of the Assembly 44th Assembly District",
+      "item": "ny-ad-44",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Robert C. Carroll": "Robert C. Carroll",
+        "Glenn Nocera": "Glenn Nocera",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 45th Assembly District",
+      "feed_name": "Member of the Assembly 45th Assembly District",
+      "item": "ny-ad-45",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joey Cohen-Saban": "Joey Cohen-Saban",
+        "Michael Novakhov": "Michael Novakhov",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 46th Assembly District",
+      "feed_name": "Member of the Assembly 46th Assembly District",
+      "item": "ny-ad-46",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chris McCreight": "Chris McCreight",
+        "Alec Brook-Krasny": "Alec Brook-Krasny",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 47th Assembly District",
+      "feed_name": "Member of the Assembly 47th Assembly District",
+      "item": "ny-ad-47",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "William Colton": "William Colton",
+        "John J. Ricottone": "John J. Ricottone",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 48th Assembly District",
+      "feed_name": "Member of the Assembly 48th Assembly District",
+      "item": "ny-ad-48",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Simcha Eichenstein": "Simcha Eichenstein",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 49th Assembly District",
+      "feed_name": "Member of the Assembly 49th Assembly District",
+      "item": "ny-ad-49",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joyce Xiaoqiong Xie": "Joyce Xiaoqiong Xie",
+        "Lester Chang": "Lester Chang",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 50th Assembly District",
+      "feed_name": "Member of the Assembly 50th Assembly District",
+      "item": "ny-ad-50",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Emily Gallagher": "Emily Gallagher",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 51st Assembly District",
+      "feed_name": "Member of the Assembly 51st Assembly District",
+      "item": "ny-ad-51",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Marcela Mitaynes": "Marcela Mitaynes",
+        "Carla Danielson": "Carla Danielson",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 52nd Assembly District",
+      "feed_name": "Member of the Assembly 52nd Assembly District",
+      "item": "ny-ad-52",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jo Anne Simon": "Jo Anne Simon",
+        "Brett Wynkoop": "Brett Wynkoop",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 53rd Assembly District",
+      "feed_name": "Member of the Assembly 53rd Assembly District",
+      "item": "ny-ad-53",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Maritza Davila": "Maritza Davila",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 54th Assembly District",
+      "feed_name": "Member of the Assembly 54th Assembly District",
+      "item": "ny-ad-54",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Christian Celeste Tate": "Christian Celeste Tate",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 55th Assembly District",
+      "feed_name": "Member of the Assembly 55th Assembly District",
+      "item": "ny-ad-55",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Latrice M. Walker": "Latrice M. Walker",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 56th Assembly District",
+      "feed_name": "Member of the Assembly 56th Assembly District",
+      "item": "ny-ad-56",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eon Huntley": "Eon Huntley",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 57th Assembly District",
+      "feed_name": "Member of the Assembly 57th Assembly District",
+      "item": "ny-ad-57",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Phara Souffrant Forrest": "Phara Souffrant Forrest",
+        "Yolanda Allison": "Yolanda Allison",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 58th Assembly District",
+      "feed_name": "Member of the Assembly 58th Assembly District",
+      "item": "ny-ad-58",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Monique Chandler-Waterman": "Monique Chandler-Waterman",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 59th Assembly District",
+      "feed_name": "Member of the Assembly 59th Assembly District",
+      "item": "ny-ad-59",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jaime R. Williams": "Jaime R. Williams",
+        "Jibreel Jalloh": "Jibreel Jalloh",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 60th Assembly District",
+      "feed_name": "Member of the Assembly 60th Assembly District",
+      "item": "ny-ad-60",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nikki Lucas": "Nikki Lucas",
+        "Norman H. Ramsay": "Norman H. Ramsay",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 61st Assembly District",
+      "feed_name": "Member of the Assembly 61st Assembly District",
+      "item": "ny-ad-61",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Charles D. Fall": "Charles D. Fall",
+        "Casey Marie O'Connor-Manasia": "Casey Marie O'Connor-Manasia",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 62nd Assembly District",
+      "feed_name": "Member of the Assembly 62nd Assembly District",
+      "item": "ny-ad-62",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael W. Reilly Jr.": "Michael W. Reilly Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 63rd Assembly District",
+      "feed_name": "Member of the Assembly 63rd Assembly District",
+      "item": "ny-ad-63",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Matthew Mobilia": "Matthew Mobilia",
+        "Sam T. Pirozzolo": "Sam T. Pirozzolo",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 64th Assembly District",
+      "feed_name": "Member of the Assembly 64th Assembly District",
+      "item": "ny-ad-64",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tim Qorraj": "Tim Qorraj",
+        "Michael Tannousis": "Michael Tannousis",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 65th Assembly District",
+      "feed_name": "Member of the Assembly 65th Assembly District",
+      "item": "ny-ad-65",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Illapa Sairitupac": "Illapa Sairitupac",
+        "Helen Qiu": "Helen Qiu",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 66th Assembly District",
+      "feed_name": "Member of the Assembly 66th Assembly District",
+      "item": "ny-ad-66",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "David Siffert": "David Siffert",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 67th Assembly District",
+      "feed_name": "Member of the Assembly 67th Assembly District",
+      "item": "ny-ad-67",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Linda B. Rosenthal": "Linda B. Rosenthal",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 68th Assembly District",
+      "feed_name": "Member of the Assembly 68th Assembly District",
+      "item": "ny-ad-68",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Diana I. Ayala": "Diana I. Ayala",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 69th Assembly District",
+      "feed_name": "Member of the Assembly 69th Assembly District",
+      "item": "ny-ad-69",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eli Northrup": "Eli Northrup",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 70th Assembly District",
+      "feed_name": "Member of the Assembly 70th Assembly District",
+      "item": "ny-ad-70",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jordan J.G. Wright": "Jordan J.G. Wright",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 71st Assembly District",
+      "feed_name": "Member of the Assembly 71st Assembly District",
+      "item": "ny-ad-71",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Al Taylor": "Al Taylor",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 72nd Assembly District",
+      "feed_name": "Member of the Assembly 72nd Assembly District",
+      "item": "ny-ad-72",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Manny De Los Santos": "Manny De Los Santos",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 73rd Assembly District",
+      "feed_name": "Member of the Assembly 73rd Assembly District",
+      "item": "ny-ad-73",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Vanessa Aronson": "Vanessa Aronson",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 74th Assembly District",
+      "feed_name": "Member of the Assembly 74th Assembly District",
+      "item": "ny-ad-74",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Keith Powers": "Keith Powers",
+        "Veronica I. Gonzalez": "Veronica I. Gonzalez",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 75th Assembly District",
+      "feed_name": "Member of the Assembly 75th Assembly District",
+      "item": "ny-ad-75",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tony Simone": "Tony Simone",
+        "Cristina Fontanelli": "Cristina Fontanelli",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 76th Assembly District",
+      "feed_name": "Member of the Assembly 76th Assembly District",
+      "item": "ny-ad-76",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rebecca A. Seawright": "Rebecca A. Seawright",
+        "Louis Puliafito": "Louis Puliafito",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 77th Assembly District",
+      "feed_name": "Member of the Assembly 77th Assembly District",
+      "item": "ny-ad-77",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Landon C. Dais": "Landon C. Dais",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 78th Assembly District",
+      "feed_name": "Member of the Assembly 78th Assembly District",
+      "item": "ny-ad-78",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "George A. Alvarez": "George A. Alvarez",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 79th Assembly District",
+      "feed_name": "Member of the Assembly 79th Assembly District",
+      "item": "ny-ad-79",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chantel Jackson": "Chantel Jackson",
+        "Emmanuel A. Findlay Jr.": "Emmanuel A. Findlay Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 80th Assembly District",
+      "feed_name": "Member of the Assembly 80th Assembly District",
+      "item": "ny-ad-80",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John Zaccaro Jr.": "John Zaccaro Jr.",
+        "Denise Smith": "Denise Smith",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 81st Assembly District",
+      "feed_name": "Member of the Assembly 81st Assembly District",
+      "item": "ny-ad-81",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jeffrey Dinowitz": "Jeffrey Dinowitz",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 82nd Assembly District",
+      "feed_name": "Member of the Assembly 82nd Assembly District",
+      "item": "ny-ad-82",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael R. Benedetto": "Michael R. Benedetto",
+        "Irene Guanill": "Irene Guanill",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 83rd Assembly District",
+      "feed_name": "Member of the Assembly 83rd Assembly District",
+      "item": "ny-ad-83",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Carl E. Heastie": "Carl E. Heastie",
+        "James Washington-Ward": "James Washington-Ward",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 84th Assembly District",
+      "feed_name": "Member of the Assembly 84th Assembly District",
+      "item": "ny-ad-84",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Amanda N. Septimo": "Amanda N. Septimo",
+        "Tyreek Goodman": "Tyreek Goodman",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 85th Assembly District",
+      "feed_name": "Member of the Assembly 85th Assembly District",
+      "item": "ny-ad-85",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Emerita Torres": "Emerita Torres",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 86th Assembly District",
+      "feed_name": "Member of the Assembly 86th Assembly District",
+      "item": "ny-ad-86",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Yudelka Tapia": "Yudelka Tapia",
+        "Maria Diaz": "Maria Diaz",
+        "Shery A. Olivo": "Shery A. Olivo",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the Assembly 87th Assembly District",
+      "feed_name": "Member of the Assembly 87th Assembly District",
+      "item": "ny-ad-87",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Karines Reyes": "Karines Reyes",
+        "Zenobia Merced-Bonilla": "Zenobia Merced-Bonilla",
+        "Zakir Choudhury": "Zakir Choudhury",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 10th Senatorial District",
+      "feed_name": "State Senator 10th Senatorial District",
+      "item": "ny-sd-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "James Sanders Jr.": "James Sanders Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 11th Senatorial District",
+      "feed_name": "State Senator 11th Senatorial District",
+      "item": "ny-sd-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Toby Ann Stavisky": "Toby Ann Stavisky",
+        "Pamela H. Michos": "Pamela H. Michos",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 12th Senatorial District",
+      "feed_name": "State Senator 12th Senatorial District",
+      "item": "ny-sd-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Aber Kawas": "Aber Kawas",
+        "Han-Khon To": "Han-Khon To",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 13th Senatorial District",
+      "feed_name": "State Senator 13th Senatorial District",
+      "item": "ny-sd-13",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jessica Gonzalez-Rojas": "Jessica Gonzalez-Rojas",
+        "John Patrick Healy": "John Patrick Healy",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 14th Senatorial District",
+      "feed_name": "State Senator 14th Senatorial District",
+      "item": "ny-sd-14",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Leroy G. Comrie Jr.": "Leroy G. Comrie Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 15th Senatorial District",
+      "feed_name": "State Senator 15th Senatorial District",
+      "item": "ny-sd-15",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joseph P. Addabbo Jr.": "Joseph P. Addabbo Jr.",
+        "Danniel S. Maio": "Danniel S. Maio",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 16th Senatorial District",
+      "feed_name": "State Senator 16th Senatorial District",
+      "item": "ny-sd-16",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John C. Liu": "John C. Liu",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 17th Senatorial District",
+      "feed_name": "State Senator 17th Senatorial District",
+      "item": "ny-sd-17",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Larry He": "Larry He",
+        "Steve Chan": "Steve Chan",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 18th Senatorial District",
+      "feed_name": "State Senator 18th Senatorial District",
+      "item": "ny-sd-18",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Julia Salazar": "Julia Salazar",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 19th Senatorial District",
+      "feed_name": "State Senator 19th Senatorial District",
+      "item": "ny-sd-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Roxanne J. Persaud": "Roxanne J. Persaud",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 20th Senatorial District",
+      "feed_name": "State Senator 20th Senatorial District",
+      "item": "ny-sd-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Zellnor Y. Myrie": "Zellnor Y. Myrie",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 21st Senatorial District",
+      "feed_name": "State Senator 21st Senatorial District",
+      "item": "ny-sd-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kevin S. Parker": "Kevin S. Parker",
+        "Ronald Seifert": "Ronald Seifert",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 22nd Senatorial District",
+      "feed_name": "State Senator 22nd Senatorial District",
+      "item": "ny-sd-22",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sam Sutton": "Sam Sutton",
+        "Nachman Carl Caller": "Nachman Carl Caller",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 23rd Senatorial District",
+      "feed_name": "State Senator 23rd Senatorial District",
+      "item": "ny-sd-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jessica Scarcella-Spanton": "Jessica Scarcella-Spanton",
+        "Ruslan Shamal": "Ruslan Shamal",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 24th Senatorial District",
+      "feed_name": "State Senator 24th Senatorial District",
+      "item": "ny-sd-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alexis Rodriguez": "Alexis Rodriguez",
+        "Andrew J. Lanza": "Andrew J. Lanza",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 25th Senatorial District",
+      "feed_name": "State Senator 25th Senatorial District",
+      "item": "ny-sd-25",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jabari Brisport": "Jabari Brisport",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 26th Senatorial District",
+      "feed_name": "State Senator 26th Senatorial District",
+      "item": "ny-sd-26",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Andrew S. Gounardes": "Andrew S. Gounardes",
+        "Tom Stanten": "Tom Stanten",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 27th Senatorial District",
+      "feed_name": "State Senator 27th Senatorial District",
+      "item": "ny-sd-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Grace Lee": "Grace Lee",
+        "Jason C. Murillo": "Jason C. Murillo",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 28th Senatorial District",
+      "feed_name": "State Senator 28th Senatorial District",
+      "item": "ny-sd-28",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Liz Krueger": "Liz Krueger",
+        "Alina Bonsell": "Alina Bonsell",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 29th Senatorial District",
+      "feed_name": "State Senator 29th Senatorial District",
+      "item": "ny-sd-29",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jose M. Serrano": "Jose M. Serrano",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 30th Senatorial District",
+      "feed_name": "State Senator 30th Senatorial District",
+      "item": "ny-sd-30",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cordell Cleare": "Cordell Cleare",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 31st Senatorial District",
+      "feed_name": "State Senator 31st Senatorial District",
+      "item": "ny-sd-31",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Robert Jackson": "Robert Jackson",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 32nd Senatorial District",
+      "feed_name": "State Senator 32nd Senatorial District",
+      "item": "ny-sd-32",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Luis R. Sepulveda": "Luis R. Sepulveda",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 33rd Senatorial District",
+      "feed_name": "State Senator 33rd Senatorial District",
+      "item": "ny-sd-33",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "J. Gustavo Rivera": "J. Gustavo Rivera",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 34th Senatorial District",
+      "feed_name": "State Senator 34th Senatorial District",
+      "item": "ny-sd-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nathalia Fernandez": "Nathalia Fernandez",
+        "Adrian Romero": "Adrian Romero",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Westchester",
+        "other counties",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 36th Senatorial District",
+      "feed_name": "State Senator 36th Senatorial District",
+      "item": "ny-sd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jamaal T. Bailey": "Jamaal T. Bailey",
+        "Grace Marrero": "Grace Marrero",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Westchester",
+        "other counties",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 47th Senatorial District",
+      "feed_name": "State Senator 47th Senatorial District",
+      "item": "ny-sd-47",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Erik D. Bottcher": "Erik D. Bottcher",
+        "Charlotte Friedman": "Charlotte Friedman",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator 59th Senatorial District",
+      "feed_name": "State Senator 59th Senatorial District",
+      "item": "ny-sd-59",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kristen Gonzalez": "Kristen Gonzalez",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Justice of the Supreme Court 1st Judicial District",
+      "feed_name": "Justice of the Supreme Court 1st Judicial District",
+      "item": "ny-supreme-court-jd1",
+      "kind": "multi",
+      "seats": 6,
+      "choices": {
+        "Shlomo S. Hagler": "Shlomo S. Hagler",
+        "Manuel J. Mendez": "Manuel J. Mendez",
+        "Saliann Scarpulla": "Saliann Scarpulla",
+        "Hasa A. Kingo": "Hasa A. Kingo",
+        "Kathleen Waterman-Marshall": "Kathleen Waterman-Marshall",
+        "Christopher Chin": "Christopher Chin",
+        "Amy S. Taylor": "Amy S. Taylor",
+        "Joshua E. Goldfein": "Joshua E. Goldfein",
+        "Sienna M. Fontaine": "Sienna M. Fontaine",
+        "Bob Cohen": "Bob Cohen",
+        "Jeffrey W. Rizzo": "Jeffrey W. Rizzo",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Justice of the Supreme Court 11th Judicial District",
+      "feed_name": "Justice of the Supreme Court 11th Judicial District",
+      "item": "ny-supreme-court-jd11",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Edwin I. Novillo": "Edwin I. Novillo",
+        "Oma D. Phillips": "Oma D. Phillips",
+        "Gail A. Adams": "Gail A. Adams",
+        "Gary Muraca": "Gary Muraca",
+        "David A. Bellon": "David A. Bellon",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Justice of the Supreme Court 12th Judicial District",
+      "feed_name": "Justice of the Supreme Court 12th Judicial District",
+      "item": "ny-supreme-court-jd12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alvin M. Yearwood": "Alvin M. Yearwood",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Justice of the Supreme Court 13th Judicial District",
+      "feed_name": "Justice of the Supreme Court 13th Judicial District",
+      "item": "ny-supreme-court-jd13",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kelvin Richards": "Kelvin Richards",
+        "Michael J. Pinto": "Michael J. Pinto",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Justice of the Supreme Court 2nd Judicial District",
+      "feed_name": "Justice of the Supreme Court 2nd Judicial District",
+      "item": "ny-supreme-court-jd2",
+      "kind": "multi",
+      "seats": 4,
+      "choices": {
+        "Betsey Jean-Jacques": "Betsey Jean Jacques",
+        "Hemalee J. Patel": "Hemalee J. Patel",
+        "Sherveal Mimes": "Sherveal Mimes",
+        "Lola Waterman": "Lola Waterman",
+        "William D. Spain Jr.": "William D. Spain Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 10th Congressional District",
+      "feed_name": "Representative in Congress 10th Congressional District",
+      "item": "ny-us-house-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brad Lander": "Brad Lander",
+        "Jennifer E. Moore": "Jennifer E. Moore",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 11th Congressional District",
+      "feed_name": "Representative in Congress 11th Congressional District",
+      "item": "ny-us-house-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mike DeCillis": "Mike DeCillis",
+        "Nicole Malliotakis": "Nicole Malliotakis",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 12th Congressional District",
+      "feed_name": "Representative in Congress 12th Congressional District",
+      "item": "ny-us-house-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Micah C. Lasher": "Micah C. Lasher",
+        "Caroline Shinkle": "Caroline Shinkle",
+        "Wilneida Negron": "Wilneida Negron",
+        "Karen Ortiz": "Karen Ortiz",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 13th Congressional District",
+      "feed_name": "Representative in Congress 13th Congressional District",
+      "item": "ny-us-house-13",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Darializa Avila Chevalier": "Darializa Avila Chevalier",
+        "Jomo M. Williams": "Jomo M. Williams",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 14th Congressional District",
+      "feed_name": "Representative in Congress 14th Congressional District",
+      "item": "ny-us-house-14",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alexandria Ocasio-Cortez": "Alexandria Ocasio-Cortez",
+        "Diamant Hysenaj": "Diamant Hysenaj",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 15th Congressional District",
+      "feed_name": "Representative in Congress 15th Congressional District",
+      "item": "ny-us-house-15",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ritchie Torres": "Ritchie Torres",
+        "Stylo Sapaskis": "Stylo Sapaskis",
+        "Gonzalo Duran": "Gonzalo Duran",
+        "Andre Easton": "Andre Easton",
+        "Jose Vega": "Jose Vega",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 16th Congressional District",
+      "feed_name": "Representative in Congress 16th Congressional District",
+      "item": "ny-us-house-16",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "George S. Latimer": "George S. Latimer",
+        "Joseph J. Cinquemani": "Joseph J. Cinquemani",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Westchester",
+        "other counties",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 3rd Congressional District",
+      "feed_name": "Representative in Congress 3rd Congressional District",
+      "item": "ny-us-house-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Thomas R. Suozzi": "Thomas R. Suozzi",
+        "Michael J. LiPetri Jr.": "Michael J. LiPetri Jr.",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Nassau",
+        "other counties",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 5th Congressional District",
+      "feed_name": "Representative in Congress 5th Congressional District",
+      "item": "ny-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Gregory W. Meeks": "Gregory W. Meeks",
+        "George Marsh": "George Marsh",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 6th Congressional District",
+      "feed_name": "Representative in Congress 6th Congressional District",
+      "item": "ny-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Grace Meng": "Grace Meng",
+        "Joseph Chou": "Joseph Chou",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 7th Congressional District",
+      "feed_name": "Representative in Congress 7th Congressional District",
+      "item": "ny-us-house-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Claire Valdez": "Claire Valdez",
+        "Melvin Rivera": "Melvin Rivera",
+        "Priscilla Ghaznavi": "Priscilla Ghaznavi",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 8th Congressional District",
+      "feed_name": "Representative in Congress 8th Congressional District",
+      "item": "ny-us-house-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Hakeem S. Jeffries": "Hakeem S. Jeffries",
+        "Lewis Mizrahi": "Lewis Mizrahi",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress 9th Congressional District",
+      "feed_name": "Representative in Congress 9th Congressional District",
+      "item": "ny-us-house-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Yvette D. Clarke": "Yvette D. Clarke",
+        "Joel Azumah": "Joel Azumah",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - Bronx",
+      "feed_name": "Judge of the Civil Court - District 1st Municipal Court District - Bronx",
+      "item": "nyc-civil-court-bronx-md1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jodi L. Morales": "Jodi L. Morales",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Bronx",
+      "feed_name": "Judge of the Civil Court - District 2nd Municipal Court District - Bronx",
+      "item": "nyc-civil-court-bronx-md2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sara A. Collins-Sedey": "Sara A. Collins-Sedey",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - County Kings",
+      "feed_name": "Judge of the Civil Court - County Kings",
+      "item": "nyc-civil-court-brooklyn",
+      "kind": "multi",
+      "seats": 4,
+      "choices": {
+        "Danielle A. Noel": "Danielle A. Noel",
+        "Linda Lo Cascio": "Linda Lo Cascio",
+        "Celeste Felix": "Celeste Felix",
+        "Christine G. Ortiz": "Christine G. Ortiz",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 2nd Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lauren J. Brown-Akowe": "Lauren J. Brown-Akowe",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 3rd Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tamara Ortiz": "Tamara Ortiz",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 4th Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md4",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Anthony W. Vaughn Jr.": "Anthony W. Vaughn Jr.",
+        "Xavier Carr": "Xavier Carr",
+        "Aaron Franklin": "Aaron Franklin",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 6th Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 6th Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md6",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Janice P. Purvis": "Janice P. Purvis",
+        "Michelle DeSouza-Forte": "Michelle DeSouza-Forte",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 7th Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 7th Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bridget Hamblin": "Bridget Hamblin",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 8th Municipal Court District - Kings",
+      "feed_name": "Judge of the Civil Court - District 8th Municipal Court District - Kings",
+      "item": "nyc-civil-court-brooklyn-md8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Susan A. Liebman": "Susan A. Liebman",
+        "Etan C. Harris": "Etan C. Harris",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Kings"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - County New York",
+      "feed_name": "Judge of the Civil Court - County New York",
+      "item": "nyc-civil-court-manhattan",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Josh E. Hanshaft": "Josh E. Hanshaft",
+        "Emily Morales-Minerva": "Emily Morales-Minerva",
+        "Vlad Frants": "Vlad Frants",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - New York",
+      "feed_name": "Judge of the Civil Court - District 1st Municipal Court District - New York",
+      "item": "nyc-civil-court-manhattan-md1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eric Flores": "Eric Flores",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - New York",
+      "feed_name": "Judge of the Civil Court - District 3rd Municipal Court District - New York",
+      "item": "nyc-civil-court-manhattan-md3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Steven Benathen": "Steven Benathen",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - New York",
+      "feed_name": "Judge of the Civil Court - District 4th Municipal Court District - New York",
+      "item": "nyc-civil-court-manhattan-md4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Faith Bondy": "Faith Bondy",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 7th Municipal Court District - New York",
+      "feed_name": "Judge of the Civil Court - District 7th Municipal Court District - New York",
+      "item": "nyc-civil-court-manhattan-md7",
+      "kind": "multi",
+      "seats": 4,
+      "choices": {
+        "Keshia Espinal": "Keshia Espinal",
+        "Matthew Levy": "Matthew Levy",
+        "Karen Cortes-Tower": "Karen Cortes-Tower",
+        "Aija Tingling": "Aija Tingling",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 9th Municipal Court District - New York",
+      "feed_name": "Judge of the Civil Court - District 9th Municipal Court District - New York",
+      "item": "nyc-civil-court-manhattan-md9",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Jennifer Frankola-Crawford": "Jennifer Frankola-Crawford",
+        "Brian J. Krist": "Brian J. Krist",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - County Queens",
+      "feed_name": "Judge of the Civil Court - County Queens",
+      "item": "nyc-civil-court-queens",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Edmond Wong": "Edmond Wong",
+        "Julie M. Milner": "Julie M. Milner",
+        "Jasmine I. Valle-Bueno": "Jasmine I. Valle-Bueno",
+        "Thomas D. Barra": "Thomas D. Barra",
+        "Michael Mossa": "Michael Mossa",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 2nd Municipal Court District - Queens",
+      "feed_name": "Judge of the Civil Court - District 2nd Municipal Court District - Queens",
+      "item": "nyc-civil-court-queens-md2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Janet Ellen Keller": "Janet Ellen Keller",
+        "Stephen C. Dachtera": "Stephen C. Dachtera",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 3rd Municipal Court District - Queens",
+      "feed_name": "Judge of the Civil Court - District 3rd Municipal Court District - Queens",
+      "item": "nyc-civil-court-queens-md3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michelle Ann McSweeney-Ortiz": "Michelle Ann McSweeney-Ortiz",
+        "William David Shanahan": "William David Shanahan",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 4th Municipal Court District - Queens",
+      "feed_name": "Judge of the Civil Court - District 4th Municipal Court District - Queens",
+      "item": "nyc-civil-court-queens-md4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Edward Irizarry": "Edward Irizarry",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Queens"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - County Richmond",
+      "feed_name": "Judge of the Civil Court - County Richmond",
+      "item": "nyc-civil-court-staten-island",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tashanna Golden": "Tashanna Golden",
+        "Glenn A. Yost": "Glenn A. Yost",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Civil Court - District 1st Municipal Court District - Richmond",
+      "feed_name": "Judge of the Civil Court - District 1st Municipal Court District - Richmond",
+      "item": "nyc-civil-court-staten-island-md1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John A. Vitucci": "John A. Vitucci",
+        "Carrie Ann Low": "Carrie Ann Low",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Richmond"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Member of the City Council 3rd Council District",
+      "feed_name": "Member of the City Council 3rd Council District",
+      "item": "nyc-council-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Carl Wilson": "Carl Wilson",
+        "Haris Bhatti": "Haris Bhatti",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Proposal Number 1",
+      "feed_name": "Proposal Number 1, a Question: Proposed Charter Amendment: Speed Up Process for Granting a Revocable Consent to Use Public Space",
+      "item": "nyc-proposal-1",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Bronx",
+        "Queens",
+        "Richmond"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+    },
+    {
+      "feed_id": "Proposal Number 2",
+      "feed_name": "Proposal Number 2, a Question: Proposed Charter Amendment: Reduce City Contractor Paperwork; Require Regular Meetings of Procurement Policy Board",
+      "item": "nyc-proposal-2",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Bronx",
+        "Queens",
+        "Richmond"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+    },
+    {
+      "feed_id": "Proposal Number 3",
+      "feed_name": "Proposal Number 3, a Question: Proposed Charter Amendment: Speed Up Street Safety Projects, Disposition of Unused City Property, Office Leasing",
+      "item": "nyc-proposal-3",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Bronx",
+        "Queens",
+        "Richmond"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+    },
+    {
+      "feed_id": "Proposal Number 4",
+      "feed_name": "Proposal Number 4, a Question: Proposed Charter Amendment: Simplify Building Permitting and Move Waterfront Permitting to Department of Buildings",
+      "item": "nyc-proposal-4",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Bronx",
+        "Queens",
+        "Richmond"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+    },
+    {
+      "feed_id": "Proposal Number 5",
+      "feed_name": "Proposal Number 5, a Question: Proposed Charter Amendment: Set Contribution Targets for Rainy Day Fund to Promote Sufficient Budgetary Reserves",
+      "item": "nyc-proposal-5",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "New York City",
+        "New York",
+        "Kings",
+        "Bronx",
+        "Queens",
+        "Richmond"
+      ],
+      "item_url": null,
+      "pass_threshold": "Simple majority of NYC voters who vote on the question. Each proposal passes or fails on its own."
+    },
+    {
+      "feed_id": "Surrogate Bronx",
+      "feed_name": "Surrogate Bronx",
+      "item": "nyc-surrogate-bronx",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nelida Malave Gonzalez": "Nelida Malave Gonzalez",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "Bronx"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Surrogate New York",
+      "feed_name": "Surrogate New York",
+      "item": "nyc-surrogate-manhattan",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rita Mella": "Rita Mella",
+        "WRITE-IN": "__other"
+      },
+      "reaches": [
+        "New York City",
+        "New York"
+      ],
+      "item_url": null
+    }
+  ],
   "unmatched_feed": [],
   "unmatched_guide": [],
   "not_here": []

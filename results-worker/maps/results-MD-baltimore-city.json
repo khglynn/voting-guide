@@ -10,8 +10,8 @@
     "feed_name": "2026 Gubernatorial General Election"
   },
   "guide": {
-    "fingerprint": null,
-    "made_from": null,
+    "fingerprint": "9b6eb78da2dcc2cc",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:35:38.008Z",
     "places": [
       "baltimore-md"
     ]
@@ -38,7 +38,479 @@
   "complete_marker": null,
   "certify_by": "2026-12-03",
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "Board of Education At Large",
+      "feed_name": "Board of Education At Large",
+      "item": "baltimore-board-of-education-at-large",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Jamar Day": "Jamar Day",
+        "Ashley Ash Esposito": "Ashley Ash Esposito",
+        "Domonique A. Flowers": "Domonique A. Flowers",
+        "Kwame Jamal Kenyatta-Bey": "Kwame Jamal Kenyatta-Bey",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Circuit Court, Circuit 8",
+      "feed_name": "Judge of the Circuit Court, Circuit 8",
+      "item": "baltimore-circuit-court-8",
+      "kind": "multi",
+      "seats": 6,
+      "choices": {
+        "Catherine Chen": "Catherine Chen",
+        "Lawrence P. Fletcher-Hill": "Lawrence P. Fletcher-Hill",
+        "Kimberly C. McBride": "Kimberly C. McBride",
+        "Piper Faith McKeithen": "Piper Faith McKeithen",
+        "Hope Tipton": "Hope Tipton",
+        "Levi S. Zaslow": "Levi S. Zaslow",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Clerk of the Circuit Court",
+      "feed_name": "Clerk of the Circuit Court",
+      "item": "baltimore-clerk-circuit-court",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Xavier A. Conaway": "Xavier A. Conaway",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Judge of the Orphans' Court",
+      "feed_name": "Judge of the Orphans' Court",
+      "item": "baltimore-orphans-court",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Charles \"Chuck\" Bernstein": "Charles \"Chuck\" Bernstein",
+        "Lewyn Scott Garrett": "Lewyn Scott Garrett",
+        "Michele E. Loewenthal": "Michele E. Loewenthal",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Question A: Bond Issue",
+      "feed_name": "Question A: Bond Issue (Affordable Housing Loan)",
+      "item": "baltimore-question-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question B: Bond Issue",
+      "feed_name": "Question B: Bond Issue (School Loan)",
+      "item": "baltimore-question-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question C: Bond Issue",
+      "feed_name": "Question C: Bond Issue (Community and Economic Development Loan)",
+      "item": "baltimore-question-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question D: Bond Issue",
+      "feed_name": "Question D: Bond Issue (Public Infrastructure Loan)",
+      "item": "baltimore-question-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question E: Charter Amendment",
+      "feed_name": "Question E: Charter Amendment (Contract Bidding and Awards)",
+      "item": "baltimore-question-e",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Charter Amendment": "yes",
+        "Against the Charter Amendment": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question F: Charter Amendment",
+      "feed_name": "Question F: Charter Amendment (Legislation, Budget, and Board of Estimates)",
+      "item": "baltimore-question-f",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Charter Amendment": "yes",
+        "Against the Charter Amendment": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question G: Charter Amendment",
+      "feed_name": "Question G: Charter Amendment (Franchises and Minor Privileges)",
+      "item": "baltimore-question-g",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Charter Amendment": "yes",
+        "Against the Charter Amendment": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question H: Charter Amendment",
+      "feed_name": "Question H: Charter Amendment (Department of Water and Wastewater)",
+      "item": "baltimore-question-h",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Charter Amendment": "yes",
+        "Against the Charter Amendment": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Question I: Charter Amendment",
+      "feed_name": "Question I: Charter Amendment (Baltimore Baby Fund)",
+      "item": "baltimore-question-i",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For the Charter Amendment": "yes",
+        "Against the Charter Amendment": "no"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "Register of Wills",
+      "feed_name": "Register of Wills",
+      "item": "baltimore-register-of-wills",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Belinda K. Conaway": "Belinda K. Conaway",
+        "Andy Zipay": "Andy Zipay",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Sheriff",
+      "feed_name": "Sheriff",
+      "item": "baltimore-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sabrina Tapp-Harper": "Sabrina Tapp-Harper",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State's Attorney",
+      "feed_name": "State's Attorney",
+      "item": "baltimore-states-attorney",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ivan J. Bates": "Ivan J. Bates",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "House of Delegates, District 40",
+      "feed_name": "House of Delegates, District 40",
+      "item": "md-hd-40",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Marlon D. Amprey": "Marlon D. Amprey",
+        "Tiffany Welch": "Tiffany Welch",
+        "Melissa Wells": "Melissa Wells",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "House of Delegates, District 41",
+      "feed_name": "House of Delegates, District 41",
+      "item": "md-hd-41",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "S. I. \"Sandy\" Rosenberg": "S. I. \"Sandy\" Rosenberg",
+        "Sean A. Stinnett": "Sean A. Stinnett",
+        "Ryan Turner": "Ryan Turner",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "House of Delegates, District 43A",
+      "feed_name": "House of Delegates, District 43A",
+      "item": "md-hd-43a",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Regina T. Boyce": "Regina T. Boyce",
+        "Elizabeth Embry": "Elizabeth Embry",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "House of Delegates, District 45",
+      "feed_name": "House of Delegates, District 45",
+      "item": "md-hd-45",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Jackie Addison": "Jackie Addison",
+        "Chanel A. Branch": "Chanel A. Branch",
+        "Caylin Young": "Caylin Young",
+        "Renaud De'Aundre Brown": "Renaud De'Aundre Brown",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "House of Delegates, District 46",
+      "feed_name": "House of Delegates, District 46",
+      "item": "md-hd-46",
+      "kind": "multi",
+      "seats": 3,
+      "choices": {
+        "Luke Clippinger": "Luke Clippinger",
+        "Mark Edelson": "Mark Edelson",
+        "Robbyn Lewis": "Robbyn Lewis",
+        "Jeremy L. Amason": "Jeremy L. Amason",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator, District 40",
+      "feed_name": "State Senator, District 40",
+      "item": "md-sd-40",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Antonio Hayes": "Antonio Hayes",
+        "Alan Rebar": "Alan Rebar",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator, District 41",
+      "feed_name": "State Senator, District 41",
+      "item": "md-sd-41",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Malcolm P. Ruff": "Malcolm P. Ruff",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator, District 43",
+      "feed_name": "State Senator, District 43",
+      "item": "md-sd-43",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mary Washington": "Mary Washington",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "Baltimore County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator, District 45",
+      "feed_name": "State Senator, District 45",
+      "item": "md-sd-45",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cory V. McCray": "Cory V. McCray",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "State Senator, District 46",
+      "feed_name": "State Senator, District 46",
+      "item": "md-sd-46",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bill Ferguson": "Bill Ferguson",
+        "Emmanuel Digman": "Emmanuel Digman",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress, District 2",
+      "feed_name": "Representative in Congress, District 2",
+      "item": "md-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John \"Johnny O\" Olszewski, Jr.": "John \"Johnny O\" Olszewski, Jr.",
+        "Dave Wallace": "Dave Wallace",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "Baltimore County",
+        "other counties",
+        "Carroll"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "Representative in Congress, District 7",
+      "feed_name": "Representative in Congress, District 7",
+      "item": "md-us-house-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kweisi Mfume": "Kweisi Mfume",
+        "Scott M. Collier": "Scott M. Collier",
+        "Other Write-Ins": "__other"
+      },
+      "reaches": [
+        "Baltimore City",
+        "Baltimore County",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
   "unmatched_feed": [],
   "unmatched_guide": [],
   "not_here": []

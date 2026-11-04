@@ -88,6 +88,9 @@ const canonical = (page) => page.evaluate(() => document.querySelector('link[rel
 
 {
   const { ctx, page, insights } = await newPage();
+  // The button opens the app with no ?today=, so the clock is pinned to the day these checks were written (Nov 3): after
+  // the polls close the first page leads with results, and a check run on another day would read another page.
+  await page.clock.install({ time: new Date('2026-10-19T17:00:00Z') });
   await page.goto(`${BASE}/austin-tx`);
   await page.waitForSelector('h1.place');
   check('Austin\'s page: its name is the heading', (await page.textContent('h1.place')).trim() === 'Austin (Travis County)');
@@ -107,6 +110,7 @@ const canonical = (page) => page.evaluate(() => document.querySelector('link[rel
 }
 {
   const { ctx, page } = await newPage({ colorScheme: 'dark' });
+  await page.clock.install({ time: new Date('2026-10-19T17:00:00Z') });
   await page.goto(`${BASE}/texas`);
   await page.waitForSelector('h1.place');
   await page.screenshot({ path: path.join(SHOTS, 'texas-dark.png'), fullPage: true });

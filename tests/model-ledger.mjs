@@ -2415,6 +2415,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const txt = (h) => h.replace(/<\/(p|div|li|h\d)>|<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
     const store = {};
     globalThis.window = { localStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } } };
+    const hadLocation = Object.getOwnPropertyDescriptor(globalThis, 'location'); // model.mjs pins a day for every check (Nov 3)
     const setToday = (d) => { globalThis.location = { search: `?today=${d}`, origin: 'https://vote.kevinhg.com', pathname: '/' }; };
     setToday('2026-10-25');
     try {
@@ -2543,7 +2544,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       check('follow-up: for a thin place, Tell me what he finds, even if it’s nothing', /<h2 id="sh-h">Tell me what he finds<\/h2>/.test(ph) && /what he finds for Pensacola, even if it’s nothing\./.test(ph) && /<b>Your request:<\/b> local picks for Pensacola, ZIP 32501\. Sent today\./.test(ph) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me what you find' && views.shelf.reportBody(S.ui.report)[F2.wrong].startsWith('Tell me what you find for Pensacola. Follow-up to the one-tap request from Oct 25.'), txt(ph).slice(0, 300));
       S.ui.report = null;
     } finally {
-      delete globalThis.window; delete globalThis.location;
+      delete globalThis.window; if (hadLocation) Object.defineProperty(globalThis, 'location', hadLocation); else delete globalThis.location;
       S.index = keep.index; S.view = keep.view; S.ui.view = keep.uiView; S.pending = keep.pending; S.ui.resume = keep.resume;
     }
 

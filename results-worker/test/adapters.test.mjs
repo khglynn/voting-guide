@@ -83,7 +83,8 @@ test('harris: election 1126 reads with 231 contests and the county\'s own time',
   assert.equal(r.contests.length, 231);
   assert.equal(r.source_updated, '2026-11-03T19:51:00.000Z');
   assert.equal(r.official, false);
-  assert.equal(r.reporting, '0 of 623 vote centers reporting');
+  assert.equal(r.reporting, '0 of 623 voting centers reporting');
+  assert.ok(r.contests.every((c) => c.reporting === '0 of 623 voting centers reporting'), "every race carries the county's vote-center line, never the feed's precinct count");
   const prop = r.contests.find((c) => c.feed_name === 'CITY OF HOUSTON, PROPOSITION A');
   assert.deepEqual(prop.choices.map((c) => c.name), ['FOR', 'AGAINST']);
   assert.equal(r.changed_token, 'Tue, 03 Nov 2026 20:10:19 GMT|2026-11-03T19:51:00Z');
@@ -101,7 +102,7 @@ test('harris: official flag and counts', async () => {
   const r = await harris.read({ fetch: fakeFetch({ resultsbyballot: { status: 200, body } }), map: mapFor('harris-county-tx') });
   assert.equal(r.official, true);
   assert.equal(r.contests[0].total, 15);
-  assert.equal(r.contests[0].reporting, '3 of 3 precincts reporting');
+  assert.equal(r.contests[0].reporting, '623 of 623 voting centers reporting');
 });
 
 test('clarity: a summary.json sent gzipped without Content-Encoding (Fulton, Nov 3) is unzipped by hand', async () => {

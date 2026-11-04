@@ -3,7 +3,10 @@
    (1 once official), `vc`/`vt` (vote centers reported and total) and `contests` (`i` id, `t` title, `ca` choice names,
    `tv` total votes, `pr`/`tp` precincts). The plan guessed `pr.json` held `dt` and `o`; it doesn't (checked Nov 3, 3:10 PM
    CT: pr.json is per-precinct turnout). The file is cached 60 s and sends Last-Modified, so an unchanged poll is one
-   conditional request answered 304. */
+   conditional request answered 304.
+   Progress words: the county's app shows one line, "Voting Centers Reporting ... 0 of 623", and no per-race line. The
+   feed's per-race `pr`/`tp` read 1224 of 1224 at 8:15 PM on Nov 3 with no Election Day votes in (it counts precincts
+   with any ballot tallied), so every race carries the county's vote-center line instead (first-run check, Nov 3). */
 import { get } from '../fetch.js';
 import { isoDate } from '../util.js';
 
@@ -18,6 +21,7 @@ export async function read({ fetch, map, prevToken = null }) {
   if (!Array.isArray(j.contests)) return { verdict: 'error', error: 'resultsbyballot.json had no contests list', url };
   const token = `${r.lastModified || ''}|${j.dt || ''}`;
   if (prevToken && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
+  const centers = Number(j.vt) > 0 ? `${j.vc} of ${j.vt} voting centers reporting` : null;
   const contests = j.contests.map((c) => ({
     feed_id: String(c.i),
     feed_name: String(c.t || '').trim(),
@@ -26,7 +30,7 @@ export async function read({ fetch, map, prevToken = null }) {
     choices: (c.ca || []).map((n, k) => ({ name: String(n).trim(), votes: (c.tv || [])[k] })),
     total: (c.tv || []).reduce((a, b) => a + (Number(b) || 0), 0),
     source_pct: (c.pct || []).map((p) => Number(String(p).replace('%', ''))),
-    reporting: Number(c.tp) > 0 ? `${c.pr} of ${c.tp} precincts reporting` : null,
+    reporting: centers,
     precincts: { reported: Number(c.pr || 0), total: Number(c.tp || 0) },
     is_rcv: false,
     updated: null,
@@ -40,7 +44,7 @@ export async function read({ fetch, map, prevToken = null }) {
     source_status: null,
     official: Number(j.o) === 1,
     source_updated: j.dt ? new Date(j.dt).toISOString() : null,
-    reporting: Number(j.vt) > 0 ? `${j.vc} of ${j.vt} vote centers reporting` : null,
+    reporting: centers,
     contests,
   };
 }

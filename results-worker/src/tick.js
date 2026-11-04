@@ -9,7 +9,7 @@ import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
 import { nextEntry, dueSources, clampElectionNight, previewFloor } from './schedule.js';
-import { fingerprint, mapHash, checkHash } from './fingerprint.js';
+import { fingerprint, statewideFingerprint, mapHash, checkHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
 export const SCHED_KEY = `sched:${ELECTION}`;
@@ -150,6 +150,7 @@ export async function publishState({ state, maps, store, archive, sched, now, pi
       sched: sched.sources[m.id] || {},
       checked: (await store.get(`checked:${m.id}`)) === want,
       fpOk: sched.meta?.fp?.[m.id] !== 'mismatch',
+      swOk: sched.meta?.fp_sw?.[m.id] !== 'mismatch',
     };
     if (srcs[m.id].record) srcs[m.id].record.fetched = sched.sources[m.id]?.last_ok || srcs[m.id].record.fetched;
   }
@@ -173,10 +174,14 @@ export async function publishState({ state, maps, store, archive, sched, now, pi
   return out;
 }
 
-/* Hourly: recompute each map's fingerprint from the live guide bundles; a mismatch turns its items into links. */
+/* Hourly: recompute each map's fingerprints from the live guide bundles (src/fingerprint.js). A mismatch on its own races
+   turns all its items into links (`meta.fp`). A mismatch on its county slices of statewide races (`meta.fp_sw`) drops
+   only those slices: the state source's own count or link stands, and the county's own races stay live (Nov 4). A map
+   that carries statewide slices with no statewide fingerprint recorded counts as a mismatch, so nothing unvouched shows. */
 export async function checkFingerprints({ maps, fetch, sched, now, ping }) {
   const cache = {};
   sched.meta.fp ??= {};
+  sched.meta.fp_sw ??= {};
   for (const m of maps) {
     if (!m.guide?.fingerprint || !m.guide?.places?.length) continue;
     const bundles = {};
@@ -191,6 +196,11 @@ export async function checkFingerprints({ maps, fetch, sched, now, ping }) {
     const was = sched.meta.fp[m.id];
     sched.meta.fp[m.id] = fp === m.guide.fingerprint ? 'ok' : 'mismatch';
     if (sched.meta.fp[m.id] === 'mismatch' && was !== 'mismatch') await ping(m.id, 'map out of date', `${m.name}'s map was made against different guide data (fingerprint ${m.guide.fingerprint}, now ${fp}). Its rows link out until the map is remade.`);
+    const sw = await statewideFingerprint(m, bundles);
+    if (sw === null) { delete sched.meta.fp_sw[m.id]; continue; }
+    const wasSw = sched.meta.fp_sw[m.id];
+    sched.meta.fp_sw[m.id] = sw === m.guide.statewide_fingerprint ? 'ok' : 'mismatch';
+    if (sched.meta.fp_sw[m.id] === 'mismatch' && wasSw !== 'mismatch') await ping(m.id, 'statewide slices out of date', `${m.name}'s county slices of statewide races were made against different guide data (statewide fingerprint ${m.guide.statewide_fingerprint || 'none'}, now ${sw}). Those slices are left out until the map is remade; the state's own count or link stands, and ${m.name}'s own races stay live.`);
   }
   sched.meta.fp_at = now;
 }
@@ -355,9 +365,10 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
     if (skipped.length) log(JSON.stringify({ skipped, reason: `no source starts after ${budgetMs / 1000} s; they stay due for the next tick` }));
 
     if (!only && (!sched.meta.fp_at || Date.parse(now) - Date.parse(sched.meta.fp_at) >= 60 * 60_000)) {
-      const before = JSON.stringify(sched.meta.fp || {});
+      const fps = () => JSON.stringify([sched.meta.fp || {}, sched.meta.fp_sw || {}]);
+      const before = fps();
       try { await checkFingerprints({ maps, fetch: tickFetch, sched, now, ping }); } catch (e) { log(JSON.stringify({ fingerprints_failed: String(e?.message || e) })); }
-      fpChanged = before !== JSON.stringify(sched.meta.fp);
+      fpChanged = before !== fps();
       metaChanged = true;
     }
 

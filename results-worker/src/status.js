@@ -14,6 +14,7 @@ export async function statusPage({ store, maps, now = new Date().toISOString() }
     const rec = await store.get(`src:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
     const checked = (await store.get(`checked:${m.id}`)) === (await checkHash(m));
     const fp = sched.meta?.fp?.[m.id];
+    const fpSw = sched.meta?.fp_sw?.[m.id];
     const blockedRec = await store.get(`blocked:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
     const read = rec?.read || blockedRec?.read;
     const contests = read?.contests?.length ?? 0;
@@ -21,7 +22,7 @@ export async function statusPage({ store, maps, now = new Date().toISOString() }
     const state = s.stopped ? `stopped: ${s.stopped}` : s.failing_since ? `failing since ${ct(s.failing_since)}` : (s.status || 'not read yet');
     const problems = [...(rec?.problems || []), ...(rec?.blocked ? blockedRec?.problems || [] : [])].map((p) => p.detail || p.reason);
     rows.push(`<li><b>${esc(m.name)}</b> <span class="id">${esc(m.id)} · ${esc(m.feed.adapter)}${m.feed.identity === 'browser' ? ' · browser identity' : ''}</span><br>
-      ${esc(state)}${rec?.blocked ? ' · <b>election mismatch: links only</b>' : ''} · ${checked ? '<b>checked</b>' : 'not checked yet (preview only)'}${fp === 'mismatch' ? ' · <b>map out of date</b>' : ''}<br>
+      ${esc(state)}${rec?.blocked ? ' · <b>election mismatch: links only</b>' : ''} · ${checked ? '<b>checked</b>' : 'not checked yet (preview only)'}${fp === 'mismatch' ? ' · <b>map out of date</b>' : ''}${fpSw === 'mismatch' ? ' · <b>statewide slices out of date</b>' : ''}<br>
       read ${esc(ct(s.last_ok) || 'never')} · source updated ${esc(ct(read?.source_updated) || 'n/a')} · next ${esc(s.next_due ? ct(s.next_due) : s.stopped ? 'none' : 'now')}<br>
       ${esc(read?.election?.name || '')} ${read ? `· ${contests} contests · ${votes.toLocaleString('en-US')} votes` : ''} ${read?.reporting ? `· ${esc(read.reporting)}` : ''}<br>
       mapped ${m.contests?.length ?? 0} · not matched ${m.unmatched_guide?.length ?? 0}${s.unchanged_polls ? ` · unchanged ${s.unchanged_polls}x` : ''}${s.last_error ? ` · last error: ${esc(s.last_error)}` : ''}${problems.length ? ` · ${esc([...new Set(problems)].join(', '))}` : ''}</li>`);

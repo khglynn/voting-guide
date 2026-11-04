@@ -7,11 +7,13 @@
      every guide candidate is mapped exactly once, no guide candidate twice, a measure has one yes and one no;
    - against the feed (a live read; --offline skips it): every mapped contest is in the feed under the same name, and
      every feed choice is matched or deliberately listed (`__other`);
-   then writes the fingerprint (with --write) and regenerates src/maps.gen.js. Exit 1 on any error.
+   then writes the fingerprints (with --write: `guide.fingerprint` for the map's own races, and
+   `guide.statewide_fingerprint` for its statewide slices when it has any) and regenerates src/maps.gen.js. Exit 1 on any
+   error.
    Usage: node bin/map-check.mjs [--write] [--offline] [--bundles ../public/data] [map ids...] */
 import { loadMaps, writeMap, writeIndex, loadBundle, flags } from './lib.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
-import { fingerprint, mapHash, checkHash } from '../src/fingerprint.js';
+import { fingerprint, statewideFingerprint, mapHash, checkHash } from '../src/fingerprint.js';
 import { lintGuide } from './map-lint.mjs';
 
 const f = flags(process.argv.slice(2));
@@ -64,10 +66,17 @@ for (const m of maps) {
   }
 
   const fp = await fingerprint(m, bundles);
+  const sw = await statewideFingerprint(m, bundles);
   if (m.guide?.fingerprint && m.guide.fingerprint !== fp) warn(m, `fingerprint ${m.guide.fingerprint} is stale; the guide now gives ${fp}`);
+  if (sw && m.guide?.statewide_fingerprint !== sw) warn(m, m.guide?.statewide_fingerprint ? `statewide fingerprint ${m.guide.statewide_fingerprint} is stale; the guide now gives ${sw}` : `no statewide fingerprint (the guide gives ${sw}); the Worker leaves its statewide slices out until --write records one`);
   if (f.write) writeMap(m);
-  if (f.write && m.guide?.fingerprint !== fp) { m.guide = { ...m.guide, fingerprint: fp, made_from: bundleDir ? `local bundles ${bundleDir}` : `vote.kevinhg.com/data, read ${new Date().toISOString()}` }; writeMap(m); }
-  console.log(`  fingerprint ${fp} · map hash ${await mapHash(m)} · check hash ${await checkHash(m)}`);
+  if (f.write && (m.guide?.fingerprint !== fp || (m.guide?.statewide_fingerprint ?? null) !== sw)) {
+    const g = { ...m.guide, fingerprint: fp, made_from: bundleDir ? `local bundles ${bundleDir}` : `vote.kevinhg.com/data, read ${new Date().toISOString()}` };
+    if (sw) g.statewide_fingerprint = sw; else delete g.statewide_fingerprint;
+    m.guide = g;
+    writeMap(m);
+  }
+  console.log(`  fingerprint ${fp}${sw ? ` · statewide fingerprint ${sw}` : ''} · map hash ${await mapHash(m)} · check hash ${await checkHash(m)}`);
 }
 if (f.write && errors === 0) { writeIndex(loadMaps()); console.log('wrote src/maps.gen.js'); }
 if (errors) { console.log(`${errors} error(s)`); process.exit(1); }

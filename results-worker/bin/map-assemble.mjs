@@ -56,7 +56,9 @@ if (sw) {
   if (!map.statewide_unmatched.length) delete map.statewide_unmatched;
   const feedSeen = new Set((map.unmatched_feed || []).map((u) => String(u.feed_id)));
   map.unmatched_feed = [...(map.unmatched_feed || []), ...unmatchedFeed.filter((u) => !feedSeen.has(String(u.feed_id)))];
-  // The state's bundle joins the map's places, so the fingerprint (and the Worker's hourly check) covers these items.
+  // The state's bundle joins the map's places, so the statewide fingerprint (and the Worker's hourly check) covers
+  // these items. It is kept apart from the map's own fingerprint (src/fingerprint.js), so a statewide edit drops only
+  // these slices, never the county's own races.
   if (!map.guide.places.includes(`state-${map.state}`)) map.guide.places = [...map.guide.places, `state-${map.state}`];
 } else {
   map.contests = contests.sort((a, b) => a.item.localeCompare(b.item));

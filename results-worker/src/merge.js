@@ -6,7 +6,8 @@
    `reaches` names more than one county, or two sources carry it) keeps one slice per source, the largest on top.
    A county map may carry a statewide race as that county's slice (`statewide: true`, reaches [county, "other
    counties"], Nov 4): beneath the state's own count while the state source has numbers, and on its own, named by
-   county and never the whole race, when the state source is refused or a link. */
+   county and never the whole race, when the state source is refused or a link. Such slices answer to their own
+   fingerprint (`swOk`, src/fingerprint.js): when the guide's statewide items change, only they drop out. */
 import { pctOf, hasProgressCount } from './util.js';
 import { outcomeFor, parseThreshold, RETENTION } from './outcome.js';
 
@@ -135,7 +136,9 @@ function spanning(list, reaches) {
   return out;
 }
 
-/* One state's file. `srcs[id]` = { record: {read, fetched, problems}, sched, checked, fpOk }.
+/* One state's file. `srcs[id]` = { record: {read, fetched, problems}, sched, checked, fpOk, swOk }. `fpOk` false: the
+   map's own races are out of date, so all of its items link out. `swOk` false: only its statewide slices are, so only
+   they are left out.
    mode "public": only checked sources' numbers; "preview": every source's, each marked checked or not. */
 export function buildStateFile({ state, maps, srcs, mode, now }) {
   const sources = [];
@@ -173,12 +176,16 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     for (const id of map.unmatched_guide || []) links[id] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: map.feed.results_url, reason: 'not matched' };
     if (reason) { linkAll(reason); continue; }
     if (!rec) {
-      for (const mc of own) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'], _empty: true });
+      for (const mc of own) (contributions[mc.item] ??= []).push({ source: map.id, county: map.county || map.name, status: 'pending', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, total_votes: 0, _kind: mc.kind, _reaches: mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'], _whole: !!mc.whole, _empty: true });
       continue;
     }
     const { status, slices } = sourceSlices(rec.read, map, now);
     entry.status = status;
-    for (const [item, sl] of Object.entries(slices)) (contributions[item] ??= []).push(sl);
+    for (const [item, sl] of Object.entries(slices)) {
+      // Statewide slices made against older guide data stay out; the state's count or link stands for those races.
+      if (sl._statewide && s.swOk === false) continue;
+      (contributions[item] ??= []).push(sl);
+    }
     for (const mc of own) if (!slices[mc.item]) links[mc.item] ??= { source: map.id, status: 'link_only', reporting: null, updated: null, url: mc.item_url || map.feed.results_url, reason: 'not in the feed' };
   }
 
@@ -188,7 +195,6 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     // link stand (a refused state never turns into a county's "not posted yet").
     const list = all.filter((s) => !(s._statewide && !(s.total_votes > 0)));
     if (!list.length) continue;
-    const reaches = [...new Set(list.flatMap((s) => s._reaches))];
     const real = list.filter((s) => !s._empty);
     if (real.length === 0) { const e = list[0]; items[item] = { source: e.source, status: 'pending', reporting: null, updated: null, url: e.url, final: null }; continue; }
     // A source that counts the whole race (the state's own count) is the item; county counts for the same race ride
@@ -215,6 +221,11 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     }
     const counties = real.filter((s) => !s._whole);
     if (!counties.length) { items[item] = single(wholeCand); continue; }
+    // The whole race set aside (not read yet, or at zero): the counties name who is missing. A whole-race source's
+    // reaches lead with the state's own name ("California", "all 58 California counties"), which are not counties and
+    // must never be listed as missing ones (statewide review, Nov 4). Every county map that shares a race with a whole
+    // count names those counties itself or says "other counties" (test/maps.test.mjs), so nothing real is lost.
+    const reaches = [...new Set(list.filter((s) => !s._whole).flatMap((s) => s._reaches))];
     items[item] = reaches.length > 1 || counties.length > 1 ? spanning(counties, reaches.length ? reaches : counties.map((s) => s.county)) : single(counties[0]);
   }
   for (const [item, l] of Object.entries(links)) if (!items[item]) items[item] = l;

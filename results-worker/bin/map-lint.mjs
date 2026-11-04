@@ -1,6 +1,7 @@
 /* The guide side of the map lint (bin/map-check.mjs), as a function the tests can call: each pair against the guide's
    bundles. `bundles` is the map's places' bundles by place id (a county map that carries statewide slices lists its
-   state's bundle, `state-XX`, among them so its fingerprint covers those candidates); `stateBundle` is the state's.
+   state's bundle, `state-XX`, among them so its statewide fingerprint covers those candidates); `stateBundle` is the
+   state's.
    With `write`, it also fills what --write fills in (a measure's pass_threshold, a federal or state race widened to a
    county slice). Returns { errors, warnings } as plain sentences. */
 import { parseThreshold } from '../src/outcome.js';
@@ -37,7 +38,7 @@ export function lintGuide(m, { bundles = {}, stateBundle = null, write = false }
         err(`${w}: a statewide item in a county map must be that county's slice: reaches exactly ["${m.county}", "${OTHER_COUNTIES}"], statewide: true, never whole`);
         continue;
       }
-      if (!guide.has(mc.item)) { err(`${w}: a statewide slice needs state-${m.state} in guide.places, so the map's fingerprint covers its candidates`); continue; }
+      if (!guide.has(mc.item)) { err(`${w}: a statewide slice needs state-${m.state} in guide.places, so the map's statewide fingerprint covers its candidates`); continue; }
     } else if (mc.statewide !== undefined) err(`${w}: statewide: true is only for a statewide item's county slice in a county map`);
     if (m.scope === 'state' && !mc.whole) err(`${w}: a state source's contests count the whole race (whole: true)`);
     const it = guide.get(mc.item);

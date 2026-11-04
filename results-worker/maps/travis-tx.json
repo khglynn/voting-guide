@@ -610,9 +610,11 @@
         "Sheryl Cole (DEM)": "Sheryl Cole"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0027",
@@ -625,9 +627,11 @@
         "Pooja Sethi (DEM)": "Pooja Sethi"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0028",
@@ -640,9 +644,11 @@
         "Donna Howard (DEM)": "Donna Howard"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0029",
@@ -655,9 +661,11 @@
         "Arshia Papari (GRN)": "Arshia Papari"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0030",
@@ -670,9 +678,11 @@
         "Samantha Lopez-Resendez (DEM)": "Samantha Lopez-Resendez"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0031",
@@ -685,9 +695,11 @@
         "Maria Luisa Lulu Flores (DEM)": "Maria Luisa “Lulu” Flores"
       },
       "reaches": [
-        "Travis"
+        "Travis",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0144",

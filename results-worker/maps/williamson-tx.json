@@ -322,9 +322,11 @@
         "John H. Bucy III": "John H. Bucy III"
       },
       "reaches": [
-        "Williamson"
+        "Williamson",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0026",
@@ -337,9 +339,11 @@
         "Chris Jimenez": "Chris Jimenez"
       },
       "reaches": [
-        "Williamson"
+        "Williamson",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0108",

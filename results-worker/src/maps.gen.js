@@ -834,9 +834,11 @@ export const MAPS = [
           "DEM Trey Martinez Fischer": "Trey Martinez Fischer"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0027",
@@ -849,9 +851,11 @@ export const MAPS = [
           "DEM Philip Cortez": "Philip Cortez"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0028",
@@ -864,9 +868,11 @@ export const MAPS = [
           "DEM Kristian Carranza": "Kristian Carranza"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0029",
@@ -879,9 +885,11 @@ export const MAPS = [
           "DEM Elizabeth 'Liz' Campos": "Elizabeth \"Liz\" Campos"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0030",
@@ -893,9 +901,11 @@ export const MAPS = [
           "DEM Barbara Gervin Hawkins": "Barbara Gervin-Hawkins"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0031",
@@ -924,9 +934,11 @@ export const MAPS = [
           "DEM Shelly Nickels": "Shelly Nickels"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0033",
@@ -938,9 +950,11 @@ export const MAPS = [
           "DEM Diego Bernal": "Diego Bernal"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0034",
@@ -954,10 +968,12 @@ export const MAPS = [
           "Write-in": "__other"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
         "item_url": null,
-        "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here."
+        "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here.",
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0035",
@@ -970,9 +986,11 @@ export const MAPS = [
           "DEM Adrian Reyna": "Adrian Reyna"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0116",
@@ -1200,9 +1218,11 @@ export const MAPS = [
           "GRN Julián Villarreal": "Julián Villarreal"
         },
         "reaches": [
-          "Bexar"
+          "Bexar",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0126",
@@ -1828,9 +1848,11 @@ export const MAPS = [
           "Venton Jones": "Venton Jones"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0033",
@@ -1843,9 +1865,11 @@ export const MAPS = [
           "Ana-Maria Rodriguez Ramos": "Ana-Maria Rodriguez Ramos"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0034",
@@ -1858,9 +1882,11 @@ export const MAPS = [
           "Rafael Anchia": "Rafael Anchia"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0035",
@@ -1872,9 +1898,11 @@ export const MAPS = [
           "Jessica Gonzalez": "Jessica Gonzalez"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0036",
@@ -1886,9 +1914,11 @@ export const MAPS = [
           "Terry Meza": "Terry Meza"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0037",
@@ -1900,9 +1930,11 @@ export const MAPS = [
           "Linda Garcia": "Linda Garcia"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0038",
@@ -1915,9 +1947,11 @@ export const MAPS = [
           "Allison Mitchell": "Allison Mitchell"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0039",
@@ -1930,9 +1964,11 @@ export const MAPS = [
           "Aicha Davis": "Aicha Davis"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0040",
@@ -1944,9 +1980,11 @@ export const MAPS = [
           "Toni Rose": "Toni Rose"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0041",
@@ -1958,9 +1996,11 @@ export const MAPS = [
           "Yvonne Davis": "Yvonne Davis"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0042",
@@ -1973,9 +2013,11 @@ export const MAPS = [
           "Zach Herbert": "Zach Herbert"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0043",
@@ -1988,9 +2030,11 @@ export const MAPS = [
           "Rhetta Andrews Bowers": "Rhetta Andrews Bowers"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0044",
@@ -2003,9 +2047,11 @@ export const MAPS = [
           "John Bryant": "John Bryant"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0045",
@@ -2018,9 +2064,11 @@ export const MAPS = [
           "Cassandra Hernandez": "Cassandra Hernandez"
         },
         "reaches": [
-          "Dallas"
+          "Dallas",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0085",
@@ -3830,9 +3878,11 @@ export const MAPS = [
           "STEFANIE BORD (DEM)": "Stefanie Bord"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9338",
@@ -3845,9 +3895,11 @@ export const MAPS = [
           "MICHELLE WILLIAMS (DEM)": "Michelle Williams"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9340",
@@ -3860,9 +3912,11 @@ export const MAPS = [
           "DESIREE KLAUS (DEM)": "Desiree Klaus"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9342",
@@ -3875,9 +3929,11 @@ export const MAPS = [
           "ALBERT WITTLIFF (DEM)": "Albert Wittliff"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9344",
@@ -3890,9 +3946,11 @@ export const MAPS = [
           "BRETT ROBINSON (DEM)": "Brett Robinson"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9346",
@@ -3905,9 +3963,11 @@ export const MAPS = [
           "STACI CHILDS (DEM)": "Staci Childs"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9348",
@@ -3920,9 +3980,11 @@ export const MAPS = [
           "SARA MCGEE (DEM)": "Sara McGee"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9350",
@@ -3935,9 +3997,11 @@ export const MAPS = [
           "JOSH WALLENSTEIN (DEM)": "Josh Wallenstein"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9352",
@@ -3950,9 +4014,11 @@ export const MAPS = [
           "ANN JOHNSON (DEM)": "Ann Johnson"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9354",
@@ -3965,9 +4031,11 @@ export const MAPS = [
           "ODUS E. EVBAGHARU (DEM)": "Odus E. Evbagharu"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9356",
@@ -3980,9 +4048,11 @@ export const MAPS = [
           "GENE WU (DEM)": "Gene Wu"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9358",
@@ -3995,9 +4065,11 @@ export const MAPS = [
           "TYLER SMITH (DEM)": "Tyler Smith"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9360",
@@ -4010,9 +4082,11 @@ export const MAPS = [
           "CHARLENE WARD JOHNSON (DEM)": "Charlene Ward Johnson"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9362",
@@ -4025,9 +4099,11 @@ export const MAPS = [
           "ARMANDO LUCIO WALLE (DEM)": "Armando Lucio Walle"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9364",
@@ -4040,9 +4116,11 @@ export const MAPS = [
           "SENFRONIA THOMPSON (DEM)": "Senfronia Thompson"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9366",
@@ -4055,9 +4133,11 @@ export const MAPS = [
           "HAROLD V. DUTTON, JR (DEM)": "Harold V. Dutton, Jr"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9368",
@@ -4070,9 +4150,11 @@ export const MAPS = [
           "ANA HERNANDEZ (DEM)": "Ana Hernandez"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9370",
@@ -4085,9 +4167,11 @@ export const MAPS = [
           "MARY ANN PEREZ (DEM)": "Mary Ann Perez"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9372",
@@ -4100,9 +4184,11 @@ export const MAPS = [
           "CHRISTINA MORALES (DEM)": "Christina Morales"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9374",
@@ -4115,9 +4201,11 @@ export const MAPS = [
           "LAUREN ASHLEY SIMMONS (DEM)": "Lauren Ashley Simmons"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9376",
@@ -4130,9 +4218,11 @@ export const MAPS = [
           "JOLANDA JONES (DEM)": "Jolanda Jones"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9378",
@@ -4145,9 +4235,11 @@ export const MAPS = [
           "PENNY MORALES SHAW (DEM)": "Penny Morales Shaw"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9380",
@@ -4160,9 +4252,11 @@ export const MAPS = [
           "DARLENE BREAUX (DEM)": "Darlene Breaux"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9382",
@@ -4175,9 +4269,11 @@ export const MAPS = [
           "A'YONNA KELLUM (DEM)": "A'Yonna Kellum"
         },
         "reaches": [
-          "Harris"
+          "Harris",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "9504",
@@ -5400,9 +5496,11 @@ export const MAPS = [
           "Sheryl Cole (DEM)": "Sheryl Cole"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0027",
@@ -5415,9 +5513,11 @@ export const MAPS = [
           "Pooja Sethi (DEM)": "Pooja Sethi"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0028",
@@ -5430,9 +5530,11 @@ export const MAPS = [
           "Donna Howard (DEM)": "Donna Howard"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0029",
@@ -5445,9 +5547,11 @@ export const MAPS = [
           "Arshia Papari (GRN)": "Arshia Papari"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0030",
@@ -5460,9 +5564,11 @@ export const MAPS = [
           "Samantha Lopez-Resendez (DEM)": "Samantha Lopez-Resendez"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0031",
@@ -5475,9 +5581,11 @@ export const MAPS = [
           "Maria Luisa Lulu Flores (DEM)": "Maria Luisa “Lulu” Flores"
         },
         "reaches": [
-          "Travis"
+          "Travis",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0144",
@@ -6912,9 +7020,11 @@ export const MAPS = [
           "John H. Bucy III": "John H. Bucy III"
         },
         "reaches": [
-          "Williamson"
+          "Williamson",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0026",
@@ -6927,9 +7037,11 @@ export const MAPS = [
           "Chris Jimenez": "Chris Jimenez"
         },
         "reaches": [
-          "Williamson"
+          "Williamson",
+          "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "reaches_unconfirmed": true
       },
       {
         "feed_id": "0108",

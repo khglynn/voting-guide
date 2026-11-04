@@ -832,9 +832,11 @@
         "DEM Trey Martinez Fischer": "Trey Martinez Fischer"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0027",
@@ -847,9 +849,11 @@
         "DEM Philip Cortez": "Philip Cortez"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0028",
@@ -862,9 +866,11 @@
         "DEM Kristian Carranza": "Kristian Carranza"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0029",
@@ -877,9 +883,11 @@
         "DEM Elizabeth 'Liz' Campos": "Elizabeth \"Liz\" Campos"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0030",
@@ -891,9 +899,11 @@
         "DEM Barbara Gervin Hawkins": "Barbara Gervin-Hawkins"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0031",
@@ -922,9 +932,11 @@
         "DEM Shelly Nickels": "Shelly Nickels"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0033",
@@ -936,9 +948,11 @@
         "DEM Diego Bernal": "Diego Bernal"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0034",
@@ -952,10 +966,12 @@
         "Write-in": "__other"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
       "item_url": null,
-      "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here."
+      "note": "Write-in candidates are counted together in Bexar County's feed, so they have no number of their own here.",
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0035",
@@ -968,9 +984,11 @@
         "DEM Adrian Reyna": "Adrian Reyna"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0116",
@@ -1198,9 +1216,11 @@
         "GRN Julián Villarreal": "Julián Villarreal"
       },
       "reaches": [
-        "Bexar"
+        "Bexar",
+        "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "reaches_unconfirmed": true
     },
     {
       "feed_id": "0126",

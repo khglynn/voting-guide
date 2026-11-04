@@ -63,7 +63,14 @@ export function combineLines(opts) {
   return [...byName.values()].map(({ _lines, ...c }) => (_lines.length > 1 ? { ...c, lines: _lines } : c));
 }
 
-export function parseContests(items, { units = 'reporting units', groups = {} } = {}) {
+/* Counties per state, for a state site that counts its contests' progress in counties. */
+const COUNTIES = { GA: 159, WA: 39 };
+
+/* `statuses: false` is an election whose record says `includePrecinctStatuses: false` (Washington and King, Nov 3): its
+   page shows no "reporting" count on any contest, so none is quoted. Washington's ballot-items still carry a count (33 of
+   39 for the Supreme Court races) that appears nowhere on the office's page, which shows votes from all 39 counties
+   (first-run check, Nov 4). Georgia, DeKalb and Sullivan say true, and their pages show the same counts we quote. */
+export function parseContests(items, { units = 'reporting units', groups = {}, statuses = true } = {}) {
   return items.map((c) => {
     const opts = c.summaryResults?.ballotOptions || [];
     const choices = combineLines(opts);
@@ -78,7 +85,7 @@ export function parseContests(items, { units = 'reporting units', groups = {} } 
       vote_for: vf ? Number(vf[1]) : 1,
       choices,
       total: choices.reduce((a, b) => a + (Number(b.votes) || 0), 0),
-      reporting: progressWords(c.reportingStatus, units, hasVotes),
+      reporting: statuses ? progressWords(c.reportingStatus, units, hasVotes) : null,
       precincts: c.reportingStatus ? { reported: Number(c.reportingStatus.reportingUnits || 0), total: Number(c.reportingStatus.totalUnits || 0) } : null,
       is_rcv: !!c.rankedChoiceSummaryResults,
       is_measure: c.contestType === 'BallotMeasure',
@@ -129,13 +136,15 @@ export async function read({ fetch, map, prevToken = null }) {
   const groups = Object.fromEntries((e.contestGroups || []).map((g) => [g.id, en(g.groupHeading)]));
   const units = map.feed.units || 'reporting units';
   const top = { totalUnits: (e.precinctReportingStatus || []).reduce((a, g) => a + (Number(g.value) || 0), 0), reportingStatusDetails: e.precinctReportingStatus || [] };
-  const contests = parseContests(data, { units, groups });
+  const statuses = e.includePrecinctStatuses !== false;
+  const contests = parseContests(data, { units, groups, statuses });
   // The record's own line where it has one (DeKalb, Sullivan); the state sites' records say nothing has reported
-  // (Georgia and Washington, Nov 3), so their line is the whole-state contest's own (src/util.js wholeProgress), at
-  // least two contests at the largest count. The record counts precincts, so its total checks that count only where
-  // the contests count precincts too, never a state site's counties.
-  const recordWords = progressWords(top, units, Number(e.ballotsCast) > 0);
-  const whole = recordWords ? null : wholeProgress(contests, { total: /count(y|ies)/i.test(units) ? null : top.totalUnits, shared: 2 });
+  // (Georgia and Washington, Nov 3), so their line is a whole-state contest's own (src/util.js wholeProgress). A state
+  // site counts counties, so a whole-state contest is one on every county in the state; a county site counts what its
+  // record counts, so the record's total is the check there. Without either, at least two contests at the top count.
+  const recordWords = statuses ? progressWords(top, units, Number(e.ballotsCast) > 0) : null;
+  const total = /count(y|ies)/i.test(units) ? (map.scope === 'state' ? COUNTIES[map.state] ?? null : null) : top.totalUnits;
+  const whole = recordWords ? null : wholeProgress(contests, { total, shared: total > 0 ? 1 : 2 });
   return {
     verdict: 'ok',
     changed_token: behind ? null : token,

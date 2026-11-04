@@ -87,7 +87,9 @@ test('enhanced_voting: Washington reads "Legislative" as vote for 1 and names ea
   assert.equal(i645.category, 'State Measures');
   assert.equal(i645.is_measure, true);
   assert.deepEqual(i645.choices, [{ name: 'Yes', votes: 519652 }, { name: 'No', votes: 742291 }]);
-  assert.equal(i645.reporting, '22 of 39 counties reporting');
+  // The record says includePrecinctStatuses false and the page shows no reporting count, so none is quoted (Nov 4).
+  assert.equal(i645.reporting, null);
+  assert.deepEqual(i645.precincts, { reported: 22, total: 39 });
   assert.ok(r.contests.every((c) => Number.isInteger(c.vote_for) && c.vote_for >= 1));
   // The office's message runs long (maps and links), so only the short status label rides along.
   assert.deepEqual(r.labels, ['Unofficial Results']);

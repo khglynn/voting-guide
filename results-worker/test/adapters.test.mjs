@@ -194,7 +194,7 @@ test('dc: the board\'s JSON reads with its own time and words; IsWinner is never
    Colorado's statewide site, Orange County FL (its own domain) and Fulton County GA. Fixtures are trimmed copies. */
 const route = (e, v, n) => ({ [`/${e}/current_ver.txt`]: `${n}.current_ver.txt`, [`/${e}/${v}/json/en/summary.json`]: `${n}.summary.json`, [`/${e}/${v}/json/en/electionsettings.json`]: `${n}.electionsettings.json` });
 
-test('clarity: Colorado statewide 127407 counts counties per contest, keeps precincts for the source line, drops a 2016 header', async () => {
+test('clarity: Colorado statewide 127407 counts counties per contest, quotes no progress (its page shows neither count), drops a 2016 header', async () => {
   const f = fakeFetch(route('127407', '385063', 'clarity-co-state'));
   const r = await clarity.read({ fetch: f, map: mapFor('results-CO') });
   assert.equal(r.verdict, 'ok');
@@ -203,12 +203,15 @@ test('clarity: Colorado statewide 127407 counts counties per contest, keeps prec
   assert.equal(r.source_updated, '2026-11-04T04:18:06.000Z'); // "11/3/2026 9:18:06 PM MST"
   // One header is "Unofficial Results" plus a pasted HTML page; the other still says "June 28, 2016 Primary Election".
   assert.deepEqual(r.labels, ['Unofficial Results']);
-  assert.equal(r.reporting, '1132 of 4297 precincts reporting');
+  // Its page shows "Election Night Reporting Complete 2/64" where PR says 21, and no precinct count at all (first-run
+  // check, Nov 4), so neither the settings' 1,132 of 4,297 nor a contest's PR is quoted.
+  assert.equal(r.reporting, null);
   const senate = r.contests.find((c) => c.feed_id === '20');
   assert.equal(senate.feed_name, 'United States Senator');
   assert.deepEqual(senate.choices.map((c) => c.name), ['Mark Baisley', 'John Hickenlooper', 'Bob Chew', 'Christopher Baum', 'Blake Huber', 'Adam Withrow']);
   assert.equal(senate.choices.find((c) => c.name === 'John Hickenlooper').votes, 1211963);
-  assert.equal(senate.reporting, '15 of 64 counties reporting');
+  assert.equal(senate.reporting, null);
+  assert.deepEqual(senate.precincts, { reported: 15, total: 64 }, 'the counts stay in the read as data');
   const a81 = r.contests.find((c) => c.feed_name === 'Amendment 81 (CONSTITUTIONAL)');
   assert.deepEqual(a81.choices.map((c) => c.name), ['Yes/For', 'No/Against']);
   // Aurora 3A: the state's count is the sum of Adams, Arapahoe and Douglas, with PR 0 of 3 beside it: no progress words.
@@ -226,13 +229,14 @@ test('clarity: Orange County FL 127356 on its own domain, over and under votes l
   assert.equal(r.contests.length, 34);
   assert.equal(r.source_updated, '2026-11-04T04:03:00.000Z'); // "11/3/2026 11:03:00 PM EST"
   assert.deepEqual(r.labels, ['Unofficial Results']);
-  // Its settings say 0 of 0, so the office's line is its whole-county races' own (13 at 263 precincts).
-  assert.equal(r.reporting, '261 of 263 precincts reporting');
-  assert.equal(r.reporting_from, 'United States Senator');
+  // Orange hides small precincts' data (precinctdatahidden "1"), and its PR (261 of 263) isn't its page's 263/263
+  // (first-run check, Nov 4): no progress words on the source or any race.
+  assert.equal(r.reporting, null);
   const mayor = r.contests.find((c) => c.feed_name === 'County Mayor');
   assert.deepEqual(mayor.choices.map((c) => c.name), ['Chris Messina', 'Tiffany Moore Russell', 'Over Votes', 'Under Votes']);
   const senate = r.contests.find((c) => c.feed_id === '0004');
-  assert.equal(senate.reporting, '261 of 263 precincts reporting');
+  assert.equal(senate.reporting, null);
+  assert.deepEqual(senate.precincts, { reported: 261, total: 263 });
   assert.equal(senate.choices.reduce((a, c) => a + c.votes, 0), senate.total); // T includes over and under votes
   const q = r.contests.find((c) => c.feed_name === 'School Board Question');
   assert.deepEqual(q.choices.map((c) => c.name), ['Yes for Approval', 'No for Rejection', 'Over Votes', 'Under Votes']);

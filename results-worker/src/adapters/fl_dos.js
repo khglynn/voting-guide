@@ -21,6 +21,7 @@ import { isoDate, wholeProgress } from '../util.js';
 
 const COLS = ['ElectionDate', 'PartyCode', 'PartyName', 'RaceCode', 'RaceName', 'CountyCode', 'CountyName', 'Juris1num', 'Juris2num', 'Precincts', 'PrecinctsReporting', 'CanNameLast', 'CanNameFirst', 'CanNameMiddle', 'CanVotes'];
 const clean = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
+const FL_COUNTIES = 67;
 /* A whole number or NaN: "1,234" and " 12 " read, "-" or "" never become zero (checkRead refuses a read with NaN). */
 const count = (s) => { const t = clean(s).replace(/,/g, ''); return /^\d+$/.test(t) ? Number(t) : NaN; };
 
@@ -80,10 +81,9 @@ export async function read({ fetch, map, prevToken = null, now = Date.now() }) {
   if (prevToken && token && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
   const lm = r.lastModified ? new Date(r.lastModified) : null;
   // The file has no statewide line of its own, so the state's progress is a statewide race's own line: the largest
-  // precinct count, on a race that lists every county in the file (src/util.js wholeProgress). A district race never
-  // lists all 67, so it can't stand in for the state.
-  const counties = new Set(p.contests.flatMap((c) => c.counties));
-  const whole = wholeProgress(p.contests, { covers: (c) => c.counties.length === counties.size && c.counties.every((n) => counties.has(n)) });
+  // precinct count, on a race with a row for each of Florida's 67 counties (src/util.js wholeProgress). A district race
+  // never has all 67, so it can't stand in for the state, even in a file that held only district races.
+  const whole = wholeProgress(p.contests, { covers: (c) => new Set(c.counties).size === FL_COUNTIES });
   return {
     verdict: 'ok',
     changed_token: token,

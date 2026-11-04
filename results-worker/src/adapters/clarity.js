@@ -27,6 +27,18 @@ export function labels(ps = {}, year = null) {
 
 const num = (v) => (Array.isArray(v) ? Number(v[0] ?? 0) : Number(v ?? 0));
 
+/* Progress words are quoted only where summary.json's PR is the number the office's own page shows. The first-run
+   checks (Nov 3 to 4) found it is on the county sites read against their page or report (Bexar, Dallas, Williamson,
+   Adams, Arapahoe, Jefferson, Fulton), and isn't on three, which say nothing instead:
+   - a state site, whose contests count counties: Colorado's PR says 21 of 64 for the Senate where its page says
+     "Election Night Reporting Complete 2/64", and its electionsettings line (1,107 of 4,297 precincts) is nowhere on
+     the page either;
+   - a site that hides small precincts' data (`precinctdatahidden` "1"): Orange FL's PR says 261 of 263 and 21 of 22
+     where its page and report say 263/263 and 22/22, fully reported;
+   - Allegheny, with no flag to tell: 1,321 of 1,327 where the page's own sum.json and report say 1,322, at the same
+     version. Listed here by map id, so its map and check hash stay as they are. */
+const PR_NOT_ON_PAGE = new Set(['allegheny-pa']);
+
 export async function listElections({ fetch, base, identity }) {
   const r = await get(fetch, `${base}/elections.json`, { identity });
   if (r.verdict !== 'ok') return r;
@@ -58,7 +70,7 @@ export async function read({ fetch, map, prevToken = null }) {
   const settings = e.json?.settings || {};
   const details = settings.electiondetails || {};
   const totalPr = Number(settings.totalprecinctsreporting || e.json?.stateprecinctsparticipating || 0);
-  const nowPr = Number(settings.numberofprecinctsreporting || e.json?.stateprecinctsreporting || 0);
+  const quotable = unit === 'precincts' && String(details.precinctdatahidden ?? '0') !== '1' && !PR_NOT_ON_PAGE.has(map.id);
   const contests = s.json.map((c) => {
     const names = c.CH || [];
     const votes = c.V || [];
@@ -74,21 +86,18 @@ export async function read({ fetch, map, prevToken = null }) {
       // "0 of 210 precincts reporting" beside 160,000 counted votes (Douglas CO, Williamson TX early on Nov 3) reads as
       // wrong: mail and early votes post before any precinct reports. With votes in and no precinct reported, there are
       // no progress words to quote, so none are shown (coordinator and the Douglas check, Nov 3).
-      reporting: Number(c.TP) > 0 && !(Number(c.PR) === 0 && votes.some((x) => Number(x) > 0)) ? `${c.PR} of ${c.TP} ${unit} reporting` : null,
+      reporting: quotable && Number(c.TP) > 0 && !(Number(c.PR) === 0 && votes.some((x) => Number(x) > 0)) ? `${c.PR} of ${c.TP} ${unit} reporting` : null,
       precincts: { reported: Number(c.PR || 0), total: Number(c.TP || 0) },
       is_rcv: !!c.IsRCV,
       updated: null,
       declared: winners.length ? winners : null,
     };
   });
-  // The office's own line for the whole election, from electionsettings, where it gives one (Colorado's state site:
-  // 1,132 of 4,297 precincts), under the contest rule above: "0 of N" beside counted votes is no progress at all.
-  // Most counties give 0 there (Bexar, Dallas, Travis, Fulton, Orange, Nov 3), so the line is the whole-county contest's
-  // own (src/util.js wholeProgress): the largest TP, matching the settings' total when there is one in the same
-  // units, shared by at least two contests, since Clarity names no county total to prove a lone contest's reach.
-  const anyVotes = contests.some((c) => c.choices.some((ch) => Number(ch.votes) > 0));
-  const settingsWords = totalPr > 0 && !(nowPr === 0 && anyVotes) ? `${nowPr} of ${totalPr} precincts reporting` : null;
-  const whole = settingsWords ? null : wholeProgress(contests, { total: unit === 'precincts' ? totalPr : null, shared: 2 });
+  // The source's line is its whole-county races' own (src/util.js wholeProgress): electionsettings gives no whole-election
+  // count on the county sites (0 in Bexar, Dallas, Travis, Fulton, Orange and Allegheny, Nov 3) and one the page doesn't
+  // show on the state site. The race has the largest TP, matching the settings' precinct total where one is given,
+  // shared by at least two races, since Clarity names no county total to prove a lone race's reach.
+  const whole = quotable ? wholeProgress(contests, { total: totalPr, shared: 2 }) : null;
   return {
     verdict: 'ok',
     changed_token: ver,
@@ -99,7 +108,7 @@ export async function read({ fetch, map, prevToken = null }) {
     source_updated: parseUsTime(e.json?.websiteupdatedat),
     labels: labels(e.json?.pagesettings, isoDate(details.electiondate)?.slice(0, 4) || null),
     feed_version: ver,
-    reporting: settingsWords ?? whole?.reporting ?? null,
+    reporting: whole?.reporting ?? null,
     ...(whole ? { reporting_from: whole.from } : {}),
     contests,
   };

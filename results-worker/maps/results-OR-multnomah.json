@@ -9,8 +9,8 @@
     "feed_name": "November 3, 2026 General Election"
   },
   "guide": {
-    "fingerprint": null,
-    "made_from": null,
+    "fingerprint": "7708254762ce2bcd",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:46:02.299Z",
     "places": [
       "portland-or"
     ]
@@ -32,8 +32,316 @@
   "complete_marker": null,
   "certify_by": "2026-11-30",
   "official": null,
-  "contests": [],
-  "unmatched_feed": [],
-  "unmatched_guide": [],
-  "not_here": []
+  "contests": [
+    {
+      "feed_id": "300038659",
+      "feed_name": "East Multnomah Soil and Water Conservation District, Director, At-Large, Position 2",
+      "item": "emswcd-at-large-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alex Parise": "Alex Parise",
+        "Jeremy Wood": "Jeremy Wood",
+        "Daniel Newberry": "Daniel Newberry",
+        "Steph Routh": "Steph Routh",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300038660",
+      "feed_name": "East Multnomah Soil and Water Conservation District, Director, Zone 3",
+      "item": "emswcd-zone-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Silas Morgan": "Silas Morgan",
+        "Brad Hunter": "Brad Hunter",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "rcv:Multnomah_County_Chair",
+      "feed_name": "Multnomah County Chair",
+      "item": "multnomah-chair",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "Julia Brim-Edwards": "Julia Brim-Edwards",
+        "Shannon Singleton": "Shannon Singleton",
+        "Sharon Meieran": "Sharon Meieran",
+        "Uncertified Write In": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "rcv:Multnomah_County_Commissioner,_District_2",
+      "feed_name": "Multnomah County Commissioner, District 2",
+      "item": "multnomah-commissioner-2",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "Bri Williams": "Bri Williams",
+        "Bruce Broussard": "Bruce Broussard",
+        "Herman Greene": "Herman Greene",
+        "Nabil Zaghloul": "Nabil Zaghloul",
+        "Nathan Ong Norris": "Nathan Ong Norris",
+        "Serena Cruz": "Serena Cruz",
+        "Tony Robertson": "Tony Robertson",
+        "Uncertified Write In": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300001788",
+      "feed_name": "26-267 City of Portland: Amends Charter: Portland residents decide 2% of city's annual discretionary budget.",
+      "item": "portland-26-267",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "Clackamas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "rcv:City_of_Portland_Auditor",
+      "feed_name": "City of Portland Auditor",
+      "item": "portland-auditor",
+      "kind": "rcv",
+      "seats": 1,
+      "choices": {
+        "Simone Rede": "Simone Rede",
+        "Uncertified Write In": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "Clackamas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "rcv:City_of_Portland_Councilor_-_District_3",
+      "feed_name": "City of Portland Councilor - District 3",
+      "item": "portland-council-3",
+      "kind": "rcv",
+      "seats": 3,
+      "choices": {
+        "Ali Beaudoin": "Ali Beaudoin",
+        "Angelita Morillo": "Angelita Morillo",
+        "Cristal Otero": "Cristal Otero",
+        "Darren McCormick": "Darren McCormick",
+        "Esther León": "Esther León",
+        "Guy Frankenstein": "Guy Frankenstein",
+        "Heart Free Pham": "Heart Free Pham",
+        "Joel Corcoran": "Joel Corcoran",
+        "John Sweeney": "John Sweeney",
+        "Keir Legree": "Keir Legree",
+        "Kellie Torres": "Kellie Torres",
+        "Kenneth (Kent) R Landgraver III": "Kenneth (Kent) R Landgraver III",
+        "Kimberly Tucker": "Kimberly Tucker",
+        "Larry Kelly": "Larry Kelly",
+        "Martin Ward": "Martin Ward",
+        "Matthias Hallett": "Matthias Hallett",
+        "Patrick Hilton": "Patrick Hilton",
+        "Steve Novick": "Steve Novick",
+        "Terry Parker": "Terry Parker",
+        "Tiffany Koyama Lane": "Tiffany Koyama Lane",
+        "Tom Sollitt": "Tom Sollitt",
+        "Uncertified Write In": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "Clackamas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "rcv:City_of_Portland_Councilor_-_District_4",
+      "feed_name": "City of Portland Councilor - District 4",
+      "item": "portland-council-4",
+      "kind": "rcv",
+      "seats": 3,
+      "choices": {
+        "Eli Arnold": "Eli Arnold",
+        "Eric Zimmerman": "Eric Zimmerman",
+        "Jamey Evenstar": "Jamey Evenstar",
+        "Jayne Cronlund": "Jayne Cronlund",
+        "Jeremy Beausoleil Smith": "Jeremy Beausoleil Smith",
+        "John J Goldsmith": "John J Goldsmith",
+        "John McDonald": "John McDonald",
+        "Josh Leake": "Josh Leake",
+        "Matt Schulte": "Matt Schulte",
+        "Mitch Green": "Mitch Green",
+        "Olivia Clark": "Olivia Clark",
+        "Timothy (TJ) Anderson": "Timothy (TJ) Anderson",
+        "Uncertified Write In": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "Clackamas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300001793",
+      "feed_name": "26-268 Reynolds School District 7: Bonds to Increase Safety, Security; Repair, Construct Schools; Increase Accessibility",
+      "item": "reynolds-sd-26-268",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "300038673",
+      "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 2",
+      "item": "rockwood-pud-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Colby E Riley": "Colby E Riley",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300038674",
+      "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 5",
+      "item": "rockwood-pud-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Christine E Brown": "Christine E Brown",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300038661",
+      "feed_name": "West Multnomah Soil and Water Conservation District, Director, At-Large, Position 2",
+      "item": "wmswcd-at-large-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ronda Zakocs": "Ronda Zakocs",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300038662",
+      "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 4",
+      "item": "wmswcd-zone-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Elizabeth Offensend": "Elizabeth Offensend",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "300038663",
+      "feed_name": "West Multnomah Soil and Water Conservation District, Director, Zone 5",
+      "item": "wmswcd-zone-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Terri Preeg Riggsby": "Terri Preeg Riggsby",
+        "Joy VanDervort Fields": "Joy VanDervort Fields",
+        "Shari Freshman": "Shari Freshman",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Multnomah",
+        "Washington",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "300038675",
+      "feed_name": "Rockwood Water People's Utility District, Director, Sub-District 4 (2 Year Unexpired Term)",
+      "why": "looks like guide item rockwood-pud-4 (same candidate, Nicholas Engels), but the feed race is a 2-year unexpired term and the guide item doesn't say so; a full term and an unexpired term are different races."
+    }
+  ],
+  "unmatched_guide": [
+    "multnomah-auditor",
+    "multnomah-sheriff",
+    "rockwood-pud-4"
+  ],
+  "not_here": [
+    "multnomah-circuit-judge-14",
+    "multnomah-circuit-judge-2",
+    "multnomah-circuit-judge-6",
+    "or-hd-28",
+    "or-hd-33",
+    "or-hd-34",
+    "or-hd-38",
+    "or-hd-41",
+    "or-hd-42",
+    "or-hd-43",
+    "or-hd-44",
+    "or-hd-45",
+    "or-hd-46",
+    "or-hd-47",
+    "or-hd-48",
+    "or-hd-49",
+    "or-hd-50",
+    "or-sd-17",
+    "or-sd-19",
+    "or-sd-24",
+    "or-us-house-1",
+    "or-us-house-3",
+    "or-us-house-5"
+  ]
 }

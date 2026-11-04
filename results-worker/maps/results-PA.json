@@ -10,8 +10,8 @@
     "feed_name": "2026 General Election"
   },
   "guide": {
-    "fingerprint": null,
-    "made_from": null,
+    "fingerprint": "f906b9590726f191",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:35.327Z",
     "locals": true,
     "places": [
       "state-PA",
@@ -39,8 +39,759 @@
   "complete_marker": null,
   "certify_by": "2026-11-23",
   "official": null,
-  "contests": [],
+  "contests": [
+    {
+      "feed_id": "3:1",
+      "feed_name": "Governor",
+      "item": "pa-governor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOSH SHAPIRO": "Josh Shapiro / Austin Davis",
+        "STACY GARRITY": "Stacy Garrity / Jason Richey",
+        "KEN KRAWCHUK": "Ken Krawchuk / John Thomas"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:82",
+      "feed_name": "Representative in the General Assembly, 10th Legislative District",
+      "item": "pa-hd-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AMEN BROWN": "Amen Brown"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:242",
+      "feed_name": "Representative in the General Assembly, 170th Legislative District",
+      "item": "pa-hd-170",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ROB GURTCHEFF": "Rob Gurtcheff",
+        "MARTINA WHITE": "Martina White"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:244",
+      "feed_name": "Representative in the General Assembly, 172nd Legislative District",
+      "item": "pa-hd-172",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SEAN M DOUGHERTY": "Sean M. Dougherty"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:245",
+      "feed_name": "Representative in the General Assembly, 173rd Legislative District",
+      "item": "pa-hd-173",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PAT GALLAGHER": "Pat Gallagher",
+        "BILL GRIFFIN": "Bill Griffin"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:246",
+      "feed_name": "Representative in the General Assembly, 174th Legislative District",
+      "item": "pa-hd-174",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ED NEILSON": "Ed Neilson"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:247",
+      "feed_name": "Representative in the General Assembly, 175th Legislative District",
+      "item": "pa-hd-175",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARYLOUISE ISAACSON": "MaryLouise Isaacson"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:249",
+      "feed_name": "Representative in the General Assembly, 177th Legislative District",
+      "item": "pa-hd-177",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOE HOHENSTEIN": "Joe Hohenstein",
+        "ROBYN BIRD": "Robyn Bird"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:251",
+      "feed_name": "Representative in the General Assembly, 179th Legislative District",
+      "item": "pa-hd-179",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JASON T DAWKINS": "Jason T. Dawkins"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:252",
+      "feed_name": "Representative in the General Assembly, 180th Legislative District",
+      "item": "pa-hd-180",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOSE A GIRAL": "Jose A. Giral"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:253",
+      "feed_name": "Representative in the General Assembly, 181st Legislative District",
+      "item": "pa-hd-181",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MALCOLM KENYATTA": "Malcolm Kenyatta"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:254",
+      "feed_name": "Representative in the General Assembly, 182nd Legislative District",
+      "item": "pa-hd-182",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BEN WAXMAN": "Ben Waxman"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:256",
+      "feed_name": "Representative in the General Assembly, 184th Legislative District",
+      "item": "pa-hd-184",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ELIZABETH FIEDLER": "Elizabeth Fiedler"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:257",
+      "feed_name": "Representative in the General Assembly, 185th Legislative District",
+      "item": "pa-hd-185",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REGINA YOUNG": "Regina Young"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:258",
+      "feed_name": "Representative in the General Assembly, 186th Legislative District",
+      "item": "pa-hd-186",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JORDAN A HARRIS": "Jordan A. Harris"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:260",
+      "feed_name": "Representative in the General Assembly, 188th Legislative District",
+      "item": "pa-hd-188",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RICK KRAJEWSKI": "Rick Krajewski"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:91",
+      "feed_name": "Representative in the General Assembly, 19th Legislative District",
+      "item": "pa-hd-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "AERION ANDREW ABNEY": "Aerion Andrew Abney"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:262",
+      "feed_name": "Representative in the General Assembly, 190th Legislative District",
+      "item": "pa-hd-190",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RONI GREEN": "Roni Green"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:263",
+      "feed_name": "Representative in the General Assembly, 191st Legislative District",
+      "item": "pa-hd-191",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOANNA E MCCLINTON": "Joanna E. McClinton"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "Delaware"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:264",
+      "feed_name": "Representative in the General Assembly, 192nd Legislative District",
+      "item": "pa-hd-192",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MORGAN CEPHAS": "Morgan Cephas",
+        "TIFFANY VANN BROWN": "Tiffany Vann Brown"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:266",
+      "feed_name": "Representative in the General Assembly, 194th Legislative District",
+      "item": "pa-hd-194",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TARIK KHAN": "Tarik Khan"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "other counties"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:267",
+      "feed_name": "Representative in the General Assembly, 195th Legislative District",
+      "item": "pa-hd-195",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SIERRA MCNEIL": "Sierra McNeil"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:269",
+      "feed_name": "Representative in the General Assembly, 197th Legislative District",
+      "item": "pa-hd-197",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DANILO BURGOS": "Danilo Burgos"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:270",
+      "feed_name": "Representative in the General Assembly, 198th Legislative District",
+      "item": "pa-hd-198",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DARISHA K PARKER": "Darisha K. Parker"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:92",
+      "feed_name": "Representative in the General Assembly, 20th Legislative District",
+      "item": "pa-hd-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "EMILY KINKEAD": "Emily Kinkead",
+        "JOSEPH AGUGLIA": "Joseph Aguglia"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:272",
+      "feed_name": "Representative in the General Assembly, 200th Legislative District",
+      "item": "pa-hd-200",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS JOHNSON": "Chris Johnson"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:273",
+      "feed_name": "Representative in the General Assembly, 201st Legislative District",
+      "item": "pa-hd-201",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANDRE D CARROLL": "Andre D. Carroll"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:274",
+      "feed_name": "Representative in the General Assembly, 202nd Legislative District",
+      "item": "pa-hd-202",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JARED SOLOMON": "Jared Solomon"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:275",
+      "feed_name": "Representative in the General Assembly, 203rd Legislative District",
+      "item": "pa-hd-203",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANTHONY BELLMON": "Anthony Bellmon"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:93",
+      "feed_name": "Representative in the General Assembly, 21st Legislative District",
+      "item": "pa-hd-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LINDSAY POWELL": "Lindsay Powell"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:95",
+      "feed_name": "Representative in the General Assembly, 23rd Legislative District",
+      "item": "pa-hd-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAN FRANKEL": "Dan Frankel"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:96",
+      "feed_name": "Representative in the General Assembly, 24th Legislative District",
+      "item": "pa-hd-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LA'TASHA D MAYES": "La'Tasha D. Mayes"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:99",
+      "feed_name": "Representative in the General Assembly, 27th Legislative District",
+      "item": "pa-hd-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAN DEASY": "Dan Deasy"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:106",
+      "feed_name": "Representative in the General Assembly, 34th Legislative District",
+      "item": "pa-hd-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ABIGAIL SALISBURY": "Abigail Salisbury"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:108",
+      "feed_name": "Representative in the General Assembly, 36th Legislative District",
+      "item": "pa-hd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JESSICA BENHAM": "Jessica Benham",
+        "TIMOTHY MCCUNE": "Timothy McCune"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "13:110",
+      "feed_name": "Representative in the General Assembly, 38th Legislative District",
+      "item": "pa-hd-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JOHN INGLIS": "John Inglis",
+        "STONE SOBIERALSKI": "Stone Sobieralski"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "12:24",
+      "feed_name": "Senator in the General Assembly, 2nd Senatorial District",
+      "item": "pa-sd-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRISTINE M TARTAGLIONE": "Christine M. Tartaglione"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "12:60",
+      "feed_name": "Senator in the General Assembly, 38th Senatorial District",
+      "item": "pa-sd-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LINDSEY WILLIAMS": "Lindsey Williams",
+        "THOMAS WEST": "Thomas West"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "12:26",
+      "feed_name": "Senator in the General Assembly, 4th Senatorial District",
+      "item": "pa-sd-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ART HAYWOOD": "Art Haywood",
+        "TODD JOHNSON": "Todd Johnson"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "Montgomery"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "12:64",
+      "feed_name": "Senator in the General Assembly, 42nd Senatorial District",
+      "item": "pa-sd-42",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "WAYNE D FONTANA": "Wayne D. Fontana"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "12:30",
+      "feed_name": "Senator in the General Assembly, 8th Senatorial District",
+      "item": "pa-sd-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANTHONY HARDY WILLIAMS": "Anthony Hardy Williams"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia",
+        "Delaware"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "11:13",
+      "feed_name": "Representative in Congress, 12th Congressional District",
+      "item": "pa-us-house-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "SUMMER LEE": "Summer Lee",
+        "JAMES HAYES": "James Hayes"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Allegheny",
+        "Westmoreland"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "11:3",
+      "feed_name": "Representative in Congress, 2nd Congressional District",
+      "item": "pa-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRENDAN F BOYLE": "Brendan F. Boyle",
+        "JESSICA ARRIAGA": "Jessica Arriaga"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "11:4",
+      "feed_name": "Representative in Congress, 3rd Congressional District",
+      "item": "pa-us-house-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "CHRIS RABB": "Chris Rabb",
+        "DENNIS MAHONEY": "Dennis Mahoney"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Philadelphia"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "11:6",
+      "feed_name": "Representative in Congress, 5th Congressional District",
+      "item": "pa-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARY GAY SCANLON": "Mary Gay Scanlon",
+        "NICK MANGANARO": "Nick Manganaro"
+      },
+      "reaches": [
+        "Pennsylvania",
+        "Delaware",
+        "Philadelphia",
+        "Chester",
+        "Montgomery"
+      ],
+      "item_url": null,
+      "whole": true
+    }
+  ],
   "unmatched_feed": [],
   "unmatched_guide": [],
-  "not_here": []
+  "not_here": [
+    "allegheny-charter-7c",
+    "philadelphia-question-1",
+    "philadelphia-question-2"
+  ]
 }

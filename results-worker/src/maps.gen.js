@@ -2132,6 +2132,543 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "boulder-county-co",
+    "state": "CO",
+    "name": "Boulder County Elections",
+    "county": "Boulder",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "2026 General Election",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "1906c441a543a81d",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:39.013Z",
+      "places": [
+        "boulder-co"
+      ]
+    },
+    "feed": {
+      "adapter": "boulder",
+      "base": "https://electionresults.bouldercounty.gov",
+      "page": "https://electionresults.bouldercounty.gov/",
+      "results_url": "https://electionresults.bouldercounty.gov/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:41 PM CT (capture round 1) and 10:23 PM CT (builder). The page is a static copy of election.boco.solutions/ElectionResults2026G/, which also answered 200.",
+      "election_id_from": "The page's own heading, \"2026 General Election\", \"November 3, 2026\", \"Unofficial Results\". The page has no election id.",
+      "tz": "America/Denver"
+    },
+    "polls_close": "2026-11-04T02:00:00Z",
+    "count_closes": "2026-11-13T06:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-24",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "59",
+        "feed_name": "City of Boulder Ballot Issue 2J",
+        "item": "boulder-2j",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "60",
+        "feed_name": "City of Boulder Ballot Issue 2K",
+        "item": "boulder-2k",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "61",
+        "feed_name": "City of Boulder Ballot Question 2L",
+        "item": "boulder-2l",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For the Measure": "yes",
+          "Against the Measure": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "62",
+        "feed_name": "City of Boulder Ballot Question 2M",
+        "item": "boulder-2m",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "For the Measure": "yes",
+          "Against the Measure": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "24",
+        "feed_name": "City of Boulder Council Candidates",
+        "item": "boulder-council",
+        "kind": "multi",
+        "seats": 5,
+        "choices": {
+          "Lee Gilbert": "Lee Gilbert",
+          "Sam Fuqua": "Sam Fuqua",
+          "Ryan Schuchard": "Ryan Schuchard",
+          "Jamillah Richmond": "Jamillah Richmond",
+          "Benita Duran": "Benita Duran",
+          "Tara Winer": "Tara Winer",
+          "Rachel Rose Isaacson": "Rachel Rose Isaacson",
+          "Dave Martus": "Dave Martus",
+          "Scott Rendleman": "Scott Rendleman",
+          "Jill Adler Grano": "Jill Adler Grano",
+          "Ryan Jamieson": "Ryan Jamieson",
+          "Lynn Segal": "Lynn Segal",
+          "Tina Marquis": "Tina Marquis"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "56",
+        "feed_name": "Boulder County Ballot Issue 1A",
+        "item": "boulder-county-1a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "57",
+        "feed_name": "Boulder County Ballot Question 200",
+        "item": "boulder-county-200",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "19",
+        "feed_name": "Boulder County Assessor",
+        "item": "boulder-county-assessor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cynthia Braddock - Democratic": "Cynthia Braddock"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "17",
+        "feed_name": "Boulder County Clerk and Recorder",
+        "item": "boulder-county-clerk",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Molly Fitzpatrick - Democratic": "Molly Fitzpatrick"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "16",
+        "feed_name": "Boulder County Commissioner - District 3",
+        "item": "boulder-county-commissioner-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ashley Stolzmann - Democratic": "Ashley Stolzmann"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "22",
+        "feed_name": "Boulder County Coroner",
+        "item": "boulder-county-coroner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jeff Martin - Democratic": "Jeff Martin"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "20",
+        "feed_name": "Boulder County Sheriff",
+        "item": "boulder-county-sheriff",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Curtis Johnson - Democratic": "Curtis Johnson"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "21",
+        "feed_name": "Boulder County Surveyor",
+        "item": "boulder-county-surveyor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kayce D. W. Keane - Democratic": "Kayce D. W. Keane"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "18",
+        "feed_name": "Boulder County Treasurer",
+        "item": "boulder-county-treasurer",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rachel Friend - Democratic": "Rachel Friend"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "7",
+        "feed_name": "Regent of the University of Colorado - Congressional District 2",
+        "item": "co-cu-regent-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Marty Neilson - Republican": "Marty Neilson",
+          "Edie Hooton - Democratic": "Edie Hooton",
+          "Richard Friend - Libertarian": "Richard Friend"
+        },
+        "reaches": [
+          "Boulder",
+          "Larimer",
+          "Broomfield",
+          "Clear Creek",
+          "Gilpin",
+          "Grand",
+          "Summit",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "89",
+        "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+        "item": "co-frpr-7a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes/For": "yes",
+          "No/Against": "no"
+        },
+        "reaches": [
+          "Denver",
+          "Boulder",
+          "Adams",
+          "Arapahoe",
+          "Jefferson",
+          "Broomfield",
+          "Douglas",
+          "Larimer",
+          "Weld",
+          "El Paso",
+          "Pueblo",
+          "other counties"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority of voters in the rail district"
+      },
+      {
+        "feed_id": "10",
+        "feed_name": "State Representative - District 10",
+        "item": "co-hd-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Junie Joseph - Democratic": "Junie Joseph"
+        },
+        "reaches": [
+          "Boulder",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "12",
+        "feed_name": "State Representative - District 12",
+        "item": "co-hd-12",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ryan Rhatigan - Republican": "Ryan Rhatigan",
+          "Kyle Brown - Democratic": "Kyle Brown"
+        },
+        "reaches": [
+          "Boulder",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "14",
+        "feed_name": "State Representative - District 49",
+        "item": "co-hd-49",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michael Sheperek - Republican": "Michael Sheperek",
+          "Lesley Smith - Democratic": "Lesley Smith"
+        },
+        "reaches": [
+          "Boulder",
+          "Larimer",
+          "Clear Creek",
+          "Gilpin",
+          "Grand",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "39",
+        "feed_name": "Boulder County Court Judge - Brodsky",
+        "item": "co-retention-brodsky",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "40",
+        "feed_name": "Boulder County Court Judge - Haenselman",
+        "item": "co-retention-haenselman",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "36",
+        "feed_name": "District Court Judge - 20th Judicial District - Kotlarczyk",
+        "item": "co-retention-kotlarczyk",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "37",
+        "feed_name": "District Court Judge - 20th Judicial District - Larson",
+        "item": "co-retention-larson-chris",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "41",
+        "feed_name": "Boulder County Court Judge - Malkinson",
+        "item": "co-retention-malkinson",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "38",
+        "feed_name": "District Court Judge - 20th Judicial District - Salomone",
+        "item": "co-retention-salomone",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Boulder"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "15",
+        "feed_name": "Regional Transportation District Director - District O",
+        "item": "co-rtd-o",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jack Rosenthal": "Jack Rosenthal",
+          "Audrey DeBarros": "Audrey DeBarros"
+        },
+        "reaches": [
+          "Boulder",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "8",
+        "feed_name": "State Senator - District 15",
+        "item": "co-sd-15",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rob Woodward - Republican": "Rob Woodward",
+          "Janice Marchman - Democratic": "Janice Marchman"
+        },
+        "reaches": [
+          "Boulder",
+          "Larimer",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "9",
+        "feed_name": "State Senator - District 17",
+        "item": "co-sd-17",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Katie Wallace - Democratic": "Katie Wallace",
+          "Pat Miller - Republican": "Pat Miller"
+        },
+        "reaches": [
+          "Boulder",
+          "Weld",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "2",
+        "feed_name": "Representative to the 120th United States Congress - District 2",
+        "item": "co-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Neguse - Democratic": "Joe Neguse",
+          "Kelley Anne Dennison - Republican": "Kelley Anne Dennison",
+          "Gaylon Kent - Libertarian": "Gaylon Kent"
+        },
+        "reaches": [
+          "Boulder",
+          "Larimer",
+          "Broomfield",
+          "Clear Creek",
+          "Gilpin",
+          "Grand",
+          "Summit",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "23",
+        "feed_name": "City of Boulder Mayoral Candidates",
+        "why": "looks like boulder-mayor, but the page has no vote rows for it, only a link to a separate ranked-choice results page (Home/RcvContest/23)"
+      },
+      {
+        "feed_id": "58",
+        "feed_name": "Boulder County Ballot Question 201",
+        "why": "is boulder-county-201, but its two choices are options (five district-elected commissioners vs three plus two at-large), not yes/no, and the map format pairs a measure only by yes and no"
+      }
+    ],
+    "unmatched_guide": [
+      "boulder-county-201",
+      "boulder-mayor"
+    ],
+    "not_here": []
+  },
+  {
     "id": "dallas-county-tx",
     "state": "TX",
     "name": "Dallas County",
@@ -3089,6 +3626,736 @@ export const MAPS = [
           "other counties"
         ],
         "item_url": null
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": []
+  },
+  {
+    "id": "denver-co",
+    "state": "CO",
+    "name": "Denver Elections Division",
+    "county": "Denver",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "20261103",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "13d3a490ff83a899",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:38.439Z",
+      "places": [
+        "denver-co"
+      ]
+    },
+    "feed": {
+      "adapter": "denver",
+      "base": "https://denvergov.org/electionresults",
+      "results_url": "https://denvergov.org/electionresults",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:41 PM CT (capture round 1) and 10:22 PM CT (builder), JSON on both endpoints.",
+      "election_id_from": "Denver's own header (Home/GetElectionHeaderinfo): ElectionId 20261103, \"2026 General Election\", \"November 03 2026\"; its election list agrees.",
+      "tz": "America/Denver"
+    },
+    "polls_close": "2026-11-04T02:00:00Z",
+    "count_closes": "2026-11-13T06:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-24",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "9",
+        "feed_name": "Regent of the University of Colorado - Congressional District 6",
+        "item": "co-cu-regent-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Veanessa Burbage": "Veanessa Burbage",
+          "Ilana Spiegel": "Ilana Spiegel",
+          "Joe Johnson": "Joe Johnson"
+        },
+        "reaches": [
+          "Denver",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "68",
+        "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+        "item": "co-frpr-7a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver",
+          "Boulder",
+          "Adams",
+          "Arapahoe",
+          "Jefferson",
+          "Broomfield",
+          "Douglas",
+          "Larimer",
+          "Weld",
+          "El Paso",
+          "Pueblo",
+          "other counties"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority of voters in the rail district"
+      },
+      {
+        "feed_id": "13",
+        "feed_name": "State Representative - District 1",
+        "item": "co-hd-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Javier Mabrey": "Javier Mabrey",
+          "Joseph Montoya": "Joseph Montoya"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "14",
+        "feed_name": "State Representative - District 2",
+        "item": "co-hd-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Scott Baldermann": "Scott Baldermann",
+          "Carey Marin": "Carey Marin"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "15",
+        "feed_name": "State Representative - District 3",
+        "item": "co-hd-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Gena Ozols": "Gena Ozols",
+          "Rebecca Winegar": "Rebecca Winegar"
+        },
+        "reaches": [
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "16",
+        "feed_name": "State Representative - District 4",
+        "item": "co-hd-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ellwood Ervin": "Ellwood Ervin",
+          "Cecelia Espenoza": "Cecelia Espenoza",
+          "Bill Hare": "Bill Hare"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "17",
+        "feed_name": "State Representative - District 5",
+        "item": "co-hd-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Justine Sandoval": "Justine Sandoval",
+          "Johnnie W. Johnson": "Johnnie W. Johnson"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "18",
+        "feed_name": "State Representative - District 6",
+        "item": "co-hd-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Iris Halpern": "Iris Halpern",
+          "Kathleen Angel": "Kathleen Angel"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "19",
+        "feed_name": "State Representative - District 7",
+        "item": "co-hd-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jennifer Bacon": "Jennifer Bacon",
+          "Jeff Wilson": "Jeff Wilson"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "20",
+        "feed_name": "State Representative - District 8",
+        "item": "co-hd-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Carolyn Barnes": "Carolyn Barnes",
+          "Lindsay Gilchrist": "Lindsay Gilchrist",
+          "Jesse Lashawn Parris": "Jesse Lashawn Parris"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "21",
+        "feed_name": "State Representative - District 9",
+        "item": "co-hd-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tom Cowhick": "Tom Cowhick",
+          "Monica VanBuskirk": "Monica VanBuskirk"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "32",
+        "feed_name": "District Court Judge - 2nd Judicial District Angel",
+        "item": "co-retention-angel",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "33",
+        "feed_name": "District Court Judge - 2nd Judicial District Baumann",
+        "item": "co-retention-baumann",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "41",
+        "feed_name": "County Court Judge - Denver Eddy",
+        "item": "co-retention-eddy",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "34",
+        "feed_name": "District Court Judge - 2nd Judicial District Elliff",
+        "item": "co-retention-elliff",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "42",
+        "feed_name": "County Court Judge - Denver Fay",
+        "item": "co-retention-fay",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "38",
+        "feed_name": "District Court Judge - 2nd Judicial District (Juvenile) Gomez",
+        "item": "co-retention-gomez",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "40",
+        "feed_name": "District Court Judge - 2nd Judicial District (Probate) Leith",
+        "item": "co-retention-leith",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "43",
+        "feed_name": "County Court Judge - Denver Lombardi",
+        "item": "co-retention-lombardi",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "35",
+        "feed_name": "District Court Judge - 2nd Judicial District Luxen",
+        "item": "co-retention-luxen",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "44",
+        "feed_name": "County Court Judge - Denver Malone",
+        "item": "co-retention-malone",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "45",
+        "feed_name": "County Court Judge - Denver Martinez-Thomas",
+        "item": "co-retention-martinez-thomas",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "39",
+        "feed_name": "District Court Judge - 2nd Judicial District (Juvenile) McCarthy",
+        "item": "co-retention-mccarthy",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "36",
+        "feed_name": "District Court Judge - 2nd Judicial District Olafson",
+        "item": "co-retention-olafson",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "46",
+        "feed_name": "County Court Judge - Denver Shamsid-Deen",
+        "item": "co-retention-shamsid-deen",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "47",
+        "feed_name": "County Court Judge - Denver Smith",
+        "item": "co-retention-smith",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "37",
+        "feed_name": "District Court Judge - 2nd Judicial District Wallace",
+        "item": "co-retention-wallace",
+        "kind": "retention",
+        "seats": 1,
+        "choices": {
+          "YES": "yes",
+          "NO": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "22",
+        "feed_name": "Regional Transportation District Director - District B",
+        "item": "co-rtd-b",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John Glenn": "John Glenn",
+          "Bianka Emerson": "Bianka Emerson"
+        },
+        "reaches": [
+          "Denver",
+          "Adams",
+          "Arapahoe",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "23",
+        "feed_name": "Regional Transportation District Director - District C",
+        "item": "co-rtd-c",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Meyer": "Joe Meyer"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "8",
+        "feed_name": "State Board of Education Member - Congressional District 1",
+        "item": "co-sboe-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lisa Escárcega": "Lisa Escárcega",
+          "Frederick Espinoza": "Frederick Espinoza",
+          "Clayton Casciato": "Clayton Casciato"
+        },
+        "reaches": [
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "10",
+        "feed_name": "State Senator - District 31",
+        "item": "co-sd-31",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Matt Ball": "Matt Ball"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "11",
+        "feed_name": "State Senator - District 32",
+        "item": "co-sd-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Emily Sirota": "Emily Sirota",
+          "Sydnnia Wulff": "Sydnnia Wulff"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "12",
+        "feed_name": "State Senator - District 34",
+        "item": "co-sd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chela Garcia Irlando": "Chela Garcia Irlando",
+          "Jennifer Qualteri": "Jennifer Qualteri",
+          "Jacob Luria": "Jacob Luria"
+        },
+        "reaches": [
+          "Denver",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "2",
+        "feed_name": "Representative to the 120th United States Congress - District 1",
+        "item": "co-us-house-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Melat Kiros": "Melat Kiros",
+          "Christy Peterson": "Christy Peterson",
+          "Critter Milton": "Critter Milton",
+          "Chad Humphrey": "Chad Humphrey",
+          "Shimon Blau": "Shimon Blau",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Denver",
+          "Arapahoe"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "3",
+        "feed_name": "Representative to the 120th United States Congress - District 6",
+        "item": "co-us-house-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jason Crow": "Jason Crow",
+          "Jason Clark": "Jason Clark",
+          "Patty McMahon": "Patty McMahon",
+          "Meredith Ryan": "Meredith Ryan",
+          "Samir Witta": "Samir Witta"
+        },
+        "reaches": [
+          "Denver",
+          "Arapahoe",
+          "Adams",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "62",
+        "feed_name": "Referred Question 2H",
+        "item": "denver-2h",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "63",
+        "feed_name": "Referred Question 2I",
+        "item": "denver-2i",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "64",
+        "feed_name": "Referred Question 2J",
+        "item": "denver-2j",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "65",
+        "feed_name": "Referred Question 2K",
+        "item": "denver-2k",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "66",
+        "feed_name": "Initiated Ordinance 311",
+        "item": "denver-311",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "24",
+        "feed_name": "Councilmember At-Large - Seat B",
+        "item": "denver-council-at-large-b",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Alfredo Reyes": "Alfredo Reyes",
+          "Whitney Traylor": "Whitney Traylor",
+          "Jeff Walker": "Jeff Walker",
+          "Julissa Soto": "Julissa Soto",
+          "Gabriel Konkle": "Gabriel Konkle",
+          "Cynthia Diaz": "Cynthia Diaz",
+          "Melissa Adriana Mejía": "Melissa Adriana Mejía",
+          "Jake Browne": "Jake Browne",
+          "Monica Martinez": "Monica Martinez",
+          "Raymon Anthony Doane": "Raymon Anthony Doane",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "67",
+        "feed_name": "Denver Public Schools Ballot Issue 4A",
+        "item": "denver-dps-4a",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "YES/FOR": "yes",
+          "NO/AGAINST": "no"
+        },
+        "reaches": [
+          "Denver"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
       }
     ],
     "unmatched_feed": [],
@@ -5625,6 +6892,535 @@ export const MAPS = [
     "not_here": []
   },
   {
+    "id": "philadelphia-pa",
+    "state": "PA",
+    "name": "Philadelphia City Commissioners",
+    "county": "Philadelphia",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "2026 General Election Results",
+      "feed_name": "2026 General Election Results"
+    },
+    "guide": {
+      "fingerprint": "1b15975222eb2edb",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:37.338Z",
+      "places": [
+        "philadelphia-pa"
+      ]
+    },
+    "feed": {
+      "adapter": "philadelphia",
+      "base": "https://philadelphiaresults.azurewebsites.us",
+      "results_url": "https://philadelphiaresults.azurewebsites.us/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:46 PM CT (capture round 1) and 10:21 PM CT (builder; the statewide tab timed out once, then answered).",
+      "election_id_from": "The page's own heading, \"Unofficial 2026 General Election Results\" over \"November 3, 2026\" (vote.phila.gov/results/ frames this host). The page has no election id.",
+      "tabs": [
+        "QUE",
+        "CON",
+        "STS",
+        "STR"
+      ],
+      "tabs_note": "Statewide (STW) is left out: the governor's race comes only from the state source. State House (STR) is read at its first page; its second page is reached only by a form post.",
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-11T04:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-23",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "401352",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 10TH DISTRICT",
+        "item": "pa-hd-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMEN BROWN DEM": "Amen Brown",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401364",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 170TH DISTRICT",
+        "item": "pa-hd-170",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARTINA WHITE REP": "Martina White",
+          "ROB GURTCHEFF DEM": "Rob Gurtcheff",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401353",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 172ND DISTRICT",
+        "item": "pa-hd-172",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SEAN M DOUGHERTY DEM": "Sean M. Dougherty",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401365",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 173RD DISTRICT",
+        "item": "pa-hd-173",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAT GALLAGHER DEM": "Pat Gallagher",
+          "BILL GRIFFIN REP": "Bill Griffin",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401345",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 174TH DISTRICT",
+        "item": "pa-hd-174",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ED NEILSON DEM": "Ed Neilson",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401341",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 175TH DISTRICT",
+        "item": "pa-hd-175",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARYLOUISE ISAACSON DEM": "MaryLouise Isaacson",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401342",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 177TH DISTRICT",
+        "item": "pa-hd-177",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOE HOHENSTEIN DEM": "Joe Hohenstein",
+          "ROBYN BIRD REP": "Robyn Bird",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401368",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 179TH DISTRICT",
+        "item": "pa-hd-179",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JASON T DAWKINS DEM": "Jason T. Dawkins",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401358",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 180TH DISTRICT",
+        "item": "pa-hd-180",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOSE A GIRAL DEM": "Jose A. Giral",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401359",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 181ST DISTRICT",
+        "item": "pa-hd-181",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MALCOLM KENYATTA DEM": "Malcolm Kenyatta",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401346",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 182ND DISTRICT",
+        "item": "pa-hd-182",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BEN WAXMAN DEM": "Ben Waxman",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401347",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 184TH DISTRICT",
+        "item": "pa-hd-184",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ELIZABETH FIEDLER DEM": "Elizabeth Fiedler",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401335",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 185TH DISTRICT",
+        "item": "pa-hd-185",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REGINA YOUNG DEM": "Regina Young",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401366",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 186TH DISTRICT",
+        "item": "pa-hd-186",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JORDAN A HARRIS DEM": "Jordan A. Harris",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401337",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 188TH DISTRICT",
+        "item": "pa-hd-188",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICK KRAJEWSKI DEM": "Rick Krajewski",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401348",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 190TH DISTRICT",
+        "item": "pa-hd-190",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RONI GREEN DEM": "Roni Green",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401336",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 191ST DISTRICT",
+        "item": "pa-hd-191",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOANNA E MCCLINTON DEM": "Joanna E. McClinton",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "Delaware"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401343",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 192ND DISTRICT",
+        "item": "pa-hd-192",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MORGAN CEPHAS DEM": "Morgan Cephas",
+          "TIFFANY VANN BROWN REP": "Tiffany Vann Brown",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401338",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 194TH DISTRICT",
+        "item": "pa-hd-194",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TARIK KHAN DEM": "Tarik Khan",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401349",
+        "feed_name": "REPRESENTATIVE IN THE GENERAL ASSEMBLY 195TH DISTRICT",
+        "item": "pa-hd-195",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SIERRA MCNEIL DEM": "Sierra McNeil",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401344",
+        "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 2ND DISTRICT",
+        "item": "pa-sd-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRISTINE M TARTAGLIONE DEM": "Christine M. Tartaglione",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401355",
+        "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 4TH DISTRICT",
+        "item": "pa-sd-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ART HAYWOOD DEM": "Art Haywood",
+          "TODD JOHNSON REP": "Todd Johnson",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401361",
+        "feed_name": "SENATOR IN THE GENERAL ASSEMBLY 8TH DISTRICT",
+        "item": "pa-sd-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANTHONY HARDY WILLIAMS DEM": "Anthony Hardy Williams",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "Delaware"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401363",
+        "feed_name": "REPRESENTATIVE IN CONGRESS 2ND DISTRICT",
+        "item": "pa-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRENDAN F BOYLE DEM": "Brendan F. Boyle",
+          "JESSICA ARRIAGA REP": "Jessica Arriaga",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401357",
+        "feed_name": "REPRESENTATIVE IN CONGRESS 3RD DISTRICT",
+        "item": "pa-us-house-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS RABB DEM": "Chris Rabb",
+          "DENNIS MAHONEY TIP": "Dennis Mahoney",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "reaches_unconfirmed": true
+      },
+      {
+        "feed_id": "401340",
+        "feed_name": "REPRESENTATIVE IN CONGRESS 5TH DISTRICT",
+        "item": "pa-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARY GAY SCANLON DEM": "Mary Gay Scanlon",
+          "NICK MANGANARO REP": "Nick Manganaro",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Philadelphia",
+          "Delaware",
+          "Chester",
+          "Montgomery"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "401356",
+        "feed_name": "QUESTION #1",
+        "item": "philadelphia-question-1",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      },
+      {
+        "feed_id": "401351",
+        "feed_name": "QUESTION #2",
+        "item": "philadelphia-question-2",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "pass_threshold": "simple majority"
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [
+      "pa-hd-197",
+      "pa-hd-198",
+      "pa-hd-200",
+      "pa-hd-201",
+      "pa-hd-202",
+      "pa-hd-203"
+    ],
+    "not_here": []
+  },
+  {
     "id": "results-CO-adams",
     "state": "CO",
     "name": "Adams County",
@@ -7357,6 +9153,803 @@ export const MAPS = [
       "dc-ward-8-anc"
     ],
     "not_here": []
+  },
+  {
+    "id": "results-PA",
+    "state": "PA",
+    "name": "Pennsylvania Department of State",
+    "county": "Pennsylvania",
+    "scope": "state",
+    "election": {
+      "date": "2026-11-03",
+      "feed_election_id": "117",
+      "feed_name": "2026 General Election"
+    },
+    "guide": {
+      "fingerprint": "f906b9590726f191",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:37:35.327Z",
+      "locals": true,
+      "places": [
+        "state-PA",
+        "philadelphia-pa",
+        "pittsburgh-pa"
+      ]
+    },
+    "feed": {
+      "adapter": "pa_dos",
+      "base": "https://www.electionreturns.pa.gov",
+      "results_url": "https://www.electionreturns.pa.gov/",
+      "identity": "named",
+      "identity_note": "Answered our named User-Agent with 200 on Nov 3, 8:46 PM CT (capture round 1) and 10:20 PM CT (builder); Incapsula set cookies but did not block. The bare host redirects to www, so the map names www.",
+      "election_id_from": "The state's own election list (api/Reports/GetElectionList): Electionid 117, ElectionType G, \"2026 General Election\", 11/03/2026, ElectionStatus U. Id 117 is also the May primary (type P), so the map names the type too.",
+      "election_type": "G",
+      "offices": [
+        "11",
+        "12",
+        "13"
+      ],
+      "tz": "America/New_York"
+    },
+    "polls_close": "2026-11-04T01:00:00Z",
+    "count_closes": "2026-11-11T04:59:00Z",
+    "complete_marker": null,
+    "certify_by": "2026-11-23",
+    "official": null,
+    "contests": [
+      {
+        "feed_id": "3:1",
+        "feed_name": "Governor",
+        "item": "pa-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOSH SHAPIRO": "Josh Shapiro / Austin Davis",
+          "STACY GARRITY": "Stacy Garrity / Jason Richey",
+          "KEN KRAWCHUK": "Ken Krawchuk / John Thomas"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "Allegheny",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:82",
+        "feed_name": "Representative in the General Assembly, 10th Legislative District",
+        "item": "pa-hd-10",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AMEN BROWN": "Amen Brown"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:242",
+        "feed_name": "Representative in the General Assembly, 170th Legislative District",
+        "item": "pa-hd-170",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ROB GURTCHEFF": "Rob Gurtcheff",
+          "MARTINA WHITE": "Martina White"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:244",
+        "feed_name": "Representative in the General Assembly, 172nd Legislative District",
+        "item": "pa-hd-172",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SEAN M DOUGHERTY": "Sean M. Dougherty"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:245",
+        "feed_name": "Representative in the General Assembly, 173rd Legislative District",
+        "item": "pa-hd-173",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "PAT GALLAGHER": "Pat Gallagher",
+          "BILL GRIFFIN": "Bill Griffin"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:246",
+        "feed_name": "Representative in the General Assembly, 174th Legislative District",
+        "item": "pa-hd-174",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ED NEILSON": "Ed Neilson"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:247",
+        "feed_name": "Representative in the General Assembly, 175th Legislative District",
+        "item": "pa-hd-175",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARYLOUISE ISAACSON": "MaryLouise Isaacson"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:249",
+        "feed_name": "Representative in the General Assembly, 177th Legislative District",
+        "item": "pa-hd-177",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOE HOHENSTEIN": "Joe Hohenstein",
+          "ROBYN BIRD": "Robyn Bird"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:251",
+        "feed_name": "Representative in the General Assembly, 179th Legislative District",
+        "item": "pa-hd-179",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JASON T DAWKINS": "Jason T. Dawkins"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:252",
+        "feed_name": "Representative in the General Assembly, 180th Legislative District",
+        "item": "pa-hd-180",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOSE A GIRAL": "Jose A. Giral"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:253",
+        "feed_name": "Representative in the General Assembly, 181st Legislative District",
+        "item": "pa-hd-181",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MALCOLM KENYATTA": "Malcolm Kenyatta"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:254",
+        "feed_name": "Representative in the General Assembly, 182nd Legislative District",
+        "item": "pa-hd-182",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BEN WAXMAN": "Ben Waxman"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:256",
+        "feed_name": "Representative in the General Assembly, 184th Legislative District",
+        "item": "pa-hd-184",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ELIZABETH FIEDLER": "Elizabeth Fiedler"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:257",
+        "feed_name": "Representative in the General Assembly, 185th Legislative District",
+        "item": "pa-hd-185",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "REGINA YOUNG": "Regina Young"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:258",
+        "feed_name": "Representative in the General Assembly, 186th Legislative District",
+        "item": "pa-hd-186",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JORDAN A HARRIS": "Jordan A. Harris"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:260",
+        "feed_name": "Representative in the General Assembly, 188th Legislative District",
+        "item": "pa-hd-188",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RICK KRAJEWSKI": "Rick Krajewski"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:91",
+        "feed_name": "Representative in the General Assembly, 19th Legislative District",
+        "item": "pa-hd-19",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "AERION ANDREW ABNEY": "Aerion Andrew Abney"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:262",
+        "feed_name": "Representative in the General Assembly, 190th Legislative District",
+        "item": "pa-hd-190",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "RONI GREEN": "Roni Green"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:263",
+        "feed_name": "Representative in the General Assembly, 191st Legislative District",
+        "item": "pa-hd-191",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOANNA E MCCLINTON": "Joanna E. McClinton"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "Delaware"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:264",
+        "feed_name": "Representative in the General Assembly, 192nd Legislative District",
+        "item": "pa-hd-192",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MORGAN CEPHAS": "Morgan Cephas",
+          "TIFFANY VANN BROWN": "Tiffany Vann Brown"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:266",
+        "feed_name": "Representative in the General Assembly, 194th Legislative District",
+        "item": "pa-hd-194",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "TARIK KHAN": "Tarik Khan"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:267",
+        "feed_name": "Representative in the General Assembly, 195th Legislative District",
+        "item": "pa-hd-195",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SIERRA MCNEIL": "Sierra McNeil"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:269",
+        "feed_name": "Representative in the General Assembly, 197th Legislative District",
+        "item": "pa-hd-197",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DANILO BURGOS": "Danilo Burgos"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:270",
+        "feed_name": "Representative in the General Assembly, 198th Legislative District",
+        "item": "pa-hd-198",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DARISHA K PARKER": "Darisha K. Parker"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:92",
+        "feed_name": "Representative in the General Assembly, 20th Legislative District",
+        "item": "pa-hd-20",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "EMILY KINKEAD": "Emily Kinkead",
+          "JOSEPH AGUGLIA": "Joseph Aguglia"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:272",
+        "feed_name": "Representative in the General Assembly, 200th Legislative District",
+        "item": "pa-hd-200",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS JOHNSON": "Chris Johnson"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:273",
+        "feed_name": "Representative in the General Assembly, 201st Legislative District",
+        "item": "pa-hd-201",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANDRE D CARROLL": "Andre D. Carroll"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:274",
+        "feed_name": "Representative in the General Assembly, 202nd Legislative District",
+        "item": "pa-hd-202",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JARED SOLOMON": "Jared Solomon"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:275",
+        "feed_name": "Representative in the General Assembly, 203rd Legislative District",
+        "item": "pa-hd-203",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANTHONY BELLMON": "Anthony Bellmon"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:93",
+        "feed_name": "Representative in the General Assembly, 21st Legislative District",
+        "item": "pa-hd-21",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LINDSAY POWELL": "Lindsay Powell"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:95",
+        "feed_name": "Representative in the General Assembly, 23rd Legislative District",
+        "item": "pa-hd-23",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAN FRANKEL": "Dan Frankel"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:96",
+        "feed_name": "Representative in the General Assembly, 24th Legislative District",
+        "item": "pa-hd-24",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LA'TASHA D MAYES": "La'Tasha D. Mayes"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:99",
+        "feed_name": "Representative in the General Assembly, 27th Legislative District",
+        "item": "pa-hd-27",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "DAN DEASY": "Dan Deasy"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:106",
+        "feed_name": "Representative in the General Assembly, 34th Legislative District",
+        "item": "pa-hd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ABIGAIL SALISBURY": "Abigail Salisbury"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:108",
+        "feed_name": "Representative in the General Assembly, 36th Legislative District",
+        "item": "pa-hd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JESSICA BENHAM": "Jessica Benham",
+          "TIMOTHY MCCUNE": "Timothy McCune"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "13:110",
+        "feed_name": "Representative in the General Assembly, 38th Legislative District",
+        "item": "pa-hd-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "JOHN INGLIS": "John Inglis",
+          "STONE SOBIERALSKI": "Stone Sobieralski"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "12:24",
+        "feed_name": "Senator in the General Assembly, 2nd Senatorial District",
+        "item": "pa-sd-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRISTINE M TARTAGLIONE": "Christine M. Tartaglione"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "12:60",
+        "feed_name": "Senator in the General Assembly, 38th Senatorial District",
+        "item": "pa-sd-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LINDSEY WILLIAMS": "Lindsey Williams",
+          "THOMAS WEST": "Thomas West"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "12:26",
+        "feed_name": "Senator in the General Assembly, 4th Senatorial District",
+        "item": "pa-sd-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ART HAYWOOD": "Art Haywood",
+          "TODD JOHNSON": "Todd Johnson"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "Montgomery"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "12:64",
+        "feed_name": "Senator in the General Assembly, 42nd Senatorial District",
+        "item": "pa-sd-42",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "WAYNE D FONTANA": "Wayne D. Fontana"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "12:30",
+        "feed_name": "Senator in the General Assembly, 8th Senatorial District",
+        "item": "pa-sd-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "ANTHONY HARDY WILLIAMS": "Anthony Hardy Williams"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia",
+          "Delaware"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "11:13",
+        "feed_name": "Representative in Congress, 12th Congressional District",
+        "item": "pa-us-house-12",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "SUMMER LEE": "Summer Lee",
+          "JAMES HAYES": "James Hayes"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Allegheny",
+          "Westmoreland"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "11:3",
+        "feed_name": "Representative in Congress, 2nd Congressional District",
+        "item": "pa-us-house-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "BRENDAN F BOYLE": "Brendan F. Boyle",
+          "JESSICA ARRIAGA": "Jessica Arriaga"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "11:4",
+        "feed_name": "Representative in Congress, 3rd Congressional District",
+        "item": "pa-us-house-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "CHRIS RABB": "Chris Rabb",
+          "DENNIS MAHONEY": "Dennis Mahoney"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Philadelphia"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "11:6",
+        "feed_name": "Representative in Congress, 5th Congressional District",
+        "item": "pa-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "MARY GAY SCANLON": "Mary Gay Scanlon",
+          "NICK MANGANARO": "Nick Manganaro"
+        },
+        "reaches": [
+          "Pennsylvania",
+          "Delaware",
+          "Philadelphia",
+          "Chester",
+          "Montgomery"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [],
+    "unmatched_guide": [],
+    "not_here": [
+      "allegheny-charter-7c",
+      "philadelphia-question-1",
+      "philadelphia-question-2"
+    ]
   },
   {
     "id": "results-TX",

@@ -51,6 +51,11 @@ export function validateResultsFile(f) {
       checkNumbers(`${w} slice ${sl.source}`, sl, out);
     }
     if (x.slices && x.final) out.push(`${w}: a race spanning sources has a final result`);
+    for (const sl of x.county_slices || []) {
+      if (!isStr(sl.source) || !isStr(sl.county)) out.push(`${w}: a county slice has no source or county`);
+      checkNumbers(`${w} county slice ${sl.source}`, sl, out);
+    }
+    if (x.slices && x.county_slices) out.push(`${w}: both slices and county_slices`);
   }
   return out;
 }

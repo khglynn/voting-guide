@@ -1,0 +1,392 @@
+{
+  "id": "results-CO-adams",
+  "state": "CO",
+  "name": "Adams County",
+  "county": "Adams",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127410",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "e3c30b08a9a99f97",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:44.361Z",
+    "places": [
+      "aurora-co"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/CO/Adams",
+    "results_url": "https://results.enr.clarityelections.com/CO/Adams/127410/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 8:50 PM CT (current_ver.txt and electionsettings.json 200).",
+    "election_id_from": "The workbench registry row (capture round 1, Nov 3, commit ae409395) and Clarity's own electionsettings for 127410: \"2026 General\", 11/3/2026.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-24",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "34",
+      "feed_name": "Adams County Assessor",
+      "item": "adams-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Thomas Swingle": "Thomas Swingle",
+        "Glenna Marie Zavala": "Glenna Marie Zavala"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "68",
+      "feed_name": "17th Judicial District Ballot Question 7E",
+      "item": "adams-broomfield-da-7e",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Adams",
+        "Broomfield"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority of voters in the 17th Judicial District (Adams County and Broomfield)"
+    },
+    {
+      "feed_id": "32",
+      "feed_name": "Adams County Clerk and Recorder",
+      "item": "adams-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Josh Zygielbaum": "Josh Zygielbaum",
+        "Karen Hoopes": "Karen Hoopes"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "30",
+      "feed_name": "Adams County Commissioner - District 3",
+      "item": "adams-commissioner-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Emma Pinter": "Emma Pinter"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "31",
+      "feed_name": "Adams County Commissioner - District 4",
+      "item": "adams-commissioner-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joseph P Domenico": "Joseph P Domenico",
+        "Karen DeAguero": "Karen DeAguero"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "37",
+      "feed_name": "Adams County Coroner",
+      "item": "adams-coroner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Monica Broncucia-Jordan": "Monica Broncucia-Jordan"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "35",
+      "feed_name": "Adams County Sheriff",
+      "item": "adams-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mark Goodell": "Mark Goodell",
+        "Gene R. Claps": "Gene R. Claps"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "33",
+      "feed_name": "Adams County Treasurer",
+      "item": "adams-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jason Anaya-Ledeboer": "Jason Anaya-Ledeboer"
+      },
+      "reaches": [
+        "Adams"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "69",
+      "feed_name": "City of Aurora Ballot Issue 3A",
+      "item": "aurora-3a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "70",
+      "feed_name": "City of Aurora Ballot Issue 3B",
+      "item": "aurora-3b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "71",
+      "feed_name": "City of Aurora Ballot Issue 3C",
+      "item": "aurora-3c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "72",
+      "feed_name": "City of Aurora Ballot Question 3D",
+      "item": "aurora-3d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "11",
+      "feed_name": "Regent of the University of Colorado - Congressional District 6",
+      "item": "co-cu-regent-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Veanessa Burbage": "Veanessa Burbage",
+        "Ilana Spiegel": "Ilana Spiegel",
+        "Joe Johnson": "Joe Johnson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas",
+        "Denver",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "23",
+      "feed_name": "State Representative - District 36",
+      "item": "co-hd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Carter": "Michael Carter",
+        "Paul E. Nelson": "Paul E. Nelson",
+        "Andrew Gibson": "Andrew Gibson"
+      },
+      "reaches": [
+        "Adams",
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "25",
+      "feed_name": "State Representative - District 56",
+      "item": "co-hd-56",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chris Richardson": "Chris Richardson",
+        "Amy L. Lunde": "Amy L. Lunde"
+      },
+      "reaches": [
+        "Adams",
+        "Arapahoe",
+        "Elbert",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "26",
+      "feed_name": "Regional Transportation District Director - District B",
+      "item": "co-rtd-b",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John Glenn": "John Glenn",
+        "Bianka Emerson": "Bianka Emerson"
+      },
+      "reaches": [
+        "Adams",
+        "Denver",
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3",
+      "feed_name": "Representative to the 120th United States Congress - District 6",
+      "item": "co-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jason Crow": "Jason Crow",
+        "Jason Clark": "Jason Clark",
+        "Patty McMahon": "Patty McMahon",
+        "Meredith Ryan": "Meredith Ryan",
+        "Samir Witta": "Samir Witta"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas",
+        "Denver",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "45",
+      "feed_name": "District Court Judge - 17th Judicial District - Datz",
+      "why": "Is Caryn A. Datz's retention (guide item adams-district-judges), but the guide holds all five 17th JD judges in one item and a map can pair an item only once, with one yes and one no; pairing one judge's contest would show that judge's numbers as the whole item."
+    },
+    {
+      "feed_id": "46",
+      "feed_name": "District Court Judge - 17th Judicial District - Finn",
+      "why": "Is Sean Patrick Finn's retention (guide item adams-district-judges), but the guide holds all five 17th JD judges in one item and a map can pair an item only once, with one yes and one no; pairing one judge's contest would show that judge's numbers as the whole item."
+    },
+    {
+      "feed_id": "47",
+      "feed_name": "District Court Judge - 17th Judicial District - Loew",
+      "why": "Is Priscilla Loew's retention (guide item adams-district-judges), but the guide holds all five 17th JD judges in one item and a map can pair an item only once, with one yes and one no; pairing one judge's contest would show that judge's numbers as the whole item."
+    },
+    {
+      "feed_id": "48",
+      "feed_name": "District Court Judge - 17th Judicial District - Ruff",
+      "why": "Is Jeffrey Dean Ruff's retention (guide item adams-district-judges), but the guide holds all five 17th JD judges in one item and a map can pair an item only once, with one yes and one no; pairing one judge's contest would show that judge's numbers as the whole item."
+    },
+    {
+      "feed_id": "49",
+      "feed_name": "District Court Judge - 17th Judicial District - Southerland",
+      "why": "Is Kelley R. Southerland's retention (guide item adams-district-judges), but the guide holds all five 17th JD judges in one item and a map can pair an item only once, with one yes and one no; pairing one judge's contest would show that judge's numbers as the whole item."
+    },
+    {
+      "feed_id": "50",
+      "feed_name": "County Court Judge - Adams - Jimenez",
+      "why": "Is Lara M. Jimenez's retention (guide item adams-county-judges), but the guide holds both Adams County Court judges in one item and a map can pair an item only once, with one yes and one no."
+    },
+    {
+      "feed_id": "51",
+      "feed_name": "County Court Judge - Adams - Vielma",
+      "why": "Is MaryAnn \"Mariana\" Vielma's retention (guide item adams-county-judges), but the guide holds both Adams County Court judges in one item and a map can pair an item only once, with one yes and one no."
+    }
+  ],
+  "unmatched_guide": [
+    "adams-county-judges",
+    "adams-district-judges",
+    "adams-surveyor",
+    "co-frpr-7a"
+  ],
+  "not_here": [
+    "arapahoe-assessor",
+    "arapahoe-clerk",
+    "arapahoe-commissioner-2",
+    "arapahoe-commissioner-4",
+    "arapahoe-coroner",
+    "arapahoe-county-judges",
+    "arapahoe-district-judges",
+    "arapahoe-sheriff",
+    "arapahoe-treasurer",
+    "co-hd-3",
+    "co-hd-37",
+    "co-hd-40",
+    "co-hd-41",
+    "co-hd-42",
+    "co-hd-61",
+    "co-sd-27",
+    "co-sd-29",
+    "douglas-assessor",
+    "douglas-clerk",
+    "douglas-commissioner-1",
+    "douglas-coroner",
+    "douglas-county-judges",
+    "douglas-district-judges",
+    "douglas-sheriff",
+    "douglas-surveyor",
+    "douglas-treasurer"
+  ]
+}

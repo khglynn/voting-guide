@@ -21,11 +21,14 @@ if (r.verdict !== 'ok') { console.error(`feed read: ${r.verdict} ${r.error}`); p
 
 const items = new Map();
 for (const p of map.guide.places) {
-  const b = await loadBundle(`place-${p}.json`, bundleDir);
+  const b = await loadBundle(p.startsWith('state-') ? `${p}.json` : `place-${p}.json`, bundleDir);
   if (!b) { console.error(`no bundle for ${p}`); process.exit(1); }
   const local = new Set(b.local || []);
+  const isState = p.startsWith('state-');
   for (const it of b.items) {
-    if (!local.has(it.id)) continue;
+    // A state source (map.scope "state") takes the state bundle's items, and from place bundles only the district
+    // races it counts whole (U.S. House); a county source takes each place's local items.
+    if (map.scope === 'state' ? !(isState || /us-house/.test(it.id)) : !local.has(it.id)) continue;
     const e = items.get(it.id) || {
       item: it.id,
       kind: it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality',

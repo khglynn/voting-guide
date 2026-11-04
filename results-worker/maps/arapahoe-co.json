@@ -1,0 +1,526 @@
+{
+  "id": "arapahoe-co",
+  "state": "CO",
+  "name": "Arapahoe County",
+  "county": "Arapahoe",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127409",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "3955e509c908f3fe",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:42.942Z",
+    "places": [
+      "englewood-co",
+      "aurora-co"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/CO/Arapahoe",
+    "results_url": "https://results.enr.clarityelections.com/CO/Arapahoe/127409/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 8:50 PM CT (current_ver.txt and electionsettings.json 200).",
+    "election_id_from": "The workbench registry row (capture round 1, Nov 3, commit ae409395) and Clarity's own electionsettings for 127409: \"2026 General\", 11/3/2026.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-25",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "30",
+      "feed_name": "Arapahoe County Assessor",
+      "item": "arapahoe-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PK Kaiser": "PK Kaiser",
+        "Jesse Lind": "Jesse Lind",
+        "Lee D. Ormiston": "Lee D. Ormiston"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "28",
+      "feed_name": "Arapahoe County Clerk and Recorder",
+      "item": "arapahoe-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joan Lopez": "Joan Lopez",
+        "Annette Budd": "Annette Budd"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "26",
+      "feed_name": "Arapahoe County Commissioner - District 2",
+      "item": "arapahoe-commissioner-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Carl Schuldies": "Carl Schuldies",
+        "Jessica Campbell": "Jessica Campbell"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "27",
+      "feed_name": "Arapahoe County Commissioner - District 4",
+      "item": "arapahoe-commissioner-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sonda 'Sunny' Banka": "Sonda \"Sunny\" Banka",
+        "Leslie Summey": "Leslie Summey"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "32",
+      "feed_name": "Arapahoe County Coroner",
+      "item": "arapahoe-coroner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Casey Bitting": "Casey Bitting"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "31",
+      "feed_name": "Arapahoe County Sheriff",
+      "item": "arapahoe-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tyler Scott Brown": "Tyler Scott Brown",
+        "Kevin Scott Edling": "Kevin Scott Edling"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "29",
+      "feed_name": "Arapahoe County Treasurer",
+      "item": "arapahoe-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Westerberg": "Michael Westerberg",
+        "Bennett Rutledge": "Bennett Rutledge"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "71",
+      "feed_name": "City of Aurora Ballot Issue 3A",
+      "item": "aurora-3a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "72",
+      "feed_name": "City of Aurora Ballot Issue 3B",
+      "item": "aurora-3b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "73",
+      "feed_name": "City of Aurora Ballot Issue 3C",
+      "item": "aurora-3c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "74",
+      "feed_name": "City of Aurora Ballot Question 3D",
+      "item": "aurora-3d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "10",
+      "feed_name": "Regent of the University of Colorado - Congressional District 6",
+      "item": "co-cu-regent-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Veanessa Burbage": "Veanessa Burbage",
+        "Ilana Spiegel": "Ilana Spiegel",
+        "Joe Johnson": "Joe Johnson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Denver",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "15",
+      "feed_name": "State Representative - District 3",
+      "item": "co-hd-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Gena Ozols": "Gena Ozols",
+        "Rebecca Winegar": "Rebecca Winegar"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Denver"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "State Representative - District 36",
+      "item": "co-hd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Carter": "Michael Carter",
+        "Paul E. Nelson": "Paul E. Nelson",
+        "Andrew Gibson": "Andrew Gibson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "State Representative - District 37",
+      "item": "co-hd-37",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jill Thompson": "Jill Thompson",
+        "Chad Clifford": "Chad Clifford"
+      },
+      "reaches": [
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "19",
+      "feed_name": "State Representative - District 40",
+      "item": "co-hd-40",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Clinton Porter": "Clinton Porter",
+        "Naquetta Ricks": "Naquetta Ricks"
+      },
+      "reaches": [
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "State Representative - District 41",
+      "item": "co-hd-41",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jamie Jackson": "Jamie Jackson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "State Representative - District 42",
+      "item": "co-hd-42",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sarah Amelia Woodson": "Sarah Amelia Woodson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "22",
+      "feed_name": "State Representative - District 56",
+      "item": "co-hd-56",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chris Richardson": "Chris Richardson",
+        "Amy L. Lunde": "Amy L. Lunde"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Elbert",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "23",
+      "feed_name": "State Representative - District 61",
+      "item": "co-hd-61",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Scott Shamblin": "Scott Shamblin",
+        "Eliza Hamrick": "Eliza Hamrick",
+        "Kevin Gulbranson": "Kevin Gulbranson"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "12",
+      "feed_name": "State Senator - District 27",
+      "item": "co-sd-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Danielle Lammon": "Danielle Lammon",
+        "Tom Sullivan": "Tom Sullivan",
+        "Michele Poague": "Michele Poague"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "13",
+      "feed_name": "State Senator - District 29",
+      "item": "co-sd-29",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Iman M. Jodeh": "Iman M. Jodeh",
+        "Robert McKenna": "Robert McKenna"
+      },
+      "reaches": [
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "4",
+      "feed_name": "Representative to the 120th United States Congress - District 6",
+      "item": "co-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jason Crow": "Jason Crow",
+        "Jason Clark": "Jason Clark",
+        "Patty McMahon": "Patty McMahon",
+        "Meredith Ryan": "Meredith Ryan",
+        "Samir Witta": "Samir Witta"
+      },
+      "reaches": [
+        "Arapahoe",
+        "Adams",
+        "Denver",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "79",
+      "feed_name": "Arapahoe County School District #6 Littleton Public Schools Ballot Issue 4A",
+      "item": "littleton-schools-4a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Arapahoe"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "43",
+      "feed_name": "District Court Judge - 18th Judicial District - Amico",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "44",
+      "feed_name": "District Court Judge - 18th Judicial District - Baker-McKay",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "45",
+      "feed_name": "District Court Judge - 18th Judicial District - Edson",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "46",
+      "feed_name": "District Court Judge - 18th Judicial District - Henderson",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "47",
+      "feed_name": "District Court Judge - 18th Judicial District - Jones",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "48",
+      "feed_name": "District Court Judge - 18th Judicial District - Karpel",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "49",
+      "feed_name": "District Court Judge - 18th Judicial District - Stricklin",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "50",
+      "feed_name": "District Court Judge - 18th Judicial District - Vahle",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "51",
+      "feed_name": "District Court Judge - 18th Judicial District - Washburn",
+      "why": "One judge of guide item arapahoe-district-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "52",
+      "feed_name": "County Court Judge - Arapahoe - Apostoli",
+      "why": "One judge of guide item arapahoe-county-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "53",
+      "feed_name": "County Court Judge - Arapahoe - Clark",
+      "why": "One judge of guide item arapahoe-county-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    },
+    {
+      "feed_id": "54",
+      "feed_name": "County Court Judge - Arapahoe - Rowles-Stokes",
+      "why": "One judge of guide item arapahoe-county-judges (the guide bundles all judges into one retention item, the feed has one Yes/No contest per judge); the map allows one feed contest per item, so not paired"
+    }
+  ],
+  "unmatched_guide": [
+    "arapahoe-county-judges",
+    "arapahoe-district-judges",
+    "co-frpr-7a"
+  ],
+  "not_here": [
+    "adams-assessor",
+    "adams-broomfield-da-7e",
+    "adams-clerk",
+    "adams-commissioner-3",
+    "adams-commissioner-4",
+    "adams-coroner",
+    "adams-county-judges",
+    "adams-district-judges",
+    "adams-sheriff",
+    "adams-surveyor",
+    "adams-treasurer",
+    "co-rtd-b",
+    "douglas-assessor",
+    "douglas-clerk",
+    "douglas-commissioner-1",
+    "douglas-coroner",
+    "douglas-county-judges",
+    "douglas-district-judges",
+    "douglas-sheriff",
+    "douglas-surveyor",
+    "douglas-treasurer"
+  ]
+}

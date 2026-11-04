@@ -36,7 +36,7 @@ for (const m of maps) {
   // the guide side
   const places = m.guide?.places || [];
   const bundles = {};
-  for (const p of places) { bundles[p] = await loadBundle(`place-${p}.json`, bundleDir); if (!bundles[p]) err(m, `no bundle for place ${p}`); }
+  for (const p of places) { bundles[p] = await loadBundle(p.startsWith('state-') ? `${p}.json` : `place-${p}.json`, bundleDir); if (!bundles[p]) err(m, `no bundle for place ${p}`); }
   stateBundles[m.state] ??= await loadBundle(`state-${m.state}.json`, bundleDir);
   const statewide = new Set((stateBundles[m.state]?.items || []).map((i) => i.id));
   const guide = new Map();
@@ -50,12 +50,16 @@ for (const m of maps) {
     if (!KINDS.includes(mc.kind)) err(m, `${w}: kind ${mc.kind}`);
     if (!Array.isArray(mc.reaches) || mc.reaches.length === 0) err(m, `${w}: reaches must name the counties this race's voters live in`);
     else if (!mc.reaches.includes(m.county)) err(m, `${w}: reaches doesn't include ${m.county}`);
-    if (statewide.has(mc.item) && !local.has(mc.item)) { err(m, `${w}: a statewide item from a county source`); continue; }
+    if (m.scope !== 'state' && statewide.has(mc.item) && !local.has(mc.item)) { err(m, `${w}: a statewide item from a county source`); continue; }
+    if (m.scope === 'state' && !mc.whole) err(m, `${w}: a state source's contests count the whole race (whole: true)`);
     const it = guide.get(mc.item);
     if (!it) { err(m, `${w}: not an item on ${places.join(', ')}`); continue; }
     // Federal and state-level races rarely sit inside one county; flag every one a map calls single-county so a person
     // looks, unless the map cites the official district-by-county source (`reaches_source`).
-    if (['federal', 'state'].includes(it.level) && Array.isArray(mc.reaches) && mc.reaches.length === 1 && !mc.reaches_source) warn(m, `${w}: a ${it.level} race marked wholly inside ${m.county}; confirm`);
+    // Until a district-by-county source confirms it, a federal or state race is never taken as wholly inside one
+    // county: --write widens it to a county slice (coordinator, Nov 3).
+    if (f.write && m.scope !== 'state' && ['federal', 'state'].includes(it.level) && Array.isArray(mc.reaches) && mc.reaches.length === 1 && !mc.reaches_source) { mc.reaches = [...mc.reaches, 'other counties']; mc.reaches_unconfirmed = true; }
+    if (m.scope !== 'state' && ['federal', 'state'].includes(it.level) && Array.isArray(mc.reaches) && mc.reaches.length === 1 && !mc.reaches_source) warn(m, `${w}: a ${it.level} race marked wholly inside ${m.county}; confirm`);
     const want = it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality';
     if (mc.kind !== want && mc.kind !== 'rule_unknown') err(m, `${w}: kind ${mc.kind}, the guide says ${want}`);
     if (want === 'multi' && Number(mc.seats) !== Number(it.vote_for)) err(m, `${w}: seats ${mc.seats}, the guide votes for ${it.vote_for}`);

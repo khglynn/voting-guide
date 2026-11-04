@@ -78,6 +78,7 @@ export function sourceSlices(read, map, now) {
     slice._declared = fc.declared ? fc.declared.map((n) => mc.choices?.[n]).filter((n) => n && n !== OTHER) : null;
     // A race whose map gives no `reaches` is never taken as the whole race: one county's slice, "other counties"
     // missing (site builder's review, Nov 3). `reaches: [this county]` is the map saying it is wholly inside.
+    slice._whole = !!mc.whole;
     slice._reaches = mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
     slice._unmatchedVotes = unmatchedVotes;
     slice._otherVotes = otherVotes;
@@ -160,7 +161,18 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     const reaches = [...new Set(list.flatMap((s) => s._reaches))];
     const real = list.filter((s) => !s._empty);
     if (real.length === 0) { const e = list[0]; items[item] = { source: e.source, status: 'pending', reporting: null, updated: null, url: e.url, final: null }; continue; }
-    items[item] = reaches.length > 1 || real.length > 1 ? spanning(real, reaches.length ? reaches : real.map((s) => s.county)) : single(real[0]);
+    // A source that counts the whole race (the state's own count) is the item; county counts for the same race ride
+    // beneath it as `county_slices`, never summed with it and never deciding its outcome.
+    const whole = real.find((s) => s._whole);
+    if (whole) {
+      const out = single(whole);
+      const parts = real.filter((s) => s !== whole).map(strip);
+      if (parts.length) out.county_slices = parts.sort((a, b) => b.total_votes - a.total_votes);
+      items[item] = out;
+      continue;
+    }
+    const counties = real.filter((s) => !s._whole);
+    items[item] = reaches.length > 1 || counties.length > 1 ? spanning(counties, reaches.length ? reaches : counties.map((s) => s.county)) : single(counties[0]);
   }
   for (const [item, l] of Object.entries(links)) if (!items[item]) items[item] = l;
   return { election: '2026-11-03', state, generated: now, sources, items };

@@ -4,5 +4,6 @@
    Later adapters (enhanced_voting, lvt, the custom JSONs, csv, html_table) join this list in sub-phases 5 and 6. */
 import * as clarity from './clarity.js';
 import * as harris from './harris.js';
+import * as tx_sos from './tx_sos.js';
 
-export const ADAPTERS = { clarity, harris };
+export const ADAPTERS = { clarity, harris, tx_sos };

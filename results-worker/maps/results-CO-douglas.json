@@ -1,0 +1,380 @@
+{
+  "id": "results-CO-douglas",
+  "state": "CO",
+  "name": "Douglas County",
+  "county": "Douglas",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127427",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "fef011c575d3bb69",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:33.890Z",
+    "places": [
+      "aurora-co"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/CO/Douglas",
+    "results_url": "https://results.enr.clarityelections.com/CO/Douglas/127427/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 8:50 PM CT (current_ver.txt and electionsettings.json 200).",
+    "election_id_from": "The workbench registry row (capture round 1, Nov 3, commit ae409395) and Clarity's own electionsettings for 127427: \"2026 General\", 11/3/2026.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-20",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "60",
+      "feed_name": "City of Aurora Ballot Issue 3A",
+      "item": "aurora-3a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "61",
+      "feed_name": "City of Aurora Ballot Issue 3B",
+      "item": "aurora-3b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "62",
+      "feed_name": "City of Aurora Ballot Issue 3C",
+      "item": "aurora-3c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "63",
+      "feed_name": "City of Aurora Ballot Question 3D",
+      "item": "aurora-3d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "8",
+      "feed_name": "Regent of the University of Colorado - Congressional District 6",
+      "item": "co-cu-regent-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Veanessa Burbage": "Veanessa Burbage",
+        "Ilana Spiegel": "Ilana Spiegel",
+        "Joe Johnson": "Joe Johnson"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams",
+        "Denver",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "74",
+      "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+      "item": "co-frpr-7a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Douglas",
+        "Denver",
+        "Arapahoe",
+        "Adams",
+        "Jefferson",
+        "Boulder",
+        "Broomfield",
+        "Larimer",
+        "Weld",
+        "El Paso",
+        "Pueblo",
+        "other counties"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority of voters in the rail district"
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "State Representative - District 61",
+      "item": "co-hd-61",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Scott Shamblin": "Scott Shamblin",
+        "Eliza Hamrick": "Eliza Hamrick",
+        "Kevin Gulbranson": "Kevin Gulbranson"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "9",
+      "feed_name": "State Senator - District 27",
+      "item": "co-sd-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Danielle Lammon": "Danielle Lammon",
+        "Tom Sullivan": "Tom Sullivan",
+        "Michele Poague": "Michele Poague"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "3",
+      "feed_name": "Representative to the 120th United States Congress - District 6",
+      "item": "co-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jason Crow": "Jason Crow",
+        "Jason Clark": "Jason Clark",
+        "Patty McMahon": "Patty McMahon",
+        "Meredith Ryan": "Meredith Ryan",
+        "Samir Witta": "Samir Witta"
+      },
+      "reaches": [
+        "Douglas",
+        "Arapahoe",
+        "Adams",
+        "Denver",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "Douglas County Assessor",
+      "item": "douglas-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kara Garr": "Kara Garr",
+        "Toby Damisch": "Toby Damisch"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "18",
+      "feed_name": "Douglas County Clerk and Recorder",
+      "item": "douglas-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sheri Davis": "Sheri Davis",
+        "Jim Oehler": "Jim Oehler"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "Douglas County Commissioner - District 1",
+      "item": "douglas-commissioner-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Irene Bonham": "Irene Bonham",
+        "Jake Bockenfeld": "Jake Bockenfeld"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "23",
+      "feed_name": "Douglas County Coroner",
+      "item": "douglas-coroner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Raeann Brown": "Raeann Brown"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "Douglas County Sheriff",
+      "item": "douglas-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Darren M. Weekly": "Darren M. Weekly"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "22",
+      "feed_name": "Douglas County Surveyor",
+      "item": "douglas-surveyor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Darrell E. Roberts": "Darrell E. Roberts"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "19",
+      "feed_name": "Douglas County Treasurer",
+      "item": "douglas-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tim Dietz": "Tim Dietz",
+        "Dan Smith": "Dan Smith"
+      },
+      "reaches": [
+        "Douglas"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "49",
+      "feed_name": "District Court Judge - 23rd Judicial District - Baum",
+      "why": "This is the retention vote on Andrew Baum inside guide item douglas-district-judges (Yes = keep), but that guide item holds 4 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    },
+    {
+      "feed_id": "50",
+      "feed_name": "District Court Judge - 23rd Judicial District - Klingensmith",
+      "why": "This is the retention vote on Victoria E. Klingensmith inside guide item douglas-district-judges (Yes = keep), but that guide item holds 4 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    },
+    {
+      "feed_id": "51",
+      "feed_name": "District Court Judge - 23rd Judicial District - Slade",
+      "why": "This is the retention vote on Theresa Slade inside guide item douglas-district-judges (Yes = keep), but that guide item holds 4 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    },
+    {
+      "feed_id": "52",
+      "feed_name": "District Court Judge - 23rd Judicial District - Warhola",
+      "why": "This is the retention vote on Daniel W. Warhola inside guide item douglas-district-judges (Yes = keep), but that guide item holds 4 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    },
+    {
+      "feed_id": "56",
+      "feed_name": "County Court Judge - Douglas - Bowling",
+      "why": "This is the retention vote on Lawrence Bowling inside guide item douglas-county-judges (Yes = keep), but that guide item holds 2 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    },
+    {
+      "feed_id": "57",
+      "feed_name": "County Court Judge - Douglas - Fields",
+      "why": "This is the retention vote on Kolony L. Fields inside guide item douglas-county-judges (Yes = keep), but that guide item holds 2 judges while the map allows one yes/no feed contest per item and no item twice, so one judge's numbers can't stand for the whole item. The feed also names the judge by surname only. Left out until the map can carry a per-judge retention."
+    }
+  ],
+  "unmatched_guide": [
+    "douglas-county-judges",
+    "douglas-district-judges"
+  ],
+  "not_here": [
+    "adams-assessor",
+    "adams-broomfield-da-7e",
+    "adams-clerk",
+    "adams-commissioner-3",
+    "adams-commissioner-4",
+    "adams-coroner",
+    "adams-county-judges",
+    "adams-district-judges",
+    "adams-sheriff",
+    "adams-surveyor",
+    "adams-treasurer",
+    "arapahoe-assessor",
+    "arapahoe-clerk",
+    "arapahoe-commissioner-2",
+    "arapahoe-commissioner-4",
+    "arapahoe-coroner",
+    "arapahoe-county-judges",
+    "arapahoe-district-judges",
+    "arapahoe-sheriff",
+    "arapahoe-treasurer",
+    "co-hd-3",
+    "co-hd-36",
+    "co-hd-37",
+    "co-hd-40",
+    "co-hd-41",
+    "co-hd-42",
+    "co-hd-56",
+    "co-rtd-b",
+    "co-sd-29"
+  ]
+}

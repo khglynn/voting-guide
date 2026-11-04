@@ -32,6 +32,7 @@ for (const c of draft.contests) {
   const reaches = [...new Set([...(c.reaches || []), ...(v.reaches || [])])];
   const out = { feed_id: c.feed_id, feed_name: c.feed_name, item: c.item, kind: c.kind, seats: c.seats ?? 1, choices: c.choices, reaches, item_url: null };
   if (c.note) out.note = c.note;
+  if (c.whole) out.whole = true;
   contests.push(out);
 }
 map.contests = contests.sort((a, b) => a.item.localeCompare(b.item));

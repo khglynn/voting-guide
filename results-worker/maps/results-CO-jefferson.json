@@ -1,0 +1,610 @@
+{
+  "id": "results-CO-jefferson",
+  "state": "CO",
+  "name": "Jefferson County",
+  "county": "Jefferson",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127408",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "2404023bd5a35441",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:43.666Z",
+    "places": [
+      "lakewood-co"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/CO/Jefferson",
+    "results_url": "https://results.enr.clarityelections.com/CO/Jefferson/127408/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 8:50 PM CT (current_ver.txt and electionsettings.json 200).",
+    "election_id_from": "The workbench registry row (capture round 1, Nov 3, commit ae409395) and Clarity's own electionsettings for 127408: \"2026 General\", 11/3/2026.",
+    "tz": "America/Denver"
+  },
+  "polls_close": "2026-11-04T02:00:00Z",
+  "count_closes": "2026-11-13T06:59:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-11-25",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "14",
+      "feed_name": "Regent of the University of Colorado - Congressional District 7",
+      "item": "co-cu-regent-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Paul Mueller": "Paul Mueller",
+        "Nolbert Chavez": "Nolbert Chavez",
+        "BetteRose Ryan": "BetteRose Ryan"
+      },
+      "reaches": [
+        "Jefferson",
+        "Lake",
+        "Chaffee",
+        "Fremont",
+        "Park",
+        "Teller",
+        "Custer",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "68",
+      "feed_name": "Front Range Passenger Rail District Ballot Issue 7A",
+      "item": "co-frpr-7a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Denver",
+        "Boulder",
+        "Broomfield",
+        "Adams",
+        "Arapahoe",
+        "Douglas",
+        "Larimer",
+        "Weld",
+        "El Paso",
+        "Pueblo",
+        "other counties"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority of voters in the rail district"
+    },
+    {
+      "feed_id": "20",
+      "feed_name": "State Representative - District 23",
+      "item": "co-hd-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Alexis Hoffkling": "Alexis Hoffkling",
+        "Ross Metler": "Ross Metler"
+      },
+      "reaches": [
+        "Jefferson",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "24",
+      "feed_name": "State Representative - District 28",
+      "item": "co-hd-28",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "David Rein": "David Rein"
+      },
+      "reaches": [
+        "Jefferson",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "26",
+      "feed_name": "State Representative - District 30",
+      "item": "co-hd-30",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rebekah Stewart": "Rebekah Stewart",
+        "William Tyler Switzer": "William Tyler Switzer"
+      },
+      "reaches": [
+        "Jefferson",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "47",
+      "feed_name": "District Court Judge - 1st Judicial District - Contiguglia",
+      "item": "co-retention-contiguglia",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "70",
+      "feed_name": "County Court Judge - Jefferson - Garrido",
+      "item": "co-retention-garrido",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "48",
+      "feed_name": "District Court Judge - 1st Judicial District - Loewer",
+      "item": "co-retention-loewer",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "71",
+      "feed_name": "County Court Judge - Jefferson - Magid",
+      "item": "co-retention-magid",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "72",
+      "feed_name": "County Court Judge - Jefferson - Melton",
+      "item": "co-retention-melton",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "49",
+      "feed_name": "District Court Judge - 1st Judicial District - Miloud",
+      "item": "co-retention-miloud",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "50",
+      "feed_name": "District Court Judge - 1st Judicial District - Poland",
+      "item": "co-retention-poland",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "51",
+      "feed_name": "District Court Judge - 1st Judicial District - Rhamey",
+      "item": "co-retention-rhamey",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "52",
+      "feed_name": "District Court Judge - 1st Judicial District - Russell",
+      "item": "co-retention-russell",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "53",
+      "feed_name": "District Court Judge - 1st Judicial District - Zenisek",
+      "item": "co-retention-zenisek",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "Yes": "yes",
+        "No": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Gilpin"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "31",
+      "feed_name": "Regional Transportation District Director - District N",
+      "item": "co-rtd-n",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cindy Arcuri": "Cindy Arcuri"
+      },
+      "reaches": [
+        "Jefferson",
+        "Arapahoe",
+        "Douglas",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "11",
+      "feed_name": "State Board of Education Member - Congressional District 7",
+      "item": "co-sboe-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Karla Esser": "Karla Esser",
+        "Steve Barton": "Steve Barton",
+        "Ross Klopf": "Ross Klopf"
+      },
+      "reaches": [
+        "Jefferson",
+        "Lake",
+        "Chaffee",
+        "Fremont",
+        "Park",
+        "Teller",
+        "Custer",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "15",
+      "feed_name": "State Senator - District 20",
+      "item": "co-sd-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Richard (Rich) Mancuso": "Richard (Rich) Mancuso",
+        "Sheila Lieder": "Sheila Lieder"
+      },
+      "reaches": [
+        "Jefferson",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "16",
+      "feed_name": "State Senator - District 22",
+      "item": "co-sd-22",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Steve Harkess": "Steve Harkess",
+        "Monica Irasema Duran": "Monica Irasema Duran"
+      },
+      "reaches": [
+        "Jefferson",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "5",
+      "feed_name": "Representative to the 120th United States Congress - District 7",
+      "item": "co-us-house-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tim Bennett": "Tim Bennett",
+        "Brittany Pettersen": "Brittany Pettersen",
+        "Susan Hall": "Susan Hall",
+        "Lawrence Kyle Clark": "Lawrence Kyle Clark",
+        "Dan ''Kilo'' Sallis": "Dan \"Kilo\" Sallis",
+        "Joe Krzeczkowski": "Joe Krzeczkowski"
+      },
+      "reaches": [
+        "Jefferson",
+        "Lake",
+        "Chaffee",
+        "Fremont",
+        "Park",
+        "Teller",
+        "Custer",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "84",
+      "feed_name": "Jefferson County School District R-1 Ballot Issue 5A",
+      "item": "jeffco-schools-5a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "85",
+      "feed_name": "Jefferson County School District R-1 Ballot Issue 5B",
+      "item": "jeffco-schools-5b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "35",
+      "feed_name": "Jefferson County Assessor",
+      "item": "jefferson-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Vera King": "Vera King",
+        "Andy Kerr": "Andy Kerr",
+        "Greg Ketcham": "Greg Ketcham"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "33",
+      "feed_name": "Jefferson County Clerk and Recorder",
+      "item": "jefferson-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Paul Poston": "Paul Poston",
+        "Nicole Hensel": "Nicole Hensel"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "32",
+      "feed_name": "Jefferson County Commissioner - District 3",
+      "item": "jefferson-commissioner-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Stephanie VandenBerg": "Stephanie VandenBerg",
+        "Lisa A. Cutter": "Lisa A. Cutter"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "38",
+      "feed_name": "Jefferson County Coroner",
+      "item": "jefferson-coroner",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nick Lobello": "Nick Lobello",
+        "Allison Harmon": "Allison Harmon"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "36",
+      "feed_name": "Jefferson County Sheriff",
+      "item": "jefferson-sheriff",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Regina 'Reggie' Marinelli": "Regina \"Reggie\" Marinelli",
+        "Randall Doizaki": "Randall Doizaki"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "37",
+      "feed_name": "Jefferson County Surveyor",
+      "item": "jefferson-surveyor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Robert Hennessy": "Robert Hennessy"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "34",
+      "feed_name": "Jefferson County Treasurer",
+      "item": "jefferson-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Eric Proctor": "Eric Proctor",
+        "Murl Hendrickson": "Murl Hendrickson"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "74",
+      "feed_name": "City of Lakewood Ballot Issue 2G",
+      "item": "lakewood-2g",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "75",
+      "feed_name": "City of Lakewood Ballot Question 2H",
+      "item": "lakewood-2h",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "76",
+      "feed_name": "City of Lakewood Ballot Question 2I",
+      "item": "lakewood-2i",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "77",
+      "feed_name": "City of Lakewood Ballot Question 2J",
+      "item": "lakewood-2j",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "89",
+      "feed_name": "West Metro Fire Protection District Ballot Issue 7C",
+      "item": "west-metro-fire-7c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "Yes/For": "yes",
+        "No/Against": "no"
+      },
+      "reaches": [
+        "Jefferson",
+        "Douglas"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

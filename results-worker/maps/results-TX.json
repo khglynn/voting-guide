@@ -1,0 +1,166 @@
+{
+  "id": "results-TX",
+  "state": "TX",
+  "name": "Texas Secretary of State",
+  "county": "Texas",
+  "scope": "state",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "2026 NOVEMBER GENERAL ELECTION",
+    "feed_name": "2026 NOVEMBER GENERAL ELECTION"
+  },
+  "guide": {
+    "fingerprint": "c416b40d30a73434",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T03:05:55.275Z",
+    "places": [
+      "state-TX",
+      "allen-tx",
+      "austin-tx",
+      "austin-hays-tx",
+      "austin-williamson-tx",
+      "dallas-tx",
+      "houston-tx",
+      "pflugerville-tx",
+      "round-rock-tx",
+      "san-antonio-tx",
+      "san-marcos-tx"
+    ]
+  },
+  "feed": {
+    "adapter": "tx_sos",
+    "base": "https://electionresults.sos.state.tx.us",
+    "results_url": "https://electionresults.sos.state.tx.us/results.html",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 9:00 PM CT (coordinator) and 9:02 PM (builder): 200, Last-Modified 02:58 GMT.",
+    "election_id_from": "The page's own heading, \"2026 NOVEMBER GENERAL ELECTION\", under \"Election Results - Tuesday, November 3, 2026\". The page has no election id or contest ids; race headings are the feed ids.",
+    "tz": "America/Chicago"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-04T23:00:00Z",
+  "complete_marker": null,
+  "certify_by": "2026-12-07",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 2",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 2",
+      "item": "tx-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "STEVE TOTH": "Steve Toth",
+        "SHAUN FINNIE": "Shaun Finnie"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 3",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 3",
+      "item": "tx-us-house-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "KEITH SELF (I)": "Keith Self",
+        "EVAN HUNT": "Evan Hunt"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 5",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 5",
+      "item": "tx-us-house-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LANCE GOODEN (I)": "Lance Gooden",
+        "CHELSEY HOCKETT": "Chelsey Hockett"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 6",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 6",
+      "item": "tx-us-house-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JAKE ELLZEY (I)": "Jake Ellzey",
+        "DANNY MINTON": "Danny Minton"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 7",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 7",
+      "item": "tx-us-house-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ALEXANDER HALE": "Alexander Hale",
+        "LIZZIE PANNILL FLETCHER (I)": "Lizzie Pannill Fletcher",
+        "ESPOIR NGABO": "Espoir Ngabo"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. REPRESENTATIVE DISTRICT 8",
+      "feed_name": "U. S. REPRESENTATIVE DISTRICT 8",
+      "item": "tx-us-house-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JESSICA HART STEINMANN": "Jessica Hart Steinmann",
+        "LAURA JONES": "Laura Jones"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    },
+    {
+      "feed_id": "U. S. SENATOR",
+      "feed_name": "U. S. SENATOR",
+      "item": "tx-us-senate",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "KEN PAXTON": "Ken Paxton",
+        "JAMES TALARICO": "James Talarico",
+        "TED BROWN": "Ted Brown",
+        "AVERY AYERS": "Avery Ayers",
+        "JADE SIMMONS": "Jade Simmons",
+        "BRADFORD 'BRAD' HALL": "Bradford 'Brad' Hall",
+        "ZUL MOHAMED": "Zul Mohamed"
+      },
+      "reaches": [
+        "Texas"
+      ],
+      "item_url": null,
+      "whole": true
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

@@ -177,3 +177,21 @@ test('ladder: before the count window closes, a failing source waits at most 5 m
   for (let i = 0; i < 6; i++) { e = nextEntry(e, { kind: 'error', error: 'HTTP 502' }, t, { count_closes: '2026-11-04T23:00:00Z' }); waits.push((Date.parse(e.next_due) - Date.parse(t)) / 60000); t = e.next_due; }
   assert.deepEqual(waits, [1, 2, 5, 5, 5, 5]);
 });
+
+test('file: a whole-race source is the item; county counts ride beneath as county_slices, never summed', () => {
+  const STATE = { id: 'st', state: 'TX', name: 'Secretary of State', county: 'Texas', scope: 'state', feed: { adapter: 'tx_sos', results_url: 'https://sos.example/', tz: 'America/Chicago' },
+    contests: [{ feed_id: 'MAYOR', feed_name: 'MAYOR', item: 'mayor', kind: 'plurality', seats: 1, whole: true, reaches: ['Texas'], choices: { 'ANN SMITH': 'Ann Smith', 'BO JONES': 'Bo Jones' } }] };
+  const srcs = {
+    st: { record: { read: readOf([{ feed_id: 'MAYOR', feed_name: 'MAYOR', reporting: 'Polling Locations Reporting: 11%', choices: [{ name: 'ANN SMITH', votes: 5000 }, { name: 'BO JONES', votes: 4000 }] }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} },
+    'a-tx': { record: { read: readOf([{ feed_id: '1', feed_name: 'Mayor', choices: [{ name: 'SMITH, ANN', votes: 600 }, { name: 'JONES, BO', votes: 300 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 0 }] }, { feed_id: '2', feed_name: 'Prop A', choices: [{ name: 'FOR', votes: 1 }, { name: 'AGAINST', votes: 1 }] }]), fetched: '2026-11-04T02:00:00.000Z' }, checked: true, sched: {} },
+  };
+  const f = buildStateFile({ state: 'TX', maps: [STATE, MAP_A], srcs, mode: 'public', now: '2026-11-04T02:00:00.000Z' });
+  const x = f.items.mayor;
+  assert.equal(x.source, 'st');
+  assert.equal(x.total_votes, 9000, 'the state count, not 9000 + 900');
+  assert.equal(x.reporting, 'Polling Locations Reporting: 11%');
+  assert.equal(x.slices, undefined);
+  assert.equal(x.county_slices.length, 1);
+  assert.equal(x.county_slices[0].total_votes, 900);
+  assert.deepEqual(checkFile(f), []);
+});

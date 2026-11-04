@@ -138,7 +138,7 @@ export async function checkFingerprints({ maps, fetch, sched, now, ping }) {
     const bundles = {};
     try {
       for (const p of m.guide.places) {
-        cache[p] ??= await fetch(`${SITE}/data/place-${p}.json`, { signal: AbortSignal.timeout(15000) }).then((r) => (r.ok ? r.json() : null));
+        cache[p] ??= await fetch(`${SITE}/data/${p.startsWith('state-') ? p : `place-${p}`}.json`, { signal: AbortSignal.timeout(15000) }).then((r) => (r.ok ? r.json() : null));
         bundles[p] = cache[p];
       }
     } catch { continue; } // the site unreachable is not a mismatch

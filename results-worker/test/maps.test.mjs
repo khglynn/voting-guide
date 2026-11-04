@@ -10,6 +10,7 @@ const FEEDS = {
   'dallas-county-tx': { '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': 'clarity-dallas.electionsettings.json' },
   'bexar-tx': { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' },
   'harris-county-tx': { '/1126/resultsbyballot.json': 'harris.resultsbyballot.json' },
+  'results-TX': { 'results.html': 'tx-sos.results.html' },
   'travis-tx': { '/127492/current_ver.txt': 'clarity-travis.current_ver.txt', '/127492/383226/json/en/summary.json': 'clarity-travis.summary.json', '/127492/383226/json/en/electionsettings.json': 'clarity-travis.electionsettings.json' },
   'williamson-tx': { '/127488/current_ver.txt': 'clarity-williamson.current_ver.txt', '/127488/383157/json/en/summary.json': 'clarity-williamson.summary.json', '/127488/383157/json/en/electionsettings.json': 'clarity-williamson.electionsettings.json' },
 };
@@ -27,7 +28,8 @@ for (const [id, routes] of Object.entries(FEEDS)) {
     assert.equal(checkRead(read, map).ok, true);
     const { status, slices, problems } = sourceSlices(read, map, '2026-11-03T22:00:00.000Z');
     assert.deepEqual(problems, []);
-    assert.equal(status, 'pending');
+    const votes = read.contests.some((c) => c.choices.some((ch) => ch.votes > 0));
+    assert.equal(status, votes ? 'counting' : 'pending');
     assert.equal(Object.keys(slices).length, map.contests.length);
     const byId = new Map(read.contests.map((c) => [c.feed_id, c]));
     for (const mc of map.contests) for (const ch of byId.get(mc.feed_id).choices) assert.ok(ch.name in mc.choices, `${mc.feed_name}: ${ch.name}`);

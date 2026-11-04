@@ -125,3 +125,19 @@ test('clarity: the source\'s own banner words come through as labels', async () 
   const r = await clarity.read({ fetch: f, map: mapFor('dallas-county-tx') });
   assert.deepEqual(r.labels, ['Early Voting Totals Only', 'Unofficial Results']);
 });
+
+test('tx_sos: the SOS page parses; a race cut off mid-table (Nov 3, 8:58 PM) is dropped, never read as finished', async () => {
+  const { parse } = await import('../src/adapters/tx_sos.js');
+  const { fixture } = await import('./helpers.mjs');
+  const p = parse(fixture('tx-sos.results.html'));
+  assert.equal(p.name, '2026 NOVEMBER GENERAL ELECTION');
+  assert.equal(p.date, '2026-11-03');
+  assert.equal(p.updated, '11/03/2026 08:56 PM');
+  assert.equal(p.contests.length, 9);
+  assert.equal(p.dropped, 1, 'U.S. House District 9 is cut off mid-row');
+  const sen = p.contests[0];
+  assert.equal(sen.feed_id, 'U. S. SENATOR');
+  assert.equal(sen.reporting, 'Polling Locations Reporting: 11%');
+  assert.deepEqual(sen.choices.slice(0, 2).map((c) => [c.name, c.votes]), [['KEN PAXTON', 2553979], ['JAMES TALARICO', 3410265]]);
+  assert.ok(!p.contests.some((c) => c.feed_id.endsWith('DISTRICT 9')));
+});

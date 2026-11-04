@@ -3660,6 +3660,8 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await page.waitForSelector('[data-door="after"]');
   const door = await text(page, '.front');
   check('Results: the first page after the last close: "See how your ballot landed.", its ticks, no step 2, each state’s results under the ZIP', /Polls have closed\. Results are rolling in\./.test(door) && (await text(page, 'h1.place')) === 'See how your ballot landed.' && /Official results for your city/.test(door) && !(await page.$('#setup')) && !!(await page.$('#zip')) && (await page.$$('.res-row')).length === 15, door.slice(0, 200));
+  // Kevin, Nov 4: "let's not show the track ballot links on the first page". The tracker lives on What's next.
+  check('Results: the first page after the last close has no mail-ballot tracker links', !(await page.$('.res-track')) && !/Track (your|my) (mail )?ballot/i.test(door), door.slice(0, 200));
   await page.fill('#zip', '78702');
   await tap(page, '[data-act="setup-done"]');
   await page.waitForSelector('#plan');

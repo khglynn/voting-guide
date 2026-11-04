@@ -1078,7 +1078,6 @@ body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast
 a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .res-src { flex: 1 1 10em; font-size: 14.5px; line-height: 1.35; color: var(--muted); }
 .res-row.is-open .res-st { color: var(--ink-2); }
-.res-track { flex-basis: 100%; font-size: 14.5px; color: var(--ink); padding: 2px 0 6px; }
 .res-calls { margin-top: 12px; font-size: 15px; color: var(--muted); }
 .res-calls a { color: var(--ink); display: inline-block; padding: 6px 0; }
 .res-zip-h { margin-top: 28px; font-family: var(--f-display); font-weight: 600; font-size: 20px; line-height: 1.25; }

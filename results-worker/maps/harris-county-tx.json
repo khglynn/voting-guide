@@ -163,7 +163,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9422",
@@ -178,7 +179,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9423",
@@ -193,7 +195,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9424",
@@ -208,7 +211,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9425",
@@ -223,7 +227,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9463",
@@ -239,7 +244,8 @@
         "Harris",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9551",
@@ -255,7 +261,8 @@
         "Harris",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9253",
@@ -1902,7 +1909,8 @@
         "Fort Bend",
         "Montgomery"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9505",
@@ -1918,7 +1926,8 @@
         "Harris",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9445",
@@ -2240,7 +2249,8 @@
       "reaches": [
         "Harris"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "9394",

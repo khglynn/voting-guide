@@ -64,7 +64,7 @@
       "seats": 1,
       "choices": {
         "Susan Bayne": "Susan Bayne",
-        "Diana Ar\u00e9valo": "Diana Ar\u00e9valo"
+        "Diana Arévalo": "Diana Arévalo"
       },
       "reaches": [
         "Bexar"
@@ -136,7 +136,7 @@
       "kind": "plurality",
       "seats": 1,
       "choices": {
-        "DEM Erica Pe\u00f1a": "Erica Pe\u00f1a"
+        "DEM Erica Peña": "Erica Peña"
       },
       "reaches": [
         "Bexar"
@@ -703,7 +703,8 @@
         "Hays",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0110",
@@ -723,7 +724,8 @@
         "Hays",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0136",
@@ -755,7 +757,8 @@
         "Bexar",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0112",
@@ -985,7 +988,8 @@
         "Bandera",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0117",
@@ -1003,7 +1007,8 @@
         "Bandera",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0118",
@@ -1021,7 +1026,8 @@
         "Bandera",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0119",
@@ -1039,7 +1045,8 @@
         "Bandera",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0120",
@@ -1054,7 +1061,8 @@
       "reaches": [
         "Bexar"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0121",
@@ -1069,7 +1077,8 @@
       "reaches": [
         "Bexar"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0122",
@@ -1084,7 +1093,8 @@
       "reaches": [
         "Bexar"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0123",
@@ -1099,7 +1109,8 @@
       "reaches": [
         "Bexar"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0098",
@@ -1116,7 +1127,8 @@
         "Comal",
         "Medina"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0124",
@@ -1134,7 +1146,8 @@
         "Comal",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0023",
@@ -1182,7 +1195,7 @@
       "seats": 1,
       "choices": {
         "DEM Jose Menendez": "Jose Menendez",
-        "GRN Juli\u00e1n Villarreal": "Juli\u00e1n Villarreal"
+        "GRN Julián Villarreal": "Julián Villarreal"
       },
       "reaches": [
         "Bexar"
@@ -1234,7 +1247,8 @@
       "reaches": [
         "Bexar"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0005",

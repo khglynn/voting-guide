@@ -705,7 +705,8 @@ export const MAPS = [
           "Hays",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0110",
@@ -725,7 +726,8 @@ export const MAPS = [
           "Hays",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0136",
@@ -757,7 +759,8 @@ export const MAPS = [
           "Bexar",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0112",
@@ -987,7 +990,8 @@ export const MAPS = [
           "Bandera",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0117",
@@ -1005,7 +1009,8 @@ export const MAPS = [
           "Bandera",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0118",
@@ -1023,7 +1028,8 @@ export const MAPS = [
           "Bandera",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0119",
@@ -1041,7 +1047,8 @@ export const MAPS = [
           "Bandera",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0120",
@@ -1056,7 +1063,8 @@ export const MAPS = [
         "reaches": [
           "Bexar"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0121",
@@ -1071,7 +1079,8 @@ export const MAPS = [
         "reaches": [
           "Bexar"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0122",
@@ -1086,7 +1095,8 @@ export const MAPS = [
         "reaches": [
           "Bexar"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0123",
@@ -1101,7 +1111,8 @@ export const MAPS = [
         "reaches": [
           "Bexar"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0098",
@@ -1118,7 +1129,8 @@ export const MAPS = [
           "Comal",
           "Medina"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0124",
@@ -1136,7 +1148,8 @@ export const MAPS = [
           "Comal",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0023",
@@ -1236,7 +1249,8 @@ export const MAPS = [
         "reaches": [
           "Bexar"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0005",
@@ -1573,7 +1587,8 @@ export const MAPS = [
         "reaches": [
           "Dallas"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0055",
@@ -1769,7 +1784,8 @@ export const MAPS = [
           "Kaufman",
           "Rockwall"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0057",
@@ -2019,7 +2035,8 @@ export const MAPS = [
         "reaches": [
           "Dallas"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0086",
@@ -2034,7 +2051,8 @@ export const MAPS = [
         "reaches": [
           "Dallas"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0087",
@@ -2049,7 +2067,8 @@ export const MAPS = [
         "reaches": [
           "Dallas"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0088",
@@ -2064,7 +2083,8 @@ export const MAPS = [
         "reaches": [
           "Dallas"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0089",
@@ -2080,7 +2100,8 @@ export const MAPS = [
           "Dallas",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0029",
@@ -2427,7 +2448,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9422",
@@ -2442,7 +2464,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9423",
@@ -2457,7 +2480,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9424",
@@ -2472,7 +2496,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9425",
@@ -2487,7 +2512,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9463",
@@ -2503,7 +2529,8 @@ export const MAPS = [
           "Harris",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9551",
@@ -2519,7 +2546,8 @@ export const MAPS = [
           "Harris",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9253",
@@ -4166,7 +4194,8 @@ export const MAPS = [
           "Fort Bend",
           "Montgomery"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9505",
@@ -4182,7 +4211,8 @@ export const MAPS = [
           "Harris",
           "other counties"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9445",
@@ -4504,7 +4534,8 @@ export const MAPS = [
         "reaches": [
           "Harris"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "9394",
@@ -4831,7 +4862,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0093",
@@ -4904,7 +4936,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0055",
@@ -4921,7 +4954,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0056",
@@ -4938,7 +4972,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0057",
@@ -4955,7 +4990,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0058",
@@ -4972,7 +5008,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0059",
@@ -4989,7 +5026,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0060",
@@ -5006,7 +5044,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0061",
@@ -5023,7 +5062,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0062",
@@ -5040,7 +5080,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0063",
@@ -5057,7 +5098,8 @@ export const MAPS = [
           "Williamson",
           "Hays"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0027",
@@ -5103,7 +5145,8 @@ export const MAPS = [
           "Williamson",
           "Travis"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0104",
@@ -5262,7 +5305,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0073",
@@ -5278,7 +5322,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0074",
@@ -5294,7 +5339,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0075",
@@ -5310,7 +5356,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0076",
@@ -5326,7 +5373,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0077",
@@ -5342,7 +5390,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0078",
@@ -5358,7 +5407,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0079",
@@ -5374,7 +5424,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0080",
@@ -5390,7 +5441,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0081",
@@ -5406,7 +5458,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0082",
@@ -5422,7 +5475,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0083",
@@ -5438,7 +5492,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0084",
@@ -5454,7 +5509,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0085",
@@ -5470,7 +5526,8 @@ export const MAPS = [
           "Travis",
           "Williamson"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0115",
@@ -5486,7 +5543,8 @@ export const MAPS = [
           "Williamson",
           "Travis"
         ],
-        "item_url": null
+        "item_url": null,
+        "pass_threshold": "simple majority"
       },
       {
         "feed_id": "0111",

@@ -11,6 +11,7 @@
 import { loadMaps, writeMap, writeIndex, loadBundle, flags } from './lib.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
 import { fingerprint, mapHash } from '../src/fingerprint.js';
+import { parseThreshold } from '../src/outcome.js';
 
 const KINDS = ['plurality', 'multi', 'measure', 'retention', 'rcv', 'rule_unknown'];
 const f = flags(process.argv.slice(2));
@@ -55,6 +56,12 @@ for (const m of maps) {
     const want = it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality';
     if (mc.kind !== want && mc.kind !== 'rule_unknown') err(m, `${w}: kind ${mc.kind}, the guide says ${want}`);
     if (want === 'multi' && Number(mc.seats) !== Number(it.vote_for)) err(m, `${w}: seats ${mc.seats}, the guide votes for ${it.vote_for}`);
+    if (want === 'measure') {
+      // The threshold the outcome rule uses comes from the guide item, copied into the map on --write.
+      if (f.write) mc.pass_threshold = it.pass_threshold || null;
+      if (!mc.pass_threshold && !mc.threshold) err(m, `${w}: a measure with no pass_threshold (run with --write to copy the guide's)`);
+      else if (!parseThreshold(mc.pass_threshold) && !mc.threshold) err(m, `${w}: pass_threshold "${mc.pass_threshold}" isn't a rule outcome.js can read`);
+    }
     const vals = Object.values(mc.choices || {});
     if (want === 'measure' || want === 'retention') {
       if (vals.filter((v) => v === 'yes').length !== 1 || vals.filter((v) => v === 'no').length !== 1) err(m, `${w}: a measure needs exactly one yes and one no choice`);
@@ -87,6 +94,7 @@ for (const m of maps) {
 
   const fp = await fingerprint(m, bundles);
   if (m.guide?.fingerprint && m.guide.fingerprint !== fp) warn(m, `fingerprint ${m.guide.fingerprint} is stale; the guide now gives ${fp}`);
+  if (f.write) writeMap(m);
   if (f.write && m.guide?.fingerprint !== fp) { m.guide = { ...m.guide, fingerprint: fp, made_from: bundleDir ? `local bundles ${bundleDir}` : `vote.kevinhg.com/data, read ${new Date().toISOString()}` }; writeMap(m); }
   console.log(`  fingerprint ${fp} · map hash ${await mapHash(m)}`);
 }

@@ -252,7 +252,8 @@
       "reaches": [
         "Dallas"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0055",
@@ -448,7 +449,8 @@
         "Kaufman",
         "Rockwall"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0057",
@@ -698,7 +700,8 @@
       "reaches": [
         "Dallas"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0086",
@@ -713,7 +716,8 @@
       "reaches": [
         "Dallas"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0087",
@@ -728,7 +732,8 @@
       "reaches": [
         "Dallas"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0088",
@@ -743,7 +748,8 @@
       "reaches": [
         "Dallas"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0089",
@@ -759,7 +765,8 @@
         "Dallas",
         "other counties"
       ],
-      "item_url": null
+      "item_url": null,
+      "pass_threshold": "simple majority"
     },
     {
       "feed_id": "0029",

@@ -31,6 +31,7 @@ for (const [id, routes] of Object.entries(FEEDS)) {
     const byId = new Map(read.contests.map((c) => [c.feed_id, c]));
     for (const mc of map.contests) for (const ch of byId.get(mc.feed_id).choices) assert.ok(ch.name in mc.choices, `${mc.feed_name}: ${ch.name}`);
     for (const s of Object.values(slices)) assert.equal(s.unmatched, undefined, 'no feed choice left unlisted');
+    for (const s of Object.values(slices)) if (s.measure) assert.equal(s.measure.threshold, 50, 'every measure carries its threshold (simple majority tonight)');
     const f = buildStateFile({ state: 'TX', maps: [map], srcs: { [id]: { record: { read, fetched: '2026-11-03T22:00:00.000Z' }, checked: false, sched: {} } }, mode: 'preview', now: '2026-11-03T22:00:00.000Z' });
     assert.deepEqual(checkFile(f), []);
   });

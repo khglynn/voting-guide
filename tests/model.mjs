@@ -1882,6 +1882,11 @@ function roundTrip(name, stCode, places, mutate) {
     const fh = fig.figureHTML();
     check('results figure: the key above the dots, shape classes on every dot, the counts, the sources folded under one link, a district question link', fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wp"/.test(fh) && /data-k="vz-src" aria-expanded="false"[^>]*>Where these numbers come from/.test(fh) && !/We checked/.test(fh) && /data-act="goto" data-q="/.test(fh), txt(fh).slice(0, 300));
     st.S.ui.open.add('vz-src');
+    {
+      // Codex: a source that's down keeps its numbers on the page, so its last good read still counts in "We checked".
+      const down = tx.sources.map((x) => (/williamson/i.test(x.id) ? { ...x, failing_since: '2026-11-04T03:50:00Z' } : x));
+      check('results: "We checked" stays at the oldest read even when that office is down now', rm.checkedAt(down.filter((x) => ['travis-tx', 'williamson-tx'].includes(x.id) || /travis|williamson/i.test(x.id))) === rm.checkedAt(tx.sources.filter((x) => /travis|williamson/i.test(x.id))), rm.checkedAt(down));
+    }
     check('results figure: opened, the sources say when we checked (the oldest read) and each office’s own time and words', /We checked 9:41 PM CT/.test(txt(fig.figureHTML())) && /Travis County updated: 9:35 PM CT\. “128 of 186 vote centers reporting\.”/.test(txt(fig.figureHTML())), txt(fig.figureHTML()).slice(-300));
     st.S.ui.open.delete('vz-src');
     st.S.b.picks = {};

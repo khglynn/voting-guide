@@ -82,7 +82,7 @@ function srcFoldHTML(): string {
   if (!srcs.length) return '';
   const k = 'vz-src';
   const open = isOpen(k);
-  return `<p class="vz-srcs"><button class="linkbtn" data-act="open" data-k="${k}" aria-expanded="${open}" data-fk="${k}">Where these numbers come from</button></p>${open ? `<div class="vz-src">${srcs.map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
+  return `<p class="vz-srcs"><button class="linkbtn" data-act="fig-src" data-k="${k}" aria-expanded="${open}" data-fk="${k}">Where these numbers come from</button></p>${open ? `<div class="vz-src">${srcs.map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}`;
 }
 /* The offices' own results pages for this ballot, as links: the voter's county first, then the state. */
 function officesHTML(): string {

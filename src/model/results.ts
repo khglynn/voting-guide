@@ -467,9 +467,10 @@ export function mainSource(): ResultsSourceEntry | null {
 export const sourceName = (id: string): string => R.file?.sources.find((s) => s.id === id)?.name || 'The election office';
 /* "We checked 10:13 PM CT": when our fetcher last read the sources, never the page's own load. With several sources,
    the oldest of their times, so it never claims a newer read than every one of them had (overnight: the run of each
-   county's time was a paragraph; each one's own update time is in the menu and the figure). */
+   county's time was a paragraph; each one's own update time is in the menu and the figure). A source that is down
+   still counts at its last good read, since its numbers stay on the page (Codex); the outage is said apart. */
 export function checkedAt(srcs = ballotSources()): string {
-  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only' && !sourceDown(s)).map((s) => s.fetched!).filter((t) => !Number.isNaN(Date.parse(t)));
+  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only').map((s) => s.fetched!).filter((t) => !Number.isNaN(Date.parse(t)));
   if (!read.length) return '';
   return fmtTime(read.sort((a, b) => Date.parse(a) - Date.parse(b))[0]);
 }

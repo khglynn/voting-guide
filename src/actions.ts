@@ -1029,6 +1029,11 @@ A['fig-hide'] = () => {
   focusFk('vz-hide');
 };
 /* A figure row's chevron: its races, each a link to its row, opened under it. */
+/* "Where these numbers come from" (overnight): the figure repaints alone, so an address being typed above stays (Codex). */
+A['fig-src'] = () => {
+  S.ui.open.has('vz-src') ? S.ui.open.delete('vz-src') : S.ui.open.add('vz-src');
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+};
 A['fig-row'] = (d) => {
   const k = `vz-${d.sec}`;
   S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);

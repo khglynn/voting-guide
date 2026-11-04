@@ -781,7 +781,7 @@ export function footResHTML(): string {
   // progress words, quoted. The zone is said once, on the first line.
   else {
     const noZ = (t: string): string => t.replace(/ [A-Z]T$/, '');
-    const src = f.srcs.map((x) => `<span class="fr-s">${x.down ? `Couldn’t reach ${esc(x.who)}; its ${esc(noZ(x.at) || 'last')} numbers` : `${esc(x.who)} updated ${esc(noZ(x.at) || 'at a time it doesn’t give')}${x.words ? `, “${esc(x.words)}”` : ''}`}</span>`).join(' ');
+    const src = f.srcs.map((x) => `<span class="fr-s">${x.down ? `Couldn’t reach ${esc(x.who)}. Showing its ${esc(noZ(x.at) || 'last')} numbers.` : `${x.at ? `${esc(x.who)} updated ${esc(noZ(x.at))}` : `${esc(x.who)} doesn’t give an update time`}${x.words ? ` · “${esc(x.words)}”` : ''}`}</span>`).join(' ');
     body = `<span class="fr-a"><b class="fr-w">${esc(f.word)}</b>${R.failed ? '<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Couldn’t check just now</span>' : f.at ? `<span class="fr-sep" aria-hidden="true"> · </span><span class="fr-at">Checked ${esc(f.at)}</span>` : ''}</span> ${refreshBtn('bar-refresh')}
       <span class="fr-b">${src}</span>`;
   }

@@ -472,6 +472,8 @@ export interface ResultsSourceEntry {
   /* when our fetcher last read the source successfully: the "We checked" time */
   fetched: string | null;
   next_due?: string; failing_since?: string; note?: string; checked?: boolean;
+  /* the source's own banner words, as it shows them ("Early Voting Totals Only", "Unofficial Results") */
+  labels?: string[];
 }
 export interface ResultsFile {
   election: string;

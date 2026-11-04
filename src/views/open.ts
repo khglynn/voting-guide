@@ -12,7 +12,7 @@ import { sourceLean, leanHTML, ext, clampP, escP, sampleBallot, isOpen, leadRest
 import { headsUp, headsHTML, addressCount } from './ledger';
 import { schoolOf } from '../model/address';
 import { mapSettles, seatless } from '../model/maps';
-import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, R } from '../model/results';
+import { resultOf, hasNumbers, resOpen, shortOf, leaders, pct0, pct1, fmtTime, sourceName, countyLabel, statusWord, labelWords, sourceDown, R } from '../model/results';
 import { apRaceURL } from '../model/news';
 import type { ItemResult } from '../types';
 
@@ -571,10 +571,10 @@ const officeLink = (r: { url: string; source: string }, name = sourceName(r.sour
 function sourceLineHTML(r: ItemResult): string {
   const s = R.file?.sources.find((x) => x.id === r.source);
   const name = s?.name || sourceName(r.source);
-  const down = s && (s.failing_since || s.status === 'failing');
+  const down = !!s && sourceDown(s);
   const at = r.updated || s?.updated || null;
   const when = down ? `Couldn’t reach ${name}. Showing its ${at ? `${fmtTime(at)} ` : 'last '}numbers.` : at ? `${name} updated: ${fmtTime(at)}.` : `${name}: source update time unavailable.`;
-  const words = r.reporting ? ` “${esc(r.reporting.replace(/\.$/, ''))}.”` : '';
+  const words = `${esc(labelWords(s))}${r.reporting ? ` “${esc(r.reporting.replace(/\.$/, ''))}.”` : ''}`;
   return `<p class="rs-src">${esc(when)}${words} ${officeLink(r, name)}</p>`;
 }
 /* A race across counties: every county's slice we hold, each with its own numbers, words and time, and the counties we

@@ -288,12 +288,19 @@ export function ballotSources(): ResultsSourceEntry[] {
   }
   return R.file!.sources.filter((s) => ids.has(s.id));
 }
-export const sourceDown = (s: ResultsSourceEntry): boolean => !!s.failing_since || s.status === 'failing';
+/* A source we couldn't reach. A link-only source (not checked yet, a link by design) is never "down" here: its rows are
+   links, and its fetch failing says nothing about numbers we show. */
+export const sourceDown = (s: ResultsSourceEntry): boolean => s.status !== 'link_only' && (!!s.failing_since || s.status === 'failing');
+/* The source's own banner words, quoted ("“Early Voting Totals Only.”"), or ''. */
+export const labelWords = (s: ResultsSourceEntry | undefined): string => {
+  const l = (s?.labels || []).filter((x) => typeof x === 'string' && x.trim()).map((x) => x.trim().replace(/\.$/, ''));
+  return l.length ? ` “${l.slice(0, 2).join('. ')}.”` : '';
+};
 export const sourceName = (id: string): string => R.file?.sources.find((s) => s.id === id)?.name || 'The election office';
 /* "We checked: 9:42 PM CT", or per source on a ballot across counties ("We checked Travis County: 9:42 PM CT ·
    Williamson County: 9:41 PM CT"). Each time is when our fetcher last read that source, never the page's own load. */
 export function checkedLine(srcs = ballotSources()): string {
-  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only');
+  const read = srcs.filter((s) => s.fetched && s.status !== 'link_only' && !sourceDown(s));
   if (!read.length) return '';
   const times = [...new Set(read.map((s) => fmtTime(s.fetched)))];
   if (times.length === 1) return `We checked: ${times[0]}`;
@@ -306,7 +313,7 @@ export function sourceLines(srcs = ballotSources()): string[] {
     if (sourceDown(s)) return `Couldn’t reach ${s.name}. Showing its ${s.updated ? `${fmtTime(s.updated)} ` : 'last '}numbers.`;
     if (s.status === 'refused') return `${s.name} isn’t letting us read its results. See its own page.`;
     const when = s.updated ? `${s.name} updated: ${fmtTime(s.updated)}.` : `${s.name}: source update time unavailable.`;
-    return `${when}${s.reporting ? ` “${s.reporting.replace(/\.$/, '')}.”` : ''}`;
+    return `${when}${labelWords(s)}${s.reporting ? ` “${s.reporting.replace(/\.$/, '')}.”` : ''}`;
   });
 }
 /* The newest source time we hold, for "No change since 9:35 PM CT". */

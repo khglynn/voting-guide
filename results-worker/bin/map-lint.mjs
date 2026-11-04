@@ -31,8 +31,10 @@ export function lintGuide(m, { bundles = {}, stateBundle = null, write = false }
       // A county's share of a statewide race (Kevin, Nov 4): allowed only as that county's slice, so it is never the
       // whole race, never summed, rides beneath the state's own count, and stands alone (named by county) only when the
       // state source is refused or a link. The state source keeps the race's link (`statewide: true`, src/merge.js).
-      if (mc.whole || !Array.isArray(mc.reaches) || !mc.reaches.includes(OTHER_COUNTIES) || mc.statewide !== true) {
-        err(`${w}: a statewide item in a county map must be that county's slice: reaches [${m.county}, "${OTHER_COUNTIES}"], statewide: true, never whole`);
+      // Exactly [county, "other counties"]: an extra name would reach the published `missing` list (Codex, Nov 4).
+      const exact = Array.isArray(mc.reaches) && mc.reaches.length === 2 && mc.reaches[0] === m.county && mc.reaches[1] === OTHER_COUNTIES;
+      if (mc.whole || !exact || mc.statewide !== true) {
+        err(`${w}: a statewide item in a county map must be that county's slice: reaches exactly ["${m.county}", "${OTHER_COUNTIES}"], statewide: true, never whole`);
         continue;
       }
       if (!guide.has(mc.item)) { err(`${w}: a statewide slice needs state-${m.state} in guide.places, so the map's fingerprint covers its candidates`); continue; }

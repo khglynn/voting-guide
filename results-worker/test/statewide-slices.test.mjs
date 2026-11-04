@@ -111,6 +111,9 @@ test('map lint: a statewide item in a county map passes only as that county\'s s
     'no "other counties"': { statewide: true, reaches: ['Philadelphia'] },
     'marked whole': { statewide: true, whole: true, reaches: ['Philadelphia', 'other counties'] },
     'not marked statewide': { reaches: ['Philadelphia', 'other counties'] },
+    'an extra county': { statewide: true, reaches: ['Philadelphia', 'other counties', 'Invented County'] },
+    'a duplicate': { statewide: true, reaches: ['Philadelphia', 'other counties', 'other counties'] },
+    'another county instead of this one': { statewide: true, reaches: ['Bucks', 'other counties'] },
   };
   for (const [why, slice] of Object.entries(bad)) assert.match(lint(lintMap(slice)).errors.join('\n'), /must be that county's slice/, why);
   assert.match(lint(lintMap({ statewide: true, reaches: ['Philadelphia', 'other counties'] }, ['philadelphia-pa'])).errors.join('\n'), /needs state-PA in guide\.places/);
@@ -128,7 +131,7 @@ test('the three maps carry their statewide items only as county slices', () => {
     assert.ok(m.guide.places.includes(`state-${m.state}`), `${id} lists its state's bundle`);
     for (const c of sw) {
       assert.equal(c.whole, undefined, `${id} ${c.item}`);
-      assert.ok(c.reaches.includes(m.county) && c.reaches.includes('other counties'), `${id} ${c.item}`);
+      assert.deepEqual(c.reaches, [m.county, 'other counties'], `${id} ${c.item}`);
     }
   }
 });

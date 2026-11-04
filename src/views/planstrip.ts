@@ -6,7 +6,7 @@
 import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
 import { esc, fmtDate, todayISO, host } from '../util';
-import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, type Step } from '../model/plan';
+import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, apStateURL, officialLines, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
@@ -26,24 +26,27 @@ export function planHTML(): string {
   const step = nextStep(h);
   planKey = `${step.phase}|${step.head.map((p) => p[0]).join('')}`;
   const head = step.head.map(([t, em]) => (em ? `<span class="d">${esc(t)}</span>` : esc(t))).join('');
-  const reg = registrationAlert(h);
+  // Once the polls close, no "register and vote today" under the results (review, Nov 3).
+  const reg = RESULTS_PHASES.includes(step.phase) ? null : registrationAlert(h);
   const regBtn = reg ? registerAction(h) : null;
   const open = isOpen('whatif');
   const check = h.registration.check_url;
   const sub = planSub(step);
+  const res = resultsActs(h, step);
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
-      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}
+      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}${res ? resultsNoteHTML(step) : ''}
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
-      ${countyActs(h, step)}
+      ${res || `${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
-        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>
+        ${check ? `<a class="pbtn line" href="${esc(check)}" target="_blank" rel="noopener">Check my registration</a>` : ''}</div>`}
       ${closestHTML(h, step)}${waitsHTML(h, step)}
-      ${check && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
-      <div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span></button>
+      ${check && !res && (h.situations || []).some((x) => x.id === 'lookup_cant_find') ? `<p class="plan-hint">Lookup can’t find you? <button class="linkbtn" data-act="whatif-sit" data-k="lookup_cant_find" data-fk="plan-cant-find">Try your name these ways</button></p>` : ''}
+      ${res ? `<div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates and ballot <span class="nw">help${CHEV}</span></span></button></div>
+      ${open ? nextFoldHTML(h) : ''}` : `<div class="plan-row"><button class="whatif-tog" data-act="open" data-k="whatif" aria-expanded="${open}" data-fk="whatif"><span>Dates, ID, and if you moved or lost <span class="nw">your ballot${CHEV}</span></span></button>
         <button class="voted" data-act="view" data-v="pass" data-voted="1" data-fk="voted">I already voted</button></div>
-      ${open ? whatIfHTML(h) : ''}
+      ${open ? whatIfHTML(h) : ''}`}
     </div></section>`;
 }
 
@@ -103,6 +106,8 @@ function closestHTML(h: HowTo, step: Step): string {
 const IN_PERSON: Step['phase'][] = ['early_before', 'early_open', 'election_day', 'election_day_next'];
 function planSub(step: Step): string[] {
   const h = S.ballot!.howto;
+  // Once the polls close, the strip says its button is the results (Kevin, Nov 3); the cheat sheet has no button.
+  if (RESULTS_PHASES.includes(step.phase)) return step.sub; // each results button names its office (GPT copy pass, Nov 3)
   if (isMailState(h) || !IN_PERSON.includes(step.phase)) return step.sub;
   const id = h.id_rules.required === 'photo' ? ['Bring a photo ID.'] : [];
   const hours = hoursLine(step);
@@ -298,5 +303,73 @@ function whatIfHTML(h: HowTo): string {
     </form>
     <div class="wi-res" id="wi-res">${whatIfBody(h)}</div>
     <p class="meta">Checked ${esc(h.last_verified || '')}. Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
+  </div>`;
+}
+
+const CHEV = '<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+/* Once the polls close (Kevin, Nov 3: results, not "voting has ended"; order and words from the GPT copy pass that
+   night): the head, one line on when the county posts (plan.resultsNotes), then the results buttons, each naming its
+   office ("Travis County results"): the most local page the ballot has (plan.localHowto), or on a ballot across
+   county lines whose county isn't known, one named button per county, the way the where-to-vote buttons split
+   (Pflugerville: Travis and Williamson), a county with no page of its own tonight (Atlanta's Fulton) getting the
+   state's, labeled as the state's. Then "Track your mail ballot", then AP's race calls for the state (Kevin chose AP
+   only), said plainly to be AP's. No registration check, no registration alert, no "I already voted": that's past. */
+export const RESULTS_PHASES: Step['phase'][] = ['results_counting', 'results_official'];
+function resultsActs(h: HowTo, step: Step): string {
+  if (!RESULTS_PHASES.includes(step.phase)) return '';
+  const a = (url: string, text: string, cls: string, attrs = ''): string => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener"${attrs}>${esc(text)}</a>`;
+  const p = step.primary, two = step.secondary;
+  const isRes = p?.look === 'results';
+  const stName = S.ballot?.stateName || h.state;
+  const rows = h.results?.sources || [];
+  const named = (url: string, fallback: string): string => { const r = rows.find((x) => x.results_url === url); return `${r ? r.label || r.name.replace(/\s*\(.*\)\s*$/, '') : fallback} results`; };
+  const links = isRes && (h.county_links || []).length > 1 ? h.county_links! : [];
+  const btns = links.length
+    ? links.map((l, i) => {
+      const own = l.lookups.results;
+      const label = own ? named(own, `${l.county} County`) : `${l.county} County, on ${stName}’s page`;
+      return a(own || p!.url, label, `pbtn ${i ? 'line' : 'gold'}`, `${i ? '' : ' data-fk="plan-results"'} data-county="${esc(l.county)}"`);
+    }).join('')
+    : p ? a(p.url, isRes ? named(p.url, h.results_source || stName) : p.label, 'pbtn gold', ' data-fk="plan-results"') : '';
+  const res = `<div class="plan-acts${links.length ? ' plan-ctys' : ''}">${btns}</div>`;
+  const track = two ? `<div class="plan-acts">${a(two.url, two.label, 'pbtn line', ' data-fk="plan-track"')}</div>` : '';
+  const calls = `<p class="plan-hint plan-calls"><a href="${esc(apStateURL(h.state, stName))}" target="_blank" rel="noopener" data-fk="plan-ap">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.</p>`;
+  return `${res}${track}${calls}`;
+}
+/* The one line on when the county posts, right under the head (plan.resultsNotes). */
+function resultsNoteHTML(step: Step): string {
+  return (step.notes || []).map((n) => `<p class="plan-sub plan-note">${esc(n)}</p>`).join('');
+}
+
+/* "Dates and ballot help" (the strip's fold once the polls close) and the What's next page share one body (GPT copy
+   pass, Nov 3): when the counts become official, as deadlines (plan.officialLines); "Check or fix your ballot" (the
+   questions that still apply after the election, then the election office); "Upcoming dates" (the dated steps after
+   Election Day the data holds as verified or sourced; build-data leaves computed and unconfirmed ones out), each with
+   its source; and the dates already past folded under "Earlier dates". "Takes office" and "Measures take effect" wait
+   for Phase 2. `forPrint`: plain text, nothing to tap. */
+const AFTER_SITS = ['check_ballot_counted', 'signature_problem', 'provisional_ballot'];
+export function nextBodyHTML(h: HowTo, forPrint = false, official = true): string {
+  const t = todayISO();
+  const rows = h.results?.next || [];
+  const up = rows.filter((r) => r.date >= t), past = rows.filter((r) => r.date < t);
+  const link = (url: string, text: string): string => (forPrint ? esc(text) : ext(url, text));
+  const list = (rs: typeof rows) => `<ol class="pdates nx-dates">${rs.map((r) => `<li><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.line)}${forPrint ? '' : ` ${ext(r.source, host(r.source))}`}</span></li>`).join('')}</ol>`;
+  const sits = AFTER_SITS.map((id) => sitsOf(h).find((x) => x.id === id)).filter((x): x is Situation => !!x);
+  const o = S.ballot ? officeOf() : null;
+  const fix = forPrint
+    ? sits.map((x) => `<li><b>${esc(x.question)}</b> ${esc(x.short || sentences(x.answer)[0] || '')}</li>`).join('') + (o ? `<li><b>Your election office:</b> ${esc(o.name)}${o.phone ? `, ${esc(o.phone)}` : ''}</li>` : '')
+    : sits.map((x) => discHTML(`wi-${x.id}`, x.question, sitBody(x))).join('') + (o ? discHTML('bx-office', 'Your election office', officeHTML(o)) : '');
+  const k = 'nx-earlier';
+  const earlier = !past.length ? '' : forPrint ? `<h3 class="wi-h">Earlier dates</h3>${list(past)}`
+    : `<p class="nx-more"><button class="pd-more" data-act="open" data-k="${k}" data-fk="${k}" aria-expanded="${isOpen(k)}">Earlier dates</button></p>${isOpen(k) ? list(past) : ''}`;
+  return `${official ? officialLines(h, t).map((x) => `<p class="wi-sub nx-official">${esc(x)}</p>`).join('') : ''}
+    ${fix ? `<h3 class="wi-h">Check or fix your ballot</h3><ul class="wi-list nx-fix">${fix}</ul>` : ''}
+    <h3 class="wi-h">Upcoming dates</h3>${up.length ? list(up) : `<p class="wi-sub">No more dates here we’re sure of. ${link(h.official_site.url, h.official_site.name)} has the official ones.</p>`}
+    ${earlier}`;
+}
+function nextFoldHTML(h: HowTo): string {
+  return `<div class="whatifs nexts" role="region" aria-label="Dates and ballot help">
+    ${nextBodyHTML(h)}
+    <p class="meta">Official info: ${ext(h.official_site.url, h.official_site.name)}.</p>
   </div>`;
 }

@@ -799,5 +799,7 @@
       "from": "2026-11-02",
       "text": "https://registration.dos.fl.gov/CheckVoterStatus"
     }
-  ]
+  ],
+  "results_url": "https://floridaelectionwatch.gov/",
+  "results_source": "Florida Division of Elections"
 }

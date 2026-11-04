@@ -99,6 +99,8 @@ function patchDoor(el: HTMLElement): boolean {
   t.innerHTML = mastHTML();
   const parts = t.content.querySelectorAll<HTMLElement>('[data-part]');
   if (!t.content.querySelector('#zip') || !parts.length) return false;
+  // The polls closing turns the first page from the plan to results (mast.ts data-door): the whole door, once.
+  if (t.content.querySelector<HTMLElement>('.front')?.dataset.door !== el.querySelector<HTMLElement>('.front')?.dataset.door) return false;
   const typed = (el.querySelector('#addr-in') as HTMLInputElement | null)?.value || '';
   // A part that hasn't changed stays as it is (the place line is a live region: no repeats).
   parts.forEach((p) => { const cur = el.querySelector(`[data-part="${p.dataset.part}"]`); if (cur && cur.outerHTML !== p.outerHTML) cur.replaceWith(p); });

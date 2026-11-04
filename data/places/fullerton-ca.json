@@ -126,7 +126,8 @@
  "lookups": {
   "early_in_person": "https://ocvote.gov/elections/vote-center-locations",
   "election_day": "https://ocvote.gov/elections/vote-center-locations",
-  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations"
+  "drop_box": "https://ocvote.gov/elections/ballot-drop-box-locations",
+  "results": "https://ocvote.gov/results/current-election-results"
  },
  "early_in_person": {
   "start": "2026-10-24",
@@ -185,5 +186,6 @@
    "name": "Orange County (CA): find my district",
    "url": "https://ocvote.gov/findmydistrict"
   }
- ]
+ ],
+ "results_source": "Orange County Registrar of Voters"
 }

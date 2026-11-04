@@ -267,7 +267,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -298,5 +299,6 @@
    "name": "LA County: interactive sample ballot",
    "url": "https://isb.lavote.gov/"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

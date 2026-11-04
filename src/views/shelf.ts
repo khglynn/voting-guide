@@ -15,6 +15,7 @@ import { S, type Shelf, type ShelfKind, type Along } from '../state';
 import type { Index } from '../types';
 import { ballotCoverage, askedWord, type Ask } from '../model/coverage';
 import { esc, fmtDate } from '../util';
+import { afterPolls } from '../model/plan';
 import { lastErrors, lastErrorId } from '../errors';
 import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL, UNDERWAY_SRC, shelfAttrs } from './common';
 
@@ -349,13 +350,18 @@ function howHTML(): string {
   const b = S.ballot;
   const idx = S.index;
   const asOf = idx ? Object.entries(idx.states).sort((x, y) => x[1].name.localeCompare(y[1].name)) : [];
-  const official = b ? [ext(b.howto.official_site.url, b.howto.official_site.name), b.howto.registration.check_url ? ext(b.howto.registration.check_url, 'Check your registration') : ''].filter(Boolean) : [];
+  // Once the polls close (Nov 3, results Phase 0): the official results pages, the state's and the county's, in place of
+  // the registration check, and the line on where results come from.
+  const after = !!b && afterPolls(b.howto);
+  const res = after ? [b!.stateHowto.results_url ? ext(b!.stateHowto.results_url, `Official results: ${b!.stateHowto.results_source || b!.stateName}`) : '', b!.howto.results_url && b!.howto.results_url !== b!.stateHowto.results_url ? ext(b!.howto.results_url, `Official results: ${b!.howto.results_source || 'your county'}`) : ''] : [];
+  const official = b ? [ext(b.howto.official_site.url, b.howto.official_site.name), ...(after ? res : [b.howto.registration.check_url ? ext(b.howto.registration.check_url, 'Check your registration') : ''])].filter(Boolean) : [];
   return `<div class="how-bd"><p>Built for family and friends. It never tells you how to vote. It shows what’s on your ballot in plain words, candidates in their own words, and who endorsed whom, with a source link for every claim.</p>
     <ul class="trust-list">
       <li><b>Neutral by default.</b> Newspapers and nonpartisan guides start on. Groups and parties stay off until you turn them on.</li>
       <li><b>Lean labels.</b> Each source sits on a five-step scale from left to right, set by outside ratings, its party or its stated mission, never by whom it endorses. Tap “Why this lean” to see the basis.</li>
       <li><b>Honest gaps.</b> “Took no stand” means a source looked and chose not to endorse. “No endorsement found” means we looked and found none. “Not checked yet” means we haven’t looked. We never fill gaps to look balanced.</li>
       <li><b>Judges.</b> A review comes from the official body or bar association that wrote it, worded as their rating, not ours.</li>
+      ${after ? '<li class="how-res"><b>Results.</b> Results links open election offices’ own pages. Their counts can change until they make results official. We never call a race.</li>' : ''}
       <li class="how-priv"><b>Your privacy.</b><ul class="how-sub">${PRIVACY.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></li>
       <li><b>Mistakes.</b> Open any race or measure and tap <button class="linkbtn" ${shelfAttrs({ kind: 'report', fk: 'how-report' })}>Report a problem</button>.</li>
     </ul>

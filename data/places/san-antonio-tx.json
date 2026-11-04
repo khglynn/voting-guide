@@ -330,7 +330,8 @@
   ],
   "lookups": {
     "early_in_person": "https://maps.bexar.org/ElectionWaitTimes/",
-    "election_day": "https://maps.bexar.org/ElectionWaitTimes/"
+    "election_day": "https://maps.bexar.org/ElectionWaitTimes/",
+    "results": "https://results.enr.clarityelections.com/TX/Bexar/127291/"
   },
   "sources": [
     {
@@ -341,5 +342,6 @@
       "name": "Bexar County: directory",
       "url": "https://elections.bexar.gov/directory.aspx"
     }
-  ]
+  ],
+  "results_source": "Bexar County Elections"
 }

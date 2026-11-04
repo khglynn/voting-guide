@@ -1,7 +1,7 @@
 /* The next step and its date, computed from the state file for every voting model.
    Never a countdown. Dates come only from data/states/{ST}.json; `?today=` overrides the
    clock for testing (util.todayISO). */
-import type { Dated, HelpAction, HowTo, Lookups, PlaceBundle } from '../types';
+import type { Dated, HelpAction, HowTo, Index, Lookups, NextDate, PlaceBundle, ResultsData, ResultsSource } from '../types';
 import { fmtDate, todayISO, daysBetween, nowOverride, zonedNow } from '../util';
 
 export type Part = [string, boolean]; // text, emphasized (a date or time)
@@ -11,7 +11,15 @@ export interface Step {
   /* `look`: which kind of where-to-vote tool the button opens, so a ballot across county lines can offer
      each county's (planstrip.ts) */
   primary: { label: string; url: string; look?: keyof Lookups } | null;
-  phase: 'closed' | 'polls_closed' | 'election_day' | 'mail' | 'early_before' | 'early_open' | 'election_day_next';
+  /* a second, quieter button (once the polls close: "Track your ballot" beside "Official results") */
+  secondary?: { label: string; url: string } | null;
+  /* Once the polls close (Nov 3): each results source's own line about when it posts (county first, then the state;
+     Election Day only, since they speak of "tonight"), then when the count becomes official, from
+     data/results-sources.json, shown as the data says them. */
+  notes?: string[];
+  /* `results_counting` from the moment the ballot's polls have closed in every zone it spans until every results
+     source on it has passed its sure official-by date; then `results_official`. */
+  phase: 'results_counting' | 'results_official' | 'election_day' | 'mail' | 'early_before' | 'early_open' | 'election_day_next';
 }
 
 export const isMailState = (h: HowTo): boolean => h.voting_model === 'all_mail' || h.voting_model === 'mail_to_all_plus_in_person';
@@ -157,8 +165,33 @@ function localActions(base: HowTo, h: HowTo, today: string): HowTo {
   return { ...h, situations: h.situations!.map((x) => (x.actions && x.actions.length ? { ...x, actions: x.actions.map(swap) } : x)) };
 }
 
+/* "Fulton (most of the city)" -> "Fulton": a place's county as the results data spells it. */
+const bareCounty = (c: string): string => c.replace(/\s*\(.*?\)\s*/g, ' ').trim();
+/* The ballot's results sources and dates (Nov 3): the county rows of its places, for the voter's county when the guide
+   knows it (an address in Caldwell on San Marcos's ballot gets none, and the state's stand), else for every county the
+   places name, main county first; then the state's row. Dates likewise, a county's own only for that county's voters,
+   in date order, each line once. */
+export function resultsFor(st: ResultsData | undefined, places: PlaceBundle[], county: string | null): ResultsData | undefined {
+  if (!places.length) return st;
+  const k = county ? countyKey(bareCounty(county)) : null;
+  const hit = (cs: string[] | undefined): boolean => !k || !cs || cs.some((c) => countyKey(bareCounty(c)) === k);
+  const order = places.flatMap((p) => (p.counties || []).map((c) => countyKey(bareCounty(c))));
+  const rank = (r: ResultsSource): number => { const i = order.findIndex((c) => (r.counties || []).some((x) => countyKey(x) === c)); return i < 0 ? order.length : i; };
+  const seen = new Set<string>();
+  const sources: ResultsSource[] = [];
+  for (const p of places) for (const r of p.results?.sources || []) if (!seen.has(r.id) && r.counties && r.counties.some((c) => hit([c]))) { seen.add(r.id); sources.push(r); }
+  sources.sort((a, b) => rank(a) - rank(b));
+  const lines = new Set<string>();
+  const next: NextDate[] = [...(st?.next || []), ...places.flatMap((p) => (p.results?.next || []).filter((r) => hit(r.counties)))]
+    .filter((r) => (lines.has(r.line) ? false : (lines.add(r.line), true)))
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  return { sources: [...sources, ...(st?.sources || [])], next };
+}
+
 function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): HowTo {
   let h = places.length ? { ...h0, zones: zonesFor(h0.state, places) } : h0;
+  const res = resultsFor(h0.results, places, county);
+  if (res) h = { ...h, results: res };
   // The county's own where-to-vote tools win over the state's statewide lookups, when every
   // place on the ballot points to the same one.
   const looks = places.map((p) => lookupsFor(p, county));
@@ -205,6 +238,15 @@ function placeHowto(h0: HowTo, places: PlaceBundle[], county: string | null): Ho
   // The county's live Election Day wait times (Nov 3), the same rule: only when every place on the ballot gives the same page.
   const lw = one('election_day_waits');
   if (lw) h = { ...h, election_day: { ...h.election_day, waits_url: lw } };
+  // The county's official results page (Nov 3), the same rule: the voter's county's, or a one-county place's, when
+  // every place on the ballot gives the same one. Otherwise the state's stands, and a ballot across county lines
+  // whose county isn't known lists each county's beside it (planstrip.ts countyActs).
+  const lr = one('results');
+  if (lr) {
+    const by = (u: string | undefined, n: string | undefined): string | null => (u === lr && n ? n : null);
+    const src = places.map((p) => by(p.lookups?.results, p.results_source) || (p.by_county || []).map((c) => by(c.lookups.results, c.results_source)).find(Boolean) || null).find(Boolean) || null;
+    h = { ...h, results_url: lr, results_source: src };
+  }
   // The county's own mail-ballot facts and opening time (Oct 29), when every place on the ballot gives the same ones:
   // the City of St. Louis's ballots go back only to its own Board, Nashville's polls open at 7.
   const same = <T>(xs: (T | undefined)[]): T | null => (xs.length && xs.every((x) => x != null) && new Set(xs.map((x) => JSON.stringify(x))).size === 1 ? xs[0]! : null);
@@ -241,8 +283,12 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
   const ep = h.early_in_person;
   const zones = h.zones || STATE_ZONES[h.state] || [];
   const { close, both } = closeOf(ed.polls_close, zones);
+  // Once the polls close (Kevin, Nov 3): results, not "voting has ended". The most local official results page the
+  // ballot has (localHowto), with "Track your ballot" beside it.
+  const results = h.results_url ? { label: 'Official results', url: h.results_url, look: 'results' as const } : null;
+  const track = mb.tracking_url ? { label: 'Track your mail ballot', url: mb.tracking_url } : null;
   if (t > h.election_date) {
-    return { phase: 'closed', head: [['Voting has closed. Thank you for taking part.', false]], sub: mb.tracking_url ? ['Mailed a ballot? You can check that it was counted.'] : [], primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null };
+    return { phase: 'results_counting', head: [['Results are still coming in.', false]], sub: ['Counting can take days, especially for mail ballots.'], notes: resultsNotes(h, t), primary: results || track, secondary: results ? track : null };
   }
   if (t === h.election_date) {
     const closesAt = clockMinutes(ed.polls_close);
@@ -254,11 +300,15 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     };
     const shut = closesAt != null && (zones.length ? zones.every(past) : past(null));
     if (!absolute && shut) {
+      // "Already in line?" only in the first hour after the close (GPT copy pass, Nov 3): the zone that closed last.
+      const since = (z: string | null): number => { const { date, min } = typeof now === 'number' ? { date: h.election_date, min: now } : zonedNow(z, at); return date === h.election_date ? min - closesAt! : Infinity; };
+      const fresh = (zones.length ? Math.min(...zones.map(since)) : since(null)) <= 60;
       return {
-        phase: 'polls_closed',
-        head: [[isMailState(h) ? 'Voting closed at ' : 'Polls closed at ', false], [close, true], ['. Already in line? Stay in line.', false]],
-        sub: ed.in_line_rule ? [ed.in_line_rule] : [],
-        primary: mb.tracking_url ? { label: 'Track your ballot', url: mb.tracking_url } : null,
+        phase: 'results_counting',
+        head: [['Results are rolling in.', false]],
+        sub: fresh ? ['Already in line? Stay in line. You still get to vote.'] : [],
+        notes: resultsNotes(h, t),
+        primary: results || track, secondary: results ? track : null,
       };
     }
     const sub: string[] = [];
@@ -333,6 +383,120 @@ export function nextStep(h: HowTo, t = todayISO(), absolute = false, now: number
     sub: [PLAIN_TIME.test(ed.polls_open || '') ? `Polls are open ${clock(ed.polls_open)} to ${close}.` : `Polls close at ${close}.`], primary: ed.lookup_url ? { label: 'Find your polling place', url: ed.lookup_url, look: 'election_day' } : null,
   };
 }
+/* Whether a ballot's polls have closed and the page is about results now (Nov 3): the strip's phase, which the bar,
+   the endcap, My plan (retitled What's next) and step 5 (Share the guide) all follow. */
+export const afterPolls = (h: HowTo | null | undefined): boolean => { if (!h) return false; const p = nextStep(h).phase; return p === 'results_counting' || p === 'results_official'; };
+/* Results are never called official in Phase 0 (GPT copy pass, Nov 3): a deadline passing proves nothing, so the strip
+   keeps counting and the dates read as deadlines (officialLines). `results_official` waits for a source's own word. */
+export function officialNow(_h: HowTo, _t = todayISO()): boolean {
+  return false;
+}
+/* The one line under the strip's head on Election Day (Nov 3): the county's own line about when it posts, or on a
+   statewide-only ballot the state's. A ballot across counties whose county isn't known shows none (each county's
+   button names its office). After Election Day, none: most say "tonight". */
+export function resultsNotes(h: HowTo, t: string): string[] {
+  if (t !== h.election_date) return [];
+  const rs = h.results?.sources || [];
+  const county = rs.filter((r) => r.kind === 'county');
+  if (county.length === 1) return [county[0].wait_line];
+  if (!county.length) return rs.filter((r) => r.kind === 'state').map((r) => r.wait_line).slice(0, 1);
+  return [];
+}
+/* When the counts become official (Nov 3), as deadlines, never as done: "Travis County makes its results official by
+   Nov 17." and "Texas makes statewide results official by Dec 7." Only the data's sure dates; once one has passed,
+   "Official results: check your election office." in its place, since a passed deadline proves nothing. With no sure
+   date, the plain rule. Shown in the strip's fold and on What's next. */
+export function officialLines(h: HowTo, t = todayISO()): string[] {
+  const rs = h.results?.sources || [];
+  const county = rs.filter((r) => r.kind === 'county');
+  const state = rs.find((r) => r.kind === 'state');
+  const d = (x: string): string => fmtDate(x, { weekday: false });
+  const sure = (r: ResultsSource): boolean => !!r.official_by && r.official_by_sure;
+  const out: string[] = [];
+  let passed = false;
+  if (county.length && county.every(sure)) {
+    const last = county.map((r) => r.official_by!).sort().pop()!;
+    if (t > last) passed = true;
+    else out.push(county.length === 1 ? `${county[0].label || county[0].name} makes its results official by ${d(last)}.` : `Each county makes its results official by ${d(last)} at the latest.`);
+  }
+  if (state && sure(state)) {
+    if (t > state.official_by!) passed = true;
+    else out.push(`${state.label || 'The state'} makes ${county.length ? 'statewide ' : ''}results official by ${d(state.official_by!)}.`);
+  }
+  if (passed) out.push('Official results: check your election office.');
+  if (!out.length) out.push('Counts can change until the election office makes results official.');
+  return out;
+}
+/* AP's results page for a state (Nov 3; Kevin chose AP only for race calls): the outlet's own state page, from the
+   URL pattern in the workbench's registry/news-links.json, checked for all 15 covered states Nov 3. AP calls races;
+   the guide doesn't, so this is a link out, labeled as theirs. */
+const AP_NAME: Record<string, string> = { DC: 'District of Columbia' }; // AP's own name where ours differs ("Washington, DC")
+export const apStateURL = (st: string, stateName: string): string => `https://apnews.com/projects/elections-2026/${(AP_NAME[st] || stateName).toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}-results/`;
+
+/* The first page once polls start closing (Kevin, Nov 3: lead with "results are rolling in", not "voting has
+   ended"). A state counts as closed by nextStep's own rule: past Election Day, or past its close in every zone it
+   spans, so a California voter at 4 PM Pacific is never told it's over. Null until the first state closes, and the
+   first page is then exactly as before. `now` as in nextStep. */
+export function pollsShut(electionDate: string, pollsClose: string, zones: string[], t = todayISO(), now: number | Date | null = nowOverride()): boolean {
+  if (t !== electionDate) return t > electionDate;
+  const closesAt = clockMinutes(pollsClose);
+  if (closesAt == null) return false;
+  const at = now instanceof Date ? now : new Date();
+  const past = (z: string | null): boolean => {
+    const { date, min } = typeof now === 'number' ? { date: electionDate, min: now } : zonedNow(z, at);
+    return date > electionDate || (date === electionDate && min >= closesAt);
+  };
+  return zones.length ? zones.every(past) : past(null);
+}
+const ZONE_WORD: Record<string, string> = { 'America/New_York': 'Eastern', 'America/Chicago': 'Central', 'America/Denver': 'Mountain', 'America/Boise': 'Mountain', 'America/Los_Angeles': 'Pacific' };
+/* "8 PM Pacific", "7 PM Central (8 PM Eastern)", "7 PM local time": a still-voting state's close on the first page. */
+function openUntil(pollsClose: string, zones: string[]): string {
+  const at = clock(pollsClose);
+  if (!at) return pollsClose;
+  if (/\b(Eastern|Central|Mountain|Pacific)\b/.test(pollsClose)) return pollsClose.replace(/\b\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?(?=\s|$|\))/gi, (m) => clock(m) || m);
+  if (zones.length > 1) return `${at} local time`;
+  return zones.length && ZONE_WORD[zones[0]] ? `${at} ${ZONE_WORD[zones[0]]}` : at;
+}
+/* One covered state on the first page: its official results page once its polls close (the state's own site when
+   we have no results page), or when voting there ends while it's still open; and, once every covered state has
+   closed, its mail-ballot tracker. */
+export interface ResultsRow { st: string; name: string; url: string | null; source: string | null; open: string | null; info: string | null; track: string | null }
+/* `after`: every covered state has closed, so the page is results, tracking and your saved ballot, not a plan. */
+export interface ResultsLead { after: boolean; head: string; sub: string[]; rows: ResultsRow[] }
+export function resultsLead(states: Index['states'] | null | undefined, t = todayISO(), now: number | Date | null = nowOverride()): ResultsLead | null {
+  const sts = Object.entries(states || {}).filter(([, s]) => s && s.polls_close && s.election_date);
+  if (!sts.length) return null;
+  const rows = sts.map(([st, s]) => {
+    const zones = STATE_ZONES[st] || [];
+    const shut = pollsShut(s.election_date, s.polls_close!, zones, t, now);
+    // Still voting: when it ends. One zone: in that zone ("8 PM Pacific"). A state across zones whose close names
+    // them (Tennessee's "7:00 PM Central (8:00 PM Eastern)") keeps both. One across zones whose close is one local
+    // time (Texas, Florida, Oregon) says "local time": naming the zone that closes last told Austin "7 PM Mountain",
+    // which reads as 8 PM Central (review, Nov 3).
+    const open = shut ? null : `Polls close at ${openUntil(s.polls_close!, zones)}.`;
+    const url = shut ? s.results_url || s.official_site?.url || null : null;
+    const source = shut ? (s.results_url ? s.results_source || null : s.official_site?.name || null) : null;
+    return { row: { st, name: s.name, url, source, open, info: shut ? null : s.official_site?.url || null, track: s.mail_tracking_url || null }, shut, voting: t <= s.election_date };
+  });
+  if (!rows.some((r) => r.shut)) return null;
+  const after = rows.every((r) => r.shut);
+  const today = rows.some((r) => r.voting);
+  return {
+    after,
+    head: today ? 'Results are rolling in.' : 'Results are still coming in.',
+    // While a covered state is still voting, its voters read this too, so nothing here says their polls are past
+    // (review, Nov 3: a California voter at 4:05 PM Pacific read "Already in line?").
+    sub: ['Official results for each state are below.', !today ? 'Counting can take days, especially for mail ballots.' : after ? 'Already in line? Stay in line. You still get to vote.' : 'Polls are still open in some states. In line when yours close? Stay in line. You still get to vote.'],
+    rows: rows.map(({ row }) => ({ ...row, track: after ? row.track : null })).sort((a, b) => a.name.localeCompare(b.name)),
+  };
+}
+/* Who calls races (Nov 3, Kevin: "links to the sites that do predictions", then AP only, on the design review): AP's
+   national page for this election, on the first page, which lists every state. A ballot's strip links AP's page for
+   its own state (apStateURL). Under the official results only, labeled plainly. Checked Nov 3, 2026. */
+export const RACE_CALLS: { name: string; url: string }[] = [
+  { name: 'AP', url: 'https://apnews.com/projects/elections-2026/' },
+];
+
 /* The state's suggested last day to mail a ballot, read from its own advice ("Monday, October
    26 is the last suggested day", "so by about Tuesday, October 27"). A weekday that doesn't
    match the date, or a date on or after Election Day, means the sentence isn't the one we

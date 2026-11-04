@@ -658,5 +658,7 @@
       "from": "2026-11-03",
       "text": "https://voterlookup.elections.ny.gov/"
     }
-  ]
+  ],
+  "results_url": "https://nyenr.elections.ny.gov/",
+  "results_source": "New York State Board of Elections"
 }

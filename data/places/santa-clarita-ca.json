@@ -150,7 +150,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -209,5 +210,6 @@
    "name": "U.S. Census Bureau: 2020 ZIP area (ZCTA) to block relationship file",
    "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_tabblock20_natl.txt"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

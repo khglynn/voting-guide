@@ -87,10 +87,11 @@ const BUILD_WARNINGS = [
   [/is ranked choice with no usable rank_up_to; using /, 'build-rank-guessed'],
   [/: short ".*" isn't words from the name; used /, 'build-candidate-short'],
   [/is missing yes_means or no_means/, 'measure-means'],
-  [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it/, 'build-dropped-help'],
+  [/: short is not one plain line; dropped it|: actions is not a list; dropped it|: an action needs a label and an http\(s\) URL; dropped it|: more than 2 actions; dropped the rest|: a gotcha has no text; dropped it|: registration\.register_url(_source)? is not an http\(s\) URL; dropped it|: sample_ballot_url is not an http\(s\) URL; dropped it|: results_url is not an http\(s\) URL; dropped it|: results_source is not text; dropped it/, 'build-dropped-help'],
   [/: early_in_person\.latest_end needs .*; dropped it/, 'date-order'],
   [/: heads_up (until_address|zips) is not .*; dropped the field/, 'heads-up-field'],
   [/: by_county .* sites ".*" names no usable data\/sites list for that county; dropped it/, 'sites-link-dropped'],
+  [/: official_by_sure with no certification_source URL; shown as no date/, 'results-date-unsourced'],
 ];
 const reportFile = path.join(ROOT, 'public', 'data', 'build-report.json');
 const BUNDLES = path.join(ROOT, 'public', 'data');
@@ -513,6 +514,37 @@ for (const id of siteIds) {
 all.places.forEach((p) => (p.by_county || []).forEach((c) => {
   if (c && c.sites != null && !siteIds.has(String(c.sites))) err('sites-link-missing', `places/${p.id} by_county ${c.county}: sites "${c.sites}" has no data/sites/${c.sites}.json`);
 }));
+
+/* ---------- results sources (Nov 3, Phase 0 of the results view) ----------
+   data/results-sources.json says where each state and county posts official results (build-data validates each row).
+   Every state needs its own row; every place needs a row for at least one of its counties (DC's wards read DC's
+   state row, since DC has no counties); a county the place lists with no row is reported (San Marcos's small parts
+   of Caldwell and Guadalupe); and a county row no place reads is an error, since it would never show. A place's own
+   results button (`lookups.results`, by_county too) that differs from its row's results_url is reported, so the
+   two copies are checked by a person. */
+{
+  const rf = path.join(DATA, 'results-sources.json');
+  const rows = fs.existsSync(rf) ? ((load(rf) || {}).sources || []) : [];
+  if (!rows.length) err('results-sources-missing', 'data/results-sources.json is missing or has no sources');
+  const ckR = (x) => String(x).replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+county$/i, '').trim().toLowerCase();
+  for (const s of all.states) if (s.state && !rows.some((r) => r.kind === 'state' && r.state === s.state)) err('results-state-missing', `${s.state}: no state row in data/results-sources.json`);
+  const read = new Set();
+  for (const p of all.places) {
+    const cty = rows.filter((r) => r.kind === 'county' && r.state === p.state);
+    if (!cty.length) continue;
+    const mine = (p.counties || []).map((c) => [c, cty.filter((r) => (r.counties || []).some((x) => ckR(x) === ckR(c)))]);
+    mine.forEach(([, rs]) => rs.forEach((r) => read.add(r.id)));
+    if (!mine.some(([, rs]) => rs.length)) err('results-place-missing', `places/${p.id}: none of its counties (${(p.counties || []).join(', ')}) has a row in data/results-sources.json`);
+    else mine.filter(([, rs]) => !rs.length).forEach(([c]) => warn('results-county-missing', `places/${p.id}: county "${c}" has no row in data/results-sources.json; the state's page stands in`));
+    const own = [[null, p.lookups && p.lookups.results], ...(p.by_county || []).map((c) => [c.county, c.lookups && c.lookups.results])];
+    for (const [c, u] of own) {
+      if (!u) continue;
+      const rs = c ? cty.filter((r) => (r.counties || []).some((x) => ckR(x) === ckR(c))) : mine.flatMap(([, x]) => x);
+      if (rs.length && !rs.some((r) => r.results_url === u)) warn('results-url-differs', `places/${p.id}${c ? ` ${c}` : ''}: results button ${u} differs from data/results-sources.json (${rs.map((r) => r.results_url).join(', ')})`);
+    }
+  }
+  for (const r of rows) if (r.kind === 'county' && !read.has(r.id)) err('results-row-unread', `results-sources ${r.id}: no place reads this county row (counties ${(r.counties || []).join(', ') || 'missing'})`);
+}
 
 /* ---------- report with the ratchet ---------- */
 // WARN rules ratchet by count. ERROR rules ratchet by exact finding, so fixing one old problem

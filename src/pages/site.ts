@@ -266,7 +266,12 @@ function whereHTML(h: HowTo, p: PlaceBundle | null): string {
   // The place's note before the office: an address right before "If you live in ..." reads to the address guard
   // (scripts/check-addresses.mjs) as someone's home, and tests/pages.mjs runs it over every built page.
   const note = p && p.notes ? `<p class="pg-note">${escP(p.notes)}</p>` : '';
-  return `${byCounty}<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${note}${officeHTML}`;
+  // Where official results post (Nov 3, results Phase 0): each results source on this page's ballot (its counties', then
+  // the state's) with its own line on when it posts, from data/results-sources.json, dated, since most say "tonight" and
+  // a page keeps it until the next deploy (Codex, Nov 3). Links only, never a number.
+  const res = h.results?.sources || [];
+  const resHTML = res.length ? `<p class="pg-resh"><b>Official results:</b></p><ul class="pg-res">${res.map((r) => `<li>${ext(r.results_url, r.name)}<span>On election night, Nov 3: ${esc(r.wait_line)}</span></li>`).join('')}</ul>` : '';
+  return `${byCounty}<ul class="pg-links">${links.map((l) => `<li>${l}</li>`).join('')}</ul>${resHTML}${note}${officeHTML}`;
 }
 /* The rule, and always what to do without an ID (Texas's "Photo ID required" has a way to vote without one); a state
    page also lists what counts. */
@@ -298,6 +303,7 @@ const PAGE_CSS = `
 .pg-links{display:grid;gap:4px;margin-top:10px}.pg-links a{display:inline-flex;min-height:40px;align-items:center}
 .pg-office,.pg-note,.pg p{margin-top:10px}
 .pg-ctys{display:grid;gap:6px;margin-top:6px}.pg-ctys a{display:inline-flex;min-height:40px;align-items:center}
+.pg-resh{margin-top:14px}.pg-res{display:grid;gap:6px;margin-top:6px}.pg-res a{display:inline-flex;min-height:40px;align-items:center}.pg-res span{display:block;font-size:15px;color:var(--ink-2)}
 .pg-bul{list-style:disc;padding-left:20px;margin-top:8px;display:grid;gap:4px}.pg-ways{font-size:15px;color:var(--ink-2);margin-top:4px}
 .pg-places{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px}.pg-places a{display:inline-flex;min-height:40px;align-items:center}
 .pg-foot{margin-top:36px;padding-top:14px;padding-bottom:40px;border-top:1px solid var(--rule-2)}

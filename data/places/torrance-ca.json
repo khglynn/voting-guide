@@ -110,7 +110,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.net/locations/vc",
   "election_day": "https://locator.lavote.net/locations/vc",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "situations": [
   {
@@ -189,5 +190,6 @@
    "name": "West Basin MWD: service area (Torrance not listed)",
    "url": "https://www.westbasinca.gov/about-west-basin/what-we-do/service-area"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

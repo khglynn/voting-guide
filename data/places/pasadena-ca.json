@@ -131,7 +131,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "early_in_person": {
   "start": "2026-10-24",
@@ -205,5 +206,6 @@
    "name": "Pasadena Unified: board district map and boundary descriptions (Feb 2, 2022)",
    "url": "https://resources.finalsite.net/images/v1707482714/pusdus/peeovbnon0h72varoxpm/pusdboardmembersgeographicsubdistrictmapandexhibit.pdf"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

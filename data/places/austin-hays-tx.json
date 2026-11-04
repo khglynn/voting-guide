@@ -171,7 +171,8 @@
   ],
   "lookups": {
     "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
-    "election_day": "https://www.vote.org/polling-place-locator/"
+    "election_day": "https://www.vote.org/polling-place-locator/",
+    "results": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
   },
   "by_county": [
     {
@@ -183,10 +184,12 @@
       ],
       "lookups": {
         "early_in_person": "https://updates.electionlink.net/widgets/haystx/2026-11-03/Early%20Voting%20Dashboard.html",
-        "election_day": "https://www.vote.org/polling-place-locator/"
+        "election_day": "https://www.vote.org/polling-place-locator/",
+        "results": "https://www.hayscountytx.gov/873/November-3-2026-General-Election"
       },
       "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-      "confidence": "verified"
+      "confidence": "verified",
+      "results_source": "Hays County Elections"
     }
   ],
   "sources": [
@@ -210,5 +213,6 @@
       "until_address": true,
       "source": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
     }
-  ]
+  ],
+  "results_source": "Hays County Elections"
 }

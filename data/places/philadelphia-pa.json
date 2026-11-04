@@ -130,7 +130,8 @@
   "lookups": {
     "early_in_person": "https://vote.phila.gov/about-us/satellite-election-offices/",
     "election_day": "https://atlas.phila.gov/voting",
-    "drop_box": "https://vote.phila.gov/ballot-drop-off/"
+    "drop_box": "https://vote.phila.gov/ballot-drop-off/",
+    "results": "https://vote.phila.gov/results/"
   },
   "sources": [
     {
@@ -149,5 +150,6 @@
       "name": "U.S. Census Bureau: county codes (Philadelphia County is 42101)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
-  ]
+  ],
+  "results_source": "Philadelphia City Commissioners"
 }

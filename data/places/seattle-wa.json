@@ -227,7 +227,8 @@
     "early_in_person": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "election_day": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/vote-centers",
     "drop_box": "https://kingcounty.gov/en/dept/elections/how-to-vote/ballots/return-my-ballot/ballot-drop-boxes",
-    "tracking": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo/ballottracker"
+    "tracking": "https://info.kingcounty.gov/kcelections/vote/myvoterinfo/ballottracker",
+    "results": "https://kingcounty.gov/en/dept/elections/results/2026/november-general"
   },
   "sources": [
     {
@@ -254,5 +255,6 @@
       "from": "2026-10-31",
       "text": "Seattle's vote centers, at City Hall and UW, are open: Saturday Oct 31, 10 AM to 4 PM; Monday Nov 2, 8:30 AM to 6 PM; Election Day, 8:30 AM to 8 PM. Any of King County's 24-hour drop boxes takes your ballot until 8 PM Nov 3."
     }
-  ]
+  ],
+  "results_source": "King County Elections"
 }

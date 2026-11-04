@@ -115,7 +115,8 @@
   ],
   "lookups": {
     "early_in_person": "https://www.baltimorecity.gov/boe/our-work/election-information/voting-centers",
-    "election_day": "https://voterservices.elections.maryland.gov/PollingPlaceSearch"
+    "election_day": "https://voterservices.elections.maryland.gov/PollingPlaceSearch",
+    "results": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3.html"
   },
   "sources": [
     {
@@ -142,5 +143,6 @@
       "name": "U.S. Census Bureau: county codes (Baltimore City is 24510)",
       "url": "https://www.census.gov/library/reference/code-lists/ansi.html"
     }
-  ]
+  ],
+  "results_source": "Maryland State Board of Elections"
 }

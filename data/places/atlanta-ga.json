@@ -198,7 +198,8 @@
       "zips": [],
       "lookups": {
         "early_in_person": "https://dcgis.dekalbcountyga.gov/earlyvoting",
-        "drop_box": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
+        "drop_box": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
+        "results": "https://app.enhancedvoting.com/results/public/dekalb-county-ga/elections/11032026GeneralAndSpecialElection"
       },
       "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections",
       "confidence": "verified",
@@ -208,7 +209,8 @@
         "phone": "404-298-4020",
         "hours": "Monday to Friday, 8 AM to 4:30 PM; longer during early voting and on Election Day.",
         "source": "https://dekalbcountyga.gov/departments/voter-registration-and-elections"
-      }
+      },
+      "results_source": "DeKalb County Voter Registration & Elections"
     }
   ],
   "dated": [

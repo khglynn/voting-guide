@@ -40,7 +40,8 @@
   "lookups": {
     "early_in_person": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
     "election_day": "https://www.sullivanny.gov/Departments/Elections/VotingTimes",
-    "drop_box": "https://www.sullivanny.gov/Departments/Elections/VotingTimes"
+    "drop_box": "https://www.sullivanny.gov/Departments/Elections/VotingTimes",
+    "results": "https://app.enhancedvoting.com/results/public/sullivan-county-ny/GE2026"
   },
   "sources": [
     {
@@ -73,5 +74,6 @@
     "lookup_url": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
     "source": "https://www.sullivanny.gov/Departments/Elections/EarlyVoting",
     "confidence": "verified"
-  }
+  },
+  "results_source": "Sullivan County Board of Elections"
 }

@@ -108,7 +108,8 @@
  "lookups": {
   "early_in_person": "https://locator.lavote.gov/locations/vc?culture=en",
   "election_day": "https://locator.lavote.gov/locations/vc?culture=en",
-  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en"
+  "drop_box": "https://locator.lavote.gov/locations/vbm?culture=en",
+  "results": "https://results.lavote.gov/"
  },
  "heads_up": [
   {
@@ -156,5 +157,6 @@
    "name": "Burbank Leader: Voters hit the polls ahead of Nov. 3 (Burbank vote centers and drop boxes)",
    "url": "https://outlooknewspapers.com/burbankleader/voters-hit-the-polls-ahead-of-nov-3/article_a543f406-c8f6-4d7d-95c6-d9a211a3c578.html"
   }
- ]
+ ],
+ "results_source": "Los Angeles County Registrar"
 }

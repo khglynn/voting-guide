@@ -7,8 +7,8 @@ import { S, encodeShare } from '../state';
 import { SECTIONS, entriesBySection, status, decisionItems, unclaimed, isMultiJudge, isRCV, isMaybe, ranksOf, ordinal } from '../ballot';
 import { esc, fmtDate, todayISO } from '../util';
 import { cheatTitle, pickLabel } from '../model/labels';
-import { nextStep } from '../model/plan';
-import { hoursLine } from './planstrip';
+import { nextStep, afterPolls, officialLines } from '../model/plan';
+import { hoursLine, nextBodyHTML } from './planstrip';
 import { sectionTitle } from './ledger';
 
 /* maybe: a pick on a race the ballot marks "Maybe on your ballot", so the sheet says "if it's on
@@ -77,7 +77,7 @@ export function essentials(t = todayISO()): string[] {
 export function saveLine(t = todayISO()): string | null {
   const b = S.ballot!;
   const phase = nextStep(b.howto, t).phase;
-  if (phase === 'closed' || phase === 'polls_closed') return null;
+  if (phase === 'results_counting' || phase === 'results_official') return null;
   const phones = b.howto.in_the_booth.phones;
   if (phones === 'prohibited') return 'Print it or write it down.';
   return phones === 'allowed' ? 'Print it, copy it, or take a screenshot.' : 'Print it or copy it.';
@@ -87,8 +87,43 @@ export function shareURL(): string {
   return `${location.origin}${location.pathname}#${encodeShare(S.ballot!, S.b)}`;
 }
 
+/* What's next (Nov 3, results Phase 0): once the polls close, My plan becomes the page of what still matters, the same
+   body as the strip's "Dates and ballot help" fold (planstrip.nextBodyHTML): "Check or fix your ballot" first, then
+   "Upcoming dates", earlier ones folded away, with when the counts become official in the box. Your picks aren't
+   repeated: they're on the ballot. Print and Copy as text give the same; the save link still holds your picks. "Takes
+   office" and "Measures take effect" wait for Phase 2. */
+function whatsNextText(): string {
+  const b = S.ballot!;
+  const h = b.howto;
+  const t = todayISO();
+  const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
+  const out = [`What's next: ${where}${S.b.zip ? ` ${S.b.zip}` : ''}, after the ${fmtDate(h.election_date, { weekday: false })} election.`, ...officialLines(h, t), ''];
+  const rows = h.results?.next || [];
+  const up = rows.filter((r) => r.date >= t), past = rows.filter((r) => r.date < t);
+  out.push('Upcoming dates:');
+  for (const r of up) out.push(`${fmtDate(r.date)}: ${r.line} (${r.source})`);
+  if (!up.length) out.push(`No more dates here we're sure of. See ${h.official_site.url}`);
+  if (past.length) { out.push('', 'Earlier dates:'); for (const r of past) out.push(`${fmtDate(r.date)}: ${r.line} (${r.source})`); }
+  out.push('', `Official info: ${h.official_site.url}`);
+  return out.join('\n');
+}
+function whatsNextHTML(forPrint: boolean): string {
+  const b = S.ballot!;
+  const h = b.howto;
+  const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
+  return `<div class="cheat">${forPrint ? '' : '<span class="sheet-top" aria-hidden="true"></span><span class="sheet-fill" aria-hidden="true"></span><span class="sheet-bot" aria-hidden="true"></span>'}
+    <div class="cheat-head"><p class="kick">${esc(where)}${S.b.zip ? `, ${esc(S.b.zip)}` : ''}. After the ${esc(fmtDate(h.election_date, { weekday: false }))} election</p>
+      ${forPrint ? '<h2 id="cs-p">What’s next</h2>' : '<div class="step cs-step"><span class="step-n" aria-hidden="true">4</span><h2 id="cs-h">What’s next</h2></div>'}
+      <p class="sub">Your ballot, and the dates that still matter.</p>
+      <div class="remind">${officialLines(h).map((x) => `<p>${esc(x)}</p>`).join('')}</div></div>
+    <div class="nexts nx-page">${nextBodyHTML(h, forPrint, false)}</div>
+    <p class="fine cs-foot">From Kevin’s 2026 voting guide. Official info: <span class="p-url" data-url="${esc(h.official_site.url)}">${esc(h.official_site.name)}</span>.</p>
+  </div>`;
+}
+
 export function cheatText(): string {
   const b = S.ballot!;
+  if (afterPolls(b.howto)) return whatsNextText();
   const where = b.places.length ? b.places.map((p) => p.label).join(' or ') : b.stateName;
   const out = [`My ballot: ${where}${S.b.zip ? ` ${S.b.zip}` : ''}. Election Day ${fmtDate(b.howto.election_date)}.`, ...essentials(), ''];
   let sec = '';
@@ -150,6 +185,7 @@ function tableHTML(forPrint: boolean): string {
 
 export function cheatHTML(forPrint = false): string {
   const b = S.ballot!;
+  if (afterPolls(b.howto)) return whatsNextHTML(forPrint);
   // The bar's own count (the one rule in ballot.ts), so the sheet and the bar never give two
   // totals for one ballot.
   const all = decisionItems();
@@ -188,7 +224,8 @@ export function cheatSectionHTML(): string {
         <a class="mini" href="mailto:?subject=${encodeURIComponent('My voting picks')}&body=${encodeURIComponent(body)}">Email it to me</a></div>
       <p class="fine">Text and email open your phone’s apps, if it has them. Copy always works. Your picks also save on this device.</p>
     </div>` : ''}
-    <div class="next-step screen-only"><p><b>Next:</b> help your friends and family make a plan.</p>
-      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Help friends vote</button></div>
+    ${afterPolls(S.ballot!.howto) ? `<div class="next-step screen-only"><p><b>Next:</b> send friends the results links.</p>
+      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Share the guide</button></div>` : `<div class="next-step screen-only"><p><b>Next:</b> help your friends and family make a plan.</p>
+      <button class="bigbtn" data-act="view" data-v="pass" data-fk="cs-pass">Help friends vote</button></div>`}
   </section>`;
 }

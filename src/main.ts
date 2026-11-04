@@ -5,11 +5,13 @@ import { S, readSaved, persist, parseShareHead, leftBallot } from './state';
 import { stepKey, planKey, nearKey, nearKeyNow } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
-import { RAIL_AT } from './views/ledger';
+import { RAIL_AT, barAfter, endcapHTML } from './views/ledger';
+import { afterPolls } from './model/plan';
 import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed, repaintNear } from './app';
 import { A, runAddress, sendReport, reportInput, srcSearch, clearSearch, wiSearch, clearWi } from './actions';
 import { startStats } from './stats';
+import { doorKey, doorShown } from './views/mast';
 
 /* ---------- taps: pointerdown for mouse and pen; touch fires on a still pointerup so a
    scroll never counts as a tap; click covers the keyboard. Tuned on phones in v2.1; the e2e
@@ -134,6 +136,18 @@ function refreshPlan(): void {
   localize(S.ballot, S.b.zip, S.ui.addrCounty); // a new day: text dated to change does (plan.applyDated)
   // The closest sites close at 7 PM Central on their own, even while a statewide ballot's step is still open.
   const nearMoved = S.ui.view === 'ballot' && nearKeyNow(S.ballot.howto) !== nearKey;
+  // The polls closing changes more than the strip (Nov 3, results Phase 0): the bar, the endcap, What's next and Share
+  // the guide follow the strip's phase, so they repaint with it, once. The bar remembers what it last painted, for
+  // whichever ballot is showing; the endcap is swapped alone, so an address being typed in the ballot head stays.
+  if (barAfter !== null && afterPolls(S.ballot.howto) !== barAfter) {
+    anchored(() => {
+      render(['plan', 'bar', 'cheat', 'pass']);
+      const cap = document.querySelector('#r-ballot .endcap');
+      if (cap) cap.outerHTML = endcapHTML();
+    });
+    repaintNear(); // the address box's "Closest vote center" line goes with the plan's block (a no-op without a lookup)
+    return;
+  }
   if (stepKey(S.ballot.howto) === planKey && S.ballot.howto.day === day && !nearMoved) return;
   // After a lookup this visit, the address box's "Closest vote center" line goes with the plan's block (app.ts).
   if (S.ui.addrPoint && S.ui.view === 'ballot') repaintNear(); else anchored(() => render(['plan']));
@@ -141,6 +155,14 @@ function refreshPlan(): void {
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshPlan(); });
 window.addEventListener('focus', refreshPlan);
 window.setInterval(refreshPlan, 60_000);
+/* The first page turns to results as each covered state's polls close (mast.ts): the same once-a-minute check,
+   repainting only when a state's line changes. render.ts keeps the ZIP box and what's typed in it. */
+function refreshDoor(): void {
+  if (S.view === 'ballot' || !S.index || doorShown === null) return;
+  if (doorKey() !== doorShown) render(['mast']);
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshDoor(); });
+window.setInterval(refreshDoor, 60_000);
 /* A save link pasted into a tab that already has the guide open changes only the hash. */
 window.addEventListener('hashchange', () => {
   const head = parseShareHead(location.hash);

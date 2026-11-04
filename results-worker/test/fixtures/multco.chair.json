@@ -1,0 +1,43 @@
+{
+  "config" : {
+    "contest" : "Multnomah_County_Commission__Chair_2026_11_02_17_20_54",
+    "date" : "2026-11-03",
+    "jurisdiction" : "Multnomah County",
+    "office" : "Multnomah County Commission, Chair",
+    "threshold" : "88488"
+  },
+  "results" : [ {
+    "round" : 1,
+    "tally" : {
+      "Julia Brim-Edwards" : "61575",
+      "Shannon Singleton" : "85119",
+      "Sharon Meieran" : "39214",
+      "Uncertified Write In" : "591"
+    },
+    "tallyResults" : [ {
+      "eliminated" : "Sharon Meieran",
+      "transfers" : {
+        "Julia Brim-Edwards" : "18095",
+        "Shannon Singleton" : "11946",
+        "exhausted" : "9173"
+      }
+    }, {
+      "eliminated" : "Uncertified Write In",
+      "transfers" : {
+        "Julia Brim-Edwards" : "139",
+        "Shannon Singleton" : "100",
+        "exhausted" : "352"
+      }
+    } ]
+  }, {
+    "round" : 2,
+    "tally" : {
+      "Julia Brim-Edwards" : "79809",
+      "Shannon Singleton" : "97165"
+    },
+    "tallyResults" : [ {
+      "elected" : "Shannon Singleton",
+      "transfers" : { }
+    } ]
+  } ]
+}

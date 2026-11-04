@@ -78,6 +78,11 @@ export async function read({ fetch, map, prevToken = null }) {
   for (const o of map.feed.offices || []) urls[`office${o}`] = `${api}/ElectionReturn/GetOfficeData?officeId=${encodeURIComponent(o)}&methodName=GetOfficeDetails&${q}`;
   const keys = Object.keys(urls);
   const got = await Promise.all(keys.map((k) => get(fetch, urls[k], { identity })));
+  // A refusal on any request wins over a plain error on another, so a refused source stops and is never retried
+  // (Codex, Nov 3: an HTTP 500 on the election list ahead of a 403 on the dashboard read as an error; Clarity already
+  // checks this way).
+  const no = got.find((r) => r.verdict === 'refused');
+  if (no) return { verdict: 'refused', error: no.error, status: no.status, url: no.url };
   const res = {};
   for (let i = 0; i < keys.length; i++) {
     const r = got[i];

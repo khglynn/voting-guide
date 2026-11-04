@@ -10,6 +10,7 @@ import * as ca_sos from '../src/adapters/ca_sos.js';
 import * as lvt from '../src/adapters/lvt.js';
 import * as ev from '../src/adapters/enhanced_voting.js';
 import * as orsos from '../src/adapters/or_sos.js';
+import * as pa from '../src/adapters/pa_dos.js';
 import { checkFile } from '../src/checks.js';
 import { checkHash } from '../src/fingerprint.js';
 import { runTick } from '../src/tick.js';
@@ -384,4 +385,15 @@ test('fetch: a body past 16 MB, or a gzip that unpacks past 32 MB, is an error w
   assert.equal(r.body.length, 6_600_000);
   r = await get(resp(new Uint8Array(gzipSync(Buffer.from('{"a":1}')))), 'https://results.example/x');
   assert.deepEqual(r.json, { a: 1 });
+});
+
+test('Pennsylvania: a refusal on any request wins over a plain error on another, so it is never retried', async () => {
+  const PA_ROUTES = { GetElectionList: 'pa-dos.electionlist.json', GetDashboardMessage: 'pa-dos.dashboard.json', GetSummaryData: 'pa-dos.summary.json', 'officeId=11&': 'pa-dos.office11.json', 'officeId=12&': 'pa-dos.office12.json', 'officeId=13&': 'pa-dos.office13.json' };
+  const map = mapFor('results-PA');
+  const r = await pa.read({ fetch: fakeFetch({ ...PA_ROUTES, GetElectionList: { status: 500, body: 'oops' }, GetDashboardMessage: { status: 403, body: '' } }), map });
+  assert.equal(r.verdict, 'refused');
+  assert.match(r.error, /403/);
+  const e = await pa.read({ fetch: fakeFetch({ ...PA_ROUTES, GetElectionList: { status: 500, body: 'oops' } }), map });
+  assert.equal(e.verdict, 'error', 'a plain error alone still backs off and retries');
+  assert.equal((await pa.read({ fetch: fakeFetch(PA_ROUTES), map })).verdict, 'ok');
 });

@@ -94,6 +94,15 @@ export function parseIndex(html) {
   return { name, date: isoDate(dateWords ? dateWords.toLowerCase().replace(/^\w/, (c) => c.toUpperCase()) : null), status, created };
 }
 
+/* Official only from a label made wholly of these words, with CERTIFIED or OFFICIAL among them: "CERTIFIED RESULTS"
+   or "OFFICIAL ELECTION RESULTS" is, while "UNCERTIFIED RESULTS" and "UNOFFICIAL ELECTION NIGHT RESULTS" never are
+   (Codex, Nov 3: "UNCERTIFIED" matched /CERTIFIED/, and official stops a source's polling for good). */
+const OFFICIAL_WORDS = new Set(['CERTIFIED', 'OFFICIAL', 'FINAL', 'GENERAL', 'ELECTION', 'RESULTS', 'AND']);
+export function isOfficial(status) {
+  const words = String(status || '').toUpperCase().replace(/[^A-Z]+/g, ' ').trim().split(' ').filter(Boolean);
+  return words.length > 0 && words.every((w) => OFFICIAL_WORDS.has(w)) && words.some((w) => w === 'CERTIFIED' || w === 'OFFICIAL');
+}
+
 const sentence = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : s);
 
 export async function read({ fetch, map, prevToken = null }) {
@@ -130,7 +139,7 @@ export async function read({ fetch, map, prevToken = null }) {
     raw,
     election: { id: ix.name, name: ix.name, date: ix.date },
     source_status: null,
-    official: /CERTIFIED|OFFICIAL RESULTS/i.test(ix.status || '') && !/UNOFFICIAL/i.test(ix.status || ''),
+    official: isOfficial(ix.status),
     source_updated: times.length ? times[times.length - 1] : null,
     reporting: rep,
     labels: ix.status ? [sentence(ix.status)] : [],

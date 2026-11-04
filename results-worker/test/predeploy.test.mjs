@@ -157,3 +157,12 @@ test('CA SOS: a House race or measure that changes while the governor\'s line st
   assert.equal(r.unchanged, undefined);
   assert.notEqual(r.changed_token, first.changed_token);
 });
+
+test('NYC: "Uncertified" is never official; only a label made of official words is', async () => {
+  for (const s of ['UNCERTIFIED RESULTS', 'UNOFFICIAL ELECTION NIGHT RESULTS', 'UNOFFICIAL RESULTS', 'NOT CERTIFIED', 'CERTIFICATION PENDING', 'PRELIMINARY OFFICIAL RESULTS', '']) assert.equal(nyc.isOfficial(s), false, s);
+  for (const s of ['CERTIFIED RESULTS', 'OFFICIAL RESULTS', 'OFFICIAL ELECTION RESULTS', 'Certified Results', 'FINAL CERTIFIED RESULTS']) assert.equal(nyc.isOfficial(s), true, s);
+  const routes = (label) => ({ ...nycRoutes(), '/index.html': { status: 200, body: fixture('nyc.index.html').replace('UNOFFICIAL ELECTION NIGHT RESULTS', label) } });
+  assert.equal((await nyc.read({ fetch: fakeFetch(routes('UNCERTIFIED RESULTS')), map: mapFor('results-NY-nyc') })).official, false);
+  assert.equal((await nyc.read({ fetch: fakeFetch(routes('CERTIFIED RESULTS')), map: mapFor('results-NY-nyc') })).official, true);
+  assert.equal((await nyc.read({ fetch: fakeFetch(nycRoutes()), map: mapFor('results-NY-nyc') })).official, false, "tonight's own label");
+});

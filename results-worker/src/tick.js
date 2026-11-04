@@ -2,14 +2,14 @@
    Portable: `store` is KV-shaped ({get, put, delete}), `archive` R2-shaped ({put}), `fetch` is handed in, so the same
    code runs under the Worker and under node (bin/run.mjs, the tests).
    KV keys: `stop` (any value stops every tick), `sched:2026-11-03` (each source's schedule), `src:{id}` (its last good
-   read), `checked:{id}` (the map hash its first-run check passed against), `preview:{ST}` and `file:{ST}` (the files),
+   read), `checked:{id}` (the map's checkHash its first-run check passed against), `preview:{ST}` and `file:{ST}` (the files),
    `alert:{source}:{reason}` (ping dedupe). R2: `raw/{source}/{fetched}-{hash}.json` for every changed read,
    `files/{ST}/{generated}.json` and `latest/{ST}.json` for every published file. */
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
 import { nextEntry, dueSources, clampElectionNight } from './schedule.js';
-import { fingerprint, mapHash } from './fingerprint.js';
+import { fingerprint, mapHash, checkHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
 export const SCHED_KEY = `sched:${ELECTION}`;
@@ -122,7 +122,7 @@ export async function publishState({ state, maps, store, archive, sched, now, pi
   const mine = maps.filter((m) => m.state === state);
   const srcs = {};
   for (const m of mine) {
-    const want = await mapHash(m);
+    const want = await checkHash(m);
     srcs[m.id] = {
       record: await readJson(store, `src:${m.id}`),
       sched: sched.sources[m.id] || {},

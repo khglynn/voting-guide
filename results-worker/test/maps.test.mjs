@@ -40,3 +40,16 @@ for (const [id, routes] of Object.entries(FEEDS)) {
     assert.deepEqual(checkFile(f), []);
   });
 }
+
+test('Texas runoff-rule races never get a winner from us: Austin council, Austin ISD, appraisal districts and every local board', () => {
+  const austin = mapFor('travis-tx').contests.filter((c) => /^tx-austin-council-(1|3|5|8|9)$/.test(c.item));
+  assert.equal(austin.length, 5);
+  const local = /^tx-(austin-council-|pflugerville-council-|aisd-|acc-|eaa-|[a-z]+isd-|[a-z]+cad-place-)/;
+  for (const id of ['travis-tx', 'williamson-tx', 'bexar-tx', 'harris-county-tx', 'dallas-county-tx']) {
+    for (const c of mapFor(id).contests.filter((x) => local.test(x.item) && x.kind !== 'measure')) {
+      assert.equal(c.kind, 'rule_unknown', `${id} ${c.item}`);
+      assert.equal(c.checked_kind, 'plurality', `${id} ${c.item}`);
+      assert.ok(c.rule_note, `${id} ${c.item}`);
+    }
+  }
+});

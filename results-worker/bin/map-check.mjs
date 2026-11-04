@@ -10,7 +10,7 @@
    Usage: node bin/map-check.mjs [--write] [--offline] [--bundles ../public/data] [map ids...] */
 import { loadMaps, writeMap, writeIndex, loadBundle, flags } from './lib.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
-import { fingerprint, mapHash } from '../src/fingerprint.js';
+import { fingerprint, mapHash, checkHash } from '../src/fingerprint.js';
 import { parseThreshold } from '../src/outcome.js';
 
 const KINDS = ['plurality', 'multi', 'measure', 'retention', 'rcv', 'rule_unknown'];
@@ -62,6 +62,9 @@ for (const m of maps) {
     if (m.scope !== 'state' && ['federal', 'state'].includes(it.level) && Array.isArray(mc.reaches) && mc.reaches.length === 1 && !mc.reaches_source) warn(m, `${w}: a ${it.level} race marked wholly inside ${m.county}; confirm`);
     const want = it.kind === 'measure' ? 'measure' : it.is_retention ? 'retention' : it.ranked_choice ? 'rcv' : (it.vote_for || 1) > 1 ? 'multi' : 'plurality';
     if (mc.kind !== want && mc.kind !== 'rule_unknown') err(m, `${w}: kind ${mc.kind}, the guide says ${want}`);
+    // `checked_kind` keeps an earlier check standing (src/fingerprint.js checkHash): only on a race the guide calls
+    // plurality, now marked rule_unknown, with a rule_note saying why.
+    if (mc.checked_kind !== undefined && (mc.kind !== 'rule_unknown' || mc.checked_kind !== 'plurality' || want !== 'plurality' || !mc.rule_note)) err(m, `${w}: checked_kind is only for a plurality race marked rule_unknown, with a rule_note`);
     if (want === 'multi' && Number(mc.seats) !== Number(it.vote_for)) err(m, `${w}: seats ${mc.seats}, the guide votes for ${it.vote_for}`);
     if (want === 'measure') {
       // The threshold the outcome rule uses comes from the guide item, copied into the map on --write.
@@ -106,7 +109,7 @@ for (const m of maps) {
   if (m.guide?.fingerprint && m.guide.fingerprint !== fp) warn(m, `fingerprint ${m.guide.fingerprint} is stale; the guide now gives ${fp}`);
   if (f.write) writeMap(m);
   if (f.write && m.guide?.fingerprint !== fp) { m.guide = { ...m.guide, fingerprint: fp, made_from: bundleDir ? `local bundles ${bundleDir}` : `vote.kevinhg.com/data, read ${new Date().toISOString()}` }; writeMap(m); }
-  console.log(`  fingerprint ${fp} · map hash ${await mapHash(m)}`);
+  console.log(`  fingerprint ${fp} · map hash ${await mapHash(m)} · check hash ${await checkHash(m)}`);
 }
 if (f.write && errors === 0) { writeIndex(loadMaps()); console.log('wrote src/maps.gen.js'); }
 if (errors) { console.log(`${errors} error(s)`); process.exit(1); }

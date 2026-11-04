@@ -2,7 +2,8 @@
    The source's own declared outcome comes first. Otherwise a written rule per kind of contest, on unrounded counts:
    plurality, most votes (a tie gives none); multi, the top `seats` (a tie at the cut gives none); measure, yes against
    the guide's own threshold; retention, the state's threshold. Ranked choice before its final round, a rule we don't
-   hold, and any race whose voters span sources: none (plan call 6). */
+   hold, and any race whose voters span sources: none (plan call 6). A race needing more than half the votes (a city
+   council or school board with a runoff rule, an appraisal district board) is mapped `rule_unknown` and gets none. */
 
 /* Retention thresholds by state, where they aren't a simple majority. */
 export const RETENTION = { IL: { pct: 60, inclusive: true } };
@@ -35,7 +36,9 @@ export function outcomeFor({ status, kind, seats = 1, candidates = [], measure =
   if (status !== 'complete' && status !== 'official') return null;
   if (spanning) return null;
   if (unmatchedVotes > 0) return null;
-  if (declared && declared.length && (kind === 'plurality' || kind === 'multi')) return { winners: declared.slice() };
+  // A feed's declared winners count only when they fill the seats exactly: a county that flags both runoff candidates
+  // for one seat is saying "no winner yet", not two winners (overnight review, Nov 3).
+  if (declared && declared.length && (kind === 'plurality' || kind === 'multi')) return declared.length === (Number(seats) || 1) ? { winners: declared.slice() } : null;
   switch (kind) {
     case 'plurality': {
       if (candidates.length === 0) return null;

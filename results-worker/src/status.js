@@ -1,6 +1,6 @@
 /* GET /results/status: one line per source for Kevin's phone. Plain HTML, no script, times in Central. */
 import { loadSched } from './tick.js';
-import { mapHash } from './fingerprint.js';
+import { checkHash } from './fingerprint.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const ct = (iso) => (iso ? new Date(iso).toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '');
@@ -12,7 +12,7 @@ export async function statusPage({ store, maps, now = new Date().toISOString() }
   for (const m of maps) {
     const s = sched.sources[m.id] || {};
     const rec = await store.get(`src:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
-    const checked = (await store.get(`checked:${m.id}`)) === (await mapHash(m));
+    const checked = (await store.get(`checked:${m.id}`)) === (await checkHash(m));
     const fp = sched.meta?.fp?.[m.id];
     const blockedRec = await store.get(`blocked:${m.id}`).then((v) => (v ? JSON.parse(v) : null));
     const read = rec?.read || blockedRec?.read;

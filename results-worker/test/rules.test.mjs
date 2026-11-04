@@ -27,6 +27,37 @@ test('outcome: nothing while counting; plurality, ties, multi, measures, retenti
   assert.deepEqual(outcomeFor({ status: 'complete', kind: 'plurality', candidates: [c('A', 9), c('B', 1)], declared: ['B'] }), { winners: ['B'] }, "the source's declared outcome first");
 });
 
+test('outcome: a feed\'s declared winners count only when they fill the seats; rule_unknown never gets one', () => {
+  const done = { status: 'complete', kind: 'plurality', candidates: [c('A', 38), c('B', 30), c('C', 32)] };
+  assert.deepEqual(outcomeFor({ ...done, declared: ['B'] }), { winners: ['B'] });
+  assert.equal(outcomeFor({ ...done, declared: ['A', 'C'] }), null, 'both runoff candidates flagged for one seat is not two winners');
+  assert.equal(outcomeFor({ status: 'official', kind: 'multi', seats: 3, candidates: [c('A', 9), c('B', 7), c('C', 3)], declared: ['A', 'B'] }), null);
+  assert.equal(outcomeFor({ ...done, kind: 'rule_unknown' }), null);
+  assert.equal(outcomeFor({ ...done, kind: 'rule_unknown', declared: ['A'] }), null);
+});
+
+test('file: a runoff-rule race (rule_unknown) shows its complete count with no winner', () => {
+  const MAP = { ...MAP_A, contests: MAP_A.contests.map((x) => (x.item === 'mayor' ? { ...x, kind: 'rule_unknown', checked_kind: 'plurality', rule_note: 'needs more than half' } : x)) };
+  const read = readOf([{ feed_id: '1', feed_name: 'Mayor', choices: [{ name: 'SMITH, ANN', votes: 380 }, { name: 'JONES, BO', votes: 320 }, { name: 'Write-in', votes: 0 }, { name: 'Cy Doe (W)', votes: 0 }] }, { feed_id: '2', feed_name: 'Prop A', choices: [{ name: 'FOR', votes: 7 }, { name: 'AGAINST', votes: 3 }] }], { source_status: 'final_flag' });
+  const f = buildStateFile({ state: 'TX', maps: [MAP], srcs: { 'a-tx': { record: { read, fetched: '2026-11-05T00:00:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-05T00:00:00.000Z' });
+  assert.equal(f.items.mayor.status, 'complete');
+  assert.equal(f.items.mayor.final, null);
+  assert.equal(f.items.mayor.total_votes, 700);
+  assert.deepEqual(checkFile(f), []);
+});
+
+test('check hash: marking a plurality race rule_unknown with checked_kind keeps its first-run check; nothing else does', async () => {
+  const { mapHash, checkHash } = await import('../src/fingerprint.js');
+  const was = await mapHash(MAP_A);
+  const mark = (extra) => ({ ...MAP_A, contests: MAP_A.contests.map((x) => (x.item === 'mayor' ? { ...x, ...extra } : x)) });
+  assert.equal(await checkHash(MAP_A), was);
+  assert.equal(await checkHash(mark({ kind: 'rule_unknown', checked_kind: 'plurality', rule_note: 'needs more than half' })), was);
+  assert.notEqual(await mapHash(mark({ kind: 'rule_unknown', checked_kind: 'plurality', rule_note: 'x' })), was, 'the full map hash still moves, so the source is re-read');
+  assert.notEqual(await checkHash(mark({ kind: 'rule_unknown' })), was, 'without checked_kind it needs a new check');
+  assert.notEqual(await checkHash(mark({ kind: 'rule_unknown', checked_kind: 'plurality', rule_note: 'x', choices: { 'SMITH, ANN': 'Bo Jones' } })), was, 'any other change needs a new check');
+  assert.notEqual(await checkHash({ ...MAP_A, contests: MAP_A.contests.map((x) => (x.item === 'prop-a' ? { ...x, kind: 'rule_unknown', checked_kind: 'plurality' } : x)) }), was, 'only a race that was plurality');
+});
+
 test('ladder: 1, 5, 15, 60 minutes; complete every 6 hours; official stops; refused stops', () => {
   const t0 = '2026-11-05T02:00:00.000Z';
   const at = (m) => new Date(Date.parse(t0) + m * 60000).toISOString();

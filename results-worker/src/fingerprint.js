@@ -19,7 +19,19 @@ export async function fingerprint(map, bundles) {
   return (await sha256(guideLines(map, bundles).join('\n'))).slice(0, 16);
 }
 
-/* The hash a `checked:{id}` key must hold: the whole map, keys sorted. A changed map needs a new check. */
+/* The whole map, keys sorted: a changed map is read in full again on its next poll. */
 export async function mapHash(map) {
   return (await sha256(stable(map))).slice(0, 16);
+}
+
+/* The hash a `checked:{id}` key must hold. A changed map needs a new check, with one exception: a plurality race later
+   marked `rule_unknown` (a runoff rule, Nov 3) carries `checked_kind: "plurality"` and a `rule_note`, and hashes as it
+   was. For a plurality race that change only takes away the outcome word; every number is built the same way, so the
+   first-run check of its numbers still stands. bin/map-check.mjs allows `checked_kind` only in that one shape. */
+export async function checkHash(map) {
+  const m = JSON.parse(JSON.stringify(map));
+  for (const c of m.contests || []) {
+    if (c.kind === 'rule_unknown' && c.checked_kind === 'plurality') { c.kind = 'plurality'; delete c.checked_kind; delete c.rule_note; }
+  }
+  return mapHash(m);
 }

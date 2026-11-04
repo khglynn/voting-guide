@@ -850,7 +850,9 @@ export const MAPS = [
         "feed_id": "0081",
         "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 1",
         "item": "tx-bcad-place-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Susan Bayne": "Susan Bayne",
@@ -865,7 +867,9 @@ export const MAPS = [
         "feed_id": "0082",
         "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 2",
         "item": "tx-bcad-place-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Leticia Anguiano": "Leticia Anguiano",
@@ -880,7 +884,9 @@ export const MAPS = [
         "feed_id": "0083",
         "feed_name": "Bexar Central Appraisal District  - For Director, Place No. 3",
         "item": "tx-bcad-place-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Jon Melendez": "Jon Melendez"
@@ -1521,7 +1527,9 @@ export const MAPS = [
         "feed_id": "0136",
         "feed_name": "For Director Edwards Aquifer Authority District 1",
         "item": "tx-eaa-district-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Joey Groff": "Joey Groff",
@@ -1554,7 +1562,9 @@ export const MAPS = [
         "feed_id": "0112",
         "feed_name": "For Trustee, Place 1 Edgewood Independent School District",
         "item": "tx-edgewoodisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Dora Maldonado": "Dora Maldonado",
@@ -1569,7 +1579,9 @@ export const MAPS = [
         "feed_id": "0113",
         "feed_name": "For Trustee, Place 2 Edgewood Independent School District",
         "item": "tx-edgewoodisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Frank Espinosa": "Frank Espinosa",
@@ -1585,7 +1597,9 @@ export const MAPS = [
         "feed_id": "0114",
         "feed_name": "For Trustee, Place 3 Edgewood Independent School District",
         "item": "tx-edgewoodisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Dorothy Borjas": "Dorothy Borjas",
@@ -1600,7 +1614,9 @@ export const MAPS = [
         "feed_id": "0115",
         "feed_name": "For Trustee, Place 6 Edgewood Independent School District",
         "item": "tx-edgewoodisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Michael Valdez": "Michael Valdez",
@@ -2006,7 +2022,9 @@ export const MAPS = [
         "feed_id": "0126",
         "feed_name": "Somerset Independent School District - For Trustee, Single Member District 3",
         "item": "tx-somersetisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Albert Herrera": "Albert Herrera",
@@ -2022,7 +2040,9 @@ export const MAPS = [
         "feed_id": "0127",
         "feed_name": "Somerset Independent School District - For Trustee, Single Member District 7",
         "item": "tx-somersetisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Robert A. Casias": "Robert A. Casias",
@@ -4588,7 +4608,9 @@ export const MAPS = [
         "feed_id": "9390",
         "feed_name": "HCAD, Director, At-Large, Place 1",
         "item": "tx-hcad-place-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Kathy Blueford-Daniels": "Kathy Blueford-Daniels",
@@ -4603,7 +4625,9 @@ export const MAPS = [
         "feed_id": "9391",
         "feed_name": "HCAD, Director, At-Large, Place 2",
         "item": "tx-hcad-place-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Chris Ehlinger": "Chris Ehlinger",
@@ -4619,7 +4643,9 @@ export const MAPS = [
         "feed_id": "9392",
         "feed_name": "HCAD, Director, At-Large, Place 3",
         "item": "tx-hcad-place-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Cris Moses": "Cris Moses",
@@ -5054,7 +5080,9 @@ export const MAPS = [
         "feed_id": "9445",
         "feed_name": "Huffman ISD, School Trustee, Position #1",
         "item": "tx-huffmanisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Lori Freshour": "Lori Freshour",
@@ -5070,7 +5098,9 @@ export const MAPS = [
         "feed_id": "9446",
         "feed_name": "Huffman ISD, School Trustee, Position #2",
         "item": "tx-huffmanisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Luke Hight": "Luke Hight"
@@ -5085,7 +5115,9 @@ export const MAPS = [
         "feed_id": "9447",
         "feed_name": "Huffman ISD, School Trustee, Position #3",
         "item": "tx-huffmanisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Ray Burt": "Ray Burt"
@@ -5100,7 +5132,9 @@ export const MAPS = [
         "feed_id": "9406",
         "feed_name": "Klein ISD, Position 1",
         "item": "tx-kleinisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Linda Ford": "Linda Ford",
@@ -5115,7 +5149,9 @@ export const MAPS = [
         "feed_id": "9407",
         "feed_name": "Klein ISD, Position 2",
         "item": "tx-kleinisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Doug James": "Doug James"
@@ -5129,7 +5165,9 @@ export const MAPS = [
         "feed_id": "9439",
         "feed_name": "New Caney Independent School District, Trustee, Position 1",
         "item": "tx-newcaneyisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Elizabeth Rhoden Harrell": "Elizabeth Rhoden Harrell"
@@ -5144,7 +5182,9 @@ export const MAPS = [
         "feed_id": "9440",
         "feed_name": "New Caney Independent School District, Trustee, Position 2",
         "item": "tx-newcaneyisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Ryan Schurdell": "Ryan Schurdell",
@@ -5300,7 +5340,9 @@ export const MAPS = [
         "feed_id": "9426",
         "feed_name": "Sheldon ISD, Trustee Position 4",
         "item": "tx-sheldonisd-trustee-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Tiffany Lockett": "Tiffany Lockett",
@@ -5315,7 +5357,9 @@ export const MAPS = [
         "feed_id": "9435",
         "feed_name": "Sheldon ISD, Trustee Position 5",
         "item": "tx-sheldonisd-trustee-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Pamela Smith Robinson": "Pamela Smith Robinson",
@@ -5332,7 +5376,9 @@ export const MAPS = [
         "feed_id": "9436",
         "feed_name": "Sheldon ISD, Trustee Position 6",
         "item": "tx-sheldonisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Devora Myles": "Devora Myles"
@@ -5346,7 +5392,9 @@ export const MAPS = [
         "feed_id": "9437",
         "feed_name": "Sheldon ISD, Trustee Position 7",
         "item": "tx-sheldonisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Erika Martinez": "Erika Martinez",
@@ -5377,7 +5425,9 @@ export const MAPS = [
         "feed_id": "9394",
         "feed_name": "Spring ISD, Trustee Election, Position 4",
         "item": "tx-springisd-trustee-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Winford Adams, Jr.": "Winford Adams, Jr."
@@ -5391,7 +5441,9 @@ export const MAPS = [
         "feed_id": "9395",
         "feed_name": "Spring ISD, Trustee Election, Position 5",
         "item": "tx-springisd-trustee-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Rhonda Newhouse": "Rhonda Newhouse",
@@ -5406,7 +5458,9 @@ export const MAPS = [
         "feed_id": "9412",
         "feed_name": "Tomball Independent School District, Position 1",
         "item": "tx-tomballisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Lacey Derrington": "Lacey Derrington",
@@ -5422,7 +5476,9 @@ export const MAPS = [
         "feed_id": "9413",
         "feed_name": "Tomball Independent School District, Position 2",
         "item": "tx-tomballisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Michael Pratt": "Michael Pratt"
@@ -5437,7 +5493,9 @@ export const MAPS = [
         "feed_id": "9414",
         "feed_name": "Tomball Independent School District, Position 3",
         "item": "tx-tomballisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Joseph Ferguson": "Joseph Ferguson",
@@ -5453,7 +5511,9 @@ export const MAPS = [
         "feed_id": "9415",
         "feed_name": "Tomball Independent School District, Position 4",
         "item": "tx-tomballisd-trustee-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Mark Lewandowski": "Mark Lewandowski"
@@ -8207,7 +8267,9 @@ export const MAPS = [
         "feed_id": "0128",
         "feed_name": "ACC, Trustee, Place 1",
         "item": "tx-acc-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Dana Walker": "Dana Walker",
@@ -8226,7 +8288,9 @@ export const MAPS = [
         "feed_id": "0129",
         "feed_name": "ACC, Trustee, Place 2",
         "item": "tx-acc-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Gigi Edwards Bryant": "Gigi Edwards Bryant"
@@ -8244,7 +8308,9 @@ export const MAPS = [
         "feed_id": "0130",
         "feed_name": "ACC, Trustee, Place 3",
         "item": "tx-acc-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Trevor Hale": "Trevor Hale",
@@ -8263,7 +8329,9 @@ export const MAPS = [
         "feed_id": "0136",
         "feed_name": "Austin ISD Board of Trustees, At-Large Position 9",
         "item": "tx-aisd-at-large-9",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
         "seats": 1,
         "choices": {
           "Cynthia Soliz": "Cynthia Soliz",
@@ -8279,7 +8347,9 @@ export const MAPS = [
         "feed_id": "0132",
         "feed_name": "Austin ISD Board of Trustees, District 1",
         "item": "tx-aisd-district-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
         "seats": 1,
         "choices": {
           "Cheryl Bradley": "Cheryl Bradley",
@@ -8294,7 +8364,9 @@ export const MAPS = [
         "feed_id": "0133",
         "feed_name": "Austin ISD Board of Trustees, District 4",
         "item": "tx-aisd-district-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
         "seats": 1,
         "choices": {
           "Edward M. Bradfield": "Edward M. Bradfield",
@@ -8310,7 +8382,9 @@ export const MAPS = [
         "feed_id": "0134",
         "feed_name": "Austin ISD Board of Trustees, District 6",
         "item": "tx-aisd-district-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
         "seats": 1,
         "choices": {
           "Sarah Dille": "Sarah Dille",
@@ -8326,7 +8400,9 @@ export const MAPS = [
         "feed_id": "0135",
         "feed_name": "Austin ISD Board of Trustees, District 7",
         "item": "tx-aisd-district-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
         "seats": 1,
         "choices": {
           "Jimmy Counihan": "Jimmy Counihan",
@@ -8341,7 +8417,9 @@ export const MAPS = [
         "feed_id": "0069",
         "feed_name": "City of Austin, City Council Member, District 1",
         "item": "tx-austin-council-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
         "seats": 1,
         "choices": {
           "Steven Brown": "Steven Brown",
@@ -8360,7 +8438,9 @@ export const MAPS = [
         "feed_id": "0070",
         "feed_name": "City of Austin, City Council Member, District 3",
         "item": "tx-austin-council-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
         "seats": 1,
         "choices": {
           "Eduardo 'Lalito' Romero": "Eduardo “Lalito” Romero",
@@ -8378,7 +8458,9 @@ export const MAPS = [
         "feed_id": "0071",
         "feed_name": "City of Austin, City Council Member, District 5",
         "item": "tx-austin-council-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
         "seats": 1,
         "choices": {
           "Liz Brink": "Liz Brink",
@@ -8396,7 +8478,9 @@ export const MAPS = [
         "feed_id": "0072",
         "feed_name": "City of Austin, City Council Member, District 8",
         "item": "tx-austin-council-8",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
         "seats": 1,
         "choices": {
           "Jeffery Bowen": "Jeffery Bowen",
@@ -8412,7 +8496,9 @@ export const MAPS = [
         "feed_id": "0073",
         "feed_name": "City of Austin, City Council Member, District 9",
         "item": "tx-austin-council-9",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
         "seats": 1,
         "choices": {
           "Rich Heyman": "Rich Heyman",
@@ -8642,7 +8728,9 @@ export const MAPS = [
         "feed_id": "0138",
         "feed_name": "Del Valle ISD Board of Trustees, Single Member District 3",
         "item": "tx-dvisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Charles Burton": "Charles Burton",
@@ -8657,7 +8745,9 @@ export const MAPS = [
         "feed_id": "0139",
         "feed_name": "Del Valle ISD Board of Trustees, Single Member District 5",
         "item": "tx-dvisd-trustee-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Jason Sierra": "Jason Sierra"
@@ -8671,7 +8761,9 @@ export const MAPS = [
         "feed_id": "0140",
         "feed_name": "Del Valle ISD Board of Trustees, Single Member District 7",
         "item": "tx-dvisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Josh Castro": "Josh Castro",
@@ -8686,7 +8778,9 @@ export const MAPS = [
         "feed_id": "0141",
         "feed_name": "Del Valle ISD Board of Trustees, Single Member District 8",
         "item": "tx-dvisd-trustee-8",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Robert 'Bobby' Hidrogo": "Robert “Bobby” Hidrogo",
@@ -8701,7 +8795,9 @@ export const MAPS = [
         "feed_id": "0142",
         "feed_name": "Del Valle ISD Board of Trustees, Single Member District 9",
         "item": "tx-dvisd-trustee-9",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Mike Randolph": "Mike Randolph",
@@ -8828,7 +8924,9 @@ export const MAPS = [
         "feed_id": "0144",
         "feed_name": "Leander ISD Board of Trustees, Place 1",
         "item": "tx-lisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Serenity Coats": "Serenity Coats",
@@ -8844,7 +8942,9 @@ export const MAPS = [
         "feed_id": "0145",
         "feed_name": "Leander ISD Board of Trustees, Place 2",
         "item": "tx-lisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Meg Dean": "Meg Dean",
@@ -8861,7 +8961,9 @@ export const MAPS = [
         "feed_id": "0146",
         "feed_name": "Leander ISD Board of Trustees, Place 6",
         "item": "tx-lisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Laura Marques": "Laura Marques"
@@ -8876,7 +8978,9 @@ export const MAPS = [
         "feed_id": "0147",
         "feed_name": "Leander ISD Board of Trustees, Place 7",
         "item": "tx-lisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Jason Embry": "Jason Embry",
@@ -8892,7 +8996,9 @@ export const MAPS = [
         "feed_id": "0151",
         "feed_name": "Pflugerville ISD Board of Trustees, Place 6",
         "item": "tx-pfisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Nicole Toran": "Nicole Toran",
@@ -8908,7 +9014,9 @@ export const MAPS = [
         "feed_id": "0152",
         "feed_name": "Pflugerville ISD Board of Trustees, Place 7",
         "item": "tx-pfisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Chevonne Lorigo-Johst": "Chevonne Lorigo-Johst"
@@ -8923,7 +9031,9 @@ export const MAPS = [
         "feed_id": "0106",
         "feed_name": "City of Pflugerville, Council Member, Place 2",
         "item": "tx-pflugerville-council-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "David Rogers": "David Rogers",
@@ -8939,7 +9049,9 @@ export const MAPS = [
         "feed_id": "0107",
         "feed_name": "City of Pflugerville, Council Member, Place 4",
         "item": "tx-pflugerville-council-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Trent Barlow": "Trent Barlow",
@@ -8956,7 +9068,9 @@ export const MAPS = [
         "feed_id": "0108",
         "feed_name": "City of Pflugerville, Council Member, Place 6",
         "item": "tx-pflugerville-council-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Oscar Mitchell": "Oscar R. Mitchell"
@@ -9226,7 +9340,9 @@ export const MAPS = [
         "feed_id": "0153",
         "feed_name": "Round Rock ISD Board of Trustees, Place 3",
         "item": "tx-rrisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Ayaan Moledina": "Ayaan Moledina",
@@ -9244,7 +9360,9 @@ export const MAPS = [
         "feed_id": "0154",
         "feed_name": "Round Rock ISD Board of Trustees, Place 4",
         "item": "tx-rrisd-trustee-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Alicia Markum": "Alicia Markum"
@@ -9259,7 +9377,9 @@ export const MAPS = [
         "feed_id": "0155",
         "feed_name": "Round Rock ISD Board of Trustees, Place 5",
         "item": "tx-rrisd-trustee-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Miriam Arora": "Miriam Arora",
@@ -9275,7 +9395,9 @@ export const MAPS = [
         "feed_id": "0156",
         "feed_name": "Round Rock ISD Board of Trustees, Place 6",
         "item": "tx-rrisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Fabian Cuero": "Fabian Cuero",
@@ -9331,7 +9453,9 @@ export const MAPS = [
         "feed_id": "0066",
         "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 1",
         "item": "tx-tcad-place-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Skyler A. Korgel": "Skyler A. Korgel"
@@ -9345,7 +9469,9 @@ export const MAPS = [
         "feed_id": "0067",
         "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 2",
         "item": "tx-tcad-place-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Brian Peña": "Brian Peña"
@@ -9359,7 +9485,9 @@ export const MAPS = [
         "feed_id": "0068",
         "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 3",
         "item": "tx-tcad-place-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Yvonne Muñoz": "Yvonne Muñoz",
@@ -10014,7 +10142,9 @@ export const MAPS = [
         "feed_id": "0093",
         "feed_name": "Austin Community College District Board of Trustees, Place 1",
         "item": "tx-acc-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Dana Walker": "Dana Walker",
@@ -10033,7 +10163,9 @@ export const MAPS = [
         "feed_id": "0094",
         "feed_name": "Austin Community College District Board of Trustees, Place 2",
         "item": "tx-acc-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Gigi Edwards Bryant": "Gigi Edwards Bryant"
@@ -10051,7 +10183,9 @@ export const MAPS = [
         "feed_id": "0095",
         "feed_name": "Austin Community College District Board of Trustees, Place 3",
         "item": "tx-acc-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Trevor Hale": "Trevor Hale",
@@ -10299,7 +10433,9 @@ export const MAPS = [
         "feed_id": "0104",
         "feed_name": "Leander Independent School District Board of Trustees, Place 1",
         "item": "tx-lisd-trustee-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Serenity Coats": "Serenity Coats",
@@ -10315,7 +10451,9 @@ export const MAPS = [
         "feed_id": "0105",
         "feed_name": "Leander Independent School District Board of Trustees, Place 2",
         "item": "tx-lisd-trustee-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Meg Dean": "Meg Dean",
@@ -10332,7 +10470,9 @@ export const MAPS = [
         "feed_id": "0106",
         "feed_name": "Leander Independent School District Board of Trustees, Place 6",
         "item": "tx-lisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Laura Marques": "Laura Marques"
@@ -10347,7 +10487,9 @@ export const MAPS = [
         "feed_id": "0107",
         "feed_name": "Leander Independent School District Board of Trustees, Place 7",
         "item": "tx-lisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Jason Embry": "Jason Embry",
@@ -10363,7 +10505,9 @@ export const MAPS = [
         "feed_id": "0109",
         "feed_name": "Pflugerville Independent School District, Board of Trustees, Place 6",
         "item": "tx-pfisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Nicole Toran": "Nicole Toran",
@@ -10379,7 +10523,9 @@ export const MAPS = [
         "feed_id": "0110",
         "feed_name": "Pflugerville Independent School District, Board of Trustees, Place 7",
         "item": "tx-pfisd-trustee-7",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Chevonne Lorigo-Johst": "Chevonne Lorigo-Johst"
@@ -10394,7 +10540,9 @@ export const MAPS = [
         "feed_id": "0069",
         "feed_name": "City of Pflugerville Council Member, Place 2",
         "item": "tx-pflugerville-council-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "David Rogers": "David Rogers",
@@ -10410,7 +10558,9 @@ export const MAPS = [
         "feed_id": "0070",
         "feed_name": "City of Pflugerville Council Member, Place 4",
         "item": "tx-pflugerville-council-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Trent Barlow": "Trent Barlow",
@@ -10427,7 +10577,9 @@ export const MAPS = [
         "feed_id": "0071",
         "feed_name": "City of Pflugerville Council Member, Place 6",
         "item": "tx-pflugerville-council-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Oscar R. Mitchell": "Oscar R. Mitchell"
@@ -10697,7 +10849,9 @@ export const MAPS = [
         "feed_id": "0111",
         "feed_name": "Round Rock Independent School District Board of Trustees, Place 3",
         "item": "tx-rrisd-trustee-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Ayaan Moledina": "Ayaan Moledina",
@@ -10715,7 +10869,9 @@ export const MAPS = [
         "feed_id": "0112",
         "feed_name": "Round Rock Independent School District Board of Trustees, Place  4",
         "item": "tx-rrisd-trustee-4",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Alicia Markum": "Alicia Markum"
@@ -10730,7 +10886,9 @@ export const MAPS = [
         "feed_id": "0113",
         "feed_name": "Round Rock Independent School District Board of Trustees, Place 5",
         "item": "tx-rrisd-trustee-5",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Miriam Arora": "Miriam Arora",
@@ -10746,7 +10904,9 @@ export const MAPS = [
         "feed_id": "0114",
         "feed_name": "Round Rock Independent School District Board of Trustees, Place 6",
         "item": "tx-rrisd-trustee-6",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
         "seats": 1,
         "choices": {
           "Fabian Cuero": "Fabian Cuero",
@@ -10868,7 +11028,9 @@ export const MAPS = [
         "feed_id": "0051",
         "feed_name": "Williamson Central Appraisal District Board of Directors, Place 1",
         "item": "tx-wcad-place-1",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Hope Hisle-Piper": "Hope Hisle-Piper",
@@ -10883,7 +11045,9 @@ export const MAPS = [
         "feed_id": "0052",
         "feed_name": "Williamson Central Appraisal District Board of Directors, Place 2",
         "item": "tx-wcad-place-2",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Stephan Zaparolli": "Stephan Zaparolli"
@@ -10897,7 +11061,9 @@ export const MAPS = [
         "feed_id": "0053",
         "feed_name": "Williamson Central Appraisal District Board of Directors, Place 3",
         "item": "tx-wcad-place-3",
-        "kind": "plurality",
+        "kind": "rule_unknown",
+        "checked_kind": "plurality",
+        "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
         "seats": 1,
         "choices": {
           "Mason Moses": "Mason Moses"

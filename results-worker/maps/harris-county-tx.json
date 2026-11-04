@@ -1491,7 +1491,9 @@
       "feed_id": "9390",
       "feed_name": "HCAD, Director, At-Large, Place 1",
       "item": "tx-hcad-place-1",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
       "seats": 1,
       "choices": {
         "Kathy Blueford-Daniels": "Kathy Blueford-Daniels",
@@ -1506,7 +1508,9 @@
       "feed_id": "9391",
       "feed_name": "HCAD, Director, At-Large, Place 2",
       "item": "tx-hcad-place-2",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
       "seats": 1,
       "choices": {
         "Chris Ehlinger": "Chris Ehlinger",
@@ -1522,7 +1526,9 @@
       "feed_id": "9392",
       "feed_name": "HCAD, Director, At-Large, Place 3",
       "item": "tx-hcad-place-3",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
       "seats": 1,
       "choices": {
         "Cris Moses": "Cris Moses",
@@ -1957,7 +1963,9 @@
       "feed_id": "9445",
       "feed_name": "Huffman ISD, School Trustee, Position #1",
       "item": "tx-huffmanisd-trustee-1",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Lori Freshour": "Lori Freshour",
@@ -1973,7 +1981,9 @@
       "feed_id": "9446",
       "feed_name": "Huffman ISD, School Trustee, Position #2",
       "item": "tx-huffmanisd-trustee-2",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Luke Hight": "Luke Hight"
@@ -1988,7 +1998,9 @@
       "feed_id": "9447",
       "feed_name": "Huffman ISD, School Trustee, Position #3",
       "item": "tx-huffmanisd-trustee-3",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Ray Burt": "Ray Burt"
@@ -2003,7 +2015,9 @@
       "feed_id": "9406",
       "feed_name": "Klein ISD, Position 1",
       "item": "tx-kleinisd-trustee-1",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Linda Ford": "Linda Ford",
@@ -2018,7 +2032,9 @@
       "feed_id": "9407",
       "feed_name": "Klein ISD, Position 2",
       "item": "tx-kleinisd-trustee-2",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Doug James": "Doug James"
@@ -2032,7 +2048,9 @@
       "feed_id": "9439",
       "feed_name": "New Caney Independent School District, Trustee, Position 1",
       "item": "tx-newcaneyisd-trustee-1",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Elizabeth Rhoden Harrell": "Elizabeth Rhoden Harrell"
@@ -2047,7 +2065,9 @@
       "feed_id": "9440",
       "feed_name": "New Caney Independent School District, Trustee, Position 2",
       "item": "tx-newcaneyisd-trustee-2",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Ryan Schurdell": "Ryan Schurdell",
@@ -2203,7 +2223,9 @@
       "feed_id": "9426",
       "feed_name": "Sheldon ISD, Trustee Position 4",
       "item": "tx-sheldonisd-trustee-4",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Tiffany Lockett": "Tiffany Lockett",
@@ -2218,7 +2240,9 @@
       "feed_id": "9435",
       "feed_name": "Sheldon ISD, Trustee Position 5",
       "item": "tx-sheldonisd-trustee-5",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Pamela Smith Robinson": "Pamela Smith Robinson",
@@ -2235,7 +2259,9 @@
       "feed_id": "9436",
       "feed_name": "Sheldon ISD, Trustee Position 6",
       "item": "tx-sheldonisd-trustee-6",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Devora Myles": "Devora Myles"
@@ -2249,7 +2275,9 @@
       "feed_id": "9437",
       "feed_name": "Sheldon ISD, Trustee Position 7",
       "item": "tx-sheldonisd-trustee-7",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Erika Martinez": "Erika Martinez",
@@ -2280,7 +2308,9 @@
       "feed_id": "9394",
       "feed_name": "Spring ISD, Trustee Election, Position 4",
       "item": "tx-springisd-trustee-4",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Winford Adams, Jr.": "Winford Adams, Jr."
@@ -2294,7 +2324,9 @@
       "feed_id": "9395",
       "feed_name": "Spring ISD, Trustee Election, Position 5",
       "item": "tx-springisd-trustee-5",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Rhonda Newhouse": "Rhonda Newhouse",
@@ -2309,7 +2341,9 @@
       "feed_id": "9412",
       "feed_name": "Tomball Independent School District, Position 1",
       "item": "tx-tomballisd-trustee-1",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Lacey Derrington": "Lacey Derrington",
@@ -2325,7 +2359,9 @@
       "feed_id": "9413",
       "feed_name": "Tomball Independent School District, Position 2",
       "item": "tx-tomballisd-trustee-2",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Michael Pratt": "Michael Pratt"
@@ -2340,7 +2376,9 @@
       "feed_id": "9414",
       "feed_name": "Tomball Independent School District, Position 3",
       "item": "tx-tomballisd-trustee-3",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Joseph Ferguson": "Joseph Ferguson",
@@ -2356,7 +2394,9 @@
       "feed_id": "9415",
       "feed_name": "Tomball Independent School District, Position 4",
       "item": "tx-tomballisd-trustee-4",
-      "kind": "plurality",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
       "seats": 1,
       "choices": {
         "Mark Lewandowski": "Mark Lewandowski"

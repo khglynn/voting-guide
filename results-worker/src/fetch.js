@@ -57,7 +57,11 @@ export async function bodyText(res) {
    500, 502, 503 or 504 is not one, so real blips still recover. A good page is judged by its <title> only: Cloudflare
    injects a "/cdn-cgi/challenge-platform/" script into ordinary pages, so words in the body would stop a real source. */
 const CHALLENGE_TITLE = /just a moment|attention required|captcha|human verification|verify you are (?:a )?human|are you a robot/i;
-const CHALLENGE_WORDS = /captcha|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|are you a robot/i;
+const CHALLENGE_WORDS = /\bcaptcha\b|human verification|confirm you are (?:a )?human|verify you are (?:a )?human|are you a robot/i;
+/* What a reader of an error page would see: no scripts, styles or tags. An ordinary 503 or 404 from a site whose
+   template loads reCAPTCHA for a contact form (`google.com/recaptcha/api.js`, `class="g-recaptcha"`) is not a bot check
+   and must stay an error that backs off, never a refusal that stops the source (pre-deploy review, Nov 3). */
+const visible = (s) => String(s).slice(0, 200_000).replace(/<(script|style)\b[\s\S]*?<\/\1\s*>/gi, ' ').replace(/<[^>]*>/g, ' ');
 export function challengeOf(res, body = '', { page = false, method = 'GET' } = {}) {
   // A bare 405 is a bot check on a GET (Clarity's WAF); on the Oregon form POST it can be a real "method not allowed".
   if (res.status === 405 && method === 'GET') return 'HTTP 405, a bot check';
@@ -66,7 +70,7 @@ export function challengeOf(res, body = '', { page = false, method = 'GET' } = {
   if (/challenge/i.test(res.headers.get('cf-mitigated') || '')) return `HTTP ${res.status}, a bot check (cf-mitigated: challenge)`;
   const title = (String(body).match(/<title[^>]*>([\s\S]{0,200}?)<\/title>/i) || [])[1] || '';
   if (CHALLENGE_TITLE.test(title)) return `HTTP ${res.status}, a bot check page came back ("${title.replace(/\s+/g, ' ').trim().slice(0, 60)}")`;
-  if (!page && body && CHALLENGE_WORDS.test(String(body).slice(0, 50000))) return `HTTP ${res.status}, a bot check page came back`;
+  if (!page && body && CHALLENGE_WORDS.test(visible(body).slice(0, 50_000))) return `HTTP ${res.status}, a bot check page came back`;
   return null;
 }
 

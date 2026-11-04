@@ -352,6 +352,17 @@ test('tick: an older tick that saves last never undoes a newer tick\'s refusal',
   assert.equal(s.last_run, '2026-11-04T05:01:00.000Z');
 });
 
+test('fetch: an error page whose template loads reCAPTCHA is an error that backs off, not a refusal; a visible CAPTCHA still is one', async () => {
+  const at = (spec, expect) => get(fakeFetch({ x: spec }), 'https://results.example/x', { expect });
+  const page = '<html><head><title>503 Service Unavailable</title><script src="https://www.google.com/recaptcha/api.js" async defer></script></head><body><h1>Service Unavailable</h1><form><div class="g-recaptcha" data-sitekey="k"></div></form></body></html>';
+  for (const status of [500, 503, 404]) for (const expect of ['json', 'text', 'html']) {
+    const r = await at({ status, body: page }, expect);
+    assert.equal(r.verdict, 'error', `${status} ${expect}`);
+  }
+  const r = await at({ status: 503, body: '<html><body><p>Please complete the CAPTCHA below to continue.</p></body></html>' }, 'html');
+  assert.equal(r.verdict, 'refused');
+});
+
 test('fetch: a body past 16 MB, or a gzip that unpacks past 32 MB, is an error with a plain reason; real sizes read fine', async () => {
   const resp = (body, headers = {}) => async () => new Response(body, { status: 200, headers });
   let r = await get(resp('{}', { 'content-length': '30000000' }), 'https://results.example/x');

@@ -3106,8 +3106,8 @@ export const MAPS = [
       "feed_name": "November 3, 2026 - General & Special Elections"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:39.865Z",
+      "fingerprint": "9260a531f4b72f60",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:29.050Z",
       "places": [
         "atlanta-ga"
       ]
@@ -3127,10 +3127,189 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-09",
     "official": null,
-    "contests": [],
+    "contests": [
+      {
+        "feed_id": "01000000-3a82-a359-b85c-08df23e68252",
+        "feed_name": "County Commission - District 2",
+        "item": "dekalb-commission-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ben Pepper (Rep)": "Ben Pepper",
+          "Michelle Long Spears (I) (Dem)": "Michelle Long Spears"
+        },
+        "reaches": [
+          "DeKalb"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-3ea7-08df23e68291",
+        "feed_name": "County Commission - District 3",
+        "item": "dekalb-commission-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Andrea Bass Smith (Rep)": "Andrea Bass Smith",
+          "Keyanna Jones Moore (Dem)": "Keyanna Jones Moore"
+        },
+        "reaches": [
+          "DeKalb"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-a345-08df23e68229",
+        "feed_name": "County Commission - District 7",
+        "item": "dekalb-commission-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "LaDena Bolton (I) (Dem)": "LaDena Bolton"
+        },
+        "reaches": [
+          "DeKalb"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-b9b3-08df23e68229",
+        "feed_name": "Dekalb Co ESPLOST",
+        "item": "dekalb-esplost-vii",
+        "kind": "measure",
+        "seats": 1,
+        "choices": {
+          "Yes": "yes",
+          "No": "no"
+        },
+        "reaches": [
+          "DeKalb"
+        ],
+        "item_url": null,
+        "pass_threshold": "Simple majority"
+      },
+      {
+        "feed_id": "01000000-3a82-a359-a725-08df23e68229",
+        "feed_name": "DeKalb Co Soil and Water Conservation District Supervisor",
+        "item": "dekalb-soil-water",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "Jan Dunaway (I)": "Jan Dunaway",
+          "Carol Hayes (I)": "Carol Hayes"
+        },
+        "reaches": [
+          "DeKalb"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-5c90-08df23e68267",
+        "feed_name": "State House of Representatives - District 84",
+        "item": "ga-hd-84",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mary Margaret Oliver (I) (Dem)": "Mary Margaret Oliver"
+        },
+        "reaches": [
+          "DeKalb",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-58a6-08df23e682a7",
+        "feed_name": "State House of Representatives - District 89",
+        "item": "ga-hd-89",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Omari Crawford (I) (Dem)": "Omari Crawford"
+        },
+        "reaches": [
+          "DeKalb",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4a21-08df23e682bc",
+        "feed_name": "State House of Representatives - District 90",
+        "item": "ga-hd-90",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Samantha Boston (Rep)": "Samantha Boston",
+          "Bentley Hudgins (Dem)": "Bentley Hudgins"
+        },
+        "reaches": [
+          "DeKalb",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-5a5c-08df23e68267",
+        "feed_name": "State Senate - District 44",
+        "item": "ga-sd-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ngozi Orabueze (Rep)": "Ngozi Orabueze",
+          "Saira Draper (Dem)": "Saira Draper"
+        },
+        "reaches": [
+          "DeKalb",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-3a82-a359-bdbb-08df23e68229",
+        "feed_name": "US House of Representatives - District 5",
+        "item": "ga-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John \"Bongo\" Salvesen (Rep)": "John \"Bongo\" Salvesen",
+          "Nikema Williams (I) (Dem)": "Nikema Williams"
+        },
+        "reaches": [
+          "DeKalb",
+          "Fulton",
+          "Clayton",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
     "unmatched_feed": [],
     "unmatched_guide": [],
-    "not_here": []
+    "not_here": [
+      "fulton-commission-3",
+      "fulton-commission-4-special",
+      "fulton-commission-5",
+      "fulton-commission-chair",
+      "fulton-esplost-2026",
+      "fulton-soil-water",
+      "ga-hd-53",
+      "ga-hd-54",
+      "ga-hd-55",
+      "ga-hd-56",
+      "ga-hd-57",
+      "ga-hd-58",
+      "ga-hd-59",
+      "ga-hd-60",
+      "ga-hd-61",
+      "ga-hd-62",
+      "ga-hd-63",
+      "ga-sd-35",
+      "ga-sd-36",
+      "ga-sd-38",
+      "ga-sd-39",
+      "ga-us-house-6"
+    ]
   },
   {
     "id": "harris-county-tx",
@@ -5672,8 +5851,8 @@ export const MAPS = [
       "feed_name": "2026 General"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.068Z",
+      "fingerprint": "5b5c648b4fe5e638",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:30.415Z",
       "places": [
         "seattle-wa"
       ]
@@ -5693,9 +5872,680 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-24",
     "official": null,
-    "contests": [],
-    "unmatched_feed": [],
-    "unmatched_guide": [],
+    "contests": [
+      {
+        "feed_id": "01000000-f0b7-9b6a-7a99-08df232198db",
+        "feed_name": "West Electoral District - Judge Position No. 1",
+        "item": "kc-district-court-west-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bardi Martin": "Bardi Martin",
+          "Nyjat Rose-Akins": "Nyjat Rose-Akins",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7ae0-08df232198db",
+        "feed_name": "West Electoral District - Judge Position No. 2",
+        "item": "kc-district-court-west-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kuljinder K. Dhillon": "Kuljinder K. Dhillon",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7b20-08df232198db",
+        "feed_name": "West Electoral District - Judge Position No. 3",
+        "item": "kc-district-court-west-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rebecca Robertson": "Rebecca Robertson",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7b5c-08df232198db",
+        "feed_name": "West Electoral District - Judge Position No. 4",
+        "item": "kc-district-court-west-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Yvonne Chin": "Yvonne Chin",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7b91-08df232198db",
+        "feed_name": "West Electoral District - Judge Position No. 5",
+        "item": "kc-district-court-west-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kristin Shotwell": "Kristin Shotwell",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-6d8b-08df232198db",
+        "feed_name": "Assessor",
+        "item": "king-county-assessor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rob Foxcurran": "Rob Foxcurran",
+          "Dominique M Scarimbolo": "Dominique M Scarimbolo",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-73aa-08df232198db",
+        "feed_name": "Metropolitan King County - Council District No. 2",
+        "item": "king-county-council-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rebecca Saldaña": "Rebecca Saldaña",
+          "Toshiko Grace Hasegawa": "Toshiko Grace Hasegawa",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7402-08df232198db",
+        "feed_name": "Metropolitan King County - Council District No. 4",
+        "item": "king-county-council-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jorge L. Barón": "Jorge L. Barón",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-74ea-08df232198db",
+        "feed_name": "Metropolitan King County - Council District No. 8",
+        "item": "king-county-council-8",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Teresa Mosqueda": "Teresa Mosqueda",
+          "Nick Duda": "Nick Duda",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-731b-08df232198db",
+        "feed_name": "Director of Elections",
+        "item": "king-county-elections-director",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Julie Wise": "Julie Wise",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-40ed-08df232198db",
+        "feed_name": "Prosecuting Attorney",
+        "item": "king-county-prosecutor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Leesa Manion": "Leesa Manion",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7bdf-08df232198db",
+        "feed_name": "City of Seattle - Council District No. 5",
+        "item": "seattle-council-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Nilu Jenks": "Nilu Jenks",
+          "Julie Kang": "Julie Kang",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-7c24-08df232198db",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 1",
+        "item": "seattle-muni-court-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cat McDowall": "Cat McDowall",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0cdb-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 2",
+        "item": "seattle-muni-court-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Katharine Edwards": "Katharine Edwards",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0e1b-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 3",
+        "item": "seattle-muni-court-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Pooja Vaddadi": "Pooja Vaddadi",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0e69-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 4",
+        "item": "seattle-muni-court-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Anita Crawford-Willis": "Anita Crawford-Willis",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0eaf-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 5",
+        "item": "seattle-muni-court-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Gabe Rothstein": "Gabe Rothstein",
+          "Garmon Newsom": "Garmon Newsom",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0ef7-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 6",
+        "item": "seattle-muni-court-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Shantrice Anderson": "Shantrice Anderson",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-0f38-08df232198dc",
+        "feed_name": "Seattle Municipal Court - Judge Position No. 7",
+        "item": "seattle-muni-court-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Damon Shadid": "Damon Shadid",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-3799-08df232198dc",
+        "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 5",
+        "item": "wa-coa-1-1-pos-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "David S. Mann": "David S. Mann",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-37db-08df232198dc",
+        "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 6",
+        "item": "wa-coa-1-1-pos-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bill A. Bowman": "Bill A. Bowman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-1fa6-08df232198dc",
+        "feed_name": "Legislative District 32 - State Representative Pos. 1",
+        "item": "wa-hd-32-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Keith Scully": "Keith Scully",
+          "Danica Noble": "Danica Noble",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "Snohomish",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2041-08df232198dc",
+        "feed_name": "Legislative District 32 - State Representative Pos. 2",
+        "item": "wa-hd-32-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lauren Davis": "Lauren Davis",
+          "Imraan Siddiqi": "Imraan Siddiqi",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "Snohomish",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2402-08df232198dc",
+        "feed_name": "Legislative District 34 - State Representative Pos. 1",
+        "item": "wa-hd-34-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brianna K. Thomas": "Brianna K. Thomas",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-248c-08df232198dc",
+        "feed_name": "Legislative District 34 - State Representative Pos. 2",
+        "item": "wa-hd-34-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Fitzgibbon": "Joe Fitzgibbon",
+          "Mary Anito": "Mary Anito",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2619-08df232198dc",
+        "feed_name": "Legislative District 36 - State Representative Pos. 1",
+        "item": "wa-hd-36-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Julia Grant Reed": "Julia Grant Reed",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-267b-08df232198dc",
+        "feed_name": "Legislative District 36 - State Representative Pos. 2",
+        "item": "wa-hd-36-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Liz Berry": "Liz Berry",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-277a-08df232198dc",
+        "feed_name": "Legislative District 37 - State Representative Pos. 1",
+        "item": "wa-hd-37-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kelabe Tewolde": "Kelabe Tewolde",
+          "Sharon Tomiko Santos": "Sharon Tomiko Santos",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2826-08df232198dc",
+        "feed_name": "Legislative District 37 - State Representative Pos. 2",
+        "item": "wa-hd-37-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jaelynn Scott": "Jaelynn Scott",
+          "Evon McCorkle": "Evon McCorkle",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2b03-08df232198dc",
+        "feed_name": "Legislative District 43 - State Representative Pos. 1",
+        "item": "wa-hd-43-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Nicole Macri": "Nicole Macri",
+          "Alby Clendennin": "Alby Clendennin",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2b9e-08df232198dc",
+        "feed_name": "Legislative District 43 - State Representative Pos. 2",
+        "item": "wa-hd-43-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Shaun Scott": "Shaun Scott",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2f1f-08df232198dc",
+        "feed_name": "Legislative District 46 - State Representative Pos. 1",
+        "item": "wa-hd-46-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Gerry Pollet": "Gerry Pollet",
+          "Will Dreher": "Will Dreher",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2fb8-08df232198dc",
+        "feed_name": "Legislative District 46 - State Representative Pos. 2",
+        "item": "wa-hd-46-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Darya Farivar": "Darya Farivar",
+          "Rodney 'Star' Thornley": "Rodney 'Star' Thornley",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-1f08-08df232198dc",
+        "feed_name": "Legislative District 32 - State Senator",
+        "item": "wa-sd-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cindy Ryu": "Cindy Ryu",
+          "Jesse Salomon": "Jesse Salomon",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "Snohomish",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-239c-08df232198dc",
+        "feed_name": "Legislative District 34 - State Senator",
+        "item": "wa-sd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Emily Alvarado": "Emily Alvarado",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2531-08df232198dc",
+        "feed_name": "Legislative District 36 - State Senator",
+        "item": "wa-sd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Noel C. Frame": "Noel C. Frame",
+          "Jillian England": "Jillian England",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-26da-08df232198dc",
+        "feed_name": "Legislative District 37 - State Senator",
+        "item": "wa-sd-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chipalo Street": "Chipalo Street",
+          "Tatiana Brown": "Tatiana Brown",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2a63-08df232198dc",
+        "feed_name": "Legislative District 43 - State Senator",
+        "item": "wa-sd-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jamie Pedersen": "Jamie Pedersen",
+          "Hannah Sabio-Howell": "Hannah Sabio-Howell",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-2e37-08df232198dc",
+        "feed_name": "Legislative District 46 - State Senator",
+        "item": "wa-sd-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Javier Valdez": "Javier Valdez",
+          "Sandra Stephens": "Sandra Stephens",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-109f-08df232198dc",
+        "feed_name": "Congressional District 7 - U.S. Representative",
+        "item": "wa-us-house-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Pramila Jayapal": "Pramila Jayapal",
+          "Nirav Sheth": "Nirav Sheth",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-f0b7-9b6a-127e-08df232198dc",
+        "feed_name": "Congressional District 9 - U.S. Representative",
+        "item": "wa-us-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Adam Smith": "Adam Smith",
+          "Doug Basler": "Doug Basler",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "King",
+          "Pierce",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "01000000-f0b7-9b6a-3ad7-08df232198dc",
+        "feed_name": "City of Seattle - Proposition No. 1",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Feed line is the City of Seattle Prop 1 (other cities' Prop 1 lines are separate), Yes/No right; set seats to null and this agrees."
+      }
+    ],
+    "unmatched_guide": [
+      "seattle-prop-1"
+    ],
     "not_here": []
   },
   {
@@ -7444,8 +8294,8 @@ export const MAPS = [
       "feed_name": "November 3, 2026 - General & Special Elections"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.241Z",
+      "fingerprint": "4166a88a1cc1d0d7",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:28.304Z",
       "locals": true,
       "places": [
         "state-GA",
@@ -7467,10 +8317,602 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-20",
     "official": null,
-    "contests": [],
-    "unmatched_feed": [],
-    "unmatched_guide": [],
-    "not_here": []
+    "contests": [
+      {
+        "feed_id": "01000000-3a82-a359-2126-08df23e5ff5a",
+        "feed_name": "Commissioner of Agriculture",
+        "item": "ga-agriculture-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tyler Harper (I) (Rep)": "Tyler Harper",
+          "Katherine E. Juhan-Arnold (Dem)": "Katherine E. Juhan-Arnold"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-32b9-08df23e5ff57",
+        "feed_name": "Attorney General",
+        "item": "ga-attorney-general",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brian Strickland (Rep)": "Brian Strickland",
+          "Tanya Miller (Dem)": "Tanya Miller"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-0434-08df23e5ff46",
+        "feed_name": "Governor",
+        "item": "ga-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Rick Jackson (Rep)": "Rick Jackson",
+          "Keisha Lance Bottoms (Dem)": "Keisha Lance Bottoms"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-a4c4-08df23e6c76d",
+        "feed_name": "State House of Representatives - District 53",
+        "item": "ga-hd-53",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Deborah Silcox (I)(Rep)": "Deborah Silcox",
+          "Beth Fuller (Dem)": "Beth Fuller"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-6e03-08df23e6c756",
+        "feed_name": "State House of Representatives - District 54",
+        "item": "ga-hd-54",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Greg Miller (Rep)": "Greg Miller",
+          "Betsy Holland (I)(Dem)": "Betsy Holland"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-0869-08df23e6c70f",
+        "feed_name": "State House of Representatives - District 55",
+        "item": "ga-hd-55",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Samuel S. Lenaeus (Rep)": "Samuel S. Lenaeus",
+          "Inga S. Willis (I)(Dem)": "Inga S Willis"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-0df2-08df23e6c6c9",
+        "feed_name": "State House of Representatives - District 56",
+        "item": "ga-hd-56",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bryce Berry (I)(Dem)": "Bryce Berry"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-8612-08df23e6c6b1",
+        "feed_name": "State House of Representatives - District 57",
+        "item": "ga-hd-57",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Helmut Lucero Love (Rep)": "Helmut Lucero Love",
+          "Stacey Evans (I)(Dem)": "Stacey Evans"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-6652-08df23e6c6e0",
+        "feed_name": "State House of Representatives - District 58",
+        "item": "ga-hd-58",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Torrey Balam (Rep)": "Torrey Balam",
+          "Mathewos Samson (Dem)": "Mathewos Samson"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-bb6d-08df23e6c69a",
+        "feed_name": "State House of Representatives - District 59",
+        "item": "ga-hd-59",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Devanta \"Sully\" Sullivan (Rep)": "Devanta \"Sully\" Sullivan",
+          "Phil A. Olaleye (I)(Dem)": "Phil A. Olaleye"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-0de7-08df23e66468",
+        "feed_name": "State House of Representatives - District 60",
+        "item": "ga-hd-60",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Sheila Jones (I) (Dem)": "Sheila Jones"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4b6a-08df23e66456",
+        "feed_name": "State House of Representatives - District 61",
+        "item": "ga-hd-61",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Damita Bishop (Rep)": "Damita Bishop",
+          "Mekyah McQueen (I) (Dem)": "Mekyah McQueen"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4173-08df23e6c66b",
+        "feed_name": "State House of Representatives - District 62",
+        "item": "ga-hd-62",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kenn Collier (Dem)": "Kenn Collier"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-429f-08df23e6c683",
+        "feed_name": "State House of Representatives - District 63",
+        "item": "ga-hd-63",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kim Schofield (I)(Dem)": "Kim Schofield"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-5d67-08df23e68267",
+        "feed_name": "State House of Representatives - District 84",
+        "item": "ga-hd-84",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mary Margaret Oliver (I) (Dem)": "Mary Margaret Oliver"
+        },
+        "reaches": [
+          "Georgia",
+          "DeKalb"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-5d4a-08df23e682a7",
+        "feed_name": "State House of Representatives - District 89",
+        "item": "ga-hd-89",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Omari Crawford (I) (Dem)": "Omari Crawford"
+        },
+        "reaches": [
+          "Georgia",
+          "DeKalb"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4dff-08df23e682bc",
+        "feed_name": "State House of Representatives - District 90",
+        "item": "ga-hd-90",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Samantha Boston (Rep)": "Samantha Boston",
+          "Bentley Hudgins (Dem)": "Bentley Hudgins"
+        },
+        "reaches": [
+          "Georgia",
+          "DeKalb"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-446b-08df23e5ff5d",
+        "feed_name": "Commissioner of Insurance",
+        "item": "ga-insurance-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John King (I) (Rep)": "John King",
+          "Keisha Sean Waites (Dem)": "Keisha Sean Waites"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-33e9-08df23e5ff62",
+        "feed_name": "Commissioner of Labor",
+        "item": "ga-labor-commissioner",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bárbara Rivera Holmes (I) (Rep)": "Bárbara Rivera Holmes",
+          "Nikki Porcher (Dem)": "Nikki Porcher"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-e920-08df23e5ff4e",
+        "feed_name": "Lieutenant Governor",
+        "item": "ga-lt-governor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Greg Dolezal (Rep)": "Greg Dolezal",
+          "Josh McLaurin (Dem)": "Josh McLaurin"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-c4c2-08df23e5ff63",
+        "feed_name": "PSC - District 3",
+        "item": "ga-psc-district-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Fitz Johnson (Rep)": "Fitz Johnson",
+          "Peter Hubbard (I) (Dem)": "Peter Hubbard"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4e6b-08df23e5ff65",
+        "feed_name": "PSC - District 5",
+        "item": "ga-psc-district-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Josh Tolbert (Rep)": "Josh Tolbert",
+          "Shelia Edwards (Dem)": "Shelia Edwards"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-9c9f-08df23e5ff60",
+        "feed_name": "State School Superintendent",
+        "item": "ga-school-superintendent",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Richard Woods (I) (Rep)": "Richard Woods",
+          "Lydia Powell (Dem)": "Lydia Powell"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-517d-08df23e663c3",
+        "feed_name": "State Senate - District 35",
+        "item": "ga-sd-35",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jaha V. Howard (I) (Dem)": "Jaha V. Howard"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-d0fc-08df23e6c652",
+        "feed_name": "State Senate - District 36",
+        "item": "ga-sd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Katie Corkren (Rep)": "Katie Corkren",
+          "Nan Grogan Orrock (I)(Dem)": "Nan Grogan Orrock"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-62da-08df23e6c727",
+        "feed_name": "State Senate - District 38",
+        "item": "ga-sd-38",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Eric Helvy (Rep)": "Eric Helvy",
+          "Rashaun Kemp (I)(Dem)": "Rashaun Kemp"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-d23b-08df23e6c6f7",
+        "feed_name": "State Senate - District 39",
+        "item": "ga-sd-39",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John F. Guest, Jr. (Rep)": "John F. Guest, Jr.",
+          "Sonya Halpern (I)(Dem)": "Sonya Halpern"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-eadc-08df23e65778",
+        "feed_name": "State Senate - District 44",
+        "item": "ga-sd-44",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ngozi Orabueze (Rep)": "Ngozi Orabueze",
+          "Saira Draper (Dem)": "Saira Draper"
+        },
+        "reaches": [
+          "Georgia",
+          "DeKalb",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-207a-08df23e5ff54",
+        "feed_name": "Secretary of State",
+        "item": "ga-secretary-of-state",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Tim Fleming (Rep)": "Tim Fleming",
+          "Penny Brown Reynolds (Dem)": "Penny Brown Reynolds"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-9a36-08df23e6579b",
+        "feed_name": "US House of Representatives - District 5",
+        "item": "ga-us-house-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "John \"Bongo\" Salvesen (Rep)": "John \"Bongo\" Salvesen",
+          "Nikema Williams (I)(Dem)": "Nikema Williams"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "DeKalb",
+          "Clayton",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-82d8-08df23e6637a",
+        "feed_name": "US House of Representatives - District 6",
+        "item": "ga-us-house-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kevin E. Martin (Rep)": "Kevin E. Martin",
+          "Lucy McBath (I) (Dem)": "Lucy McBath"
+        },
+        "reaches": [
+          "Georgia",
+          "Fulton",
+          "Cobb",
+          "Douglas",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-3a82-a359-4042-08df23e5ff36",
+        "feed_name": "US Senate",
+        "item": "ga-us-senate",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Mike Collins (Rep)": "Mike Collins",
+          "Jon Ossoff (I) (Dem)": "Jon Ossoff"
+        },
+        "reaches": [
+          "Georgia",
+          "every Georgia county"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "01000000-3a82-a359-3447-08df23e5ff70",
+        "feed_name": "Proposed Constitutional Amendment 1",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Race (statewide Amendment number and subject, checked against saved Ballotpedia list) and Yes/No are right; set seats to null and this agrees."
+      },
+      {
+        "feed_id": "01000000-3a82-a359-c8e6-08df23e5ff71",
+        "feed_name": "Proposed Constitutional Amendment 2",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Race (statewide Amendment number and subject, checked against saved Ballotpedia list) and Yes/No are right; set seats to null and this agrees."
+      },
+      {
+        "feed_id": "01000000-3a82-a359-7ca3-08df23e5ff73",
+        "feed_name": "Proposed Constitutional Amendment 3",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Race (statewide Amendment number and subject, checked against saved Ballotpedia list) and Yes/No are right; set seats to null and this agrees."
+      }
+    ],
+    "unmatched_guide": [
+      "ga-amendment-1",
+      "ga-amendment-2",
+      "ga-amendment-3"
+    ],
+    "not_here": [
+      "dekalb-commission-2",
+      "dekalb-commission-3",
+      "dekalb-commission-7",
+      "dekalb-esplost-vii",
+      "dekalb-soil-water",
+      "fulton-commission-3",
+      "fulton-commission-4-special",
+      "fulton-commission-5",
+      "fulton-commission-chair",
+      "fulton-esplost-2026",
+      "fulton-soil-water"
+    ]
   },
   {
     "id": "results-NY-sullivan",
@@ -7483,8 +8925,8 @@ export const MAPS = [
       "feed_name": "2026 General Election"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.354Z",
+      "fingerprint": "92c616b8d24a711a",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:31.425Z",
       "places": [
         "callicoon-ny"
       ]
@@ -7504,9 +8946,176 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-11-28",
     "official": null,
-    "contests": [],
-    "unmatched_feed": [],
-    "unmatched_guide": [],
+    "contests": [
+      {
+        "feed_id": "01000000-da31-b0e8-92ad-08df1fe5ac73",
+        "feed_name": "Town of Callicoon Superintedent of Highways",
+        "item": "callicoon-town-highway-superintendent",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ryan T. Bose": "Ryan T. Bose",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-9261-08df1fe5ac73",
+        "feed_name": "Town of Callicoon Supervisor",
+        "item": "callicoon-town-supervisor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Thomas R. Bose": "Thomas R. Bose",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-946b-08df1fe5ac73",
+        "feed_name": "Town of Delaware Clerk/Tax Collector",
+        "item": "delaware-town-clerk-tax-collector",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Leila McCullough": "Leila McCullough",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-950f-08df1fe5ac73",
+        "feed_name": "Town of Delaware Superintendent of Highways",
+        "item": "delaware-town-highway-superintendent",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Christopher Hermann": "Christopher Hermann",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-9420-08df1fe5ac73",
+        "feed_name": "Town of Delaware Supervisor",
+        "item": "delaware-town-supervisor",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Scott DuBois": "Scott DuBois",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-9056-08df1fe5ac73",
+        "feed_name": "Member of Assembly 100th District",
+        "item": "ny-ad-100",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Paula Elaine Kay": "Paula Elaine Kay",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan",
+          "Orange",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-8fdc-08df1fe5ac73",
+        "feed_name": "State Senator 51st District",
+        "item": "ny-sd-51",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Michele Frazier": "Michele Frazier",
+          "Christopher W. Tague": "Christopher W. Tague",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan",
+          "other counties"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-a3e4-08df1fe5ac73",
+        "feed_name": "State Supreme Court Justice 3rd Judicial District",
+        "item": "ny-supreme-court-jd3",
+        "kind": "multi",
+        "seats": 2,
+        "choices": {
+          "Amy E. Joyce": "Amy E. Joyce",
+          "Jennifer G. Sober": "Jennifer G. Sober",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Albany",
+          "Columbia",
+          "Greene",
+          "Rensselaer",
+          "Schoharie",
+          "Sullivan",
+          "Ulster"
+        ],
+        "item_url": null
+      },
+      {
+        "feed_id": "01000000-da31-b0e8-8f6b-08df1fe5ac73",
+        "feed_name": "Representative in Congress 19th District",
+        "item": "ny-us-house-19",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Josh Riley": "Josh Riley",
+          "Peter K. Oberacker": "Peter K. Oberacker",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Sullivan",
+          "Columbia",
+          "Greene",
+          "Delaware",
+          "Otsego",
+          "Chenango",
+          "Broome",
+          "Tompkins",
+          "Rensselaer",
+          "Cortland",
+          "Ulster",
+          "other counties"
+        ],
+        "item_url": null
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "01000000-da31-b0e8-94c4-08df1fe5ac73",
+        "feed_name": "Town of Delaware Council Member To Fill Vacancy",
+        "why": "Same race as delaware-town-council-vacancy, but neither side names a candidate: the feed has one blank-named line and Write-in, the guide lists no candidates. Nothing a person could read as a result; left as a link."
+      }
+    ],
+    "unmatched_guide": [
+      "delaware-town-council-vacancy"
+    ],
     "not_here": []
   },
   {
@@ -8290,8 +9899,8 @@ export const MAPS = [
       "feed_name": "2026 General"
     },
     "guide": {
-      "fingerprint": "e3b0c44298fc1c14",
-      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.471Z",
+      "fingerprint": "315ae6e60bca1eb3",
+      "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:29.771Z",
       "locals": true,
       "places": [
         "state-WA",
@@ -8313,10 +9922,535 @@ export const MAPS = [
     "complete_marker": null,
     "certify_by": "2026-12-03",
     "official": null,
-    "contests": [],
-    "unmatched_feed": [],
-    "unmatched_guide": [],
-    "not_here": []
+    "contests": [
+      {
+        "feed_id": "54c40000-9064-bbec-0de1-08df15c0a835",
+        "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 5",
+        "item": "wa-coa-1-1-pos-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "David S. Mann": "David S. Mann",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-17e7-08df15c0a835",
+        "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 6",
+        "item": "wa-coa-1-1-pos-6",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Bill A. Bowman": "Bill A. Bowman",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-abbf-08df15c0a832",
+        "feed_name": "Legislative District 32 - State Representative Pos. 1",
+        "item": "wa-hd-32-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Keith Scully": "Keith Scully",
+          "Danica Noble": "Danica Noble",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King",
+          "Snohomish"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-b2e7-08df15c0a832",
+        "feed_name": "Legislative District 32 - State Representative Pos. 2",
+        "item": "wa-hd-32-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Lauren Davis": "Lauren Davis",
+          "Imraan Siddiqi": "Imraan Siddiqi",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King",
+          "Snohomish"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-ddf4-08df15c0a832",
+        "feed_name": "Legislative District 34 - State Representative Pos. 1",
+        "item": "wa-hd-34-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Brianna K. Thomas": "Brianna K. Thomas",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-e45f-08df15c0a832",
+        "feed_name": "Legislative District 34 - State Representative Pos. 2",
+        "item": "wa-hd-34-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Joe Fitzgibbon": "Joe Fitzgibbon",
+          "Mary Anito": "Mary Anito",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-1acc-08df15c0a833",
+        "feed_name": "Legislative District 36 - State Representative Pos. 1",
+        "item": "wa-hd-36-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Julia Grant Reed": "Julia Grant Reed",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-25e3-08df15c0a833",
+        "feed_name": "Legislative District 36 - State Representative Pos. 2",
+        "item": "wa-hd-36-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Liz Berry": "Liz Berry",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-3c2b-08df15c0a833",
+        "feed_name": "Legislative District 37 - State Representative Pos. 1",
+        "item": "wa-hd-37-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Kelabe Tewolde": "Kelabe Tewolde",
+          "Sharon Tomiko Santos": "Sharon Tomiko Santos",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-481e-08df15c0a833",
+        "feed_name": "Legislative District 37 - State Representative Pos. 2",
+        "item": "wa-hd-37-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jaelynn Scott": "Jaelynn Scott",
+          "Evon McCorkle": "Evon McCorkle",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-ff7f-08df15c0a833",
+        "feed_name": "Legislative District 43 - State Representative Pos. 1",
+        "item": "wa-hd-43-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Nicole Macri": "Nicole Macri",
+          "Alby Clendennin": "Alby Clendennin",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-0d12-08df15c0a834",
+        "feed_name": "Legislative District 43 - State Representative Pos. 2",
+        "item": "wa-hd-43-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Shaun Scott": "Shaun Scott",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-70e0-08df15c0a834",
+        "feed_name": "Legislative District 46 - State Representative Pos. 1",
+        "item": "wa-hd-46-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Gerry Pollet": "Gerry Pollet",
+          "Will Dreher": "Will Dreher",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-7d58-08df15c0a834",
+        "feed_name": "Legislative District 46 - State Representative Pos. 2",
+        "item": "wa-hd-46-2",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Darya Farivar": "Darya Farivar",
+          "Rodney 'Star' Thornley": "Rodney 'Star' Thornley",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-a483-08df15c0a832",
+        "feed_name": "Legislative District 32 - State Senator",
+        "item": "wa-sd-32",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Cindy Ryu": "Cindy Ryu",
+          "Jesse Salomon": "Jesse Salomon",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King",
+          "Snohomish"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-d7bb-08df15c0a832",
+        "feed_name": "Legislative District 34 - State Senator",
+        "item": "wa-sd-34",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Emily Alvarado": "Emily Alvarado",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-0c22-08df15c0a833",
+        "feed_name": "Legislative District 36 - State Senator",
+        "item": "wa-sd-36",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Noel C. Frame": "Noel C. Frame",
+          "Jillian England": "Jillian England",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-2fbd-08df15c0a833",
+        "feed_name": "Legislative District 37 - State Senator",
+        "item": "wa-sd-37",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Chipalo Street": "Chipalo Street",
+          "Tatiana Brown": "Tatiana Brown",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-efd3-08df15c0a833",
+        "feed_name": "Legislative District 43 - State Senator",
+        "item": "wa-sd-43",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Jamie Pedersen": "Jamie Pedersen",
+          "Hannah Sabio-Howell": "Hannah Sabio-Howell",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-646c-08df15c0a834",
+        "feed_name": "Legislative District 46 - State Senator",
+        "item": "wa-sd-46",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Javier Valdez": "Javier Valdez",
+          "Sandra Stephens": "Sandra Stephens",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-c099-693d-044e-08df1b284026",
+        "feed_name": "Supreme Court - Justice Position #01",
+        "item": "wa-supreme-court-pos-1",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Colleen Melody": "Colleen Melody",
+          "Scott Edwards": "Scott Edwards",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "every Washington county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-16cf-7dbd-930e-08df1b2897f2",
+        "feed_name": "Supreme Court - Justice Position #03",
+        "item": "wa-supreme-court-pos-3",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "David Stevens": "David Stevens",
+          "Jaime Michelle Hawk": "Jaime Michelle Hawk",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "every Washington county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-c099-693d-7874-08df1b28d7d2",
+        "feed_name": "Supreme Court - Justice Position #04",
+        "item": "wa-supreme-court-pos-4",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Ian Birk": "Ian Birk",
+          "Sean O'Donnell": "Sean O'Donnell",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "every Washington county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-c099-693d-64d5-08df1b290edf",
+        "feed_name": "Supreme Court - Justice Position #05",
+        "item": "wa-supreme-court-pos-5",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Theo Angelis": "Theo Angelis",
+          "Dave Larson": "Dave Larson",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "every Washington county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "01000000-16cf-7dbd-cd8f-08df1b293d19",
+        "feed_name": "Supreme Court - Justice Position #07",
+        "item": "wa-supreme-court-pos-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Debra L. Stephens": "Debra L. Stephens",
+          "Todd A. Bloom": "Todd A. Bloom",
+          "Write-In": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "every Washington county"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-97f2-08df15c0a82a",
+        "feed_name": "Congressional District 7 - U.S. Representative",
+        "item": "wa-us-house-7",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Pramila Jayapal": "Pramila Jayapal",
+          "Nirav Sheth": "Nirav Sheth",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King"
+        ],
+        "item_url": null,
+        "whole": true
+      },
+      {
+        "feed_id": "54c40000-9064-bbec-bd9b-08df15c0a82a",
+        "feed_name": "Congressional District 9 - U.S. Representative",
+        "item": "wa-us-house-9",
+        "kind": "plurality",
+        "seats": 1,
+        "choices": {
+          "Adam Smith": "Adam Smith",
+          "Doug Basler": "Doug Basler",
+          "Write-in": "__other"
+        },
+        "reaches": [
+          "Washington",
+          "King",
+          "other counties"
+        ],
+        "item_url": null,
+        "whole": true
+      }
+    ],
+    "unmatched_feed": [
+      {
+        "feed_id": "01000000-c099-693d-d4e5-08df1b1fe635",
+        "feed_name": "Initiative Measure No. IP26-645",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Same initiative number, Yes/No right; set seats to null and this agrees."
+      },
+      {
+        "feed_id": "01000000-c099-693d-09a5-08df1b200333",
+        "feed_name": "Initiative Measure No. IL26-001",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Same initiative number, Yes/No right; set seats to null and this agrees."
+      },
+      {
+        "feed_id": "01000000-c099-693d-23aa-08df1b202331",
+        "feed_name": "Initiative Measure No. IL26-638",
+        "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Same initiative number, Yes/No right; set seats to null and this agrees."
+      }
+    ],
+    "unmatched_guide": [
+      "wa-initiative-001",
+      "wa-initiative-638",
+      "wa-initiative-645"
+    ],
+    "not_here": [
+      "kc-district-court-west-1",
+      "kc-district-court-west-2",
+      "kc-district-court-west-3",
+      "kc-district-court-west-4",
+      "kc-district-court-west-5",
+      "king-county-assessor",
+      "king-county-council-2",
+      "king-county-council-4",
+      "king-county-council-8",
+      "king-county-elections-director",
+      "king-county-prosecutor",
+      "seattle-council-5",
+      "seattle-muni-court-1",
+      "seattle-muni-court-2",
+      "seattle-muni-court-3",
+      "seattle-muni-court-4",
+      "seattle-muni-court-5",
+      "seattle-muni-court-6",
+      "seattle-muni-court-7",
+      "seattle-prop-1"
+    ]
   },
   {
     "id": "travis-tx",

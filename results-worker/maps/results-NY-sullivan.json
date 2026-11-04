@@ -9,8 +9,8 @@
     "feed_name": "2026 General Election"
   },
   "guide": {
-    "fingerprint": "e3b0c44298fc1c14",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.354Z",
+    "fingerprint": "92c616b8d24a711a",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:31.425Z",
     "places": [
       "callicoon-ny"
     ]
@@ -30,8 +30,175 @@
   "complete_marker": null,
   "certify_by": "2026-11-28",
   "official": null,
-  "contests": [],
-  "unmatched_feed": [],
-  "unmatched_guide": [],
+  "contests": [
+    {
+      "feed_id": "01000000-da31-b0e8-92ad-08df1fe5ac73",
+      "feed_name": "Town of Callicoon Superintedent of Highways",
+      "item": "callicoon-town-highway-superintendent",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ryan T. Bose": "Ryan T. Bose",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-9261-08df1fe5ac73",
+      "feed_name": "Town of Callicoon Supervisor",
+      "item": "callicoon-town-supervisor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Thomas R. Bose": "Thomas R. Bose",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-946b-08df1fe5ac73",
+      "feed_name": "Town of Delaware Clerk/Tax Collector",
+      "item": "delaware-town-clerk-tax-collector",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Leila McCullough": "Leila McCullough",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-950f-08df1fe5ac73",
+      "feed_name": "Town of Delaware Superintendent of Highways",
+      "item": "delaware-town-highway-superintendent",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Christopher Hermann": "Christopher Hermann",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-9420-08df1fe5ac73",
+      "feed_name": "Town of Delaware Supervisor",
+      "item": "delaware-town-supervisor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Scott DuBois": "Scott DuBois",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-9056-08df1fe5ac73",
+      "feed_name": "Member of Assembly 100th District",
+      "item": "ny-ad-100",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Paula Elaine Kay": "Paula Elaine Kay",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan",
+        "Orange",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-8fdc-08df1fe5ac73",
+      "feed_name": "State Senator 51st District",
+      "item": "ny-sd-51",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michele Frazier": "Michele Frazier",
+        "Christopher W. Tague": "Christopher W. Tague",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-a3e4-08df1fe5ac73",
+      "feed_name": "State Supreme Court Justice 3rd Judicial District",
+      "item": "ny-supreme-court-jd3",
+      "kind": "multi",
+      "seats": 2,
+      "choices": {
+        "Amy E. Joyce": "Amy E. Joyce",
+        "Jennifer G. Sober": "Jennifer G. Sober",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Albany",
+        "Columbia",
+        "Greene",
+        "Rensselaer",
+        "Schoharie",
+        "Sullivan",
+        "Ulster"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-da31-b0e8-8f6b-08df1fe5ac73",
+      "feed_name": "Representative in Congress 19th District",
+      "item": "ny-us-house-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Josh Riley": "Josh Riley",
+        "Peter K. Oberacker": "Peter K. Oberacker",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Sullivan",
+        "Columbia",
+        "Greene",
+        "Delaware",
+        "Otsego",
+        "Chenango",
+        "Broome",
+        "Tompkins",
+        "Rensselaer",
+        "Cortland",
+        "Ulster",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "01000000-da31-b0e8-94c4-08df1fe5ac73",
+      "feed_name": "Town of Delaware Council Member To Fill Vacancy",
+      "why": "Same race as delaware-town-council-vacancy, but neither side names a candidate: the feed has one blank-named line and Write-in, the guide lists no candidates. Nothing a person could read as a result; left as a link."
+    }
+  ],
+  "unmatched_guide": [
+    "delaware-town-council-vacancy"
+  ],
   "not_here": []
 }

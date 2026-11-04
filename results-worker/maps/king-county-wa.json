@@ -9,8 +9,8 @@
     "feed_name": "2026 General"
   },
   "guide": {
-    "fingerprint": "e3b0c44298fc1c14",
-    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:26:40.068Z",
+    "fingerprint": "5b5c648b4fe5e638",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:33:30.415Z",
     "places": [
       "seattle-wa"
     ]
@@ -30,8 +30,679 @@
   "complete_marker": null,
   "certify_by": "2026-11-24",
   "official": null,
-  "contests": [],
-  "unmatched_feed": [],
-  "unmatched_guide": [],
+  "contests": [
+    {
+      "feed_id": "01000000-f0b7-9b6a-7a99-08df232198db",
+      "feed_name": "West Electoral District - Judge Position No. 1",
+      "item": "kc-district-court-west-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bardi Martin": "Bardi Martin",
+        "Nyjat Rose-Akins": "Nyjat Rose-Akins",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7ae0-08df232198db",
+      "feed_name": "West Electoral District - Judge Position No. 2",
+      "item": "kc-district-court-west-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kuljinder K. Dhillon": "Kuljinder K. Dhillon",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7b20-08df232198db",
+      "feed_name": "West Electoral District - Judge Position No. 3",
+      "item": "kc-district-court-west-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rebecca Robertson": "Rebecca Robertson",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7b5c-08df232198db",
+      "feed_name": "West Electoral District - Judge Position No. 4",
+      "item": "kc-district-court-west-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Yvonne Chin": "Yvonne Chin",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7b91-08df232198db",
+      "feed_name": "West Electoral District - Judge Position No. 5",
+      "item": "kc-district-court-west-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kristin Shotwell": "Kristin Shotwell",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-6d8b-08df232198db",
+      "feed_name": "Assessor",
+      "item": "king-county-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rob Foxcurran": "Rob Foxcurran",
+        "Dominique M Scarimbolo": "Dominique M Scarimbolo",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-73aa-08df232198db",
+      "feed_name": "Metropolitan King County - Council District No. 2",
+      "item": "king-county-council-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Rebecca Saldaña": "Rebecca Saldaña",
+        "Toshiko Grace Hasegawa": "Toshiko Grace Hasegawa",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7402-08df232198db",
+      "feed_name": "Metropolitan King County - Council District No. 4",
+      "item": "king-county-council-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jorge L. Barón": "Jorge L. Barón",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-74ea-08df232198db",
+      "feed_name": "Metropolitan King County - Council District No. 8",
+      "item": "king-county-council-8",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Teresa Mosqueda": "Teresa Mosqueda",
+        "Nick Duda": "Nick Duda",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-731b-08df232198db",
+      "feed_name": "Director of Elections",
+      "item": "king-county-elections-director",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Julie Wise": "Julie Wise",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-40ed-08df232198db",
+      "feed_name": "Prosecuting Attorney",
+      "item": "king-county-prosecutor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Leesa Manion": "Leesa Manion",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7bdf-08df232198db",
+      "feed_name": "City of Seattle - Council District No. 5",
+      "item": "seattle-council-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nilu Jenks": "Nilu Jenks",
+        "Julie Kang": "Julie Kang",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-7c24-08df232198db",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 1",
+      "item": "seattle-muni-court-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cat McDowall": "Cat McDowall",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0cdb-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 2",
+      "item": "seattle-muni-court-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Katharine Edwards": "Katharine Edwards",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0e1b-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 3",
+      "item": "seattle-muni-court-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Pooja Vaddadi": "Pooja Vaddadi",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0e69-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 4",
+      "item": "seattle-muni-court-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Anita Crawford-Willis": "Anita Crawford-Willis",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0eaf-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 5",
+      "item": "seattle-muni-court-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Gabe Rothstein": "Gabe Rothstein",
+        "Garmon Newsom": "Garmon Newsom",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0ef7-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 6",
+      "item": "seattle-muni-court-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Shantrice Anderson": "Shantrice Anderson",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-0f38-08df232198dc",
+      "feed_name": "Seattle Municipal Court - Judge Position No. 7",
+      "item": "seattle-muni-court-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Damon Shadid": "Damon Shadid",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-3799-08df232198dc",
+      "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 5",
+      "item": "wa-coa-1-1-pos-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "David S. Mann": "David S. Mann",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-37db-08df232198dc",
+      "feed_name": "Court of Appeals, Division 1, District 1 - Judge Position 6",
+      "item": "wa-coa-1-1-pos-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bill A. Bowman": "Bill A. Bowman",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-1fa6-08df232198dc",
+      "feed_name": "Legislative District 32 - State Representative Pos. 1",
+      "item": "wa-hd-32-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Keith Scully": "Keith Scully",
+        "Danica Noble": "Danica Noble",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "Snohomish",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2041-08df232198dc",
+      "feed_name": "Legislative District 32 - State Representative Pos. 2",
+      "item": "wa-hd-32-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lauren Davis": "Lauren Davis",
+        "Imraan Siddiqi": "Imraan Siddiqi",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "Snohomish",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2402-08df232198dc",
+      "feed_name": "Legislative District 34 - State Representative Pos. 1",
+      "item": "wa-hd-34-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brianna K. Thomas": "Brianna K. Thomas",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-248c-08df232198dc",
+      "feed_name": "Legislative District 34 - State Representative Pos. 2",
+      "item": "wa-hd-34-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Joe Fitzgibbon": "Joe Fitzgibbon",
+        "Mary Anito": "Mary Anito",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2619-08df232198dc",
+      "feed_name": "Legislative District 36 - State Representative Pos. 1",
+      "item": "wa-hd-36-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Julia Grant Reed": "Julia Grant Reed",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-267b-08df232198dc",
+      "feed_name": "Legislative District 36 - State Representative Pos. 2",
+      "item": "wa-hd-36-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Liz Berry": "Liz Berry",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-277a-08df232198dc",
+      "feed_name": "Legislative District 37 - State Representative Pos. 1",
+      "item": "wa-hd-37-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kelabe Tewolde": "Kelabe Tewolde",
+        "Sharon Tomiko Santos": "Sharon Tomiko Santos",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2826-08df232198dc",
+      "feed_name": "Legislative District 37 - State Representative Pos. 2",
+      "item": "wa-hd-37-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jaelynn Scott": "Jaelynn Scott",
+        "Evon McCorkle": "Evon McCorkle",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2b03-08df232198dc",
+      "feed_name": "Legislative District 43 - State Representative Pos. 1",
+      "item": "wa-hd-43-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Nicole Macri": "Nicole Macri",
+        "Alby Clendennin": "Alby Clendennin",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2b9e-08df232198dc",
+      "feed_name": "Legislative District 43 - State Representative Pos. 2",
+      "item": "wa-hd-43-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Shaun Scott": "Shaun Scott",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2f1f-08df232198dc",
+      "feed_name": "Legislative District 46 - State Representative Pos. 1",
+      "item": "wa-hd-46-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Gerry Pollet": "Gerry Pollet",
+        "Will Dreher": "Will Dreher",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2fb8-08df232198dc",
+      "feed_name": "Legislative District 46 - State Representative Pos. 2",
+      "item": "wa-hd-46-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Darya Farivar": "Darya Farivar",
+        "Rodney 'Star' Thornley": "Rodney 'Star' Thornley",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-1f08-08df232198dc",
+      "feed_name": "Legislative District 32 - State Senator",
+      "item": "wa-sd-32",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cindy Ryu": "Cindy Ryu",
+        "Jesse Salomon": "Jesse Salomon",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "Snohomish",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-239c-08df232198dc",
+      "feed_name": "Legislative District 34 - State Senator",
+      "item": "wa-sd-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Emily Alvarado": "Emily Alvarado",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2531-08df232198dc",
+      "feed_name": "Legislative District 36 - State Senator",
+      "item": "wa-sd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Noel C. Frame": "Noel C. Frame",
+        "Jillian England": "Jillian England",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-26da-08df232198dc",
+      "feed_name": "Legislative District 37 - State Senator",
+      "item": "wa-sd-37",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chipalo Street": "Chipalo Street",
+        "Tatiana Brown": "Tatiana Brown",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2a63-08df232198dc",
+      "feed_name": "Legislative District 43 - State Senator",
+      "item": "wa-sd-43",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jamie Pedersen": "Jamie Pedersen",
+        "Hannah Sabio-Howell": "Hannah Sabio-Howell",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-2e37-08df232198dc",
+      "feed_name": "Legislative District 46 - State Senator",
+      "item": "wa-sd-46",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Javier Valdez": "Javier Valdez",
+        "Sandra Stephens": "Sandra Stephens",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-109f-08df232198dc",
+      "feed_name": "Congressional District 7 - U.S. Representative",
+      "item": "wa-us-house-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Pramila Jayapal": "Pramila Jayapal",
+        "Nirav Sheth": "Nirav Sheth",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "01000000-f0b7-9b6a-127e-08df232198dc",
+      "feed_name": "Congressional District 9 - U.S. Representative",
+      "item": "wa-us-house-9",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Adam Smith": "Adam Smith",
+        "Doug Basler": "Doug Basler",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "King",
+        "Pierce",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "01000000-f0b7-9b6a-3ad7-08df232198dc",
+      "feed_name": "City of Seattle - Proposition No. 1",
+      "why": "judge disagreed: Only the seats field is off: pair says seats 1, guide item says null for a measure. Feed line is the City of Seattle Prop 1 (other cities' Prop 1 lines are separate), Yes/No right; set seats to null and this agrees."
+    }
+  ],
+  "unmatched_guide": [
+    "seattle-prop-1"
+  ],
   "not_here": []
 }

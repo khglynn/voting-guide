@@ -22260,7 +22260,9 @@ export const MAPS = [
           "Washington",
           "Clackamas"
         ],
-        "item_url": null
+        "item_url": null,
+        "whole": true,
+        "whole_source": "Each Portland report page on rcvresults.multco.us is headed \"Consolidated Multnomah County, Washington County, and Clackamas County Election Results\" (auditor, council 3 and council 4, read Nov 3, 2026, 9:21 PM PT), so this count is the whole city across all three counties."
       },
       {
         "feed_id": "rcv:City_of_Portland_Councilor_-_District_3",
@@ -22295,10 +22297,11 @@ export const MAPS = [
         "reaches": [
           "Multnomah",
           "Washington",
-          "Clackamas",
-          "other counties"
+          "Clackamas"
         ],
-        "item_url": null
+        "item_url": null,
+        "whole": true,
+        "whole_source": "Each Portland report page on rcvresults.multco.us is headed \"Consolidated Multnomah County, Washington County, and Clackamas County Election Results\" (auditor, council 3 and council 4, read Nov 3, 2026, 9:21 PM PT), so this count is the whole city across all three counties."
       },
       {
         "feed_id": "rcv:City_of_Portland_Councilor_-_District_4",
@@ -22324,10 +22327,11 @@ export const MAPS = [
         "reaches": [
           "Multnomah",
           "Washington",
-          "Clackamas",
-          "other counties"
+          "Clackamas"
         ],
-        "item_url": null
+        "item_url": null,
+        "whole": true,
+        "whole_source": "Each Portland report page on rcvresults.multco.us is headed \"Consolidated Multnomah County, Washington County, and Clackamas County Election Results\" (auditor, council 3 and council 4, read Nov 3, 2026, 9:21 PM PT), so this count is the whole city across all three counties."
       },
       {
         "feed_id": "300001793",

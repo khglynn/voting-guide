@@ -46,7 +46,9 @@ export async function read({ fetch, map, prevToken = null }) {
     get(fetch, `${root}/${ver}/json/en/summary.json`, { identity }),
     get(fetch, `${root}/${ver}/json/en/electionsettings.json`, { identity }),
   ]);
-  for (const r of [s, e]) if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url: r.url };
+  // A refusal on either file wins over an ordinary error on the other, so a CAPTCHA is never retried (Codex, Nov 3).
+  const bad = [s, e].find((r) => r.verdict === 'refused') || [s, e].find((r) => r.verdict !== 'ok');
+  if (bad) return { verdict: bad.verdict, error: bad.error, status: bad.status, url: bad.url };
   if (!Array.isArray(s.json)) return { verdict: 'error', error: 'summary.json was not a list of contests', url: s.url };
 
   // A state's Clarity site counts counties, not precincts, in each contest's PR and TP (Colorado, Nov 3: the Senate's TP

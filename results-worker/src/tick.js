@@ -14,8 +14,10 @@ import { sha256, ELECTION } from './util.js';
 
 export const SCHED_KEY = `sched:${ELECTION}`;
 /* Bump when an adapter's output changes for the same feed bytes (Nov 3: no progress words when no precinct has
-   reported), so stored reads made by older code are redone in full and replaced in place, never left stale. */
-export const READ_VERSION = 2;
+   reported), so stored reads made by older code are redone in full and replaced in place, never left stale.
+   3 (Nov 3, 10:55 PM): a contest kept after a falling total by the old code had no time of its own (TX-10); a full
+   re-read lets checkRead hand it back to the source's count even when the feed hasn't changed. */
+export const READ_VERSION = 3;
 const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';
 
@@ -269,14 +271,22 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
     }
   }
   if (fpChanged) for (const m of maps) states.add(m.state);
+  // A state whose last publish crashed is tried again every tick until it goes out, even when none of its sources is
+  // due: a refusal written on a tick whose file write failed would otherwise leave old numbers public (Codex, Nov 3).
+  const retry = sched.meta.republish || [];
+  for (const st of retry) states.add(st);
   const published = [];
+  const failed = [];
   for (const st of states) {
     try { published.push(await publishState({ state: st, maps, store, archive, sched, now, ping, log })); } catch (e) {
       const error = `crashed: ${String(e?.message || e)}`;
       log(JSON.stringify({ state: st, error }));
       published.push({ state: st, error });
+      failed.push(st);
     }
   }
+  if (failed.length) sched.meta.republish = failed; else delete sched.meta.republish;
+  if (failed.join() !== retry.join()) metaChanged = true;
 
   if (live.length && live.every((m) => sched.sources[m.id]?.stopped) && !sched.meta.done_pinged) {
     sched.meta.done_pinged = now;

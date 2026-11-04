@@ -378,3 +378,55 @@ test('tick: a refused source starts again when its map changes or a run by hand 
   const pv = JSON.parse(await store.get('preview:TX'));
   assert.notEqual(pv.sources[0].note, 'source refused us', 'its rows come back');
 });
+
+test('tick: a CAPTCHA on one Clarity file wins over a plain error on the other, so it is never retried', async () => {
+  const map = mapFor('bexar-tx');
+  const f = fakeFetch({ '/127291/current_ver.txt': { status: 200, body: '400100' }, '/127291/400100/json/en/summary.json': { status: 503, body: 'Service Unavailable' }, '/127291/400100/json/en/electionsettings.json': { status: 405, body: '<html><title>Human Verification</title></html>' } });
+  const store = memStore();
+  const out = await runTick({ fetch: f, store, archive: null, maps: [map], now: '2026-11-04T03:00:00.000Z', log: () => {} });
+  assert.equal(out.ran[0].outcome, 'refused');
+  assert.equal(f.calls.filter((c) => /clarityelections/.test(c.url)).length, 3, 'one poll, no retry');
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).sources['bexar-tx'].stopped, 'refused');
+});
+
+test('tick: a state whose file write failed is published again on the next tick, even with no source due', async () => {
+  const dc = mapFor('results-DC');
+  const ok = { 'getElectionInfo/2026-General-Election': 'dc.info.json', 'getCityWide/2026-General-Election': 'dc.citywide.json' };
+  const store = memStore({ 'checked:results-DC': await (await import('../src/fingerprint.js')).checkHash(dc) });
+  await runTick({ fetch: fakeFetch(ok), store, archive: null, maps: [dc], now: '2026-11-04T03:00:00.000Z', log: () => {} });
+  assert.equal(JSON.parse(await store.get('file:DC')).sources[0].status, 'counting');
+  // DC refuses us, and the file write fails on that very tick
+  const put = store.put.bind(store);
+  let fail = true;
+  store.put = async (k, v) => { if (fail && k === 'file:DC') throw new Error('KV PUT failed: 500'); return put(k, v); };
+  const sched = JSON.parse(await store.get('sched:2026-11-03')); sched.sources['results-DC'].next_due = null; await put('sched:2026-11-03', JSON.stringify(sched));
+  const out = await runTick({ fetch: fakeFetch({ 'getElectionInfo/': { status: 403, body: '' } }), store, archive: null, maps: [dc], now: '2026-11-04T03:01:00.000Z', log: () => {} });
+  assert.match(out.published[0].error, /KV PUT failed/);
+  assert.equal(JSON.parse(await store.get('file:DC')).sources[0].status, 'counting', 'the old file is still up');
+  assert.deepEqual(JSON.parse(await store.get('sched:2026-11-03')).meta.republish, ['DC']);
+  fail = false;
+  const next = await runTick({ fetch: fakeFetch(ok), store, archive: null, maps: [dc], now: '2026-11-04T03:02:00.000Z', log: () => {} });
+  assert.equal(next.ran.length, 0, 'DC is stopped, nothing ran');
+  assert.equal(JSON.parse(await store.get('file:DC')).sources[0].note, 'source refused us', 'the refusal reached the public file');
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).meta.republish, undefined);
+});
+
+test('tick: a stored read from before READ_VERSION 3 with an untimed kept contest is redone and gives way, feed unchanged', async () => {
+  const map = mapFor('bexar-tx');
+  const routes = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const store = memStore();
+  await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:00:00.000Z', log: () => {} });
+  const rec = JSON.parse(await store.get('src:bexar-tx'));
+  const fresh = JSON.parse(JSON.stringify(rec.read.contests[0]));
+  rec.read_version = 2;
+  rec.read.contests[0] = { ...fresh, choices: fresh.choices.map((ch) => ({ ...ch, votes: 500 })), note: "The source's total fell from 2000 to 1990 at its 2026-11-04T04:34:00.000Z update; we kept the earlier numbers." };
+  await store.put('src:bexar-tx', JSON.stringify(rec));
+  const sched = JSON.parse(await store.get('sched:2026-11-03'));
+  sched.sources['bexar-tx'].next_due = null; // the token is still there: the feed hasn't moved
+  await store.put('sched:2026-11-03', JSON.stringify(sched));
+  await runTick({ fetch: fakeFetch(routes), store, archive: null, maps: [map], now: '2026-11-03T22:05:00.000Z', log: () => {} });
+  const after = JSON.parse(await store.get('src:bexar-tx'));
+  assert.deepEqual(after.read.contests[0].choices, fresh.choices, "the source's own count");
+  assert.equal(after.read.contests[0].note, undefined);
+  assert.equal(after.read_version, 3);
+});

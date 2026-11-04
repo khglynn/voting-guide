@@ -7,6 +7,7 @@ import * as clarity from '../src/adapters/clarity.js';
 import * as nyc from '../src/adapters/nyc_enr.js';
 import * as multco from '../src/adapters/multco.js';
 import * as ca_sos from '../src/adapters/ca_sos.js';
+import * as lvt from '../src/adapters/lvt.js';
 import { checkFile } from '../src/checks.js';
 import { sourceSlices, buildStateFile } from '../src/merge.js';
 
@@ -165,4 +166,17 @@ test('NYC: "Uncertified" is never official; only a label made of official words 
   assert.equal((await nyc.read({ fetch: fakeFetch(routes('UNCERTIFIED RESULTS')), map: mapFor('results-NY-nyc') })).official, false);
   assert.equal((await nyc.read({ fetch: fakeFetch(routes('CERTIFIED RESULTS')), map: mapFor('results-NY-nyc') })).official, true);
   assert.equal((await nyc.read({ fetch: fakeFetch(nycRoutes()), map: mapFor('results-NY-nyc') })).official, false, "tonight's own label");
+});
+
+test('LVT: a summary file read mid-upload (no closing </NewDataSet>) is an error, never a race with its first candidates only', async () => {
+  const LM = 'Wed, 04 Nov 2026 05:00:00 GMT';
+  const full = fixture('lvt-sandiego.summary_25.xml');
+  const cut = full.slice(0, full.indexOf('</Table>') + '</Table>'.length);
+  const at = (body) => ({ '/sandiegocaenr/25/summary_25.xml': { status: 200, body, headers: { 'Last-Modified': LM } } });
+  const r = await lvt.read({ fetch: fakeFetch(at(cut)), map: mapFor('san-diego-county-ca') });
+  assert.equal(r.verdict, 'error');
+  assert.match(r.error, /cut off/);
+  assert.equal(r.changed_token, undefined, 'no token saved, so the next poll reads it again');
+  assert.equal((await lvt.read({ fetch: fakeFetch(at(full)), map: mapFor('san-diego-county-ca') })).verdict, 'ok');
+  assert.equal((await lvt.read({ fetch: fakeFetch(at(`${full}\r\n  `)), map: mapFor('san-diego-county-ca') })).verdict, 'ok', 'trailing whitespace is fine');
 });

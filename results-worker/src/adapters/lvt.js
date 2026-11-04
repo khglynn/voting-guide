@@ -12,6 +12,7 @@
    3. No status words. The page's banner ("Unofficial Election Results" on both counties at 8:05 PM PT) sits in the
       HTML, not the XML, so the map records it as `feed.labels` with when it was read.
    4. ContestantWinner is never taken as an outcome (the honesty rules decide that, not the feed).
+   5. No length or checksum: a file is whole only when it ends with </NewDataSet>.
    The file sends Last-Modified, so an unchanged poll is one conditional request answered 304. */
 import { get } from '../fetch.js';
 
@@ -56,6 +57,10 @@ export async function read({ fetch, map, prevToken = null }) {
   if (r.verdict === 'not_modified') return { verdict: 'ok', unchanged: true, changed_token: prevToken };
   if (r.verdict !== 'ok') return { verdict: r.verdict, error: r.error, status: r.status, url };
   if (!/<NewDataSet>/.test(r.body || '')) return { verdict: /<html/i.test(r.body || '') ? 'refused' : 'error', error: /<html/i.test(r.body || '') ? 'an HTML page came back where the XML summary was expected (a bot check?)' : 'the summary file had no <NewDataSet>', url };
+  // A file read while the county is still uploading it stops partway: a race would show only its first candidates
+  // (at 100%) and every race past the cut would turn into a link. Only a whole file counts; this returns before the
+  // token is built, so the next poll reads it again in full (pre-deploy review, Nov 3).
+  if (!/<\/NewDataSet>\s*$/.test(r.body)) return { verdict: 'error', error: 'the summary file was cut off (no closing </NewDataSet>)', url };
   const p = parse(r.body);
   if (!p.contests.length) return { verdict: 'error', error: 'the summary file listed no races', url };
   if (p.electionIds.length !== 1) return { verdict: 'error', error: `the summary file mixes election ids ${p.electionIds.join(', ')}`, url };

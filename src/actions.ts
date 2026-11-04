@@ -1038,10 +1038,11 @@ A.cmp = (d) => {
   const sel = cmpSel();
   const cur = !sel ? null : sel.kind === 'mine' ? 'mine' : sel.kind === 'group' ? sel.key : 'party';
   if (k === 'party') {
-    if (cur === 'party') { S.ui.cmp = null; S.ui.open.delete('cmp-party'); } else if (S.ui.open.has('cmp-party')) S.ui.open.delete('cmp-party'); else S.ui.open.add('cmp-party');
+    if (cur === 'party') { S.ui.cmp = anyPick() ? null : undefined; S.ui.open.delete('cmp-party'); } else if (S.ui.open.has('cmp-party')) S.ui.open.delete('cmp-party'); else S.ui.open.add('cmp-party');
   } else {
     S.ui.open.delete('cmp-party');
-    S.ui.cmp = cur === k ? null : k;
+    // Cleared on a ballot with no picks of your own: back to the default, so your first pick shows as yours.
+    S.ui.cmp = cur === k ? (anyPick() ? null : undefined) : k;
   }
   repaintFig();
   focusFk(`cmp-${k}`);

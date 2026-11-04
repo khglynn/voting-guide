@@ -1065,8 +1065,10 @@ A['cmp-take'] = () => {
   S.ui.cmp = undefined;
   if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null; }
   persist();
-  // The rows and the card repaint; with the address form open, row by row, so what's typed there stays (Codex).
+  // The rows and the card repaint; with the address form open, row by row, and the head (the endorsement line, the
+  // "filled in" line with its Undo) through renderAddr, so what's typed there stays (Codex).
   repaintResults();
+  if (S.ui.addrOpen) renderAddr();
   focusFk('vz-h');
   if (n) fillToast(fillHead(n, sp), setupPlan(sp));
 };

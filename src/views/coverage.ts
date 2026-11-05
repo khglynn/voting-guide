@@ -34,7 +34,8 @@ const count = (c: Cov, fk: string | null): string => (!c.sources ? '<span class=
   ? `<button class="linkbtn cov-n" data-act="sheet" data-s="sources" aria-haspopup="dialog" data-fk="${fk}">${esc(plural(c.sources, 'source'))}</button>`
   : esc(plural(c.sources, 'source')));
 const lookedTail = (c: Cov): string => (c.searched ? ` We looked hard on ${day(c.searched.on)}.` : '');
-const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c.kind === 'thin' ? 'local picks' : 'your city’s races'} ${askedWord(c.askedOn)}.` : '');
+// After the polls close a city request is for its races and results, the card's own words (common.afterClose).
+const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c.kind === 'thin' ? 'local picks' : afterClose() ? 'your city’s races and results' : 'your city’s races'} ${askedWord(c.askedOn)}.` : '');
 
 /* ---------- the card ---------- */
 /* A statewide ballot always gets the card (missing races matter with endorsements on or off); a thin

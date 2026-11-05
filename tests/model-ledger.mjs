@@ -2557,6 +2557,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       mc.rememberAsk('z:65806', '2026-11-04');
       const aa = txt(views.coverage.covCardHTML('ballot'));
       check('after the close: asked, the card says Kevin will try, what he looks for, and offers Tell me when it’s in', aa === 'Request sent. Kevin will try to add your city. You asked today. He’ll look for its races, who ran and how each one came out. Until then, your statewide races are below. Tell me when it’s in', aa);
+      check('after the close: asked, the quiet lines say races and results too', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races and results today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for your city’s races and results today.'), txt(views.coverage.headCovHTML()));
       S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: { ...fa, data: '2026-11-04 12:00 UTC' }, state: 'edit', err: false, fk: 'cov-hear', back: null };
       const af = views.shelf.shelfHTML();
       check('after the close: the follow-up asks to hear when the city’s races and results are in, and posts the same follow-up', /Kevin will tell you when your city’s races and results are in the guide\./.test(af) && /<b>Your request:<\/b> your city’s races and results, for ZIP 65806 in Missouri\. Sent today\./.test(af) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me when it’s in', txt(af).slice(0, 300));

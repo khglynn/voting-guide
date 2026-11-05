@@ -6,6 +6,7 @@ import { stepKey, planKey, nearKey, nearKeyNow } from './views/planstrip';
 import { render, anchored } from './render';
 import { localize } from './ballot';
 import { RAIL_AT, barAfter, endcapHTML } from './views/ledger';
+import { covCardHTML } from './views/coverage';
 import { afterPolls } from './model/plan';
 import { printTitle } from './views/mast';
 import { ensureIndex, openBallot, openChosen, zipTyped, offerResume, dismissResume, lookZip, viewed, repaintNear } from './app';
@@ -139,12 +140,16 @@ function refreshPlan(): void {
   const nearMoved = S.ui.view === 'ballot' && nearKeyNow(S.ballot.howto) !== nearKey;
   // The polls closing changes more than the strip (Nov 3, results Phase 0): the bar, the endcap, What's next and Share
   // the guide follow the strip's phase, so they repaint with it, once. The bar remembers what it last painted, for
-  // whichever ballot is showing; the endcap is swapped alone, so an address being typed in the ballot head stays.
+  // whichever ballot is showing; the endcap is swapped alone, so an address being typed in the ballot head stays. So is
+  // the coverage card under the masthead (Nov 5): after the close it offers a city's races and results, not a ballot to
+  // vote, and a thin place's picks hunt goes (views/coverage.ts).
   if (barAfter !== null && afterPolls(S.ballot.howto) !== barAfter) {
     anchored(() => {
       render(['plan', 'bar', 'cheat', 'pass']);
       const cap = document.querySelector('#r-ballot .endcap');
       if (cap) cap.outerHTML = endcapHTML();
+      const card = document.querySelector('#r-restore .cov-card');
+      if (card) card.outerHTML = covCardHTML('ballot');
     });
     repaintNear(); // the address box's "Closest vote center" line goes with the plan's block (a no-op without a lookup)
     tickResults(); // the polls just closed: read the results file now (src/results.ts)

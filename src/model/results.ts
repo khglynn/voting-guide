@@ -114,8 +114,8 @@ export function homeCounty(): string | null {
    slice has numbers, else the Worker's pick (the largest county), else the largest slice that has numbers. The item
    comes back with that slice's numbers, words, time and link in its place, but the race's own status: a county that
    finished counting never makes the race read "Unofficial." while other counties count (Opus review, Nov 4). Its
-   slices and missing stay, so it still spans: never called, and compared only as acrossCounties allows. Only when the item's own source is one
-   of its slices: a whole-race count (a state's) is never swapped for a county's piece of it. */
+   slices and missing stay, so it still spans: never called, and compared only as acrossCounties allows. Only when the
+   item's own source is one of its slices: a whole-race count (a state's) is never swapped for a county's piece of it. */
 export function viewOf(r: ItemResult): ItemResult {
   const sl = r.slices || [];
   if (!spans(r) || !sl.some((x) => x.source === r.source)) return r;

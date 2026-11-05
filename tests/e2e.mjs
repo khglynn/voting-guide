@@ -2310,9 +2310,14 @@ const darkIn = (page, sel) => page.$$eval(`${sel} .mini.dark`, (els) => els.filt
 }
 // A thin place: none of its own sources has picks and some of its races have none from anyone (model/coverage.ts).
 // Whichever place that is in today's data (Pensacola on Oct 25), through a ZIP that is only that place's. One we
-// already looked hard for (local_picks_checked) asks nothing: LOOKED, below.
+// already looked hard for (local_picks_checked) asks nothing: LOOKED, below. Both blocks visit on the day after the
+// place's newest row date, and a thin place's card goes once the polls close (Nov 5, views/coverage.ts cardShows), so
+// only a place whose visit day falls before its Election Day is picked: a row dated Nov 3 or later would put the visit
+// after the close, where no card shows (the review of #143).
+const visitDay = (p) => new Date(Date.parse(`${p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+const beforeElection = (p) => !!p.checked && visitDay(p) < (INDEX_JSON.states[p.state]?.election_date || '');
 const thinPlaces = (looked) => Object.entries(INDEX_JSON.places).filter(([, p]) => p.local_with_picks === 0 && p.local_races_with_picks < p.local_races && !!p.local_picks_checked === looked)
-  .map(([id, p]) => ({ id, p, zip: Object.entries(INDEX_JSON.zips).find(([, ids]) => ids.length === 1 && ids[0] === id)?.[0] })).find((x) => x.zip && x.p.state !== 'DC');
+  .map(([id, p]) => ({ id, p, zip: Object.entries(INDEX_JSON.zips).find(([, ids]) => ids.length === 1 && ids[0] === id)?.[0] })).find((x) => x.zip && x.p.state !== 'DC' && beforeElection(x.p));
 const THIN = thinPlaces(false);
 const LOOKED = thinPlaces(true);
 {
@@ -2347,7 +2352,7 @@ const LOOKED = thinPlaces(true);
     const posts = await catchForm(page);
     // On the day after the data's newest date: the e2e's usual Oct 19 comes before the re-check's rows, and a
     // request "sent" before the data's date reads as answered (model/coverage.ts), which no real device sees.
-    const after = new Date(Date.parse(`${thin.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    const after = visitDay(thin.p);
     // Two days or less before Election Day the card says he may not finish in time (model/coverage.ts, late). Rows
     // re-checked on Nov 1 put this visit on Nov 2, so from then on the late words are the right ones.
     const elect = INDEX_JSON.states[thin.p.state]?.election_date;
@@ -2394,7 +2399,7 @@ const LOOKED = thinPlaces(true);
       const idx = { ...INDEX_JSON, places: { ...INDEX_JSON.places, [looked.id]: looked.p } };
       await page.route((u) => u.pathname.endsWith('/data/index.json'), (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(idx) }));
     }
-    const after = new Date(Date.parse(`${looked.p.checked}T00:00:00Z`) + 864e5).toISOString().slice(0, 10);
+    const after = visitDay(looked.p);
     await page.goto(`${BASE}/?today=${after}`);
     await page.waitForSelector('#zip');
     await page.fill('#zip', looked.zip);
@@ -3870,8 +3875,27 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   const after = await text(page, '.plan-h');
   check('Austin on a Pacific-time phone: 6:58 PM Central is still Election Day', /^Today is Election Day\. Polls close at 7 PM\.$/.test(before), before);
   check('Austin on a Pacific-time phone: the open page turns to results after 7 PM Central', /^Results are rolling in\./.test(after), after);
-  check('Austin, an open page at the close: the bar and the endcap turn too (On this ballot, What’s next)', /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page, '.foot-in'));
+  check('Austin, an open page at the close: the bar and the endcap turn too (On this ballot, What’s next)', /^On this ballot What’s next$/.test(await text(page, '.foot-in')) && (await text(page, '[data-fk="endcap-cheat"]')) === 'What’s next', await text(page,'.foot-in'));
   noErrors(page, 'Polls close on an open page');
+  await ctx.close();
+}
+// Nov 5 (the review of #143): an open statewide ballot's coverage card turns at the close too, from "before you vote"
+// to a city's races and results, with no sample-ballot line. Springfield, Missouri, whose polls close at 7 PM Central.
+{
+  const { ctx, page } = await newPage({ timezoneId: 'America/Chicago' });
+  await page.clock.install({ time: new Date('2026-11-04T00:58:00Z') });
+  await page.goto(`${BASE}/?today=2026-11-03`);
+  await page.waitForSelector('#zip');
+  await page.fill('#zip', '65806');
+  await throughSetup(page);
+  await page.waitForSelector('#r-restore .cov-card', { timeout: 15000 });
+  const before = { lead: await text(page, '#r-restore .cov-card .cov-lead'), sb: !!(await page.$('#r-restore .cov-card .cov-sb')) };
+  await page.clock.runFor(3 * 60_000);
+  await page.waitForTimeout(200);
+  const after = { lead: await text(page, '#r-restore .cov-card .cov-lead'), sb: !!(await page.$('#r-restore .cov-card .cov-sb')), fine: await text(page, '#r-restore .cov-card .cov-fine') };
+  check('Springfield, an open ballot at 6:58 PM Central: the card asks for your city’s races, with the sample ballot line', before.lead === 'Your city’s races aren’t in the guide yet.' && before.sb, JSON.stringify(before));
+  check('Springfield, an open ballot past 7 PM Central: the card turns to races and results, he’ll try, no sample ballot line', after.lead === 'Your city’s races and results aren’t in the guide yet.' && !after.sb && after.fine === 'One tap. It sends Kevin your ZIP and nothing about you. He’ll try to add who ran and how each race came out.', JSON.stringify(after));
+  noErrors(page, 'Coverage card at the close');
   await ctx.close();
 }
 // Codex r2: a contested judicial race's Full details keeps each rating as published, with its scope and source.

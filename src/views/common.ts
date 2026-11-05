@@ -3,6 +3,13 @@ import type { Endorser, Lean } from '../types';
 import { S, type ShelfKind } from '../state';
 import { esc, host } from '../util';
 import { hasPaywallNote, isBlocked } from '../model/lens';
+import { afterPolls, resultsLead } from '../model/plan';
+
+/* After the polls close (Nov 5, 2026; Kevin: "People should be able to request new cities still. It'll be mostly
+   results focused. But it needs, like, race information too"): the open ballot's own close, or with no ballot open,
+   every covered state's (the first page's results door, mast.ts). The request surfaces (the coverage card, Request a
+   city and its follow-up) then offer a city's races and how they came out, never a ballot to vote. */
+export const afterClose = (): boolean => (S.ballot ? afterPolls(S.ballot.howto) : !!resultsLead(S.index?.states)?.after);
 
 /* "Report a problem" and "Request a city" go to a Google Form in Kevin's kevin@trimm.co account (moved
    Oct 28 from a personal Gmail account; Google can't transfer a form's ownership into Workspace, so it's a

@@ -3724,7 +3724,7 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   await tap(page, '[data-fk="bar-menu"]');
   await page.waitForSelector('.sheet-panel.toc .nv-res');
   const menu = await text(page, '.sheet-panel.toc');
-  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where these numbers come from ?Travis County ?Results ?“128 of 186 vote centers reporting” · Updated 9:35 PM CT · We checked/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
+  check('Results rows: the menu is results first: the word, when we checked, Refresh, each office’s words, the offices’ pages, posted counts per section, no Next up', /^Results on this ballot ?Close Counting We checked 9:41 PM CT ?Refresh Federal offices ?Numbers for/.test(menu) && /Where these numbers come from ?Travis County ?Results ?“128 of 186 vote centers reporting” · Last posted 9:35 PM CT · We checked/.test(menu) && !!(await page.$('.sheet-panel.toc [data-fk="toc-refresh"]')) && !(await page.$('.sheet-panel.toc [data-act="next"]')) && !!(await page.$('.sheet-panel.toc [data-act="jump"][data-to="federal"]')), menu.slice(0, 260));
   await tap(page, '.sheet-panel.toc [data-act="sheet-close"]');
   // The bar's line opens the menu right at where these numbers come from (DESIGN-OVERNIGHT-2 section 2).
   await tap(page, '.foot-res .fr-line');
@@ -3747,13 +3747,13 @@ for (const [day, want] of [['2026-11-03', /^Today is Election Day\. Polls close 
   if ((await page.getAttribute('[data-fk="row-tx-us-house-37"]', 'aria-expanded')) !== 'true') await tap(page, '[data-fk="row-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rtab');
   const ob = await text(page, '#ob-tx-us-house-37');
-  check('Results rows: the open row: count line, the table, the office’s time and words, AP, sources folded', /Counting\. Casar is ahead so far\./.test(ob) && /Vote %/.test(ob) && /Travis County updated: 9:35 PM CT/.test(ob) && /AP’s race calls/.test(ob) && (await page.getAttribute('[data-fk="es-tx-us-house-37"]', 'aria-expanded')) === 'false', ob.slice(0, 200));
+  check('Results rows: the open row: count line, the table, the office’s time and words, AP, sources folded', /Counting\. Casar is ahead so far\./.test(ob) && /Vote %/.test(ob) && /Travis County last posted 9:35 PM CT/.test(ob) && /AP’s race calls/.test(ob) && (await page.getAttribute('[data-fk="es-tx-us-house-37"]', 'aria-expanded')) === 'false', ob.slice(0, 200));
   await tap(page, '[data-fk="es-tx-us-house-37"]');
   await page.waitForSelector('#ob-tx-us-house-37 .rs-was');
   await tap(page, '#ob-tx-us-house-37 [data-act="pick"][data-v="Lauren B. Peña"]');
   await page.waitForTimeout(400);
   check('Results rows: a pick still works, and the column says "Your pick" in gold ink', (await vd('tx-us-house-37')) === 'Casar 71% counting Your pick: Peña' && !!(await page.$('#i-tx-us-house-37 .vd .p')), await vd('tx-us-house-37'));
-  check('Results rows: the figure counts it behind', /Your 1 pick: 1 behind/.test(await text(page, '#vz .vz-sum')) && !!(await page.$('#vz .d.down[data-id="tx-us-house-37"]')), await text(page, '#vz .vz-sum'));
+  check('Results rows: the figure counts it losing', /Your 1 pick: 1 losing/.test(await text(page, '#vz .vz-sum')) && !!(await page.$('#vz .d.down[data-id="tx-us-house-37"]')), await text(page, '#vz .vz-sum'));
   // A figure row's chevron lists its races; its label jumps to the section.
   await tap(page, '#vz [data-act="fig-row"][data-sec="federal"]');
   check('Results rows: a figure row lists its races, each linking its row', /U\.S\. Representative/.test(await text(page, '#vz .vz-list')) && !!(await page.$('#vz .vz-list [data-act="goto"][data-id="tx-us-house-37"]')), await text(page, '#vz .vz-list'));

@@ -765,7 +765,7 @@ export function barHTML(): string {
 
 /* The bar's results line, above its two buttons (second overnight pass, DESIGN-OVERNIGHT-2 section 2; Kevin: the
    footer "still has two lines and no % reporting? there has to be a cleaner clearer design"). One line at every width:
-   "Counting · Travis 64 of 201 vote centers · 9:46 PM" and a Refresh icon. The line itself opens the menu at its
+   "Counting · Travis 64 of 201 vote centers · last posted 9:46 PM" and a Refresh icon. The line itself opens the menu at its
    sources, where every office's words, times and our check time live. When it would overflow, fitFoot drops the
    office's name first, then shortens the progress, never the status word. */
 const REFRESH = '<svg class="rf-i" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M11.6 5.2A5 5 0 1 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.2 1.8v3.6H8.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -786,7 +786,9 @@ export function footResHTML(): string {
     const said = `${f.word}, can’t reach ${f.who}${f.at ? `, showing its ${f.at} numbers` : ''}`;
     return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b><span class="fr-dn">${DOT}Can’t reach ${esc(f.who)}</span>${f.at ? `<span class="fr-at dn">${DOT}showing its ${esc(f.at)} numbers</span>` : ''}</button>${refreshIcon()}</div>`;
   }
-  const at = R.failed ? 'couldn’t check for updates' : f.at;
+  // The office's own time says it's the office's (Kevin, Nov 5: a bare "Nov 4, 3:37 AM" a day and a half later read like
+  // the guide had stopped, when Travis County hadn't posted since; the menu has when we last checked).
+  const at = R.failed ? 'couldn’t check for updates' : f.at ? `last posted ${f.at}` : '';
   const mid = f.who || f.prog ? `<span class="fr-mid${f.prog ? '' : ' nop'}">${DOT}<span class="fr-who">${esc(f.who)}${f.prog ? ' ' : ''}</span>${f.prog ? `<span class="fr-pl">${esc(f.prog)}</span><span class="fr-ps">${esc(f.progShort)}</span>` : ''}</span>` : '';
   const said = [f.word, [f.who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
   return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b>${mid}${at ? `<span class="fr-at${R.failed ? ' fr-keep' : ''}">${DOT}${esc(at)}</span>` : ''}</button>${refreshIcon()}</div>`;
@@ -851,7 +853,7 @@ function resMenuHTML(where: 'toc' | 'rail'): string {
     const page = offices.find((o) => o.id === x.id)?.results_url || x.url;
     const said = sourceDown(x) ? `Couldn’t reach it. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`
       : x.status === 'refused' ? 'We can’t read this office’s results. See them on its site.'
-      : [p ? `“${p}”` : '', x.updated ? `Updated ${fmtTime(x.updated)}` : 'No update time given'].filter(Boolean).join(' · ');
+      : [p ? `“${p}”` : '', x.updated ? `Last posted ${fmtTime(x.updated)}` : 'No update time given'].filter(Boolean).join(' · ');
     const banner = labelWords(x).trim();
     const ck = x.fetched ? `We checked ${fmtTime(x.fetched).replace(/ [A-Z]T$/, '')}` : '';
     return `<li><span class="nv-sr"><b>${esc(x.name)}</b>${ext(page, 'Results', 'nv-go')}</span><span>${banner ? `${esc(banner)} · ` : ''}${esc(said)}${ck ? ` · ${esc(ck)}` : ''}</span></li>`;

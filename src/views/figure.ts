@@ -1,11 +1,13 @@
 /* Where results stand (Nov 3, results Phase 1): one figure at the top of the ballot, from the tally mock-up that won
    (the workbench's prototypes/results/tally.html, "A. Dots by ballot section") and the copy review's head order.
    A row per ballot section, a dot per race in ballot order. Your picks are big dots in the pick gold: filled where your
-   pick is ahead or won, a ring where it's behind or didn't win, dotted where we can't compare. Races you didn't pick
-   are small ink dots, dotted while they have no numbers. Shape carries the meaning, never hue alone, so it reads in
-   print (black marks) and in dark mode. The key sits above the dots, so nobody misses it.
-   Test hooks: #vz, .vz-st (the status word), .vz-key, .vz-r[data-sec] with .d dots ([data-id], classes up down wp po
-   w), [data-act="fig-row"] (a row's chevron, its list .vz-list), [data-act="fig-hide"], .vz-sum, .vz-src. */
+   pick is winning or won, a ring where it's losing or lost, half filled where the numbers are in but we can't tell,
+   dotted where there are no numbers here. Races you didn't pick are small ink dots. Shape carries the meaning, never
+   hue alone, so it reads in print (black marks) and in dark mode. The key sits above the dots, so nobody misses it, and
+   names only the marks this ballot has, in words about your pick (Kevin, Nov 5: "Ahead · Behind · Not compared · Not
+   picked" was "confusing af", and "ahead" beside a measure read as the measure passing).
+   Test hooks: #vz, .vz-st (the status word), .vz-key, .vz-r[data-sec] with .d dots ([data-id], classes up down wq wp
+   po w ln), [data-act="fig-row"] (a row's chevron, its list .vz-list), [data-act="fig-hide"], .vz-sum, .vz-src. */
 import { S } from '../state';
 import { esc, load, save } from '../util';
 import { rowTitle } from '../model/labels';
@@ -23,11 +25,11 @@ export const setFigHidden = (v: boolean): void => { save(HIDE_KEY, v); };
 
 const CHEV = '<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
 const dot = (k: Dot['kind'], id = ''): string => `<i class="d ${k}"${id ? ` data-id="${esc(id)}"` : ''} aria-hidden="true"></i>`;
-const WORDS: Record<Dot['kind'], string> = { up: 'ahead or won', down: 'behind or didn’t win', wp: 'no comparison', po: 'other race, numbers posted', w: 'other race, no numbers yet', ln: 'other race, results on the office’s site' };
+const WORDS: Record<Dot['kind'], string> = { up: 'winning or won', down: 'losing or lost', wq: 'can’t tell yet', wp: 'not posted here', po: 'no pick', w: 'no pick, not posted yet', ln: 'no pick, results on the office’s site' };
 
 function rowLabel(f: Figure, sec: string, dots: Dot[]): string {
   const n = (k: Dot['kind']) => dots.filter((d) => d.kind === k).length;
-  const bits = (['up', 'down', 'wp', 'po', 'w', 'ln'] as const).filter((k) => n(k)).map((k) => `${n(k)} ${WORDS[k]}`);
+  const bits = (['up', 'down', 'wq', 'wp', 'po', 'w', 'ln'] as const).filter((k) => n(k)).map((k) => `${n(k)} ${WORDS[k]}`);
   return `${sec}: ${bits.join(', ')}`;
 }
 function listHTML(dots: Dot[]): string {
@@ -145,16 +147,18 @@ function standHTML(f: Figure): string {
   }).join('')}</div>`;
 }
 
-/* The key, above the dots: the shapes on this ballot, and nothing it doesn't use. */
+/* The key, above the dots: the shapes on this ballot, and nothing it doesn't use, in one compact line
+   (DESIGN-OVERNIGHT-2). "Winning" and "Losing" while counting; "Won" and "Lost" once a count is final, both when both. */
 function keyHTML(f: Figure): string {
   const has = (k: Dot['kind']) => f.rows.some((r) => r.dots.some((d) => d.kind === k));
-  // One compact line (DESIGN-OVERNIGHT-2): "Ahead" and "Behind" until a count is final, "Won" and "Didn't win" join then.
-  const final = f.counts.won + f.counts.lost > 0;
+  const c = f.counts;
+  const two = (now: number, done: number, a: string, b: string): string => (now && done ? `${a} or ${b.toLowerCase()}` : done ? b : a);
+  const mine = !!f.sel && f.sel.kind === 'mine';
   const bits: [Dot['kind'], string][] = f.picks
-    ? [['up', final ? 'Ahead or won' : 'Ahead'], ['down', final ? 'Behind or didn’t win' : 'Behind'], ['wp', 'Not compared'], ['po', f.sel && f.sel.kind === 'mine' ? 'Not picked' : 'No pick']]
-    : [['po', 'Numbers posted'], ['w', 'No numbers yet']];
-  if (has('ln')) bits.push(['ln', 'On the office’s site']);
-  return `<p class="vz-key">${bits.map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
+    ? [['up', two(c.ahead, c.won, 'Winning', 'Won')], ['down', two(c.behind, c.lost, 'Losing', 'Lost')], ['wq', 'Can’t tell yet'], ['wp', 'Not posted here'],
+      ['po', mine ? 'You didn’t pick' : f.sel && f.sel.kind === 'party' ? 'No candidate' : 'No pick']]
+    : [['po', 'Numbers posted'], ['w', 'No numbers yet'], ['ln', 'On the office’s site']];
+  return `<p class="vz-key">${bits.filter(([k]) => has(k)).map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;
 }
 const noPicksLine = (f: Figure): string => `No picks on this ballot. ${f.posted} of ${f.total} ${f.total === 1 ? 'race has' : 'races have'} numbers here${f.links ? `; ${f.links} more ${f.links === 1 ? 'links' : 'link'} to official results` : ''}.`;
 /* "Results for your races are on the NYC Board of Elections site. Your picks stay here." */

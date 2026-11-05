@@ -1,0 +1,199 @@
+{
+  "id": "escambia-fl",
+  "state": "FL",
+  "name": "Escambia County Supervisor of Elections",
+  "county": "Escambia",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "3977",
+    "feed_name": "2026 General Election"
+  },
+  "guide": {
+    "fingerprint": "a5ce5a8407e282b6",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:32:57.610Z",
+    "places": [
+      "pensacola-fl"
+    ]
+  },
+  "feed": {
+    "adapter": "vr_enr",
+    "base": "https://enr.electionsfl.org/ESC/3977",
+    "results_url": "https://enr.electionsfl.org/ESC/3977/Summary/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:20 PM CT (200, S3 behind CloudFront, Last-Modified Wed, 04 Nov 2026 02:23:19 GMT).",
+    "election_id_from": "The county's own results page (https://escambiavotes.gov/election-results) links https://enr.electionsfl.org/ESC/3977/Summary/ as \"2026 General\"; the page itself says \"2026 General Election\", \"Election Date: 11/3/2026\" and links /ESC/3977/Precincts.",
+    "tz": "America/Chicago",
+    "utc_offset": -6
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-14T05:59:00Z",
+  "complete_marker": null,
+  "complete_marker_note": "None: the page's \"Completely Reported\" per vote type is election-night progress, not a finished count (cures until 5 PM Nov 5, provisionals and overseas ballots after), so Escambia reads counting until official.",
+  "certify_by": "2026-11-16",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "61241",
+      "feed_name": "County Commissioner District 2",
+      "item": "fl-escambia-commission-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Mike Kohler (REP)": "Mike Kohler",
+        "DEM Mathious D. Robinson (DEM)": "Mathious Robinson",
+        "Write-in: Not Assigned (NON)": "__other"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61242",
+      "feed_name": "County Commissioner District 4",
+      "item": "fl-escambia-commission-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Ashlee Hofberger (REP)": "Ashlee Hofberger",
+        "NPA Joe Vinson (NPA)": "Joe Vinson"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61243",
+      "feed_name": "Emerald Coast Utilities Authority District 2",
+      "item": "fl-escambia-ecua-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Lois Benson (REP)": "Lois Benson",
+        "IND Gloria G. Horning (IND)": "Gloria Horning"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61244",
+      "feed_name": "Emerald Coast Utilities Authority District 4",
+      "item": "fl-escambia-ecua-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Greg Litton (REP)": "Greg Litton",
+        "DEM Jacob Cavender (DEM)": "Jacob Cavender",
+        "NPA Ralph H. Schofield Jr. (NPA)": "Ralph Schofield, Jr."
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61256",
+      "feed_name": "County Referendum",
+      "item": "fl-escambia-lost",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "FOR the one-cent sales tax (NON)": "yes",
+        "AGAINST the one-cent sales tax (NON)": "no"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority of Escambia County voters voting on the question"
+    },
+    {
+      "feed_id": "61239",
+      "feed_name": "State Representative District 1",
+      "item": "fl-house-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Michelle Salzman (REP)": "Michelle Salzman",
+        "DEM Francesca Yabraian (DEM)": "Francesca Yabraian"
+      },
+      "reaches": [
+        "Escambia",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "61240",
+      "feed_name": "State Representative District 2",
+      "item": "fl-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Jon Fay (REP)": "Jon Fay",
+        "DEM Johnny Austin Thompson (DEM)": "Johnny Austin Thompson"
+      },
+      "reaches": [
+        "Escambia",
+        "Santa Rosa"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61251",
+      "feed_name": "Pensacola City Council District 2",
+      "item": "fl-pensacola-council-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Charles Bare (NON)": "Charles Bare",
+        "Sherri Myers (NON)": "Sherri Myers"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61252",
+      "feed_name": "Pensacola City Council District 4",
+      "item": "fl-pensacola-council-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brian Cole (NON)": "Brian Cole",
+        "Boyce White (NON)": "Boyce T. White"
+      },
+      "reaches": [
+        "Escambia"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61234",
+      "feed_name": "Representative in Congress",
+      "item": "fl-us-house-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "REP Jimmy Patronis (REP)": "Jimmy Patronis",
+        "DEM Gay Valimont (DEM)": "Gay Valimont",
+        "NPA Tyler L. Davis (NPA)": "Tyler L. Davis"
+      },
+      "reaches": [
+        "Escambia",
+        "Okaloosa",
+        "Santa Rosa",
+        "Walton"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

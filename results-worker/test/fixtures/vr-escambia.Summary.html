@@ -1,0 +1,2189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Summary Results - Election Night Reporting</title>
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Content/Site.css" />
+<link rel="stylesheet" href="//s3.amazonaws.com/vr-enr/ESC/county.css" />
+<link rel="stylesheet" href="//s3.amazonaws.com/vr-enr/ESC/3977/election.css" />
+<!--Google Analytics-->
+<script src="//s3.amazonaws.com/vr-enr/ESC/county.js"></script>
+<script src="//s3.amazonaws.com/vr-enr/ESC/3977/election.js"></script>
+</head>
+<body >
+<!--[if lt IE 9]>
+<div class="ie8-warning">
+You are using a browser that does not support many of the newer technologies employed by this website. Consider changing your browser.
+<br/>
+<a href="https://whatbrowser.org/">Learn More</a>
+</div>
+<![endif]-->
+<div id="summaryresults">
+<script src="//vrcdn.electionsfl.org/common/js/googletranslate.js" type="text/javascript"></script>
+<div id="google_translate_element" style="height: 50px"></div>
+<div class="container-fluid">
+<div class="row" id="header">
+<img class="img-responsive" alt="County Banner" src="//s3.amazonaws.com/vr-enr/ESC/wf_banner.jpg">
+</div>
+<div id="ElectionStats">
+<div class="row" id="TopStats">
+<div class="col-xs-12" id="ElectionName">
+<h1>2026 General Election</h1>
+</div>
+<div class="col-sm-3 col-sm-push-9 col-xs-12" id="ElectionDate">
+<h2>Election Date: 11/3/2026</h2>
+</div>
+<div class="col-sm-9 col-sm-pull-3 col-xs-12" id="LastUpdated">
+(Website last updated at: 11/03/2026 8:22:57 pm)
+</div>
+</div>
+<div class="row" id="BottomStats">
+<div class=" col-md-6 col-xs-12" id="LeftStats">
+<div class="row">
+<div class="col-sm-4 col-xs-8 col-sm-offset-2 TurnoutLabel">Registered Voters: </div>
+<div class="col-xs-4 notranslate TurnoutValue">206,355</div>
+</div>
+<div class="row">
+<div class="col-sm-4 col-xs-8 col-sm-offset-2 TurnoutLabel">Ballots Cast: </div>
+<div class="col-xs-4 notranslate TurnoutValue">115,855</div>
+</div>
+<div class="row">
+<div class="col-sm-4 col-xs-8 col-sm-offset-2 TurnoutLabel">Voter Turnout: </div>
+<div class="col-xs-4 notranslate TurnoutValue">56.14%</div>
+</div>
+</div>
+<div class="col-md-6 col-xs-12" id="RightStats">
+<div class="row">
+<div class="col-md-7 col-xs-12 PrecinctsLabel">Precincts Reporting: </div>
+<div class="col-md-5 col-xs-11 PrecinctsValue">80 / 80</div>
+</div>
+<div class="row">
+<div class="col-md-7 col-xs-12 PrecinctsLabel">Election Day: </div>
+<div class="col-md-5 col-xs-11 PrecinctsValue">
+<span class="voteTypeCompletelyReported">Completely Reported</span>
+</div>
+</div>
+<div class="row">
+<div class="col-md-7 col-xs-12 PrecinctsLabel">Early Votes: </div>
+<div class="col-md-5 col-xs-11 PrecinctsValue">
+<span class="voteTypeCompletelyReported">Completely Reported</span>
+</div>
+</div>
+<div class="row">
+<div class="col-md-7 col-xs-12 PrecinctsLabel">Vote By Mail: </div>
+<div class="col-md-5 col-xs-11 PrecinctsValue">
+<span class="voteTypePartiallyReported">Partially Reported</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row" id="BottomMessage">
+<div class="col-xs-12">
+<p><span style="color: #e03e2d; font-size: 24pt;"><strong>Unofficial Results</strong></span></p>
+</div>
+</div>
+</div>
+<div class="row">
+<ul class="visible-sm visible-xs">
+<tr>
+<form name="tabForm">
+<label id="tabsSelectLabel">
+<select name="tabsSelect" id="tabsSelect">
+<option value="/ESC/3977/Summary">Summary Results</option>
+<option value="/ESC/3977/Precincts">Precinct Results</option>
+<option value="/ESC/3977/Summary/?favorites=1">Favorite Races</option>
+</select>
+</label>
+</form>
+</tr>
+</ul>
+<ul class="tabs hidden-sm hidden-xs">
+<li class="tab tab1 activetab">
+<div class="BackgroundImage"></div>
+<div class="Text">
+<a id="summary_link" href="/ESC/3977/Summary">Summary Results</a>
+</div>
+</li>
+<li class="tab tab2 ">
+<div class="BackgroundImage"></div>
+<div class="Text">
+<a href="/ESC/3977/Precincts">Precinct Results</a>
+</div>
+</li>
+<li class="tab tab5 activetab">
+<div class="BackgroundImage"></div>
+<div class="Text">
+<a id="favorite_link" href="/ESC/3977/Summary/?favorites=1">Favorite Races</a>
+</div>
+</li>
+</ul>
+</div>
+<section id="content">
+<div class="showFavorites">
+<div id="61233" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61233">
+<input type="checkbox" id="favorite-61233" class="favoriteCheckBox" />
+<label>United States Senator</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61233" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61233" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61233" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61233" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61233">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Ashley Moody
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 54.37%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">54.37&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">62,732</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Angie Nixon
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 44.45%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">44.45&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">51,292</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Neil J. Gillespie
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 1.18%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">1.18&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,364</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">115,388</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61234" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61234">
+<input type="checkbox" id="favorite-61234" class="favoriteCheckBox" />
+<label>Representative in Congress</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61234" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61234" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61234" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61234" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61234">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Jimmy Patronis
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 53.25%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">53.25&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">61,327</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Gay Valimont
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 45.01%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">45.01&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">51,836</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Tyler L. Davis
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 1.75%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">1.75&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">2,015</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">115,178</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61235" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61235">
+<input type="checkbox" id="favorite-61235" class="favoriteCheckBox" />
+<label>Governor and Lieutenant Governor</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61235" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61235" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61235" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61235" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61235">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Byron Donalds
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 54.08%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">54.08&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">62,352</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM David Jolly
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 44.25%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">44.25&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">51,028</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+LPF Scott Eckhard Jewett
+(LPF)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.58%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.58&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">667</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Charles Burkett
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.21%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.21&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">238</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Frank J. Russo
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.3%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.30&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">344</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Moliere &quot;Moe&quot; Dimanche
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.13%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.13&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">148</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Dean Ocean Abrams
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.18%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.18&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">212</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Jeffrey Peter &quot;Dr. Jeff&quot; Datto
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.09%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.09&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">103</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Write-in: Not Assigned
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.19%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.19&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">214</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">115,306</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61236" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61236">
+<input type="checkbox" id="favorite-61236" class="favoriteCheckBox" />
+<label>Attorney General</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61236" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61236" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61236" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61236" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61236">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP James Uthmeier
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 55.28%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">55.28&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">63,343</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Jose Javier Rodriguez
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 44.72%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">44.72&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">51,235</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">114,578</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61237" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61237">
+<input type="checkbox" id="favorite-61237" class="favoriteCheckBox" />
+<label>Chief Financial Officer</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61237" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61237" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61237" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61237" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61237">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Blaise Ingoglia
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 55.33%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">55.33&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">63,001</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Annette Taddeo
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 44.67%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">44.67&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">50,854</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">113,855</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61238" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61238">
+<input type="checkbox" id="favorite-61238" class="favoriteCheckBox" />
+<label>Commissioner of Agriculture</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61238" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61238" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61238" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61238" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61238">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Wilton Simpson
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 55.23%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">55.23&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">63,017</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Joey Mendoza Atkins
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 44.54%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">44.54&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">50,817</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Write-in: Not Assigned
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.22%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.22&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">256</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">114,090</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61239" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61239">
+<input type="checkbox" id="favorite-61239" class="favoriteCheckBox" />
+<label>State Representative District 1</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61239" class="numPrecinctsReported">41</span> / <span id="numPrecinctsParticipating-61239" class="numPrecinctsParticipating">41</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61239" class="numPrecinctsReported">41</span> / <span id="numPrecinctsParticipating-61239" class="numPrecinctsParticipating">41</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61239">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Michelle Salzman
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 59.63%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">59.63&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">37,804</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Francesca Yabraian
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 40.37%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">40.37&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">25,589</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">63,393</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61240" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61240">
+<input type="checkbox" id="favorite-61240" class="favoriteCheckBox" />
+<label>State Representative District 2</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61240" class="numPrecinctsReported">43</span> / <span id="numPrecinctsParticipating-61240" class="numPrecinctsParticipating">43</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61240" class="numPrecinctsReported">43</span> / <span id="numPrecinctsParticipating-61240" class="numPrecinctsParticipating">43</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61240">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Jon Fay
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 52.64%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">52.64&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">26,852</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Johnny Austin Thompson
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 47.36%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">47.36&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">24,158</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">51,010</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61241" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61241">
+<input type="checkbox" id="favorite-61241" class="favoriteCheckBox" />
+<label>County Commissioner District 2</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61241" class="numPrecinctsReported">16</span> / <span id="numPrecinctsParticipating-61241" class="numPrecinctsParticipating">16</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61241" class="numPrecinctsReported">16</span> / <span id="numPrecinctsParticipating-61241" class="numPrecinctsParticipating">16</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61241">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Mike Kohler
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 56.32%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">56.32&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">9,989</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Mathious D. Robinson
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 43.35%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">43.35&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">7,688</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Write-in: Not Assigned
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 0.33%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">0.33&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">58</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">17,735</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61242" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61242">
+<input type="checkbox" id="favorite-61242" class="favoriteCheckBox" />
+<label>County Commissioner District 4</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61242" class="numPrecinctsReported">19</span> / <span id="numPrecinctsParticipating-61242" class="numPrecinctsParticipating">19</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61242" class="numPrecinctsReported">19</span> / <span id="numPrecinctsParticipating-61242" class="numPrecinctsParticipating">19</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61242">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Ashlee Hofberger
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 50.02%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">50.02&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">12,947</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Joe Vinson
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 49.98%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">49.98&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">12,936</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">25,883</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61243" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61243">
+<input type="checkbox" id="favorite-61243" class="favoriteCheckBox" />
+<label>Emerald Coast Utilities Authority District 2</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61243" class="numPrecinctsReported">16</span> / <span id="numPrecinctsParticipating-61243" class="numPrecinctsParticipating">16</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61243" class="numPrecinctsReported">16</span> / <span id="numPrecinctsParticipating-61243" class="numPrecinctsParticipating">16</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61243">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Lois Benson
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 58.33%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">58.33&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">10,149</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+IND Gloria G. Horning
+(IND)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 41.67%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">41.67&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">7,250</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">17,399</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61244" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61244">
+<input type="checkbox" id="favorite-61244" class="favoriteCheckBox" />
+<label>Emerald Coast Utilities Authority District 4</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61244" class="numPrecinctsReported">19</span> / <span id="numPrecinctsParticipating-61244" class="numPrecinctsParticipating">19</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61244" class="numPrecinctsReported">19</span> / <span id="numPrecinctsParticipating-61244" class="numPrecinctsParticipating">19</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61244">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+REP Greg Litton
+(REP)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar rep" style="width: 53.59%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">53.59&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">13,942</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+DEM Jacob Cavender
+(DEM)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar dem" style="width: 40.59%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">40.59&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">10,561</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+NPA Ralph H. Schofield Jr.
+(NPA)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 5.82%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">5.82&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,513</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">26,016</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61245" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61245">
+<input type="checkbox" id="favorite-61245" class="favoriteCheckBox" />
+<label>Retain Justice Carlos G. Muniz</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61245" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61245" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61245" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61245" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61245">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 57.07%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">57.07&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">60,371</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 42.93%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">42.93&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">45,422</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">105,793</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61246" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61246">
+<input type="checkbox" id="favorite-61246" class="favoriteCheckBox" />
+<label>Retain Judge Joseph Lewis Jr.</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61246" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61246" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61246" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61246" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61246">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 59.51%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">59.51&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">62,758</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 40.49%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">40.49&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">42,708</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">105,466</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61247" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61247">
+<input type="checkbox" id="favorite-61247" class="favoriteCheckBox" />
+<label>Retain Judge Rachel Nordby</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61247" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61247" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61247" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61247" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61247">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 59.07%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">59.07&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">62,049</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 40.93%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">40.93&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">43,000</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">105,049</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61248" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61248">
+<input type="checkbox" id="favorite-61248" class="favoriteCheckBox" />
+<label>Retain Judge Tim Osterhaus</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61248" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61248" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61248" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61248" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61248">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 57.94%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">57.94&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">60,693</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 42.06%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">42.06&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">44,050</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">104,743</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61249" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61249">
+<input type="checkbox" id="favorite-61249" class="favoriteCheckBox" />
+<label>Retain Judge Clay Roberts</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61249" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61249" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61249" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61249" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61249">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 57.28%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">57.28&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">60,162</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 42.72%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">42.72&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">44,874</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">105,036</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61250" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61250">
+<input type="checkbox" id="favorite-61250" class="favoriteCheckBox" />
+<label>Retain Judge Raymond Treadwell</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61250" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61250" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61250" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61250" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61250">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 58.35%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">58.35&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">61,201</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 41.65%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">41.65&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">43,693</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">104,894</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61251" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61251">
+<input type="checkbox" id="favorite-61251" class="favoriteCheckBox" />
+<label>Pensacola City Council District 2</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61251" class="numPrecinctsReported">2</span> / <span id="numPrecinctsParticipating-61251" class="numPrecinctsParticipating">2</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61251" class="numPrecinctsReported">2</span> / <span id="numPrecinctsParticipating-61251" class="numPrecinctsParticipating">2</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61251">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Charles Bare
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 45.61%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">45.61&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,122</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Sherri Myers
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 54.39%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">54.39&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,338</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">2,460</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61252" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61252">
+<input type="checkbox" id="favorite-61252" class="favoriteCheckBox" />
+<label>Pensacola City Council District 4</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61252" class="numPrecinctsReported">3</span> / <span id="numPrecinctsParticipating-61252" class="numPrecinctsParticipating">3</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61252" class="numPrecinctsReported">3</span> / <span id="numPrecinctsParticipating-61252" class="numPrecinctsParticipating">3</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61252">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Brian Cole
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 48.45%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">48.45&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,735</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Boyce White
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 51.55%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">51.55&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">1,846</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">3,581</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61253" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61253">
+<input type="checkbox" id="favorite-61253" class="favoriteCheckBox" />
+<label>Amendment 1</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61253" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61253" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61253" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61253" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61253">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 46.23%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">46.23&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">50,742</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 53.77%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">53.77&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">59,021</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">109,763</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61254" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61254">
+<input type="checkbox" id="favorite-61254" class="favoriteCheckBox" />
+<label>Amendment 2</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61254" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61254" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61254" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61254" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61254">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 65.23%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">65.23&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">71,994</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 34.77%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">34.77&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">38,372</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">110,366</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61255" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61255">
+<input type="checkbox" id="favorite-61255" class="favoriteCheckBox" />
+<label>Amendment 3</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61255" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61255" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61255" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61255" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61255">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+Yes
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 66%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">66.00&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">73,515</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+No
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 34%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">34.00&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">37,869</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">111,384</div>
+<div></div>
+</div>
+</div>
+</div>
+<div id="61256" class="Race row">
+<div class="RaceHeader">
+<div class="row RaceName">
+<label for="favorite-61256">
+<input type="checkbox" id="favorite-61256" class="favoriteCheckBox" />
+<label>County Referendum</label>
+</label>
+</div>
+<div class="row" style="display: flex; flex-direction: row; align-items: center;">
+<div class="col-md-6 col-xs-12 RaceStatsLabel">
+Participating Precincts Reporting:
+<span class="hidden-xs">
+<span id="numPrecinctsReported-61256" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61256" class="numPrecinctsParticipating">80</span>
+</span>
+</div>
+<div class="col-xs-12 visible-xs RaceStatsLabel">
+<span id="numPrecinctsReported-61256" class="numPrecinctsReported">80</span> / <span id="numPrecinctsParticipating-61256" class="numPrecinctsParticipating">80</span>
+</div>
+<div class="col-md-3 hidden-xs hidden-sm">
+<div class="PrecinctDetailsLink">
+<a class="PrecinctDetailLink" href="/ESC/3977/Precincts/61256">
+<img alt="PrecinctDetails" src="data:," /> Precinct Details
+</a>
+</div>
+</div>
+<div class="col-md-3 text-center" style="padding:.6rem">
+<img alt="Filter" src="data:," />
+<button type="button" class="viewSelectHeader">Show Detailed View</button>
+</div>
+</div>
+</div>
+<div class="row RaceStats">
+<div class="RaceStatsTable">
+</div>
+</div>
+<div class="row GraphicalResults" style="display: none;">
+<div class="row">
+<div class="ChoiceHeader col-xs-4">Choice</div>
+<div class="GraphHeader col-xs-4"></div>
+<div class="ResultsHeader col-xs-2">Percent</div>
+<div class="ResultsHeader col-xs-2" style="padding-left: 10px;">Votes</div>
+</div>
+<div class="row Results">
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+FOR the one-cent sales tax
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 74.93%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">74.93&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">83,682</div>
+</div>
+<div class="row ResultsRow">
+<div class="ChoiceColumn col-xs-4">
+AGAINST the one-cent sales tax
+(NON)
+</div>
+<div class="GraphColumn col-xs-4">
+<div class="FullBar">
+<div class="InnerBar oth" style="width: 25.07%;">&nbsp;</div>
+</div>
+</div>
+<div class="ResultsColumn notranslate col-xs-2">25.07&#37;</div>
+<div class="ResultsColumn notranslate col-xs-2" style="padding-left:10px;">28,001</div>
+</div>
+</div>
+<div class="row">
+<div class="ChoiceColumn col-xs-4"></div>
+<div class="GraphColumn col-xs-4"></div>
+<div class="ResultsColumn col-xs-2"></div>
+<div class="TotalColumn notranslate col-xs-2" style="padding-left: 10px;">111,683</div>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1874 @@
+{
+  "id": "travis-tx",
+  "state": "TX",
+  "name": "Travis County",
+  "county": "Travis",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127492",
+    "feed_name": "2026 November Joint General and Special Elections"
+  },
+  "guide": {
+    "fingerprint": "0603f025552aa5ce",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T01:11:02.900Z",
+    "places": [
+      "austin-tx",
+      "pflugerville-tx",
+      "round-rock-tx"
+    ]
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/TX/Travis",
+    "results_url": "https://results.enr.clarityelections.com/TX/Travis/127492/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 7:02 PM CT (current_ver.txt, summary.json, electionsettings.json all 200).",
+    "election_id_from": "Clarity's Travis list (elections.json) showed 127492, \"2026 November Joint General and Special Elections\", 11/3/2026, at 7:02 PM CT; its electionsettings agree (electionid 127492, 11/3/2026, 223 contests). votetravis.gov's results page didn't expose the link to a plain fetch.",
+    "tz": "America/Chicago"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-04T23:00:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "0035",
+      "feed_name": "Chief Justice, 3rd Court of Appeals District",
+      "item": "tx-3rd-coa-chief",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cory Liu (REP)": "Cory Liu",
+        "Darlene Byrne (DEM)": "Darlene Byrne"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "other counties",
+        "Bastrop",
+        "Bell",
+        "Caldwell",
+        "Comal"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0131",
+      "feed_name": "Austin Community College District Proposition A",
+      "item": "tx-acc-prop-a-pflugerville",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0128",
+      "feed_name": "ACC, Trustee, Place 1",
+      "item": "tx-acc-trustee-1",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Dana Walker": "Dana Walker",
+        "Gloria Gonzales-Dholakia": "Gloria Gonzales-Dholakia"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Bastrop",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0129",
+      "feed_name": "ACC, Trustee, Place 2",
+      "item": "tx-acc-trustee-2",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Gigi Edwards Bryant": "Gigi Edwards Bryant"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Bastrop",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0130",
+      "feed_name": "ACC, Trustee, Place 3",
+      "item": "tx-acc-trustee-3",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Trevor Hale": "Trevor Hale",
+        "Nan McRaven": "Nan McRaven"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Bastrop",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0136",
+      "feed_name": "Austin ISD Board of Trustees, At-Large Position 9",
+      "item": "tx-aisd-at-large-9",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
+      "seats": 1,
+      "choices": {
+        "Cynthia Soliz": "Cynthia Soliz",
+        "Kirk Becker": "Kirk Becker",
+        "Pamela Mathai": "Pamela Mathai"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0132",
+      "feed_name": "Austin ISD Board of Trustees, District 1",
+      "item": "tx-aisd-district-1",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
+      "seats": 1,
+      "choices": {
+        "Cheryl Bradley": "Cheryl Bradley",
+        "Candace L. Hunter": "Candace L. Hunter"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0133",
+      "feed_name": "Austin ISD Board of Trustees, District 4",
+      "item": "tx-aisd-district-4",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
+      "seats": 1,
+      "choices": {
+        "Edward M. Bradfield": "Edward M. Bradfield",
+        "Tricia Mitchell Kim": "Tricia Mitchell Kim",
+        "Jessica Jessie Neufeld": "Jessica Jessie Neufeld"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0134",
+      "feed_name": "Austin ISD Board of Trustees, District 6",
+      "item": "tx-aisd-district-6",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
+      "seats": 1,
+      "choices": {
+        "Sarah Dille": "Sarah Dille",
+        "Alex San Martin": "Alex San Martin",
+        "Marie Lebron": "Marie Lebron"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0135",
+      "feed_name": "Austin ISD Board of Trustees, District 7",
+      "item": "tx-aisd-district-7",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin ISD trustees need more than half the votes, or the top two go to a December runoff (https://communityimpact.com/central-austin/election/early-results-austin-isd-trustee-races-take-shape-one-could-head-to-runoff/, Nov 3, 2026).",
+      "seats": 1,
+      "choices": {
+        "Jimmy Counihan": "Jimmy Counihan",
+        "Laurie Solis": "Laurie Solis"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0069",
+      "feed_name": "City of Austin, City Council Member, District 1",
+      "item": "tx-austin-council-1",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
+      "seats": 1,
+      "choices": {
+        "Steven Brown": "Steven Brown",
+        "Alexandria Anderson": "Alexandria Anderson",
+        "Amber K. Goodwin": "Amber K. Goodwin",
+        "Michael Nahas": "Michael Nahas",
+        "Portia Riggins": "Portia Riggins",
+        "Misael Ramos": "Misael Ramos"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0070",
+      "feed_name": "City of Austin, City Council Member, District 3",
+      "item": "tx-austin-council-3",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
+      "seats": 1,
+      "choices": {
+        "Eduardo 'Lalito' Romero": "Eduardo “Lalito” Romero",
+        "Brock Skinner": "Brock Skinner",
+        "José Velásquez": "José Velásquez",
+        "Gavin Fernandez Jr.": "Gavin Fernandez Jr.",
+        "Neha Shah": "Neha Shah"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0071",
+      "feed_name": "City of Austin, City Council Member, District 5",
+      "item": "tx-austin-council-5",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
+      "seats": 1,
+      "choices": {
+        "Liz Brink": "Liz Brink",
+        "David Weinberg": "David Weinberg",
+        "Ryan Alter": "Ryan Alter",
+        "Farrah Abraham": "Farrah Abraham"
+      },
+      "reaches": [
+        "Travis",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0072",
+      "feed_name": "City of Austin, City Council Member, District 8",
+      "item": "tx-austin-council-8",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
+      "seats": 1,
+      "choices": {
+        "Jeffery Bowen": "Jeffery Bowen",
+        "Selena Xie": "Selena Xie"
+      },
+      "reaches": [
+        "Travis",
+        "Hays"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0073",
+      "feed_name": "City of Austin, City Council Member, District 9",
+      "item": "tx-austin-council-9",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Austin council seats need more than half the votes, or the top two go to a Dec. 12 runoff (the guide's own text; research/austin-metro.md).",
+      "seats": 1,
+      "choices": {
+        "Rich Heyman": "Rich Heyman",
+        "Katie Kam": "Katie Kam",
+        "Zohaib 'Zo' Qadri": "Zohaib “Zo” Qadri",
+        "Dave Thadani": "Dave Thadani",
+        "Kai Huang": "Kai Huang"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0074",
+      "feed_name": "City of Austin Proposition A - Full Purpose",
+      "item": "tx-austin-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0075",
+      "feed_name": "City of Austin Proposition B - Full Purpose",
+      "item": "tx-austin-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0076",
+      "feed_name": "City of Austin Proposition C - Full Purpose",
+      "item": "tx-austin-prop-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0077",
+      "feed_name": "City of Austin Proposition D - Full Purpose",
+      "item": "tx-austin-prop-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0078",
+      "feed_name": "City of Austin Proposition E - Full Purpose",
+      "item": "tx-austin-prop-e",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0079",
+      "feed_name": "City of Austin Proposition F - Full Purpose",
+      "item": "tx-austin-prop-f",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0080",
+      "feed_name": "City of Austin Proposition G - Full Purpose",
+      "item": "tx-austin-prop-g",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0081",
+      "feed_name": "City of Austin Proposition H - Full Purpose",
+      "item": "tx-austin-prop-h",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0082",
+      "feed_name": "City of Austin Proposition I - Full Purpose",
+      "item": "tx-austin-prop-i",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0083",
+      "feed_name": "City of Austin Proposition J - Full Purpose",
+      "item": "tx-austin-prop-j",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "Hays",
+        "Austin's limited-purpose areas (reported apart)"
+      ],
+      "item_url": null,
+      "note": "Travis County reports this measure in two parts, Austin proper and the city's limited-purpose (annexed) areas. This count is Austin proper; the other part is on the county's page.",
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0143",
+      "feed_name": "Del Valle ISD Proposition A",
+      "item": "tx-dvisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0138",
+      "feed_name": "Del Valle ISD Board of Trustees, Single Member District 3",
+      "item": "tx-dvisd-trustee-3",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Charles Burton": "Charles Burton",
+        "Claire Campos-O'Neal": "Claire Campos-O'Neal"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0139",
+      "feed_name": "Del Valle ISD Board of Trustees, Single Member District 5",
+      "item": "tx-dvisd-trustee-5",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Jason Sierra": "Jason Sierra"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0140",
+      "feed_name": "Del Valle ISD Board of Trustees, Single Member District 7",
+      "item": "tx-dvisd-trustee-7",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Josh Castro": "Josh Castro",
+        "Susanna Ledesma Woody": "Susanna Ledesma Woody"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0141",
+      "feed_name": "Del Valle ISD Board of Trustees, Single Member District 8",
+      "item": "tx-dvisd-trustee-8",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Robert 'Bobby' Hidrogo": "Robert “Bobby” Hidrogo",
+        "Darla Wegner": "Darla Wegner"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0142",
+      "feed_name": "Del Valle ISD Board of Trustees, Single Member District 9",
+      "item": "tx-dvisd-trustee-9",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Mike Randolph": "Mike Randolph",
+        "Gloria Vera-Bedolla": "Gloria Vera-Bedolla",
+        "Stephanie Arellano": "Stephanie Arellano"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0025",
+      "feed_name": "State Representative, District 19",
+      "item": "tx-house-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ellen Troxclair (REP)": "Ellen Troxclair",
+        "Tom Luck (DEM)": "Tom Luck"
+      },
+      "reaches": [
+        "Travis",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0026",
+      "feed_name": "State Representative, District 46",
+      "item": "tx-house-46",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sheryl Cole (DEM)": "Sheryl Cole"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0027",
+      "feed_name": "State Representative, District 47",
+      "item": "tx-house-47",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jennifer Mushtaler (REP)": "Jennifer Mushtaler",
+        "Pooja Sethi (DEM)": "Pooja Sethi"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0028",
+      "feed_name": "State Representative, District 48",
+      "item": "tx-house-48",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Anthony Gupta (REP)": "Anthony Gupta",
+        "Donna Howard (DEM)": "Donna Howard"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0029",
+      "feed_name": "State Representative, District 49",
+      "item": "tx-house-49",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Montserrat Garibay (DEM)": "Montserrat Garibay",
+        "Arshia Papari (GRN)": "Arshia Papari"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0030",
+      "feed_name": "State Representative, District 50",
+      "item": "tx-house-50",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Howard Olsen (REP)": "Howard Olsen",
+        "Samantha Lopez-Resendez (DEM)": "Samantha Lopez-Resendez"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0031",
+      "feed_name": "State Representative, District 51",
+      "item": "tx-house-51",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jessica Martinez (REP)": "Jessica Martinez",
+        "Maria Luisa Lulu Flores (DEM)": "Maria Luisa “Lulu” Flores"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null,
+      "reaches_source": "https://data.capitol.texas.gov/dataset/71af633c-21bf-42cf-ad48-4fe95593a897/resource/4d3dea56-d572-4794-af00-91975614049b/download/planh2316r100.pdf (Texas Legislative Council, PLANH2316 District Population Analysis with County Subtotals, read Nov 3, 2026: only Travis County)"
+    },
+    {
+      "feed_id": "0144",
+      "feed_name": "Leander ISD Board of Trustees, Place 1",
+      "item": "tx-lisd-trustee-1",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Serenity Coats": "Serenity Coats",
+        "Gerald Prater": "Gerald Prater"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0145",
+      "feed_name": "Leander ISD Board of Trustees, Place 2",
+      "item": "tx-lisd-trustee-2",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Meg Dean": "Meg Dean",
+        "Perla Muñoz Hopkins": "Perla Muñoz Hopkins",
+        "Chitra Nedun": "Chitra Nedun"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0146",
+      "feed_name": "Leander ISD Board of Trustees, Place 6",
+      "item": "tx-lisd-trustee-6",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Laura Marques": "Laura Marques"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0147",
+      "feed_name": "Leander ISD Board of Trustees, Place 7",
+      "item": "tx-lisd-trustee-7",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Jason Embry": "Jason Embry",
+        "Paul Gauthier": "Paul Gauthier"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0151",
+      "feed_name": "Pflugerville ISD Board of Trustees, Place 6",
+      "item": "tx-pfisd-trustee-6",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Nicole Toran": "Nicole Toran",
+        "Jean Mayer": "Jean Mayer"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0152",
+      "feed_name": "Pflugerville ISD Board of Trustees, Place 7",
+      "item": "tx-pfisd-trustee-7",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Chevonne Lorigo-Johst": "Chevonne Lorigo-Johst"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0106",
+      "feed_name": "City of Pflugerville, Council Member, Place 2",
+      "item": "tx-pflugerville-council-2",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "David Rogers": "David Rogers",
+        "Ceasar Ruiz": "Ceasar Ruiz"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0107",
+      "feed_name": "City of Pflugerville, Council Member, Place 4",
+      "item": "tx-pflugerville-council-4",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Trent Barlow": "Trent Barlow",
+        "De Juana 'De J.' Lozada": "De Juana “De J.” Lozada",
+        "Gregory Harrington": "Gregory L. Harrington"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0108",
+      "feed_name": "City of Pflugerville, Council Member, Place 6",
+      "item": "tx-pflugerville-council-6",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Oscar Mitchell": "Oscar R. Mitchell"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0109",
+      "feed_name": "City of Pflugerville Proposition A",
+      "item": "tx-pflugerville-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0110",
+      "feed_name": "City of Pflugerville Proposition B",
+      "item": "tx-pflugerville-prop-b",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0111",
+      "feed_name": "City of Pflugerville Proposition C",
+      "item": "tx-pflugerville-prop-c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0112",
+      "feed_name": "City of Pflugerville Proposition D",
+      "item": "tx-pflugerville-prop-d",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0113",
+      "feed_name": "City of Pflugerville Proposition E",
+      "item": "tx-pflugerville-prop-e",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0114",
+      "feed_name": "City of Pflugerville Proposition F",
+      "item": "tx-pflugerville-prop-f",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0115",
+      "feed_name": "City of Pflugerville Proposition G",
+      "item": "tx-pflugerville-prop-g",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0116",
+      "feed_name": "City of Pflugerville Proposition H",
+      "item": "tx-pflugerville-prop-h",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0117",
+      "feed_name": "City of Pflugerville Proposition I",
+      "item": "tx-pflugerville-prop-i",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0118",
+      "feed_name": "City of Pflugerville Proposition J",
+      "item": "tx-pflugerville-prop-j",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0119",
+      "feed_name": "City of Pflugerville Proposition K",
+      "item": "tx-pflugerville-prop-k",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0120",
+      "feed_name": "City of Pflugerville Proposition L",
+      "item": "tx-pflugerville-prop-l",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0121",
+      "feed_name": "City of Pflugerville Proposition M",
+      "item": "tx-pflugerville-prop-m",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0122",
+      "feed_name": "City of Pflugerville Proposition N",
+      "item": "tx-pflugerville-prop-n",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0157",
+      "feed_name": "Round Rock ISD Proposition A",
+      "item": "tx-rrisd-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "For": "yes",
+        "Against": "no"
+      },
+      "reaches": [
+        "Williamson",
+        "Travis"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0153",
+      "feed_name": "Round Rock ISD Board of Trustees, Place 3",
+      "item": "tx-rrisd-trustee-3",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Ayaan Moledina": "Ayaan Moledina",
+        "Vera Southwell": "Vera Southwell",
+        "Amber Feller Landrum": "Amber Feller Landrum",
+        "Gregory Andrew": "Gregory Andrew"
+      },
+      "reaches": [
+        "Williamson",
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0154",
+      "feed_name": "Round Rock ISD Board of Trustees, Place 4",
+      "item": "tx-rrisd-trustee-4",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Alicia Markum": "Alicia Markum"
+      },
+      "reaches": [
+        "Williamson",
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0155",
+      "feed_name": "Round Rock ISD Board of Trustees, Place 5",
+      "item": "tx-rrisd-trustee-5",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Miriam Arora": "Miriam Arora",
+        "Meghna Roy": "Meghna Roy"
+      },
+      "reaches": [
+        "Williamson",
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0156",
+      "feed_name": "Round Rock ISD Board of Trustees, Place 6",
+      "item": "tx-rrisd-trustee-6",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Texas lets a city charter or a school or district board require more than half the votes, with a runoff; this one's rule isn't confirmed, so no winner word from us.",
+      "seats": 1,
+      "choices": {
+        "Fabian Cuero": "Fabian Cuero",
+        "Troy J. Evanovich": "Troy J. Evanovich"
+      },
+      "reaches": [
+        "Williamson",
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0023",
+      "feed_name": "Member, State Board of Education, District 5",
+      "item": "tx-sboe-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mica Arellano (REP)": "Mica Arellano",
+        "Allison Bush (DEM)": "Allison Bush"
+      },
+      "reaches": [
+        "Travis",
+        "Hays",
+        "Bexar",
+        "Williamson",
+        "other counties",
+        "Comal"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0024",
+      "feed_name": "State Senator, District 21",
+      "item": "tx-senate-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Julie Dahlberg (REP)": "Julie Dahlberg",
+        "Judith Zaffirini (DEM)": "Judith Zaffirini"
+      },
+      "reaches": [
+        "Travis",
+        "Hays",
+        "Bexar",
+        "other counties",
+        "Caldwell",
+        "Webb"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0066",
+      "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 1",
+      "item": "tx-tcad-place-1",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
+      "seats": 1,
+      "choices": {
+        "Skyler A. Korgel": "Skyler A. Korgel"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0067",
+      "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 2",
+      "item": "tx-tcad-place-2",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
+      "seats": 1,
+      "choices": {
+        "Brian Peña": "Brian Peña"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0068",
+      "feed_name": "Travis Central Appraisal District, Travis County, Board of Directors, Place 3",
+      "item": "tx-tcad-place-3",
+      "kind": "rule_unknown",
+      "checked_kind": "plurality",
+      "rule_note": "Appraisal district directors are elected by majority vote, Tax Code 6.0301(c) (https://www.sos.state.tx.us/elections/laws/running-for-county-appraisal-districts-2026.shtml).",
+      "seats": 1,
+      "choices": {
+        "Yvonne Muñoz": "Yvonne Muñoz",
+        "Phil Gorman": "Phil Gorman"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0047",
+      "feed_name": "Judge, County Court at Law No. 1",
+      "item": "tx-travis-ccl-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Todd Wong (DEM)": "Todd Wong"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0048",
+      "feed_name": "Judge, County Court at Law No. 2",
+      "item": "tx-travis-ccl-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Leslie Dippel (DEM)": "Leslie Dippel"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0049",
+      "feed_name": "Judge, County Court at Law No. 3",
+      "item": "tx-travis-ccl-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Bianca Garcia (DEM)": "Bianca Garcia"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0050",
+      "feed_name": "Judge, County Court at Law No. 4",
+      "item": "tx-travis-ccl-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dimple Malhotra (DEM)": "Dimple Malhotra"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0051",
+      "feed_name": "Judge, County Court at Law No. 5",
+      "item": "tx-travis-ccl-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mary Ann Espiritu (DEM)": "Mary Ann Espiritu"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0052",
+      "feed_name": "Judge, County Court at Law No. 6",
+      "item": "tx-travis-ccl-6",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Denise Hernández (DEM)": "Denise Hernández"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0053",
+      "feed_name": "Judge, County Court at Law No. 7",
+      "item": "tx-travis-ccl-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Elisabeth Earle (DEM)": "Elisabeth Earle"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0058",
+      "feed_name": "County Commissioner, Precinct 2",
+      "item": "tx-travis-commissioner-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brigid Shea (DEM)": "Brigid Shea"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0059",
+      "feed_name": "County Commissioner, Precinct 4",
+      "item": "tx-travis-commissioner-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "George Morales III (DEM)": "George Morales III"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0065",
+      "feed_name": "County Constable, Precinct 4 - Unexpired Term",
+      "item": "tx-travis-constable-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Gabriel Padilla (DEM)": "Gabriel Padilla"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0056",
+      "feed_name": "County Clerk",
+      "item": "tx-travis-county-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dyana Limon-Mercado (DEM)": "Dyana Limon-Mercado",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0046",
+      "feed_name": "County Judge",
+      "item": "tx-travis-county-judge",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Andy Brown (DEM)": "Andy Brown"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0055",
+      "feed_name": "District Clerk",
+      "item": "tx-travis-district-clerk",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Velva L. Price (DEM)": "Velva L. Price"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0036",
+      "feed_name": "District Judge, 147th Judicial District",
+      "item": "tx-travis-district-court-147th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Cliff Brown (DEM)": "Cliff Brown"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0037",
+      "feed_name": "District Judge, 201st Judicial District",
+      "item": "tx-travis-district-court-201st",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Amy Clark Meachum (DEM)": "Amy Clark Meachum"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0038",
+      "feed_name": "District Judge, 250th Judicial District",
+      "item": "tx-travis-district-court-250th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Kennon Lily Wooten (DEM)": "Kennon Lily Wooten"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0039",
+      "feed_name": "District Judge, 261st Judicial District",
+      "item": "tx-travis-district-court-261st",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Daniella Deseta Lyttle (DEM)": "Daniella Deseta Lyttle"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0040",
+      "feed_name": "District Judge, 299th Judicial District",
+      "item": "tx-travis-district-court-299th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Karen R. Sage (DEM)": "Karen R. Sage"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0041",
+      "feed_name": "District Judge, 331st Judicial District",
+      "item": "tx-travis-district-court-331st",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chantal Melissa Eldridge (DEM)": "Chantal Melissa Eldridge"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0042",
+      "feed_name": "District Judge, 403rd Judicial District",
+      "item": "tx-travis-district-court-403rd",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Brandy Mueller (DEM)": "Brandy Mueller"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0043",
+      "feed_name": "District Judge, 419th Judicial District",
+      "item": "tx-travis-district-court-419th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Catherine A. Mauzy (DEM)": "Catherine A. Mauzy"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0044",
+      "feed_name": "District Judge, 455th Judicial District",
+      "item": "tx-travis-district-court-455th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Laurie Eiserloh (DEM)": "Laurie Eiserloh"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0045",
+      "feed_name": "District Judge, 459th Judicial District",
+      "item": "tx-travis-district-court-459th",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Maya Guerra Gamble (DEM)": "Maya Guerra Gamble"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0060",
+      "feed_name": "Justice of the Peace, Precinct 1",
+      "item": "tx-travis-jp-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Ciara Parks (DEM)": "Ciara Parks"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0061",
+      "feed_name": "Justice of the Peace, Precinct 2",
+      "item": "tx-travis-jp-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Mariel Kelley (DEM)": "Mariel Kelley"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0062",
+      "feed_name": "Justice of the Peace, Precinct 3",
+      "item": "tx-travis-jp-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Sylvia Holmes (DEM)": "Sylvia Holmes"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0063",
+      "feed_name": "Justice of the Peace, Precinct 4",
+      "item": "tx-travis-jp-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Raul Arturo Gonzalez (DEM)": "Raul Arturo Gonzalez"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0064",
+      "feed_name": "Justice of the Peace, Precinct 5",
+      "item": "tx-travis-jp-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Tanisa Jeffers (DEM)": "Tanisa Jeffers"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0054",
+      "feed_name": "Judge, Probate Court No. 1",
+      "item": "tx-travis-probate-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Guy Herman (DEM)": "Guy Herman"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0057",
+      "feed_name": "County Treasurer",
+      "item": "tx-travis-treasurer",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dolores Ortega Carter (DEM)": "Dolores Ortega Carter"
+      },
+      "reaches": [
+        "Travis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0005",
+      "feed_name": "United States Representative, District 10",
+      "item": "tx-us-house-10",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Chris Gober (REP)": "Chris Gober",
+        "Caitlin Rourk (DEM)": "Caitlin Rourk"
+      },
+      "reaches": [
+        "Travis",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0006",
+      "feed_name": "United States Representative, District 11",
+      "item": "tx-us-house-11",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "August Pfluger (REP)": "August Pfluger",
+        "Claire Reynolds (DEM)": "Claire Reynolds"
+      },
+      "reaches": [
+        "Travis",
+        "Williamson",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0007",
+      "feed_name": "United States Representative, District 27",
+      "item": "tx-us-house-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Michael Cloud (REP)": "Michael Cloud",
+        "Tanya Lloyd (DEM)": "Tanya Lloyd",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Travis",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0008",
+      "feed_name": "United States Representative, District 37",
+      "item": "tx-us-house-37",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lauren B. Peña (REP)": "Lauren B. Peña",
+        "Greg Casar (DEM)": "Greg Casar"
+      },
+      "reaches": [
+        "Travis",
+        "other counties"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [
+    {
+      "feed_id": "0084",
+      "feed_name": "City of Austin Proposition C - Limited Purpose",
+      "why": "same City of Austin Prop C as tx-austin-prop-c, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0076 and these votes are left out"
+    },
+    {
+      "feed_id": "0085",
+      "feed_name": "City of Austin Proposition D - Limited Purpose",
+      "why": "same City of Austin Prop D as tx-austin-prop-d, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0077 and these votes are left out"
+    },
+    {
+      "feed_id": "0086",
+      "feed_name": "City of Austin Proposition E - Limited Purpose",
+      "why": "same City of Austin Prop E as tx-austin-prop-e, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0078 and these votes are left out"
+    },
+    {
+      "feed_id": "0087",
+      "feed_name": "City of Austin Proposition F - Limited Purpose",
+      "why": "same City of Austin Prop F as tx-austin-prop-f, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0079 and these votes are left out"
+    },
+    {
+      "feed_id": "0088",
+      "feed_name": "City of Austin Proposition G - Limited Purpose",
+      "why": "same City of Austin Prop G as tx-austin-prop-g, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0080 and these votes are left out"
+    },
+    {
+      "feed_id": "0089",
+      "feed_name": "City of Austin Proposition H - Limited Purpose",
+      "why": "same City of Austin Prop H as tx-austin-prop-h, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0081 and these votes are left out"
+    },
+    {
+      "feed_id": "0090",
+      "feed_name": "City of Austin Proposition I - Limited Purpose",
+      "why": "same City of Austin Prop I as tx-austin-prop-i, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0082 and these votes are left out"
+    },
+    {
+      "feed_id": "0091",
+      "feed_name": "City of Austin Proposition J - Limited Purpose",
+      "why": "same City of Austin Prop J as tx-austin-prop-j, voted by residents of limited-purpose annexed areas; the map allows one feed contest per item, so the item is paired to the Full Purpose contest 0083 and these votes are left out"
+    }
+  ],
+  "unmatched_guide": [],
+  "not_here": [
+    "tx-house-136",
+    "tx-house-52",
+    "tx-senate-24",
+    "tx-senate-5",
+    "tx-us-house-17",
+    "tx-us-house-21",
+    "tx-us-house-31",
+    "tx-wcad-place-1",
+    "tx-wcad-place-2",
+    "tx-wcad-place-3",
+    "tx-wilco-ccl-1",
+    "tx-wilco-ccl-2",
+    "tx-wilco-ccl-3",
+    "tx-wilco-ccl-4",
+    "tx-wilco-commissioner-2",
+    "tx-wilco-commissioner-4",
+    "tx-wilco-county-clerk",
+    "tx-wilco-county-judge",
+    "tx-wilco-district-clerk",
+    "tx-wilco-district-court-277",
+    "tx-wilco-district-court-368",
+    "tx-wilco-district-court-480",
+    "tx-wilco-district-court-512",
+    "tx-wilco-jp-1",
+    "tx-wilco-jp-2",
+    "tx-wilco-jp-3",
+    "tx-wilco-jp-4",
+    "tx-wilco-tax-assessor",
+    "tx-wilco-treasurer"
+  ]
+}

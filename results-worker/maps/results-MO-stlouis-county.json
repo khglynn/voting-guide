@@ -1,0 +1,743 @@
+{
+  "id": "results-MO-stlouis-county",
+  "state": "MO",
+  "name": "St. Louis County Board of Elections",
+  "county": "St. Louis County",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "St. Louis County media.csv, Nov 3, 2026 general",
+    "feed_name": null
+  },
+  "guide": {
+    "fingerprint": "baac939611a63632",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T04:45:49.403Z",
+    "places": [
+      "ballwin-mo",
+      "clayton-mo",
+      "webster-groves-mo"
+    ]
+  },
+  "feed": {
+    "adapter": "stlouis_csv",
+    "base": "https://extcontent.stlouisco.com/BOE/eResults/media",
+    "results_url": "https://extcontent.stlouisco.com/BOE/eResults/media/media.csv",
+    "results_url_note": "The county's only readable results address tonight is this CSV (a 6.6 MB download); its office site stlouiscountymo.gov refused scripted reads in capture round 1, so no friendlier page is known.",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:19 PM CT (200, Last-Modified 03:58:42 GMT) and a conditional read at 10:20 PM (304).",
+    "election_id_from": "The file names no election. Its Last-Modified must fall between Nov 3 and certification, and it must hold the contests below by id and title (only this election has them).",
+    "identity_contests": [
+      {
+        "id": "35",
+        "name": "ST. LOUIS COUNTY - COUNTY EXECUTIVE"
+      },
+      {
+        "id": "48",
+        "name": "ST. LOUIS COUNTY - PROPOSITION S"
+      },
+      {
+        "id": "73",
+        "name": "CITY OF WEBSTER GROVES - AMENDMENT 1"
+      }
+    ],
+    "tz": "America/Chicago"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-18T05:59:00Z",
+  "count_closes_note": "Mail had to arrive by 7 PM Nov 3; provisional ballots are added before the canvass, so the count stays open to certification.",
+  "complete_marker": null,
+  "certify_by": "2026-11-17",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "32",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 100",
+      "item": "mo-hd-100",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PHILIP OEHLERKING": "Philip Oehlerking",
+        "MARY ANN PERKINS": "Mary Ann Perkins",
+        "KEN NEWHOUSE": "Ken Newhouse"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "33",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 101",
+      "item": "mo-hd-101",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BEN KEATHLEY": "Ben Keathley",
+        "PAUL LENTZ": "Paul Lentz",
+        "JEFF COLEMAN": "Jeff Coleman"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "34",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 110",
+      "item": "mo-hd-110",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "NILES STEPHENS": "Niles Stephens",
+        "CLAIRE HEINRICH": "Claire Heinrich"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "17",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 83",
+      "item": "mo-hd-83",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "RAY REED": "Ray Reed",
+        "ANDREW BOLIN": "Andrew Bolin"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "19",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 86",
+      "item": "mo-hd-86",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JEFF HALES": "Jeff Hales"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "21",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 88",
+      "item": "mo-hd-88",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "HOLLY JONES": "Holly Jones",
+        "JENNIFER TRICKEY": "Jennifer Trickey"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "22",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 89",
+      "item": "mo-hd-89",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "GEORGE HRUZA": "George Hruza",
+        "BRYAN TROOP": "Bryan Troop"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "23",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 90",
+      "item": "mo-hd-90",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARK BOYKO": "Mark Boyko"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "24",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 91",
+      "item": "mo-hd-91",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "JO DOLL": "Jo Doll"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "29",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 96",
+      "item": "mo-hd-96",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "BRAD CHRIST": "Brad Christ",
+        "MATT VITALE": "Matt Vitale",
+        "SHANE FERGUSON": "Shane Ferguson"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "30",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 98",
+      "item": "mo-hd-98",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TIMOTHY BOSCH": "Timothy Bosch",
+        "JACLYN ZIMMERMANN": "Jaclyn Zimmermann"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "31",
+      "feed_name": "STATE REPRESENTATIVE - DISTRICT 99",
+      "item": "mo-hd-99",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "TORI SCHAFER": "Tori Schafer"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "5",
+      "feed_name": "STATE SENATE - DISTRICT 14",
+      "item": "mo-sd-14",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "VERNON NORMAN": "Vernon Norman",
+        "RAYCHEL PROUDIE": "Raychel Proudie"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "6",
+      "feed_name": "STATE SENATE - DISTRICT 24",
+      "item": "mo-sd-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LAVANNA WROBLEY": "LaVanna Wrobley",
+        "TRACY MCCREERY": "Tracy McCreery"
+      },
+      "reaches": [
+        "St. Louis County",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "4",
+      "feed_name": "STATE SENATE - DISTRICT 4",
+      "item": "mo-sd-4",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "GINA MITTEN": "Gina Mitten"
+      },
+      "reaches": [
+        "St. Louis County",
+        "City of St. Louis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "1",
+      "feed_name": "U.S. REPRESENTATIVE -  DISTRICT 1",
+      "item": "mo-us-house-1",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "PAUL BERRY III": "Paul Berry III",
+        "WESLEY BELL": "Wesley Bell",
+        "TOM SCHMITZ": "Tom Schmitz"
+      },
+      "reaches": [
+        "St. Louis County",
+        "City of St. Louis"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "2",
+      "feed_name": "U.S. REPRESENTATIVE -  DISTRICT 2",
+      "item": "mo-us-house-2",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANN WAGNER": "Ann Wagner",
+        "FRED WELLMAN": "Fred Wellman",
+        "BRANDON COULTER DAUGHERTY": "Brandon Coulter Daugherty"
+      },
+      "reaches": [
+        "St. Louis County",
+        "St. Charles",
+        "Warren",
+        "Franklin",
+        "other counties",
+        "St. Charles County",
+        "Warren County",
+        "Franklin County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "77",
+      "feed_name": "PARKWAY SCHOOL DISTRICT - PROPOSITION P",
+      "item": "parkway-sd-prop-p",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "37",
+      "feed_name": "ST. LOUIS COUNTY - COUNTY ASSESSOR",
+      "item": "stlco-assessor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DAVID MESSNER": "David Messner",
+        "DOUG CLEMENS": "Doug Clemens",
+        "AUSTIN BROWN": "Austin Brown"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "39",
+      "feed_name": "COUNTY COUNCIL - DISTRICT 3",
+      "item": "stlco-council-3",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "ANDREW KOENIG": "Andrew Koenig",
+        "MARK OSMACK": "Mark Osmack"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "40",
+      "feed_name": "COUNTY COUNCIL - DISTRICT 5",
+      "item": "stlco-council-5",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "LISA CLANCY": "Lisa Clancy"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "41",
+      "feed_name": "COUNTY COUNCIL - DISTRICT 7",
+      "item": "stlco-council-7",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MARK HARDER": "Mark Harder",
+        "JOHN KIEHNE": "John Kiehne"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "35",
+      "feed_name": "ST. LOUIS COUNTY - COUNTY EXECUTIVE",
+      "item": "stlco-county-executive",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "DENNIS HANCOCK": "Dennis Hancock",
+        "JAKE ZIMMERMAN": "Jake Zimmerman",
+        "J D MCFARLAND": "J.D. McFarland"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "47",
+      "feed_name": "ST. LOUIS COUNTY - PROPOSITION A",
+      "item": "stlco-prop-a",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "48",
+      "feed_name": "ST. LOUIS COUNTY - PROPOSITION S",
+      "item": "stlco-prop-s",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "36",
+      "feed_name": "ST. LOUIS COUNTY - PROSECUTING ATTORNEY",
+      "item": "stlco-prosecuting-attorney",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "MELISSA PRICE SMITH": "Melissa Price Smith",
+        "THEO BROWN SR.": "Theo Brown Sr."
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "58",
+      "feed_name": "LORNE BAKER",
+      "item": "stlco-retention-baker",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "54",
+      "feed_name": "JOHN BORBONUS",
+      "item": "stlco-retention-borbonus",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "67",
+      "feed_name": "CHASTIDY DILLON-AMELUNG",
+      "item": "stlco-retention-dillon-amelung",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "60",
+      "feed_name": "ELLEN WYATT DUNNE",
+      "item": "stlco-retention-dunne",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "66",
+      "feed_name": "MONDONNA L. GHASEDI",
+      "item": "stlco-retention-ghasedi",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "59",
+      "feed_name": "MATT HEARNE",
+      "item": "stlco-retention-hearne",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "62",
+      "feed_name": "NICOLETTE ANTONIA KLAPP",
+      "item": "stlco-retention-klapp",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "61",
+      "feed_name": "JULIA PUSATERI LASATER",
+      "item": "stlco-retention-lasater",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "64",
+      "feed_name": "JASON K. LEWIS",
+      "item": "stlco-retention-lewis",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "56",
+      "feed_name": "AMANDA B. McNELLEY",
+      "item": "stlco-retention-mcnelley",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "57",
+      "feed_name": "JEFFERY McPHERSON",
+      "item": "stlco-retention-mcpherson",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "55",
+      "feed_name": "MARY ELIZABETH OTT",
+      "item": "stlco-retention-ott",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "63",
+      "feed_name": "JUSTIN W. RUTH",
+      "item": "stlco-retention-ruth",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "65",
+      "feed_name": "KELLY SNYDER",
+      "item": "stlco-retention-snyder",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "53",
+      "feed_name": "RICHARD M. STEWART",
+      "item": "stlco-retention-stewart",
+      "kind": "retention",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "73",
+      "feed_name": "CITY OF WEBSTER GROVES - AMENDMENT 1",
+      "item": "webster-groves-city-amendment-1",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "80",
+      "feed_name": "WEBSTER GROVES SCHOOL DISTRICT - PROPOSITION W",
+      "item": "webster-groves-sd-prop-w",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "YES": "yes",
+        "NO": "no"
+      },
+      "reaches": [
+        "St. Louis County"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

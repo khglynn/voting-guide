@@ -1,0 +1,128 @@
+[
+  {
+    "raceTitle": "Board of Equalization Member District 1 - Districtwide Results",
+    "Reporting": "99.7% (7,228 of 7,251) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Nelson Esparza",
+        "Party": "Dem",
+        "Votes": "907,623",
+        "Percent": "53.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Shannon Grove",
+        "Party": "Rep",
+        "Votes": "777,540",
+        "Percent": "46.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization Member District 2 - Districtwide Results",
+    "Reporting": "100% (6,558 of 6,558) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Sally J. Lieber",
+        "Party": "Dem",
+        "Votes": "984,287",
+        "Percent": "59.7",
+        "incumbent": true
+      },
+      {
+        "Name": "John Pimentel",
+        "Party": "Dem",
+        "Votes": "665,105",
+        "Percent": "40.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization Member District 2 - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Sally J. Lieber",
+        "Party": "Dem",
+        "Votes": "157,649",
+        "Percent": "59.0",
+        "incumbent": true
+      },
+      {
+        "Name": "John Pimentel",
+        "Party": "Dem",
+        "Votes": "109,723",
+        "Percent": "41.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization Member District 3 - Districtwide Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Mike Gipson",
+        "Party": "Dem",
+        "Votes": "1,038,750",
+        "Percent": "59.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Samuel P. Sukaton",
+        "Party": "Dem",
+        "Votes": "707,476",
+        "Percent": "40.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization Member District 3 - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Mike Gipson",
+        "Party": "Dem",
+        "Votes": "1,038,750",
+        "Percent": "59.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Samuel P. Sukaton",
+        "Party": "Dem",
+        "Votes": "707,476",
+        "Percent": "40.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization Member District 4 - Districtwide Results",
+    "Reporting": "100% (7,198 of 7,198) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Tom Umberg",
+        "Party": "Dem",
+        "Votes": "1,109,582",
+        "Percent": "56.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Denis Bilodeau",
+        "Party": "Rep",
+        "Votes": "857,231",
+        "Percent": "43.6",
+        "incumbent": false
+      }
+    ]
+  }
+]

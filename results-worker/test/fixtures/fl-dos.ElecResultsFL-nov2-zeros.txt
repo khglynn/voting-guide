@@ -1,0 +1,202 @@
+ElectionDate	PartyCode	PartyName	RaceCode	RaceName	CountyCode	CountyName	Juris1num	Juris2num	Precincts	PrecinctsReporting	CanNameLast	CanNameFirst	CanNameMiddle	CanVotes
+11/03/2026	REP	Republican Party	USS	United States Senator	ALA	Alachua	   	 	63	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	BAK	Baker	   	 	9	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	BAY	Bay	   	 	30	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	BRA	Bradford	   	 	13	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	BRE	Brevard	   	 	156	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	BRO	Broward	   	 	346	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CAL	Calhoun	   	 	14	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CHA	Charlotte	   	 	34	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CIT	Citrus	   	 	31	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CLA	Clay	   	 	48	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CLL	Collier	   	 	67	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	CLM	Columbia	   	 	26	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	DAD	Miami-Dade	   	 	718	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	DES	Desoto	   	 	15	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	DIX	Dixie	   	 	10	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	DUV	Duval	   	 	159	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	ESC	Escambia	   	 	80	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	FLA	Flagler	   	 	21	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	FRA	Franklin	   	 	8	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	GAD	Gadsden	   	 	25	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	GIL	Gilchrist	   	 	10	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	GLA	Glades	   	 	13	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	GUL	Gulf	   	 	10	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HAM	Hamilton	   	 	8	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HAR	Hardee	   	 	12	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HEN	Hendry	   	 	10	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HER	Hernando	   	 	32	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HIG	Highlands	   	 	25	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HIL	Hillsborough	   	 	446	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	HOL	Holmes	   	 	8	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	IND	Indian River	   	 	35	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	JAC	Jackson	   	 	14	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	JEF	Jefferson	   	 	16	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LAF	Lafayette	   	 	5	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LAK	Lake	   	 	92	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LEE	Lee	   	 	99	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LEO	Leon	   	 	134	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LEV	Levy	   	 	13	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	LIB	Liberty	   	 	8	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	MAD	Madison	   	 	11	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	MAN	Manatee	   	 	71	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	MON	Monroe	   	 	33	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	MRN	Marion	   	 	106	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	MRT	Martin	   	 	29	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	NAS	Nassau	   	 	18	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	OKA	Okaloosa	   	 	52	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	OKE	Okeechobee	   	 	11	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	ORA	Orange	   	 	261	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	OSC	Osceola	   	 	137	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	PAL	Palm Beach	   	 	798	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	PAS	Pasco	   	 	122	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	PIN	Pinellas	   	 	287	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	POL	Polk	   	 	177	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	PUT	Putnam	   	 	37	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	SAN	Santa Rosa	   	 	41	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	SAR	Sarasota	   	 	98	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	SEM	Seminole	   	 	82	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	STJ	St. Johns	   	 	55	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	STL	St. Lucie	   	 	62	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	SUM	Sumter	   	 	33	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	SUW	Suwannee	   	 	14	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	TAY	Taylor	   	 	14	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	UNI	Union	   	 	13	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	VOL	Volusia	   	 	155	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	WAK	Wakulla	   	 	12	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	WAL	Walton	   	 	22	0	Moody	Ashley		0
+11/03/2026	REP	Republican Party	USS	United States Senator	WAS	Washington	   	 	12	0	Moody	Ashley		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	ALA	Alachua	   	 	63	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	BAK	Baker	   	 	9	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	BAY	Bay	   	 	30	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	BRA	Bradford	   	 	13	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	BRE	Brevard	   	 	156	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	BRO	Broward	   	 	346	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CAL	Calhoun	   	 	14	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CHA	Charlotte	   	 	34	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CIT	Citrus	   	 	31	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CLA	Clay	   	 	48	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CLL	Collier	   	 	67	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	CLM	Columbia	   	 	26	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	DAD	Miami-Dade	   	 	718	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	DES	Desoto	   	 	15	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	DIX	Dixie	   	 	10	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	DUV	Duval	   	 	159	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	ESC	Escambia	   	 	80	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	FLA	Flagler	   	 	21	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	FRA	Franklin	   	 	8	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	GAD	Gadsden	   	 	25	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	GIL	Gilchrist	   	 	10	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	GLA	Glades	   	 	13	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	GUL	Gulf	   	 	10	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HAM	Hamilton	   	 	8	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HAR	Hardee	   	 	12	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HEN	Hendry	   	 	10	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HER	Hernando	   	 	32	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HIG	Highlands	   	 	25	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HIL	Hillsborough	   	 	446	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	HOL	Holmes	   	 	8	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	IND	Indian River	   	 	35	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	JAC	Jackson	   	 	14	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	JEF	Jefferson	   	 	16	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LAF	Lafayette	   	 	5	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LAK	Lake	   	 	92	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LEE	Lee	   	 	99	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LEO	Leon	   	 	134	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LEV	Levy	   	 	13	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	LIB	Liberty	   	 	8	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	MAD	Madison	   	 	11	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	MAN	Manatee	   	 	71	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	MON	Monroe	   	 	33	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	MRN	Marion	   	 	106	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	MRT	Martin	   	 	29	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	NAS	Nassau	   	 	18	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	OKA	Okaloosa	   	 	52	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	OKE	Okeechobee	   	 	11	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	ORA	Orange	   	 	261	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	OSC	Osceola	   	 	137	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	PAL	Palm Beach	   	 	798	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	PAS	Pasco	   	 	122	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	PIN	Pinellas	   	 	287	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	POL	Polk	   	 	177	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	PUT	Putnam	   	 	37	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	SAN	Santa Rosa	   	 	41	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	SAR	Sarasota	   	 	98	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	SEM	Seminole	   	 	82	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	STJ	St. Johns	   	 	55	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	STL	St. Lucie	   	 	62	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	SUM	Sumter	   	 	33	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	SUW	Suwannee	   	 	14	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	TAY	Taylor	   	 	14	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	UNI	Union	   	 	13	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	VOL	Volusia	   	 	155	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	WAK	Wakulla	   	 	12	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	WAL	Walton	   	 	22	0	Nixon	Angie		0
+11/03/2026	DEM	Democratic Party	USS	United States Senator	WAS	Washington	   	 	12	0	Nixon	Angie		0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	ALA	Alachua	   	 	63	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	BAK	Baker	   	 	9	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	BAY	Bay	   	 	30	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	BRA	Bradford	   	 	13	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	BRE	Brevard	   	 	156	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	BRO	Broward	   	 	346	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CAL	Calhoun	   	 	14	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CHA	Charlotte	   	 	34	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CIT	Citrus	   	 	31	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CLA	Clay	   	 	48	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CLL	Collier	   	 	67	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	CLM	Columbia	   	 	26	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	DAD	Miami-Dade	   	 	718	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	DES	Desoto	   	 	15	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	DIX	Dixie	   	 	10	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	DUV	Duval	   	 	159	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	ESC	Escambia	   	 	80	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	FLA	Flagler	   	 	21	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	FRA	Franklin	   	 	8	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	GAD	Gadsden	   	 	25	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	GIL	Gilchrist	   	 	10	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	GLA	Glades	   	 	13	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	GUL	Gulf	   	 	10	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HAM	Hamilton	   	 	8	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HAR	Hardee	   	 	12	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HEN	Hendry	   	 	10	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HER	Hernando	   	 	32	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HIG	Highlands	   	 	25	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HIL	Hillsborough	   	 	446	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	HOL	Holmes	   	 	8	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	IND	Indian River	   	 	35	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	JAC	Jackson	   	 	14	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	JEF	Jefferson	   	 	16	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LAF	Lafayette	   	 	5	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LAK	Lake	   	 	92	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LEE	Lee	   	 	99	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LEO	Leon	   	 	134	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LEV	Levy	   	 	13	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	LIB	Liberty	   	 	8	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	MAD	Madison	   	 	11	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	MAN	Manatee	   	 	71	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	MON	Monroe	   	 	33	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	MRN	Marion	   	 	106	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	MRT	Martin	   	 	29	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	NAS	Nassau	   	 	18	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	OKA	Okaloosa	   	 	52	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	OKE	Okeechobee	   	 	11	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	ORA	Orange	   	 	261	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	OSC	Osceola	   	 	137	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	PAL	Palm Beach	   	 	798	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	PAS	Pasco	   	 	122	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	PIN	Pinellas	   	 	287	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	POL	Polk	   	 	177	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	PUT	Putnam	   	 	37	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	SAN	Santa Rosa	   	 	41	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	SAR	Sarasota	   	 	98	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	SEM	Seminole	   	 	82	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	STJ	St. Johns	   	 	55	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	STL	St. Lucie	   	 	62	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	SUM	Sumter	   	 	33	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	SUW	Suwannee	   	 	14	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	TAY	Taylor	   	 	14	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	UNI	Union	   	 	13	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	VOL	Volusia	   	 	155	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	WAK	Wakulla	   	 	12	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	WAL	Walton	   	 	22	0	Gillespie	Neil	J.	0
+11/03/2026	NPA	No Party Affiliation	USS	United States Senator	WAS	Washington	   	 	12	0	Gillespie	Neil	J.	0

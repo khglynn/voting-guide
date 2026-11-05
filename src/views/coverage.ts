@@ -11,12 +11,13 @@
      sources sheet (lens.ts), under the ballot's "Endorsements: ... Edit" (ledger.ts). Step 2 and the Edit
      sheet say only "Pick a group above, or choose individual sources" (setup.ts; Kevin, Oct 28: the two
      lines there were "repetative").
-   Never "minutes": the pipeline runs scouts, a judge and Kevin's review, so "about a day" is honest. */
+   Never "minutes": the pipeline runs scouts, a judge and Kevin's review, so "about a day" is honest. After the
+   polls close (Nov 5), no time at all: the card offers a city's races and how they came out, and "he'll try". */
 import { S } from '../state';
 import { andList, esc, fmtDate, orList, plural } from '../util';
 import { ballotCoverage, askedWord, type Cov } from '../model/coverage';
 import { noEndorsements } from '../model/lens';
-import { shelfAttrs, reportAttrs, sampleBallot } from './common';
+import { shelfAttrs, reportAttrs, sampleBallot, afterClose } from './common';
 import { askFallbackURL } from './shelf';
 
 export const covOf = (): Cov | null => (S.ballot && S.index ? ballotCoverage(S.ballot, S.index, S.b.zip, undefined, Array.isArray(S.b.away) ? S.b.away : []) : null);
@@ -37,8 +38,10 @@ const askedTail = (c: Cov): string => (c.state === 'asked' ? ` You asked for ${c
 
 /* ---------- the card ---------- */
 /* A statewide ballot always gets the card (missing races matter with endorsements on or off); a thin
-   place only while endorsements show (it is only about picks). Covered places never do. */
-export const cardShows = (c: Cov | null): c is Cov => !!c && (c.kind === 'statewide' || (c.kind === 'thin' && !noEndorsements()));
+   place only while endorsements show (it is only about picks), and only until the polls close: after the
+   election a hunt for local picks helps nobody vote, and the place's races and results are already here
+   (Nov 5, common.afterClose). Covered places never do. */
+export const cardShows = (c: Cov | null): c is Cov => !!c && (c.kind === 'statewide' || (c.kind === 'thin' && !noEndorsements() && !afterClose()));
 /* The card's button is the screen's dark one until the request is sent: the address box's buttons are
    outlines meanwhile (ledger.ts). A place we already looked hard for has nothing to ask. */
 export const cardAsks = (c: Cov | null): boolean => cardShows(c) && c.state !== 'asked' && !c.searched;
@@ -76,7 +79,10 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
   if (!cardShows(c)) return '';
   const statewide = c.kind === 'statewide';
   const dark = where === 'ballot' && (!!S.pending || S.ui.resume) ? 'mini' : 'mini dark';
-  const sb = sampleBallot();
+  // After the polls close (Nov 5, common.afterClose): a city request gets its races, who ran and how each came out,
+  // with no time promised and nothing about voting (`late` is true every day after the election, so its lines go too).
+  const after = afterClose();
+  const sb = after ? null : sampleBallot();
   const sbLine = sb ? line('cov-sb', `Voting before then? Your <a href="${esc(sb.url)}" target="_blank" rel="noopener">official sample ballot</a> lists every race.`) : '';
   const name = esc(c.name);
   let body: string;
@@ -85,7 +91,11 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
       + row(`<button class="${dark}" data-act="change-place" data-fk="cov-open">Open my city’s ballot</button>`);
   } else if (c.state === 'asked') {
     const on = askedWord(c.askedOn);
-    body = statewide
+    body = statewide && after
+      ? lead('Request sent. Kevin will try to add your city.', true)
+        + line('cov-here', esc(`You asked ${on}. He’ll look for its races, who ran and how each one came out.`))
+        + line('cov-miss', 'Until then, your statewide races are below.') + row(hearBtn(c))
+      : statewide
       ? lead('Request sent. Kevin is adding your city.', true)
         + line('cov-here', esc(c.late ? `You asked ${on}. It may not be in before you vote.` : `You asked ${on}. It usually takes about a day${on === 'today' ? ', so check back tomorrow' : ''}.`))
         + line('cov-miss', 'Until then, you can pick your statewide races below.') + sbLine + row(hearBtn(c))
@@ -101,14 +111,15 @@ export function covCardHTML(where: 'door' | 'ballot'): string {
       + line('cov-miss', esc(`Live in ${orList(ps)}? Use your address and we’ll open ${ps.length > 1 ? 'your city’s' : 'its'} ballot.`))
       + row(`<button class="${dark}" data-act="addr-open" data-fk="cov-addr">Use my address</button>`) + sbLine;
   } else if (statewide) {
+    const tries = 'He’ll try to add who ran and how each race came out.';
     const action = c.ask
       ? row(askBtn('Ask Kevin to add my city', dark)) + askFailHTML(c)
-        + line('fine cov-fine', c.late ? 'One tap. It sends Kevin your ZIP and nothing about you. Kevin may not get to it before Election Day.' : 'One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day.')
+        + line('fine cov-fine', after ? `One tap. It sends Kevin your ZIP and nothing about you. ${tries}` : c.late ? 'One tap. It sends Kevin your ZIP and nothing about you. Kevin may not get to it before Election Day.' : 'One tap. It sends Kevin your ZIP and nothing about you. It usually takes about a day.')
       // Picked from the list, so no ZIP is known: the city is typed in Request a city.
-      : row(`<button class="${dark}" ${reportAttrs({ city: true, fk: 'cov-city' })}>Ask for my city</button>`) + line('fine cov-fine', 'Tell Kevin your city and he’ll add it, usually within a day.');
-    body = lead('Your city’s races aren’t in the guide yet.')
+      : row(`<button class="${dark}" ${reportAttrs({ city: true, fk: 'cov-city' })}>Ask for my city</button>`) + line('fine cov-fine', after ? `Tell Kevin your city. ${tries}` : 'Tell Kevin your city and he’ll add it, usually within a day.');
+    body = lead(after ? 'Your city’s races and results aren’t in the guide yet.' : 'Your city’s races aren’t in the guide yet.')
       + line('cov-here', `Here now: ${name}’s statewide races${noEndorsements() ? '' : `, with picks from ${c.withPicks} of ${c.sources} sources`}.`)
-      + line('cov-miss', 'Not here yet: races for your city, county and districts.') + action + sbLine;
+      + line('cov-miss', after ? 'Not here yet: races and results for your city, county and districts.' : 'Not here yet: races for your city, county and districts.') + action + sbLine;
   } else if (c.searched) {
     // We already looked hard (model/coverage.ts): say when and where, with nothing to ask for. Someone who
     // knows a local group's picks can still send them.

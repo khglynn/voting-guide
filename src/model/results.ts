@@ -370,7 +370,7 @@ export function compareNames(it: Item, r: ItemResult | null, names: string[]): C
    or a one-seat race's single leader by name. Null for a tie, a measure at its bar or with no rule we hold, a name not in
    the guide that could lead, ranked choice, several seats or a block vote. */
 function leanOf(it: Item, r: ItemResult): string | null {
-  if (isMeasureLike(it) && r.measure) { const s = sideOf(it, r); return s === 'yes' || s === 'no' ? s : null; }
+  if (isMeasureLike(it)) { const s = r.measure ? sideOf(it, r) : null; return s === 'yes' || s === 'no' ? s : null; }
   if (it.kind !== 'contest' || blockVote(it) || isRCV(it) || isMultiSeat(it) || unknownLead(r)) return null;
   const top = leaders(r);
   return top.length === 1 ? top[0].name : null;

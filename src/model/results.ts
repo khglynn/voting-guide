@@ -8,8 +8,8 @@
       own complete or official mark. "won" is kept to the open row and the figure.
    3. Progress is the source's own words, quoted. We never compute a percent of precincts.
    4. A county's slice is never shown as the whole: a race across counties names the county whose count it shows, and
-      we never add counties up. The figure compares such a race only by which way every county count we hold leans,
-      never as won or lost (acrossCounties, Nov 5). A statewide race held only as county shares
+      we never add counties up. The figure compares such a race only where the counties we hold carry it, by which way
+      every county count we hold leans, never as won or lost (acrossCounties, Nov 5). A statewide race held only as county shares
       shows a county's share only on that county's ballots; elsewhere it's the state's own page (viewFor).
    5. Unmatched is a link, never a guess. Results are ink; gold stays your pick. */
 import type { Contest, Item, ItemResult, ResultCand, ResultSlice, ResultsFile, ResultsSourceEntry, ResultsSource, Measure } from '../types';
@@ -333,7 +333,7 @@ function numCol(it: Item, r: ItemResult): ResCol {
 
 /* ---------- comparing your pick ---------- */
 /* won and lost only from the file's `final`; ahead and behind while counting; `nc` when we can't compare honestly:
-   no numbers, a link, a race across counties whose counties lean different ways (acrossCounties), ranked choice before
+   no numbers, a link, a race across counties we hold only part of or whose counties lean apart (acrossCounties), ranked choice before
    its final round, several seats before the count is complete, or a tie at the top. */
 export type Cmp = 'won' | 'lost' | 'ahead' | 'behind' | 'nc';
 export function compare(it: Item, r: ItemResult | null): Cmp {
@@ -377,27 +377,36 @@ function leanOf(it: Item, r: ItemResult): string | null {
 }
 /* A race across counties (rule 9; Kevin, Nov 5, of Austin's props, every one of them "not compared": "all these ballot
    measures are ahead so I'm confused"). Compared by which way it leans, never won or lost (a county's count is never the
-   race's final), and only where that can't hang on adding counties up: the race's main county (the Worker's own source,
-   its largest) has numbers, and every county count we hold leans the same way. Then the votes we hold, added up, lean
-   that way too (a leader in every count leads their sum; so does a side above its bar), so we can say so without a sum.
-   A county we don't hold (Hays for Austin) is like votes not counted yet: the rows already name whose count they show.
-   Never a statewide race held only as county shares: its other counties are most of the state.
+   race's final), and only where the counties we hold carry the race:
+   - we hold every county it reaches, with numbers from each (Round Rock, Pflugerville and Leander ISD, Pflugerville's
+     council and props); or
+   - it is a city's own race or measure, whose missing pieces are corners of the city itself (Hays's sliver of Austin,
+     Austin's limited-purpose areas, Collin's part of Dallas), and the city's main county (the Worker's own source, its
+     largest) has numbers.
+   Then every county count we hold must lean the same way, and the votes we hold, added up, lean that way too (a leader
+   in every count leads their sum; so does a side above its bar), so we can say so without a sum.
+   Anything else missing a county is part of a count, and part can't tell (gate review, PR #144: Senate 21 read
+   "winning" off Travis's count, though most of its votes are in counties the guide doesn't read; New Caney ISD is held
+   as Harris's sliver, Montgomery missing). That takes in districts drawn across the state, courts of appeals, ACC
+   (Hays, Bastrop and "other counties" missing), and a statewide race held as county shares. The Worker's map knows which
+   counties a race reaches but not how many of its voters each holds; a share from it could let more of these compare.
    With the answer, why there is none, for the figure's note (PR #144 review: one reason for every "can't tell" put the
-   counties-disagree line on California's and Pennsylvania's ballots): 'shares', 'main' (the main county hasn't posted),
-   the race's own reason (ranked choice, several seats, a block vote, no rule we hold), or 'span' only when the counties
-   we hold really lean different ways (or one of them is tied or at the bar). */
-type SpanWhy = '' | 'shares' | 'main' | 'span' | 'rcv' | 'multi' | 'block' | 'rule' | 'unknown';
+   counties-disagree line where it was false): 'part', 'main' (a city's main county hasn't posted), the race's own reason
+   (ranked choice, several seats, a block vote, no rule we hold, a name not in the guide), 'tie' or 'edge' when a county's
+   count is tied or right at the bar, and 'span' only when the counties really lean different ways. */
+type SpanWhy = '' | 'part' | 'main' | 'span' | 'tie' | 'edge' | 'rcv' | 'multi' | 'block' | 'rule' | 'unknown';
 function acrossCounties(it: Item, r: ItemResult, names: string[]): { cmp: Cmp; why: SpanWhy } {
   const no = (why: SpanWhy): { cmp: Cmp; why: SpanWhy } => ({ cmp: 'nc', why });
   const raw = R.file?.items[it.id];
-  if (!raw) return no('main');
-  if (sharesOnly(it, r)) return no('shares');
+  if (!raw) return no('part');
   if (it.kind === 'contest' && !it.is_retention) {
     if (blockVote(it)) return no('block');
     if (isRCV(it)) return no('rcv');
     if (isMultiSeat(it)) return no('multi');
   }
   const held = (raw.slices || []).filter(sliceHas);
+  const whole = !(raw.missing || []).length && held.length === (raw.slices || []).length;
+  if (sharesOnly(it, r) || (!whole && it.level !== 'city')) return no('part');
   if (!held.some((x) => x.source === raw.source)) return no('main');
   // Each county's numbers as a count of its own, so the rules for one count apply to it. A county's measure without a
   // bar of its own keeps the race's (a retention vote needing 60% never falls back to half; PR #144 review).
@@ -410,6 +419,8 @@ function acrossCounties(it: Item, r: ItemResult, names: string[]): { cmp: Cmp; w
   if (isMeasureLike(it) && counts.some((x) => !x.measure || barOf(it, x) === null)) return no('rule');
   if (!isMeasureLike(it) && counts.some((x) => unknownLead(x))) return no('unknown');
   const ways = counts.map((x) => leanOf(it, x));
+  // A county with no lean is tied at the top, or a measure right at its bar: said as that, never as leaning apart.
+  if (ways.some((x) => x === null)) return no(isMeasureLike(it) ? 'edge' : 'tie');
   const way = ways[0];
   if (!way || ways.some((x) => x !== way)) return no('span');
   if (isMeasureLike(it)) return names[0] === 'YES' || names[0] === 'NO' ? { cmp: (way === 'yes') === (names[0] === 'YES') ? 'ahead' : 'behind', why: '' } : no('');
@@ -737,7 +748,7 @@ export const selName = (sel: CmpSel): string => (sel.kind === 'mine' ? 'Your pic
    office's own site). No pick: `po`; with nothing chosen to compare (the printed page of a ballot with no picks), `po`
    with numbers, `w` without, `ln` the office's site. */
 export type DotKind = 'up' | 'down' | 'wq' | 'wp' | 'po' | 'w' | 'ln';
-export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'main' | 'shares' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
+export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'main' | 'part' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
 export interface Figure {
   word: 'Counting' | 'Unofficial' | 'Official';
   explain: string;
@@ -817,8 +828,8 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   if (why.has('partial')) notes.push('Several seats where some picks won and some lost: we count it as neither.');
   if (why.has('span')) notes.push('Races across county lines: we can’t tell while the counties’ counts lean different ways.');
   if (why.has('main')) notes.push('Races across county lines: we can’t tell until the biggest county in the race posts here.');
-  if (why.has('shares')) notes.push('Statewide races shown as one county’s count: we can’t tell from one county.');
-  if (why.has('tie')) notes.push('A race tied at the top: we can’t tell yet.');
+  if (why.has('part')) notes.push('Races where we have only some counties’ counts: we can’t tell from part of a race.');
+  if (why.has('tie')) notes.push('A tie at the top: we can’t tell yet.');
   if (why.has('unknown')) notes.push('A name not in this guide could be leading: we can’t tell.');
   if (why.has('edge')) notes.push('A measure right at its bar to pass: we can’t tell yet.');
   if (why.has('rule')) notes.push('A measure whose rule to pass is more than a share of yes and no: we can’t tell here.');

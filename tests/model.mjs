@@ -1882,7 +1882,7 @@ function roundTrip(name, stCode, places, mutate) {
     // can't tell yet (numbers in, no honest answer: here a tie and Austin's Prop A, whose counties lean different ways),
     // not posted here (nothing yet, or the office's own site).
     check('results figure: your picks counted in plain words (won, losing, can’t tell yet, not posted here), the other races apart', f.sel && f.sel.kind === 'mine' && rm.countLine(f) === 'Your 9 picks: 2 won · 3 losing · 2 can’t tell yet · 2 not posted here' && f.others > 0, `${rm.countLine(f)}`);
-    check('results figure: Counting; why some can’t be told, one line each (a tie, counties leaning different ways); the open row still says the race crosses county lines', f.word === 'Counting' && f.notes.some((n) => /tied/.test(n)) && f.notes.includes('Races across county lines: we can’t tell while the counties’ counts lean different ways.') && /This race crosses county lines/.test(txt(op.resultsHTML(st.S.ballot.byId.get('tx-austin-prop-a'), rm.R.file.items['tx-austin-prop-a']))), f.notes.join(' | '));
+    check('results figure: Counting; why some can’t be told, one line each (a tie, counties leaning different ways); the open row still says the race crosses county lines', f.word === 'Counting' && f.notes.includes('A tie at the top: we can’t tell yet.') && f.notes.includes('Races across county lines: we can’t tell while the counties’ counts lean different ways.') && /This race crosses county lines/.test(txt(op.resultsHTML(st.S.ballot.byId.get('tx-austin-prop-a'), rm.R.file.items['tx-austin-prop-a']))), f.notes.join(' | '));
     {
       // A race across counties (Nov 5: every Austin prop read "not compared" while it was passing): compared by which way
       // every county count we hold leans, the race's main county among them; never won or lost.
@@ -1914,6 +1914,33 @@ function roundTrip(name, stCode, places, mutate) {
       rm.R.file = keepF;
       check('results: a race across counties: "can’t tell" while its counties lean different ways; winning or losing once every county count we hold agrees; never won; never without its main county', differ === 'nc nc nc nc' && agree === 'ahead behind ahead behind' && done === 'ahead' && noMain === 'nc', `${differ} | ${agree} | ${done} | ${noMain}`);
       check('results: a race across counties without its main county says that, not "lean different ways"; a county keeps the race’s bar to pass', mainNotes.includes('Races across county lines: we can’t tell until the biggest county in the race posts here.') && !mainNotes.some((n) => /lean different ways/.test(n)) && bar60 === 'behind', `${mainNotes.join(' | ')} | ${bar60}`);
+      // Gate review, PR #144 round 1: only where the counties we hold carry the race. A district held as Travis's slice
+      // with "other counties" missing (Senate 21, SBOE 5, the 37th), or ACC with Hays, Bastrop and "other counties"
+      // missing, is part of a count: can't tell, and the card says so. A city's own race missing a corner of the city
+      // ("other counties" for Austin's council 5) still compares, as do Austin's props with Hays missing (above).
+      const one = (id, missing) => {
+        const x = keepF.items[id];
+        return { ...x, slices: [{ source: x.source, county: 'Travis', status: x.status, reporting: x.reporting, updated: x.updated, url: x.url, total_votes: x.total_votes, candidates: x.candidates }], missing };
+      };
+      const f4 = JSON.parse(JSON.stringify(f2));
+      f4.items['tx-us-house-37'] = one('tx-us-house-37', ['other counties']);
+      f4.items['tx-austin-council-5'] = one('tx-austin-council-5', ['other counties']);
+      f4.items['tx-acc-trustee-1'].missing = ['Hays', 'Bastrop', 'other counties'];
+      rm.R.file = f4;
+      const h37 = st.S.ballot.byId.get('tx-us-house-37'), c5 = st.S.ballot.byId.get('tx-austin-council-5');
+      const part = [cmp(h37, ['Greg Casar']), cmp(h37, ['Lauren B. Peña']), cmp(acc, [W])].join(' ');
+      const city = [cmp(c5, ['Liz Brink']), cmp(c5, ['Ryan Alter'])].join(' ');
+      const partNotes = rm.figure().notes;
+      // A county whose own count can't lean, tied at the top or right at the bar, is said as that, never as leaning apart.
+      const f5 = JSON.parse(JSON.stringify(keepF));
+      f5.items['tx-austin-prop-a'].slices[1].measure = { yes: 1500, no: 1500, yes_pct: 50 };
+      f5.items['tx-acc-trustee-1'].slices[1].candidates = [{ name: W, votes: 2500, pct: 50 }, { name: G, votes: 2500, pct: 50 }];
+      rm.R.file = f5;
+      const evenNotes = rm.figure().notes;
+      const even = [cmp(pa, ['YES']), cmp(acc, [W])].join(' ');
+      rm.R.file = keepF;
+      check('results: a district held as one county with "other counties" missing, or ACC missing Hays and Bastrop, can’t be told and says it’s part of a count; a city’s own race missing a corner still compares', part === 'nc nc nc' && city === 'ahead behind' && partNotes.includes('Races where we have only some counties’ counts: we can’t tell from part of a race.') && !partNotes.some((n) => /lean different ways/.test(n)), `${part} | ${city} | ${partNotes.join(' | ')}`);
+      check('results: a county tied or right at the bar is said as a tie or the bar, never as counties leaning different ways', even === 'nc nc' && evenNotes.includes('A tie at the top: we can’t tell yet.') && evenNotes.includes('A measure right at its bar to pass: we can’t tell yet.') && !evenNotes.some((n) => /lean different ways/.test(n)), `${even} | ${evenNotes.join(' | ')}`);
     }
     const fh = fig.figureHTML();
     check('results card: status word and one sentence, "Compare with" with Your picks chosen first, the count as headline, the key above the dots, no offices or times', /Offices are still counting\. Numbers may change\./.test(txt(fh)) && /<p class="cmp-l" id="cmp-l">Compare with<\/p>/.test(fh) && /data-act="cmp" data-k="mine" aria-pressed="true"/.test(fh) && fh.indexOf('data-k="mine"') < fh.indexOf('data-k="papers"') && fh.indexOf('vz-head') < fh.indexOf('vz-key') && fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wq"/.test(fh) && /class="d wp"/.test(fh) && !/We checked|updated|posted \d|Where these numbers come from/.test(txt(fh)) && /data-act="goto" data-q="/.test(fh) && !/cmp-take/.test(fh), txt(fh).slice(0, 300));
@@ -2220,7 +2247,7 @@ function roundTrip(name, stCode, places, mutate) {
       st.S.b.picks['ca-governor'] = 'Xavier Becerra';
       const laOpen = op.resultsHTML(it('ca-governor'), rm.resultOf(it('ca-governor')));
       check('results: a statewide race held only as Los Angeles County’s share shows that share on a Los Angeles ballot, named, never compared', col('ca-governor') === 'Becerra 64% counting Los Angeles votes only Your pick' && col('ca-prop-1') === 'Yes 58% counting Los Angeles votes only' && rm.sharesOnly(it('ca-governor'), ca.items['ca-governor']) && rm.compare(it('ca-governor'), rm.resultOf(it('ca-governor'))) === 'nc' && rm.ballotSources().some((x) => x.id === 'los-angeles-county-ca'), `${col('ca-governor')} | ${col('ca-prop-1')}`);
-      check('results: a pick on a statewide race shown as Los Angeles’s share: "can’t tell", and the card says it’s one county’s count, never that counties lean different ways', rm.figure().notes.includes('Statewide races shown as one county’s count: we can’t tell from one county.') && !rm.figure().notes.some((n) => /lean different ways/.test(n)), rm.figure().notes.join(' | '));
+      check('results: a pick on a statewide race shown as Los Angeles’s share: "can’t tell", and the card says it’s part of a count, never that counties lean different ways', rm.figure().notes.includes('Races where we have only some counties’ counts: we can’t tell from part of a race.') && !rm.figure().notes.some((n) => /lean different ways/.test(n)), rm.figure().notes.join(' | '));
       check('results open row: on a ballot showing a county’s share of a statewide race, the counties we don’t hold point at the state’s page', /^Counting\. In Los Angeles County’s count, Becerra is ahead so far\./.test(txt(laOpen)) && /Other counties: not in this guide’s results\. The statewide count is on California’s page\. California results/.test(txt(laOpen)) && laOpen.includes(`href="${stateUrl()}"`), txt(laOpen).slice(-260));
       const boeOpen = txt(op.resultsHTML(it('ca-boe-3'), ca.items['ca-boe-3']));
       check('results open row: a race across county lines that isn’t statewide says the other counties post their own counts, no state link', /Other counties: not in this guide’s results\. Their election offices post their own counts\./.test(boeOpen) && !/statewide count|California results/.test(boeOpen), boeOpen.slice(-200));

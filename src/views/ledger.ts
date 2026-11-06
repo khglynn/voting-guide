@@ -766,8 +766,9 @@ export function barHTML(): string {
 /* The bar's results line, above its two buttons (second overnight pass, DESIGN-OVERNIGHT-2 section 2; Kevin: the
    footer "still has two lines and no % reporting? there has to be a cleaner clearer design"). One line at every width:
    "Counting · Travis 64 of 201 vote centers · last posted 9:46 PM" and a Refresh icon. The line itself opens the menu at its
-   sources, where every office's words, times and our check time live. When it would overflow, fitFoot drops the
-   office's name first, then shortens the progress, never the status word. */
+   sources, where every office's words, times and our check time live. When it would overflow, fitFoot shortens the
+   progress, then drops it, and the office's name only last (PR #144 review: "last posted" without a name doesn't say
+   whose post), never the status word or the time. */
 const REFRESH = '<svg class="rf-i" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M11.6 5.2A5 5 0 1 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.2 1.8v3.6H8.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 export const refreshBtn = (fk: string): string => `<button class="linkbtn fr-btn" data-act="results-refresh" data-fk="${fk}"${R.checking ? ' aria-busy="true"' : ''}>${REFRESH}${R.checking ? 'Checking…' : 'Refresh'}</button>`;
 const refreshIcon = (): string => `<button class="fr-rf" data-act="results-refresh" data-fk="bar-refresh" aria-label="${R.checking ? 'Checking for new results' : 'Refresh results'}"${R.checking ? ' aria-busy="true"' : ''}>${REFRESH}</button>`;
@@ -793,7 +794,7 @@ export function footResHTML(): string {
   const said = [f.word, [f.who, f.prog].filter(Boolean).join(' '), at].filter(Boolean).join(', ');
   return `<div class="foot-res" data-kind="res"><button class="fr-line" data-act="res-src" data-fk="bar-res" aria-label="${esc(`${said}. Opens where these numbers come from.`)}"><b class="fr-w">${esc(f.word)}</b>${mid}${at ? `<span class="fr-at${R.failed ? ' fr-keep' : ''}">${DOT}${esc(at)}</span>` : ''}</button>${refreshIcon()}</div>`;
 }
-/* Fit the bar's line to one line: without the office's name, then with the shortest progress words, then without them.
+/* Fit the bar's line to one line: with the shortest progress words, then without them, then without the office's name.
    Called after the bar paints and when the window resizes (render.ts, main.ts). */
 export function fitFoot(): void {
   const el = typeof document !== 'undefined' ? document.querySelector<HTMLElement>('.foot-res[data-kind="res"]') : null;

@@ -1902,8 +1902,18 @@ function roundTrip(name, stCode, places, mutate) {
       // The main county (the Worker's own source) without numbers: a smaller county never speaks for the race.
       f2.items['tx-austin-prop-a'].slices[0] = { ...f2.items['tx-austin-prop-a'].slices[0], status: 'pending', measure: { yes: 0, no: 0, yes_pct: 0 } };
       const noMain = cmp(pa, ['YES']);
+      // The card says why in that race's own words: waiting on the main county, never "lean different ways" (PR #144
+      // review: one reason for every cross-county "can't tell" put that line on ballots where it was false).
+      const mainNotes = rm.figure().notes;
+      // A county's count without a bar of its own keeps the race's: both counties under a 60% bar is losing for Yes.
+      const f3 = JSON.parse(JSON.stringify(keepF));
+      f3.items['tx-austin-prop-a'].measure.threshold = 60;
+      f3.items['tx-austin-prop-a'].slices[1].measure = { yes: 1700, no: 1300, yes_pct: 56.67 };
+      rm.R.file = f3;
+      const bar60 = cmp(pa, ['YES']);
       rm.R.file = keepF;
       check('results: a race across counties: "can’t tell" while its counties lean different ways; winning or losing once every county count we hold agrees; never won; never without its main county', differ === 'nc nc nc nc' && agree === 'ahead behind ahead behind' && done === 'ahead' && noMain === 'nc', `${differ} | ${agree} | ${done} | ${noMain}`);
+      check('results: a race across counties without its main county says that, not "lean different ways"; a county keeps the race’s bar to pass', mainNotes.includes('Races across county lines: we can’t tell until the biggest county in the race posts here.') && !mainNotes.some((n) => /lean different ways/.test(n)) && bar60 === 'behind', `${mainNotes.join(' | ')} | ${bar60}`);
     }
     const fh = fig.figureHTML();
     check('results card: status word and one sentence, "Compare with" with Your picks chosen first, the count as headline, the key above the dots, no offices or times', /Offices are still counting\. Numbers may change\./.test(txt(fh)) && /<p class="cmp-l" id="cmp-l">Compare with<\/p>/.test(fh) && /data-act="cmp" data-k="mine" aria-pressed="true"/.test(fh) && fh.indexOf('data-k="mine"') < fh.indexOf('data-k="papers"') && fh.indexOf('vz-head') < fh.indexOf('vz-key') && fh.indexOf('vz-key') < fh.indexOf('vz-fig') && /class="d up"/.test(fh) && /class="d down"/.test(fh) && /class="d wq"/.test(fh) && /class="d wp"/.test(fh) && !/We checked|updated|posted \d|Where these numbers come from/.test(txt(fh)) && /data-act="goto" data-q="/.test(fh) && !/cmp-take/.test(fh), txt(fh).slice(0, 300));
@@ -2210,6 +2220,7 @@ function roundTrip(name, stCode, places, mutate) {
       st.S.b.picks['ca-governor'] = 'Xavier Becerra';
       const laOpen = op.resultsHTML(it('ca-governor'), rm.resultOf(it('ca-governor')));
       check('results: a statewide race held only as Los Angeles County’s share shows that share on a Los Angeles ballot, named, never compared', col('ca-governor') === 'Becerra 64% counting Los Angeles votes only Your pick' && col('ca-prop-1') === 'Yes 58% counting Los Angeles votes only' && rm.sharesOnly(it('ca-governor'), ca.items['ca-governor']) && rm.compare(it('ca-governor'), rm.resultOf(it('ca-governor'))) === 'nc' && rm.ballotSources().some((x) => x.id === 'los-angeles-county-ca'), `${col('ca-governor')} | ${col('ca-prop-1')}`);
+      check('results: a pick on a statewide race shown as Los Angeles’s share: "can’t tell", and the card says it’s one county’s count, never that counties lean different ways', rm.figure().notes.includes('Statewide races shown as one county’s count: we can’t tell from one county.') && !rm.figure().notes.some((n) => /lean different ways/.test(n)), rm.figure().notes.join(' | '));
       check('results open row: on a ballot showing a county’s share of a statewide race, the counties we don’t hold point at the state’s page', /^Counting\. In Los Angeles County’s count, Becerra is ahead so far\./.test(txt(laOpen)) && /Other counties: not in this guide’s results\. The statewide count is on California’s page\. California results/.test(txt(laOpen)) && laOpen.includes(`href="${stateUrl()}"`), txt(laOpen).slice(-260));
       const boeOpen = txt(op.resultsHTML(it('ca-boe-3'), ca.items['ca-boe-3']));
       check('results open row: a race across county lines that isn’t statewide says the other counties post their own counts, no state link', /Other counties: not in this guide’s results\. Their election offices post their own counts\./.test(boeOpen) && !/statewide count|California results/.test(boeOpen), boeOpen.slice(-200));

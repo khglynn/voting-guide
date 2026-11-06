@@ -343,7 +343,7 @@ export function compare(it: Item, r: ItemResult | null): Cmp {
    measure or a judge, the names are "YES" or "NO". */
 export function compareNames(it: Item, r: ItemResult | null, names: string[]): Cmp {
   if (!hasNumbers(r) || !names.length) return 'nc';
-  if (spans(r)) return acrossCounties(it, r, names);
+  if (spans(r)) return acrossCounties(it, r, names).cmp;
   if (isMeasureLike(it) && r.measure) {
     const side = names[0];
     if (side !== 'YES' && side !== 'NO') return 'nc';
@@ -381,19 +381,39 @@ function leanOf(it: Item, r: ItemResult): string | null {
    its largest) has numbers, and every county count we hold leans the same way. Then the votes we hold, added up, lean
    that way too (a leader in every count leads their sum; so does a side above its bar), so we can say so without a sum.
    A county we don't hold (Hays for Austin) is like votes not counted yet: the rows already name whose count they show.
-   Never a statewide race held only as county shares: its other counties are most of the state. */
-function acrossCounties(it: Item, r: ItemResult, names: string[]): Cmp {
+   Never a statewide race held only as county shares: its other counties are most of the state.
+   With the answer, why there is none, for the figure's note (PR #144 review: one reason for every "can't tell" put the
+   counties-disagree line on California's and Pennsylvania's ballots): 'shares', 'main' (the main county hasn't posted),
+   the race's own reason (ranked choice, several seats, a block vote, no rule we hold), or 'span' only when the counties
+   we hold really lean different ways (or one of them is tied or at the bar). */
+type SpanWhy = '' | 'shares' | 'main' | 'span' | 'rcv' | 'multi' | 'block' | 'rule' | 'unknown';
+function acrossCounties(it: Item, r: ItemResult, names: string[]): { cmp: Cmp; why: SpanWhy } {
+  const no = (why: SpanWhy): { cmp: Cmp; why: SpanWhy } => ({ cmp: 'nc', why });
   const raw = R.file?.items[it.id];
-  if (!raw || sharesOnly(it, r)) return 'nc';
+  if (!raw) return no('main');
+  if (sharesOnly(it, r)) return no('shares');
+  if (it.kind === 'contest' && !it.is_retention) {
+    if (blockVote(it)) return no('block');
+    if (isRCV(it)) return no('rcv');
+    if (isMultiSeat(it)) return no('multi');
+  }
   const held = (raw.slices || []).filter(sliceHas);
-  if (!held.some((x) => x.source === raw.source)) return 'nc';
-  // Each county's numbers as a count of its own, so the rules for one count apply to it.
-  const one = (x: ResultSlice): ItemResult => ({ ...raw, source: x.source, status: x.status, reporting: x.reporting, updated: x.updated, url: x.url, total_votes: x.total_votes, candidates: x.candidates, measure: x.measure, seats: x.seats ?? raw.seats, unmatched: x.unmatched, slices: undefined, missing: undefined, final: null, rounds: undefined });
-  const ways = held.map((x) => leanOf(it, one(x)));
+  if (!held.some((x) => x.source === raw.source)) return no('main');
+  // Each county's numbers as a count of its own, so the rules for one count apply to it. A county's measure without a
+  // bar of its own keeps the race's (a retention vote needing 60% never falls back to half; PR #144 review).
+  const one = (x: ResultSlice): ItemResult => ({
+    ...raw, source: x.source, status: x.status, reporting: x.reporting, updated: x.updated, url: x.url, total_votes: x.total_votes, candidates: x.candidates,
+    measure: x.measure && x.measure.threshold == null && raw.measure?.threshold != null ? { ...x.measure, threshold: raw.measure.threshold } : x.measure,
+    seats: x.seats ?? raw.seats, unmatched: x.unmatched, slices: undefined, missing: undefined, final: null, rounds: undefined,
+  });
+  const counts = held.map(one);
+  if (isMeasureLike(it) && counts.some((x) => !x.measure || barOf(it, x) === null)) return no('rule');
+  if (!isMeasureLike(it) && counts.some((x) => unknownLead(x))) return no('unknown');
+  const ways = counts.map((x) => leanOf(it, x));
   const way = ways[0];
-  if (!way || ways.some((x) => x !== way)) return 'nc';
-  if (isMeasureLike(it)) return names[0] === 'YES' || names[0] === 'NO' ? ((way === 'yes') === (names[0] === 'YES') ? 'ahead' : 'behind') : 'nc';
-  return names.length === 1 ? (way === names[0] ? 'ahead' : 'behind') : 'nc';
+  if (!way || ways.some((x) => x !== way)) return no('span');
+  if (isMeasureLike(it)) return names[0] === 'YES' || names[0] === 'NO' ? { cmp: (way === 'yes') === (names[0] === 'YES') ? 'ahead' : 'behind', why: '' } : no('');
+  return names.length === 1 ? { cmp: way === names[0] ? 'ahead' : 'behind', why: '' } : no('');
 }
 
 /* ---------- an open row ---------- */
@@ -547,7 +567,7 @@ export function checkedLine(srcs = ballotSources()): string {
   const t = checkedAt(srcs);
   return t ? `We checked ${t}` : '';
 }
-/* Each source in its own words: "Travis County updated: 9:35 PM CT. “120 of 200 precincts reporting.”", or
+/* Each source in its own words: "Travis County last posted 9:35 PM CT. “120 of 200 precincts reporting.”", or
    "Couldn't reach Travis County. Showing its 9:12 PM CT numbers." */
 export function sourceLines(srcs = ballotSources()): string[] {
   return srcs.filter((s) => s.status !== 'link_only').map((s) => {
@@ -717,7 +737,7 @@ export const selName = (sel: CmpSel): string => (sel.kind === 'mine' ? 'Your pic
    office's own site). No pick: `po`; with nothing chosen to compare (the printed page of a ballot with no picks), `po`
    with numbers, `w` without, `ln` the office's site. */
 export type DotKind = 'up' | 'down' | 'wq' | 'wp' | 'po' | 'w' | 'ln';
-export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
+export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'main' | 'shares' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
 export interface Figure {
   word: 'Counting' | 'Unofficial' | 'Official';
   explain: string;
@@ -765,19 +785,23 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
     let w: Dot['why'] = '';
     if (pick && cmp === 'nc' && num) {
       const c = it.kind === 'contest' ? it : null;
-      w = spans(r!) ? 'span' : c && blockVote(c) ? 'block' : c && !winnersOf(r!) && unknownLead(r!) ? 'unknown'
+      // A race across counties says its own reason (acrossCounties), never one picked for it here.
+      w = spans(r!) ? acrossCounties(it, r!, names!).why : c && blockVote(c) ? 'block' : c && !winnersOf(r!) && unknownLead(r!) ? 'unknown'
         : c && (isRCV(c) || isMultiSeat(c)) ? (winnersOf(r!) ? 'partial' : isRCV(c) ? 'rcv' : 'multi')
         : isMeasureLike(it) ? (sideOf(it, r!) === null ? 'rule' : 'edge') : 'tie';
-      why.add(w);
+      if (w) why.add(w);
     }
     // Beside your picks, a race you didn't pick is one small dot whatever its count (Kevin, Nov 5: the key's four
-    // words were "confusing af"); the key then has one line for it.
-    const kind: DotKind = pick ? (cmp === 'won' || cmp === 'ahead' ? 'up' : cmp === 'lost' || cmp === 'behind' ? 'down' : num ? 'wq' : 'wp') : sel || num ? 'po' : link ? 'ln' : 'w';
+    // words were "confusing af"), so the key has one line for it; set once the loop knows there are picks.
+    const kind: DotKind = pick ? (cmp === 'won' || cmp === 'ahead' ? 'up' : cmp === 'lost' || cmp === 'behind' ? 'down' : num ? 'wq' : 'wp') : num ? 'po' : link ? 'ln' : 'w';
     if (pick) counts[cmp]++; else { others++; if (it.kind === 'measure') kinds.measures++; else kinds.races++; }
     const dot: Dot = { id: it.id, sec: x.sec, pick, cmp, kind, posted: num, why: w };
     const last = rows[rows.length - 1];
     if (last && last.sec === x.sec) last.dots.push(dot); else rows.push({ sec: x.sec, dots: [dot] });
   }
+  // With picks to show, every race without one is the same small dot (a choice with none keeps the posted-ness marks,
+  // which its printed key names; PR #144 review).
+  if (sel && Object.values(counts).some((n) => n > 0)) for (const row of rows) for (const d of row.dots) if (!d.pick) d.kind = 'po';
   // "Unofficial" and "Official" only when every race on the ballot has a count here marked so; a race that links out or
   // isn't in the file may still be counting (adversarial pass, Nov 3).
   const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : 'Counting';
@@ -792,6 +816,8 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   if (why.has('multi')) notes.push('Races for more than one seat: we can’t tell until the count is complete.');
   if (why.has('partial')) notes.push('Several seats where some picks won and some lost: we count it as neither.');
   if (why.has('span')) notes.push('Races across county lines: we can’t tell while the counties’ counts lean different ways.');
+  if (why.has('main')) notes.push('Races across county lines: we can’t tell until the biggest county in the race posts here.');
+  if (why.has('shares')) notes.push('Statewide races shown as one county’s count: we can’t tell from one county.');
   if (why.has('tie')) notes.push('A race tied at the top: we can’t tell yet.');
   if (why.has('unknown')) notes.push('A name not in this guide could be leading: we can’t tell.');
   if (why.has('edge')) notes.push('A measure right at its bar to pass: we can’t tell yet.');

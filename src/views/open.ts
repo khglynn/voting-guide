@@ -580,7 +580,7 @@ function sourceLineHTML(r: ItemResult): string {
   const name = s?.name || sourceName(r.source);
   const down = !!s && sourceDown(s);
   const at = r.updated || s?.updated || null;
-  const when = down ? `Couldn’t reach ${name}. Showing its ${at ? `${fmtTime(at)} ` : 'last '}numbers.` : at ? `${name} updated: ${fmtTime(at)}.` : `${name}: source update time unavailable.`;
+  const when = down ? `Couldn’t reach ${name}. Showing its ${at ? `${fmtTime(at)} ` : 'last '}numbers.` : at ? `${name} last posted ${fmtTime(at)}.` : `${name}: source update time unavailable.`;
   const words = `${esc(labelWords(s))}${r.reporting ? ` “${esc(r.reporting.replace(/\.$/, ''))}.”` : ''}`;
   return `<p class="rs-src">${esc(when)}${words} ${officeLink(r, name)}</p>`;
 }
@@ -592,7 +592,7 @@ function slicesHTML(it: Item, r: ItemResult): string {
     const nums = sl.measure && sl.measure.yes + sl.measure.no > 0 ? `Yes ${pct0(sl.measure.yes / (sl.measure.yes + sl.measure.no) * 100)}`
       : sl.candidates && leaders({ ...r, candidates: sl.candidates }).length === 1 ? (() => { const t = leaders({ ...r, candidates: sl.candidates })[0]; return `${shortOf(it, t.name)} ${pct0(t.pct)}`; })() : 'No numbers posted yet';
     const word = statusWord(sl.status);
-    const at = sl.updated ? `, updated ${fmtTime(sl.updated)}` : '';
+    const at = sl.updated ? `, last posted ${fmtTime(sl.updated)}` : '';
     return `<li><b>${esc(name)}:</b> ${esc(nums)}${word ? ` (${esc(word)})` : ''}${esc(at)}.${sl.reporting ? ` “${esc(sl.reporting.replace(/\.$/, ''))}.”` : ''} ${ext(sl.url, `${name} results`)}</li>`;
   }).join('');
   // A statewide race held only as county shares (rule 9, Nov 4): the counties we don't hold point at the state's own

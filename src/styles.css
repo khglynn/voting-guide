@@ -1147,9 +1147,9 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .rf-s { display: block; margin-top: 2px; font-size: 15px; line-height: 1.35; }
 .rs-was { margin-top: 4px; }
 /* Where results stand: the figure at the top of the ballot (views/figure.ts). Your picks are big dots in --tick:
-   filled = ahead or won, ring = behind or didn't win, dotted = no comparison. Races you didn't pick are small
-   faint-ink dots (dotted when they have no numbers). Shape carries the meaning, so print (where --tick is black) and
-   dark mode need nothing new. */
+   filled = winning or won, ring = losing or lost, half filled = numbers in but we can't tell, dotted = not posted
+   here. Races you didn't pick are small faint-ink dots (on a printed ballot with no picks, dotted when they have no
+   numbers). Shape carries the meaning, so print (where --tick is black) and dark mode need nothing new. */
 .vz { margin-top: 14px; padding: 2px 0 14px; border-bottom: 1px solid var(--rule-2); }
 .vz.is-hidden { padding-bottom: 10px; }
 .vz-hd { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
@@ -1169,6 +1169,7 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .d { display: inline-block; width: 13px; height: 13px; border-radius: 50%; flex: none; position: relative; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .d.up { background: var(--tick); }
 .d.down { border: 2px solid var(--tick); }
+.d.wq { border: 2px solid var(--tick); background: linear-gradient(90deg, var(--tick) 50%, transparent 50%); }
 .d.wp { border: 2px dotted var(--tick); }
 .d.po::after, .d.w::after { content: ""; position: absolute; inset: 3.5px; border-radius: 50%; }
 .d.po::after { background: var(--faint); }
@@ -1192,8 +1193,8 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .cheat .pbtn.line { border-color: var(--ink); color: var(--ink); }
 .cheat .pbtn.gold { background: var(--paper-green); color: var(--on-dusk); }
 /* The bar's results line, above its two buttons: one line at every width (DESIGN-OVERNIGHT-2 section 2). The line opens
-   the menu at its sources; the icon is Refresh. fitFoot (views/ledger.ts) drops the office's name, then shortens the
-   progress words, when the line would overflow. */
+   the menu at its sources; the icon is Refresh. When the line would overflow, fitFoot (views/ledger.ts) shortens the
+   progress words, then drops them, and drops the office's name only last, so "last posted" keeps saying whose post. */
 :root:has(.foot-res) { --foot-h: 98px; }
 .foot-res { display: flex; align-items: center; gap: 4px; max-width: 640px; margin: 0 auto; padding: 4px 6px 0 16px; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14.5px; line-height: 1.25; color: var(--ink-2); }
 .foot-res + .foot-in { min-height: 58px; }
@@ -1202,9 +1203,9 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .fr-d { font-style: normal; color: var(--muted); }
 .fr-at { color: var(--muted); font-variant-numeric: tabular-nums; }
 .fr-ps { display: none; }
-.foot-res.f1 .fr-who, .foot-res.f1 .fr-mid.nop { display: none; }
-.foot-res.f2 .fr-pl { display: none; }
-.foot-res.f2 .fr-ps { display: inline; }
+.foot-res.f1 .fr-pl { display: none; }
+.foot-res.f1 .fr-ps { display: inline; }
+.foot-res.f2 .fr-ps { display: none; }
 .foot-res.f3 .fr-mid { display: none; }
 .fr-rf { flex: none; width: 44px; height: 40px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 2px; }
 .fr-rf .rf-i { width: 18px; height: 18px; }

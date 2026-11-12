@@ -34,7 +34,9 @@ and `npm run preview` first, or point `BASE` at a Vercel preview). `sweep` takes
 debug a few ballots. Each sweep run writes its screenshots and report to its own folder
 under `.tmp/sweep-shots/` (ignored by git; the newest 10 are kept); `shots/` is the
 committed reference set. CI (`.github/workflows/ci.yml`) runs the same gates on every
-pull request and every push to `main`, plus a daily sweep of the live site.
+pull request and every push to `main`, then sweeps the live site after each push to
+`main` (and by hand from the Actions page). Nothing checks the live site on a timer
+since the election (2026-11).
 
 To ship: from an up-to-date `main`, `scripts/ship.sh "what changed" path/to/file ...`
 runs every gate on a copy of exactly the commit it will make (so a file left out, or

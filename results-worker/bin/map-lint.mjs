@@ -32,9 +32,10 @@ export function lintGuide(m, { bundles = {}, stateBundle = null, write = false }
     else if (!mc.reaches.includes(m.county)) err(`${w}: reaches doesn't include ${m.county}`);
     const isStatewide = statewide.has(mc.item) && !local.has(mc.item);
     if (m.scope !== 'state' && isStatewide) {
-      // A county's share of a statewide race (Kevin, Nov 4): allowed only as that county's slice, so it is never the
-      // whole race, never summed, rides beneath the state's own count, and stands alone (named by county) only when the
-      // state source is refused or a link. The state source keeps the race's link (`statewide: true`, src/merge.js).
+      // A county's share of a statewide race (Kevin's call, Nov 4; AGENTS.md's results entry says where it is recorded):
+      // allowed only as that county's slice, so it is never the whole race, never summed, rides beneath the state's own
+      // count, and stands alone (named by county) only when the state has no count to show. The state source keeps the
+      // race's link (`statewide: true`, src/merge.js).
       // Exactly [county, "other counties"]: an extra name would reach the published `missing` list (Codex, Nov 4).
       const exact = Array.isArray(mc.reaches) && mc.reaches.length === 2 && mc.reaches[0] === m.county && mc.reaches[1] === OTHER_COUNTIES;
       if (mc.whole || !exact || mc.statewide !== true) {

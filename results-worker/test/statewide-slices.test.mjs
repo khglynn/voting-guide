@@ -1,7 +1,8 @@
-/* A county's share of a statewide race (Kevin's call, Nov 4): Philadelphia and Allegheny carry Pennsylvania's governor,
-   Los Angeles County carries California's statewide races, each as that county's slice (reaches [county, "other
-   counties"], statewide: true). Beneath the state's count when the state has numbers; on its own, named by county and
-   never the whole race, when the state source is refused or a link. */
+/* A county's share of a statewide race (Kevin's call, Nov 4; AGENTS.md's results entry says where it is recorded):
+   Philadelphia and Allegheny carry Pennsylvania's governor, Los Angeles County carries California's statewide races,
+   each as that county's slice (reaches [county, "other counties"], statewide: true). Beneath the state's count when the
+   state has numbers; on its own, named by county and never the whole race, when the state has no count to show
+   (refused, a link, not checked yet, not read yet or at zero). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildStateFile, sourceSlices } from '../src/merge.js';

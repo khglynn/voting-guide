@@ -92,6 +92,39 @@ test('bodies that are not plain text travel as base64 and come back byte for byt
   assert.equal(res.headers.get('etag'), '"a"');
 });
 
+test('a source the Air reads keeps when it took over, and its file names no planned read for the results watch to call late', async () => {
+  const store = refusedStore();
+  const answers = await airRead();
+  const first = await runTick({ fetch: replayFetch(answers), store, archive: null, maps: [map], only: map.id, fed: true, now: '2026-11-13T18:00:00.000Z' });
+  assert.equal(first.entry.fed_at, '2026-11-13T18:00:00.000Z');
+  const second = await runTick({ fetch: replayFetch(answers), store, archive: null, maps: [map], only: map.id, fed: true, now: '2026-11-13T18:20:00.000Z' });
+  assert.equal(second.entry.fed_at, '2026-11-13T18:00:00.000Z');
+  assert.equal(second.entry.last_run, '2026-11-13T18:20:00.000Z');
+  assert.ok(second.entry.next_due, 'the route still answers the Air with its pace');
+  const src = JSON.parse(await store.get('preview:CA')).sources.find((s) => s.id === map.id);
+  assert.equal(src.next_due, undefined);
+});
+
+test('the feed route takes only the Air\'s sources, a matching map, and says when the fetcher is stopped', async () => {
+  const { default: worker } = await import('../src/worker.js');
+  const { mapHash } = await import('../src/fingerprint.js');
+  const store = refusedStore();
+  const env = { RESULTS: store, ARCHIVE: null, FEED_TOKEN: 't' };
+  const call = (q, body = {}, token = 't') => worker.fetch(new Request(`https://w.example/results/feed?${q}`, { method: 'POST', headers: { Authorization: `Bearer ${token}` }, body: JSON.stringify(body) }), env);
+  assert.equal((await call('source=san-diego-county-ca', {}, 'wrong')).status, 401);
+  assert.equal((await call('source=travis-tx', { answers: [] })).status, 403);
+  const answers = await airRead();
+  const stale = await call('source=san-diego-county-ca', { map_hash: 'old', answers });
+  assert.equal(stale.status, 412);
+  assert.match((await stale.json()).error, /isn't the deployed one/);
+  const ok = await call('source=san-diego-county-ca', { map_hash: await mapHash(map), answers });
+  assert.equal(ok.status, 200);
+  assert.equal((await ok.json()).entry.stopped, 'fed');
+  await store.put('stop', '1');
+  assert.equal((await call('source=san-diego-county-ca&end=1')).status, 409);
+  assert.equal((await sched(store)).stopped, 'fed');
+});
+
 test('answers of the wrong shape are turned away before anything reads them', () => {
   assert.match(answersProblem(null), /no answers/);
   assert.match(answersProblem([{ url: 'http://x', status: 200, text: '' }]), /https/);

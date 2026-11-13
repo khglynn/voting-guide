@@ -13,9 +13,9 @@ test('the reader names the eight sources that refuse the Worker, and leaves time
   assert.ok(START_BY_MS > 60_000);
 });
 
-test('after a good post: the Worker\'s pace, never under 10 minutes; a failure told before is told as over', () => {
+test('after a good post: the Worker\'s pace, never sooner than the next 10-minute run; a failure told before is told as over', () => {
   let a = afterPost({}, { next_due: new Date(T + 60_000).toISOString(), last_change: new Date(T).toISOString() }, T);
-  assert.equal(a.s.next, new Date(T + 10 * 60_000).toISOString());
+  assert.equal(a.s.next, new Date(T + 9 * 60_000).toISOString());
   assert.equal(a.s.first_fed, new Date(T).toISOString());
   assert.equal(a.back, false);
   a = afterPost({ first_fed: 'x', fails: 4, told: 'y', failing_since: 'z' }, { next_due: new Date(T + 6 * H).toISOString() }, T);
@@ -37,13 +37,13 @@ test('five days with no new counts ends a source, counted from the Air\'s first 
 
 test('failures back off and are told once, after six hours', () => {
   let f = afterFail({}, 'HTTP 403', T);
-  assert.equal(f.s.next, new Date(T + 15 * 60_000).toISOString());
+  assert.equal(f.s.next, new Date(T + 14 * 60_000).toISOString());
   assert.equal(f.tell, false);
   f = afterFail(f.s, 'HTTP 403', T + 15 * 60_000);
-  assert.equal(f.s.next, new Date(T + 45 * 60_000).toISOString());
+  assert.equal(f.s.next, new Date(T + 44 * 60_000).toISOString());
   f = afterFail(f.s, 'HTTP 403', T + 6 * H);
   assert.equal(f.tell, true);
-  assert.equal(f.s.next, new Date(T + 7 * H).toISOString());
+  assert.equal(f.s.next, new Date(T + 6 * H + 59 * 60_000).toISOString());
   f = afterFail({ ...f.s, told: 'yes' }, 'HTTP 403', T + 7 * H);
   assert.equal(f.tell, false);
 });

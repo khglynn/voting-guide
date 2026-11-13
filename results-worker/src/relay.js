@@ -8,6 +8,10 @@
    Both sides run the adapter with no change token (a full read), so the second run asks for the same addresses in the
    same order. Portable: no Buffer, so it runs under node and in the Worker alike. */
 
+/* The sources the Air reads (bin/feed.mjs), and the only ones POST /results/feed takes, so a mistaken list on the Air
+   can never take a source the Worker reads fine off its schedule. */
+export const AIR_SOURCES = ['results-CA', 'los-angeles-county-ca', 'orange-county-ca', 'san-diego-county-ca', 'results-OR', 'results-OR-multnomah', 'denver-co', 'results-PA'];
+
 /* What `get` (fetch.js) reads from a response's headers, and nothing else. */
 const KEEP = ['last-modified', 'etag', 'location', 'content-type', 'x-amzn-waf-action', 'cf-mitigated', 'server', 'x-cache'];
 const NO_BODY = new Set([101, 204, 205, 304]);

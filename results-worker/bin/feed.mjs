@@ -26,15 +26,18 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { loadMaps } from './lib.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
-import { recordingFetch } from '../src/relay.js';
+import { recordingFetch, AIR_SOURCES } from '../src/relay.js';
+import { mapHash } from '../src/fingerprint.js';
 
-export const SOURCES = ['results-CA', 'los-angeles-county-ca', 'orange-county-ca', 'san-diego-county-ca', 'results-OR', 'results-OR-multnomah', 'denver-co', 'results-PA'];
+export const SOURCES = AIR_SOURCES;
 const ROUTE = 'https://vg-results.kevinhg.workers.dev/results/feed';
 const MIN = 60_000;
 const DAY = 24 * 60 * MIN;
 export const QUIET_DAYS = 5;
-const FLOOR_MIN = 10; // launchd's interval
-const BACKOFF_MIN = [15, 30, 60];
+// launchd starts a run every 10 minutes, and a source read late in one run would just miss the next run's check at
+// exactly 10, so each wait is a minute short of what it means: the next run, or 15, 30, 60 minutes after a failure.
+const FLOOR_MIN = 9;
+const BACKOFF_MIN = [14, 29, 59];
 const TELL_AFTER_MIN = 6 * 60;
 const ROUTE_TELL_MIN = 24 * 60;
 const FINAL = new Set(['official', 'past certification', 'fed, ended']);
@@ -92,7 +95,7 @@ async function main() {
   const opt = (k) => { const i = argv.indexOf(`--${k}`); return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : null; };
   const dry = argv.includes('--dry');
   const dir = opt('dir') || path.join(os.homedir(), '.vg-results-feed');
-  const ids = (opt('sources') || process.env.VG_FEED_SOURCES || SOURCES.join(' ')).split(/\s+/).filter(Boolean);
+  const ids = (opt('sources') || process.env.VG_FEED_SOURCES || SOURCES.join(' ')).split(/\s+/).filter((id) => SOURCES.includes(id));
   const maps = Object.fromEntries(loadMaps().map((m) => [m.id, m]));
   fs.mkdirSync(dir, { recursive: true });
   const statePath = path.join(dir, 'state.json');
@@ -102,6 +105,7 @@ async function main() {
   const token = readToken(dir);
   const started = Date.now();
   const tell = [];
+  const backIds = []; // sources whose "reads it again" line is in this run's message
   const log = [];
   if (!dry && !token) {
     if (!state.token_told) { tell.push(`The Air's results reader has no token (${path.join(dir, 'token')}), so it can't hand counts to the fetcher.`); state.token_told = iso(started); }
@@ -125,7 +129,7 @@ async function main() {
         if (f.tell) { tell.push(`${map.name}: the Air's reads have failed since ${f.s.failing_since} (${error}). Its last counts stay up.`); state.sources[id].told = iso(now); }
       };
       if (r.verdict !== 'ok') { fail(`the office: ${r.error || r.verdict}`); save(); continue; }
-      const body = JSON.stringify({ answers: rec.answers });
+      const body = JSON.stringify({ map_hash: await mapHash(map), answers: rec.answers });
       if (dry) { log.push(`${id}: ok, ${r.contests?.length ?? 0} contests, updated ${r.source_updated || 'n/a'}; ${rec.answers.length} answers, ${(body.length / 1e6).toFixed(2)} MB to post`); continue; }
       const p = await post(`${ROUTE}?source=${encodeURIComponent(id)}`, token, body);
       if (p.status === 404 && /not found/.test(p.j?.error || '')) {
@@ -142,7 +146,7 @@ async function main() {
       if (p.status !== 200 || !p.j?.entry || !outcome || outcome === 'error') { fail(`the fetcher: ${p.error || p.j?.ran?.[0]?.error || p.j?.error || `HTTP ${p.status}`}`); save(); continue; }
       const a = afterPost(s, p.j.entry, now);
       state.sources[id] = a.s;
-      if (a.back) tell.push(`${map.name}: the Air reads it again.`);
+      if (a.back) { tell.push(`${map.name}: the Air reads it again.`); backIds.push(id); }
       log.push(`${id}: ${outcome}${p.j.ran[0].error ? ` (${p.j.ran[0].error})` : ''}; next ${a.s.next}`);
       if (a.s.ended) {
         if (a.s.ended === 'five days with no new counts') {
@@ -170,6 +174,8 @@ async function main() {
     console.log(`notify failed (${n.status}): ${(n.stderr || '').trim().slice(0, 300)}\n${msg}`);
     const t = iso(started);
     for (const s of Object.values(state.sources)) if (s.told && Date.parse(s.told) >= Date.parse(t)) delete s.told;
+    // A "reads it again" line that didn't go out is owed: its next good post tells it (afterPost reads `told`).
+    for (const id of backIds) if (state.sources[id]) state.sources[id].told = 'owed';
     for (const k of ['token_told', 'route_told', 'done_told']) if (state[k] && Date.parse(state[k]) >= Date.parse(t)) delete state[k];
     process.exitCode = 2;
   }

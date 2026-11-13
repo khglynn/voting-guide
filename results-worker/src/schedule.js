@@ -56,7 +56,7 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   }
   // a good read (changed or not). A good read of a refused source (a run by hand) lifts the refusal, and a good run
   // by hand of a source the Air reads hands it back to the Worker (a read from the Air marks it again, tick.js markFed).
-  if (e.stopped === 'refused' || e.stopped === 'fed') { delete e.stopped; delete e.refused_hash; }
+  if (e.stopped === 'refused' || e.stopped === 'fed') { delete e.stopped; delete e.refused_hash; delete e.fed_at; }
   if (e.status === 'refused') delete e.status;
   e.fail_count = 0; delete e.failing_since; delete e.last_error;
   e.last_ok = now;

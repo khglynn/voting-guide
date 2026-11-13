@@ -271,9 +271,9 @@ function both(a, b) {
 export const FED = 'fed';
 export const FED_ENDED = 'fed, ended';
 const FINAL = new Set(['official', 'past certification', FED_ENDED]);
-function markFed(e, now) {
+function markFed(e, since) {
   if (!e || FINAL.has(e.stopped)) return;
-  e.stopped = FED; e.fed_at = now;
+  e.stopped = FED; e.fed_at = since; // when the Air took over; its latest read is last_run
   delete e.refused_hash;
   if (e.status === 'refused') delete e.status;
 }
@@ -350,6 +350,7 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const ran = [];
   const skipped = [];
   const runOne = async (id) => {
+    const fedSince = (sched.sources[id]?.stopped === FED && sched.sources[id].fed_at) || now; // nextEntry clears it on a good read
     let res;
     try {
       res = await Promise.race([runSource({ map: byId[id], fetch: tickFetch, store, archive, sched, now, ping, log, hasTime, fed }), late]);
@@ -367,7 +368,7 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
       if (!refusedNow) sched.sources[id] = nextEntry(e0, { kind: 'error', error }, now, byId[id]);
       res = { id, outcome: 'error', error };
     }
-    if (fed) markFed(sched.sources[id], now);
+    if (fed) markFed(sched.sources[id], fedSince);
     if (!checkedIds.has(id)) previewFloor(sched.sources[id], now);
     ran.push(res);
     if (--left[byId[id].state] === 0) await publish(byId[id].state);

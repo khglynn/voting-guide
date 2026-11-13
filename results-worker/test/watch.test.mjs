@@ -79,7 +79,23 @@ test('watch: the states a run left out go first on the next run, so the same one
 
 test('watch: a state started at the last moment still finishes, notify step included, inside the 9-minute stop', () => {
   // The slowest file read (20 s, 15 s, 20 s), honesty check (90 s) and notify step (60 s).
-  assert.ok(START_BY_MS + 55_000 + 90_000 + 60_000 <= STOP_MS);
-  assert.ok(HONESTY_BY_MS + 90_000 + 60_000 <= STOP_MS);
+  assert.ok(START_BY_MS + 55_000 + 90_000 + 60_000 + 10_000 <= STOP_MS, 'with 10 s spare for node and the save');
+  assert.ok(HONESTY_BY_MS + 90_000 + 60_000 + 10_000 <= STOP_MS);
   assert.ok(START_BY_MS >= 5 * 60_000, 'still most of the run for checking');
+});
+
+test('watch: a state left out for time keeps its first hiccup, so two failed loads either side of it are still told', () => {
+  const blip = [{ key: 'PA|unreachable', hiccup: true, text: 'PA didn\'t load.', label: 'PA loads.' }];
+  const a = diff(null, blip, T, new Set(['PA']));
+  const skippedRun = diff(a.state, [], T + 600_000, new Set(['PA']));
+  assert.ok(skippedRun.state.waiting['PA|unreachable'], 'kept through the run that left PA out');
+  assert.deepEqual(diff(skippedRun.state, blip, T + 1_200_000, new Set(['PA'])).tell, ['PA didn\'t load.']);
+  assert.deepEqual(diff(a.state, [], T + 600_000).state.waiting, {}, 'a state that was checked and loaded drops it');
+});
+
+test('watch: a state whose honesty check was left out keeps only its honesty problems; a fresh file clears "stale"', () => {
+  const prev = diff(null, [{ key: 'PA|stale', text: 'PA stale.', label: 'PA fresh.' }, { key: 'PA|honesty|x', text: 'PA broke a rule.', label: 'PA passes.' }], T).state;
+  const r = diff(prev, [], T + 600_000, new Set(['PA|honesty']));
+  assert.deepEqual(r.tell, ['Cleared: PA fresh.']);
+  assert.ok(r.state.open['PA|honesty|x'], 'the honesty problem waits for a run that checks it');
 });

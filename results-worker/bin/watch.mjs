@@ -21,8 +21,9 @@
    has it); without one the message is printed. A message that fails to send is told again on the next run.
    Every step fits inside the 9 minutes the start script gives a run (Nov 12; review, Nov 13): a state starts only while
    its slowest file read, honesty check and the notify step still fit, and its honesty check only while that check and
-   the notify step do. A state left out keeps its open problems as they were and goes first on the next run, so a slow
-   Mac never leaves the same last states unwatched run after run.
+   the notify step do. A state left out keeps its open problems and its first hiccups as they were (one whose honesty
+   check was left out, only its honesty problems) and goes first on the next run, so a slow Mac never leaves the same
+   last states unwatched run after run.
    Usage: node bin/watch.mjs [--dir ~/.vg-results-watch] [--states "TX CO"] [--dry]   (--dry: print, never notify) */
 import fs from 'node:fs';
 import os from 'node:os';
@@ -37,12 +38,14 @@ export const STATES = ['TX', 'CO', 'DC', 'CA', 'NY', 'MO', 'TN', 'FL', 'PA', 'GA
 export const LATE_MIN = 20;
 export const REMIND_H = 6;
 // The start script ends a run at 9 minutes. The slowest each step can be: a file read 55 s (20 s, a 15 s wait, 20 s
-// again), an honesty check 90 s, the notify step 60 s. So a state starts by 5:35 and its honesty check by 6:30.
+// again), an honesty check 90 s, the notify step 60 s, with 10 s kept for node starting and the state being saved. So a
+// state starts by 5:25 and its honesty check by 6:20.
 export const STOP_MS = 9 * 60_000;
+const SPARE_MS = 10_000;
 const FILE_MS = 55_000;
 const HONESTY_MS = 90_000;
 const NOTIFY_MS = 60_000;
-export const HONESTY_BY_MS = STOP_MS - NOTIFY_MS - HONESTY_MS;
+export const HONESTY_BY_MS = STOP_MS - SPARE_MS - NOTIFY_MS - HONESTY_MS;
 export const START_BY_MS = HONESTY_BY_MS - FILE_MS;
 
 /* This run's order: the states the last run left out first, then the rest in their usual order. */
@@ -79,14 +82,16 @@ export function honestyProblems(st, output) {
   });
 }
 
-/* What to tell, from the last run's state and this run's problems. `unjudged` states keep their open problems as they
-   were; hiccups wait for a second run in a row. Returns the messages and the state to keep. */
+/* What to tell, from the last run's state and this run's problems. `unjudged` states keep their open problems and their
+   waiting hiccups as they were (`ST|honesty` in it: only that state's honesty problems); hiccups wait for a second run
+   in a row. Returns the messages and the state to keep. */
 export function diff(prev, now, nowMs, unjudged = new Set()) {
   const open = { ...(prev?.open || {}) };
   const waiting = prev?.waiting || {};
   const nextWaiting = {};
   const tell = [];
   const seen = new Set();
+  const kept = (k) => { const [st, kind = ''] = k.split('|'); return unjudged.has(st) || (unjudged.has(`${st}|honesty`) && kind.startsWith('honesty')); };
   for (const p of now) {
     if (p.hiccup && !open[p.key] && !waiting[p.key]) { nextWaiting[p.key] = nowMs; continue; }
     seen.add(p.key);
@@ -96,10 +101,11 @@ export function diff(prev, now, nowMs, unjudged = new Set()) {
     else open[p.key] = { ...was, text: p.text };
   }
   for (const [k, v] of Object.entries(open)) {
-    if (seen.has(k) || unjudged.has(k.split('|')[0])) continue;
+    if (seen.has(k) || kept(k)) continue;
     delete open[k];
     tell.push(`Cleared: ${v.label || v.text}`);
   }
+  for (const [k, v] of Object.entries(waiting)) if (!(k in nextWaiting) && !open[k] && kept(k)) nextWaiting[k] = v;
   return { tell, state: { open, waiting: nextWaiting, last_run: new Date(nowMs).toISOString() } };
 }
 
@@ -164,7 +170,7 @@ async function main() {
     try { file = JSON.parse(r.body); } catch { unjudged.add(st); problems.push({ key: `${st}|not-json`, hiccup: true, text: `${nm(st)}'s results file isn't readable data.`, label: `${nm(st)}'s results file reads again.` }); continue; }
     checked.push(st);
     problems.push(...judgeFile(st, file, nowMs));
-    if (Date.now() - nowMs > HONESTY_BY_MS) { unjudged.add(st); skipped.push(st); continue; }
+    if (Date.now() - nowMs > HONESTY_BY_MS) { unjudged.add(`${st}|honesty`); skipped.push(st); continue; }
     const h = await honesty(st);
     const found = h.killed ? null : honestyProblems(st, h.out);
     if (h.killed || (h.code !== 0 && !found)) {

@@ -60,8 +60,10 @@ export function assemble(map0, draft, judge, { statewide: sw = false, replace = 
   if (sw) {
     map.statewide_unmatched = [...unmatchedGuide].sort();
     if (!map.statewide_unmatched.length) delete map.statewide_unmatched;
+    // A feed contest a slice now holds isn't unmatched any more, whichever assembly listed it.
+    const held = new Set(contests.map((c) => String(c.feed_id)));
     const feedSeen = new Set((map.unmatched_feed || []).map((u) => String(u.feed_id)));
-    map.unmatched_feed = [...(map.unmatched_feed || []), ...unmatchedFeed.filter((u) => !feedSeen.has(String(u.feed_id)))];
+    map.unmatched_feed = [...(map.unmatched_feed || []), ...unmatchedFeed.filter((u) => !feedSeen.has(String(u.feed_id)))].filter((u) => !held.has(String(u.feed_id)));
     // The state's bundle joins the map's places, so the statewide fingerprint (and the Worker's hourly check) covers
     // these items. It is kept apart from the map's own fingerprint (src/fingerprint.js), so a statewide edit drops only
     // these slices, never the county's own races.

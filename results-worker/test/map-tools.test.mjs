@@ -54,7 +54,7 @@ test('map-assemble --replace rebuilds the map\'s own pairs and keeps its statewi
 });
 
 test('map-assemble --statewide adds county slices beside the own pairs, never whole, and leaves the own pairs exactly', () => {
-  const start = { ...made, contests: [ownPair], statewide_unmatched: undefined, guide: { places: ['philadelphia-pa'] } };
+  const start = { ...made, contests: [ownPair], statewide_unmatched: undefined, guide: { places: ['philadelphia-pa'] }, unmatched_feed: ownDraft.unmatched_feed };
   const { map } = assemble(start, swDraft, swJudge, { statewide: true });
   assert.deepEqual(map.contests.find((c) => c.item === 'phl-house'), ownPair);
   const g = map.contests.find((c) => c.item === 'pa-governor');
@@ -63,6 +63,7 @@ test('map-assemble --statewide adds county slices beside the own pairs, never wh
   assert.deepEqual(g.reaches, ['Philadelphia', 'other counties'], 'the judge\'s "Pennsylvania" is never a reach');
   assert.deepEqual(map.guide.places, ['philadelphia-pa', 'state-PA']);
   assert.deepEqual(map.statewide_unmatched, ['pa-lt-gov']);
+  assert.deepEqual(map.unmatched_feed.map((u) => u.feed_id), ['X'], 'the governor\'s feed contest is held by its new slice');
   assert.throws(() => assemble(made, swDraft, swJudge, { statewide: true, replace: true }), /--replace is for the map's own pairs/);
 });
 

@@ -88,9 +88,12 @@ export function sourceSlices(read, map, now) {
     slice._declared = fc.declared ? fc.declared.map((n) => mc.choices?.[n]).filter((n) => n && n !== OTHER) : null;
     // A race whose map gives no `reaches` is never taken as the whole race: one county's slice, "other counties"
     // missing (site builder's review, Nov 3). `reaches: [this county]` is the map saying it is wholly inside.
-    slice._whole = !!mc.whole;
     slice._statewide = !!mc.statewide; // a county's share of a statewide race (see buildStateFile)
-    slice._reaches = mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
+    // A county's share of a statewide race is only ever that county's slice, whatever a hand-edited map says: never
+    // whole and reaching exactly this county and "other counties" (the lint refuses anything else; this holds the rule
+    // at run time too).
+    slice._whole = !!mc.whole && !mc.statewide;
+    slice._reaches = mc.statewide ? [map.county || map.name, 'other counties'] : mc.reaches && mc.reaches.length ? mc.reaches : [map.county || map.name, 'other counties'];
     // A count the source itself marks as one part of a bigger race (the NYC board's asterisk, "the City of New York
     // portion of the contests only") is never taken as the whole race, whatever the map's reaches say.
     if (fc.portion && !mc.whole && slice._reaches.length < 2) slice._reaches = [...slice._reaches, 'other counties'];

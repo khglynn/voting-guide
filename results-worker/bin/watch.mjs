@@ -19,7 +19,10 @@
    It reads public URLs only: no git, no login, nothing written outside <dir>. Telling is a shell command in
    VG_WATCH_NOTIFY that reads the message on stdin (on the Air, Gabby's `gabby-notify -`, whose exit 75 means her outbox
    has it); without one the message is printed. A message that fails to send is told again on the next run.
-   A run that passes 7 minutes checks no more states that run and leaves them as they were (Nov 12).
+   Every step fits inside the 9 minutes the start script gives a run (Nov 12; review, Nov 13): a state starts only while
+   its slowest file read, honesty check and the notify step still fit, and its honesty check only while that check and
+   the notify step do. A state left out keeps its open problems as they were and goes first on the next run, so a slow
+   Mac never leaves the same last states unwatched run after run.
    Usage: node bin/watch.mjs [--dir ~/.vg-results-watch] [--states "TX CO"] [--dry]   (--dry: print, never notify) */
 import fs from 'node:fs';
 import os from 'node:os';
@@ -33,7 +36,20 @@ const UA = 'vote.kevinhg.com results fetcher (+https://vote.kevinhg.com)';
 export const STATES = ['TX', 'CO', 'DC', 'CA', 'NY', 'MO', 'TN', 'FL', 'PA', 'GA', 'MD', 'IL', 'AL', 'OR', 'WA'];
 export const LATE_MIN = 20;
 export const REMIND_H = 6;
-export const RUN_BUDGET_MS = 7 * 60_000; // a run starts no new state after this; the start script ends it at 9 minutes
+// The start script ends a run at 9 minutes. The slowest each step can be: a file read 55 s (20 s, a 15 s wait, 20 s
+// again), an honesty check 90 s, the notify step 60 s. So a state starts by 5:35 and its honesty check by 6:30.
+export const STOP_MS = 9 * 60_000;
+const FILE_MS = 55_000;
+const HONESTY_MS = 90_000;
+const NOTIFY_MS = 60_000;
+export const HONESTY_BY_MS = STOP_MS - NOTIFY_MS - HONESTY_MS;
+export const START_BY_MS = HONESTY_BY_MS - FILE_MS;
+
+/* This run's order: the states the last run left out first, then the rest in their usual order. */
+export function runOrder(states, prev) {
+  const first = (prev?.skipped || []).filter((st) => states.includes(st));
+  return [...first, ...states.filter((st) => !first.includes(st))];
+}
 const MAX_MSG = 1150; // gabby-notify takes 1,200 characters from stdin
 const NAMES = { TX: 'Texas', CO: 'Colorado', DC: 'DC', CA: 'California', NY: 'New York', MO: 'Missouri', TN: 'Tennessee', FL: 'Florida', PA: 'Pennsylvania', GA: 'Georgia', MD: 'Maryland', IL: 'Illinois', AL: 'Alabama', OR: 'Oregon', WA: 'Washington' };
 const nm = (st) => NAMES[st] || st;
@@ -115,7 +131,7 @@ async function getFile(st) {
 }
 
 const honesty = (st) => new Promise((ok) => {
-  execFile(process.execPath, [path.join(HERE, 'honesty.mjs'), st], { timeout: 90_000, encoding: 'utf8' }, (err, stdout, stderr) => ok({ code: err ? (err.code ?? 1) : 0, out: `${stdout || ''}${stderr || ''}`, killed: !!err?.killed }));
+  execFile(process.execPath, [path.join(HERE, 'honesty.mjs'), st], { timeout: HONESTY_MS, encoding: 'utf8' }, (err, stdout, stderr) => ok({ code: err ? (err.code ?? 1) : 0, out: `${stdout || ''}${stderr || ''}`, killed: !!err?.killed }));
 });
 
 async function main() {
@@ -134,10 +150,10 @@ async function main() {
   const checked = [];
   const unjudged = new Set();
   const skipped = [];
-  for (const st of states) {
+  for (const st of runOrder(states, prev)) {
     // Out of time (a slow connection, a very busy Mac): leave the rest as they were for the next run, rather than hold
     // up every run after this one (launchd starts no new run while one is going; Nov 11, 7 hours unwatched).
-    if (Date.now() - nowMs > RUN_BUDGET_MS) { unjudged.add(st); skipped.push(st); continue; }
+    if (Date.now() - nowMs > START_BY_MS) { unjudged.add(st); skipped.push(st); continue; }
     const r = await getFile(st);
     if (r.status === 404) {
       if (had.has(st)) { unjudged.add(st); problems.push({ key: `${st}|gone`, hiccup: true, text: `${nm(st)}'s results file is gone (HTTP 404), though it was there before.`, label: `${nm(st)}'s results file is back.` }); }
@@ -148,6 +164,7 @@ async function main() {
     try { file = JSON.parse(r.body); } catch { unjudged.add(st); problems.push({ key: `${st}|not-json`, hiccup: true, text: `${nm(st)}'s results file isn't readable data.`, label: `${nm(st)}'s results file reads again.` }); continue; }
     checked.push(st);
     problems.push(...judgeFile(st, file, nowMs));
+    if (Date.now() - nowMs > HONESTY_BY_MS) { unjudged.add(st); skipped.push(st); continue; }
     const h = await honesty(st);
     const found = h.killed ? null : honestyProblems(st, h.out);
     if (h.killed || (h.code !== 0 && !found)) {
@@ -158,6 +175,7 @@ async function main() {
   }
   const { tell, state } = diff(prev, problems, nowMs, unjudged);
   state.checked = checked;
+  if (skipped.length) state.skipped = skipped;
   state.seen_states = [...new Set([...had, ...checked])];
   const save = () => { fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath); };
   console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}${skipped.length ? `; out of time before ${skipped.join(' ')}` : ''}`);
@@ -165,7 +183,7 @@ async function main() {
   const msg = message(tell);
   const cmd = process.env.VG_WATCH_NOTIFY;
   if (dry || !cmd) { console.log(msg); return save(); }
-  const r = spawnSync('/bin/sh', ['-c', cmd], { input: msg, encoding: 'utf8', timeout: 60_000 });
+  const r = spawnSync('/bin/sh', ['-c', cmd], { input: msg, encoding: 'utf8', timeout: NOTIFY_MS });
   // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice). Any
   // other failure isn't marked told: the state stays as it was, so the next run tells it again.
   if (r.status !== 0 && r.status !== 75) { console.log(`notify failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}\n${msg}`); process.exitCode = 2; return; }

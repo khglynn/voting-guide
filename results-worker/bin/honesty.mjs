@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /* Honesty checks on a live published file (coordinator's list, Nov 3): the schema and percentages; no outcome on a
    count that isn't complete; spanning races carry slices, the top numbers equal one slice (never a sum) and no final;
-   write-in notes on the races that need them; link_only items have a reason and no numbers; no falling-total note
-   unless one was pinged; and the file served by workers.dev equals what KV holds (with --kv, via wrangler).
-   Usage: node bin/honesty.mjs [ST] [--kv] [--preview] */
+   write-in notes on the races that need them; link_only items have a reason and no numbers; every falling-total note
+   (the Worker pings each one itself, so bin/watch.mjs leaves them out of what it tells); and the file served by workers.dev equals what KV holds (with --kv, via wrangler).
+   Usage: node bin/honesty.mjs [ST] [--kv] [--preview]   (the switches go before or after the state) */
 import { execFileSync } from 'node:child_process';
 import { checkFile } from '../src/checks.js';
 import { flags, ROOT, loadMaps } from './lib.mjs';
 import { sha256 } from '../src/util.js';
 
-const f = flags(process.argv.slice(2));
+const f = flags(process.argv.slice(2), ['kv', 'preview']);
 const st = f._[0] || 'TX';
 const url = `https://vg-results.kevinhg.workers.dev/results/${f.preview ? 'preview/' : ''}2026-11-03/${st}.json`;
 const body = await (await fetch(`${url}?honesty=${Date.now()}`, { signal: AbortSignal.timeout(60_000) })).text();

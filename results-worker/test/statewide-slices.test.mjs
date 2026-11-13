@@ -126,6 +126,28 @@ test('map lint: a statewide item in a county map passes only as that county\'s s
   const st = { ...lintMap({ statewide: true, whole: true, reaches: ['Pennsylvania'] }), scope: 'state', county: 'Pennsylvania' };
   assert.match(lint(st).errors.join('\n'), /only for a statewide item/);
 });
+test('map lint: without the state\'s bundle a county map is refused, never linted blind', () => {
+  // With no state bundle the governor looks like one of the county's own races and would pass marked wholly inside it.
+  const blind = lintMap({ reaches: ['Philadelphia'] }, ['philadelphia-pa', 'state-PA']);
+  const errs = lintGuide(blind, { bundles: { 'philadelphia-pa': placeBundle, 'state-PA': stateBundle }, stateBundle: null }).errors;
+  assert.match(errs.join('\n'), /no state-PA bundle, so the lint can't tell a statewide item from this county's own races/);
+  // A state map needs no state bundle of its own to be told apart from.
+  const st = { ...lintMap({ whole: true, reaches: ['Pennsylvania'] }), scope: 'state', county: 'Pennsylvania' };
+  assert.doesNotMatch(lintGuide(st, { bundles: { 'philadelphia-pa': placeBundle, 'state-PA': stateBundle }, stateBundle: null }).errors.join('\n'), /no state-PA bundle/);
+});
+
+test('statewide slice: a hand-edited map can\'t make a county\'s share the whole race at run time either', () => {
+  // Marked whole and wholly inside Philadelphia, past the lint: the merge still reads it as Philadelphia's slice.
+  const edited = { ...PHL, contests: PHL.contests.map((c) => (c.statewide ? { ...c, whole: true, reaches: ['Philadelphia'] } : c)) };
+  const alone = file([edited, STATE], { phl: src([gov(500000, 100000), house]), 'results-PA': refused }).items['pa-governor'];
+  assert.equal(alone.source, 'phl');
+  assert.deepEqual(alone.missing, ['other counties'], 'never the whole state');
+  assert.equal(alone.final, null);
+  const beneath = file([edited, STATE], { phl: src([gov(5000000, 100000), house]), 'results-PA': src([{ feed_id: '3:1', feed_name: 'Governor', choices: [{ name: 'JOSH SHAPIRO', votes: 3000000 }, { name: 'STACY GARRITY', votes: 2500000 }] }]) }).items['pa-governor'];
+  assert.equal(beneath.source, 'results-PA', 'the state\'s count stays the race, even with the county ahead of it');
+  assert.deepEqual(beneath.county_slices.map((s) => s.source), ['phl']);
+});
+
 test('the three maps carry their statewide items only as county slices', () => {
   for (const id of ['philadelphia-pa', 'allegheny-pa', 'los-angeles-county-ca']) {
     const m = mapFor(id);

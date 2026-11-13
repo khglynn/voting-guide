@@ -7,6 +7,5 @@ shots/*.pdf
 .tmp/
 .tmp-preview.log
 .env*
-results-worker/node_modules/
 results-worker/.wrangler/
 results-worker/.local/

@@ -46,12 +46,21 @@ export function folderArchive(dir) {
   return { async put(k, v) { const p = path.join(dir, k); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, String(v)); } };
 }
 
-const BOOLEAN = new Set(['write', 'offline', 'tick', 'statewide', 'add']);
-export function flags(argv) {
+/* Options that are on/off switches: they never take the next word as their value, so `--preview CA` reads CA as the
+   state, wherever the switch sits. */
+const BOOLEAN = new Set(['write', 'offline', 'tick', 'statewide', 'replace', 'kv', 'preview']);
+/* `known`, when given, is every option the script takes: anything else throws, so a misremembered option (the map
+   notes once said `map-assemble --add`) stops the run instead of quietly running something else. */
+export function flags(argv, known = null) {
   const out = { _: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a.startsWith('--')) { const k = a.slice(2); const nx = argv[i + 1]; if (!BOOLEAN.has(k) && nx && !nx.startsWith('--')) { out[k] = nx; i++; } else out[k] = true; } else out._.push(a);
+    if (a.startsWith('--')) {
+      const k = a.slice(2);
+      if (known && !known.includes(k)) throw new Error(`unknown option --${k}; this takes ${known.map((x) => `--${x}`).join(', ')}`);
+      const nx = argv[i + 1];
+      if (!BOOLEAN.has(k) && nx && !nx.startsWith('--')) { out[k] = nx; i++; } else out[k] = true;
+    } else out._.push(a);
   }
   return out;
 }

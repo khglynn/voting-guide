@@ -11,13 +11,13 @@
    that carry the item and those places' counties, and the guide's own words on who votes (`scope_plain`).
    `--statewide` (Nov 4): for a county map, the guide side is instead the state bundle's items, so the county's share of
    each statewide race can be paired as that county's slice (reaches [county, "other counties"], statewide: true; the
-   state source keeps the whole race). Writes .local/map-inputs/{id}.statewide.json; assemble with map-assemble --add. */
+   state source keeps the whole race). Writes .local/map-inputs/{id}.statewide.json; assemble with `map-assemble <id> --statewide`. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadMaps, loadBundle, flags, ROOT } from './lib.mjs';
 import { ADAPTERS } from '../src/adapters/index.js';
 
-const f = flags(process.argv.slice(2));
+const f = flags(process.argv.slice(2), ['bundles', 'raw', 'statewide']);
 const [id] = f._;
 const map = loadMaps([id])[0];
 if (!map) { console.error(`no map ${id}`); process.exit(1); }

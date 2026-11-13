@@ -1,7 +1,7 @@
 /* The outside watch's judgment and its tell-only-what-changed rules (bin/watch.mjs, Nov 4). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { judgeFile, honestyProblems, diff, message, LATE_MIN, REMIND_H } from '../bin/watch.mjs';
+import { judgeFile, honestyProblems, diff, message, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H } from '../bin/watch.mjs';
 
 const T = Date.parse('2026-11-04T23:00:00Z');
 const iso = (minsFromNow) => new Date(T + minsFromNow * 60000).toISOString();
@@ -66,4 +66,20 @@ test('watch: a long message is cut with a count of what was left out', () => {
   const m = message(Array.from({ length: 40 }, (_, i) => `Problem number ${i} with a fairly long description of what went wrong.`));
   assert.ok(m.length <= 1150);
   assert.match(m, /\(and \d+ more; ~\/\.vg-results-watch\/state\.json has them all\)$/);
+});
+
+test('watch: the states a run left out go first on the next run, so the same ones are never skipped every time', () => {
+  assert.deepEqual(runOrder(STATES, null), STATES, 'a first run keeps the usual order');
+  assert.deepEqual(runOrder(STATES, { skipped: [] }), STATES);
+  const next = runOrder(STATES, { skipped: ['OR', 'WA'] });
+  assert.deepEqual(next.slice(0, 2), ['OR', 'WA']);
+  assert.deepEqual([...next].sort(), [...STATES].sort(), 'every state once');
+  assert.deepEqual(runOrder(['TX', 'CO'], { skipped: ['WA', 'CO'] }), ['CO', 'TX'], 'only the states this run checks');
+});
+
+test('watch: a state started at the last moment still finishes, notify step included, inside the 9-minute stop', () => {
+  // The slowest file read (20 s, 15 s, 20 s), honesty check (90 s) and notify step (60 s).
+  assert.ok(START_BY_MS + 55_000 + 90_000 + 60_000 <= STOP_MS);
+  assert.ok(HONESTY_BY_MS + 90_000 + 60_000 <= STOP_MS);
+  assert.ok(START_BY_MS >= 5 * 60_000, 'still most of the run for checking');
 });

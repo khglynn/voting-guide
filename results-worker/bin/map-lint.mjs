@@ -15,6 +15,9 @@ export function lintGuide(m, { bundles = {}, stateBundle = null, write = false }
   const err = (s) => errors.push(s);
   const warn = (s) => warnings.push(s);
   const places = m.guide?.places || [];
+  // Without the state's bundle a statewide item can't be told from a county's own race, so it would pass as one (and
+  // could publish as the whole race): a county map is refused rather than linted blind.
+  if (m.scope !== 'state' && !stateBundle?.items) err(`no state-${m.state} bundle, so the lint can't tell a statewide item from this county's own races`);
   const statewide = new Set((stateBundle?.items || []).map((i) => i.id));
   const guide = new Map();
   const local = new Set();

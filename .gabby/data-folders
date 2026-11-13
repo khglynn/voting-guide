@@ -1,0 +1,9 @@
+# Folders whose files are data, not code, for Gabby's merge gate (its data lane, 2026-11-11).
+# In a PR that also holds code, data files under these folders (.json, .html, .txt, .csv, .xml and
+# the like) are checked by script (a secret scan, JSON that parses) and left out of the AI review's
+# diff, so the code is read whole. A change to this file is code, so the gate reviews it.
+
+# Saved copies of official results feeds that the results fetcher's tests read.
+results-worker/test/fixtures/
+# One map per results source: which feed contest is which race in the guide.
+results-worker/maps/

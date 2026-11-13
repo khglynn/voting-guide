@@ -1,0 +1,86 @@
+[
+  {
+    "raceTitle": "Board of Equalization District 1 - Districtwide Results",
+    "Reporting": "26.3% (1,909 of 7,251) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Nelson Esparza",
+        "Party": "Dem",
+        "Votes": "452,525",
+        "Percent": "57.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Shannon Grove",
+        "Party": "Rep",
+        "Votes": "335,730",
+        "Percent": "42.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization District 2 - Districtwide Results",
+    "Reporting": "8.4% (550 of 6,558) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Sally J. Lieber",
+        "Party": "Dem",
+        "Votes": "89,122",
+        "Percent": "64.9",
+        "incumbent": true
+      },
+      {
+        "Name": "John Pimentel",
+        "Party": "Dem",
+        "Votes": "48,133",
+        "Percent": "35.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization District 3 - Districtwide Results",
+    "Reporting": "0% (0 of 2,853) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Mike Gipson",
+        "Party": "Dem",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Samuel P. Sukaton",
+        "Party": "Dem",
+        "Votes": "0",
+        "Percent": "0.0",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Board of Equalization District 4 - Districtwide Results",
+    "Reporting": "44.9% (3,229 of 7,198) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Tom Umberg",
+        "Party": "Dem",
+        "Votes": "621,571",
+        "Percent": "58.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Denis Bilodeau",
+        "Party": "Rep",
+        "Votes": "439,971",
+        "Percent": "41.4",
+        "incumbent": false
+      }
+    ]
+  }
+]

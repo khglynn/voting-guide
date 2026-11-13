@@ -1,0 +1,92 @@
+[
+  {
+    "raceTitle": "Supreme Court Justice - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Kelli M. Evans",
+        "yesVotes": "4379799",
+        "yesPercent": "71.4",
+        "noVotes": "1751604",
+        "noPercent": "28.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Kelli M. Evans",
+        "yesVotes": "209132",
+        "yesPercent": "83.7",
+        "noVotes": "40588",
+        "noPercent": "16.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Kelli M. Evans",
+        "yesVotes": "1238797",
+        "yesPercent": "75.4",
+        "noVotes": "403424",
+        "noPercent": "24.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Joshua Groban",
+        "yesVotes": "4348123",
+        "yesPercent": "70.7",
+        "noVotes": "1798516",
+        "noPercent": "29.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Joshua Groban",
+        "yesVotes": "206238",
+        "yesPercent": "82.7",
+        "noVotes": "43238",
+        "noPercent": "17.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "supreme-court": [
+      {
+        "Name": "Joshua Groban",
+        "yesVotes": "1211831",
+        "yesPercent": "73.5",
+        "noVotes": "435828",
+        "noPercent": "26.5",
+        "incumbent": false
+      }
+    ]
+  }
+]

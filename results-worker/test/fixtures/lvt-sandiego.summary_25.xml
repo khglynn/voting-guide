@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NewDataSet>
+  <TotalBallotsCast>689666</TotalBallotsCast>
+  <VoterTurnout>33.9%</VoterTurnout>
+  <RegisteredVoters>2034153</RegisteredVoters>
+  <GeneratedDate>2026-11-03T19:57:42.921-08:00</GeneratedDate>
+    <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>1</RaceID>
+    <RaceName>GOVERNOR</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>2</ContestantID>
+    <ContestantName>XAVIER BECERRA</ContestantName>
+    <Party>DEM</Party>
+    <PartyName>DEM</PartyName>
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>393564</MailBallotsVotes>
+    <VoteCenterBallotsVotes>17950</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>411514</TotalVotes>
+    <TimesCounted>689666</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>197</OverVotes>
+    <UnderVotes>5793</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>60.19%</ContestantVotePercent>
+    <ContestantSeqNoExt>2</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>1</RaceID>
+    <RaceName>GOVERNOR</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>1</ContestantID>
+    <ContestantName>STEVE HILTON</ContestantName>
+    <Party>REP</Party>
+    <PartyName>REP</PartyName>
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>258227</MailBallotsVotes>
+    <VoteCenterBallotsVotes>13935</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>272162</TotalVotes>
+    <TimesCounted>689666</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>197</OverVotes>
+    <UnderVotes>5793</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>39.81%</ContestantVotePercent>
+    <ContestantSeqNoExt>1</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>11</RaceID>
+    <RaceName>UNITED STATES REPRESENTATIVE 50TH DISTRICT</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>22</ContestantID>
+    <ContestantName>SCOTT PETERS</ContestantName>
+    <Party>DEM</Party>
+    <PartyName>DEM</PartyName>
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>103335</MailBallotsVotes>
+    <VoteCenterBallotsVotes>4232</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>107567</TotalVotes>
+    <TimesCounted>179327</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>33</OverVotes>
+    <UnderVotes>3156</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>61.07%</ContestantVotePercent>
+    <ContestantSeqNoExt>22</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>11</RaceID>
+    <RaceName>UNITED STATES REPRESENTATIVE 50TH DISTRICT</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>21</ContestantID>
+    <ContestantName>STEVE COHEN</ContestantName>
+    <Party>REP</Party>
+    <PartyName>REP</PartyName>
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>65126</MailBallotsVotes>
+    <VoteCenterBallotsVotes>3445</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>68571</TotalVotes>
+    <TimesCounted>179327</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>33</OverVotes>
+    <UnderVotes>3156</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>38.93%</ContestantVotePercent>
+    <ContestantSeqNoExt>21</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>66</RaceID>
+    <RaceName>SAN DIEGO UNIFIED SCHOOL DISTRICT MEMBER, BOARD OF EDUCATION DISTRICT B</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>164</ContestantID>
+    <ContestantName>SHANA HAZAN</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>27920</MailBallotsVotes>
+    <VoteCenterBallotsVotes>1392</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>29312</TotalVotes>
+    <TimesCounted>44338</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>0</OverVotes>
+    <UnderVotes>15026</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>100.00%</ContestantVotePercent>
+    <ContestantSeqNoExt>164</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>120</RaceID>
+    <RaceName>CITY OF CHULA VISTA MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>361</ContestantID>
+    <ContestantName>JOSE PRECIADO</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>5211</MailBallotsVotes>
+    <VoteCenterBallotsVotes>281</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>5492</TotalVotes>
+    <TimesCounted>11800</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>8</OverVotes>
+    <UnderVotes>1210</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>51.90%</ContestantVotePercent>
+    <ContestantSeqNoExt>361</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>120</RaceID>
+    <RaceName>CITY OF CHULA VISTA MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>362</ContestantID>
+    <ContestantName>ANGELICA S. MARTINEZ</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>4774</MailBallotsVotes>
+    <VoteCenterBallotsVotes>316</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>5090</TotalVotes>
+    <TimesCounted>11800</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>8</OverVotes>
+    <UnderVotes>1210</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>48.10%</ContestantVotePercent>
+    <ContestantSeqNoExt>362</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>131</RaceID>
+    <RaceName>CITY OF ESCONDIDO MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>398</ContestantID>
+    <ContestantName>ANTHONY DIMARTINO</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>4298</MailBallotsVotes>
+    <VoteCenterBallotsVotes>179</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>4477</TotalVotes>
+    <TimesCounted>9571</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>820</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>51.27%</ContestantVotePercent>
+    <ContestantSeqNoExt>398</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>131</RaceID>
+    <RaceName>CITY OF ESCONDIDO MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>399</ContestantID>
+    <ContestantName>JOE GARCIA</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>4061</MailBallotsVotes>
+    <VoteCenterBallotsVotes>195</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>4256</TotalVotes>
+    <TimesCounted>9571</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>820</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>48.73%</ContestantVotePercent>
+    <ContestantSeqNoExt>399</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>144</RaceID>
+    <RaceName>CITY OF OCEANSIDE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>448</ContestantID>
+    <ContestantName>RICHARD ROBINSON</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>3262</MailBallotsVotes>
+    <VoteCenterBallotsVotes>174</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>3436</TotalVotes>
+    <TimesCounted>8845</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>50</OverVotes>
+    <UnderVotes>789</UnderVotes>
+    <ContestantColor>#6c7a89</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>43.00%</ContestantVotePercent>
+    <ContestantSeqNoExt>448</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>144</RaceID>
+    <RaceName>CITY OF OCEANSIDE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>449</ContestantID>
+    <ContestantName>EMILY GONZALES</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>2554</MailBallotsVotes>
+    <VoteCenterBallotsVotes>128</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>2682</TotalVotes>
+    <TimesCounted>8845</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>50</OverVotes>
+    <UnderVotes>789</UnderVotes>
+    <ContestantColor>#F7B21B</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>33.56%</ContestantVotePercent>
+    <ContestantSeqNoExt>449</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>144</RaceID>
+    <RaceName>CITY OF OCEANSIDE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>445</ContestantID>
+    <ContestantName>RICKY JAMES</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>742</MailBallotsVotes>
+    <VoteCenterBallotsVotes>50</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>792</TotalVotes>
+    <TimesCounted>8845</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>50</OverVotes>
+    <UnderVotes>789</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>9.91%</ContestantVotePercent>
+    <ContestantSeqNoExt>445</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>144</RaceID>
+    <RaceName>CITY OF OCEANSIDE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>446</ContestantID>
+    <ContestantName>OSCARIN ORTEGA</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>621</MailBallotsVotes>
+    <VoteCenterBallotsVotes>43</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>664</TotalVotes>
+    <TimesCounted>8845</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>50</OverVotes>
+    <UnderVotes>789</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>8.31%</ContestantVotePercent>
+    <ContestantSeqNoExt>446</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>144</RaceID>
+    <RaceName>CITY OF OCEANSIDE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>447</ContestantID>
+    <ContestantName>PERRY ALVAREZ</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>385</MailBallotsVotes>
+    <VoteCenterBallotsVotes>32</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>417</TotalVotes>
+    <TimesCounted>8845</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>50</OverVotes>
+    <UnderVotes>789</UnderVotes>
+    <ContestantColor>#f5d76e</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>5.22%</ContestantVotePercent>
+    <ContestantSeqNoExt>447</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>148</RaceID>
+    <RaceName>CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>461</ContestantID>
+    <ContestantName>NICOLE CROSBY</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>17462</MailBallotsVotes>
+    <VoteCenterBallotsVotes>696</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>18158</TotalVotes>
+    <TimesCounted>36141</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>20</OverVotes>
+    <UnderVotes>2801</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>54.50%</ContestantVotePercent>
+    <ContestantSeqNoExt>461</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>148</RaceID>
+    <RaceName>CITY OF SAN DIEGO MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>460</ContestantID>
+    <ContestantName>RICHARD BAILEY</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>14405</MailBallotsVotes>
+    <VoteCenterBallotsVotes>757</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>15162</TotalVotes>
+    <TimesCounted>36141</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>20</OverVotes>
+    <UnderVotes>2801</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>45.50%</ContestantVotePercent>
+    <ContestantSeqNoExt>460</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>154</RaceID>
+    <RaceName>CITY OF SAN MARCOS MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>479</ContestantID>
+    <ContestantName>JUSTIN MATSUSHITA</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>2805</MailBallotsVotes>
+    <VoteCenterBallotsVotes>107</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>2912</TotalVotes>
+    <TimesCounted>6279</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>485</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>50.38%</ContestantVotePercent>
+    <ContestantSeqNoExt>479</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>154</RaceID>
+    <RaceName>CITY OF SAN MARCOS MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>478</ContestantID>
+    <ContestantName>LINDSEY SMITH</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>2732</MailBallotsVotes>
+    <VoteCenterBallotsVotes>136</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>2868</TotalVotes>
+    <TimesCounted>6279</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>485</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>49.62%</ContestantVotePercent>
+    <ContestantSeqNoExt>478</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>156</RaceID>
+    <RaceName>CITY OF SANTEE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>484</ContestantID>
+    <ContestantName>RONN HALL</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>1567</MailBallotsVotes>
+    <VoteCenterBallotsVotes>73</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>1640</TotalVotes>
+    <TimesCounted>3078</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>403</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>61.54%</ContestantVotePercent>
+    <ContestantSeqNoExt>484</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>156</RaceID>
+    <RaceName>CITY OF SANTEE MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>485</ContestantID>
+    <ContestantName>EDDIE VANDIVER</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>995</MailBallotsVotes>
+    <VoteCenterBallotsVotes>30</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>1025</TotalVotes>
+    <TimesCounted>3078</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>3</OverVotes>
+    <UnderVotes>403</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>38.46%</ContestantVotePercent>
+    <ContestantSeqNoExt>485</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>157</RaceID>
+    <RaceName>CITY OF SOLANA BEACH MEMBER, CITY COUNCIL DISTRICT NO. 2</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>487</ContestantID>
+    <ContestantName>KRISTI BECKER</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>559</MailBallotsVotes>
+    <VoteCenterBallotsVotes>23</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>582</TotalVotes>
+    <TimesCounted>801</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>0</OverVotes>
+    <UnderVotes>211</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>100.00%</ContestantVotePercent>
+    <ContestantSeqNoExt>487</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>201</RaceID>
+    <RaceName>COUNTY OF SAN DIEGO - MEASURE A - Majority Required To Pass</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>664</ContestantID>
+    <ContestantName>YES</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>307174</MailBallotsVotes>
+    <VoteCenterBallotsVotes>15936</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>323110</TotalVotes>
+    <TimesCounted>689149</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>696</OverVotes>
+    <UnderVotes>51369</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>50.72%</ContestantVotePercent>
+    <ContestantSeqNoExt>664</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>201</RaceID>
+    <RaceName>COUNTY OF SAN DIEGO - MEASURE A - Majority Required To Pass</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>665</ContestantID>
+    <ContestantName>NO</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>300267</MailBallotsVotes>
+    <VoteCenterBallotsVotes>13707</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>313974</TotalVotes>
+    <TimesCounted>689149</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>696</OverVotes>
+    <UnderVotes>51369</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>49.28%</ContestantVotePercent>
+    <ContestantSeqNoExt>665</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>215</RaceID>
+    <RaceName>SAN DIEGO UNIFIED SCHOOL DISTRICT - MEASURE M - 55% Required To Pass</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>652</ContestantID>
+    <ContestantName>BONDS - YES</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>114206</MailBallotsVotes>
+    <VoteCenterBallotsVotes>6723</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>120929</TotalVotes>
+    <TimesCounted>206637</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>90</OverVotes>
+    <UnderVotes>15474</UnderVotes>
+    <ContestantColor>#F27935</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>63.29%</ContestantVotePercent>
+    <ContestantSeqNoExt>652</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+  <Table>
+    <ElectionID>25</ElectionID>
+    <RaceID>215</RaceID>
+    <RaceName>SAN DIEGO UNIFIED SCHOOL DISTRICT - MEASURE M - 55% Required To Pass</RaceName>
+    <VoteFor>1</VoteFor>
+    <NumPositions>1</NumPositions>
+    <NonPartisanRace>N</NonPartisanRace>
+    <ContestWithdrawn>N</ContestWithdrawn>
+    <RunOff>N</RunOff>
+    <MajorPercent>1</MajorPercent>
+    <MinimumVotes>0</MinimumVotes>
+    <ContestantID>653</ContestantID>
+    <ContestantName>BONDS - NO</ContestantName>
+    <Party />
+    <PartyName />
+    <EarlyVotingVotes>0</EarlyVotingVotes>
+    <MailBallotsVotes>67227</MailBallotsVotes>
+    <VoteCenterBallotsVotes>2917</VoteCenterBallotsVotes>
+    <ProvisionalVotes>0</ProvisionalVotes>
+    <Votes>0</Votes>
+    <TotalVotes>70144</TotalVotes>
+    <TimesCounted>206637</TimesCounted>
+    <BlankVoted>0</BlankVoted>
+    <OverVotes>90</OverVotes>
+    <UnderVotes>15474</UnderVotes>
+    <ContestantColor>#CD6FDE</ContestantColor>
+    <ContestantWithdrawn>N</ContestantWithdrawn>
+    <ContestantVotePercent>36.71%</ContestantVotePercent>
+    <ContestantSeqNoExt>653</ContestantSeqNoExt>
+    <ContestantWriteIn>N</ContestantWriteIn>
+    <ContestantWinner>N</ContestantWinner>
+  </Table>
+</NewDataSet>

@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Governor - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Xavier Becerra",
+        "Party": "Dem",
+        "Votes": "4,991,891",
+        "Percent": "63.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Hilton",
+        "Party": "Rep",
+        "Votes": "2,814,373",
+        "Percent": "36.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Governor - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Xavier Becerra",
+        "Party": "Dem",
+        "Votes": "245,342",
+        "Percent": "79.2",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Hilton",
+        "Party": "Rep",
+        "Votes": "64,373",
+        "Percent": "20.8",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Governor - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Xavier Becerra",
+        "Party": "Dem",
+        "Votes": "1,494,575",
+        "Percent": "71.0",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Hilton",
+        "Party": "Rep",
+        "Votes": "610,059",
+        "Percent": "29.0",
+        "incumbent": false
+      }
+    ]
+  }
+]

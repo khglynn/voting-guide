@@ -1,0 +1,198 @@
+[
+  {
+    "raceTitle": "Governor - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Xavier Becerra",
+        "Party": "Dem",
+        "Votes": "1,231,614",
+        "Percent": "59.7",
+        "incumbent": false
+      },
+      {
+        "Name": "Steve Hilton",
+        "Party": "Rep",
+        "Votes": "831,273",
+        "Percent": "40.3",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Lieutenant Governor - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Fiona Ma",
+        "Party": "Dem",
+        "Votes": "1,214,188",
+        "Percent": "59.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Gloria Romero",
+        "Party": "Rep",
+        "Votes": "829,693",
+        "Percent": "40.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Secretary of State - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Shirley N. Weber",
+        "Party": "Dem",
+        "Votes": "1,231,477",
+        "Percent": "60.3",
+        "incumbent": true
+      },
+      {
+        "Name": "Donald P. (Don) Wagner",
+        "Party": "Rep",
+        "Votes": "810,615",
+        "Percent": "39.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Controller - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Malia M. Cohen",
+        "Party": "Dem",
+        "Votes": "1,210,017",
+        "Percent": "59.4",
+        "incumbent": true
+      },
+      {
+        "Name": "Herb W Morgan",
+        "Party": "Rep",
+        "Votes": "826,036",
+        "Percent": "40.6",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Treasurer - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Eleni Kounalakis",
+        "Party": "Dem",
+        "Votes": "1,211,226",
+        "Percent": "59.5",
+        "incumbent": false
+      },
+      {
+        "Name": "Jennifer Hawks",
+        "Party": "Rep",
+        "Votes": "823,664",
+        "Percent": "40.5",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Attorney General - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Rob Bonta",
+        "Party": "Dem",
+        "Votes": "1,210,812",
+        "Percent": "59.3",
+        "incumbent": true
+      },
+      {
+        "Name": "Michael E. Gates",
+        "Party": "Rep",
+        "Votes": "831,872",
+        "Percent": "40.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Insurance Commissioner - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Ben Allen",
+        "Party": "Dem",
+        "Votes": "807,771",
+        "Percent": "47.3",
+        "incumbent": false
+      },
+      {
+        "Name": "Jane Kim",
+        "Party": "Dem",
+        "Votes": "901,249",
+        "Percent": "52.7",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Superintendent of Public Instruction - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "candidates": [
+      {
+        "Name": "Richard Barrera",
+        "Party": "Non",
+        "Votes": "947,738",
+        "Percent": "53.9",
+        "incumbent": false
+      },
+      {
+        "Name": "Sonja Shaw",
+        "Party": "Non",
+        "Votes": "812,103",
+        "Percent": "46.1",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "supreme-court": [
+      {
+        "Name": "Kelli M. Evans",
+        "yesVotes": "1127494",
+        "yesPercent": "68.6",
+        "noVotes": "516618",
+        "noPercent": "31.4"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Supreme Court Justice - Statewide Results",
+    "Reporting": "23.8% (5,688 of 23,860) precincts reporting",
+    "ReportingTime": "November 3, 2026, 8:15 p.m.",
+    "supreme-court": [
+      {
+        "Name": "Joshua Groban",
+        "yesVotes": "1122483",
+        "yesPercent": "68.2",
+        "noVotes": "523565",
+        "noPercent": "31.8"
+      }
+    ]
+  }
+]

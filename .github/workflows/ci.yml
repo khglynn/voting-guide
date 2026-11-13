@@ -86,6 +86,22 @@ jobs:
           node tests/pages.mjs
           node scripts/indexnow.mjs --self-test
 
+  # The results fetcher (results-worker/, a Cloudflare Worker deployed apart from the site): its adapters on saved feed
+  # snapshots, the checks, the outcome rules, the polling ladder and the file builder. No install: the tests need only
+  # node. The map lint (bin/map-check.mjs) reads live feeds and the live site, so it runs in results-worker/deploy.sh,
+  # not here, where it would fail unrelated pull requests whenever a county's feed hiccups.
+  results-worker:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: node --test 'test/*.test.mjs'
+        working-directory: results-worker
+
   # Real browser at 380px: the scripted e2e, then the every-ballot sweep.
   browser:
     needs: [changes]

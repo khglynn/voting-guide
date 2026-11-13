@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Superintendent of Public Instruction - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Richard Barrera",
+        "Party": "Non",
+        "Votes": "3,799,168",
+        "Percent": "57.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Sonja Shaw",
+        "Party": "Non",
+        "Votes": "2,849,458",
+        "Percent": "42.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Superintendent of Public Instruction - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Richard Barrera",
+        "Party": "Non",
+        "Votes": "182,518",
+        "Percent": "69.1",
+        "incumbent": false
+      },
+      {
+        "Name": "Sonja Shaw",
+        "Party": "Non",
+        "Votes": "81,630",
+        "Percent": "30.9",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Superintendent of Public Instruction - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Richard Barrera",
+        "Party": "Non",
+        "Votes": "1,139,230",
+        "Percent": "62.4",
+        "incumbent": false
+      },
+      {
+        "Name": "Sonja Shaw",
+        "Party": "Non",
+        "Votes": "686,517",
+        "Percent": "37.6",
+        "incumbent": false
+      }
+    ]
+  }
+]

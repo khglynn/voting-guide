@@ -1,0 +1,65 @@
+[
+  {
+    "raceTitle": "Lieutenant Governor - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "candidates": [
+      {
+        "Name": "Fiona Ma",
+        "Party": "Dem",
+        "Votes": "4,917,500",
+        "Percent": "63.8",
+        "incumbent": false
+      },
+      {
+        "Name": "Gloria Romero",
+        "Party": "Rep",
+        "Votes": "2,793,353",
+        "Percent": "36.2",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Lieutenant Governor - Alameda County Results",
+    "Reporting": "100% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "candidates": [
+      {
+        "Name": "Fiona Ma",
+        "Party": "Dem",
+        "Votes": "244,604",
+        "Percent": "79.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Gloria Romero",
+        "Party": "Rep",
+        "Votes": "62,781",
+        "Percent": "20.4",
+        "incumbent": false
+      }
+    ]
+  },
+  {
+    "raceTitle": "Lieutenant Governor - Los Angeles County Results",
+    "Reporting": "100% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "candidates": [
+      {
+        "Name": "Fiona Ma",
+        "Party": "Dem",
+        "Votes": "1,463,372",
+        "Percent": "70.6",
+        "incumbent": false
+      },
+      {
+        "Name": "Gloria Romero",
+        "Party": "Rep",
+        "Votes": "608,829",
+        "Percent": "29.4",
+        "incumbent": false
+      }
+    ]
+  }
+]

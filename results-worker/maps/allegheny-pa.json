@@ -1,0 +1,283 @@
+{
+  "id": "allegheny-pa",
+  "state": "PA",
+  "name": "Allegheny County",
+  "county": "Allegheny",
+  "election": {
+    "date": "2026-11-03",
+    "feed_election_id": "127287",
+    "feed_name": "2026 General"
+  },
+  "guide": {
+    "fingerprint": "6bd19731c9681963",
+    "made_from": "vote.kevinhg.com/data, read 2026-11-04T15:31:44.415Z",
+    "places": [
+      "pittsburgh-pa",
+      "state-PA"
+    ],
+    "statewide_fingerprint": "76ad2cef8758ef08"
+  },
+  "feed": {
+    "adapter": "clarity",
+    "base": "https://results.enr.clarityelections.com/PA/Allegheny",
+    "results_url": "https://results.enr.clarityelections.com/PA/Allegheny/127287/",
+    "identity": "named",
+    "identity_note": "Answered our named User-Agent on Nov 3, about 8:50 PM CT (current_ver.txt and electionsettings.json 200).",
+    "election_id_from": "The workbench registry row (capture round 1, Nov 3, commit ae409395) and Clarity's own electionsettings for 127287: \"2026 General\", 11/3/2026.",
+    "tz": "America/New_York"
+  },
+  "polls_close": "2026-11-04T01:00:00Z",
+  "count_closes": "2026-11-11T04:59:00Z",
+  "complete_marker": {
+    "flag": "final_flag",
+    "words": "Clarity's final-upload flag (electiondetails.chkisfinalupload)."
+  },
+  "certify_by": "2026-11-23",
+  "official": null,
+  "contests": [
+    {
+      "feed_id": "0031",
+      "feed_name": "Allegheny Proposed Home Rule Charter Amendment",
+      "item": "allegheny-charter-7c",
+      "kind": "measure",
+      "seats": 1,
+      "choices": {
+        "No": "no",
+        "Yes": "yes"
+      },
+      "reaches": [
+        "Allegheny"
+      ],
+      "item_url": null,
+      "pass_threshold": "simple majority"
+    },
+    {
+      "feed_id": "0004",
+      "feed_name": "Governor and Lieutenant Governor",
+      "item": "pa-governor",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Josh Shapiro": "Josh Shapiro / Austin Davis",
+        "Stacy Garrity": "Stacy Garrity / Jason Richey",
+        "Ken Krawchuk": "Ken Krawchuk / John Thomas",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "statewide": true
+    },
+    {
+      "feed_id": "0009",
+      "feed_name": "Representative in the General Assembly 19th District",
+      "item": "pa-hd-19",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Aerion Andrew Abney": "Aerion Andrew Abney",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0010",
+      "feed_name": "Representative in the General Assembly 20th District",
+      "item": "pa-hd-20",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Emily Kinkead": "Emily Kinkead",
+        "Joseph Aguglia": "Joseph Aguglia",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0011",
+      "feed_name": "Representative in the General Assembly 21st District",
+      "item": "pa-hd-21",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lindsay Powell": "Lindsay Powell",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0012",
+      "feed_name": "Representative in the General Assembly 23rd District",
+      "item": "pa-hd-23",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dan Frankel": "Dan Frankel",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0013",
+      "feed_name": "Representative in the General Assembly 24th District",
+      "item": "pa-hd-24",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "La'Tasha D. Mayes": "La'Tasha D. Mayes",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0015",
+      "feed_name": "Representative in the General Assembly 27th District",
+      "item": "pa-hd-27",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Dan Deasy": "Dan Deasy",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0020",
+      "feed_name": "Representative in the General Assembly 34th District",
+      "item": "pa-hd-34",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Abigail Salisbury": "Abigail Salisbury",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0022",
+      "feed_name": "Representative in the General Assembly 36th District",
+      "item": "pa-hd-36",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Jessica Benham": "Jessica Benham",
+        "Timothy McCune": "Timothy McCune",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0023",
+      "feed_name": "Representative in the General Assembly 38th District",
+      "item": "pa-hd-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "John Inglis": "John Inglis",
+        "Stone Sobieralski": "Stone Sobieralski",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null,
+      "reaches_unconfirmed": true
+    },
+    {
+      "feed_id": "0007",
+      "feed_name": "Senator in the General Assembly 38th District",
+      "item": "pa-sd-38",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Lindsey Williams": "Lindsey Williams",
+        "Thomas West": "Thomas West",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0008",
+      "feed_name": "Senator in the General Assembly 42nd District",
+      "item": "pa-sd-42",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Wayne D. Fontana": "Wayne D. Fontana",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "other counties"
+      ],
+      "item_url": null
+    },
+    {
+      "feed_id": "0005",
+      "feed_name": "Representative in Congress 12th District",
+      "item": "pa-us-house-12",
+      "kind": "plurality",
+      "seats": 1,
+      "choices": {
+        "Summer Lee": "Summer Lee",
+        "James Hayes": "James Hayes",
+        "Write-in": "__other"
+      },
+      "reaches": [
+        "Allegheny",
+        "Westmoreland"
+      ],
+      "item_url": null
+    }
+  ],
+  "unmatched_feed": [],
+  "unmatched_guide": [],
+  "not_here": []
+}

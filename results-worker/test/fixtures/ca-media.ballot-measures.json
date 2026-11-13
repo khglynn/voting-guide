@@ -1,0 +1,632 @@
+[
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Housing Affordability Programs. Legislative Statute.",
+        "Number": "01",
+        "yesVotes": "4506137",
+        "yesPercent": "59.4",
+        "noVotes": "3083201",
+        "noPercent": "40.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Housing Affordability Programs. Legislative Statute.",
+        "Number": "01",
+        "yesVotes": "211346",
+        "yesPercent": "69.9",
+        "noVotes": "91167",
+        "noPercent": "30.1"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Housing Affordability Programs. Legislative Statute.",
+        "Number": "01",
+        "yesVotes": "1327467",
+        "yesPercent": "65.0",
+        "noVotes": "714058",
+        "noPercent": "35.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+        "Number": "02",
+        "yesVotes": "4516870",
+        "yesPercent": "59.6",
+        "noVotes": "3067303",
+        "noPercent": "40.4"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+        "Number": "02",
+        "yesVotes": "216948",
+        "yesPercent": "72.2",
+        "noVotes": "83584",
+        "noPercent": "27.8"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Increases State's Rainy Day Fund. Legislative Constitutional Amendment.",
+        "Number": "02",
+        "yesVotes": "1362803",
+        "yesPercent": "66.8",
+        "noVotes": "678312",
+        "noPercent": "33.2"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Provides Permanent Funding For Schools And Health Care By Extending Existing Tax On High Incomes. Initiative Constitutional Amendment.",
+        "Number": "03",
+        "yesVotes": "4483291",
+        "yesPercent": "58.7",
+        "noVotes": "3159553",
+        "noPercent": "41.3"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Provides Permanent Funding For Schools And Health Care By Extending Existing Tax On High Incomes. Initiative Constitutional Amendment.",
+        "Number": "03",
+        "yesVotes": "217348",
+        "yesPercent": "71.7",
+        "noVotes": "85914",
+        "noPercent": "28.3"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Provides Permanent Funding For Schools And Health Care By Extending Existing Tax On High Incomes. Initiative Constitutional Amendment.",
+        "Number": "03",
+        "yesVotes": "1315934",
+        "yesPercent": "64.0",
+        "noVotes": "740485",
+        "noPercent": "36.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Repeals Prohibition Against Public Funding Of Election Campaigns. Legislative Statute.",
+        "Number": "04",
+        "yesVotes": "3599505",
+        "yesPercent": "48.0",
+        "noVotes": "3891810",
+        "noPercent": "52.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Repeals Prohibition Against Public Funding Of Election Campaigns. Legislative Statute.",
+        "Number": "04",
+        "yesVotes": "174603",
+        "yesPercent": "58.8",
+        "noVotes": "122278",
+        "noPercent": "41.2"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Repeals Prohibition Against Public Funding Of Election Campaigns. Legislative Statute.",
+        "Number": "04",
+        "yesVotes": "1092070",
+        "yesPercent": "54.4",
+        "noVotes": "916094",
+        "noPercent": "45.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Changes Recall Election Process For Statewide Officers. Legislative Constitutional Amendment.",
+        "Number": "05",
+        "yesVotes": "3706564",
+        "yesPercent": "50.3",
+        "noVotes": "3657452",
+        "noPercent": "49.7"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Changes Recall Election Process For Statewide Officers. Legislative Constitutional Amendment.",
+        "Number": "05",
+        "yesVotes": "177707",
+        "yesPercent": "61.0",
+        "noVotes": "113817",
+        "noPercent": "39.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Changes Recall Election Process For Statewide Officers. Legislative Constitutional Amendment.",
+        "Number": "05",
+        "yesVotes": "1117229",
+        "yesPercent": "57.0",
+        "noVotes": "843891",
+        "noPercent": "43.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Creates Loan Program For Middle-Income Buyers Of Qualified New Homes. Initiative Statute.",
+        "Number": "37",
+        "yesVotes": "4605289",
+        "yesPercent": "61.0",
+        "noVotes": "2945686",
+        "noPercent": "39.0"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Creates Loan Program For Middle-Income Buyers Of Qualified New Homes. Initiative Statute.",
+        "Number": "37",
+        "yesVotes": "201004",
+        "yesPercent": "67.5",
+        "noVotes": "96662",
+        "noPercent": "32.5"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Creates Loan Program For Middle-Income Buyers Of Qualified New Homes. Initiative Statute.",
+        "Number": "37",
+        "yesVotes": "1325029",
+        "yesPercent": "65.3",
+        "noVotes": "703506",
+        "noPercent": "34.7"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Immunology Medical Research. Initiative Statute.",
+        "Number": "38",
+        "yesVotes": "4220579",
+        "yesPercent": "55.7",
+        "noVotes": "3353984",
+        "noPercent": "44.3"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Immunology Medical Research. Initiative Statute.",
+        "Number": "38",
+        "yesVotes": "157770",
+        "yesPercent": "52.8",
+        "noVotes": "141312",
+        "noPercent": "47.2"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Authorizes Bonds For Immunology Medical Research. Initiative Statute.",
+        "Number": "38",
+        "yesVotes": "1107231",
+        "yesPercent": "54.4",
+        "noVotes": "929186",
+        "noPercent": "45.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits Citizens From Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+        "Number": "39",
+        "yesVotes": "3186400",
+        "yesPercent": "41.4",
+        "noVotes": "4504016",
+        "noPercent": "58.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits Citizens From Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+        "Number": "39",
+        "yesVotes": "83625",
+        "yesPercent": "27.5",
+        "noVotes": "220399",
+        "noPercent": "72.5"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits Citizens From Voting Unless They Present Government-Issued Identification. Initiative Constitutional Amendment.",
+        "Number": "39",
+        "yesVotes": "735984",
+        "yesPercent": "35.6",
+        "noVotes": "1331827",
+        "noPercent": "64.4"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Imposes One-Time Tax On Certain Taxpayers. Initiative Constitutional Amendment And Statute.",
+        "Number": "40",
+        "yesVotes": "3419418",
+        "yesPercent": "44.4",
+        "noVotes": "4279014",
+        "noPercent": "55.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Imposes One-Time Tax On Certain Taxpayers. Initiative Constitutional Amendment And Statute.",
+        "Number": "40",
+        "yesVotes": "167141",
+        "yesPercent": "54.4",
+        "noVotes": "140141",
+        "noPercent": "45.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Imposes One-Time Tax On Certain Taxpayers. Initiative Constitutional Amendment And Statute.",
+        "Number": "40",
+        "yesVotes": "1059687",
+        "yesPercent": "51.1",
+        "noVotes": "1014478",
+        "noPercent": "48.9"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Taxes That Exclude Revenues From State Spending Limit. Requires Audits For New State Special Taxes. Initiative Constitutional Amendment.",
+        "Number": "41",
+        "yesVotes": "3597678",
+        "yesPercent": "47.6",
+        "noVotes": "3966555",
+        "noPercent": "52.4"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Taxes That Exclude Revenues From State Spending Limit. Requires Audits For New State Special Taxes. Initiative Constitutional Amendment.",
+        "Number": "41",
+        "yesVotes": "108397",
+        "yesPercent": "35.9",
+        "noVotes": "193280",
+        "noPercent": "64.1"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Taxes That Exclude Revenues From State Spending Limit. Requires Audits For New State Special Taxes. Initiative Constitutional Amendment.",
+        "Number": "41",
+        "yesVotes": "851582",
+        "yesPercent": "41.8",
+        "noVotes": "1183821",
+        "noPercent": "58.2"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Personal Property Taxes And Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+        "Number": "42",
+        "yesVotes": "4149174",
+        "yesPercent": "54.3",
+        "noVotes": "3489285",
+        "noPercent": "45.7"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Personal Property Taxes And Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+        "Number": "42",
+        "yesVotes": "129712",
+        "yesPercent": "42.5",
+        "noVotes": "175259",
+        "noPercent": "57.5"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Prohibits New State Personal Property Taxes And Certain Retroactive State Taxes. Initiative Constitutional Amendment.",
+        "Number": "42",
+        "yesVotes": "998474",
+        "yesPercent": "48.5",
+        "noVotes": "1059820",
+        "noPercent": "51.5"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Limits Voters' Ability To Raise Revenues For Local Government Services. Legislative Constitutional Amendment.",
+        "Number": "43",
+        "yesVotes": "3391584",
+        "yesPercent": "45.1",
+        "noVotes": "4130394",
+        "noPercent": "54.9"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Limits Voters' Ability To Raise Revenues For Local Government Services. Legislative Constitutional Amendment.",
+        "Number": "43",
+        "yesVotes": "100979",
+        "yesPercent": "33.6",
+        "noVotes": "199108",
+        "noPercent": "66.4"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Limits Voters' Ability To Raise Revenues For Local Government Services. Legislative Constitutional Amendment.",
+        "Number": "43",
+        "yesVotes": "797436",
+        "yesPercent": "39.4",
+        "noVotes": "1224251",
+        "noPercent": "60.6"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Requires Community Health Clinics Spend 90% Of Revenue On Program Services. Initiative Statute.",
+        "Number": "44",
+        "yesVotes": "1364227",
+        "yesPercent": "18.2",
+        "noVotes": "6147014",
+        "noPercent": "81.8"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Requires Community Health Clinics Spend 90% Of Revenue On Program Services. Initiative Statute.",
+        "Number": "44",
+        "yesVotes": "66229",
+        "yesPercent": "22.1",
+        "noVotes": "233287",
+        "noPercent": "77.9"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Requires Community Health Clinics Spend 90% Of Revenue On Program Services. Initiative Statute.",
+        "Number": "44",
+        "yesVotes": "373543",
+        "yesPercent": "18.5",
+        "noVotes": "1646994",
+        "noPercent": "81.5"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Statewide Results",
+    "Reporting": "99.9% (23,837 of 23,860) precincts reporting",
+    "ReportingTime": "November 4, 2026, 6:27 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Modifies Environmental Review For Certain Projects. Initiative Statute.",
+        "Number": "45",
+        "yesVotes": "3437913",
+        "yesPercent": "45.9",
+        "noVotes": "4049840",
+        "noPercent": "54.1"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Alameda Results",
+    "Reporting": "100.0% (627 of 627) precincts reporting",
+    "ReportingTime": "November 4, 2026, 2:19 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Modifies Environmental Review For Certain Projects. Initiative Statute.",
+        "Number": "45",
+        "yesVotes": "111568",
+        "yesPercent": "37.3",
+        "noVotes": "187823",
+        "noPercent": "62.7"
+      }
+    ]
+  },
+  {
+    "raceTitle": "Ballot Measures - Los Angeles Results",
+    "Reporting": "100.0% (2,853 of 2,853) precincts reporting",
+    "ReportingTime": "November 4, 2026, 3:17 a.m.",
+    "ballot-measures": [
+      {
+        "Name": "Modifies Environmental Review For Certain Projects. Initiative Statute.",
+        "Number": "45",
+        "yesVotes": "839284",
+        "yesPercent": "41.8",
+        "noVotes": "1170627",
+        "noPercent": "58.2"
+      }
+    ]
+  }
+]

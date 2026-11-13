@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>
+	Oregon Secretary of State
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta content="text/html; charset=windows-1252" http-equiv="Content-Type" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=10.0" /><link href='https://orresultswebservices.azureedge.us//Styles/styles.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/stylesmobile.css' rel='stylesheet' /><link href='https://orresultswebservices.azureedge.us//Styles/sidemenu.css' rel='stylesheet' /><script src='https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-3.6.1.min.js'></script><script src='https://orresultswebservices.azureedge.us//Scripts/utils.js'></script> <!--styles are called in .vb file-->
+    <!-- below is the hardcoded version -->
+    <!--<link href="&lt;%= ConfigurationManager.AppSettings(&quot;ServiceRoot&quot;) &amp; &quot;/Styles/styles.css&quot; %>" rel="stylesheet" /><link href="https://orresultswebservices.azureedge.us/Styles/stylesmobile.css" rel="stylesheet" /><link href="https://orresultswebservices.azureedge.us/Styles/sidemenu.css" rel="stylesheet" />
+    <script src="https://orresultswebservices.azureedge.us/Scripts/jquery/jquery-3.6.1.min.js"></script>
+    <script src="https://orresultswebservices.azureedge.us/Scripts/utils.js"></script>-->
+    <!-- Application Insights -->
+    <script type="text/javascript">
+      var appInsights=window.appInsights||function(config){
+        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({ instrumentationKey:"00000000-0000-0000-0000-000000000000" });
+       
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64L2GRDVP4"></script> 
+    <script>  
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        } gtag('js', new Date());
+        gtag('config', 'G-64L2GRDVP4');
+
+    </script>
+
+    <script>
+        var ServiceRoot = 'https://orresultswebservices.azureedge.us/';
+        var Maps = {};
+        var Bound = {};
+        var mapBuilt = [];
+
+        window.onload = function () {
+            var WatchList = getCookie("ORTracked");
+            if (WatchList == undefined)
+                WatchList = "";
+            
+            var checked = WatchList.split("_");
+            for (var i = 0; i < checked.length; i++) {
+                var checkbox = document.getElementById("chk-" + checked[i]);
+                if (checkbox !== null)
+                    checkbox.checked = true;
+            };
+        };
+    </script>
+    
+    <!--Maps-->
+    <link href='https://orresultswebservices.azureedge.us//maps/static/css/or-maps.css' rel="stylesheet" />
+    <script src='https://orresultswebservices.azureedge.us//maps/static/js/underscore-min.js'></script>
+    <!-- Leaflet Label -->
+    <!--[if lte IE 9]>
+        <script src='https://orresultswebservices.azureedge.us//maps/static/js/es5-shim.min.js'></script>
+    <![endif]-->
+    <!--Maps-->
+    <script src='https://orresultswebservices.azureedge.us//Scripts/imageMapResizer.min.js'></script>
+    
+<link id="countyBackground" rel="stylesheet" type="text/css" /><link id="allcountystyles" rel="stylesheet" type="text/css" /></head>
+<body>
+    <form method="post" action="./Default.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ce/gfJjMuydnnAE81HwO03DLOl0cahe2kNqq0xd8SGObEMbtfUJD0v4T8mSdkFlQdmaC2R5mtjQg/nCOKvhYArV3j00b7TkA56ny96DZVOzJUCJ7L9V9kVvA5fMFQQ+GrJvIlgXIKmllB7lNpTANE+mAiKcEHb+TfXcg8Gs/b2uKNZlh9dP8rN6ZxDsNoZOdawvmQH3FEOTuZUSnxJJSIKpIp3oFm5ZOI4yYUI379u02tLW6KNVKr3UjN4i4/jRx" />
+</div>
+        <input type="hidden" name="ctl00$hidElectionType" id="hidElectionType" value="General" />
+        <input type="hidden" name="ctl00$hidElectionDate" id="hidElectionDate" value="11/3/2026" />
+        <input type="hidden" name="ctl00$hidPrecinctsReported" id="hidPrecinctsReported" value="0" />
+        <input type="hidden" name="ctl00$hidPrecinctsNotReported" id="hidPrecinctsNotReported" value="1318" />
+        <input type="hidden" name="ctl00$hidVoterTurnout" id="hidVoterTurnout" value="1210606" />
+        <input type="hidden" name="ctl00$hidVoterTotal" id="hidVoterTotal" value="1900670" />
+        <div id="fader">
+            <h1>Preparing Export...</h1>
+        </div>
+        <div></div>
+        <div class="outside-wrapper">
+            <div class="top-colorbar">
+                
+            </div>
+            <!--End Top Blue Bar-->
+            <div class="top-header">
+                <div id="pnlHeader" class="section group">
+	
+                    <div id="pnlSeal" class="top-sos-seal">
+		
+                        
+                        <a id="lnkSOSimg" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"><img id="imgSOS" class="img-sos" src="https://orresultswebservices.azureedge.us//Images/Small_OregonSOSSecondaryLogo-Color.png" alt="Secretary of State portrait" /></a>
+                    
+	</div>					
+                    <div id="pnlHeaderBox1" class="col top-header-box1">
+		
+                        <h2><a id="lnkSOSName" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank"></a></h2>
+                        <h1><a id="lnkStateSOS" href="https://sos.oregon.gov/Pages/index.aspx" target="_blank">Secretary of State, <span style='font-size: 70%;'>Oregon</span></a></h1>
+                    
+	</div>
+                    <!--End top-header-box1-->
+                    <div id="pnlHeaderBox2" class="col top-header-box2">
+		
+                        
+                        
+                        <h2>
+                            <a id="lnkTracked" href="MyTrackedContests.aspx">My Tracked Contests</a>
+                        </h2>
+                        <h3>
+                            
+    
+
+                        </h3>
+                    
+	</div>
+                    <!--End top-header-box2-->
+                
+</div>
+                <!--End Section Group-->
+            </div>
+            <!--End Top Header-->
+            <div class="header-box-wrapper">
+                <div class="section group">
+                    <div class="col header-box1">
+                        <h3>Unofficial</h3>
+                        <h2>General Election<br/>November 3, 2026</h2>
+                        
+                    </div>
+                    <!--End Header Box 1-->
+                    <div class="col header-box2">
+                        <div class="header-box-content-top">
+                            <h1><a id="lnkVoterTurnout" class="button" href="VoterTurnoutDetails.aspx?map=TURN">Statewide Voter Turnout<span>(details)</span></a></h1>
+                        </div>
+                        <!--End header-box2-content-top-->
+                        <div class="header-box-content-bottom">
+                            
+                            <div class="animate-position desktop">
+                                <div style="height: 100px;"><canvas id="voter-turnout"></canvas><div class="dough-percent"><span class="int">38</span><span class="dec">.91%</span></div></div>
+                            </div>
+                            <!--End Animate Position-->
+                            <div class="animate-position mobile">
+                                <div><canvas id="voter-turnout-mobile"></canvas><div class="dough-percent"><span class="int">38</span><span class="dec">.91%</span></div></div>
+                            </div>
+                            <!--End Animate Position-->
+                        </div>
+                        <!--End header-box-content-bottom-->
+                        <div class="header-box-content-reg"><h1 style="width:100%;font-size:95%"><span class="vt-text">Ballots Counted</span><span class="vt-number">1,210,606</span><br /><span class="vt-text">Active Registered Voters</span><span class="vt-number">3,111,276</span></h1></div>
+                        <div class="next-count">Results last updated: 11/3/2026 | 8:15 PM PT</div>
+                    </div>
+                    <!--End Header Box 2-->
+                    
+                    <div id="chartjs-tooltip"></div>
+                    <!--End Header Box 3-->
+                </div>
+                <!--End Section Group-->
+                
+            </div>
+            <!--End Header Box Wrapper-->
+            <!--Main Content-->
+            
+    <link rel="stylesheet" href='https://orresultswebservices.azureedge.us//Styles/jquery-ui.css' />
+    <script src='https://orresultswebservices.azureedge.us//Scripts/jquery/jquery-ui.js'></script>
+    
+    <div class="outside-wrapper-body">
+        <div class="section group">
+            <div class="col-elec-search-box election-results-box">
+                <div class="elec-results-header">
+                    <h1>Election Results</h1>
+                </div><!--End Elec Results Header-->
+                
+                <div id="MainContent_pnlLinkGridWrapper" class="elec-results-grid-wrapper">
+	<span class="results-gridbox-links"><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=FED&amp;map=CTY"><h2>FEDERAL</h2></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=SWPAR&amp;map=CTY"><h2>STATE</h2></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=SENATE&amp;map=CTY"><h2>STATE SENATOR</h2></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=HOUSE&amp;map=CTY"><h2>STATE REPRESENTATIVE</h2></a></div><div class="col-elec-results-grid elec-results-grid-blank desktop"><a href="https://sos.oregon.gov/" target="_blank" style="background-color: transparent;"><img src="https://orresultswebservices.azureedge.us//Images/or_seal.png" title="Oregon State Seal" alt="Oregon State Seal"></img></a></div><div class="col-elec-results-grid elec-results-grid-blank mobile"><a href="https://sos.oregon.gov/" target="_blank" style="background-color: transparent;"><img src="https://orresultswebservices.azureedge.us//Images/or_seal_mobile.png" title="Oregon State Seal" alt="Oregon State Seal"></img></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=SWNON&amp;map=CTY"><h2>NONPARTISAN</h2></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=LMEA&amp;map=CTY"><h2>LOCAL MEASURE</h2></a></div><div class="col-elec-results-grid elec-results-grid"><a href="/resultsSW.aspx?type=MCR&amp;map=CTY"><h2>SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURES</h2></a></div></span>
+</div>
+            </div><!--End Election Results Box-->
+            <div class="col-elec-search-box search-results-box">
+                <div class="quick-search-box-wrapper">
+                    <div class="section group">
+                        <div class="col quick-search-box1"><h1><label for="txtQuickSearch">Quick Search</label></h1></div><!--End quick-search-box1-->
+                        <div class="col quick-search-box2"></div><!--End quick-search-box2-->
+                        <div class="col quick-search-box3">
+                            
+                            <input name="ctl00$MainContent$txtQuickSearch" type="text" id="txtQuickSearch" class="textboxSmallTransparent" title="Search for Race or Candidate" />
+                            <button class="close-icon" type="reset" onclick="ClearSearch()" value="clear search text">x</button>
+                        </div><!--End quick-search-box3-->
+                    </div><!--End Section Group-->
+                </div><!--End Search Box Wrapper-->
+                
+                <div class="results-county-header">
+                    <h1>Results By County and Local Results</h1>
+                </div><!--End Search Results Header-->
+                <div class="or-map">
+                    <map id="ImgMap0" name="ImgMap0">
+                        <area shape="poly" id="20" href="#" target="_self" alt="Baker County Results Page" coords="391, 91, 383, 113, 370, 117, 380, 123, 374, 149, 384, 149, 403, 130, 421, 135, 448, 144, 476, 86">
+                        <area shape="poly" id="13" href="#" target="_self" alt="Benton County Results Page" coords="47, 151, 57, 118, 86, 117, 89, 122, 80, 127, 82, 148">
+                        <area shape="poly" id="23" href="#" target="_self" alt="Clackamas County Results Page" coords="105, 70, 131, 102, 172, 104, 174, 75, 166, 60, 118, 61">
+                        <area shape="rect" id="36" href="#" target="_self" alt="Clatsop County Results Page" coords="35, 6, 71, 40">
+                        <area shape="poly" id="35" href="#" target="_self" alt="Columbia County Results Page" coords="72, 9, 71, 36, 106, 37, 105, 15, 82, 6">
+                        <area shape="poly" id="04" href="#" target="_self" alt="Coos County Results Page" coords="5, 251, 22, 203, 37, 205, 44, 220, 44, 263, 25, 272, 23, 253">
+                        <area shape="poly" id="12" href="#" target="_self" alt="Crook County Results Page" coords="209, 142, 209, 159, 263, 195, 287, 196, 298, 153, 251, 136, 250, 129, 227, 127">
+                        <area shape="poly" id="02" href="#" target="_self" alt="Curry County Results Page" coords="5, 252, 2, 260, 13, 282, 12, 309, 24, 322, 44, 322, 44, 299, 31, 294, 47, 266, 43, 265, 24, 274, 22, 254">
+                        <area shape="poly" id="10" href="#" target="_self" alt="Deschutes County Results Page" coords="158, 199, 155, 182, 168, 167, 166, 141, 211, 140, 211, 159, 263, 193, 285, 196, 285, 200">
+                        <area shape="poly" id="07" href="#" target="_self" alt="Douglas County Results Page" coords="22, 204, 27, 183, 36, 182, 49, 177, 68, 189, 85, 190, 87, 209, 114, 217, 147, 217, 156, 227, 148, 241, 138, 243, 83, 271, 47, 263, 45, 213, 40, 203">
+                        <area shape="poly" id="30" href="#" target="_self" alt="Gilliam County Results Page" coords="238, 40, 251, 53, 243, 73, 251, 88, 290, 90, 275, 71, 275, 34">
+                        <area shape="poly" id="16" href="#" target="_self" alt="Grant County Results Page" coords="298, 177, 351, 174, 353, 170, 384, 170, 382, 152, 369, 153, 378, 125, 368, 117, 381, 110, 386, 99, 369, 96, 301, 94">
+                        <area shape="poly" id="08" href="#" target="_self" alt="Harney County Results Page" coords="317, 323, 388, 322, 389, 169, 297, 176, 288, 200, 283, 268, 316, 268">
+                        <area shape="poly" id="25" href="#" target="_self" alt="Hood River County Results Page" coords="157, 40, 188, 41, 186, 72, 177, 74">
+                        <area shape="poly" id="03" href="#" target="_self" alt="Jackson County Results Page" coords="78, 323, 137, 321, 139, 246, 80, 272">
+                        <area shape="poly" id="15" href="#" target="_self" alt="Jefferson County Results Page" coords="165, 141, 173, 106, 252, 107, 249, 127, 227, 127, 209, 140">
+                        <area shape="poly" id="01" href="#" target="_self" alt="Josephine County Results Page" coords="43, 321, 78, 322, 78, 271, 50, 265, 31, 294, 44, 300">
+                        <area shape="poly" id="05" href="#" target="_self" alt="Klamath County Results Page" coords="138, 324, 222, 321, 222, 269, 198, 265, 194, 202, 157, 202, 148, 204, 148, 214, 156, 226, 150, 242, 140, 245">
+                        <area shape="poly" id="06" href="#" target="_self" alt="Lake County Results Page" coords="195, 203, 197, 265, 222, 268, 225, 322, 317, 322, 319, 267, 286, 265, 283, 202">
+                        <area shape="poly" id="09" href="#" target="_self" alt="Lane County Results Page" coords="27, 184, 30, 152, 81, 150, 84, 157, 166, 155, 166, 166, 155, 182, 156, 199, 145, 207, 145, 213, 114, 214, 89, 207, 89, 190, 68, 187, 49, 176">
+                        <area shape="poly" id="17" href="#" target="_self" alt="Lincoln County Results Page" coords="30, 152, 46, 149, 54, 119, 47, 93, 34, 94">
+                        <area shape="poly" id="14" href="#" target="_self" alt="Linn County Results Page" coords="78, 130, 86, 157, 165, 153, 167, 119, 114, 111">
+                        <area shape="poly" id="11" href="#" target="_self" alt="Malheur County Results Page" coords="389, 322, 460, 321, 458, 185, 467, 156, 416, 135, 403, 135, 388, 152">
+                        <area shape="poly" id="21" href="#" target="_self" alt="Marion County Results Page" coords="105, 74, 126, 104, 171, 108, 167, 118, 124, 112, 103, 114, 98, 119, 89, 115, 89, 94, 95, 79">
+                        <area shape="poly" id="32" href="#" target="_self" alt="Morrow County Results Page" coords="275, 34, 310, 23, 312, 45, 325, 55, 328, 93, 294, 94, 278, 72">
+                        <area shape="poly" id="26" href="#" target="_self" alt="Multnomah County Results Page" coords="107, 39, 101, 40, 99, 44, 110, 61, 165, 58, 158, 47">
+                        <area shape="rect" id="19" href="#" target="_self" alt="Polk County Results Page" coords="51, 94, 88, 118">
+                        <area shape="poly" id="27" href="#" target="_self" alt="Sherman County Results Page" coords="222, 46, 225, 56, 217, 70, 218, 77, 230, 80, 230, 88, 247, 89, 242, 72, 251, 54, 238, 41">
+                        <area shape="poly" id="29" href="#" target="_self" alt="Tillamook County Results Page" coords="33, 93, 48, 93, 49, 81, 67, 78, 67, 40, 39, 40">
+                        <area shape="poly" id="34" href="#" target="_self" alt="Umatilla County Results Page" coords="312, 24, 400, 16, 398, 32, 389, 57, 357, 67, 367, 94, 328, 94, 329, 55, 314, 45">
+                        <area shape="poly" id="31" href="#" target="_self" alt="Union County Results Page" coords="357, 69, 370, 94, 388, 97, 391, 85, 436, 86, 413, 26, 403, 27, 390, 60">
+                        <area shape="poly" id="33" href="#" target="_self" alt="Wallowa County Results Page" coords="403, 16, 402, 25, 415, 25, 434, 81, 441, 80, 444, 85, 476, 86, 494, 45, 468, 17">
+                        <area shape="poly" id="24" href="#" target="_self" alt="Wasco County Results Page" coords="191, 43, 189, 73, 178, 75, 170, 98, 172, 105, 248, 107, 246, 90, 232, 90, 212, 72, 224, 55, 220, 46">
+                        <area shape="poly" id="28" href="#" target="_self" alt="Washington County Results Page" coords="65, 63, 69, 38, 98, 39, 112, 62, 103, 70, 85, 62">
+                        <area shape="poly" id="18" href="#" target="_self" alt="Wheeler County Results Page" coords="247, 92, 254, 137, 299, 150, 297, 99, 288, 90">
+                        <area shape="poly" id="22" href="#" target="_self" alt="Yamhill County Results Page" coords="92, 91, 50, 92, 51, 81, 67, 78, 68, 64, 86, 64, 104, 72, 93, 79">
+                    </map>
+                    <img alt="State of Oregon County Results Link Map" style="width: 99.5%" src='https://orresultswebservices.azureedge.us//Images/oregon-map.png' usemap="#ImgMap0" />
+                </div>
+            </div><!--End Search Results Box-->
+        </div><!--End Section Group-->
+    </div>
+    <!--Quick search auto complete code-->
+    <script>
+        function ClearSearch() {
+            document.getElementById("txtQuickSearch").value = "";
+        }
+    </script>
+    <script>
+        var singleContest, singleContestID;
+        var eid;
+        $(document).ready(function () {
+            $("#txtQuickSearch").click(function () {
+                var results;
+                var electionType = document.getElementById("hidElectionType").value;
+                eid = getUrlVars()["eid"];
+                if (eid !== undefined && !isNaN(eid) && eid != "") {
+                    results = getValues(ServiceRoot + "ResultsAjax.svc/GetCandidates?ElectionType=" + electionType + "&ElectionID=" + eid);
+                    eid = "&eid=" + eid;
+                } else {
+                    results = getValues(ServiceRoot + "ResultsAjax.svc/GetCandidates?ElectionType=" + electionType + "&ElectionID=0");
+                    eid = "";
+                }
+
+                var objListTest = results["d"];
+
+                $("#txtQuickSearch").autocomplete({
+                    source: objListTest,
+                    focus: function (event, ui) {
+                        $("#txtQuickSearch").val(ui.item.desc + ' - ' + ui.item.name);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#txtQuickSearch").val(ui.item.desc + ' - ' + ui.item.name);
+                        window.location.assign("SearchResults.aspx?ID=" + ui.item.ID + eid);
+                        return false;
+                    },
+                    response: function (event, ui) {
+                        if (ui.content.length == 1) {
+                            singleContest = true;
+                            singleContestID = ui.content[0].ID;
+                        }
+                        return false;
+                    }
+                })
+                .data("ui-autocomplete")._renderItem = function (ul, item) {
+                    return $("<li>")
+                        .append("<a href='SearchResults.aspx?ID=" + item.ID + eid + "'><span class='" + item.Party + "'>" + item.name + "</span><br><span class='search-description'>" + item.desc + "</span></a>")
+                        .appendTo(ul);
+                };
+            });
+
+            $('#txtQuickSearch').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    if (singleContest) {                        
+                        window.location.assign("SearchResults.aspx?ID=" + singleContestID + eid);
+                        return false;
+                    }
+                }
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var countymap = $('#ImgMap0')
+            countymap.imageMapResize();
+            var electionID = getUrlVars()["eid"];
+            var mode = getUrlVars()["mode"];
+
+            $.each(countymap[0].areas, function (key, county) {
+                county.href = "/ResultsSW.aspx?type=CTYALL&cty=" + county.id + "&map=CTY";
+                if (electionID !== undefined && !isNaN(electionID) && electionID != "") {
+                    county.href += "&eid=" + electionID;
+                } else if (mode !== undefined && mode != "") {
+                    county.href += "&mode=" + mode;
+                }
+            });
+        });
+    </script>
+
+            
+            <input type="button" class="button" value="Election Resources" onclick="Show_Div(Div_1)" />
+            <div id="Div_1" style="display: none;" class="slidingDiv">
+                <ul style="margin: 15px 0 15px 16%; padding: 0;">
+                    <li>
+                        <a id="lnkCountyList" href="ResultsList.aspx">Results By County</a>
+                    </li>
+                    <li>
+                        <a id="lnkERVoterTurnout" href="VoterTurnoutDetails.aspx">Voter Turnout</a>
+                    </li>
+                    
+                    <li>
+                        <a id="lnkResultsExport" href="ResultsExport.aspx">Statewide and County Exports</a>
+                    </li>
+                    <li>
+                        <a id="lnkFAQResources" href="ElectionTerminology.aspx">Election Terminology</a>
+                    </li>
+                </ul>
+                <div class="disclaimer">
+                    Write-in results are not reported on this site. Unofficial write-in results for statewide or state district offices may be obtained from <a href="mailto:Elections.SOS@sos.oregon.gov" style="font-weight: bold;">Elections.SOS@sos.oregon.gov</a> after election day as counties finalize write-in totals. Unofficial write-in results for county and precinct offices may be obtained from the county election office.
+                </div>
+                <div class="disclaimer">
+                    Election Night Results Reporting is a free service provided by the Office of Oregon Secretary of State, in cooperation with the Oregon Association of County Clerks.
+                </div>
+                <div class="contact-info desktop">
+                    <span class="left" style="font-weight: bold;">Elections Division</span><span class="right">Public Service Building Suite 126, 255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518</span><span>FAX 503-373-7414</span><span>TTY 800-735-2900</span><span class="right" style="font-weight: bold"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+                <div class="contact-info mobile">
+                    <span class="left">Elections Division</span>
+                    <br />
+                    <span class="right">Public Service Building Suite 501,</span>
+                    <br />
+                    <span>255 Capitol St. NE, Salem OR, 97310</span>
+                    <br />
+                    <span class="left">503-986-1518 | FAX 503-373-7414</span>
+                    <br />
+                    <span>TTY 800-735-2900</span>
+                    <br />
+                    <span class="right"><a href="mailto:Elections.SOS@sos.oregon.gov" target="_top">Elections.SOS@sos.oregon.gov</a></span>
+                </div>
+            </div>
+            <div class="bottom-colorbar"></div>
+        </div>
+        <!--End Bottom Bluebar-->
+        <div class="outside-wrapper footer"></div>
+        <!--End Outside Wrapper-->
+        <nav class="navMenu">
+            <a href="" id="menuToggle" title="show menu"><span class="navClosed"><em>Menu</em></span></a><h1>Election Results</h1><a href="/Default.aspx">Home</a><a href="/resultsSW.aspx?type=FED&map=CTY" title="FEDERAL">Federal</a><a href="/resultsSW.aspx?type=SWPAR&map=CTY" title="STATE">State</a><a href="/resultsSW.aspx?type=SENATE&map=CTY" title="STATE SENATOR">State Senator</a><a href="/resultsSW.aspx?type=HOUSE&map=CTY" title="STATE REPRESENTATIVE">State Representative</a><a href="/resultsSW.aspx?type=SWNON&map=CTY" title="NONPARTISAN">Nonpartisan</a><a href="/resultsSW.aspx?type=LMEA&map=CTY" title="LOCAL MEASURE">Local Measure</a><a href="/resultsSW.aspx?type=MCR&map=CTY" title="SHARED COUNTY, CITY AND DISTRICT RACES AND MEASURES">Shared County, City And District Races And Measures</a><a href="/ResultsList.aspx">County Results</a><a href="/ElectionTerminology.aspx">FAQ</a>
+        </nav>
+        
+    </form>
+    <div id="dhtmltooltip"></div>
+    <link href='https://orresultswebservices.azureedge.us//Styles/Roboto.css' rel="stylesheet" />
+    <link href='https://orresultswebservices.azureedge.us//Images/favicon.ico' rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <script src='https://orresultswebservices.azureedge.us//Scripts/Chart.min.js'></script>
+    
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $('#menuToggle').click(function (e) {
+                    var $parent = $(this).parent('nav');
+                    $parent.toggleClass('open');
+                    var navState = $parent.hasClass('open') ? 'hide' : 'show';
+                    $(this).attr('title', navState + ' navigation');
+                    setTimeout(function () {
+                        //console.log('timeout set');
+                        $('#menuToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }, 200);
+                    var $twitter = $('#twitterToggle').parent('nav');
+                    if ($twitter.hasClass('open')) {
+                        $twitter.toggleClass('open');
+                        $('#twitterToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }
+                    e.preventDefault();
+                });
+                $('#twitterToggle').click(function (e) {
+                    var $parent = $(this).parent('nav');
+                    $parent.toggleClass('open');
+                    var navState = $parent.hasClass('open') ? 'hide' : 'show';
+                    $(this).attr('title', navState + ' navigation');
+                    $('#twitterToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    setTimeout(function () {
+                        //console.log('timeout set');
+                    }, 200);
+                    var $menu = $('#menuToggle').parent('nav');
+                    if ($menu.hasClass('open')) {
+                        $menu.toggleClass('open');
+                        $('#menuToggle > span').toggleClass('navClosed').toggleClass('navOpen');
+                    }
+                    e.preventDefault();
+                });
+            });
+        }(jQuery));
+        //@ sourceURL=pen.js
+    </script>
+    <script src='https://orresultswebservices.azureedge.us//Scripts/HeaderChart.js'></script>
+    
+    
+</body>
+<script type="text/javascript">
+
+    var offsetxpoint = -60 //Customize x offset of tooltip
+    var offsetypoint = 20 //Customize y offset of tooltip
+    var ie = document.all
+    var ns6 = document.getElementById && !document.all
+    var enabletip = false
+    if (ie || ns6)
+        var tipobj = document.all ? document.all["dhtmltooltip"] : document.getElementById ? document.getElementById("dhtmltooltip") : ""
+
+    function ietruebody() {
+        return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+    }
+
+    function ddrivetip(thetext, thecolor, thewidth) {
+        if (ns6 || ie) {
+            if (typeof thewidth != "undefined") tipobj.style.width = thewidth + "px"
+            if (typeof thecolor != "undefined" && thecolor != "") tipobj.style.backgroundColor = thecolor
+            tipobj.innerHTML = thetext
+            enabletip = true
+            return false
+        }
+    }
+
+    function positiontip(e) {
+        if (enabletip) {
+            var curX = (ns6) ? e.pageX : event.clientX + ietruebody().scrollLeft;
+            var curY = (ns6) ? e.pageY : event.clientY + ietruebody().scrollTop;
+            //Find out how close the mouse is to the corner of the window
+            var rightedge = ie && !window.opera ? ietruebody().clientWidth - event.clientX - offsetxpoint : window.innerWidth - e.clientX - offsetxpoint - 20
+            var bottomedge = ie && !window.opera ? ietruebody().clientHeight - event.clientY - offsetypoint : window.innerHeight - e.clientY - offsetypoint - 20
+
+            var leftedge = (offsetxpoint < 0) ? offsetxpoint * (-1) : -1000
+
+            //if the horizontal distance isn't enough to accomodate the width of the context menu
+            if (rightedge < tipobj.offsetWidth)
+            //move the horizontal position of the menu to the left by it's width
+                tipobj.style.left = ie ? ietruebody().scrollLeft + event.clientX - tipobj.offsetWidth + "px" : window.pageXOffset + e.clientX - tipobj.offsetWidth + "px"
+            else if (curX < leftedge)
+                tipobj.style.left = "5px"
+            else
+            //position the horizontal position of the menu where the mouse is positioned
+                tipobj.style.left = curX + offsetxpoint + "px"
+
+            //same concept with the vertical position
+            if (bottomedge < tipobj.offsetHeight)
+                tipobj.style.top = ie ? ietruebody().scrollTop + event.clientY - tipobj.offsetHeight - offsetypoint + "px" : window.pageYOffset + e.clientY - tipobj.offsetHeight - offsetypoint + "px"
+            else
+                tipobj.style.top = curY + offsetypoint + "px"
+            tipobj.style.visibility = "visible"
+        }
+    }
+
+    function hideddrivetip() {
+        if (ns6 || ie) {
+            enabletip = false
+            tipobj.style.visibility = "hidden"
+            tipobj.style.left = "-1000px"
+            tipobj.style.backgroundColor = ''
+            tipobj.style.width = ''
+        }
+    }
+
+    document.onmousemove = positiontip
+ 
+</script>
+</html>

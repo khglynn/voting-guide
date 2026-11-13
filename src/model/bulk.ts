@@ -11,10 +11,10 @@
    your own picks would vote for too many), and every fill is checked against the seat count
    before it lands. Undo puts back only what the batch changed, so a pick you make while the
    Undo toast is up survives it. */
-import type { Item } from '../types';
+import type { Endorser, Item } from '../types';
 import { S } from '../state';
 import { entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, isPartisan, isMaybe } from '../ballot';
-import { lineup, weighedIn, FILL_SOURCES } from './tally';
+import { lineup, weighedIn, agreed, FILL_SOURCES } from './tally';
 import { judgeBatch } from './judges';
 
 export interface Fill { id: string; set: Record<string, string>; single: boolean; why: string }
@@ -40,16 +40,18 @@ function visibleOpen(): Item[] {
   return out;
 }
 
-export function planAgree(): Plan {
+/* `sources`: plan for that set instead of the ballot's own (the results card's "Make these my picks" says how many it
+   fills before it changes anything). */
+export function planAgree(sources?: Endorser[]): Plan {
   const fills: Fill[] = [];
   let skippedPartial = 0;
   for (const it of visibleOpen()) {
     if (it.kind === 'contest' && (isRCV(it) || isMultiJudge(it))) continue;
-    const l = lineup(it);
+    const l = lineup(it, sources);
     const w = weighedIn(l);
-    if (!w.length || l.groups.length !== 1 || l.both.length) continue;
-    const g = l.groups[0];
-    if (!g.choices.length) continue;
+    const ag = agreed(l);
+    if (!Array.isArray(ag)) continue;
+    const g = { choices: ag };
     const why = `${FILL_SOURCES}${w.map((e) => e.short).join(', ')}`;
     if (it.kind === 'measure' || it.is_retention) {
       if (g.choices.length !== 1 || !['YES', 'NO'].includes(g.choices[0])) continue;

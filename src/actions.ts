@@ -5,7 +5,7 @@ import type { Contest, Item } from './types';
 import { S, persist, emptyBallotState, type View, type Shelf, type ShelfKind } from './state';
 import { status, sectionOf, rankMax, ordinal, chosenIds, entriesBySection, pageWalk, sameSeat, OTH_KEY, type SectionKey } from './ballot';
 import { toast, hideToast, copyText, announce, hash, plural } from './util';
-import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $ } from './render';
+import { render, renderRow, renderSection, renderSummaries, renderOff, renderLens, flushLens, markBehind, renderBallot, renderAddr, rowEl, scrollRowIntoView, rowTop, holdRow, opensLow, anchored, $, withFocusKept } from './render';
 import { growOpen, inkRow, followFold, glideTo, land, stopGlide, shrinkAway, collapseRow, finishCollapse, glide } from './motion';
 import { openBallot, openChosen, go, openReader, runAddress, reopenAddr, repaintNear, useMatch, toDoor, showBallot, rechoose, openSaved, fillWhy, leaveBallot, viewed, switchOnNow, watchAdds } from './app';
 import { judgeBatch } from './model/judges';
@@ -24,6 +24,10 @@ import { messages, shareData, GUIDE_URL, SHARE_TITLE } from './views/pass';
 import { nextUp, sectionTally, sectionFolded, hiddenByOnly, qId } from './views/ledger';
 import { sourceListHTML, matchWords } from './views/lens';
 import { whatIfBody, wiMatchWords } from './views/planstrip';
+import { refreshResults, repaintResults } from './results';
+import { figureHTML, figHidden, setFigHidden } from './views/figure';
+import { hideDecidedNow, cmpSel, anyPick, anyChoice } from './model/results';
+import { chipMembers } from './model/lens';
 
 export type Act = (d: DOMStringMap, el: HTMLElement) => void | Promise<void>;
 export const A: Record<string, Act> = {};
@@ -241,7 +245,7 @@ A.jump = (d, el) => {
   const wasFolded = !!$(`#sec-${sec}.folded`);
   S.ui.folded.delete(sec);
   S.ui.unfolded.add(sec);
-  if (S.b.hideDecided && t.total > 0 && t.done === t.total) S.ui.reveal.add(sec);
+  if (hideDecidedNow() && t.total > 0 && t.done === t.total) S.ui.reveal.add(sec);
   if (wasFolded || !$(`#sec-${sec}`)) renderSection(sec);
   glideTo($(`#sec-${sec}`), 0, () => land($(`#sec-${sec}`)));
   focusFk(`sec-${sec}`);
@@ -265,7 +269,7 @@ A.sec = (d, btn) => {
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   // Under "Hide races I've decided" a folded band opens as its count does: with its decided rows.
-  if (folded && S.b.hideDecided) { A['sec-count'](d, btn); focusFk(`sec-${s}`); return; }
+  if (folded && hideDecidedNow()) { A['sec-count'](d, btn); focusFk(`sec-${s}`); return; }
   // A section still being decided doesn't fold on a stray tap; the band takes you to its next
   // undecided row instead.
   if (!folded && el && el.querySelector('.row[data-undecided], .row[data-q]')) {
@@ -291,7 +295,7 @@ A['sec-count'] = (d) => {
   const el = $(`#sec-${s}`);
   const folded = !!el && el.classList.contains('folded');
   const entries = entriesBySection().get(s) || [];
-  if (S.b.hideDecided && sectionTally(entries).total > 0) {
+  if (hideDecidedNow() && sectionTally(entries).total > 0) {
     if (folded) { S.ui.folded.delete(s); S.ui.reveal.add(s); }
     else if (S.ui.reveal.has(s)) S.ui.reveal.delete(s);
     else S.ui.reveal.add(s);
@@ -712,7 +716,7 @@ function closePicks(): void {
   S.ui.setupFill = false;
   render(['sheet']);
   const n = plan && plan.fills.length ? applyFills(plan.fills) : 0;
-  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; }
+  if (n) { S.ui.bulk = String(n); S.ui.bulkWhy = plan ? fillWhy(plan) : null; S.ui.row = null; S.ui.keep = null; S.ui.takeWas = null; }
   if (n || only !== S.b.hideDecided) dropBeat();
   const onlyChanged = only !== S.b.hideDecided;
   if (onlyChanged) { S.b.hideDecided = only; S.ui.keep = null; }
@@ -942,6 +946,7 @@ const setupPlan = (plan: SetupPlan): Plan => {
   return { fills: plan.fills, single: plan.agree.single, skippedTwo: pp.skippedTwo, skippedRanked: pp.skippedRanked, skippedPartial: pp.skippedPartial + plan.agree.skippedPartial };
 };
 A.bulk = (d) => {
+  S.ui.takeWas = null; // a newer batch: its Undo is about its own picks only
   const k = d.k!;
   let plan: Plan;
   if (k === 'agree') plan = planAgree();
@@ -967,6 +972,8 @@ A.bulk = (d) => {
 A['undo-bulk'] = () => {
   if (!undoFills()) return;
   const fromLine = (document.activeElement as HTMLElement | null)?.dataset?.fk === 'filled-undo';
+  // Undoing "Make these my picks" also puts the sources and party back as they were.
+  if (S.ui.takeWas) { S.b.sources = S.ui.takeWas.sources; S.b.party = S.ui.takeWas.party; S.ui.takeWas = null; }
   S.ui.bulk = null;
   dropBeat();
   hideToast();
@@ -1016,6 +1023,78 @@ A['whatif-sit'] = (d) => {
   // page now goes; the glide and the mark are the motion.
   const el = $(`[data-fk="${CSS.escape(k)}"]`);
   if (el) { glideTo(el, 12, () => land(el.closest('li') || el)); el.focus({ preventScroll: true }); }
+};
+/* ---------- results (Nov 3, results Phase 1) ---------- */
+/* Refresh, in the strip: read the results file now (src/results.ts). */
+A['results-refresh'] = () => { void refreshResults(); };
+/* The figure's "Hide summary" / "Show summary", remembered on this device (views/figure.ts, vg-tally). */
+A['fig-hide'] = () => {
+  setFigHidden(!figHidden());
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+  focusFk('vz-hide');
+};
+/* "Compare with" (DESIGN-OVERNIGHT-2 section 1): one choice at a time, for this visit only; tapping the chosen one
+   clears it. "A party" opens its parties inline. The card repaints alone, so an address being typed stays. */
+const repaintFig = (): void => glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+A.cmp = (d) => {
+  const k = d.k!;
+  const sel = cmpSel();
+  const cur = !sel ? null : sel.kind === 'mine' ? 'mine' : sel.kind === 'group' ? sel.key : 'party';
+  if (k === 'party') {
+    if (cur === 'party') { S.ui.cmp = anyPick() ? null : undefined; S.ui.open.delete('cmp-party'); } else if (S.ui.open.has('cmp-party')) S.ui.open.delete('cmp-party'); else S.ui.open.add('cmp-party');
+  } else {
+    S.ui.open.delete('cmp-party');
+    // Cleared on a ballot with no picks of your own: back to the default, so your first pick shows as yours.
+    S.ui.cmp = cur === k ? (anyPick() ? null : undefined) : k;
+  }
+  repaintFig();
+  focusFk(`cmp-${k}`);
+};
+A['cmp-party'] = (d) => {
+  S.ui.cmp = `party:${d.p}`;
+  S.ui.open.delete('cmp-party');
+  repaintFig();
+  focusFk('cmp-party');
+};
+/* "Make these my picks", only on a ballot with no picks of your own: today's fill with the chosen group (its sources
+   become yours, then where they agree) or the party (its candidates), with the usual Undo. */
+A['cmp-take'] = () => {
+  const sel = cmpSel();
+  if (!sel || sel.kind === 'mine' || anyChoice()) return;
+  const b = B();
+  // What the lens was, so this fill's Undo puts it back exactly (PR #139 review); nothing filled, nothing changes.
+  const was = { sources: S.b.sources ? [...S.b.sources] : null, party: S.b.party };
+  let sp: SetupPlan;
+  if (sel.kind === 'group') { setSources(b, chipMembers(b, sel.key).map((e) => e.id)); const a = planAgree(); sp = { party: null, agree: a, fills: a.fills }; } else { setParty(b, sel.party); const p = planParty(sel.party); sp = { party: p, agree: emptyPlan(), fills: p.fills }; }
+  const n = sp.fills.length ? applyFills(sp.fills) : 0;
+  if (!n) { S.b.sources = was.sources; S.b.party = was.party; persist(); return; }
+  S.ui.cmp = undefined;
+  S.ui.takeWas = was;
+  S.ui.bulk = String(n); S.ui.bulkWhy = fillWhy(sp); S.ui.row = null; S.ui.keep = null;
+  persist();
+  // The rows and the card repaint; with the address form open, row by row, and the head (the endorsement line, the
+  // "filled in" line with its Undo) through renderAddr, so what's typed there stays (Codex).
+  repaintResults();
+  if (S.ui.addrOpen) renderAddr();
+  focusFk('vz-h');
+  if (n) fillToast(fillHead(n, sp), setupPlan(sp));
+};
+/* The bar's results line: the menu, at where these numbers come from. */
+A['res-src'] = (_d, el) => {
+  A.toc({}, el);
+  const t = document.querySelector<HTMLElement>('.sheet-panel.toc #toc-src');
+  if (t) { t.scrollIntoView({ block: 'start' }); t.focus({ preventScroll: true }); }
+};
+/* A figure row's chevron: its races, each a link to its row, opened under it. */
+/* "Where these numbers come from" (overnight): the figure repaints alone, so an address being typed above stays (Codex). */
+A['fig-src'] = () => {
+  S.ui.open.has('vz-src') ? S.ui.open.delete('vz-src') : S.ui.open.add('vz-src');
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
+};
+A['fig-row'] = (d) => {
+  const k = `vz-${d.sec}`;
+  S.ui.open.has(k) ? S.ui.open.delete(k) : S.ui.open.add(k);
+  glide(['#vz'], () => { const el = $('#vz'); if (el) withFocusKept(() => { el.outerHTML = figureHTML(); }); });
 };
 A.open = (d, el) => {
   const k = d.k!;

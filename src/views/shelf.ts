@@ -17,7 +17,7 @@ import { ballotCoverage, askedWord, type Ask } from '../model/coverage';
 import { esc, fmtDate } from '../util';
 import { afterPolls } from '../model/plan';
 import { lastErrors, lastErrorId } from '../errors';
-import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL, UNDERWAY_SRC, shelfAttrs } from './common';
+import { FORM, formURL, ext, isOpen, kevinLink, reportWhere, BUY_ME_A_COFFEE_URL, UNDERWAY_SRC, shelfAttrs, afterClose } from './common';
 
 export const SHELF_TITLE: Record<ShelfKind, string> = {
   cities: 'Cities in the guide', how: 'How this guide works', report: 'Report a problem', city: 'Request a city', support: 'Support the guide', source: 'Add a source',
@@ -35,6 +35,9 @@ const CITY: Field[] = [
   { k: 'zip', label: 'ZIP', type: 'zip', optional: true, max: 5 },
   { k: 'reach', label: 'Want to hear when it’s up?', type: 'text', optional: true, hint: 'An email or phone, only if you’d like a note.', auto: 'off', max: 300 },
 ];
+/* Request a city's opening line once the polls close (common.afterClose): what a new city gets now. "Try", since a
+   build can come up short, and no time, since none is promised after the election. */
+export const CITY_AFTER = 'Want your city’s results? Tell Kevin which city or town. He’ll try to add its races, who ran and how each one came out.';
 /* Add a source (Kevin, Oct 25: "the option to add their own source (URL, and then if paywalled maybe a
    clever way they can export a PDF and upload it for us)"): a name or a link, where you vote, and a
    paste box. A person with a login can select all and paste, so nothing needs an upload endpoint.
@@ -91,10 +94,12 @@ export function followOf(): Follow {
   }
   const zip = c ? c.zip : '';
   const st = S.ballot ? S.ballot.stateName : '';
+  // After the polls close a city comes with how its races came out (common.afterClose).
+  const races = afterClose() ? 'your city’s races and results' : 'your city’s races';
   return {
     title: 'Tell me when it’s in', button: 'Tell me when it’s in', what: 'Follow-up: tell me when it’s in',
-    intro: 'Your request is in. Leave an email or phone number and Kevin will tell you when your city’s races are in the guide.',
-    request: `your city’s races${zip ? `, for ZIP ${zip}` : ''}${st ? ` in ${st}` : ''}.${sentOn}`,
+    intro: `Your request is in. Leave an email or phone number and Kevin will tell you when ${races} are in the guide.`,
+    request: `${races}${zip ? `, for ZIP ${zip}` : ''}${st ? ` in ${st}` : ''}.${sentOn}`,
     sent: 'Kevin will tell you when it’s in.',
     wrong: `Tell me when the city${zip ? ` for ZIP ${zip}` : ''} is in. ${from}`,
   };
@@ -305,7 +310,7 @@ function formHTML(r: Shelf): string {
   // Refused outright ("That didn't send.") or no answer in 15 seconds ("Couldn't confirm it sent.": it
   // may have arrived, so it doesn't say it didn't).
   const missed = r.state === 'failed' || r.state === 'unsure';
-  const intro = r.kind === 'city' ? 'Tell Kevin which city to add next.' : isPaste(r) ? PASTE_INTRO : r.kind === 'source' ? 'Tell Kevin which source to add.'
+  const intro = r.kind === 'city' ? (afterClose() ? CITY_AFTER : 'Tell Kevin which city to add next.') : isPaste(r) ? PASTE_INTRO : r.kind === 'source' ? 'Tell Kevin which source to add.'
     : r.hint === 'paywall' ? PAYWALL.intro : r.hint === 'blocked' ? BLOCKED_INTRO : 'Tell Kevin what’s off. A sentence is plenty.';
   return `<form class="rp-form" data-form="report" novalidate${sending ? ' aria-busy="true"' : ''}>
       <p class="rp-intro">${esc(intro)}</p>

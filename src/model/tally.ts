@@ -129,6 +129,15 @@ function computeLineup(it: Item, sources: Endorser[]): Lineup {
   return out;
 }
 export const weighedIn = (l: Lineup): Endorser[] => l.groups.flatMap((g) => g.sources);
+/* Where a set of sources agrees, the one rule (Nov 4; Codex): every source that weighed in is in one group and none
+   endorsed both sides. A group without a pick (a board's "YES and NO (board split)") is a group too, so it makes the race
+   split. Returns that group's choices, 'split', or null (nobody weighed in, or the one group named no pick). bulk.ts
+   planAgree fills by it; the results card's "Compare with" compares by it. */
+export function agreed(l: Lineup): string[] | 'split' | null {
+  if (!weighedIn(l).length) return null;
+  if (l.groups.length !== 1 || l.both.length) return 'split';
+  return l.groups[0].choices.length ? l.groups[0].choices : null;
+}
 
 /* A source's name, short enough for a lineup in the narrow column: "Denver Post" -> "Post",
    "LWV Colorado" -> "LWV", "Colorado Sun" -> "Sun". A leading word is dropped only when it is a

@@ -474,7 +474,8 @@
       "when": "2026-11-04 5 PM",
       "line": "Mail ballots postmarked by 7 PM Nov 3 count if they arrive by 5 PM Nov 4.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked Nov 3 due 5 PM"
     },
     {
       "kind": "after_election",
@@ -485,7 +486,8 @@
       "when": "2026-11-09",
       "line": "Overseas and military ballots sent by Nov 3 count if they arrive by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots sent by Nov 3"
     },
     {
       "kind": "after_election",
@@ -496,7 +498,8 @@
       "when": "2026-11-09",
       "line": "If your mail ballot had an ID or signature problem, fix it in person by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix an ID or signature problem"
     },
     {
       "kind": "after_election",
@@ -507,7 +510,8 @@
       "when": "2026-11-09",
       "line": "Cast a provisional ballot because you lacked ID? Show photo ID at the voter registrar by Nov 9.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml ; conflict: https://www.dallascountyvotes.org/event/last-day-to-cure-provisional-ballot-6/",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bring ID for a provisional ballot"
     },
     {
       "kind": "after_election",
@@ -518,7 +522,8 @@
       "when": "2026-11-09",
       "line": "Hays County makes results official on Nov 9.",
       "source": "https://www.hayscountytx.gov/873/November-3-2026-General-Election",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Hays County makes results official"
     },
     {
       "kind": "after_election",
@@ -529,7 +534,8 @@
       "when": "2026-11-16 1:30 PM",
       "line": "Collin County makes results official on Nov 16.",
       "source": "https://www.collincountytx.gov/docs/default-source/elections/election-notices/notice-of-canvass-nov-26-signed.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Collin County makes results official"
     },
     {
       "kind": "after_election",
@@ -540,7 +546,8 @@
       "when": "Between 2026-11-06 and 2026-11-17",
       "line": "Counties, cities and school boards make results official between Nov 6 and Nov 17.",
       "source": "https://statutes.capitol.texas.gov/Docs/EL/htm/EL.67.htm ; https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties and cities make results official"
     },
     {
       "kind": "after_election",
@@ -551,7 +558,8 @@
       "when": "Within 10 days of the local canvass: Nov 16 to Nov 30, 2026",
       "line": "Provisional voters get a letter saying if their vote counted by Nov 30 at the latest.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "You'll know if your provisional ballot counted"
     },
     {
       "kind": "after_election",
@@ -562,7 +570,8 @@
       "when": "5 PM on the third business day after the county canvass: Nov 12 to Nov 20, 2026",
       "line": "Candidates for county offices can ask for a recount until 5 PM, three business days after the canvass.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "County recount requests due"
     },
     {
       "kind": "after_election",
@@ -573,7 +582,8 @@
       "when": "Between 2026-11-21 and 2026-12-07; SOS sets the date",
       "line": "The state makes statewide, congressional and district results official between Nov 21 and Dec 7.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -584,7 +594,8 @@
       "when": "5 PM on the third business day after the state canvass; date not set",
       "line": "Recount requests for statewide and district races are due three business days after the state canvass.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "State and district recount requests due"
     },
     {
       "kind": "after_election",
@@ -595,7 +606,8 @@
       "when": "Only an exact tie, after the official canvass",
       "line": "Texas recounts automatically only on an exact tie; otherwise a candidate must ask.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-28.shtml",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Automatic recount only for an exact tie"
     },
     {
       "kind": "after_election",
@@ -606,7 +618,8 @@
       "when": "2026-11-23",
       "line": "Governments report bond vote totals to the state Bond Review Board by Nov 23.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bond vote totals due to the state"
     },
     {
       "kind": "after_election",
@@ -617,7 +630,8 @@
       "when": "Begins by 2026-11-23 if the risk-limiting audit is certified Nov 20; finishes by 2026-12-03 or a later SOS deadline",
       "line": "Counties hand count a sample of ballots to check the machines, finishing by about Dec 3.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties hand count a sample of ballots"
     },
     {
       "kind": "after_election",
@@ -628,7 +642,8 @@
       "when": "2026-12-12",
       "line": "Local races that need a runoff hold it Sat Dec 12.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Local runoffs, where needed"
     },
     {
       "kind": "after_election",
@@ -639,7 +654,8 @@
       "when": "After the canvass, and after any recount for that race",
       "line": "Winners can't be sworn in until the vote is canvassed and any recount is done.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Swearing in waits for the final count"
     },
     {
       "kind": "after_election",
@@ -650,7 +666,8 @@
       "when": "Ballot images the day after the final canvass; original ballots 2027-01-03",
       "line": "Ballot images go public after the final canvass; paper ballots open for inspection Jan 3, 2027.",
       "source": "https://www.sos.texas.gov/elections/laws/advisory2026-21-november-3-election-law-calendar.shtml",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Ballot images and paper ballots go public"
     },
     {
       "kind": "term_start",
@@ -1112,7 +1129,8 @@
       "when": "2026-11-03",
       "line": "Mail ballots had to arrive by 7 PM Nov 3; postmarks do not count.",
       "source": "research/results/CO.md (SOS calendar; Adams Important Dates; Denver How We Run Elections)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots were due by 7 PM"
     },
     {
       "kind": "after_election",
@@ -1123,7 +1141,8 @@
       "when": "2026-11-12",
       "line": "Fix a signature or ID problem by 11:59 PM Nov 12; check your county's notice.",
       "source": "https://www.douglasco.gov/elections/election-information/; https://www.clerkandrecorder.org/2026-general-election; https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-7-5-107-3/",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix an ID or signature problem"
     },
     {
       "kind": "after_election",
@@ -1134,7 +1153,8 @@
       "when": "2026-11-12",
       "line": "Military and overseas ballots sent by Nov 3 count if they arrive by Nov 12.",
       "source": "https://www.douglasco.gov/elections/election-information/",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots sent by Nov 3"
     },
     {
       "kind": "after_election",
@@ -1145,7 +1165,8 @@
       "when": "2026-11-12",
       "line": "Counties finish counting provisional ballots by Nov 12.",
       "source": "https://www.clerkandrecorder.org/2026-general-election",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Counties finish counting provisional ballots"
     },
     {
       "kind": "after_election",
@@ -1156,7 +1177,8 @@
       "when": "2026-11-17",
       "line": "Public audits of the count in Douglas, Adams and Boulder on Nov 17.",
       "source": "https://www.douglasco.gov/elections/election-information/; research/results/CO.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Douglas, Adams and Boulder audit the count"
     },
     {
       "kind": "after_election",
@@ -1167,7 +1189,8 @@
       "when": "2026-11-24",
       "line": "Denver makes its results official Nov 24.",
       "source": "https://www.denvergov.org/Government/Elections/Election-Data-Maps (via CO.md); Denver Special-Elections page",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Denver makes results official"
     },
     {
       "kind": "after_election",
@@ -1178,7 +1201,8 @@
       "when": "2026-11-20",
       "line": "Douglas County holds its official review of the vote count Nov 20.",
       "source": "https://www.douglasco.gov/elections/election-information/",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Douglas County officially reviews the count"
     },
     {
       "kind": "after_election",
@@ -1189,7 +1213,8 @@
       "when": "2026-11-24",
       "line": "Adams County plans to make its results official Nov 24.",
       "source": "https://adamscountyco.gov/our-county/elected-officials/clerk-recorder/adams-county-elections/2026-elections/important-dates/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Adams County plans to make results official"
     },
     {
       "kind": "after_election",
@@ -1200,7 +1225,8 @@
       "when": "2026-11-24",
       "line": "Boulder County holds its official review of the vote count online Nov 24.",
       "source": "https://bouldercounty.gov/elections/election-events/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Boulder County officially reviews the count"
     },
     {
       "kind": "after_election",
@@ -1211,7 +1237,8 @@
       "when": "2026-11-25",
       "line": "Every county must make its results official by Nov 25.",
       "source": "https://www.clerkandrecorder.org/2026-general-election; research/results/CO.md (C.R.S. 1-10-102(1), 1-10-103(1))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -1222,7 +1249,8 @@
       "when": "After Nov 25; deadline in C.R.S. 1-10-105 not read",
       "line": "The Secretary of State certifies statewide results after Nov 25.",
       "source": "https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-10-104/ (refers to 1-10-105)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -1233,7 +1261,8 @@
       "when": "Ordered by 2026-11-27, finished by 2026-12-04 (computed from day 24 and day 31)",
       "line": "Races within 0.5% get a recount, ordered by Nov 27 and done by Dec 4.",
       "source": "https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-10-5-102/; 0.5% from research/results/CO.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Automatic recount if within 0.5%"
     },
     {
       "kind": "after_election",
@@ -1244,7 +1273,8 @@
       "when": "Request Nov 13 to Nov 25, pay by Nov 30, finished by Dec 8, 2026 (computed)",
       "line": "A losing side can pay for a recount, asked by Nov 25 and done by Dec 8.",
       "source": "https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-10-5-106/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Paid recount requests due"
     },
     {
       "kind": "after_election",
@@ -1255,7 +1285,8 @@
       "when": "No later than 30 days after the canvass, about 2026-12-25 (computed)",
       "line": "Passed statewide measures take effect when the governor proclaims them, by about Dec 25.",
       "source": "Colo. Const. art. V sec. 1(4); https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-40-123/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Passed statewide measures take effect"
     },
     {
       "kind": "after_election",
@@ -1266,7 +1297,8 @@
       "when": "None",
       "line": "No runoffs: the most votes wins. Boulder's mayor race uses ranked choice.",
       "source": "Denver Special-Elections page; research/results/CO.md",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -1277,7 +1309,8 @@
       "when": "2027-01-02 (computed, 60 days after)",
       "line": "The official statement of votes is public by Jan 2, 2027.",
       "source": "https://codes.findlaw.com/co/title-1-elections/co-rev-st-sect-1-10-106/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Official vote record goes public"
     },
     {
       "kind": "term_start",
@@ -1805,7 +1838,8 @@
       "when": "2026-11-10",
       "line": "Mail ballots postmarked Nov 3 count if they arrive by Nov 10.",
       "source": "https://electionresults.sos.ca.gov/unprocessed-ballots-status; https://www.sdvote.com/content/rov/en/election-results-explained.html",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -1816,7 +1850,8 @@
       "when": "2026-11-17 (computed: 14 days after the election)",
       "line": "Counties must mail notice of a signature problem by Nov 17.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=3019",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must mail signature problem notices"
     },
     {
       "kind": "after_election",
@@ -1827,7 +1862,8 @@
       "when": "2026-11-25 5 PM (computed: 22 days after; San Diego states Nov 25)",
       "line": "Fix a signature problem on your mail ballot by 5 PM Nov 25.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=3019; https://www.sdvote.com/content/rov/en/election-results-explained.html",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix a signature problem by 5 PM"
     },
     {
       "kind": "after_election",
@@ -1838,7 +1874,8 @@
       "when": "2026-11-04",
       "line": "The official review of the vote count, with a hand count of 1% of ballots, starts Nov 4.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Official review of the count begins"
     },
     {
       "kind": "after_election",
@@ -1849,7 +1886,8 @@
       "when": "2026-11-27 (planned)",
       "line": "LA County plans to certify results Nov 27.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "LA County plans to make results official"
     },
     {
       "kind": "after_election",
@@ -1860,7 +1898,8 @@
       "when": "2026-12-03",
       "line": "Every county must make its results official by Dec 3.",
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -1871,7 +1910,8 @@
       "when": "2026-12-04",
       "line": "Counties send final returns to the Secretary of State by Dec 4.",
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Final county results due to the state"
     },
     {
       "kind": "after_election",
@@ -1882,7 +1922,8 @@
       "when": "2026-12-11",
       "line": "The state makes results official Dec 11.",
       "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -1893,7 +1934,8 @@
       "when": "Within 5 calendar days after the county canvass, by 5 PM; e.g. Dec 2 if LA certifies Nov 27 (computed)",
       "line": "Any voter may ask for a recount within 5 days after the county certifies.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=15620",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Local recount requests due"
     },
     {
       "kind": "after_election",
@@ -1904,7 +1946,8 @@
       "when": "2026-12-04 to 2026-12-08 (computed: 5 days from the 31st day)",
       "line": "Recount requests for statewide or multi-county races are due Dec 4 to Dec 8.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=ELEC&sectionNum=15620; EC 15621 via LA media kit",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Statewide and multi-county recount requests due"
     },
     {
       "kind": "after_election",
@@ -1915,7 +1958,8 @@
       "when": "None",
       "line": "California has no automatic recount; a voter must request one.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No automatic recount"
     },
     {
       "kind": "after_election",
@@ -1926,7 +1970,8 @@
       "when": "None for these contests; SF ranked-choice tallies rerun with each update",
       "line": "No runoffs; in San Francisco ranked-choice races, leaders can change as counting continues.",
       "source": "research/results/CA.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -1937,7 +1982,8 @@
       "when": "2026-12-07 noon",
       "line": "New legislators are sworn in at noon Dec 7.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%203.&article=IV",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "New legislators are sworn in"
     },
     {
       "kind": "after_election",
@@ -1948,7 +1994,8 @@
       "when": "During the canvass (1% manual tally, EC 15360)",
       "line": "Each county hand-checks ballots from at least 1% of precincts before certifying.",
       "source": "https://content.lavote.gov/docs/rrcc/documents/media-kit-final.pdf",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Counties hand count a sample of ballots"
     },
     {
       "kind": "after_election",
@@ -1959,7 +2006,8 @@
       "when": "2026-12-16 (computed: fifth day after Dec 11)",
       "line": "Passed state propositions take effect Dec 16, unless they set a later date.",
       "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%2010.&article=II",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Passed state propositions take effect"
     },
     {
       "kind": "term_start",
@@ -2157,7 +2205,8 @@
       "when": "2026-11-10",
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://elections.ny.gov/2026-political-calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2168,7 +2217,8 @@
       "when": "2026-11-16",
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by Nov 16.",
       "source": "https://elections.ny.gov/2026-political-calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -2179,7 +2229,8 @@
       "when": "not found",
       "line": "The deadline to fix a ballot problem was not found; check your county board.",
       "source": "none read",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Ballot fix deadline not found"
     },
     {
       "kind": "after_election",
@@ -2190,7 +2241,8 @@
       "when": "2026-11-18",
       "line": "Counties recheck every scanner tape against the results by Nov 18.",
       "source": "https://elections.ny.gov/2026-political-calendar ; https://www.nysenate.gov/legislation/laws/ELN/9-208",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties recheck every scanner tape"
     },
     {
       "kind": "after_election",
@@ -2201,7 +2253,8 @@
       "when": "2026-11-18",
       "line": "Counties audit their voting machines by Nov 18.",
       "source": "https://elections.ny.gov/2026-political-calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties audit their voting machines"
     },
     {
       "kind": "after_election",
@@ -2212,7 +2265,8 @@
       "when": "After the recanvass, when the margin is 20 votes or less, 0.5% or less, or under 5,000 with 1 million+ ballots",
       "line": "Races decided by 20 votes or 0.5% or less get a full hand recount.",
       "source": "https://www.nysenate.gov/legislation/laws/ELN/9-208",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Full hand recount for very close races"
     },
     {
       "kind": "after_election",
@@ -2223,7 +2277,8 @@
       "when": "2026-11-28",
       "line": "County boards make their final counts official by Nov 28.",
       "source": "https://elections.ny.gov/2026-political-calendar ; https://www.nysenate.gov/legislation/laws/ELN/9-214",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -2234,7 +2289,8 @@
       "when": "On or before 2026-12-15",
       "line": "The state certifies the final results on or before Dec 15.",
       "source": "https://www.nysenate.gov/legislation/laws/ELN/9-216 ; https://elections.ny.gov/2026-political-calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -2245,7 +2301,8 @@
       "when": "none",
       "line": "No runoffs. The candidate with the most votes wins.",
       "source": "https://protectdemocracy.org/wp-content/uploads/2026/09/NY-Handout.pdf (via research/results/NY.md)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "term_start",
@@ -2531,7 +2588,8 @@
       "when": "2026-11-10 (computed, 7 calendar days after Election Day)",
       "line": "Voted provisionally? Bring any needed papers to your election office by Nov 10.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K18A-15",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bring papers for a provisional ballot"
     },
     {
       "kind": "after_election",
@@ -2542,7 +2600,8 @@
       "when": "2026-11-17 (computed, 14 days; Capitol News Illinois says Nov 19, statute favors Nov 17)",
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 17.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K19-8",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -2553,7 +2612,8 @@
       "when": "2026-11-17 (computed, 14th day after the election)",
       "line": "Mail ballot rejected? You have until Nov 17 to show your election office it should count.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K19-8",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix a rejected mail ballot"
     },
     {
       "kind": "after_election",
@@ -2564,7 +2624,8 @@
       "when": "By 2026-11-24 at the latest (computed, 7 days after the Nov 17 provisional count closes)",
       "line": "Chicago and Cook County make their counts official by Nov 24 at the latest.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K18A-15",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Local election offices must make results official"
     },
     {
       "kind": "after_election",
@@ -2575,7 +2636,8 @@
       "when": "By 2026-12-04 (computed, 31 days after the election)",
       "line": "The State Board makes statewide results official by Dec 4.",
       "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=001000050K22-7",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -2586,7 +2648,8 @@
       "when": "Within 5 days after the last day for proclamation: Dec 9, 2026 for state-canvassed contests (computed); about Nov 29 for local-only contests (computed)",
       "line": "Close losers can ask for a recount check by Dec 9; there is no automatic recount.",
       "source": "https://www.ilga.gov/Legislation/PublicActs/PrinterFriendly/103-0467",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Recount requests due"
     },
     {
       "kind": "after_election",
@@ -2597,7 +2660,8 @@
       "when": "None for Nov 3 contests",
       "line": "No runoffs for these races. Chicago's next city election is Feb 23, 2027.",
       "source": "https://chicagoelections.gov/getting-ballot/election-calendars",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -2608,7 +2672,8 @@
       "when": "Not researched",
       "line": "Audit timing not confirmed yet.",
       "source": "none",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Audit timing not confirmed yet"
     },
     {
       "kind": "term_start",
@@ -2894,7 +2959,8 @@
       "when": "2026-11-03, 7 PM CT (close of polls); later arrivals not counted except military and overseas",
       "line": "Mail and absentee ballots had to arrive by 7 PM on Nov 3. Postmarks don't count.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.293",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots were due by 7 PM"
     },
     {
       "kind": "after_election",
@@ -2905,7 +2971,8 @@
       "when": "2026-11-06, before noon (computed: the Friday after Election Day)",
       "line": "Military and overseas ballots count if they arrive by noon Friday, Nov 6.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.920",
-      "confidence": "verified (rule); date computed"
+      "confidence": "verified (rule); date computed",
+      "short": "Overseas and military ballots due"
     },
     {
       "kind": "after_election",
@@ -2916,7 +2983,8 @@
       "when": "Before the local canvass is certified, by 2026-11-17; no voter cure or ID-return date found",
       "line": "Provisional ballots count once officials confirm the voter was eligible, before results are certified Nov 17.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.430",
-      "confidence": "verified (rule); no cure date"
+      "confidence": "verified (rule); no cure date",
+      "short": "Eligible provisional ballots get counted"
     },
     {
       "kind": "after_election",
@@ -2927,7 +2995,8 @@
       "when": "2026-11-17 (computed: not later than the second Tuesday after the election)",
       "line": "Local results become official by Nov 17, when the election boards certify them.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.507",
-      "confidence": "verified (rule); date computed"
+      "confidence": "verified (rule); date computed",
+      "short": "Local election offices must make results official"
     },
     {
       "kind": "after_election",
@@ -2938,7 +3007,8 @@
       "when": "2026-12-08 (computed: not later than the second Tuesday in December)",
       "line": "The state certifies federal, legislative, judicial and auditor results by Dec 8, 2026.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.511",
-      "confidence": "verified (rule); date computed"
+      "confidence": "verified (rule); date computed",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -2949,7 +3019,8 @@
       "when": "Within 7 days after certification; 2026-12-15 if the state certifies Dec 8 (computed). Margin under one half of one percent",
       "line": "A race lost by under half a percent can get a recount if requested within 7 days of certification.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.601",
-      "confidence": "verified (rule); date computed"
+      "confidence": "verified (rule); date computed",
+      "short": "Recount requests due for close races"
     },
     {
       "kind": "after_election",
@@ -2960,7 +3031,8 @@
       "when": "On request when the margin is under one percent; filing deadline (RSMo 115.531, 115.577) not read",
       "line": "A local race lost by under 1% can get a recount on request.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.601",
-      "confidence": "verified (threshold); deadline not found"
+      "confidence": "verified (threshold); deadline not found",
+      "short": "Close local races can get a recount"
     },
     {
       "kind": "after_election",
@@ -2971,7 +3043,8 @@
       "when": "None for the Nov 3 races",
       "line": "Missouri has no runoffs for these November races.",
       "source": "/Users/kevinhalladay-glynn/DevKev/personal/voting-guide-workbench/research/results/MO.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -2982,7 +3055,8 @@
       "when": "2027-01-06 (computed: first Wednesday after the first Monday in January)",
       "line": "The new legislature convenes Jan 6, 2027.",
       "source": "https://revisor.mo.gov/main/OneSection.aspx?section=III%20%20%2020",
-      "confidence": "verified (rule); date computed"
+      "confidence": "verified (rule); date computed",
+      "short": "The new legislature meets"
     },
     {
       "kind": "term_start",
@@ -3290,7 +3364,8 @@
       "when": "2026-11-05",
       "line": "Counting of mail ballots that arrived by Election Day starts Nov 5 at 10 AM.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (COMAR 33.11.04.03A(1))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballot counting starts"
     },
     {
       "kind": "after_election",
@@ -3301,7 +3376,8 @@
       "when": "2026-11-12",
       "line": "Provisional ballots are counted starting Nov 12 at 10 AM.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (COMAR 33.16.05.02)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Provisional ballot counting starts"
     },
     {
       "kind": "after_election",
@@ -3312,7 +3388,8 @@
       "when": "2026-11-13 (10 AM)",
       "line": "Mail ballots postmarked or dated by Nov 3 count if they arrive by Nov 13, 10 AM.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (COMAR 33.11.03.08B(2))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked or dated by Nov 3"
     },
     {
       "kind": "after_election",
@@ -3323,7 +3400,8 @@
       "when": "Not found",
       "line": "No deadline found to fix a ballot problem. Call the Baltimore City elections board.",
       "source": "https://elections.maryland.gov/voting/absentee.html; https://elections.maryland.gov/voting/provisional.html; 2026 calendar",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Ballot fix deadline not found"
     },
     {
       "kind": "after_election",
@@ -3334,7 +3412,8 @@
       "when": "2026-11-13",
       "line": "Baltimore City checks its count and starts making results official by Nov 13.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-308, 11-401(c))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Baltimore City starts making results official"
     },
     {
       "kind": "after_election",
@@ -3345,7 +3424,8 @@
       "when": "2026-11-16 (end of business)",
       "line": "Recount requests for city offices and Questions A to I are due Nov 16.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 12-101(d), 12-103(d))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "City recount requests due"
     },
     {
       "kind": "after_election",
@@ -3356,7 +3436,8 @@
       "when": "2026-11-16",
       "line": "Voter registration reopens Nov 16.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 3-302(a))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Voter registration reopens"
     },
     {
       "kind": "after_election",
@@ -3367,7 +3448,8 @@
       "when": "2026-12-02",
       "line": "The statewide audit, a hand check of a sample of ballots, must finish by Dec 2.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-309(b)(4))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The statewide audit must finish"
     },
     {
       "kind": "after_election",
@@ -3378,7 +3460,8 @@
       "when": "2026-12-03",
       "line": "The state makes final results official by Dec 3.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 11-503(a)(1)(i))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -3389,7 +3472,8 @@
       "when": "2026-12-11 (end of business)",
       "line": "Recount requests for state races and Questions 1 to 3 are due Dec 11.",
       "source": "https://elections.maryland.gov/elections/2026/2026_Election_Calendar.pdf (EL 12-101(d), 12-103(d))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "State recount requests due"
     },
     {
       "kind": "after_election",
@@ -3400,7 +3484,8 @@
       "when": "No automatic recount; a losing candidate may petition only if the margin is 5% or less",
       "line": "No automatic recount. A losing candidate can ask for one if within 5%.",
       "source": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gel&section=12-101&enactments=false (12-101(a)(2))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "No automatic recount"
     },
     {
       "kind": "after_election",
@@ -3411,7 +3496,8 @@
       "when": "None",
       "line": "No runoff. The candidate with the most votes wins.",
       "source": "https://msa.maryland.gov/msa/mdmanual/43const/html/04art4.html (Art. IV, sec. 11); absence in the 2026 calendar",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -3422,7 +3508,8 @@
       "when": "2026-12-03 (30th day after the election; computed)",
       "line": "City charter questions that passed take effect Dec 3, some parts later.",
       "source": "https://msa.maryland.gov/msa/mdmanual/43const/html/11aar.html (Art. XI-A, sec. 5)",
-      "confidence": "verified (rule); computed (date)"
+      "confidence": "verified (rule); computed (date)",
+      "short": "Passed city charter questions take effect"
     },
     {
       "kind": "term_start",
@@ -3851,7 +3938,8 @@
       "when": "2026-11-03 7 PM local",
       "line": "Mail ballots had to reach the elections office by 7 PM on Nov 3.",
       "source": "https://escambiavotes.gov/news/2026/11/03/november-3rd-election-day-tips ; Fla. Stat. 101.6952(3)(b) (referenced)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Mail ballots were due by 7 PM"
     },
     {
       "kind": "after_election",
@@ -3862,7 +3950,8 @@
       "when": "2026-11-05 5 PM (2nd day after the election)",
       "line": "Fix a mail ballot signature problem by 5 PM Thursday, Nov 5.",
       "source": "https://files.floridados.gov/media/709430/election-results-reporting-timeline-ge-2026-v20250821.pdf (garbled text); Fla. Stat. 101.68 (not read)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Fix a signature problem by 5 PM"
     },
     {
       "kind": "after_election",
@@ -3873,7 +3962,8 @@
       "when": "2026-11-05 5 PM",
       "line": "Provisional voters must bring proof of eligibility by 5 PM Thursday, Nov 5.",
       "source": "https://files.floridados.gov/media/709430/election-results-reporting-timeline-ge-2026-v20250821.pdf ; Fla. Stat. 101.048 (not read)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Bring provisional ballot proof by 5 PM"
     },
     {
       "kind": "after_election",
@@ -3884,7 +3974,8 @@
       "when": "2026-11-07 noon",
       "line": "Counties send unofficial totals to the state by noon Saturday, Nov 7.",
       "source": "https://floridaelectionwatch.gov/Timeline ; Fla. Stat. 102.141",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Unofficial county totals due to the state"
     },
     {
       "kind": "after_election",
@@ -3895,7 +3986,8 @@
       "when": "Automatic if the margin is 0.5% or less in the Nov 7 returns; results due 2026-11-12 3 PM",
       "line": "A margin of 0.5% or less triggers an automatic machine recount, due Nov 12.",
       "source": "https://floridaelectionwatch.gov/Timeline ; Fla. Stat. 102.141",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Automatic machine recount if within 0.5%"
     },
     {
       "kind": "after_election",
@@ -3906,7 +3998,8 @@
       "when": "Automatic if the margin is 0.25% or less after the machine recount",
       "line": "A margin of 0.25% or less after the machine recount triggers a hand recount.",
       "source": "https://floridaelectionwatch.gov/Timeline",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Automatic hand recount if within 0.25%"
     },
     {
       "kind": "after_election",
@@ -3917,7 +4010,8 @@
       "when": "2026-11-13 (10 days after the election, computed); postmarked or dated by Nov 3",
       "line": "Overseas ballots dated by Nov 3 count if they arrive by Nov 13.",
       "source": "Fla. Stat. 101.6952(5): http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0101/Sections/0101.6952.html",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas ballots dated by Nov 3 due"
     },
     {
       "kind": "after_election",
@@ -3928,7 +4022,8 @@
       "when": "2026-11-14 10 AM",
       "line": "Leon County makes its results official Sat Nov 14.",
       "source": "https://www.leonvotes.gov/Your-Elections-Office/News-and-Notices/ArtMID/465/ArticleID/43/Public-Notice-Leon-County-Canvassing-Board-Activity-for-the-2026-General-Election-Including-Logic-Accuracy-Testing-and-Post-Election-Audit",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Leon County makes results official"
     },
     {
       "kind": "after_election",
@@ -3939,7 +4034,8 @@
       "when": "2026-11-16 noon",
       "line": "Counties send official results to the state by noon Monday, Nov 16.",
       "source": "https://floridaelectionwatch.gov/Timeline ; Fla. Stat. 102.112",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Official county results due to the state"
     },
     {
       "kind": "after_election",
@@ -3950,7 +4046,8 @@
       "when": "2026-11-17 8 AM",
       "line": "The state makes results official Tue Nov 17.",
       "source": "https://floridaelectionwatch.gov/Timeline",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -3961,7 +4058,8 @@
       "when": "2026-11-17 (14th day after the election, computed)",
       "line": "The new Legislature meets to pick its leaders Nov 17.",
       "source": "Fla. Const. Art. III s. 3(a): https://www.flsenate.gov/Laws/Constitution",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The new legislature picks its leaders"
     },
     {
       "kind": "after_election",
@@ -3972,7 +4070,8 @@
       "when": "None; general elections are decided by plurality",
       "line": "No runoff: whoever gets the most votes wins.",
       "source": "https://floridaelectionwatch.gov/Timeline (per research/results/FL.md)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -3983,7 +4082,8 @@
       "when": "not found; Fla. Stat. 101.591 not read",
       "line": "Each county audits its voting machines after the count; dates not posted.",
       "source": "Fla. Stat. 101.591 (not read)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Counties audit their voting machines"
     },
     {
       "kind": "term_start",
@@ -4104,7 +4204,8 @@
       "when": "2026-11-10",
       "line": "Special and challenged ballot voters must bring proof of eligibility by Nov 10.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026, https://dcboe.org/getContentAsset/4d04f4a1-fb2a-4f8a-809f-d3f708f232df/5ebbd046-860b-4ee1-81c8-43d0e3bc446e/2026-General-Election-Calendar-Version-09292026.pdf?language=en",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bring proof for special or challenged ballots"
     },
     {
       "kind": "after_election",
@@ -4115,7 +4216,8 @@
       "when": "2026-11-13",
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 13.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -4126,7 +4228,8 @@
       "when": "2026-11-19",
       "line": "You have until Nov 19 to fix a problem with your mail ballot.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix a mail ballot problem"
     },
     {
       "kind": "after_election",
@@ -4137,7 +4240,8 @@
       "when": "2026-11-20 (tentative)",
       "line": "The Board plans to finish counting mail and special ballots on Nov 20.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "DC plans to finish the count"
     },
     {
       "kind": "after_election",
@@ -4148,7 +4252,8 @@
       "when": "Not published; at the June 2026 primary, rounds posted 5 days after election day",
       "line": "Tonight shows first choices only; round-by-round results come days later.",
       "source": "https://www.popville.com/2026/06/washington-dc-primary-election-results-2026-buckle-up/ (quoting DCBOE)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Ranked choice rounds come days later"
     },
     {
       "kind": "after_election",
@@ -4159,7 +4264,8 @@
       "when": "2026-11-21 to 2026-11-25 (tentative); report 2026-11-30",
       "line": "A public hand audit runs Nov 21 to 25, with a report Nov 30.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "A public hand audit runs"
     },
     {
       "kind": "after_election",
@@ -4170,7 +4276,8 @@
       "when": "2026-12-02 (tentative)",
       "line": "The Board plans to certify final results on Dec 2.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026; D.C. Code 1-1001.05(a)(11)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "DC plans to make results official"
     },
     {
       "kind": "after_election",
@@ -4181,7 +4288,8 @@
       "when": "2026-12-09 (tentative; 7 days after certification)",
       "line": "Candidates can ask for a recount until Dec 9, a week after certification.",
       "source": "DCBOE 2026 General Election calendar rev. 10/1/2026",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Recount requests due"
     },
     {
       "kind": "after_election",
@@ -4192,7 +4300,8 @@
       "when": "Not found",
       "line": "We could not confirm whether DC has an automatic recount.",
       "source": "none",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Automatic recount rules not confirmed"
     },
     {
       "kind": "after_election",
@@ -4203,7 +4312,8 @@
       "when": "None; ranked choice voting in races with 3 or more candidates",
       "line": "No runoffs. Races with three or more candidates use ranked choice.",
       "source": "research/results/DC.md scout finding",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No runoffs"
     },
     {
       "kind": "term_start",
@@ -4621,7 +4731,8 @@
       "when": "2026-11-03, 7 PM",
       "line": "Mail ballots had to arrive by 7 PM Nov 3; a postmark does not help.",
       "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff; https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Mail ballots were due by 7 PM"
     },
     {
       "kind": "after_election",
@@ -4632,7 +4743,8 @@
       "when": "2026-11-06",
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by Nov 6.",
       "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -4643,7 +4755,8 @@
       "when": "2026-11-06 (three days after the election; 5 PM per a local report)",
       "line": "Provisional voters have until Fri Nov 6 to show ID or prove eligibility.",
       "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff; https://northatlantastar.com/georgia-election-night-results-final-count-2026/ (5 PM, secondary)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Bring ID or proof for provisional ballots"
     },
     {
       "kind": "after_election",
@@ -4654,7 +4767,8 @@
       "when": "2026-11-06 (Friday after the election, O.C.G.A. 21-2-386(a)(1)(C))",
       "line": "Voters can fix a rejected mail ballot, like a missing signature, until Fri Nov 6.",
       "source": "https://sos.ga.gov/sites/default/files/2024-01/2024%20Comp-Cal_State.01.02.24.Rev_..pdf (2024 calendar, same rule)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Fix a rejected mail ballot"
     },
     {
       "kind": "after_election",
@@ -4665,7 +4779,8 @@
       "when": "2026-11-09, 5 PM (O.C.G.A. 21-2-493(k))",
       "line": "Counties make results official by Mon Nov 9.",
       "source": "https://sos.ga.gov/sites/default/files/2024-01/2024%20Comp-Cal_State.01.02.24.Rev_..pdf; https://northatlantastar.com/georgia-election-night-results-final-count-2026/",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -4676,7 +4791,8 @@
       "when": "Within two business days after certification; 2026-11-12 for county-certified races (computed, Nov 11 is a state holiday)",
       "line": "A candidate within 0.5% can request a recount within two business days of certification.",
       "source": "https://georgia.gov/election-recount-rules-georgia (saved); https://sos.ga.gov/sites/default/files/forms/2025%20Elections%20Calendar.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Recount requests due for races within 0.5%"
     },
     {
       "kind": "after_election",
@@ -4687,7 +4803,8 @@
       "when": "Sources conflict: none per georgia.gov; a 2025 code snippet suggests one for statewide races within 0.5%",
       "line": "Georgia.gov says no automatic recount; a newer law may require one for close statewide races.",
       "source": "https://georgia.gov/election-recount-rules-georgia vs https://law.justia.com/codes/georgia/title-21/chapter-2/article-12/section-21-2-495/ (snippet only)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "Unclear if close statewide races recount automatically"
     },
     {
       "kind": "after_election",
@@ -4698,7 +4815,8 @@
       "when": "Within five days of county certification: about 2026-11-14 (computed)",
       "line": "Court challenges to a result are due within five days of certification, about Nov 14.",
       "source": "https://sos.ga.gov/sites/default/files/2024-01/2024%20Comp-Cal_State.01.02.24.Rev_..pdf (O.C.G.A. 21-2-524)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Court challenges to results due"
     },
     {
       "kind": "after_election",
@@ -4709,7 +4827,8 @@
       "when": "2026-11-13 to 2026-11-17",
       "line": "Counties audit the results by hand from Fri Nov 13 to Tue Nov 17.",
       "source": "https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties audit the results by hand"
     },
     {
       "kind": "after_election",
@@ -4720,7 +4839,8 @@
       "when": "Likely 2026-11-20; a competing report says about 2026-11-13",
       "line": "The state certifies results, likely by Fri Nov 20; the date is not confirmed.",
       "source": "https://northatlantastar.com/georgia-election-night-results-final-count-2026/ (secondary)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "The state makes results official, date unconfirmed"
     },
     {
       "kind": "after_election",
@@ -4731,7 +4851,8 @@
       "when": "2026-11-20",
       "line": "Ask for a runoff mail ballot by Fri Nov 20.",
       "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff; https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Ask for a runoff mail ballot"
     },
     {
       "kind": "after_election",
@@ -4742,7 +4863,8 @@
       "when": "2026-11-21 to 2026-11-25",
       "line": "Early voting for the Dec 1 runoff runs Sat Nov 21 to Wed Nov 25.",
       "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff; https://fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/election-key-dates",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Early voting for the runoff"
     },
     {
       "kind": "after_election",
@@ -4753,7 +4875,8 @@
       "when": "2026-12-01",
       "line": "Races where no one got a majority go to a runoff Tue Dec 1, 7 AM to 7 PM.",
       "source": "https://georgia.gov/events/2026-12-01/election-day-general-election-runoff; O.C.G.A. 21-2-501",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Runoff for races with no majority"
     },
     {
       "kind": "after_election",
@@ -4764,7 +4887,8 @@
       "when": "2027-01-11 (computed, second Monday of January)",
       "line": "The new legislature meets Jan 11, 2027, and statewide winners take office then.",
       "source": "Ga. Const. Art. 3, Sec. 4, Para. 1, https://sos.ga.gov/georgia-constitution-revised-2025 (saved)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "New legislature meets; statewide winners take office"
     },
     {
       "kind": "term_start",
@@ -4940,7 +5064,8 @@
       "when": "2026-11-10 (computed: 7 calendar days after the election)",
       "line": "Mail ballots postmarked by Nov 3 count if they arrive by Nov 10.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.470) ; https://multco.us/news/nov-3-2026-election-day-information-multnomah-county",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail postmarked by Nov 3 must arrive"
     },
     {
       "kind": "after_election",
@@ -4951,7 +5076,8 @@
       "when": "2026-11-24 (computed: 21st calendar day after the election)",
       "line": "Voters can fix a missing or mismatched signature through Nov 24.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.431(2)(a)) ; https://multco.us/info/election-results-schedule-nov-2026-general-election",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix a signature problem"
     },
     {
       "kind": "after_election",
@@ -4962,7 +5088,8 @@
       "when": "2026-11-12 and 2026-11-25, 6 PM PT",
       "line": "Multnomah posts new counts Nov 12 and Nov 25, at 6 PM Pacific.",
       "source": "https://multco.us/info/election-results-schedule-nov-2026-general-election",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Multnomah posts new counts"
     },
     {
       "kind": "after_election",
@@ -4973,7 +5100,8 @@
       "when": "2026-11-30 (computed: 27th day)",
       "line": "Counties certify results by Nov 30.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.545(3)) ; https://multco.us/info/election-results-schedule-nov-2026-general-election",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -4984,7 +5112,8 @@
       "when": "2026-12-10 (computed: 37th day)",
       "line": "The Secretary of State certifies winners by Dec 10.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.555)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -4995,7 +5124,8 @@
       "when": "2026-12-13 (computed: 40th day)",
       "line": "Portland certifies its city measure results by Dec 13.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.565)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Portland must make city measure results official"
     },
     {
       "kind": "after_election",
@@ -5006,7 +5136,8 @@
       "when": "2026-12-13 (computed: 40th day), or 7 days after a recount ends",
       "line": "Court challenges to a result are due by Dec 13.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors258.html (ORS 258.036)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Court challenges to results due"
     },
     {
       "kind": "after_election",
@@ -5017,7 +5148,8 @@
       "when": "2026-12-15 first demand; 2026-12-25 supplemental (computed: 42nd and 52nd days)",
       "line": "Recount requests are due by Dec 15.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors258.html (ORS 258.161)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Recount requests due"
     },
     {
       "kind": "after_election",
@@ -5028,7 +5160,8 @@
       "when": "After the canvass, when the margin is 0.2% or less, or a tie",
       "line": "A full recount happens if the margin is 0.2% or less.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors258.html (ORS 258.280, 258.290)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Automatic recount if within 0.2%"
     },
     {
       "kind": "after_election",
@@ -5039,7 +5172,8 @@
       "when": "No runoff; ranked choice contests are decided in rounds of the same count",
       "line": "No runoff. Ranked choice races are decided in rounds of this count.",
       "source": "https://multco.us/info/november-3-2026-general-election ; https://www.portland.gov/charter/3/1 (sec. 3-102)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "No runoffs"
     },
     {
       "kind": "after_election",
@@ -5050,7 +5184,8 @@
       "when": "Date not found; amended abstracts after a hand count due Dec 3 (measures) or Dec 10 (candidates), computed",
       "line": "Each county checks results by hand count or audit; Multnomah's date was not found.",
       "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors254.html (ORS 254.529, 254.532)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Counties check results by hand or audit"
     },
     {
       "kind": "term_start",
@@ -5215,7 +5350,8 @@
       "when": "Postmarked by 2026-11-03; last arrival day not read",
       "line": "Ballots postmarked by Nov 3 still count if they arrive after Election Day.",
       "source": "https://www.sos.wa.gov/about-office/news/2026/us-supreme-court-rules-favor-accepting-ballots-postmarked-time-received-after-election-day",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Late ballots count if postmarked in time"
     },
     {
       "kind": "after_election",
@@ -5226,7 +5362,8 @@
       "when": "2026-11-05",
       "line": "Counties check voting equipment and look for result errors by Nov 5.",
       "source": "https://www.sos.wa.gov/elections/calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties check equipment for result errors"
     },
     {
       "kind": "after_election",
@@ -5237,7 +5374,8 @@
       "when": "2026-11-23, close of business (computed: day before county certification)",
       "line": "Fix a signature problem on your ballot by close of business Nov 23.",
       "source": "WAC 434-261-053(2), https://lawfilesext.leg.wa.gov/Law/WACArchive/2024/htm/WAC%20434%20-261%20%20CHAPTER/WAC%20434%20-261%20-053.htm (2024 text)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Fix a signature problem"
     },
     {
       "kind": "after_election",
@@ -5248,7 +5386,8 @@
       "when": "2026-11-24",
       "line": "Counties make final results official Nov 24.",
       "source": "https://www.sos.wa.gov/elections/calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties make results official"
     },
     {
       "kind": "after_election",
@@ -5259,7 +5398,8 @@
       "when": "2026-11-25, 4 PM",
       "line": "King County posts its final results by voting area by 4 PM Nov 25.",
       "source": "https://kingcounty.gov/en/dept/elections/results/2026/november-general (via research/results/WA.md)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "King County posts final voting area results"
     },
     {
       "kind": "after_election",
@@ -5270,7 +5410,8 @@
       "when": "Within 2 business days after 2026-11-24; about 2026-11-30 (computed, holidays assumed)",
       "line": "A recount can be requested within two business days after Nov 24.",
       "source": "RCW 29A.64.011 and .030, https://lawfilesext.leg.wa.gov/Law/RCWPDF/RCW%20%2029A%20TITLE/RCW%20%2029A.%2064%20%20CHAPTER/RCW%20%2029A.%2064%20%20COMBINEDCHAPTER.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Recount requests due"
     },
     {
       "kind": "after_election",
@@ -5281,7 +5422,8 @@
       "when": "After certification, when the margin is under 2,000 votes and under 0.5%",
       "line": "Races closer than 2,000 votes and 0.5% get an automatic recount.",
       "source": "RCW 29A.64.021 and .090, same combined chapter PDF",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Automatic recount for very close races"
     },
     {
       "kind": "after_election",
@@ -5292,7 +5434,8 @@
       "when": "Statewide races under 1,000 votes and 0.25%; other races under 150 votes and 0.25%",
       "line": "Very close races, under 150 votes and 0.25%, are recounted by hand.",
       "source": "RCW 29A.64.021(1)(b), same combined chapter PDF",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Hand recount for the closest races"
     },
     {
       "kind": "after_election",
@@ -5303,7 +5446,8 @@
       "when": "2026-12-03",
       "line": "The Secretary of State makes statewide results official by Dec 3.",
       "source": "https://www.sos.wa.gov/elections/calendar",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state must make results official"
     },
     {
       "kind": "after_election",
@@ -5314,7 +5458,8 @@
       "when": "2026-12-07 (computed: 2 business days after Dec 3)",
       "line": "For statewide contests, a recount can be requested until Dec 7.",
       "source": "RCW 29A.64.011, same combined chapter PDF",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Statewide recount requests due"
     },
     {
       "kind": "after_election",
@@ -5325,7 +5470,8 @@
       "when": "None",
       "line": "Washington has no runoffs. The general election decides the race.",
       "source": "research/results/WA.md (background knowledge)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "No runoffs"
     },
     {
       "kind": "term_start",
@@ -5578,7 +5724,8 @@
       "when": "2026-11-03 noon",
       "line": "Mailed absentee ballots had to arrive by noon on Election Day, Nov 3.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots were due by noon"
     },
     {
       "kind": "after_election",
@@ -5589,7 +5736,8 @@
       "when": "2026-11-06 5 PM",
       "line": "Cast a provisional ballot because you lacked ID? Show ID by 5 PM Fri Nov 6.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-10-2(a)(3))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Bring provisional ballot ID by 5 PM"
     },
     {
       "kind": "after_election",
@@ -5600,7 +5748,8 @@
       "when": "2026-11-09 (count on 2026-11-10 if needed)",
       "line": "Counties check by Nov 9 whether write-ins could change a result, and count them Nov 10 if so.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-6-28(c))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties check if write-ins could change results"
     },
     {
       "kind": "after_election",
@@ -5611,7 +5760,8 @@
       "when": "2026-11-10 noon",
       "line": "Military and overseas ballots postmarked by Nov 3 count if they arrive by noon Nov 10.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-11-18(b))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots postmarked by Nov 3"
     },
     {
       "kind": "after_election",
@@ -5622,7 +5772,8 @@
       "when": "2026-11-10 noon",
       "line": "Provisional ballots are counted at noon Tuesday, Nov 10.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-10-2(f))",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Provisional ballots are counted"
     },
     {
       "kind": "after_election",
@@ -5633,7 +5784,8 @@
       "when": "2026-11-13 noon",
       "line": "Counties declare official results by noon Friday, Nov 13.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Secs. 17-12-15, 17-12-16)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -5644,7 +5796,8 @@
       "when": "Within 48 hours after the official county canvass; about noon 2026-11-15 if canvassed at the deadline (computed)",
       "line": "Anyone with standing can ask for a recount within 48 hours of the county canvass.",
       "source": "https://ballotpedia.org/Recount_laws_in_Alabama (Code 17-16-21, 17-16-40; statute not read)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Recount requests due"
     },
     {
       "kind": "after_election",
@@ -5655,7 +5808,8 @@
       "when": "Margin of 0.5% or less in a general election, unless the losing candidate waives in writing",
       "line": "A race or statewide measure decided by 0.5% or less gets an automatic recount.",
       "source": "https://ballotpedia.org/Recount_laws_in_Alabama (Code 17-16-20; statute not read)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Automatic recount if within 0.5%"
     },
     {
       "kind": "after_election",
@@ -5666,7 +5820,8 @@
       "when": "About 1 to 2 weeks after the election (pattern from 2026 primary and runoff)",
       "line": "Mobile County usually posts certified results one to two weeks after the election.",
       "source": "https://benchmark.probate.mobilecountyal.gov/uploads/eResults/ElectionResults.pdf",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Mobile County usually posts official results"
     },
     {
       "kind": "after_election",
@@ -5677,7 +5832,8 @@
       "when": "2026-11-23",
       "line": "Winning legislators and members of Congress get their official papers Nov 23.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-12-21)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Legislature and Congress winners get official papers"
     },
     {
       "kind": "after_election",
@@ -5688,7 +5844,8 @@
       "when": "2026-11-25",
       "line": "The state makes final results official Wed Nov 25.",
       "source": "https://www.sos.alabama.gov/sites/default/files/election-2026/AdminCalendar%20-2026.pdf (Sec. 17-12-17)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "The state makes results official"
     },
     {
       "kind": "after_election",
@@ -5699,7 +5856,8 @@
       "when": "none found",
       "line": "No runoff is expected for Nov 3 races.",
       "source": "research/results/AL.md (no official page states it)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "No runoffs expected"
     },
     {
       "kind": "term_start",
@@ -5787,7 +5945,8 @@
       "when": "2026-11-03 8 PM",
       "line": "Mail ballots had to arrive by 8 PM Nov 3. A postmark does not count.",
       "source": "PA DOS 2026 election calendar, https://www.pa.gov/content/dam/copapwp-pagov/en/dos/programs/voting-and-elections/running-for-office/2026/2026-general-election-calendar.pdf",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots were due by 8 PM"
     },
     {
       "kind": "after_election",
@@ -5798,7 +5957,8 @@
       "when": "2026-11-06 9 AM",
       "line": "Counties start the official count, including provisional ballots, by 9 AM Nov 6.",
       "source": "PA DOS 2026 election calendar (URL above); Allegheny Election Updates page via PA.md",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties start the official count"
     },
     {
       "kind": "after_election",
@@ -5809,7 +5969,8 @@
       "when": "2026-11-09",
       "line": "Mail voters whose ID could not be checked have until Nov 9 to send proof.",
       "source": "PA DOS 2026 election calendar (URL above)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Fix a mail ballot ID problem"
     },
     {
       "kind": "after_election",
@@ -5820,7 +5981,8 @@
       "when": "2026-11-10 5 PM",
       "line": "Military and overseas ballots sent by Nov 2 count if they arrive by Nov 10.",
       "source": "PA DOS 2026 election calendar (URL above)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Overseas, military ballots sent by Nov 2"
     },
     {
       "kind": "after_election",
@@ -5831,7 +5993,8 @@
       "when": "Ordered by 5 PM 2026-11-12 if margin is 0.5% or less; must finish by noon 2026-11-24",
       "line": "A statewide race within 0.5% gets a recount, ordered by Nov 12 and done by Nov 24.",
       "source": "PA DOS 2026 election calendar (URL above)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Automatic recount for statewide races within 0.5%"
     },
     {
       "kind": "after_election",
@@ -5842,7 +6005,8 @@
       "when": "Within 5 days after the county finishes computing (counties must finish by 2026-11-17)",
       "line": "For local races, voters can petition for a recount within 5 days after the county count ends.",
       "source": "PA DOS 2026 election calendar (URL above)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Local recount requests due"
     },
     {
       "kind": "after_election",
@@ -5853,7 +6017,8 @@
       "when": "2026-11-20 noon",
       "line": "No runoffs. A tie is settled by drawing lots at noon Nov 20.",
       "source": "PA DOS 2026 election calendar (URL above)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Any tie is settled by drawing lots"
     },
     {
       "kind": "after_election",
@@ -5864,7 +6029,8 @@
       "when": "2026-11-23",
       "line": "Counties certify official results by Nov 23.",
       "source": "PA DOS 2026 election calendar (URL above); PA.md",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -5875,7 +6041,8 @@
       "when": "No fixed date: the Secretary certifies 'forthwith' after receiving county returns (counties due Nov 23)",
       "line": "The state certifies soon after counties report by Nov 23. No fixed date.",
       "source": "https://ballotpedia.org/Election_results_certification_dates,_2026 (quotes the Election Code)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "The state makes results official after counties"
     },
     {
       "kind": "term_start",
@@ -5996,7 +6163,8 @@
       "when": "2026-11-03, close of polls (7 PM CT)",
       "line": "Mail ballots had to arrive by 7 PM Nov 3; later ones don't count.",
       "source": "https://sos.tn.gov/elections/faqs, per research/tn-howto.md",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Mail ballots were due by 7 PM"
     },
     {
       "kind": "after_election",
@@ -6007,7 +6175,8 @@
       "when": "No cure process described; military and overseas voters are told of a rejection",
       "line": "No fix process for mail ballot problems; call your county election commission.",
       "source": "SOS FAQ, per research/tn-howto.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No fix process for mail ballots"
     },
     {
       "kind": "after_election",
@@ -6018,7 +6187,8 @@
       "when": "2026-11-05 (computed: 2 business days after Election Day)",
       "line": "Voted provisionally without photo ID? Show it to the county by Thu Nov 5.",
       "source": "SOS voter ID page and FAQ, per research/tn-howto.md",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Bring ID for a provisional ballot"
     },
     {
       "kind": "after_election",
@@ -6029,7 +6199,8 @@
       "when": "Before county certification; Davidson and Maury dates not found",
       "line": "Each county audits its vote count before certifying; dates not posted yet.",
       "source": "https://hickmancountytn.gov/departments/administrative-offices (search excerpt, another county)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "Counties audit their vote counts"
     },
     {
       "kind": "after_election",
@@ -6040,7 +6211,8 @@
       "when": "2026-11-23 (computed: no later than the third Monday after the election)",
       "line": "Counties certify results by Mon Nov 23.",
       "source": "Tenn. Code 2-8-101(a), https://law.justia.com/codes/tennessee/title-2/chapter-8/section-2-8-101/ (saved)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "short": "Counties must make results official"
     },
     {
       "kind": "after_election",
@@ -6051,7 +6223,8 @@
       "when": "Not found; follows county certification",
       "line": "The state certifies after counties finish; no date announced yet.",
       "source": "https://sos.tn.gov/elections (2024 certification headline only)",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "The state makes results official after counties"
     },
     {
       "kind": "after_election",
@@ -6062,7 +6235,8 @@
       "when": "No automatic recount; only within an election contest (Tenn. Code 2-17-101(b)); filing deadline not found",
       "line": "No automatic recount; a candidate must file an election contest in court.",
       "source": "Tenn. AG Opinion 01-012 (2001), https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2001/op01-012.pdf (search excerpt)",
-      "confidence": "sourced"
+      "confidence": "sourced",
+      "short": "No automatic recount"
     },
     {
       "kind": "after_election",
@@ -6073,7 +6247,8 @@
       "when": "None expected; most votes wins",
       "line": "No runoffs: whoever gets the most votes wins.",
       "source": "none read",
-      "confidence": "unverified"
+      "confidence": "unverified",
+      "short": "No runoffs"
     }
   ],
   "open_questions": [

@@ -142,20 +142,21 @@ const zipRowHTML = (): string => `<div class="zip-row"><input class="zip-input" 
 /* The first page once polls start closing (Kevin, Nov 3: "results are rolling in", not "voting has ended"):
    each covered state's official results, a state still voting labeled with when it ends, and the desks that call
    races, once, under them. A saved ballot stays a tap away. While any covered state is still voting, the plan's
-   sheet follows, under "Your ballot and local results"; once every one has closed, the page is results, mail
-   ballot tracking and your saved ballot, and the ZIP is one quiet line under the list. */
+   sheet follows, under "Your ballot and local results"; once every one has closed, the page is results and your saved
+   ballot, and the ZIP is one quiet line under the list. No mail-ballot tracker here (Kevin, Nov 4: "let's not show the
+   track ballot links on the first page. kiss when it fits"): it lives on What's next. */
 function resultsDoorHTML(lead: ResultsLead): string {
   // Once every covered state has closed (the last at 8 PM Pacific), the design's first page (Nov 3, results Phase 0):
   // "See how your ballot landed.", the ZIP sheet with step 2 folded away (a new ballot goes straight to the ballot,
   // where Edit and the sources sheet still open; nothing fills, doorFills), then each state's official results under
   // it for anyone whose city the guide doesn't cover.
-  // GPT copy pass, Nov 3: tonight's page links election offices and keeps your picks; it shows no counts yet, so the
-  // promise says so. Phase 1 brings back "See how your ballot landed." once numbers show.
+  // Phase 1 (Nov 3, evening): the rows carry the counts now, so the design's promise comes back (Phase 0 had softened
+  // it to links while no numbers showed).
   if (lead.after) {
-    const ticks = ['Plain English', 'Links to your election office', 'Your saved picks'];
+    const ticks = ['Plain English', 'Official results for your city', 'Your picks beside them'];
     return `<header class="mast front res res-after wrap" data-door="after">${tryBanner()}
     <div class="mast-top" data-part="kicker"><p class="dateline">${esc(`Polls have closed. ${lead.head}`)}</p></div>
-    <h1 class="place">Find your election results.</h1>
+    <h1 class="place">See how your ballot landed.</h1>
     <ul class="ticks">${ticks.map((t) => `<li><i aria-hidden="true"></i>${esc(t)}</li>`).join('')}</ul>
     ${padHTML(true, false)}
     <div data-part="results">${resultsPartHTML(lead)}</div>
@@ -189,7 +190,7 @@ function resultsPartHTML(lead: ResultsLead): string {
   const a = (url: string, text: string, cls = ''): string => `<a${cls ? ` class="${cls}"` : ''} href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
   // A closed state: its name links its results page, with who publishes it. One still voting: when its polls close, in
   // its own zone, and its voting-information page.
-  const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}${!r.url && r.info ? ` ${a(r.info, 'Voting information')}` : ''}</span>${r.track ? a(r.track, 'Track your mail ballot', 'res-track') : ''}</li>`).join('');
+  const rows = lead.rows.map((r) => `<li class="res-row${r.url ? '' : ' is-open'}">${r.url ? a(r.url, r.name, 'res-st') : `<span class="res-st">${esc(r.name)}</span>`}<span class="res-src">${esc(r.url ? r.source || 'Official results' : r.open || '')}${!r.url && r.info ? ` ${a(r.info, 'Voting information')}` : ''}</span></li>`).join('');
   const sub = lead.after ? lead.sub.slice(1).filter((x) => !/^Already in line/.test(x)) : [];
   return `<h2 class="res-zip-h">Official results by state</h2>${sub.map((x) => `<p class="res-sub">${esc(x)}</p>`).join('')}
     <ul class="res-list" aria-label="Official results by state">${rows}</ul>

@@ -3,6 +3,13 @@ import type { Endorser, Lean } from '../types';
 import { S, type ShelfKind } from '../state';
 import { esc, host } from '../util';
 import { hasPaywallNote, isBlocked } from '../model/lens';
+import { afterPolls, resultsLead } from '../model/plan';
+
+/* After the polls close (Nov 5, 2026; Kevin: "People should be able to request new cities still. It'll be mostly
+   results focused. But it needs, like, race information too"): the open ballot's own close, or with no ballot open,
+   every covered state's (the first page's results door, mast.ts). The request surfaces (the coverage card, Request a
+   city and its follow-up) then offer a city's races and how they came out, never a ballot to vote. */
+export const afterClose = (): boolean => (S.ballot ? afterPolls(S.ballot.howto) : !!resultsLead(S.index?.states)?.after);
 
 /* "Report a problem" and "Request a city" go to a Google Form in Kevin's kevin@trimm.co account (moved
    Oct 28 from a personal Gmail account; Google can't transfer a form's ownership into Workspace, so it's a
@@ -156,8 +163,12 @@ export const sourceLean = (e: Endorser, words = true): string => {
 export const confLabel = (c: string | null | undefined): string =>
   c === 'unverified' ? 'Not yet confirmed' : c === 'sourced' ? 'Secondhand source' : '';
 
+/* A link out. Only http(s) ever becomes an href (Nov 3, results Phase 1 security review): some URLs now come from
+   the results Worker, which builds its file from feeds we don't control, so anything else (javascript:, data:) is
+   shown as plain text. */
+export const safeURL = (url: string | null | undefined): string | null => (url && /^https?:\/\//i.test(url.trim()) ? url.trim() : null);
 export const ext = (url: string | null | undefined, text: string, cls = ''): string =>
-  url ? `<a href="${esc(url)}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ''}>${esc(text)}</a>` : esc(text);
+  safeURL(url) ? `<a href="${esc(safeURL(url))}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ''}>${esc(text)}</a>` : esc(text);
 
 export const srcLink = (url: string | null | undefined): string =>
   url ? `<a class="src" href="${esc(url)}" target="_blank" rel="noopener">${esc(host(url))}</a>` : '';

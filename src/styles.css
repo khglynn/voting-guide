@@ -312,6 +312,14 @@ b, strong { font-weight: 600; }
 .wi-a ul { list-style: disc; padding-left: 20px; }
 .meta { margin-top: 8px; font-size: 13.5px; color: var(--muted); }
 .pdates li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+/* One date column for every line (Opus review: each line sized its own, so the descriptions started at three places). */
+.nx-dates { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 14px; }
+.nx-dates li { grid-column: 1 / -1; grid-template-columns: subgrid; column-gap: 14px; }
+.nx-dates .pd-d { white-space: nowrap; }
+/* A dated line's source, as a small arrow after it (overnight: "sos.texas.gov" on every line read as clutter). */
+.pd-src { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 28px; margin: -6px -4px -6px 0; vertical-align: middle; color: var(--muted); text-decoration: none; }
+.pd-src svg { width: 11px; height: 11px; }
+.pd-end { white-space: nowrap; }
 .pdates li.past { color: var(--muted); }
 .pd-d { font-weight: 600; font-variant-numeric: tabular-nums; }
 .pd-more { background: none; border: 0; padding: 4px 2px; margin: -4px 0; font: inherit; font-size: .9em; color: var(--gold-ink); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; min-height: 32px; }
@@ -408,7 +416,7 @@ b, strong { font-weight: 600; }
 .row.is-off .mk i, .row.is-info .mk i { border-style: dotted; }
 .ttl { padding: 10px 10px 10px 0; min-width: 0; gap: 8px; }
 .ttl .t { min-width: 0; display: block; }
-.ttl b { display: block; font-weight: 600; font-size: 16.5px; line-height: 1.22; overflow-wrap: anywhere; hyphens: auto; }
+.ttl b { display: block; font-weight: 600; font-size: 16.5px; line-height: 1.22; overflow-wrap: break-word; hyphens: manual; }
 .ttl small { display: block; font-size: 14.5px; color: var(--muted); line-height: 1.3; margin-top: 2px; }
 .ttl .num { font-family: var(--f-display); font-weight: 800; font-size: 16.5px; min-width: 34px; flex: none; align-self: flex-start; padding-top: 1px; font-variant-numeric: lining-nums; font-variation-settings: "wdth" 84; color: var(--print); }
 .ttl.is-m { align-items: flex-start; }
@@ -1070,7 +1078,6 @@ body.v-cheat .plan, body.v-pass .plan, body.v-cheat #r-mast, body.v-pass #r-mast
 a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .res-src { flex: 1 1 10em; font-size: 14.5px; line-height: 1.35; color: var(--muted); }
 .res-row.is-open .res-st { color: var(--ink-2); }
-.res-track { flex-basis: 100%; font-size: 14.5px; color: var(--ink); padding: 2px 0 6px; }
 .res-calls { margin-top: 12px; font-size: 15px; color: var(--muted); }
 .res-calls a { color: var(--ink); display: inline-block; padding: 6px 0; }
 .res-zip-h { margin-top: 28px; font-family: var(--f-display); font-weight: 600; font-size: 20px; line-height: 1.25; }
@@ -1081,3 +1088,207 @@ a.res-st { color: var(--ink); text-decoration: underline; text-decoration-color:
 .door-after .row-btns { margin-top: 10px; }
 .plan-src { margin-top: 8px; }
 .plan-calls a { color: var(--on-dusk); display: inline-block; padding: 4px 0; }
+
+/* ---------- results on the ballot (Nov 3, results Phase 1) ----------
+   From the mock-up's block (the workbench's prototypes/results/styles.css, results:start to results:end). Results are
+   ink: no new color, material or motion. Gold keeps its one job (your pick), as --gold-ink text and the pen tick. */
+/* The row's right column: the leader and share, the status word, your pick. */
+.vd.res .m { font-variant-numeric: tabular-nums; }
+.vd.res .ar { color: var(--muted); font-weight: 500; }
+.vd.res .p { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--gold-ink); overflow-wrap: anywhere; }
+.vd.res.none .m { color: var(--muted); font-weight: 400; font-size: 14.5px; }
+.vd.res.wait .m { font-style: italic; }
+/* A row whose results are on the office's own page (overnight): the column is a real link, named for the office. A link
+   can't sit inside the row's button, so the row is a grid like the button's own and the link sits over the button's
+   empty column, in the same cell; the rest of the row still opens it. */
+.row.has-go { display: grid; grid-template-columns: minmax(0, 1fr) 128px 20px; }
+.row.has-go > * { grid-column: 1 / -1; }
+.row.has-go > .row-hd { grid-row: 1; }
+.row.has-go > .vd-go { grid-column: 2; grid-row: 1; z-index: 1; justify-self: end; align-self: center; max-width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right; padding: 6px 0 6px 10px; min-height: 44px; color: var(--ink); text-decoration: none; }
+/* The link is only its words (Opus review, Nov 4): the empty column above and below it still opens the row. */
+.vd-go .m { font-size: 14.5px; font-weight: 400; color: var(--ink-2); line-height: 1.22; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--muted); overflow-wrap: break-word; }
+.vd-go .go-w { white-space: nowrap; }
+.vd-go .go-a { display: inline-block; width: 10px; height: 10px; margin-left: 4px; vertical-align: 0; }
+.vd-go:active .m, .vd-go:hover .m { text-decoration-color: currentColor; }
+@media (min-width: 600px) { .row.has-go { grid-template-columns: minmax(0, 1fr) 176px 20px; } }
+@media (max-width: 359px) { .row.has-go { grid-template-columns: minmax(0, 1fr) 108px 14px; } .row.has-go > .vd-go { padding-right: 4px; } }
+/* An open row's link to the office, and the office's own note. */
+.rs-go { margin-top: 10px; }
+.rs-note { color: var(--ink-2); }
+/* The strip: when we last read the election offices, with Refresh. */
+.plan-fresh { margin-top: 8px; font-size: 14px; color: var(--on-dusk-2); line-height: 1.4; }
+.plan-fresh + .plan-fresh { margin-top: 2px; }
+.plan-fresh .linkbtn { color: var(--on-dusk); }
+/* An open row: the count first, then your sources folded. */
+.rs { margin-top: 12px; }
+.rs-h { font-size: 15.5px; color: var(--ink); line-height: 1.4; }
+.rtab { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; font-variant-numeric: tabular-nums; }
+.rtab th { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--muted); text-align: left; padding: 4px 0; border-bottom: 1.5px solid var(--ink); }
+.rtab td { padding: 7px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.rtab .n { text-align: right; padding-left: 12px; white-space: nowrap; }
+.rtab .nm { font-weight: 600; }
+.rtab .py { display: block; font-size: 13px; color: var(--muted); }
+.rtab .tk { display: inline-block; width: 19px; height: 17px; margin: 0 3px 0 -1px; vertical-align: -3px; background: var(--tick); -webkit-mask: var(--pen-tick) center / contain no-repeat; mask: var(--pen-tick) center / contain no-repeat; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.rtab .rk { display: block; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--gold-ink); }
+.rtab tr.wi td { font-style: italic; color: var(--muted); font-size: 14px; }
+.rtab tr.wi .nm { font-weight: 400; }
+.rs-src { margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.45; }
+.rs-src a, .rs-sl a, .rs-ap a { color: var(--ink-2); }
+.rs-sl { margin-top: 4px; font-size: 14px; color: var(--muted); line-height: 1.45; }
+.rs-sl li { padding: 3px 0; }
+.rs-sl b { color: var(--ink-2); font-weight: 600; }
+.rs-ap { margin-top: 8px; font-size: 14px; }
+.rs-ap a { display: inline-block; padding: 4px 0; }
+.rs-fold { width: 100%; margin-top: 16px; padding: 10px 0; min-height: 52px; display: flex; justify-content: space-between; align-items: center; gap: 12px; text-align: left; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); color: var(--ink); }
+.rs-fold .cv { flex: none; }
+.rs-fold[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.rf-t { display: block; min-width: 0; }
+.rf-h { display: block; font-style: italic; font-size: 15px; color: var(--muted); }
+.rf-s { display: block; margin-top: 2px; font-size: 15px; line-height: 1.35; }
+.rs-was { margin-top: 4px; }
+/* Where results stand: the figure at the top of the ballot (views/figure.ts). Your picks are big dots in --tick:
+   filled = winning or won, ring = losing or lost, half filled = numbers in but we can't tell, dotted = not posted
+   here. Races you didn't pick are small faint-ink dots (on a printed ballot with no picks, dotted when they have no
+   numbers). Shape carries the meaning, so print (where --tick is black) and dark mode need nothing new. */
+.vz { margin-top: 14px; padding: 2px 0 14px; border-bottom: 1px solid var(--rule-2); }
+.vz.is-hidden { padding-bottom: 10px; }
+.vz-hd { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.vz-st { font-family: var(--f-display); font-weight: 800; font-size: 24px; line-height: 1; font-variation-settings: "wdth" 78; color: var(--print); }
+.vz-hd .linkbtn { font-size: 14px; color: var(--muted); }
+.vz-ex { margin-top: 6px; font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.vz-key { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.3; }
+.vz-key > span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.vz-key .d { width: 12px; height: 12px; }
+.vz-fig { margin-top: 10px; border-top: 1px solid var(--rule); }
+.vz-r { display: grid; grid-template-columns: 96px minmax(0, 1fr) 36px; align-items: center; gap: 8px; min-height: 44px; border-bottom: 1px solid var(--rule); }
+.vz-l { text-align: left; padding: 8px 0; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14px; line-height: 1.2; color: var(--ink-2); overflow-wrap: anywhere; }
+.vz-dots { display: flex; flex-wrap: wrap; gap: 6px 5px; align-items: center; padding: 7px 0; }
+.vz-cv { align-self: stretch; display: flex; align-items: center; justify-content: flex-end; color: var(--muted); }
+.vz-cv .chev { width: 14px; height: 14px; }
+.vz-cv[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.d { display: inline-block; width: 13px; height: 13px; border-radius: 50%; flex: none; position: relative; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.d.up { background: var(--tick); }
+.d.down { border: 2px solid var(--tick); }
+.d.wq { border: 2px solid var(--tick); background: linear-gradient(90deg, var(--tick) 50%, transparent 50%); }
+.d.wp { border: 2px dotted var(--tick); }
+.d.po::after, .d.w::after { content: ""; position: absolute; inset: 3.5px; border-radius: 50%; }
+.d.po::after { background: var(--faint); }
+.d.w::after { inset: 2.5px; border: 1.3px dotted var(--faint); }
+.vz-sum { margin-top: 12px; font-size: 15px; color: var(--ink); line-height: 1.4; }
+.vz-more { margin-top: 4px; font-size: 14.5px; color: var(--ink-2); line-height: 1.4; }
+.vz-note { margin-top: 6px; font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+.vz-list { padding: 2px 0 8px 104px; border-bottom: 1px solid var(--rule); }
+.vz-list li { display: grid; grid-template-columns: 13px minmax(0, 1fr); gap: 8px; align-items: start; padding: 4px 0; font-size: 15px; line-height: 1.3; }
+.vz-list li .d { margin-top: 3px; }
+.vz-list .linkbtn { text-align: left; color: var(--ink); font-size: 15px; }
+.vz-list small { display: block; margin-top: 1px; font-size: 13.5px; color: var(--muted); }
+.vz-src { margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+@media (max-width: 420px) { .vz-r { grid-template-columns: 78px minmax(0, 1fr) 32px; } .vz-list { padding-left: 0; } }
+@media print { .vz-cv, .vz-hd .linkbtn, .rs-fold .cv { display: none; } }
+@media print { .vz-print { margin: 8pt 0 10pt; padding-bottom: 6pt; } .vz-print .vz-r { min-height: 0; } }
+.d.ln::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; border: 1.3px solid var(--faint); }
+
+/* ---------- results first (overnight, Nov 3 to 4) ---------- */
+/* What's next is paper in both themes: its outline buttons were white on paper (Kevin's 9:10 PM screenshot). */
+.cheat .pbtn.line { border-color: var(--ink); color: var(--ink); }
+.cheat .pbtn.gold { background: var(--paper-green); color: var(--on-dusk); }
+/* The bar's results line, above its two buttons: one line at every width (DESIGN-OVERNIGHT-2 section 2). The line opens
+   the menu at its sources; the icon is Refresh. When the line would overflow, fitFoot (views/ledger.ts) shortens the
+   progress words, then drops them, and drops the office's name only last, so "last posted" keeps saying whose post. */
+:root:has(.foot-res) { --foot-h: 98px; }
+.foot-res { display: flex; align-items: center; gap: 4px; max-width: 640px; margin: 0 auto; padding: 4px 6px 0 16px; font-family: var(--f-display); font-variation-settings: "wdth" 84; letter-spacing: .01em; font-size: 14.5px; line-height: 1.25; color: var(--ink-2); }
+.foot-res + .foot-in { min-height: 58px; }
+.fr-line { flex: 1 1 auto; min-width: 0; display: block; min-height: 36px; padding: 9px 0 8px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink-2); }
+.fr-w { font-weight: 600; color: var(--ink); }
+.fr-d { font-style: normal; color: var(--muted); }
+.fr-at { color: var(--muted); font-variant-numeric: tabular-nums; }
+.fr-ps { display: none; }
+.foot-res.f1 .fr-pl { display: none; }
+.foot-res.f1 .fr-ps { display: inline; }
+.foot-res.f2 .fr-ps { display: none; }
+.foot-res.f3 .fr-mid { display: none; }
+.fr-rf { flex: none; width: 44px; height: 40px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 2px; }
+.fr-rf .rf-i { width: 18px; height: 18px; }
+.fr-rf[aria-busy="true"] .rf-i, .fr-btn[aria-busy="true"] .rf-i { animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.foot-res a.fr-go { color: var(--ink); }
+.fr-btn { gap: 5px; font-size: 13.5px; color: var(--ink); }
+.fr-btn .rf-i { width: 13px; height: 13px; flex: none; }
+/* The menu once the polls close: where results stand first. */
+.nv-res { padding: 2px 0 10px; border-bottom: 1px solid var(--rule-2); }
+.nv-rw { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.nv-rw b { font-family: var(--f-display); font-weight: 800; font-size: 22px; line-height: 1.1; font-variation-settings: "wdth" 78; color: var(--print); }
+.nv-rw > span { font-size: 14px; color: var(--muted); }
+.nv-rw .fr-btn { margin-left: auto; margin-top: -10px; margin-bottom: -10px; font-size: 14.5px; }
+.nv-rx { margin-top: 4px; font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.nv-srcs { margin-top: 8px; }
+.nv-srcs li { padding: 6px 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.35; }
+.nv-srcs b { display: block; font-weight: 600; color: var(--ink); }
+.nv-srcs span { display: block; color: var(--muted); }
+.nv-offs, .vz-offs { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 0 18px; font-size: 14.5px; }
+.nv-offs a, .vz-offs a { display: inline-block; padding: 8px 0; color: var(--ink); }
+.nv-res + .nv-sw, .nv-res + .nv-list { margin-top: 4px; }
+/* The figure's sources, folded under one link. */
+.vz-srcs { margin-top: 12px; font-size: 14px; }
+.vz-srcs .linkbtn { color: var(--muted); }
+.vz-srcs + .vz-src { margin-top: 2px; }
+/* No picks: where races stand, grouped like the ballot. */
+.st { margin-top: 10px; }
+.st-sec + .st-sec { margin-top: 12px; }
+.st-h { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14.5px; color: var(--ink-2); border-bottom: 1.5px solid var(--ink); }
+.st-h .linkbtn { text-decoration: none; margin: 0; min-height: 36px; padding: 0; }
+.st-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; border-bottom: 1px solid var(--rule); }
+.st-t { text-align: left; padding: 7px 0; min-height: 44px; font-size: 15px; line-height: 1.25; color: var(--ink); }
+.st-t small { display: block; font-size: 13.5px; color: var(--muted); margin-top: 1px; }
+.st-v { text-align: right; max-width: 52vw; font-size: 15px; line-height: 1.25; }
+.st-v b { display: block; font-weight: 600; font-variant-numeric: tabular-nums; }
+.st-v small { display: block; font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 13px; color: var(--muted); }
+.st-none { color: var(--muted); font-size: 14.5px; }
+a.st-go { display: inline-block; padding: 6px 0; font-size: 14.5px; color: var(--ink); }
+.st-more { font-size: 14px; }
+.st-more .linkbtn { color: var(--muted); }
+@media (min-width: 600px) { .st-v { max-width: 260px; } }
+.nv-from { margin-top: 10px; }
+.nv-sh { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14px; color: var(--muted); margin-bottom: 2px; }
+.nv-from .nv-srcs { margin-top: 0; }
+.nv-next-step { margin-top: 10px; }
+/* ---------- the results card, second pass (DESIGN-OVERNIGHT-2 section 1) ----------
+   "Compare with": your picks first when you have some, then the picking step's groups and A party, one at a time. A
+   little more compact than step 2's chips, since they sit above the answer. */
+.cmp { margin-top: 12px; }
+.cmp-l { font-family: var(--f-display); font-weight: 600; font-variation-settings: "wdth" 88; letter-spacing: .015em; font-size: 14px; color: var(--muted); }
+.cmp-chips, .cmp-parties { display: flex; flex-wrap: wrap; gap: 6px 8px; margin-top: 6px; }
+.cmp .chip { min-height: 40px; padding: 0 11px; font-size: 14.5px; }
+.cmp-parties { margin-top: 8px; padding-left: 10px; border-left: 2px solid var(--rule-2); }
+.cmp-own { margin-top: 6px; font-size: 14.5px; }
+.cmp-own .linkbtn { color: var(--ink-2); }
+.vz-head { margin-top: 14px; font-weight: 600; }
+.vz-head + .vz-more { margin-top: 2px; }
+.cmp-take { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-top: 12px; }
+.cmp-take span { font-size: 14px; color: var(--muted); }
+/* The menu's sources: each office's own words and time, our check and its page. */
+.nv-srcs .nv-ck { color: var(--muted); }
+.nv-srcs .nv-ck a { color: var(--ink-2); display: inline-block; padding: 4px 0; }
+.nv-sh:focus { outline: none; }
+/* What's next dates, grouped (DESIGN-OVERNIGHT-2 section 4): a date (or range) and its short rows; each row opens to
+   its full sentence and source. The nested list doesn't take the date list's grid. */
+.nx-dates > li { align-items: start; }
+.nx-dates .pd-g { display: grid; min-width: 0; }
+.nx-dates .pd-g > li { display: block; grid-column: auto; padding: 0; border: 0; }
+.nx-dates .pd-g > li + li { border-top: 1px dotted var(--rule); }
+.pd-s { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 10px; min-height: 36px; padding: 2px 0; text-align: left; line-height: 1.3; }
+.pd-s .chev { width: 12px; height: 12px; flex: none; color: var(--muted); }
+.pd-s[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.pd-x { padding: 0 0 8px; font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.nx-dates .pd-i { line-height: 1.35; }
+.nv-srcs .nv-sr { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.nv-srcs a.nv-go { flex: none; color: var(--ink-2); padding: 4px 0; }
+.vz .vz-key { gap: 4px 12px; font-size: 13px; }
+.cmp-hint { color: var(--muted); }
+/* Compare with, compact (PR #139 review): pill chips, two rows at most at 390 px with Your picks. */
+.cmp .chip.cmp-c { min-height: 34px; padding: 0 11px; font-size: 14px; border-width: 1px; border-radius: 17px; gap: 5px; }
+.cmp .chip.cmp-c .tick { width: 11px; height: 11px; }
+.cmp .chip.cmp-back { color: var(--muted); }
+.cmp-chips { gap: 6px; }
+.vz-st:focus { outline: none; }
+.foot-res.f1 .fr-at.dn { display: none; }

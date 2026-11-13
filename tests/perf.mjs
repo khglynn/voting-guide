@@ -133,9 +133,51 @@ for (const [name, zip] of [['Chicago', '60614']]) {
   resume.push({ name, go, gone: !(await page.$('.resume')) });
   await ctx.close();
 }
+/* Results (Nov 3, results Phase 1): after the close, every row on the biggest Texas ballot carries a count and the ballot
+   head the figure, so a tap repaints more. A made-up results file with numbers for every race on Houston's ballot. */
+const res = [];
+{
+  const ctx = await browser.newContext({ viewport: { width: 380, height: 820 }, hasTouch: true, isMobile: true, timezoneId: 'America/Chicago' });
+  await ctx.route((u) => u.pathname.startsWith('/_vercel/insights/'), (route) => route.fulfill({ status: 200, contentType: 'text/javascript', body: '' }));
+  const items = {};
+  for (const f of ['state-TX.json', 'place-houston-tx.json']) {
+    const b = await (await fetch(`${BASE}/data/${f}`)).json();
+    for (const it of b.items) {
+      const base = { source: 'harris-county-tx', status: 'counting', reporting: '300 of 623 vote centers reporting', updated: '2026-11-04T03:12:00Z', url: 'https://www.harrisvotes.com/', final: null };
+      if (it.kind === 'measure') items[it.id] = { ...base, measure: { yes: 5200, no: 4800, yes_pct: 52, threshold: null }, total_votes: 10000 };
+      else if (it.candidates.length > 1) { const n = it.candidates.length; const c = it.candidates.map((k, i) => ({ name: k.name, votes: 1000 * (n - i), pct: 0 })); const t = c.reduce((a, k) => a + k.votes, 0); c.forEach((k) => { k.pct = (k.votes / t) * 100; }); items[it.id] = { ...base, candidates: c, total_votes: t }; }
+    }
+  }
+  const file = JSON.stringify({ election: '2026-11-03', state: 'TX', generated: '2026-11-04T03:42:30Z', sources: [{ id: 'harris-county-tx', name: 'Harris County', url: 'https://www.harrisvotes.com/', updated: '2026-11-04T03:12:00Z', status: 'counting', reporting: '300 of 623 vote centers reporting', fetched: '2026-11-04T03:42:00Z' }], items });
+  await ctx.route((u) => u.pathname === '/results/2026-11-03/TX.json', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: file }));
+  const page = await ctx.newPage();
+  const cdp = await ctx.newCDPSession(page);
+  await page.goto(`${BASE}/?today=2026-11-03&now=21:42`);
+  await page.fill('#zip', '77002');
+  await page.locator('[data-act="setup-done"]').click();
+  // No picks yet: the summary is the where-races-stand list; after the pick below it is the dots again.
+  await page.waitForSelector('#vz .st, #vz .vz-fig');
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+  const t = (sel) => page.evaluate((s) => new Promise((resolve) => {
+    const el = document.querySelector(s);
+    const t0 = performance.now();
+    el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, button: 0, pointerType: 'mouse' }));
+    requestAnimationFrame(() => setTimeout(() => resolve(Math.round(performance.now() - t0)), 0));
+  }), sel);
+  const id = await page.evaluate(() => document.querySelector('#sec-measures .row[data-item]').dataset.item);
+  const openRow = await t(`#i-${id} [data-act="row"]`);
+  await t(`#i-${id} [data-act="open"].rs-fold`);
+  await page.waitForTimeout(300);
+  const pick = await t(`#i-${id} [data-act="pick"]`);
+  await page.waitForTimeout(300);
+  const figRow = await t('#vz [data-act="fig-row"]');
+  res.push({ name: 'Houston, results', openRow, pick, figRow });
+  await ctx.close();
+}
 await browser.close();
 for (const r of out) console.log(`${r.name}: open to step 2 ${r.open}ms, step 2 chip ${r.setupChip}ms, step 2 switch ${r.setupFill}ms, show my ballot ${r.show}ms, open a row ${r.openRow}ms, pick ${r.pick}ms, open a row in view ${r.openInView}ms, close it ${r.closeInView}ms, open Edit ${r.edit}ms, Edit chip ${r.chip}ms, Edit done ${r.done}ms, open the menu ${r.menu}ms, its switch ${r.only}ms, a band's count ${r.count}ms, a pick under the filter ${r.pickHidden}ms (4x CPU throttle)`);
 for (const r of wide) console.log(`${r.name} at 1280px, with the rail: open a row ${r.openRow}ms, pick ${r.pick}ms, Next up ${r.next}ms (4x CPU throttle)`);
+for (const r of res) console.log(`${r.name}: open a row ${r.openRow}ms, pick ${r.pick}ms, a figure row ${r.figRow}ms (4x CPU throttle)`);
 for (const r of resume) console.log(`${r.name}, back again: "Pick up where I left off" ${r.go}ms${r.gone ? '' : ' (the line stayed!)'} (4x CPU throttle)`);
-const slow = [...out.filter((r) => [r.openRow, r.pick, r.openInView, r.closeInView, r.setupChip, r.setupFill, r.edit, r.chip, r.menu, r.count, r.pickHidden].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250), ...resume.filter((r) => r.go > 250 || !r.gone)];
+const slow = [...out.filter((r) => [r.openRow, r.pick, r.openInView, r.closeInView, r.setupChip, r.setupFill, r.edit, r.chip, r.menu, r.count, r.pickHidden].some((t) => t > 250)), ...wide.filter((r) => r.openRow > 250 || r.pick > 250), ...resume.filter((r) => r.go > 250 || !r.gone), ...res.filter((r) => r.openRow > 250 || r.pick > 250 || r.figRow > 250)];
 process.exit(slow.length ? 1 : 0);

@@ -1,0 +1,13 @@
+{
+  "election": "2026-11-03",
+  "state": "PA",
+  "generated": "2026-11-04T02:41:30Z",
+  "sources": [
+    {"id": "results-PA", "name": "Pennsylvania Department of State", "url": "https://www.electionreturns.pa.gov/", "updated": null, "status": "refused", "reporting": null, "fetched": null, "note": "source refused us"},
+    {"id": "philadelphia-pa", "name": "Philadelphia City Commissioners", "url": "https://vote.phila.gov/results/", "updated": "2026-11-04T02:35:00Z", "status": "counting", "reporting": null, "fetched": "2026-11-04T02:41:00Z"},
+    {"id": "allegheny-pa", "name": "Allegheny County", "url": "https://results.enr.clarityelections.com/PA/Allegheny/127287/", "updated": "2026-11-04T02:30:00Z", "status": "counting", "reporting": "1,012 of 1,323 precincts reporting", "fetched": "2026-11-04T02:40:00Z"}
+  ],
+  "items": {
+    "pa-governor": {"source": "philadelphia-pa", "status": "counting", "reporting": null, "updated": "2026-11-04T02:35:00Z", "url": "https://vote.phila.gov/results/", "total_votes": 500000, "candidates": [{"name": "Josh Shapiro / Austin Davis", "votes": 390000, "pct": 78}, {"name": "Stacy Garrity / Jason Richey", "votes": 105000, "pct": 21}, {"name": "Ken Krawchuk / John Thomas", "votes": 5000, "pct": 1}], "slices": [{"source": "philadelphia-pa", "county": "Philadelphia", "status": "counting", "reporting": null, "updated": "2026-11-04T02:35:00Z", "url": "https://vote.phila.gov/results/", "total_votes": 500000, "candidates": [{"name": "Josh Shapiro / Austin Davis", "votes": 390000, "pct": 78}, {"name": "Stacy Garrity / Jason Richey", "votes": 105000, "pct": 21}, {"name": "Ken Krawchuk / John Thomas", "votes": 5000, "pct": 1}]}, {"source": "allegheny-pa", "county": "Allegheny", "status": "counting", "reporting": "1,012 of 1,323 precincts reporting", "updated": "2026-11-04T02:30:00Z", "url": "https://results.enr.clarityelections.com/PA/Allegheny/127287/", "total_votes": 400000, "candidates": [{"name": "Josh Shapiro / Austin Davis", "votes": 244000, "pct": 61}, {"name": "Stacy Garrity / Jason Richey", "votes": 152000, "pct": 38}, {"name": "Ken Krawchuk / John Thomas", "votes": 4000, "pct": 1}]}], "missing": ["other counties"], "final": null}
+  }
+}

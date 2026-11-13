@@ -14,13 +14,9 @@ on:
         type: choice
         options: [fast, full]
         default: full
-  schedule:
-    # Daily at 4:23am Central (09:23 UTC) while the election is live. Checks the LIVE site, not the repo.
-    # Remove after Nov 4, 2026, or keep weekly. It fails loudly if production breaks with nobody pushing.
-    - cron: '23 9 * * *'
-    # And every four hours through Election Day (Oct 29 system review: a county site or a city build can break the
-    # live guide between nightly runs). Remove after Nov 4, 2026.
-    - cron: '17 */4 * * *'
+  # The scheduled sweeps of the live site (daily, and every four hours through Election Day) went on 2026-11-07,
+  # as their own comment said to after Nov 4 (Kevin, the same day, yes to Gabby's pick on her pipe watch). The
+  # sweep still runs after every push to main and by hand (workflow_dispatch).
 
 # A newer push to the same PR replaces the older run. Main is never cancelled.
 concurrency:
@@ -62,7 +58,6 @@ jobs:
 
   # Fast, no browser. The rules from FOUNDATION.md as code, then the build (which includes the typecheck).
   data:
-    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -113,7 +108,7 @@ jobs:
     # Skipped only when `changes` succeeded and found a source-only diff. On a push to main `changes` is skipped, so this
     # runs; if `changes` fails, this runs. A cancelled run is left cancelled: here that only happens when a newer push
     # replaces it (the concurrency group above), and the newer run decides.
-    if: ${{ !cancelled() && github.event_name != 'schedule' && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
+    if: ${{ !cancelled() && !(needs.changes.result == 'success' && needs.changes.outputs.source_only == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -182,10 +177,10 @@ jobs:
             .tmp/sweep-shots
           retention-days: 14
 
-  # The LIVE site, once a day. No checkout of data needed: the sweep reads /data from the URL it tests.
+  # The LIVE site, by hand. No checkout of data needed: the sweep reads /data from the URL it tests.
   live:
-    # Also after every push to main (a merged city or data PR), once production serves that commit.
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    # And after every push to main (a merged city or data PR), once production serves that commit.
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
     timeout-minutes: 25   # setup, up to 8 minutes waiting for the deploy, and two sweeps
     steps:

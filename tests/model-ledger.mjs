@@ -2415,6 +2415,7 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
     const txt = (h) => h.replace(/<\/(p|div|li|h\d)>|<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
     const store = {};
     globalThis.window = { localStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } } };
+    const hadLocation = Object.getOwnPropertyDescriptor(globalThis, 'location'); // model.mjs pins a day for every check (Nov 3)
     const setToday = (d) => { globalThis.location = { search: `?today=${d}`, origin: 'https://vote.kevinhg.com', pathname: '/' }; };
     setToday('2026-10-25');
     try {
@@ -2542,8 +2543,38 @@ export async function run({ st, bl, geo, common, mods, views, open, head, read, 
       const ph = views.shelf.shelfHTML();
       check('follow-up: for a thin place, Tell me what he finds, even if it’s nothing', /<h2 id="sh-h">Tell me what he finds<\/h2>/.test(ph) && /what he finds for Pensacola, even if it’s nothing\./.test(ph) && /<b>Your request:<\/b> local picks for Pensacola, ZIP 32501\. Sent today\./.test(ph) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me what you find' && views.shelf.reportBody(S.ui.report)[F2.wrong].startsWith('Tell me what you find for Pensacola. Follow-up to the one-tap request from Oct 25.'), txt(ph).slice(0, 300));
       S.ui.report = null;
+
+      // After the polls close (Nov 5; Kevin: "People should be able to request new cities still. It'll be mostly
+      // results focused. But it needs, like, race information too"): a city request gets its races, who ran and how
+      // each came out, with no time promised and nothing about voting; a thin place's hunt for local picks stops.
+      delete store['vg-asked'];
+      setToday('2026-11-04');
+      check('after the close: a thin place gets no card and asks nothing', views.coverage.covCardHTML('ballot') === '' && !views.coverage.cardAsks(views.coverage.covOf()));
+      open('MO', []);
+      S.b.zip = '65806';
+      const ac = txt(views.coverage.covCardHTML('ballot'));
+      check('after the close: the statewide card asks for races and results, says Kevin will try, and has no voting or time line', ac === `Your city’s races and results aren’t in the guide yet. Here now: Missouri’s statewide races, with picks from ${INDEX.states.MO.with_picks} of ${INDEX.states.MO.sources} sources. Not here yet: races and results for your city, county and districts. Ask Kevin to add my city One tap. It sends Kevin your ZIP and nothing about you. He’ll try to add who ran and how each race came out.`, ac);
+      mc.rememberAsk('z:65806', '2026-11-04');
+      const aa = txt(views.coverage.covCardHTML('ballot'));
+      check('after the close: asked, the card says Kevin will try, what he looks for, and offers Tell me when it’s in', aa === 'Request sent. Kevin will try to add your city. You asked today. He’ll look for its races, who ran and how each one came out. Until then, your statewide races are below. Tell me when it’s in', aa);
+      check('after the close: asked, the quiet lines say races and results too', txt(views.coverage.headCovHTML()).endsWith('You asked for your city’s races and results today.') && txt(views.coverage.sheetCovHTML()).endsWith('You asked for your city’s races and results today.'), txt(views.coverage.headCovHTML()));
+      S.ui.report = { kind: 'city', f: { reach: '' }, what: '', tag: '', hint: 'follow', along: { ...fa, data: '2026-11-04 12:00 UTC' }, state: 'edit', err: false, fk: 'cov-hear', back: null };
+      const af = views.shelf.shelfHTML();
+      check('after the close: the follow-up asks to hear when the city’s races and results are in, and posts the same follow-up', /Kevin will tell you when your city’s races and results are in the guide\./.test(af) && /<b>Your request:<\/b> your city’s races and results, for ZIP 65806 in Missouri\. Sent today\./.test(af) && views.shelf.reportBody(S.ui.report)[F2.what] === 'Follow-up: tell me when it’s in', txt(af).slice(0, 300));
+      S.ui.report = { kind: 'city', f: { city: '', zip: '65806', reach: '' }, what: '', tag: '', hint: '', along: fa, state: 'edit', err: false, fk: 'help-city', back: null };
+      const intro = () => (views.shelf.shelfHTML().match(/<p class="rp-intro">([^<]*)<\/p>/) || [])[1];
+      const after = 'Want your city’s results? Tell Kevin which city or town. He’ll try to add its races, who ran and how each one came out.';
+      check('after the close: Request a city says what a new city gets now', intro() === after, intro());
+      const kb = S.ballot; S.ballot = null;
+      check('after the close: with no ballot open, the same once every covered state has closed', intro() === after, intro());
+      setToday('2026-10-25');
+      check('before the close: Request a city still says which city to add next', intro() === 'Tell Kevin which city to add next.', intro());
+      S.ballot = kb;
+      check('before the close: the statewide card is as it was', txt(views.coverage.covCardHTML('ballot')).startsWith('Your city’s races aren’t in the guide yet.'));
+      S.ui.report = null;
+      delete store['vg-asked'];
     } finally {
-      delete globalThis.window; delete globalThis.location;
+      delete globalThis.window; if (hadLocation) Object.defineProperty(globalThis, 'location', hadLocation); else delete globalThis.location;
       S.index = keep.index; S.view = keep.view; S.ui.view = keep.uiView; S.pending = keep.pending; S.ui.resume = keep.resume;
     }
 

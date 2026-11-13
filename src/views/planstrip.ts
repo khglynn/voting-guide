@@ -5,11 +5,13 @@
    something goes wrong: everything the v2 plan card held, one tap away. Every date is read from the state file. */
 import type { HowTo, HelpAction, OfficeLine, PlaceEarly } from '../types';
 import { S } from '../state';
-import { esc, fmtDate, todayISO, host } from '../util';
+import { esc, fmtDate, todayISO, host, hash } from '../util';
 import { nextStep, registrationAlert, registerAction, isMailState, applyDated, countyKey, apStateURL, officialLines, type Step } from '../model/plan';
 import { ext, isOpen, bulletsHTML, leadBulletsHTML, escP, srcLink, sentences, telHTML, wordCount, deshout } from './common';
 import { queryOf, textOf, best, type Item } from '../model/search';
 import { nearNow, fmtMiles, directionsURL, type NearNow } from '../model/sites';
+import { allLinksNow } from './figure';
+import { R, resultsOn, checkedLine, ballotSources, sourceDown, fmtTime } from '../model/results';
 
 /* What the strip last showed, so main.ts can repaint it when the step changes while the page
    sits open (the polls close, midnight passes). */
@@ -36,7 +38,7 @@ export function planHTML(): string {
   return `<section class="plan" id="plan" aria-labelledby="plan-h"><div class="wrap plan-in">
       <h2 class="vh" id="plan-k" tabindex="-1" data-fk="plan-k">Your next step</h2>
       <p class="plan-h" id="plan-h">${head}</p>
-      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}${res ? resultsNoteHTML(step) : ''}
+      ${sub.length ? `<p class="plan-sub">${esc(sub.join(' '))}</p>` : ''}${res ? resultsNoteHTML(step) + freshHTML() : ''}
       ${reg ? `<div class="plan-reg"><p>${esc(reg)}</p>${regBtn ? `<a class="pbtn line" href="${esc(regBtn.url)}" target="_blank" rel="noopener" data-fk="plan-register">${esc(regBtn.label)}</a>` : ''}</div>` : ''}
       ${res || `${countyActs(h, step)}
       <div class="plan-acts">${step.primary && !countyActs(h, step) ? `<a class="pbtn gold" href="${esc(step.primary.url)}" target="_blank" rel="noopener">${esc(step.primary.label)}</a>` : ''}
@@ -336,6 +338,27 @@ function resultsActs(h: HowTo, step: Step): string {
   const calls = `<p class="plan-hint plan-calls"><a href="${esc(apStateURL(h.state, stName))}" target="_blank" rel="noopener" data-fk="plan-ap">AP’s race calls</a>. AP reports who it expects to win. Election offices publish the counts.</p>`;
   return `${res}${track}${calls}`;
 }
+/* When we last read the election offices, with Refresh (Nov 3, results Phase 1), under the wait line: "We checked:
+   9:42 PM CT. Refresh", per source on a ballot across counties. A source we couldn't reach says so and when its last
+   numbers are from; a Refresh that found nothing new says "No change since 9:35 PM CT", never a fresh time. Nothing
+   until the results file has been read for this ballot (a state with no file shows nothing). */
+export function freshHTML(): string {
+  if (!S.ballot || R.st !== S.ballot.st || R.none) return '';
+  if (!R.file && !R.failed) return '';
+  const btn = `<button class="linkbtn" data-act="results-refresh" data-fk="res-refresh"${R.checking ? ' aria-busy="true"' : ''}>${R.checking ? 'Checking…' : 'Refresh'}</button>`;
+  if (!resultsOn()) return `<p class="plan-fresh">Couldn’t check the election office’s results just now. ${btn}</p>`;
+  // Every race a link (Manhattan): nothing of ours to check or refresh (DESIGN, link-only places).
+  if (allLinksNow()) return '';
+  const srcs = ballotSources();
+  const checked = checkedLine(srcs);
+  const down = srcs.filter(sourceDown).map((x) => `Couldn’t reach ${x.name}. Showing its ${x.updated ? `${fmtTime(x.updated)} ` : 'last '}numbers.`);
+  const lines = [
+    R.failed ? 'Couldn’t check just now. These are the last numbers we read.' : '',
+    ...down,
+    R.nochange ? `No change since ${R.nochange}.` : '',
+  ].filter(Boolean);
+  return `<p class="plan-fresh" role="status">${checked ? `${esc(checked)}. ` : ''}${btn}</p>${lines.map((l) => `<p class="plan-fresh">${esc(l)}</p>`).join('')}`;
+}
 /* The one line on when the county posts, right under the head (plan.resultsNotes). */
 function resultsNoteHTML(step: Step): string {
   return (step.notes || []).map((n) => `<p class="plan-sub plan-note">${esc(n)}</p>`).join('');
@@ -353,7 +376,30 @@ export function nextBodyHTML(h: HowTo, forPrint = false, official = true): strin
   const rows = h.results?.next || [];
   const up = rows.filter((r) => r.date >= t), past = rows.filter((r) => r.date < t);
   const link = (url: string, text: string): string => (forPrint ? esc(text) : ext(url, text));
-  const list = (rs: typeof rows) => `<ol class="pdates nx-dates">${rs.map((r) => `<li><span class="pd-d">${esc(fmtDate(r.date))}</span><span class="pd-l">${esc(r.line)}${forPrint ? '' : ` ${ext(r.source, host(r.source))}`}</span></li>`).join('')}</ol>`;
+  // Each line's source as a small arrow, named for screen readers (overnight: "sos.texas.gov" on every line was clutter).
+  const srcA = (url: string, when: string): string => (/^https?:\/\//i.test(url || '') ? `&nbsp;<a class="pd-src" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${esc(`Source for ${when}: ${host(url)}`)}" title="${esc(host(url))}"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>` : '');
+  // The arrow rides with the line's last word in a span that never wraps (an inline-flex link breaks off even after a
+  // no-break space; Opus review, Nov 4).
+  const withEnd = (line: string, tail: string): string => { if (!tail) return esc(line); const i = line.lastIndexOf(' '); return `${esc(line.slice(0, i + 1))}<span class="pd-end">${esc(line.slice(i + 1))}${tail}</span>`; };
+  // Dates you can scan (DESIGN-OVERNIGHT-2 section 4; Kevin: "this text is toooo much"): grouped by date, a range shown
+  // as a range ("Nov 6 to 17", never its last day), each row its short label, with the full sentence and its source
+  // opening under it. A row with no label, and the printed page, show the full sentence.
+  const when = (r: (typeof rows)[number]): string => {
+    if (!r.from) return fmtDate(r.date);
+    const a = fmtDate(r.from, { weekday: false }), b = fmtDate(r.date, { weekday: false });
+    return a.split(' ')[0] === b.split(' ')[0] ? `${a} to ${b.split(' ')[1]}` : `${a} to ${b}`;
+  };
+  const item = (r: (typeof rows)[number]): string => {
+    if (forPrint || !r.short) return `<li class="pd-i">${withEnd(r.line, forPrint ? '' : srcA(r.source, when(r)))}</li>`;
+    const k = `nx-${hash(`${r.date}|${r.line}`)}`;
+    const open = isOpen(k);
+    return `<li class="pd-i"><button class="pd-s" data-act="open" data-k="${k}" aria-expanded="${open}" data-fk="${k}"><span>${esc(r.short)}</span>${CHEV}</button>${open ? `<p class="pd-x">${withEnd(r.line, srcA(r.source, when(r)))}</p>` : ''}</li>`;
+  };
+  const list = (rs: typeof rows) => {
+    const groups = new Map<string, typeof rows>();
+    for (const r of rs) { const k = `${r.from || ''}|${r.date}`; const g = groups.get(k); if (g) g.push(r); else groups.set(k, [r]); }
+    return `<ol class="pdates nx-dates">${[...groups.values()].map((g) => `<li><span class="pd-d">${esc(when(g[0]))}</span><ul class="pd-g">${g.map(item).join('')}</ul></li>`).join('')}</ol>`;
+  };
   const sits = AFTER_SITS.map((id) => sitsOf(h).find((x) => x.id === id)).filter((x): x is Situation => !!x);
   const o = S.ballot ? officeOf() : null;
   const fix = forPrint

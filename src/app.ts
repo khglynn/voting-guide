@@ -2,11 +2,13 @@
    the ZIP box, the Census address lookup, views and the browser's Back button, and the hidden
    "try as" scenarios. */
 import type { Index, PlaceBundle, StateBundle } from './types';
+import { resetCompare } from './model/results';
 import { S, emptyBallotState, noSections, persist, leaveLast, leftBallot, savedBallot, parseShareHead, decodeShare, normalizeRanks, type BallotState, type View } from './state';
 import { buildBallot, localize, entriesBySection, status, isRCV, isMultiSeat, isMultiJudge, rankMax, decisionItems, chosenIds, sectionOf, sameSeat, type Ballot } from './ballot';
 import { zipState, censusLookup, settleAddress, ballotFor, whichPlace, outsideOf, zipPlaces, placeName, withPlace, tidyAddress, type GeoResult } from './geo';
 import { toast, hideToast } from './util';
 import { keepPrivate } from './errors';
+import { tickResults } from './results';
 import { track, type Events } from './stats';
 import { render, renderBallot, renderAddr, anchored, $ } from './render';
 import { setInvolved, type GetInvolved } from './views/pass';
@@ -113,6 +115,7 @@ export async function loadInvolved(): Promise<void> {
 let lastView = '';
 export function viewed(): void {
   if (S.view === 'loading') return;
+  if (S.view === 'ballot') tickResults(); // a ballot whose polls have closed reads its results file (src/results.ts)
   const name: Events['view']['name'] = S.view !== 'ballot' ? 'start' : S.ui.reader ? 'reader' : S.ui.view === 'cheat' ? 'plan' : S.ui.view === 'pass' ? 'share' : 'ballot';
   if (name === lastView) return;
   lastView = name;
@@ -127,6 +130,7 @@ export function resetUI(): void {
   u.noteOpen.clear(); u.reader = null; u.sheet = null; u.sheetFrom = null; u.sheetBack = null; u.addrOpen = false; u.addrMsg = null; u.addrFail = ''; u.addrCounty = null; u.addrPoint = null; u.addrFound = null; u.addrMoved = null; u.addrWhich = null; u.addrMaps = []; u.addrMapsPending = false; u.saveOpen = false; u.copyFallback = null; u.bulk = null; u.bulkWhy = null; u.addrFilled = null; u.lensEmptied = false;
   u.resume = false; u.covAsk = ''; u.srcQ = ''; u.wiQ = '';
   u.open.delete('voted');
+  resetCompare();
 }
 export function go(view: View, push = true): void {
   if (S.ui.view === view) return;
@@ -487,6 +491,7 @@ export async function showBallot(): Promise<{ n: number; plan: ReturnType<typeof
   S.b.hideDecided = S.door.only && !S.tryMode;
   S.ui.row = null; S.ui.keep = null;
   S.ui.bulk = n ? String(n) : null;
+  S.ui.takeWas = null; // a new batch: its Undo is about its own picks only
   S.ui.bulkWhy = n && plan ? fillWhy(plan) : null;
   // What the fill filled shows on this first look, even a section it finished (UX walk, Oct 20:
   // finished sections arrived folded, so the friend never saw the picks they agreed to). Under

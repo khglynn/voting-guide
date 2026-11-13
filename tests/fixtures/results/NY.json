@@ -1,0 +1,75 @@
+{
+ "election": "2026-11-03",
+ "state": "NY",
+ "generated": "2026-11-04T03:00:00Z",
+ "sources": [
+  {
+   "id": "results-NY-nyc",
+   "name": "NYC Board of Elections",
+   "url": "https://enr.boenyc.gov/",
+   "updated": null,
+   "status": "link_only",
+   "reporting": null,
+   "fetched": null,
+   "note": "link only"
+  }
+ ],
+ "items": {
+  "ny-governor": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "ny-attorney-general": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "ny-us-house-12": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "nyc-council-3": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "nyc-proposal-1": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "ny-supreme-court-jd1": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  },
+  "nyc-civil-court-manhattan": {
+   "source": "results-NY-nyc",
+   "status": "link_only",
+   "reporting": null,
+   "updated": null,
+   "url": "https://enr.boenyc.gov/",
+   "reason": "link only"
+  }
+ }
+}

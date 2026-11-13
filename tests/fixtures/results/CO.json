@@ -1,0 +1,127 @@
+{
+ "election": "2026-11-03",
+ "state": "CO",
+ "generated": "2026-11-04T04:12:30Z",
+ "sources": [
+  {
+   "id": "results-CO",
+   "name": "Colorado Secretary of State",
+   "url": "https://results.enr.clarityelections.com/CO/127001/",
+   "updated": "2026-11-04T04:05:00Z",
+   "status": "counting",
+   "reporting": "Ballots counted: 2,101,334",
+   "fetched": "2026-11-04T04:12:00Z"
+  },
+  {
+   "id": "results-CO-jefferson",
+   "name": "Jefferson County",
+   "url": "https://results.enr.clarityelections.com/CO/Jefferson/127000/",
+   "updated": "2026-11-04T03:58:00Z",
+   "status": "counting",
+   "reporting": "Ballots counted: 301,442",
+   "fetched": "2026-11-04T04:11:00Z"
+  }
+ ],
+ "items": {
+  "co-us-senate": {
+   "source": "results-CO",
+   "status": "counting",
+   "reporting": "Ballots counted: 2,101,334",
+   "updated": "2026-11-04T04:05:00Z",
+   "url": "https://results.enr.clarityelections.com/CO/127001/",
+   "candidates": [
+    {
+     "name": "John Hickenlooper",
+     "votes": 1190000,
+     "pct": 56.64
+    },
+    {
+     "name": "Mark Baisley",
+     "votes": 880000,
+     "pct": 41.88
+    },
+    {
+     "name": "Bob Chew",
+     "votes": 31000,
+     "pct": 1.48
+    }
+   ],
+   "total_votes": 2101000,
+   "final": null
+  },
+  "co-amendment-81": {
+   "source": "results-CO",
+   "status": "counting",
+   "reporting": "Ballots counted: 2,101,334",
+   "updated": "2026-11-04T04:05:00Z",
+   "url": "https://results.enr.clarityelections.com/CO/127001/",
+   "measure": {
+    "yes": 1100000,
+    "no": 975000,
+    "yes_pct": 53.01,
+    "threshold": 55
+   },
+   "total_votes": 2075000,
+   "final": null
+  },
+  "co-proposition-nn": {
+   "source": "results-CO",
+   "status": "counting",
+   "reporting": "Ballots counted: 2,101,334",
+   "updated": "2026-11-04T04:05:00Z",
+   "url": "https://results.enr.clarityelections.com/CO/127001/",
+   "measure": {
+    "yes": 1160000,
+    "no": 910000,
+    "yes_pct": 56.04,
+    "threshold": null
+   },
+   "total_votes": 2070000,
+   "final": null
+  },
+  "co-retention-hood": {
+   "source": "results-CO",
+   "status": "counting",
+   "reporting": "Ballots counted: 2,101,334",
+   "updated": "2026-11-04T04:05:00Z",
+   "url": "https://results.enr.clarityelections.com/CO/127001/",
+   "measure": {
+    "yes": 1400000,
+    "no": 540000,
+    "yes_pct": 72.16,
+    "threshold": 50
+   },
+   "total_votes": 1940000,
+   "final": null
+  },
+  "jefferson-sheriff": {
+   "source": "results-CO-jefferson",
+   "status": "counting",
+   "reporting": "Ballots counted: 301,442",
+   "updated": "2026-11-04T03:58:00Z",
+   "url": "https://results.enr.clarityelections.com/CO/Jefferson/127000/",
+   "candidates": [
+    {
+     "name": "Regina \"Reggie\" Marinelli",
+     "votes": 150000,
+     "pct": 55.56
+    },
+    {
+     "name": "Randall Doizaki",
+     "votes": 120000,
+     "pct": 44.44
+    }
+   ],
+   "total_votes": 270000,
+   "final": null
+  },
+  "lakewood-2g": {
+   "source": "results-CO-jefferson",
+   "status": "pending",
+   "reporting": null,
+   "updated": null,
+   "url": "https://results.enr.clarityelections.com/CO/Jefferson/127000/",
+   "final": null
+  }
+ }
+}

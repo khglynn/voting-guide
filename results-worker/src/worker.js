@@ -12,7 +12,7 @@ import { TEST_FILES } from '../static/test-files.js';
 const FILE_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=30, s-maxage=30', 'Access-Control-Allow-Origin': '*', 'X-Robots-Tag': 'noindex' };
 const json = (obj, status = 200, extra = {}) => new Response(typeof obj === 'string' ? obj : JSON.stringify(obj), { status, headers: { ...FILE_HEADERS, ...extra } });
 
-const pinger = (env) => makePinger({ fetch: (...a) => fetch(...a), store: env.RESULTS, token: env.SLACK_BOT_TOKEN, user: env.SLACK_USER });
+const pinger = (env) => makePinger({ fetch: (...a) => fetch(...a), store: env.RESULTS, token: env.SLACK_BOT_TOKEN, channel: env.SLACK_LOG_CHANNEL });
 
 export default {
   async fetch(request, env) {

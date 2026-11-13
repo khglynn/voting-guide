@@ -3,8 +3,9 @@
    code runs under the Worker and under node (bin/run.mjs, the tests).
    KV keys: `stop` (any value stops every tick), `sched:2026-11-03` (each source's schedule), `src:{id}` (its last good
    read), `checked:{id}` (the map's checkHash its first-run check passed against), `preview:{ST}` and `file:{ST}` (the files),
-   `alert:{source}:{reason}` (ping dedupe). R2: `raw/{source}/{fetched}-{hash}.json` for every changed read,
-   `files/{ST}/{generated}.json` and `latest/{ST}.json` for every published file. */
+   `alert:{source}:{reason}` (ping dedupe), `slack:thread:2026-11-03` (the #gabby-log post the alerts reply under,
+   ping.js). R2: `raw/{source}/{fetched}-{hash}.json` for every changed read, `files/{ST}/{generated}.json` and
+   `latest/{ST}.json` for every published file. */
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';

@@ -19,6 +19,7 @@
    It reads public URLs only: no git, no login, nothing written outside <dir>. Telling is a shell command in
    VG_WATCH_NOTIFY that reads the message on stdin (on the Air, Gabby's `gabby-notify -`, whose exit 75 means her outbox
    has it); without one the message is printed. A message that fails to send is told again on the next run.
+   A run that passes 7 minutes checks no more states that run and leaves them as they were (Nov 12).
    Usage: node bin/watch.mjs [--dir ~/.vg-results-watch] [--states "TX CO"] [--dry]   (--dry: print, never notify) */
 import fs from 'node:fs';
 import os from 'node:os';
@@ -32,6 +33,7 @@ const UA = 'vote.kevinhg.com results fetcher (+https://vote.kevinhg.com)';
 export const STATES = ['TX', 'CO', 'DC', 'CA', 'NY', 'MO', 'TN', 'FL', 'PA', 'GA', 'MD', 'IL', 'AL', 'OR', 'WA'];
 export const LATE_MIN = 20;
 export const REMIND_H = 6;
+export const RUN_BUDGET_MS = 7 * 60_000; // a run starts no new state after this; the start script ends it at 9 minutes
 const MAX_MSG = 1150; // gabby-notify takes 1,200 characters from stdin
 const NAMES = { TX: 'Texas', CO: 'Colorado', DC: 'DC', CA: 'California', NY: 'New York', MO: 'Missouri', TN: 'Tennessee', FL: 'Florida', PA: 'Pennsylvania', GA: 'Georgia', MD: 'Maryland', IL: 'Illinois', AL: 'Alabama', OR: 'Oregon', WA: 'Washington' };
 const nm = (st) => NAMES[st] || st;
@@ -131,7 +133,11 @@ async function main() {
   const problems = [];
   const checked = [];
   const unjudged = new Set();
+  const skipped = [];
   for (const st of states) {
+    // Out of time (a slow connection, a very busy Mac): leave the rest as they were for the next run, rather than hold
+    // up every run after this one (launchd starts no new run while one is going; Nov 11, 7 hours unwatched).
+    if (Date.now() - nowMs > RUN_BUDGET_MS) { unjudged.add(st); skipped.push(st); continue; }
     const r = await getFile(st);
     if (r.status === 404) {
       if (had.has(st)) { unjudged.add(st); problems.push({ key: `${st}|gone`, hiccup: true, text: `${nm(st)}'s results file is gone (HTTP 404), though it was there before.`, label: `${nm(st)}'s results file is back.` }); }
@@ -154,7 +160,7 @@ async function main() {
   state.checked = checked;
   state.seen_states = [...new Set([...had, ...checked])];
   const save = () => { fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath); };
-  console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}`);
+  console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}${skipped.length ? `; out of time before ${skipped.join(' ')}` : ''}`);
   if (!tell.length) return save();
   const msg = message(tell);
   const cmd = process.env.VG_WATCH_NOTIFY;

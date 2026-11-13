@@ -12,7 +12,7 @@ import { sha256 } from '../src/util.js';
 const f = flags(process.argv.slice(2));
 const st = f._[0] || 'TX';
 const url = `https://vg-results.kevinhg.workers.dev/results/${f.preview ? 'preview/' : ''}2026-11-03/${st}.json`;
-const body = await (await fetch(`${url}?honesty=${Date.now()}`)).text();
+const body = await (await fetch(`${url}?honesty=${Date.now()}`, { signal: AbortSignal.timeout(60_000) })).text();
 const file = JSON.parse(body);
 const out = [];
 const bad = (s) => out.push(s);

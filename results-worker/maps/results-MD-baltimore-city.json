@@ -18,10 +18,10 @@
   },
   "feed": {
     "adapter": "md_sbe",
-    "base": "https://results.elections.maryland.gov/elections/2026/general_results",
-    "results_url": "https://results.elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3.html",
+    "base": "https://elections.maryland.gov/elections/2026/general_results",
+    "results_url": "https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_by_county_3.html",
     "identity": "named",
-    "identity_note": "Answered our named User-Agent on Nov 3, 10:21 to 10:25 PM CT (src-east builder): 200s from Cloudflare, no challenge. The old host elections.maryland.gov now answers 302 to results.elections.maryland.gov.",
+    "identity_note": "Answered our named User-Agent on Nov 3, 10:21 to 10:25 PM CT (src-east builder): 200s from Cloudflare, no challenge. The old host elections.maryland.gov then answered 302 to results.elections.maryland.gov. By Nov 12 it was the other way round (results.elections.maryland.gov answers 302 to elections.maryland.gov), so on Nov 13 the map moved back; elections.maryland.gov answered our named User-Agent with 200 from the Air that day.",
     "election_id_from": "Each page's own heading, \"Unofficial 2026 Gubernatorial General Election Results for ...\". The pages carry no date; election_dates pairs the board's name with Nov 3, 2026 (the SBE's 2026 Election Calendar, research/raw/results-MD/elections-maryland-gov-elections-2026-2026-election-calendar-pdf-ad7db3--20261103-1251.pdf).",
     "election_dates": {
       "2026 Gubernatorial General Election": "2026-11-03"

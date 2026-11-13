@@ -157,7 +157,9 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     if (labels.length) entry.labels = labels;
     if (rec?.read?.feed_version) entry.feed_version = rec.read.feed_version; // which Clarity or Enhanced Voting version the numbers are from
     if (rec?.read?.next_update) entry.next_update = rec.read.next_update; // the source's own next scheduled update (King County: Nov 4, 4 PM PT)
-    if (sched.next_due) entry.next_due = sched.next_due;
+    // A source read from the Air (src/relay.js) moves only when the Air posts, so its planned time isn't the Worker's to
+    // keep: left out, the results watch never takes one missed Air read for a stopped Worker. The Air tells its own trouble.
+    if (sched.next_due && !String(sched.stopped || '').startsWith('fed')) entry.next_due = sched.next_due;
     if (sched.failing_since) entry.failing_since = sched.failing_since;
     if (mode === 'preview') entry.checked = !!s.checked;
     let reason = null;

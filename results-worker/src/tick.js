@@ -46,7 +46,7 @@ export async function loadSched(store) {
   return s && s.sources ? s : { sources: {}, meta: {} };
 }
 
-async function runSource({ map, fetch, store, archive, sched, now, ping, log, hasTime = () => true }) {
+async function runSource({ map, fetch, store, archive, sched, now, ping, log, hasTime = () => true, fed = false }) {
   const adapter = ADAPTERS[map.feed.adapter];
   const S = sched.sources;
   const prevRec = await readJson(store, `src:${map.id}`);
@@ -54,13 +54,14 @@ async function runSource({ map, fetch, store, archive, sched, now, ping, log, ha
   const mh = await mapHash(map);
   // A token only stands when its read is still stored: with no good read on hand, read in full.
   const current = prevRec?.read_version === READ_VERSION;
-  const prevToken = current && prevRec?.read && S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
+  // A read from the Air (src/relay.js) is always a full one: the Air made it with no token, so the replay must too.
+  const prevToken = !fed && current && prevRec?.read && S[map.id]?.token && S[map.id]?.map_hash === mh ? S[map.id].token : null;
   const attempt = async () => { try { return await adapter.read({ fetch, map, prevToken }); } catch (e) { return { verdict: 'error', error: `adapter threw: ${e.message}` }; } };
   r = await attempt();
   // One quick retry inside the tick for a blip (a timeout, a 5xx, a version whose files aren't up yet); never for a
   // refusal. Election night, Nov 3: three blips in a row parked Bexar in back-off while it posted its first numbers.
   // Not once the tick's clock has run out: the retry would only fail again.
-  if (r.verdict === 'error' && hasTime()) { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
+  if (r.verdict === 'error' && hasTime() && !fed) { await new Promise((ok) => setTimeout(ok, 3000)); const again = await attempt(); r = again.verdict === 'ok' ? again : { ...again, error: `${again.error} (and before the retry: ${r.error})` }; }
   if (r.verdict === 'refused') {
     S[map.id] = nextEntry(S[map.id], { kind: 'refused', error: r.error, mapHash: mh }, now, map);
     // Stopped, never past it: say so in the log as well as the ping (pings need the Worker secrets).
@@ -264,10 +265,26 @@ function both(a, b) {
 /* One cron tick. A failure in one source or one state's file (a KV 429, an R2 5xx, an adapter bug) is logged and
    turned into that source's or that state's error; every other source and state still runs and publishes, and the
    schedule is still saved (overnight review, Nov 3: one throw used to stop every state for that minute). */
-export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, ping: rawPing = async () => false, budgetMs = 25_000, deadlineMs = 40_000, publishMs = PUBLISH_MS, workers = 6, limit, log = console.log }) {
+/* A source read from the Air (`fed`, src/relay.js) stays stopped in the Worker's own schedule, so the cron never fetches
+   it and is never refused again: one writer per source. Its next_due is still worked out by nextEntry, and the Air
+   paces its reads by it. A source the office has finished (official, past certification) keeps that stop. */
+export const FED = 'fed';
+export const FED_ENDED = 'fed, ended';
+const FINAL = new Set(['official', 'past certification', FED_ENDED]);
+function markFed(e, now) {
+  if (!e || FINAL.has(e.stopped)) return;
+  e.stopped = FED; e.fed_at = now;
+  delete e.refused_hash;
+  if (e.status === 'refused') delete e.status;
+}
+
+/* `fed` with `only`: one source, from the Air's answers handed in as `fetch` (POST /results/feed). `end` with it
+   (the Air's five quiet days, or its feeder retired) stops the source for good without a read. */
+export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, fed = false, end = false, ping: rawPing = async () => false, budgetMs = 25_000, deadlineMs = 40_000, publishMs = PUBLISH_MS, workers = 6, limit, log = console.log }) {
   // A ping that fails (its KV dedupe key, Slack) never takes a source or a tick down with it.
   const ping = async (...a) => { try { return await rawPing(...a); } catch (e) { log(JSON.stringify({ ping_failed: a.slice(0, 2).join(':'), error: String(e?.message || e) })); return false; } };
-  if (!only && (await store.get('stop'))) return { stopped: true };
+  if ((!only || fed) && (await store.get('stop'))) return { stopped: true };
+  if (fed && !only) throw new Error('a read from the Air names its source');
   const started = Date.now();
   const sched = await loadSched(store);
   sched.meta ??= {};
@@ -290,6 +307,11 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const clamped = (!only && clampElectionNight(sched.sources, live, now)) || unstuck;
   // Sources whose numbers are public (a first-run check stored) go first; the rest are preview-only (schedule.js).
   const checkedIds = new Set(Object.keys(sched.meta.checked || {}).filter((k) => sched.meta.checked[k]));
+  if (fed && end) {
+    const e = sched.sources[only] || {};
+    if (!FINAL.has(e.stopped)) { sched.sources[only] = { ...e, stopped: FED_ENDED, last_run: now, next_due: null }; await saveSched(store, sched, loaded); }
+    return { ran: [], published: [], entry: sched.sources[only] };
+  }
   const ids = only ? live.filter((m) => m.id === only).map((m) => m.id) : dueSources(sched.sources, live.map((m) => m.id), now, limit, checkedIds);
   const byId = Object.fromEntries(maps.map((m) => [m.id, m]));
 
@@ -330,7 +352,7 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   const runOne = async (id) => {
     let res;
     try {
-      res = await Promise.race([runSource({ map: byId[id], fetch: tickFetch, store, archive, sched, now, ping, log, hasTime }), late]);
+      res = await Promise.race([runSource({ map: byId[id], fetch: tickFetch, store, archive, sched, now, ping, log, hasTime, fed }), late]);
       if (res === 'late') {
         res = { id, outcome: 'error', error: 'still running when the tick ran out of time' };
         log(JSON.stringify({ source: id, error: res.error }));
@@ -345,6 +367,7 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
       if (!refusedNow) sched.sources[id] = nextEntry(e0, { kind: 'error', error }, now, byId[id]);
       res = { id, outcome: 'error', error };
     }
+    if (fed) markFed(sched.sources[id], now);
     if (!checkedIds.has(id)) previewFloor(sched.sources[id], now);
     ran.push(res);
     if (--left[byId[id].state] === 0) await publish(byId[id].state);
@@ -403,7 +426,8 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
   if (stillFailing.length) sched.meta.republish = stillFailing; else delete sched.meta.republish;
   if (stillFailing.join() !== retry.join()) metaChanged = true;
 
-  if (live.length && live.every((m) => sched.sources[m.id]?.stopped) && !sched.meta.done_pinged) {
+  // A source the Air still reads isn't done.
+  if (live.length && live.every((m) => sched.sources[m.id]?.stopped && sched.sources[m.id].stopped !== FED) && !sched.meta.done_pinged) {
     sched.meta.done_pinged = now;
     await ping('all', 'done', 'every source has stopped (official, past certification, or refused). The fetcher is done for 2026-11-03.');
   }
@@ -412,5 +436,5 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
     const kept = await saveSched(store, sched, loaded, (id) => byId[id]?.state);
     if (kept.length) log(JSON.stringify({ newer_tick_kept: kept, republish_next_tick: true }));
   }
-  return { ran, published, ...(skipped.length ? { skipped } : {}) };
+  return { ran, published, ...(skipped.length ? { skipped } : {}), ...(fed ? { entry: sched.sources[only] } : {}) };
 }

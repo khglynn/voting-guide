@@ -1,6 +1,7 @@
 # The voting guide's results fetcher (Phase 1 of the results view, Nov 3, 2026).
 # Plan: voting-guide-workbench/claude-plans/2026-11-03-results/PLAN-PHASE-1.md. Personal Cloudflare account only:
-# deploy.sh refuses any other login. Secrets (never committed): RUN_TOKEN, SLACK_BOT_TOKEN, SLACK_LOG_CHANNEL (#gabby-log, where alerts go; src/ping.js).
+# deploy.sh refuses any other login. Secrets (never committed): RUN_TOKEN, SLACK_BOT_TOKEN, SLACK_LOG_CHANNEL (#gabby-log, where alerts go; src/ping.js),
+# FEED_TOKEN (the Air's reads for sources that refuse the Worker, src/relay.js; its copy on the Air is ~/.vg-results-feed/token).
 name = "vg-results"
 account_id = "759a850a3af3e2fbf1ab036e7eb2f231"
 main = "src/worker.js"

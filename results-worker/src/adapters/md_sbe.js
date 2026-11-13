@@ -2,8 +2,9 @@
    (gen_results_2026_4_P.html holds every congressional district) and one per county (by_county_3_P.html is
    Baltimore City, its questions included). The map reads the printer-friendly `_P` twins, which carry the same
    tables without the site's menus. On Nov 3 at 10:21 PM CT the pages moved from elections.maryland.gov to
-   results.elections.maryland.gov (the old address answers 302); the map names the new host, and since fetches never
-   follow redirects, a move back would read as refused rather than as data from an address nobody checked.
+   results.elections.maryland.gov (the old address answered 302), and by Nov 12 they had moved back (the new address
+   answers 302 to the old), so the map names elections.maryland.gov again (Nov 13). Fetches never follow redirects, so
+   a move reads as refused rather than as data from an address nobody checked, and the map is changed by hand.
 
    Each contest is a run of headings, the board's progress words, then a table:
      <h2>House of Delegates</h2> <h3>District 43A</h3> <h4>Vote for up to 2</h4>

@@ -19,7 +19,7 @@ export async function statusPage({ store, maps, now = new Date().toISOString() }
     const read = rec?.read || blockedRec?.read;
     const contests = read?.contests?.length ?? 0;
     const votes = read ? read.contests.reduce((a, c) => a + c.choices.reduce((x, ch) => x + (Number(ch.votes) || 0), 0), 0) : 0;
-    const state = s.stopped ? `stopped: ${s.stopped}` : s.failing_since ? `failing since ${ct(s.failing_since)}` : (s.status || 'not read yet');
+    const state = s.stopped === 'fed' ? `read from the Air since ${ct(s.fed_at)}, last ${ct(s.last_run)} (the office refuses the Worker)${s.failing_since ? `, failing since ${ct(s.failing_since)}` : ''}` : s.stopped === 'fed, ended' ? 'stopped: the Air stopped reading it' : s.stopped ? `stopped: ${s.stopped}` : s.failing_since ? `failing since ${ct(s.failing_since)}` : (s.status || 'not read yet');
     const problems = [...(rec?.problems || []), ...(rec?.blocked ? blockedRec?.problems || [] : [])].map((p) => p.detail || p.reason);
     rows.push(`<li><b>${esc(m.name)}</b> <span class="id">${esc(m.id)} · ${esc(m.feed.adapter)}${m.feed.identity === 'browser' ? ' · browser identity' : ''}</span><br>
       ${esc(state)}${rec?.blocked ? ' · <b>election mismatch: links only</b>' : ''} · ${checked ? '<b>checked</b>' : 'not checked yet (preview only)'}${fp === 'mismatch' ? ' · <b>map out of date</b>' : ''}${fpSw === 'mismatch' ? ' · <b>statewide slices out of date</b>' : ''}<br>

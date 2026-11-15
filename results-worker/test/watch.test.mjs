@@ -1,7 +1,8 @@
 /* The outside watch's judgment and its tell-only-what-changed rules (bin/watch.mjs, Nov 4). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { judgeFile, honestyProblems, diff, message, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H, quiet, QUIET_DAYS, mayStop } from '../bin/watch.mjs';
+import { NOTIFY_MS, URGENT_SEND_MS, QUIET_SEND_MS } from '../bin/watch.mjs';
+import { judgeFile, honestyProblems, diff, message, split, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H, quiet, QUIET_DAYS, mayStop } from '../bin/watch.mjs';
 
 const T = Date.parse('2026-11-04T23:00:00Z');
 const iso = (minsFromNow) => new Date(T + minsFromNow * 60000).toISOString();
@@ -60,6 +61,35 @@ test('watch: a state it couldn\'t judge keeps its open problems; a hiccup is tol
   assert.deepEqual(d.tell, ['Cleared: PA loads.']);
   const e = diff(b.state, [], T + 1_200_000);
   assert.deepEqual(e.tell, ['Cleared: PA passes.'], 'a blip that went away is never told');
+});
+
+test('watch: this Mac\'s own trouble and every "Cleared" are quiet; a broken file is not (Nov 15)', () => {
+  const ran = [{ key: 'DC|honesty-ran', hiccup: true, quiet: true, text: 'The honesty check on DC\'s file couldn\'t run: it didn\'t finish in 90 seconds', label: 'The honesty check on DC\'s file runs again.' }];
+  const a = diff(diff(null, ran, T).state, ran, T + 600_000);
+  assert.deepEqual([a.tell, a.hushed], [[ran[0].text], [ran[0].text]], 'the 4 AM timeout of Nov 15: told, but quiet');
+  assert.ok(a.state.open['DC|honesty-ran'].quiet);
+  const again = diff(a.state, ran, T + 600_000 + REMIND_H * 3600_000);
+  assert.deepEqual(again.hushed, again.tell, 'its reminder is quiet too');
+  const cleared = diff(a.state, [], T + 1_200_000);
+  assert.deepEqual([cleared.tell, cleared.hushed], [['Cleared: The honesty check on DC\'s file runs again.'], ['Cleared: The honesty check on DC\'s file runs again.']]);
+  const broke = diff(null, [{ key: 'PA|stale', text: 'PA stalled.', label: 'PA fresh.' }, { key: 'TX|honesty|x', text: 'TX broke a rule.' }], T);
+  assert.deepEqual(broke.hushed, [], 'a stalled Worker and a broken rule reach him at once');
+  const fixed = diff(broke.state, [], T + 600_000);
+  assert.deepEqual(fixed.hushed, fixed.tell, 'their clears need nothing of him');
+});
+
+test('watch: with a quiet command, the hushed lines wait for it; without, everything is urgent, as before', () => {
+  const tell = ['PA stalled.', 'Cleared: DC runs again.', 'TX broke a rule.'];
+  const hushed = ['Cleared: DC runs again.'];
+  assert.deepEqual(split(tell, hushed, 'later'), { urgent: ['PA stalled.', 'TX broke a rule.'], later: ['Cleared: DC runs again.'] });
+  assert.deepEqual(split(tell, hushed, undefined), { urgent: tell, later: [] }, 'no quiet command: one message as before');
+  assert.deepEqual(split(hushed, hushed, 'later'), { urgent: [], later: hushed });
+});
+
+test('watch: the two sends have fixed times that fit the run, the urgent one with its full minute (review round 3)', () => {
+  assert.equal(URGENT_SEND_MS, 60_000);
+  assert.equal(NOTIFY_MS, URGENT_SEND_MS + QUIET_SEND_MS);
+  assert.ok(START_BY_MS + 55_000 + 90_000 + NOTIFY_MS + 10_000 <= STOP_MS, 'a state started last still ends, both sends included');
 });
 
 test('watch: a long message is cut with a count of what was left out', () => {

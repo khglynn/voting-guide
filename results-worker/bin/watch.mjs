@@ -41,15 +41,24 @@ export const STATES = ['TX', 'CO', 'DC', 'CA', 'NY', 'MO', 'TN', 'FL', 'PA', 'GA
 export const LATE_MIN = 20;
 export const REMIND_H = 6;
 // The start script ends a run at 9 minutes. The slowest each step can be: a file read 55 s (20 s, a 15 s wait, 20 s
-// again), an honesty check 90 s, the notify step 60 s, with 10 s kept for node starting and the state being saved. So a
+// again), an honesty check 90 s, the notify step 60 s (both its sends together), with 10 s kept for node starting and the state being saved. So a
 // state starts by 5:25 and its honesty check by 6:20.
 export const STOP_MS = 9 * 60_000;
 const SPARE_MS = 10_000;
 const FILE_MS = 55_000;
 const HONESTY_MS = 90_000;
-const NOTIFY_MS = 60_000;
+export const NOTIFY_MS = 60_000;   // the whole notify step: two sends (quiet, then the rest) share it
+export const SEND_MIN_MS = 5_000;  // less than this left of it: the next send waits for the next run
 export const HONESTY_BY_MS = STOP_MS - SPARE_MS - NOTIFY_MS - HONESTY_MS;
 export const START_BY_MS = HONESTY_BY_MS - FILE_MS;
+
+/* How long the next send may take, from what is left of the notify step's one budget (`notifyBy`, when it ends), or
+   null when too little is left to start one (review of voting-guide#150, round 1: two sends of 60 s each could run the
+   step past the 9-minute stop, and a run cut off after its second send, before its state is saved, would tell it again). */
+export function sendTimeout(notifyBy, nowMs) {
+  const left = notifyBy - nowMs;
+  return left >= SEND_MIN_MS ? left : null;
+}
 
 /* This run's order: the states the last run left out first, then the rest in their usual order. */
 export function runOrder(states, prev) {
@@ -213,10 +222,14 @@ async function main() {
   const cmd = process.env.VG_WATCH_NOTIFY;
   if (dry || !cmd) { console.log(message(tell)); return save(); }
   // The quiet message goes first: if the one that reaches him then fails, the next run tells both again, so at worst a
-  // quiet line is kept twice for his brief, never a buzz sent twice or lost.
+  // quiet line is kept twice for his brief, never a buzz sent twice or lost. Both sends share the notify step's one
+  // budget, which the run keeps for it (HONESTY_BY_MS), so the step ends, state saved, inside the 9-minute stop.
+  const notifyBy = Date.now() + NOTIFY_MS;
   for (const [command, lines] of sends(tell, quiet, cmd, process.env.VG_WATCH_NOTIFY_QUIET)) {
     const msg = message(lines);
-    const r = spawnSync('/bin/sh', ['-c', command], { input: msg, encoding: 'utf8', timeout: NOTIFY_MS });
+    const timeout = sendTimeout(notifyBy, Date.now());
+    if (timeout === null) { console.log(`notify out of time: told on the next run\n${msg}`); process.exitCode = 2; return; }
+    const r = spawnSync('/bin/sh', ['-c', command], { input: msg, encoding: 'utf8', timeout });
     // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice). Any
     // other failure isn't marked told: the state stays as it was, so the next run tells it again.
     if (r.status !== 0 && r.status !== 75) { console.log(`notify failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}\n${msg}`); process.exitCode = 2; return; }

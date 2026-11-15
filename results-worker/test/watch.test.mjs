@@ -1,6 +1,7 @@
 /* The outside watch's judgment and its tell-only-what-changed rules (bin/watch.mjs, Nov 4). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { sendTimeout, NOTIFY_MS, SEND_MIN_MS } from '../bin/watch.mjs';
 import { judgeFile, honestyProblems, diff, message, sends, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H } from '../bin/watch.mjs';
 
 const T = Date.parse('2026-11-04T23:00:00Z');
@@ -85,6 +86,15 @@ test('watch: with a quiet command, quiet lines go first through it and the rest 
   assert.deepEqual(sends(quiet, quiet, 'now', 'later'), [['later', quiet]], 'only quiet lines: one send');
   assert.deepEqual(sends(['PA stalled.'], [], 'now', 'later'), [['now', ['PA stalled.']]]);
   assert.deepEqual(sends([], [], 'now', 'later'), []);
+});
+
+test('watch: the two sends share the notify step\'s one budget, so the step never runs past the 9-minute stop', () => {
+  const by = T + NOTIFY_MS;
+  assert.equal(sendTimeout(by, T), NOTIFY_MS, 'the first send may take all of it');
+  assert.equal(sendTimeout(by, T + 50_000), 10_000, 'a first send that took 50 s leaves the second 10 s, not another 60');
+  assert.equal(sendTimeout(by, by - SEND_MIN_MS), SEND_MIN_MS);
+  assert.equal(sendTimeout(by, by - SEND_MIN_MS + 1), null, 'too little left: the second send waits for the next run');
+  assert.equal(sendTimeout(by, by + 1), null);
 });
 
 test('watch: a long message is cut with a count of what was left out', () => {

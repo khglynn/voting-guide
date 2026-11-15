@@ -1,7 +1,7 @@
 /* The outside watch's judgment and its tell-only-what-changed rules (bin/watch.mjs, Nov 4). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { judgeFile, honestyProblems, diff, message, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H, quiet, QUIET_DAYS } from '../bin/watch.mjs';
+import { judgeFile, honestyProblems, diff, message, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H, quiet, QUIET_DAYS, mayStop } from '../bin/watch.mjs';
 
 const T = Date.parse('2026-11-04T23:00:00Z');
 const iso = (minsFromNow) => new Date(T + minsFromNow * 60000).toISOString();
@@ -118,4 +118,13 @@ test('watch: stops after five days with no new results anywhere (Kevin, Nov 7), 
   assert.equal(quiet({}, T, true), null);
   // A time from the future (a source's clock wrong) doesn't count as new, nor does it hide an old one.
   assert.ok(quiet({ TX: { sources: [{ id: 'a', updated: at(-2) }, { id: 'b', updated: at(9) }] } }, T, true));
+});
+
+test('watch: the season stops only on a run of every state, and never while the Worker may have stopped (#149 review)', () => {
+  assert.equal(mayStop(STATES, {}), true);
+  assert.equal(mayStop(['TX'], {}), false, 'a run by hand with --states TX never ends the season');
+  // Frozen times can be our own reading stalled, not the offices gone quiet: hold the stop while that is open.
+  assert.equal(mayStop(STATES, { 'CA|stale': { since: T } }), false);
+  assert.equal(mayStop(STATES, { 'CA|unreachable': { since: T }, 'PA|honesty|x': { since: T } }), true,
+    'other open problems do not hold it');
 });

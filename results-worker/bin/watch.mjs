@@ -26,7 +26,8 @@
    last states unwatched run after run.
    It stops for the season once no source in any file has new results for five days (Kevin, Nov 7: "track until we
    haven't seen updates for, like, five days"; built Nov 15, ledger 2026-11-12-results-watch-stop), judged only on a run
-   that read every state's file, from each source's own `updated` time. It says so once and writes <dir>/stopped, which
+   that read every state's file (never a run by hand with --states) and never while a "the Worker may have stopped"
+   problem is open, from each source's own `updated` time. It says so once and writes <dir>/stopped, which
    every later run, its start script's Dec 14 end and Gabby's watchdog check all read as stopped on purpose.
    Usage: node bin/watch.mjs [--dir ~/.vg-results-watch] [--states "TX CO"] [--dry]   (--dry: print, never notify) */
 import fs from 'node:fs';
@@ -69,6 +70,13 @@ export function quiet(files, nowMs, allRead) {
   }
   if (!allRead || !Number.isFinite(newest)) return null;
   return nowMs - newest > QUIET_DAYS * 86_400_000 ? { newest, from } : null;
+}
+
+/* Whether a quiet run may stop the season (#149 review, Nov 15): only one that covered every state, so a run by hand
+   with --states can't end the watch judged on a few; and not while a "the Worker may have stopped" problem is open,
+   since then the files' times are frozen by our own reading, not by the offices. Pure, for the tests. */
+export function mayStop(states, open) {
+  return STATES.every((st) => states.includes(st)) && !Object.keys(open || {}).some((k) => k.endsWith('|stale'));
 }
 
 /* This run's order: the states the last run left out first, then the rest in their usual order. */
@@ -212,7 +220,7 @@ async function main() {
   state.seen_states = [...new Set([...had, ...checked])];
   // Every state that has ever had a file, read this run (with only --states, only those): the five-day rule's one gate.
   const allRead = !skipped.length && [...new Set([...had, ...checked])].filter((st) => states.includes(st)).every((st) => checked.includes(st));
-  const done = quiet(files, nowMs, allRead);
+  const done = mayStop(states, state.open) ? quiet(files, nowMs, allRead) : null;
   if (done) tell.unshift(`no new results anywhere for ${QUIET_DAYS} days (the newest: ${done.from}, ${ct(done.newest)} CT), so it has stopped for the season. To stop it running at all: launchctl bootout gui/$(id -u)/com.kevinhg.vg-results-watch`);
   const save = () => {
     fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath);

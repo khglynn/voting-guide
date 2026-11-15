@@ -18,7 +18,10 @@
      and a passing hiccup (a file that didn't load, a check that couldn't run) is told only when it happens twice in a row.
    It reads public URLs only: no git, no login, nothing written outside <dir>. Telling is a shell command in
    VG_WATCH_NOTIFY that reads the message on stdin (on the Air, Gabby's `gabby-notify -`, whose exit 75 means her outbox
-   has it); without one the message is printed. A message that fails to send is told again on the next run.
+   has it); without one the message is printed. A message that fails to send is told again on the next run. When
+   VG_WATCH_NOTIFY_QUIET is set too (Nov 15), the lines with nothing in them for Kevin go through it instead: this Mac's
+   own trouble and every "Cleared" (diff says which). On the Air the two are gabby-notify with --urgent broken and
+   with --for-brief, so only what is broken reaches his phone and the rest waits for his brief.
    Every step fits inside the 9 minutes the start script gives a run (Nov 12; review, Nov 13): a state starts only while
    its slowest file read, honesty check and the notify step still fit, and its honesty check only while that check and
    the notify step do. A state left out keeps its open problems and its first hiccups as they were (one whose honesty
@@ -84,29 +87,49 @@ export function honestyProblems(st, output) {
 
 /* What to tell, from the last run's state and this run's problems. `unjudged` states keep their open problems and their
    waiting hiccups as they were (`ST|honesty` in it: only that state's honesty problems); hiccups wait for a second run
-   in a row. Returns the messages and the state to keep. */
+   in a row. Returns the messages, which of them are quiet (below) and the state to keep.
+   Quiet (Nov 15): news with nothing in it for Kevin, which on the Air waits for his next brief instead of buzzing him
+   (VG_WATCH_NOTIFY_QUIET): a problem marked `quiet` (this Mac's own trouble, like an honesty check that ran out of time
+   on a busy Air), its reminders, and every "Cleared" line. On Nov 15 the watch posted "The honesty check on DC's file
+   couldn't run: it didn't finish in 90 seconds" and its "Cleared" eleven minutes later straight to his DM at 4 AM, past
+   Gabby's rule that a program's notice reaches him at once only when something is broken that only he can fix. A stalled
+   Worker, a failed honesty rule, a file gone or unreadable still reach him at once. */
 export function diff(prev, now, nowMs, unjudged = new Set()) {
   const open = { ...(prev?.open || {}) };
   const waiting = prev?.waiting || {};
   const nextWaiting = {};
   const tell = [];
+  const quiet = [];
   const seen = new Set();
+  const say = (text, hush) => { tell.push(text); if (hush) quiet.push(text); };
   const kept = (k) => { const [st, kind = ''] = k.split('|'); return unjudged.has(st) || (unjudged.has(`${st}|honesty`) && kind.startsWith('honesty')); };
   for (const p of now) {
     if (p.hiccup && !open[p.key] && !waiting[p.key]) { nextWaiting[p.key] = nowMs; continue; }
     seen.add(p.key);
     const was = open[p.key];
-    if (!was) { open[p.key] = { since: nowMs, told: nowMs, text: p.text, label: p.label }; tell.push(p.text); }
-    else if (nowMs - was.told >= REMIND_H * 3600_000) { open[p.key] = { ...was, told: nowMs, text: p.text }; tell.push(`Still open since ${ct(was.since)} CT: ${p.text}`); }
+    const hush = !!p.quiet;
+    if (!was) { open[p.key] = { since: nowMs, told: nowMs, text: p.text, label: p.label, ...(hush ? { quiet: true } : {}) }; say(p.text, hush); }
+    else if (nowMs - was.told >= REMIND_H * 3600_000) { open[p.key] = { ...was, told: nowMs, text: p.text }; say(`Still open since ${ct(was.since)} CT: ${p.text}`, hush); }
     else open[p.key] = { ...was, text: p.text };
   }
   for (const [k, v] of Object.entries(open)) {
     if (seen.has(k) || kept(k)) continue;
     delete open[k];
-    tell.push(`Cleared: ${v.label || v.text}`);
+    say(`Cleared: ${v.label || v.text}`, true);
   }
   for (const [k, v] of Object.entries(waiting)) if (!(k in nextWaiting) && !open[k] && kept(k)) nextWaiting[k] = v;
-  return { tell, state: { open, waiting: nextWaiting, last_run: new Date(nowMs).toISOString() } };
+  return { tell, quiet, state: { open, waiting: nextWaiting, last_run: new Date(nowMs).toISOString() } };
+}
+
+/* The run's messages by the command each goes through: [[command, lines]], the quiet ones first. With no quiet command
+   (VG_WATCH_NOTIFY_QUIET unset: any Mac but the Air's, or before its config gains the line) every line goes through
+   the one command, in one message, as before. */
+export function sends(tell, quiet, cmd, quietCmd) {
+  if (!quietCmd) return tell.length ? [[cmd, tell]] : [];
+  const hush = new Set(quiet);
+  const later = tell.filter((t) => hush.has(t));
+  const now = tell.filter((t) => !hush.has(t));
+  return [...(later.length ? [[quietCmd, later]] : []), ...(now.length ? [[cmd, now]] : [])];
 }
 
 /* The message for the notify command, cut to fit with a count of what was left out. */
@@ -176,23 +199,28 @@ async function main() {
     if (h.killed || (h.code !== 0 && !found)) {
       unjudged.add(st);
       const why = h.killed ? 'it didn\'t finish in 90 seconds' : ((h.out.split('\n').find((l) => /Error/.test(l)) || h.out.trim().split('\n').pop() || `exit ${h.code}`).trim().slice(0, 200));
-      problems.push({ key: `${st}|honesty-ran`, hiccup: true, text: `The honesty check on ${nm(st)}'s file couldn't run: ${why}`, label: `The honesty check on ${nm(st)}'s file runs again.` });
+      // This Mac's own trouble (a busy Air, a node error), not the Worker's: quiet (diff).
+      problems.push({ key: `${st}|honesty-ran`, hiccup: true, quiet: true, text: `The honesty check on ${nm(st)}'s file couldn't run: ${why}`, label: `The honesty check on ${nm(st)}'s file runs again.` });
     } else if (found) problems.push(...found);
   }
-  const { tell, state } = diff(prev, problems, nowMs, unjudged);
+  const { tell, quiet, state } = diff(prev, problems, nowMs, unjudged);
   state.checked = checked;
   if (skipped.length) state.skipped = skipped;
   state.seen_states = [...new Set([...had, ...checked])];
   const save = () => { fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath); };
   console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}${skipped.length ? `; out of time before ${skipped.join(' ')}` : ''}`);
   if (!tell.length) return save();
-  const msg = message(tell);
   const cmd = process.env.VG_WATCH_NOTIFY;
-  if (dry || !cmd) { console.log(msg); return save(); }
-  const r = spawnSync('/bin/sh', ['-c', cmd], { input: msg, encoding: 'utf8', timeout: NOTIFY_MS });
-  // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice). Any
-  // other failure isn't marked told: the state stays as it was, so the next run tells it again.
-  if (r.status !== 0 && r.status !== 75) { console.log(`notify failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}\n${msg}`); process.exitCode = 2; return; }
+  if (dry || !cmd) { console.log(message(tell)); return save(); }
+  // The quiet message goes first: if the one that reaches him then fails, the next run tells both again, so at worst a
+  // quiet line is kept twice for his brief, never a buzz sent twice or lost.
+  for (const [command, lines] of sends(tell, quiet, cmd, process.env.VG_WATCH_NOTIFY_QUIET)) {
+    const msg = message(lines);
+    const r = spawnSync('/bin/sh', ['-c', command], { input: msg, encoding: 'utf8', timeout: NOTIFY_MS });
+    // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice). Any
+    // other failure isn't marked told: the state stays as it was, so the next run tells it again.
+    if (r.status !== 0 && r.status !== 75) { console.log(`notify failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}\n${msg}`); process.exitCode = 2; return; }
+  }
   save();
 }
 

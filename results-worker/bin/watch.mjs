@@ -27,6 +27,11 @@
    the notify step do. A state left out keeps its open problems and its first hiccups as they were (one whose honesty
    check was left out, only its honesty problems) and goes first on the next run, so a slow Mac never leaves the same
    last states unwatched run after run.
+   It stops for the season once no source in any file has new results for five days (Kevin, Nov 7: "track until we
+   haven't seen updates for, like, five days"; built Nov 15, ledger 2026-11-12-results-watch-stop), judged only on a run
+   that read every state's file (never a run by hand with --states) and never while a "the Worker may have stopped"
+   problem is open, from each source's own `updated` time. It says so once and writes <dir>/stopped, which
+   every later run, its start script's Dec 14 end and Gabby's watchdog check all read as stopped on purpose.
    Usage: node bin/watch.mjs [--dir ~/.vg-results-watch] [--states "TX CO"] [--dry]   (--dry: print, never notify) */
 import fs from 'node:fs';
 import os from 'node:os';
@@ -51,6 +56,32 @@ export const NOTIFY_MS = 60_000;   // the whole notify step: two sends (quiet, t
 export const SEND_MIN_MS = 5_000;  // less than this left of it: the next send waits for the next run
 export const HONESTY_BY_MS = STOP_MS - SPARE_MS - NOTIFY_MS - HONESTY_MS;
 export const START_BY_MS = HONESTY_BY_MS - FILE_MS;
+
+export const QUIET_DAYS = 5;
+
+/* Kevin's five-quiet-days rule: the newest source time across this run's files, and whether it is more than
+   QUIET_DAYS old. `allRead` is false when any state that has a file wasn't read this run, so a run that missed a state
+   (or saw no source time at all) never stops the watch. Pure, for the tests. */
+export function quiet(files, nowMs, allRead) {
+  let newest = -Infinity;
+  let from = null;
+  for (const [st, f] of Object.entries(files)) {
+    const srcs = Array.isArray(f?.sources) ? f.sources : Object.values(f?.sources || {});
+    for (const s of srcs) {
+      const t = Date.parse(s?.updated);
+      if (Number.isFinite(t) && t <= nowMs && t > newest) { newest = t; from = `${s.name || s.id} (${nm(st)})`; }
+    }
+  }
+  if (!allRead || !Number.isFinite(newest)) return null;
+  return nowMs - newest > QUIET_DAYS * 86_400_000 ? { newest, from } : null;
+}
+
+/* Whether a quiet run may stop the season (#149 review, Nov 15): only one that covered every state, so a run by hand
+   with --states can't end the watch judged on a few; and not while a "the Worker may have stopped" problem is open,
+   since then the files' times are frozen by our own reading, not by the offices. Pure, for the tests. */
+export function mayStop(states, open) {
+  return STATES.every((st) => states.includes(st)) && !Object.keys(open || {}).some((k) => k.endsWith('|stale'));
+}
 
 /* How long the next send may take, from what is left of the notify step's one budget (`notifyBy`, when it ends), or
    null when too little is left to start one (review of voting-guide#150, round 1: two sends of 60 s each could run the
@@ -194,6 +225,8 @@ async function main() {
   const dir = opt('dir') || path.join(os.homedir(), '.vg-results-watch');
   const states = (opt('states') || STATES.join(' ')).split(/\s+/).filter(Boolean);
   fs.mkdirSync(dir, { recursive: true });
+  const stoppedPath = path.join(dir, 'stopped');
+  if (fs.existsSync(stoppedPath)) { console.log(`${new Date().toISOString()} stopped for the season (${stoppedPath}); nothing checked`); return; }
   const statePath = path.join(dir, 'state.json');
   let prev = null;
   try { prev = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* first run */ }
@@ -203,6 +236,7 @@ async function main() {
   const checked = [];
   const unjudged = new Set();
   const skipped = [];
+  const files = {};
   for (const st of runOrder(states, prev)) {
     // Out of time (a slow connection, a very busy Mac): leave the rest as they were for the next run, rather than hold
     // up every run after this one (launchd starts no new run while one is going; Nov 11, 7 hours unwatched).
@@ -216,6 +250,7 @@ async function main() {
     let file;
     try { file = JSON.parse(r.body); } catch { unjudged.add(st); problems.push({ key: `${st}|not-json`, hiccup: true, text: `${nm(st)}'s results file isn't readable data.`, label: `${nm(st)}'s results file reads again.` }); continue; }
     checked.push(st);
+    files[st] = file;
     problems.push(...judgeFile(st, file, nowMs));
     if (Date.now() - nowMs > HONESTY_BY_MS) { unjudged.add(`${st}|honesty`); skipped.push(st); continue; }
     const h = await honesty(st);
@@ -231,8 +266,15 @@ async function main() {
   state.checked = checked;
   if (skipped.length) state.skipped = skipped;
   state.seen_states = [...new Set([...had, ...checked])];
-  const save = () => { fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath); };
-  console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}${skipped.length ? `; out of time before ${skipped.join(' ')}` : ''}`);
+  // Every state that has ever had a file, read this run (with only --states, only those): the five-day rule's one gate.
+  const allRead = !skipped.length && [...new Set([...had, ...checked])].filter((st) => states.includes(st)).every((st) => checked.includes(st));
+  const done = mayStop(states, state.open) ? quiet(files, nowMs, allRead) : null;
+  if (done) tell.unshift(`no new results anywhere for ${QUIET_DAYS} days (the newest: ${done.from}, ${ct(done.newest)} CT), so it has stopped for the season. To stop it running at all: launchctl bootout gui/$(id -u)/com.kevinhg.vg-results-watch`);
+  const save = () => {
+    fs.writeFileSync(`${statePath}.tmp`, JSON.stringify(state, null, 1)); fs.renameSync(`${statePath}.tmp`, statePath);
+    if (done && !dry) fs.writeFileSync(stoppedPath, `${new Date(nowMs).toISOString()} no new results since ${new Date(done.newest).toISOString()}\n`);
+  };
+  console.log(`${new Date(nowMs).toISOString()} checked ${checked.join(' ') || 'nothing'}; open ${Object.keys(state.open).length}; told ${tell.length}${skipped.length ? `; out of time before ${skipped.join(' ')}` : ''}${done ? '; five quiet days, stopping' : ''}`);
   if (!tell.length) return save();
   const cmd = process.env.VG_WATCH_NOTIFY;
   if (dry || !cmd) { console.log(message(tell)); return save(); }

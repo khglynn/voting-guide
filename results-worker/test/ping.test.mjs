@@ -1,7 +1,7 @@
 /* The alerts' Slack path (ping.js): replies under one #gabby-log post, the fallbacks, and never Kevin's DM. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { makePinger, THREAD_KEY, PARENT_TEXT } from '../src/ping.js';
+import { makePinger, THREAD_KEY, PARENT_TEXT, MUTE_S, RETRY_S } from '../src/ping.js';
 import { memStore } from './helpers.mjs';
 
 const LOG = 'C0LOGCHANNEL';
@@ -174,4 +174,77 @@ test('Slack unreachable: the ping says false and never throws', async () => {
   assert.equal(await pinger(fetch, memStore(), { log: (l) => lines.push(l) })('all', 'done', 'every source has stopped.'), false);
   assert.ok(lines.includes('slack parent: network down'));
   assert.ok(lines.includes('slack post: network down'));
+});
+
+/* A store that keeps each key's expiry, ticking on a clock the test moves (KV's expirationTtl, in seconds), and that
+   refuses a second write to one key in the same second, as Workers KV does (429; the error text is KV's, as
+   checks.test.mjs uses it). A test's clock only moves when the test moves it, so one tick is one second. */
+function ttlStore() {
+  const m = new Map();
+  const wrote = new Map(); // key → the second it was last written
+  const s = {
+    m, now: 0, ttls: {},
+    async get(k) { const e = m.get(k); if (!e || (e.until && e.until <= s.now)) return null; return e.v; },
+    async put(k, v, opts = {}) {
+      if (wrote.get(k) === s.now) throw new Error('KV PUT failed: 429 Too Many Requests');
+      wrote.set(k, s.now);
+      s.ttls[k] = opts.expirationTtl; m.set(k, { v: String(v), until: opts.expirationTtl ? s.now + opts.expirationTtl : 0 });
+    },
+    async delete(k) { m.delete(k); },
+  };
+  return s;
+}
+
+test('a Slack outage does not mute the alert for six hours: it is tried again ten minutes later', async () => {
+  const store = ttlStore();
+  const down = async () => { throw new Error('slack down'); };
+  assert.equal(await pinger(down, store)('la', 'refused', 'Los Angeles County refused our request.'), false);
+  assert.equal(store.ttls['alert:la:refused:trying'], RETRY_S);
+  assert.equal(store.ttls['alert:la:refused'], undefined, 'no mute for an alert Slack never took');
+
+  store.now += 60; // the next one-minute tick: still held, so an outage isn't hammered every minute
+  const quiet = fakeSlack();
+  assert.equal(await pinger(quiet, store)('la', 'refused', 'Los Angeles County refused our request.'), false);
+  assert.equal(quiet.calls.length, 0);
+
+  store.now += RETRY_S; // Slack is back
+  const back = fakeSlack();
+  assert.equal(await pinger(back, store)('la', 'refused', 'Los Angeles County refused our request.'), true);
+  assert.equal(back.calls.at(-1).text, 'Results fetcher: Los Angeles County refused our request.');
+  assert.equal(store.ttls['alert:la:refused'], MUTE_S);
+});
+
+test('a sent alert is muted for six hours, and a refused post is held only ten minutes', async () => {
+  const store = ttlStore();
+  assert.equal(await pinger(fakeSlack(), store)('denver', 'failing', 'Denver has failed since noon.'), true);
+  assert.equal(store.ttls['alert:denver:failing'], MUTE_S);
+  store.now += RETRY_S + 1;
+  const again = fakeSlack();
+  assert.equal(await pinger(again, store)('denver', 'failing', 'Denver has failed since noon.'), false);
+  assert.equal(again.calls.length, 0);
+
+  const refused = fakeSlack(() => ({ ok: false, error: 'ratelimited' }));
+  assert.equal(await pinger(refused, store)('philly', 'refused', 'Philadelphia refused our request.'), false);
+  assert.equal(store.ttls['alert:philly:refused:trying'], RETRY_S);
+  assert.equal(store.ttls['alert:philly:refused'], undefined);
+});
+
+test('a lasting problem posts every six hours, not every ten minutes (#149 review: KV refuses a key written twice a second)', async () => {
+  // The Worker raises a stuck alert on every one-minute tick while the trouble lasts. Over a day it should post four
+  // times. With the hold and the mute on one key, the mute's write landed in the same second as the hold's and was
+  // refused, so the alert kept only its 10-minute hold and posted about 144 times.
+  const store = ttlStore();
+  const slack = fakeSlack();
+  let posted = 0;
+  for (let minute = 0; minute < 24 * 60; minute++) {
+    store.now = minute * 60;
+    if (await pinger(slack, store)('ca', 'failing', 'California has failed since 6 AM.')) posted++;
+  }
+  assert.equal(posted, 4);
+});
+
+test('without the token or the channel the alert still dedupes for six hours (it can only be logged)', async () => {
+  const store = ttlStore();
+  await pinger(fakeSlack(), store, { token: undefined })('all', 'done', 'every source has stopped.');
+  assert.equal(store.ttls['alert:all:done'], MUTE_S);
 });

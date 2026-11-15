@@ -1,7 +1,7 @@
 /* The outside watch's judgment and its tell-only-what-changed rules (bin/watch.mjs, Nov 4). */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { sendTimeout, NOTIFY_MS, SEND_MIN_MS } from '../bin/watch.mjs';
+import { sendTimeout, untell, NOTIFY_MS, SEND_MIN_MS } from '../bin/watch.mjs';
 import { judgeFile, honestyProblems, diff, message, sends, runOrder, STATES, START_BY_MS, HONESTY_BY_MS, STOP_MS, LATE_MIN, REMIND_H } from '../bin/watch.mjs';
 
 const T = Date.parse('2026-11-04T23:00:00Z');
@@ -78,14 +78,33 @@ test('watch: this Mac\'s own trouble and every "Cleared" are quiet; a broken fil
   assert.deepEqual(fixed.quiet, fixed.tell, 'their clears need nothing of him');
 });
 
-test('watch: with a quiet command, quiet lines go first through it and the rest through the main one; without, one message as before', () => {
+test('watch: with a quiet command, what reaches him goes first and the quiet lines after; without, one message as before', () => {
   const tell = ['PA stalled.', 'Cleared: DC runs again.', 'TX broke a rule.'];
   const quiet = ['Cleared: DC runs again.'];
-  assert.deepEqual(sends(tell, quiet, 'now', 'later'), [['later', ['Cleared: DC runs again.']], ['now', ['PA stalled.', 'TX broke a rule.']]]);
-  assert.deepEqual(sends(tell, quiet, 'now', undefined), [['now', tell]], 'no quiet command: everything as before');
-  assert.deepEqual(sends(quiet, quiet, 'now', 'later'), [['later', quiet]], 'only quiet lines: one send');
-  assert.deepEqual(sends(['PA stalled.'], [], 'now', 'later'), [['now', ['PA stalled.']]]);
+  assert.deepEqual(sends(tell, quiet, 'now', 'later'), [['now', ['PA stalled.', 'TX broke a rule.'], false], ['later', ['Cleared: DC runs again.'], true]],
+    'a slow or failed quiet send can never hold an urgent one back (review round 2)');
+  assert.deepEqual(sends(tell, quiet, 'now', undefined), [['now', tell, false]], 'no quiet command: everything as before');
+  assert.deepEqual(sends(quiet, quiet, 'now', 'later'), [['later', quiet, true]], 'only quiet lines: one send');
+  assert.deepEqual(sends(['PA stalled.'], [], 'now', 'later'), [['now', ['PA stalled.'], false]]);
   assert.deepEqual(sends([], [], 'now', 'later'), []);
+});
+
+test('watch: a quiet send that failed after the urgent one went out retells only the quiet lines (review round 2)', () => {
+  // The reviewer's case: a cleared notice and a new stalled-Worker alert in one run; the alert goes, the quiet send fails.
+  const first = diff(null, [{ key: 'DC|honesty|x', text: 'DC broke a rule.', label: 'DC passes.' }], T).state;
+  const run = diff(first, [{ key: 'PA|stale', text: 'PA stalled.', label: 'PA fresh.' }], T + 600_000);
+  assert.deepEqual([run.tell, run.quiet, run.quietKeys], [['PA stalled.', 'Cleared: DC passes.'], ['Cleared: DC passes.'], ['DC|honesty|x']]);
+  const saved = untell(run.state, first, run.quietKeys, T + 600_000);
+  assert.ok(saved.open['PA|stale'], 'the alert that went out is kept as told');
+  const next = diff(saved, [{ key: 'PA|stale', text: 'PA stalled.', label: 'PA fresh.' }], T + 1_200_000);
+  assert.deepEqual(next.tell, ['Cleared: DC passes.'], 'the next run tells the clear again, and the alert not twice');
+  // A new quiet problem whose send failed goes back to waiting, so the next run tells it rather than two runs on.
+  const ran = [{ key: 'DC|honesty-ran', hiccup: true, quiet: true, text: 'DC check couldn\'t run.', label: 'DC check runs.' }];
+  const w = diff(null, ran, T).state;
+  const r = diff(w, ran, T + 600_000);
+  const back = untell(r.state, w, r.quietKeys, T + 600_000);
+  assert.deepEqual([back.open['DC|honesty-ran'], back.waiting['DC|honesty-ran']], [undefined, T]);
+  assert.deepEqual(diff(back, ran, T + 1_200_000).tell, ['DC check couldn\'t run.']);
 });
 
 test('watch: the two sends share the notify step\'s one budget, so the step never runs past the 9-minute stop', () => {

@@ -109,36 +109,51 @@ export function diff(prev, now, nowMs, unjudged = new Set()) {
   const nextWaiting = {};
   const tell = [];
   const quiet = [];
+  const quietKeys = [];
   const seen = new Set();
-  const say = (text, hush) => { tell.push(text); if (hush) quiet.push(text); };
+  const say = (text, hush, key) => { tell.push(text); if (hush) { quiet.push(text); quietKeys.push(key); } };
   const kept = (k) => { const [st, kind = ''] = k.split('|'); return unjudged.has(st) || (unjudged.has(`${st}|honesty`) && kind.startsWith('honesty')); };
   for (const p of now) {
     if (p.hiccup && !open[p.key] && !waiting[p.key]) { nextWaiting[p.key] = nowMs; continue; }
     seen.add(p.key);
     const was = open[p.key];
     const hush = !!p.quiet;
-    if (!was) { open[p.key] = { since: nowMs, told: nowMs, text: p.text, label: p.label, ...(hush ? { quiet: true } : {}) }; say(p.text, hush); }
-    else if (nowMs - was.told >= REMIND_H * 3600_000) { open[p.key] = { ...was, told: nowMs, text: p.text }; say(`Still open since ${ct(was.since)} CT: ${p.text}`, hush); }
+    if (!was) { open[p.key] = { since: nowMs, told: nowMs, text: p.text, label: p.label, ...(hush ? { quiet: true } : {}) }; say(p.text, hush, p.key); }
+    else if (nowMs - was.told >= REMIND_H * 3600_000) { open[p.key] = { ...was, told: nowMs, text: p.text }; say(`Still open since ${ct(was.since)} CT: ${p.text}`, hush, p.key); }
     else open[p.key] = { ...was, text: p.text };
   }
   for (const [k, v] of Object.entries(open)) {
     if (seen.has(k) || kept(k)) continue;
     delete open[k];
-    say(`Cleared: ${v.label || v.text}`, true);
+    say(`Cleared: ${v.label || v.text}`, true, k);
   }
   for (const [k, v] of Object.entries(waiting)) if (!(k in nextWaiting) && !open[k] && kept(k)) nextWaiting[k] = v;
-  return { tell, quiet, state: { open, waiting: nextWaiting, last_run: new Date(nowMs).toISOString() } };
+  return { tell, quiet, quietKeys, state: { open, waiting: nextWaiting, last_run: new Date(nowMs).toISOString() } };
 }
 
-/* The run's messages by the command each goes through: [[command, lines]], the quiet ones first. With no quiet command
-   (VG_WATCH_NOTIFY_QUIET unset: any Mac but the Air's, or before its config gains the line) every line goes through
-   the one command, in one message, as before. */
+/* The run's messages by the command each goes through: [[command, lines, quiet?]], the ones that reach Kevin first, so
+   a slow or failed quiet send never holds an urgent one back (review of voting-guide#150, round 2). With no quiet
+   command (VG_WATCH_NOTIFY_QUIET unset: any Mac but the Air's, or before its config gains the line) every line goes
+   through the one command, in one message, as before. */
 export function sends(tell, quiet, cmd, quietCmd) {
-  if (!quietCmd) return tell.length ? [[cmd, tell]] : [];
+  if (!quietCmd) return tell.length ? [[cmd, tell, false]] : [];
   const hush = new Set(quiet);
   const later = tell.filter((t) => hush.has(t));
   const now = tell.filter((t) => !hush.has(t));
-  return [...(later.length ? [[quietCmd, later]] : []), ...(now.length ? [[cmd, now]] : [])];
+  return [...(now.length ? [[cmd, now, false]] : []), ...(later.length ? [[quietCmd, later, true]] : [])];
+}
+
+/* The state to save when everything but the quiet send went out: the quiet lines' problems as the last run left them
+   (`prev`), so the next run tells only those again, never an urgent line twice. A cleared one is open again, a reminder
+   has its old time, and a new one goes back to waiting, so it is told on the next run rather than two runs on. */
+export function untell(state, prev, keys, nowMs) {
+  const open = { ...state.open };
+  const waiting = { ...state.waiting };
+  for (const k of keys) {
+    if (prev?.open?.[k]) open[k] = prev.open[k];
+    else { delete open[k]; waiting[k] = prev?.waiting?.[k] ?? nowMs; }
+  }
+  return { ...state, open, waiting };
 }
 
 /* The message for the notify command, cut to fit with a count of what was left out. */
@@ -212,7 +227,7 @@ async function main() {
       problems.push({ key: `${st}|honesty-ran`, hiccup: true, quiet: true, text: `The honesty check on ${nm(st)}'s file couldn't run: ${why}`, label: `The honesty check on ${nm(st)}'s file runs again.` });
     } else if (found) problems.push(...found);
   }
-  const { tell, quiet, state } = diff(prev, problems, nowMs, unjudged);
+  const { tell, quiet, quietKeys, state } = diff(prev, problems, nowMs, unjudged);
   state.checked = checked;
   if (skipped.length) state.skipped = skipped;
   state.seen_states = [...new Set([...had, ...checked])];
@@ -221,18 +236,27 @@ async function main() {
   if (!tell.length) return save();
   const cmd = process.env.VG_WATCH_NOTIFY;
   if (dry || !cmd) { console.log(message(tell)); return save(); }
-  // The quiet message goes first: if the one that reaches him then fails, the next run tells both again, so at worst a
-  // quiet line is kept twice for his brief, never a buzz sent twice or lost. Both sends share the notify step's one
-  // budget, which the run keeps for it (HONESTY_BY_MS), so the step ends, state saved, inside the 9-minute stop.
+  // The message that reaches him goes first, with all of the notify step's budget if it needs it; the quiet one gets
+  // what's left. Both share that one budget, which the run keeps for it (HONESTY_BY_MS), so the step ends, state saved,
+  // inside the 9-minute stop. A failed first send saves nothing, so the next run tells everything again (nothing went
+  // out). A quiet send that fails or has no time left saves the run with only the quiet lines left untold (untell): the
+  // next run tells just those, never an urgent line twice.
   const notifyBy = Date.now() + NOTIFY_MS;
-  for (const [command, lines] of sends(tell, quiet, cmd, process.env.VG_WATCH_NOTIFY_QUIET)) {
-    const msg = message(lines);
+  // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice).
+  const send = (command, msg) => {
     const timeout = sendTimeout(notifyBy, Date.now());
-    if (timeout === null) { console.log(`notify out of time: told on the next run\n${msg}`); process.exitCode = 2; return; }
+    if (timeout === null) return 'out of time';
     const r = spawnSync('/bin/sh', ['-c', command], { input: msg, encoding: 'utf8', timeout });
-    // 75 is gabby-notify's "queued in the outbox": delivered as far as we're concerned (retrying would post twice). Any
-    // other failure isn't marked told: the state stays as it was, so the next run tells it again.
-    if (r.status !== 0 && r.status !== 75) { console.log(`notify failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}\n${msg}`); process.exitCode = 2; return; }
+    return r.status === 0 || r.status === 75 ? null : `failed (${r.status}): ${(r.stderr || '').trim().slice(0, 300)}`;
+  };
+  for (const [command, lines, isQuiet] of sends(tell, quiet, cmd, process.env.VG_WATCH_NOTIFY_QUIET)) {
+    const msg = message(lines);
+    const why = send(command, msg);
+    if (why === null) continue;
+    console.log(`notify ${why}: told on the next run\n${msg}`);
+    process.exitCode = 2;
+    if (!isQuiet) return;   // nothing went out: the state stays as it was
+    Object.assign(state, untell(state, prev, quietKeys, nowMs));
   }
   save();
 }

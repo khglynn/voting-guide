@@ -11,8 +11,8 @@
      10 minutes, and backs off 15, 30, then 60 minutes after a failure;
    - a failed read (the office refused the Air too, or the Worker couldn't replay it) posts nothing, so the last good
      counts stay up; a source failing 6 hours is told once, and told again in a line when it reads again;
-   - stops a source for good once the Worker calls it official or past certification (its `certify_by` plus three
-     quiet days), the same stop every source the Worker reads itself gets, and says once when every source has stopped.
+   - stops a source for good once the Worker calls it official or past certification (its `certify_by` plus ten
+     quiet days, src/schedule.js), the same stop every source the Worker reads itself gets, and says once when every source has stopped.
      Until Nov 19 it also stopped a source after five days with no new counts (Kevin's Nov 7 rule for the whole watch,
      ledger 2026-11-12-results-watch-stop, applied per source). That ended Denver on Nov 19 between its final
      unofficial count and its canvass, while Colorado was still certifying; Kevin: "Fix Denver". A finished count

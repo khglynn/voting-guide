@@ -6,10 +6,15 @@
    A source whose items are all complete with its count window closed polls daily.
    Failures back off 1, 2, 5, 15, then 60 minutes (the plan said 2, 5, 15, 60; election night showed Clarity's blips
    come in runs, and a 15-minute wait cost Bexar's first post), after one retry inside the tick; `refused` stops the source until a person changes its map.
-   A source stops for good once official, or once `certify_by` plus three days passes with no change.
+   A source stops for good once official, or once `certify_by` plus ten days passes with no change. (Three days until
+   Nov 20: offices post certified numbers days after their deadline. Colorado's counties upload their canvass to the
+   state's results system by Nov 27, two days after the Nov 25 deadline; Boulder posted 2024's official results eight
+   days after it, and New York City posts its certified returns about Dec 2, four days after its own.)
    Added Nov 3 (builder): before the map's `polls_close` the next poll never lands later than the close, and after it a
    source with nothing posted yet is polled every minute, so the first numbers are read within a minute of posting. */
 import { localHour } from './util.js';
+
+export const CERTIFIED_AFTER_DAYS = 10;
 
 const MIN = 60_000;
 const addMin = (iso, m) => new Date(Date.parse(iso) + m * MIN).toISOString();
@@ -66,7 +71,7 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   if (result.changed) { e.last_change = now; e.unchanged_polls = 0; } else e.unchanged_polls = (e.unchanged_polls || 0) + 1;
   if (e.status === 'official') { e.stopped = 'official'; e.next_due = null; return e; }
   if (map.certify_by && !result.changed) {
-    const stopAt = Date.parse(`${map.certify_by}T23:59:59Z`) + 3 * 24 * 60 * MIN;
+    const stopAt = Date.parse(`${map.certify_by}T23:59:59Z`) + CERTIFIED_AFTER_DAYS * 24 * 60 * MIN;
     if (Date.parse(now) > stopAt) { e.stopped = 'past certification'; e.next_due = null; return e; }
   }
   let wait;

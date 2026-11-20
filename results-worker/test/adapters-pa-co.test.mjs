@@ -171,6 +171,22 @@ test('denver: the header\'s time is the token; under and over votes are left out
   assert.equal(again.calls.length, 1);
   const other = await denver.read({ fetch: fakeFetch(DE_ROUTES), map: { ...DE_MAP, election: { ...DE_MAP.election, feed_election_id: '20260630' } } });
   assert.equal(other.verdict, 'error');
+  assert.deepEqual(r.labels, [], 'a time is not a label');
+});
+
+test('denver: a LastUpdate with no time (Nov 19) is quoted as the office\'s label and never read as unchanged', async () => {
+  const words = 'Final Unofficial Election Results';
+  const hdr = JSON.parse(fixture('denver.header.json')).map((kv) => (kv.Key === 'LastUpdate' ? { ...kv, Value: words } : kv));
+  const routes = { ...DE_ROUTES, GetElectionHeaderinfo: { status: 200, body: JSON.stringify(hdr) } };
+  const f = fakeFetch(routes);
+  const r = await denver.read({ fetch: f, map: DE_MAP, prevToken: words });
+  assert.equal(r.verdict, 'ok');
+  assert.notEqual(r.unchanged, true, 'the canvass can change numbers under the same words');
+  assert.equal(f.calls.length, 2);
+  assert.deepEqual(r.labels, [words]);
+  assert.equal(r.source_updated, null);
+  assert.equal(r.official, false);
+  assert.equal(r.source_status, null);
 });
 
 test('boulder: 90 races from the county page, its own Mountain time and ballot count; a 304 is one request', async () => {

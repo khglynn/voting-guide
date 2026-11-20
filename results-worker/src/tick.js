@@ -21,8 +21,11 @@ export const SCHED_KEY = `sched:${ELECTION}`;
    4 (Nov 4, 1 AM): Clarity counties and the Florida and Georgia state files now carry the office's progress from a
    whole-jurisdiction contest (src/util.js wholeProgress), and progress words the office's page doesn't show are gone
    (Washington's and Colorado's state sites, Orange FL, Allegheny). A feed that has gone quiet would otherwise keep a
-   stored read with the old words until its next publish, which after election night can be a day away. */
-export const READ_VERSION = 4;
+   stored read with the old words until its next publish, which after election night can be a day away.
+   5 (Nov 20): Clarity reads its header line by line and takes the page's own "Official Results" as official (Travis,
+   Williamson, Jefferson had said so for days with the guide still at "Counting"), and Denver quotes its "Final
+   Unofficial Election Results". Those feeds are quiet, so without a full re-read the old reads would stand. */
+export const READ_VERSION = 5;
 const PUBLISH_MS = 8_000; // one state's files, at most
 const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';

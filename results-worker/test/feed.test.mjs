@@ -1,7 +1,7 @@
 /* The Air's reader (bin/feed.mjs): its pace, its one telling of trouble, and its stops. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { afterPost, afterFail, SOURCES, START_BY_MS } from '../bin/feed.mjs';
+import { afterPost, afterFail, reopened, SOURCES, START_BY_MS } from '../bin/feed.mjs';
 import { mapFor } from './helpers.mjs';
 
 const T = Date.parse('2026-11-13T18:00:00.000Z');
@@ -25,14 +25,22 @@ test('after a good post: the Worker\'s pace, never sooner than the next 10-minut
   assert.equal(a.s.told, undefined);
 });
 
-test('five days with no new counts ends a source, counted from the Air\'s first read at the earliest', () => {
+test('only the office ends a source: official or past certification, never quiet days or the Air\'s own old stop', () => {
   const old = new Date(T - 8 * 24 * H).toISOString();
-  // Counts last changed Nov 5, but the Air only started today: not ended.
-  assert.equal(afterPost({}, { last_change: old }, T).s.ended, undefined);
-  const first = new Date(T - 5 * 24 * H).toISOString();
-  assert.equal(afterPost({ first_fed: first }, { last_change: old }, T).s.ended, 'five days with no new counts');
-  assert.equal(afterPost({ first_fed: first }, { last_change: new Date(T - 2 * H).toISOString() }, T).s.ended, undefined);
+  const first = new Date(T - 6 * 24 * H).toISOString();
+  // Denver, Nov 19: a final unofficial count, quiet for five days, its canvass still to come. It keeps being read.
+  assert.equal(afterPost({ first_fed: first }, { last_change: old }, T).s.ended, undefined);
+  assert.equal(afterPost({ first_fed: first }, { last_change: old, stopped: 'fed, ended' }, T).s.ended, undefined);
   assert.equal(afterPost({}, { stopped: 'official' }, T).s.ended, 'official');
+  assert.equal(afterPost({}, { stopped: 'past certification' }, T).s.ended, 'past certification');
+});
+
+test('a source stopped under the old five-day rule reads again; an office\'s stop stays', () => {
+  const s = { first_fed: 'x', last_ok: 'y', next: 'z', ended: 'five days with no new counts' };
+  assert.deepEqual(reopened(s), { first_fed: 'x', last_ok: 'y', next: null });
+  const done = { ended: 'past certification', next: 'z' };
+  assert.equal(reopened(done), done);
+  assert.equal(reopened(undefined), undefined);
 });
 
 test('failures back off and are told once, after six hours', () => {

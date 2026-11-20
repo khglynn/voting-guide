@@ -11,9 +11,13 @@
      10 minutes, and backs off 15, 30, then 60 minutes after a failure;
    - a failed read (the office refused the Air too, or the Worker couldn't replay it) posts nothing, so the last good
      counts stay up; a source failing 6 hours is told once, and told again in a line when it reads again;
-   - stops a source for good once the Worker calls it official or past certification, or after five days with no new
-     counts (Kevin's Nov 7 rule for the results watch, ledger 2026-11-12-results-watch-stop), telling the Worker so
-     (`end=1`) and saying once when every source has stopped.
+   - stops a source for good once the Worker calls it official or past certification (its `certify_by` plus three
+     quiet days), the same stop every source the Worker reads itself gets, and says once when every source has stopped.
+     Until Nov 19 it also stopped a source after five days with no new counts (Kevin's Nov 7 rule for the whole watch,
+     ledger 2026-11-12-results-watch-stop, applied per source). That ended Denver on Nov 19 between its final
+     unofficial count and its canvass, while Colorado was still certifying; Kevin: "Fix Denver". A finished count
+     still waits for its certified numbers, so a quiet source is now read at the Worker's slow pace (hourly, every six
+     hours once complete) until it certifies. The watch's own five-day stop for the season (bin/watch.mjs) stands.
    Telling is a shell command in VG_FEED_NOTIFY that reads the message on stdin (gabby-notify; its exit 75 means
    queued); without one the message is printed. The token is <dir>/token (mode 600) or VG_FEED_TOKEN, and is never
    printed. State is saved after each source, so a run the start script ends at its time limit loses nothing.
@@ -33,14 +37,17 @@ export const SOURCES = AIR_SOURCES;
 const ROUTE = 'https://vg-results.kevinhg.workers.dev/results/feed';
 const MIN = 60_000;
 const DAY = 24 * 60 * MIN;
-export const QUIET_DAYS = 5;
 // launchd starts a run every 10 minutes, and a source read late in one run would just miss the next run's check at
 // exactly 10, so each wait is a minute short of what it means: the next run, or 15, 30, 60 minutes after a failure.
 const FLOOR_MIN = 9;
 const BACKOFF_MIN = [14, 29, 59];
 const TELL_AFTER_MIN = 6 * 60;
 const ROUTE_TELL_MIN = 24 * 60;
-const FINAL = new Set(['official', 'past certification', 'fed, ended']);
+// The office's verdicts, as the Worker's schedule records them. Its 'fed, ended' was only ever this reader's own
+// five-day stop echoed back, so it ends nothing: the next good post lifts it at the Worker (schedule.js).
+const FINAL = new Set(['official', 'past certification']);
+// A stop this reader made itself under the old five-day rule: undone on its next run, so the source is read again.
+const OLD_QUIET_STOP = 'five days with no new counts';
 // The start script ends a run at 9 minutes. A source starts only while its slowest read (Oregon's state site: about a
 // dozen pages at up to 15 s each), its post and the notify step still fit.
 const STOP_MS = 9 * MIN;
@@ -51,7 +58,7 @@ export const START_BY_MS = STOP_MS - 10_000 - NOTIFY_MS - POST_MS - READ_MS;
 
 const iso = (ms) => new Date(ms).toISOString();
 
-/* After a good post: the source's next read, its five-day clock, and whether it is done. Pure, for the tests. */
+/* After a good post: the source's next read, and whether the office has finished it. Pure, for the tests. */
 export function afterPost(s, entry, nowMs) {
   const told = !!s.told;
   const out = { first_fed: s.first_fed || iso(nowMs), last_ok: iso(nowMs) };
@@ -59,13 +66,14 @@ export function afterPost(s, entry, nowMs) {
   const due = Date.parse(entry?.next_due || 0) || 0;
   out.next = iso(Math.max(due, nowMs + FLOOR_MIN * MIN));
   if (FINAL.has(entry?.stopped)) out.ended = entry.stopped;
-  else {
-    // The five quiet days count from the newest of its last change and the Air's first read, so counts from before the
-    // Air took over never end it early.
-    const since = Math.max(Date.parse(out.last_change || 0) || 0, Date.parse(out.first_fed));
-    if (nowMs - since >= QUIET_DAYS * DAY) out.ended = 'five days with no new counts';
-  }
   return { s: out, back: told };
+}
+
+/* A source this reader ended under the old five-day rule reads again from now. Pure, for the tests. */
+export function reopened(s) {
+  if (s?.ended !== OLD_QUIET_STOP) return s;
+  const { ended, ...rest } = s;
+  return { ...rest, next: null };
 }
 
 /* After a failed read or post: back off, and whether to tell (once, after 6 hours of failing). Pure, for the tests. */
@@ -113,6 +121,11 @@ async function main() {
     const order = ids.filter((id) => maps[id] && ADAPTERS[maps[id].feed.adapter]).sort((a, b) => (Date.parse(state.sources[a]?.next || 0) || 0) - (Date.parse(state.sources[b]?.next || 0) || 0));
     for (const id of ids) if (!order.includes(id)) log.push(`${id}: no map or adapter`);
     for (const id of order) {
+      if (!dry && state.sources[id]?.ended === OLD_QUIET_STOP) {
+        state.sources[id] = reopened(state.sources[id]);
+        delete state.done_told;
+        log.push(`${id}: reads again (it was stopped after five quiet days, before its certification)`);
+      }
       const s = state.sources[id] || {};
       const map = maps[id];
       if (s.ended && !dry) continue;
@@ -148,13 +161,7 @@ async function main() {
       state.sources[id] = a.s;
       if (a.back) { tell.push(`${map.name}: the Air reads it again.`); backIds.push(id); }
       log.push(`${id}: ${outcome}${p.j.ran[0].error ? ` (${p.j.ran[0].error})` : ''}; next ${a.s.next}`);
-      if (a.s.ended) {
-        if (a.s.ended === 'five days with no new counts') {
-          const e = await post(`${ROUTE}?source=${encodeURIComponent(id)}&end=1`, token, '{}');
-          if (e.status !== 200) { delete state.sources[id].ended; log.push(`${id}: couldn't end it at the fetcher (HTTP ${e.status}); tries again next time`); }
-        }
-        if (state.sources[id].ended) log.push(`${id}: stopped (${a.s.ended})`);
-      }
+      if (a.s.ended) log.push(`${id}: stopped (${a.s.ended})`);
       save();
     }
     const ended = ids.filter((id) => state.sources[id]?.ended);

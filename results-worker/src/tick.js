@@ -279,7 +279,7 @@ function markFed(e, since) {
 }
 
 /* `fed` with `only`: one source, from the Air's answers handed in as `fetch` (POST /results/feed). `end` with it
-   (the Air's five quiet days, or its feeder retired) stops the source for good without a read. */
+   (its feeder retired, by hand) stops the source without a read; a later read from the Air lifts it (schedule.js). */
 export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, fed = false, end = false, ping: rawPing = async () => false, budgetMs = 25_000, deadlineMs = 40_000, publishMs = PUBLISH_MS, workers = 6, limit, log = console.log }) {
   // A ping that fails (its KV dedupe key, Slack) never takes a source or a tick down with it.
   const ping = async (...a) => { try { return await rawPing(...a); } catch (e) { log(JSON.stringify({ ping_failed: a.slice(0, 2).join(':'), error: String(e?.message || e) })); return false; } };

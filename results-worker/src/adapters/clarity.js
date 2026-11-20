@@ -5,7 +5,9 @@
    The election id comes from the map, which takes it from the office's own link or Clarity's list page
    (`{base}/elections.json`); `listElections` reads that list for the map-making step. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate, hasProgressCount, wholeProgress } from '../util.js';
+import { parseUsTime, isoDate, hasProgressCount, wholeProgress, saysOfficial } from '../util.js';
+
+export { saysOfficial };
 
 /* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results".
    Colorado's state header (Nov 3) is "Unofficial Results" followed by a whole pasted HTML page (a 7A table), so a
@@ -22,11 +24,13 @@ const plain = (h) => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g,
 const lines = (h) => String(h || '').split(/<!doctype|<html/i)[0].split(/<br\s*\/?>|<\/(?:div|p|center|h\d|li)>|\r?\n/i).filter((l) => !/<a\s/i.test(l)).map(plain).filter(Boolean);
 export function labels(ps = {}, year = null) {
   const g = ps['global settings'] || {};
+  // A banner that names another year anywhere is a leftover as a whole (Colorado's "UNOFFICIAL RESULTS" above "June 28,
+  // 2016 Primary Election"): judged before it is split, so no line of it, "Official Results" least of all, survives.
+  const otherYear = (h) => year && (plain(String(h || '').split(/<!doctype|<html/i)[0]).match(/\b(19|20)\d\d\b/g) || []).some((y) => y !== String(year));
   const read = (heads) => {
     const out = [];
-    for (const t of heads.flatMap(lines)) {
+    for (const t of heads.filter((h) => !otherYear(h)).flatMap(lines)) {
       if (t.length > 160 || hasProgressCount(t) || out.some((o) => o.toLowerCase() === t.toLowerCase())) continue;
-      if (year && (t.match(/\b(19|20)\d\d\b/g) || []).some((y) => y !== String(year))) continue;
       out.push(t);
     }
     return out;
@@ -34,11 +38,6 @@ export function labels(ps = {}, year = null) {
   const web = read([ps.web?.header]);
   return web.length ? web : read([g.header, g['mobile header']]);
 }
-
-/* The office's own page calling its count official: a banner line that is "Official Results" (or "Official Canvass
-   Results", "Final Official Results"), never one with "unofficial" in it. Travis since Nov 10, Williamson and Jefferson
-   since their canvasses. Clarity's final-upload flag stayed false on all of them. */
-export const saysOfficial = (ls) => ls.some((t) => !/unofficial/i.test(t) && /^(?:final\s+)?official(?:\s+(?:final|canvass(?:ed)?|certified))?\s+results?$/i.test(t.trim()));
 
 const num = (v) => (Array.isArray(v) ? Number(v[0] ?? 0) : Number(v ?? 0));
 

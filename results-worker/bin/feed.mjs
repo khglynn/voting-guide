@@ -36,7 +36,6 @@ import { mapHash } from '../src/fingerprint.js';
 export const SOURCES = AIR_SOURCES;
 const ROUTE = 'https://vg-results.kevinhg.workers.dev/results/feed';
 const MIN = 60_000;
-const DAY = 24 * 60 * MIN;
 // launchd starts a run every 10 minutes, and a source read late in one run would just miss the next run's check at
 // exactly 10, so each wait is a minute short of what it means: the next run, or 15, 30, 60 minutes after a failure.
 const FLOOR_MIN = 9;
@@ -46,8 +45,9 @@ const ROUTE_TELL_MIN = 24 * 60;
 // The office's verdicts, as the Worker's schedule records them. Its 'fed, ended' was only ever this reader's own
 // five-day stop echoed back, so it ends nothing: the next good post lifts it at the Worker (schedule.js).
 const FINAL = new Set(['official', 'past certification']);
-// A stop this reader made itself under the old five-day rule: undone on its next run, so the source is read again.
-const OLD_QUIET_STOP = 'five days with no new counts';
+// Stops this reader made itself under the old five-day rule (its own words, or the Worker's 'fed, ended' saved back
+// when an end call timed out after the Worker had it): undone on the next run, so the source is read again.
+const OLD_STOPS = new Set(['five days with no new counts', 'fed, ended']);
 // The start script ends a run at 9 minutes. A source starts only while its slowest read (Oregon's state site: about a
 // dozen pages at up to 15 s each), its post and the notify step still fit.
 const STOP_MS = 9 * MIN;
@@ -71,7 +71,7 @@ export function afterPost(s, entry, nowMs) {
 
 /* A source this reader ended under the old five-day rule reads again from now. Pure, for the tests. */
 export function reopened(s) {
-  if (s?.ended !== OLD_QUIET_STOP) return s;
+  if (!OLD_STOPS.has(s?.ended)) return s;
   const { ended, ...rest } = s;
   return { ...rest, next: null };
 }
@@ -121,7 +121,7 @@ async function main() {
     const order = ids.filter((id) => maps[id] && ADAPTERS[maps[id].feed.adapter]).sort((a, b) => (Date.parse(state.sources[a]?.next || 0) || 0) - (Date.parse(state.sources[b]?.next || 0) || 0));
     for (const id of ids) if (!order.includes(id)) log.push(`${id}: no map or adapter`);
     for (const id of order) {
-      if (!dry && state.sources[id]?.ended === OLD_QUIET_STOP) {
+      if (!dry && OLD_STOPS.has(state.sources[id]?.ended)) {
         state.sources[id] = reopened(state.sources[id]);
         delete state.done_told;
         log.push(`${id}: reads again (it was stopped after five quiet days, before its certification)`);

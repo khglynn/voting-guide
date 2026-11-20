@@ -38,6 +38,8 @@ test('only the office ends a source: official or past certification, never quiet
 test('a source stopped under the old five-day rule reads again; an office\'s stop stays', () => {
   const s = { first_fed: 'x', last_ok: 'y', next: 'z', ended: 'five days with no new counts' };
   assert.deepEqual(reopened(s), { first_fed: 'x', last_ok: 'y', next: null });
+  // the Worker's 'fed, ended' saved back after an end call that timed out once the Worker had it
+  assert.deepEqual(reopened({ ...s, ended: 'fed, ended' }), { first_fed: 'x', last_ok: 'y', next: null });
   const done = { ended: 'past certification', next: 'z' };
   assert.equal(reopened(done), done);
   assert.equal(reopened(undefined), undefined);

@@ -185,8 +185,13 @@ test('denver: a LastUpdate with no time (Nov 19) is quoted as the office\'s labe
   assert.equal(f.calls.length, 2);
   assert.deepEqual(r.labels, [words]);
   assert.equal(r.source_updated, null);
-  assert.equal(r.official, false);
+  assert.equal(r.official, false, '"Final Unofficial" is neither official nor complete');
   assert.equal(r.source_status, null);
+  // Once the canvass posts, Denver's own "Final Official Results" makes the read official.
+  const fin = JSON.parse(fixture('denver.header.json')).map((kv) => (kv.Key === 'LastUpdate' ? { ...kv, Value: 'Final Official Results' } : kv));
+  const o = await denver.read({ fetch: fakeFetch({ ...DE_ROUTES, GetElectionHeaderinfo: { status: 200, body: JSON.stringify(fin) } }), map: DE_MAP });
+  assert.equal(o.official, true);
+  assert.deepEqual(o.labels, ['Final Official Results']);
 });
 
 test('boulder: 90 races from the county page, its own Mountain time and ballot count; a 304 is one request', async () => {

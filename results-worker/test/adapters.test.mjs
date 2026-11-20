@@ -145,7 +145,11 @@ test('clarity: a header is read line by line, the page\'s own first; "Official R
   assert.equal(r.official, false);
   // A line that is a link is no banner: the global header speaks instead (Allegheny).
   assert.deepEqual(clarity.labels({ web: { header: '<div>Link to: <a href="https://x.example/">Election Results User Guide</a></div>' }, 'global settings': { header: 'UNOFFICIAL RESULTS' } }, '2026'), ['UNOFFICIAL RESULTS']);
-  for (const t of ['Official Results', 'OFFICIAL RESULTS', 'Final Official Results', 'Official Canvass Results']) assert.equal(clarity.saysOfficial([t]), true, t);
+  // A leftover banner from another election is dropped whole, so its "OFFICIAL RESULTS" line never counts (review, Nov 20).
+  const old = clarity.labels({ web: { header: 'OFFICIAL RESULTS<br/>November 5, 2024 General Election' } }, '2026');
+  assert.deepEqual(old, []);
+  assert.equal(clarity.saysOfficial(old), false);
+  for (const t of ['Official Results', 'OFFICIAL RESULTS', 'Final Official Results', 'Official Canvass Results', 'Official Election Results']) assert.equal(clarity.saysOfficial([t]), true, t);
   for (const t of ['Unofficial Results', 'Unofficial Final Cumulative Results', 'Official results will be posted after the canvass', 'Official Results November 2024']) assert.equal(clarity.saysOfficial([t]), false, t);
 });
 

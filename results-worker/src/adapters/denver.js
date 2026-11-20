@@ -11,9 +11,10 @@
    Nov 19: once counting ended, LastUpdate became words with no time ("Final Unofficial Election Results"). Words can
    stay put while the canvass changes the numbers, so a LastUpdate with no time is never taken as "unchanged": every
    read fetches the races and the Worker compares the bytes. The words themselves are the office's own label, quoted
-   as given, and nothing here reads them as official or complete. */
+   as given; only words that say official in so many words ("Final Official Results", util.js saysOfficial) make the
+   read official, and "Final Unofficial" is never read as complete. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate } from '../util.js';
+import { parseUsTime, isoDate, saysOfficial } from '../util.js';
 
 const clean = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 
@@ -52,7 +53,7 @@ export async function read({ fetch, map, prevToken = null }) {
     raw: { 'GetElectionHeaderinfo.json': hdr.body, 'Election.json': el.body },
     election: { id: String(h.ElectionId), name: clean(h.ElectionTitle), date: isoDate(clean(h.ElectionDate)) },
     source_status: null,
-    official: false,
+    official: !at && saysOfficial([token]),
     source_updated: at,
     reporting: null,
     labels: at ? [] : [token],

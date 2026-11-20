@@ -5,24 +5,38 @@
    The election id comes from the map, which takes it from the office's own link or Clarity's list page
    (`{base}/elections.json`); `listElections` reads that list for the map-making step. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate, hasProgressCount, wholeProgress } from '../util.js';
+import { parseUsTime, isoDate, hasProgressCount, wholeProgress, saysOfficial } from '../util.js';
+
+export { saysOfficial };
 
 /* The source's own banner words, as plain text: "Early Voting Totals Only" (Dallas, 7 PM), "Unofficial Results".
-   A banner holding a progress count is left out (see hasProgressCount).
    Colorado's state header (Nov 3) is "Unofficial Results" followed by a whole pasted HTML page (a 7A table), so a
    header is cut where a pasted document starts. Its other header still reads "UNOFFICIAL RESULTS June 28, 2016 Primary
    Election": a label that names a year other than the election's is a leftover and is dropped. Repeats that differ only
-   in capitals (Fulton's "Unofficial Results" and "UNOFFICIAL RESULTS") show once. */
-const plain = (h) => String(h || '').split(/<!doctype|<html/i)[0].replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+   in capitals (Fulton's "Unofficial Results" and "UNOFFICIAL RESULTS") show once.
+   Nov 20: a header is read line by line (its <div>s, <br>s and paragraphs), and a line holding a progress count is left
+   out (see hasProgressCount) while the others stay: Travis's "Official Results" above "201/201 Vote Centers Reporting"
+   was dropped whole for ten days. The web header is the one the office's page shows; the global and mobile headers are
+   read only when it is empty, since they keep old words (Dallas's "Early Voting Totals Only" sat in its global header
+   beside "Unofficial Final Cumulative Results", from June to the November canvass). */
+const plain = (h) => String(h || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+// A line that holds a link is a pointer, not a banner (Allegheny's "Link to: Election Results User Guide"): left out.
+const lines = (h) => String(h || '').split(/<!doctype|<html/i)[0].split(/<br\s*\/?>|<\/(?:div|p|center|h\d|li)>|\r?\n/i).filter((l) => !/<a\s/i.test(l)).map(plain).filter(Boolean);
 export function labels(ps = {}, year = null) {
-  const out = [];
-  for (const v of [ps.web?.header, ps['global settings']?.header, ps['global settings']?.['mobile header']]) {
-    const t = plain(v);
-    if (!t || t.length > 160 || hasProgressCount(t) || out.some((o) => o.toLowerCase() === t.toLowerCase())) continue;
-    if (year && (t.match(/\b(19|20)\d\d\b/g) || []).some((y) => y !== String(year))) continue;
-    out.push(t);
-  }
-  return out;
+  const g = ps['global settings'] || {};
+  // A banner that names another year anywhere is a leftover as a whole (Colorado's "UNOFFICIAL RESULTS" above "June 28,
+  // 2016 Primary Election"): judged before it is split, so no line of it, "Official Results" least of all, survives.
+  const otherYear = (h) => year && (plain(String(h || '').split(/<!doctype|<html/i)[0]).match(/\b(19|20)\d\d\b/g) || []).some((y) => y !== String(year));
+  const read = (heads) => {
+    const out = [];
+    for (const t of heads.filter((h) => !otherYear(h)).flatMap(lines)) {
+      if (t.length > 160 || hasProgressCount(t) || out.some((o) => o.toLowerCase() === t.toLowerCase())) continue;
+      out.push(t);
+    }
+    return out;
+  };
+  const web = read([ps.web?.header]);
+  return web.length ? web : read([g.header, g['mobile header']]);
 }
 
 const num = (v) => (Array.isArray(v) ? Number(v[0] ?? 0) : Number(v ?? 0));
@@ -98,15 +112,16 @@ export async function read({ fetch, map, prevToken = null }) {
   // show on the state site. The race has the largest TP, matching the settings' precinct total where one is given,
   // shared by at least two races, since Clarity names no county total to prove a lone race's reach.
   const whole = quotable ? wholeProgress(contests, { total: totalPr, shared: 2 }) : null;
+  const banner = labels(e.json?.pagesettings, isoDate(details.electiondate)?.slice(0, 4) || null);
   return {
     verdict: 'ok',
     changed_token: ver,
     raw: { 'current_ver.txt': ver, 'summary.json': s.body, 'electionsettings.json': e.body },
     election: { id: details.electionid === undefined || details.electionid === null ? null : String(details.electionid), name: String(details.internalname || '').trim(), date: isoDate(details.electiondate) },
     source_status: details.chkisfinalupload === true || details.chkisfinalupload === 'true' ? 'final_flag' : null,
-    official: false,
+    official: saysOfficial(banner),
     source_updated: parseUsTime(e.json?.websiteupdatedat),
-    labels: labels(e.json?.pagesettings, isoDate(details.electiondate)?.slice(0, 4) || null),
+    labels: banner,
     feed_version: ver,
     reporting: whole?.reporting ?? null,
     ...(whole ? { reporting_from: whole.from } : {}),

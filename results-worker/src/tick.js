@@ -9,7 +9,8 @@
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
-import { nextEntry, dueSources, clampElectionNight, previewFloor } from './schedule.js';
+import { nextEntry, dueSources, clampElectionNight, previewFloor, certifiedStopAt } from './schedule.js';
+import { AIR_SOURCES } from './relay.js';
 import { fingerprint, statewideFingerprint, mapHash, checkHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
@@ -21,8 +22,11 @@ export const SCHED_KEY = `sched:${ELECTION}`;
    4 (Nov 4, 1 AM): Clarity counties and the Florida and Georgia state files now carry the office's progress from a
    whole-jurisdiction contest (src/util.js wholeProgress), and progress words the office's page doesn't show are gone
    (Washington's and Colorado's state sites, Orange FL, Allegheny). A feed that has gone quiet would otherwise keep a
-   stored read with the old words until its next publish, which after election night can be a day away. */
-export const READ_VERSION = 4;
+   stored read with the old words until its next publish, which after election night can be a day away.
+   5 (Nov 20): Clarity reads its header line by line and takes the page's own "Official Results" as official (Travis,
+   Williamson, Jefferson had said so for days with the guide still at "Counting"), and Denver quotes its "Final
+   Unofficial Election Results". Those feeds are quiet, so without a full re-read the old reads would stand. */
+export const READ_VERSION = 5;
 const PUBLISH_MS = 8_000; // one state's files, at most
 const MAX_CARRY = 3; // cut-off reads in a row a dropped race keeps its last numbers through
 const SITE = 'https://vote.kevinhg.com';
@@ -279,7 +283,7 @@ function markFed(e, since) {
 }
 
 /* `fed` with `only`: one source, from the Air's answers handed in as `fetch` (POST /results/feed). `end` with it
-   (the Air's five quiet days, or its feeder retired) stops the source for good without a read. */
+   (its feeder retired, by hand) stops the source without a read; a later read from the Air lifts it (schedule.js). */
 export async function runTick({ fetch, store, archive, maps, now = new Date().toISOString(), only = null, fed = false, end = false, ping: rawPing = async () => false, budgetMs = 25_000, deadlineMs = 40_000, publishMs = PUBLISH_MS, workers = 6, limit, log = console.log }) {
   // A ping that fails (its KV dedupe key, Slack) never takes a source or a tick down with it.
   const ping = async (...a) => { try { return await rawPing(...a); } catch (e) { log(JSON.stringify({ ping_failed: a.slice(0, 2).join(':'), error: String(e?.message || e) })); return false; } };
@@ -301,6 +305,16 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
       if (!at || at === (await mapHash(m))) continue;
       delete e.stopped; delete e.refused_hash; e.next_due = null;
       log(JSON.stringify({ source: m.id, refusal_cleared: 'its map changed' }));
+      unstuck = true;
+    }
+    // A source stopped as past certification under an older, shorter rule (three days until Nov 20) reads again while
+    // the current rule still has it read: a deploy never leaves a finished count short of its certified numbers. The
+    // Air's sources are the Air's to restart, never the cron's.
+    for (const m of live) {
+      const e = sched.sources[m.id];
+      if (e?.stopped !== 'past certification' || AIR_SOURCES.includes(m.id) || Date.parse(now) > certifiedStopAt(m)) continue;
+      delete e.stopped; e.next_due = null;
+      log(JSON.stringify({ source: m.id, certification_stop_lifted: `reads until ${new Date(certifiedStopAt(m)).toISOString()}` }));
       unstuck = true;
     }
   }

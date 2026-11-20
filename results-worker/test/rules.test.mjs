@@ -97,8 +97,10 @@ test('ladder: quiet hours from Nov 4, 6 AM local, unless changed in the last hou
   assert.equal(afterQuiet('2026-11-04T06:30:00.000Z', {}, 'America/Chicago'), '2026-11-04T06:30:00.000Z');
   const e = nextEntry({}, { kind: 'ok', changed: true, status: 'counting', sourceNext: '2026-11-04T02:30:00.000Z' }, '2026-11-04T02:00:00.000Z');
   assert.equal(e.next_due, '2026-11-04T02:30:00.000Z');
-  // past certify_by + 3 days with no change: stops
-  const s = nextEntry({}, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-21T12:00:00.000Z', { certify_by: '2026-11-17' });
+  // past certify_by + 10 days with no change: stops; before that, a finished count is still read for its certified numbers
+  const early = nextEntry({}, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-21T12:00:00.000Z', { certify_by: '2026-11-17' });
+  assert.equal(early.stopped, undefined);
+  const s = nextEntry({}, { kind: 'ok', changed: false, status: 'counting' }, '2026-11-28T12:00:00.000Z', { certify_by: '2026-11-17' });
   assert.equal(s.stopped, 'past certification');
 });
 

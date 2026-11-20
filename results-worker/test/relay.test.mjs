@@ -70,6 +70,12 @@ test('the stop flag stops reads from the Air too; ending one stops it for good, 
   assert.ok(await store.get(`src:${map.id}`), 'its last counts stay');
   await runTick({ fetch: noFetch, store, archive: null, maps: [map], now: '2026-11-18T18:01:00.000Z', ping });
   assert.match(pings.join('\n'), /done/);
+  // A later read from the Air lifts its own stop (Denver, Nov 19): the source is read from the Air again.
+  const back = await runTick({ fetch: replayFetch(await airRead()), store, archive: null, maps: [map], only: map.id, fed: true, now: '2026-11-19T18:00:00.000Z' });
+  assert.notEqual(back.ran[0].outcome, 'error');
+  const e = await sched(store);
+  assert.equal(e.stopped, 'fed');
+  assert.equal(e.fed_at, '2026-11-19T18:00:00.000Z');
 });
 
 test('a good run by hand hands an Air source back to the Worker', async () => {

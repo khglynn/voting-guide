@@ -123,7 +123,34 @@ test('clarity: the source\'s own banner words come through as labels', async () 
   settings.pagesettings['global settings']['mobile header'] = 'Unofficial Results';
   const f = fakeFetch({ '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': { status: 200, body: JSON.stringify(settings) } });
   const r = await clarity.read({ fetch: f, map: mapFor('dallas-county-tx') });
-  assert.deepEqual(r.labels, ['Early Voting Totals Only', 'Unofficial Results']);
+  // The web header is the page's own; the mobile one is read only when it is empty (Nov 20).
+  assert.deepEqual(r.labels, ['Early Voting Totals Only']);
+  assert.equal(r.official, false);
+});
+
+test('clarity: a header is read line by line, the page\'s own first; "Official Results" is the office calling it official (Nov 20)', async () => {
+  const { fixture } = await import('./helpers.mjs');
+  const settings = JSON.parse(fixture('clarity-dallas.electionsettings.json'));
+  // Travis since Nov 10: the count line goes, the words stay, and the office's own word stands though the flag is false.
+  settings.pagesettings.web.header = '<div><strong><span style="font-size: 24pt;">Official Results</span></strong></div>\n<div><strong><span style="font-size: 24pt;">201/201 Vote Centers Reporting</span></strong></div>';
+  settings.settings.electiondetails.chkisfinalupload = false;
+  const routes = (s) => ({ '/127396/current_ver.txt': 'clarity-dallas.current_ver.txt', '/127396/382636/json/en/summary.json': 'clarity-dallas.summary.json', '/127396/382636/json/en/electionsettings.json': { status: 200, body: JSON.stringify(s) } });
+  let r = await clarity.read({ fetch: fakeFetch(routes(settings)), map: mapFor('dallas-county-tx') });
+  assert.deepEqual(r.labels, ['Official Results']);
+  assert.equal(r.official, true);
+  // Dallas at its canvass: an old global header ("Early Voting Totals Only", there since June) never shows beside the page's.
+  settings.pagesettings.web.header = '<div>Unofficial Final Cumulative Results</div>';
+  r = await clarity.read({ fetch: fakeFetch(routes(settings)), map: mapFor('dallas-county-tx') });
+  assert.deepEqual(r.labels, ['Unofficial Final Cumulative Results']);
+  assert.equal(r.official, false);
+  // A line that is a link is no banner: the global header speaks instead (Allegheny).
+  assert.deepEqual(clarity.labels({ web: { header: '<div>Link to: <a href="https://x.example/">Election Results User Guide</a></div>' }, 'global settings': { header: 'UNOFFICIAL RESULTS' } }, '2026'), ['UNOFFICIAL RESULTS']);
+  // A leftover banner from another election is dropped whole, so its "OFFICIAL RESULTS" line never counts (review, Nov 20).
+  const old = clarity.labels({ web: { header: 'OFFICIAL RESULTS<br/>November 5, 2024 General Election' } }, '2026');
+  assert.deepEqual(old, []);
+  assert.equal(clarity.saysOfficial(old), false);
+  for (const t of ['Official Results', 'OFFICIAL RESULTS', 'Final Official Results', 'Official Canvass Results', 'Official Election Results']) assert.equal(clarity.saysOfficial([t]), true, t);
+  for (const t of ['Unofficial Results', 'Unofficial Final Cumulative Results', 'Official results will be posted after the canvass', 'Official Results November 2024']) assert.equal(clarity.saysOfficial([t]), false, t);
 });
 
 test('clarity: a banner that carries a progress count is dropped (Travis 0/201, Williamson\'s unfilled X of X)', async () => {
@@ -259,5 +286,6 @@ test('clarity: Fulton County GA 127295, party tags on names, one label for two s
 
 test('clarity labels: a pasted page is cut off, another year is dropped, capitals-only repeats show once', () => {
   assert.deepEqual(clarity.labels({ web: { header: '<span>Unofficial Results</span>\r\n<!DOCTYPE html><html><body><table>7A</table></body></html>' }, 'global settings': { header: 'UNOFFICIAL RESULTS<br/>June 28, 2016 Primary Election', 'mobile header': 'unofficial results' } }, '2026'), ['Unofficial Results']);
-  assert.deepEqual(clarity.labels({ web: { header: 'Early Voting Totals Only' }, 'global settings': { header: 'Unofficial Results November 3, 2026' } }, '2026'), ['Early Voting Totals Only', 'Unofficial Results November 3, 2026']);
+  assert.deepEqual(clarity.labels({ web: { header: 'Early Voting Totals Only' }, 'global settings': { header: 'Unofficial Results November 3, 2026' } }, '2026'), ['Early Voting Totals Only']);
+  assert.deepEqual(clarity.labels({ web: { header: '' }, 'global settings': { header: 'Unofficial Results November 3, 2026' } }, '2026'), ['Unofficial Results November 3, 2026']);
 });

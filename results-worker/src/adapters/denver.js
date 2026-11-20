@@ -6,10 +6,15 @@
      api/Election?ElectionId={id}: Races and Results (RaceID, RaceTitle, CandidateVotes [{CandidateName, Votes}],
        TotalVotes, UnderVotes, OverVotes). Under and over votes are listed apart from the candidates and are not votes
        for anyone, so they are left out, as Denver's own percentages leave them out.
-   The feed gives no precinct or ballot progress line and no "unofficial" label (Nov 3), so none is shown. A
-   CandidateVotes `ClassName` of "Winning" marks the current leader on Denver's page and is never taken as an outcome. */
+   The feed gives no precinct or ballot progress line, so none is shown. A CandidateVotes `ClassName` of "Winning" marks
+   the current leader on Denver's page and is never taken as an outcome.
+   Nov 19: once counting ended, LastUpdate became words with no time ("Final Unofficial Election Results"). Words can
+   stay put while the canvass changes the numbers, so a LastUpdate with no time is never taken as "unchanged": every
+   read fetches the races and the Worker compares the bytes. The words themselves are the office's own label, quoted
+   as given; only words that say official in so many words ("Final Official Results", util.js saysOfficial) make the
+   read official, and "Final Unofficial" is never read as complete. */
 import { get } from '../fetch.js';
-import { parseUsTime, isoDate } from '../util.js';
+import { parseUsTime, isoDate, saysOfficial } from '../util.js';
 
 const clean = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 
@@ -33,7 +38,8 @@ export async function read({ fetch, map, prevToken = null }) {
   const token = clean(h.LastUpdate);
   if (!token) return { verdict: 'error', error: 'GetElectionHeaderinfo has no LastUpdate', url: hdr.url };
   if (String(h.ElectionId) !== String(map.election.feed_election_id)) return { verdict: 'error', error: `the header is for election ${h.ElectionId}, the map's is ${map.election.feed_election_id}`, url: hdr.url };
-  if (prevToken && token === prevToken) return { verdict: 'ok', unchanged: true, changed_token: token };
+  const at = lastUpdate(token);
+  if (prevToken && token === prevToken && at) return { verdict: 'ok', unchanged: true, changed_token: token };
   const el = await get(fetch, `${map.feed.base}/api/Election?ElectionId=${encodeURIComponent(map.election.feed_election_id)}`, { identity });
   if (el.verdict !== 'ok') return { verdict: el.verdict, error: el.error, status: el.status, url: el.url };
   if (!Array.isArray(el.json?.Results)) return { verdict: 'error', error: 'api/Election had no Results list', url: el.url };
@@ -47,10 +53,10 @@ export async function read({ fetch, map, prevToken = null }) {
     raw: { 'GetElectionHeaderinfo.json': hdr.body, 'Election.json': el.body },
     election: { id: String(h.ElectionId), name: clean(h.ElectionTitle), date: isoDate(clean(h.ElectionDate)) },
     source_status: null,
-    official: false,
-    source_updated: lastUpdate(token),
+    official: !at && saysOfficial([token]),
+    source_updated: at,
     reporting: null,
-    labels: [],
+    labels: at ? [] : [token],
     contests,
   };
 }

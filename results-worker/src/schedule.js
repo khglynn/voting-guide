@@ -15,6 +15,8 @@
 import { localHour } from './util.js';
 
 export const CERTIFIED_AFTER_DAYS = 10;
+/* When a quiet source stops for good: its certify_by plus CERTIFIED_AFTER_DAYS (ms), or Infinity with no date. */
+export const certifiedStopAt = (map) => (map?.certify_by ? Date.parse(`${map.certify_by}T23:59:59Z`) + CERTIFIED_AFTER_DAYS * 86_400_000 : Infinity);
 
 const MIN = 60_000;
 const addMin = (iso, m) => new Date(Date.parse(iso) + m * MIN).toISOString();
@@ -71,8 +73,7 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   if (result.changed) { e.last_change = now; e.unchanged_polls = 0; } else e.unchanged_polls = (e.unchanged_polls || 0) + 1;
   if (e.status === 'official') { e.stopped = 'official'; e.next_due = null; return e; }
   if (map.certify_by && !result.changed) {
-    const stopAt = Date.parse(`${map.certify_by}T23:59:59Z`) + CERTIFIED_AFTER_DAYS * 24 * 60 * MIN;
-    if (Date.parse(now) > stopAt) { e.stopped = 'past certification'; e.next_due = null; return e; }
+    if (Date.parse(now) > certifiedStopAt(map)) { e.stopped = 'past certification'; e.next_due = null; return e; }
   }
   let wait;
   const quietFor = e.last_change ? (Date.parse(now) - Date.parse(e.last_change)) / MIN : Infinity;

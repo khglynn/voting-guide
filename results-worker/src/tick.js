@@ -9,7 +9,8 @@
 import { ADAPTERS } from './adapters/index.js';
 import { checkRead, checkFile } from './checks.js';
 import { buildStateFile, sourceStatus } from './merge.js';
-import { nextEntry, dueSources, clampElectionNight, previewFloor } from './schedule.js';
+import { nextEntry, dueSources, clampElectionNight, previewFloor, certifiedStopAt } from './schedule.js';
+import { AIR_SOURCES } from './relay.js';
 import { fingerprint, statewideFingerprint, mapHash, checkHash } from './fingerprint.js';
 import { sha256, ELECTION } from './util.js';
 
@@ -304,6 +305,16 @@ export async function runTick({ fetch, store, archive, maps, now = new Date().to
       if (!at || at === (await mapHash(m))) continue;
       delete e.stopped; delete e.refused_hash; e.next_due = null;
       log(JSON.stringify({ source: m.id, refusal_cleared: 'its map changed' }));
+      unstuck = true;
+    }
+    // A source stopped as past certification under an older, shorter rule (three days until Nov 20) reads again while
+    // the current rule still has it read: a deploy never leaves a finished count short of its certified numbers. The
+    // Air's sources are the Air's to restart, never the cron's.
+    for (const m of live) {
+      const e = sched.sources[m.id];
+      if (e?.stopped !== 'past certification' || AIR_SOURCES.includes(m.id) || Date.parse(now) > certifiedStopAt(m)) continue;
+      delete e.stopped; e.next_due = null;
+      log(JSON.stringify({ source: m.id, certification_stop_lifted: `reads until ${new Date(certifiedStopAt(m)).toISOString()}` }));
       unstuck = true;
     }
   }

@@ -348,6 +348,27 @@ test('tick: a Clarity CAPTCHA (405) stops the source after one request, with no 
   assert.equal(clarityCalls(), 1);
 });
 
+test('tick: a source stopped as past certification under the old three-day rule reads again until the ten-day rule ends it (Nov 20)', async () => {
+  const map = mapFor('bexar-tx'); // certify_by Nov 17
+  const good = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };
+  const stopped = () => memStore({ 'sched:2026-11-03': JSON.stringify({ sources: { 'bexar-tx': { stopped: 'past certification', next_due: null, last_run: '2026-11-21T00:10:00.000Z' } }, meta: {} }) });
+  const lines = [];
+  let store = stopped();
+  let out = await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [map], now: '2026-11-21T12:00:00.000Z', log: (l) => lines.push(l) });
+  assert.equal(out.ran.length, 1, 'read again');
+  assert.ok(lines.some((l) => /certification_stop_lifted/.test(l)));
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).sources['bexar-tx'].stopped, undefined);
+  // past its certify_by plus ten days: the stop stands
+  store = stopped();
+  out = await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [map], now: '2026-11-28T12:00:00.000Z', log: () => {} });
+  assert.equal(out.ran.length, 0);
+  assert.equal(JSON.parse(await store.get('sched:2026-11-03')).sources['bexar-tx'].stopped, 'past certification');
+  // an official stop always stands
+  store = memStore({ 'sched:2026-11-03': JSON.stringify({ sources: { 'bexar-tx': { stopped: 'official', next_due: null } }, meta: {} }) });
+  out = await runTick({ fetch: fakeFetch(good), store, archive: null, maps: [map], now: '2026-11-21T12:00:00.000Z', log: () => {} });
+  assert.equal(out.ran.length, 0);
+});
+
 test('tick: a refused source starts again when its map changes or a run by hand reads it fine, and only then', async () => {
   const map = mapFor('bexar-tx');
   const good = { '/127291/current_ver.txt': 'clarity-bexar.current_ver.txt', '/127291/379718/json/en/summary.json': 'clarity-bexar.summary.json', '/127291/379718/json/en/electionsettings.json': 'clarity-bexar.electionsettings.json' };

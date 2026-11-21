@@ -5,7 +5,9 @@
    POST /results/run?source={id}               run one source now (Authorization: Bearer RUN_TOKEN)
    POST /results/feed?source={id}[&end=1]      a read made on the Air, replayed and published here (Bearer FEED_TOKEN;
                                                src/relay.js, bin/feed.mjs); only AIR_SOURCES; 409 while the stop flag
-                                               is set; 412 when the Air's map isn't the deployed one */
+                                               is set; 412 when the Air's map isn't the deployed one. `end=1` is kept
+                                               for a stop by hand (the Air's reader no longer calls it, Nov 20); the
+                                               Air's next read lifts it. */
 import { runTick } from './tick.js';
 import { replayFetch, answersProblem, MAX_POST, AIR_SOURCES } from './relay.js';
 import { mapHash } from './fingerprint.js';

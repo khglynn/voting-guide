@@ -6,10 +6,17 @@
    A source whose items are all complete with its count window closed polls daily.
    Failures back off 1, 2, 5, 15, then 60 minutes (the plan said 2, 5, 15, 60; election night showed Clarity's blips
    come in runs, and a 15-minute wait cost Bexar's first post), after one retry inside the tick; `refused` stops the source until a person changes its map.
-   A source stops for good once official, or once `certify_by` plus three days passes with no change.
+   A source stops for good once official, or once `certify_by` plus ten days passes with no change. (Three days until
+   Nov 20: offices post certified numbers days after their deadline. Colorado's counties upload their canvass to the
+   state's results system by Nov 27, two days after the Nov 25 deadline; Boulder posted 2024's official results eight
+   days after it, and New York City posts its certified returns about Dec 2, four days after its own.)
    Added Nov 3 (builder): before the map's `polls_close` the next poll never lands later than the close, and after it a
    source with nothing posted yet is polled every minute, so the first numbers are read within a minute of posting. */
 import { localHour } from './util.js';
+
+export const CERTIFIED_AFTER_DAYS = 10;
+/* When a quiet source stops for good: its certify_by plus CERTIFIED_AFTER_DAYS (ms), or Infinity with no date. */
+export const certifiedStopAt = (map) => (map?.certify_by ? Date.parse(`${map.certify_by}T23:59:59Z`) + CERTIFIED_AFTER_DAYS * 86_400_000 : Infinity);
 
 const MIN = 60_000;
 const addMin = (iso, m) => new Date(Date.parse(iso) + m * MIN).toISOString();
@@ -56,7 +63,9 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   }
   // a good read (changed or not). A good read of a refused source (a run by hand) lifts the refusal, and a good run
   // by hand of a source the Air reads hands it back to the Worker (a read from the Air marks it again, tick.js markFed).
-  if (e.stopped === 'refused' || e.stopped === 'fed') { delete e.stopped; delete e.refused_hash; delete e.fed_at; }
+  // The Air's own stop ('fed, ended') lifts the same way: a new read from the Air means it reads that source again
+  // (Denver, Nov 19: ended after five quiet days, before its canvass).
+  if (e.stopped === 'refused' || e.stopped === 'fed' || e.stopped === 'fed, ended') { delete e.stopped; delete e.refused_hash; delete e.fed_at; }
   if (e.status === 'refused') delete e.status;
   e.fail_count = 0; delete e.failing_since; delete e.last_error;
   e.last_ok = now;
@@ -64,8 +73,7 @@ export function nextEntry(entry = {}, result, now, map = {}) {
   if (result.changed) { e.last_change = now; e.unchanged_polls = 0; } else e.unchanged_polls = (e.unchanged_polls || 0) + 1;
   if (e.status === 'official') { e.stopped = 'official'; e.next_due = null; return e; }
   if (map.certify_by && !result.changed) {
-    const stopAt = Date.parse(`${map.certify_by}T23:59:59Z`) + 3 * 24 * 60 * MIN;
-    if (Date.parse(now) > stopAt) { e.stopped = 'past certification'; e.next_due = null; return e; }
+    if (Date.parse(now) > certifiedStopAt(map)) { e.stopped = 'past certification'; e.next_due = null; return e; }
   }
   let wait;
   const quietFor = e.last_change ? (Date.parse(now) - Date.parse(e.last_change)) / MIN : Infinity;

@@ -50,6 +50,12 @@ export function isoDate(s) {
    these is dropped whole (overnight review, Nov 3). A date such as "11/4/2026" is not a count. */
 export const hasProgressCount = (t) => /(?<![\/\d])\b(?:\d[\d,]*|x)\s*(?:of|\/)\s*(?:\d[\d,]*|x)\b(?!\s*\/)/i.test(String(t || '')) || /\d\s*%/.test(String(t || ''));
 
+/* An office's own page calling its count official: a banner line that is "Official Results" (or "Official Canvass
+   Results", "Final Official Results", "Official Election Results"), never one with "unofficial" in it. Clarity's
+   Travis since Nov 10, Williamson and Jefferson since their canvasses (the final-upload flag stayed false on all of
+   them), and Denver's header once its canvass posts (its 2024 and 2025 lists ended with "Final Official Results"). */
+export const saysOfficial = (ls) => ls.some((t) => !/unofficial/i.test(t) && /^(?:final\s+)?official(?:\s+(?:final|canvass(?:ed)?|certified))?(?:\s+election)?\s+results?$/i.test(String(t).trim()));
+
 export const isWhole = (n) => Number.isInteger(n) && n >= 0;
 
 /* Percent of a total, two decimals, from unrounded counts. Zero total gives 0, never NaN. */

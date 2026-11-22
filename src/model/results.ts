@@ -3,7 +3,10 @@
    over the file in memory (`R`, which src/results.ts fills); nothing here fetches, and nothing from results is saved.
 
    The honesty rules (the workbench's claude-plans/2026-11-03-results/DESIGN.md, section 6) are built in:
-   1. Three status words: counting, unofficial (the source itself marked the count complete), official.
+   1. Three status words: counting, unofficial (the source itself marked the count complete), official. A fourth, last
+      posted count, once the office's certification date has passed and its page still never says official or
+      complete (Kevin, Nov 21: "51 yes"; Dallas and Bexar finished but kept "Unofficial Results"; NYC's page is election
+      night's for good). It names no winner, and the office's own Official or complete mark always wins over it.
    2. No outcome word ("Passed", "won") unless the file carries `final`, which the Worker sets only from the source's
       own complete or official mark. "won" is kept to the open row and the figure.
    3. Progress is the source's own words, quoted. We never compute a percent of precincts.
@@ -69,7 +72,24 @@ export function resultOf(it: Item): ItemResult | null {
   const r = R.file!.items[it.id];
   // A multi-judge row is one item in the guide and several questions on the ballot: the file has no single answer.
   if (!r || (it.kind === 'contest' && isMultiJudge(it))) return null;
-  return viewFor(it, r);
+  const v = viewFor(it, r);
+  return v ? settle(v) : v;
+}
+/* Past an office's certification date (the file's `certify_by`, against the page's own day, so ?today= checks it), a
+   count the office still calls neither official nor complete is its last posted count: never "counting" weeks on, never
+   "official" or a winner on our word. Not for an office we can't reach: its numbers are our last read, not its last post. */
+export function pastCert(id: string): boolean {
+  const s = R.file?.sources.find((x) => x.id === id);
+  return !!s && s.status === 'counting' && !sourceDown(s) && /^\d{4}-\d{2}-\d{2}$/.test(s.certify_by || '') && todayISO() > s.certify_by!;
+}
+/* A counting result (and each counting slice) whose offices are all past their dates becomes `posted`. A race across
+   counties settles only when every county's slice does and none is missing: one still counting keeps it counting. */
+export function settle(r: ItemResult): ItemResult {
+  const slices = r.slices?.map((s) => (s.status === 'counting' && pastCert(s.source) ? { ...s, status: 'posted' as const } : s));
+  const out = slices ? { ...r, slices } : r;
+  if (r.status !== 'counting') return out;
+  const ids = spans(r) ? ((r.missing || []).length ? [] : (r.slices || []).map((s) => s.source)) : [r.source];
+  return ids.length && ids.every(pastCert) ? { ...out, status: 'posted' } : out;
 }
 /* Still waiting on the first read of this state's file (nothing to say yet, not even "not posted"). */
 export const resultsWaiting = (): boolean => resultsMode() && !!(S.ballot!.howto.results?.sources || []).length
@@ -84,7 +104,7 @@ export const hasNumbers = (r: ItemResult | null): r is ItemResult => !!r && r.st
 export const isLink = (r: ItemResult | null): boolean => !!r && r.status === 'link_only';
 /* A race whose voters span counties: its numbers are one county's. */
 export const spans = (r: ItemResult): boolean => (r.slices || []).length > 1 || (r.missing || []).length > 0;
-export const statusWord = (s: ItemResult['status']): string => (s === 'complete' ? 'unofficial' : s === 'official' ? 'official' : s === 'counting' ? 'counting' : '');
+export const statusWord = (s: ItemResult['status']): string => (s === 'complete' ? 'unofficial' : s === 'official' ? 'official' : s === 'counting' ? 'counting' : s === 'posted' ? 'last posted count' : '');
 /* "Travis County" from a slice's "Travis". */
 export const countyLabel = (c: string): string => {
   const t = c.trim();
@@ -437,10 +457,21 @@ export interface ResOpen {
   unmatched: string[];
 }
 const isWriteIn = (it: Item, name: string): boolean => it.kind === 'contest' && !!it.candidates.find((k) => k.name === name && (k.parties.includes('Write-in') || /^write-?in$/i.test(k.party || '')));
-const WORD: Record<string, string> = { counting: 'Counting.', complete: 'Unofficial.', official: 'Official.' };
+const WORD: Record<string, string> = { counting: 'Counting.', complete: 'Unofficial.', official: 'Official.', posted: 'Last posted count.' };
+/* Why a count reads "Last posted count.", after whatever the open row says about it. */
+export const POSTED_WHY = 'The certification date has passed, but the office’s results page never marked this count official.';
+const POSTED_WHY_MANY = 'The certification dates have passed, but the offices’ results pages never marked these counts official.';
 export function resOpen(it: Item, r: ItemResult): ResOpen {
+  const o = openLines(it, r);
+  if (r.status === 'posted') o.line = `${o.line} ${spans(r) ? POSTED_WHY_MANY : POSTED_WHY}`.trim();
+  return o;
+}
+function openLines(it: Item, r: ItemResult): ResOpen {
   const word = WORD[r.status] || '';
   const county = shownCounty(r);
+  // Still moving, in the voter's words: "so far" while counting; a last posted count is done moving, so "in it".
+  const live = r.status === 'counting' || r.status === 'posted' || !!county;
+  const sf = r.status !== 'posted' ? ' so far' : county ? ' in its last posted count' : ' in it';
   // A race across counties speaks for one county's count only, and says so first (rule 9).
   const lead = county ? `In ${county}’s count, ` : '';
   const low = (t: string): string => (lead ? t.charAt(0).toLowerCase() + t.slice(1) : t);
@@ -456,11 +487,11 @@ export function resOpen(it: Item, r: ItemResult): ResOpen {
     const bar = !b ? ' Passing takes more than a share of yes and no. See the office’s results.' : !plainBar(b) ? ` It needs ${pct0(b.pct)} yes to ${judge ? 'stay' : 'pass'}.` : '';
     const Y = judge ? 'keep' : 'yes', N = judge ? 'remove' : 'no';
     // Against a bar above half, the sentence is about yes and its bar, never "no is ahead" while yes leads no.
-    const where = at === null ? `${Y} has ${pct0(y)} so far.`
-      : !plainBar(b) ? (at === 'at' ? `${Y} is right at the ${pct0(b!.pct)} it needs so far.` : at === 'yes' ? `${Y} is above the ${pct0(b!.pct)} it needs so far.` : `${Y} is short of the ${pct0(b!.pct)} it needs so far.`)
-      : at === 'at' ? `${Y} and ${N} are even so far.` : at === 'yes' ? `${Y} is ahead so far.` : `${N} is ahead so far.`;
+    const where = at === null ? `${Y} has ${pct0(y)}${sf}.`
+      : !plainBar(b) ? (at === 'at' ? `${Y} is right at the ${pct0(b!.pct)} it needs${sf}.` : at === 'yes' ? `${Y} is above the ${pct0(b!.pct)} it needs${sf}.` : `${Y} is short of the ${pct0(b!.pct)} it needs${sf}.`)
+      : at === 'at' ? `${Y} and ${N} are even${sf}.` : at === 'yes' ? `${Y} is ahead${sf}.` : `${N} is ahead${sf}.`;
     if (pass !== null && !county) out.line = `${judge ? (pass ? 'The judge stays.' : 'The judge does not stay.') : pass ? 'It passed.' : 'It did not pass.'}${b && !plainBar(b) ? ` It needed ${pct0(b.pct)} yes.` : ''}`;
-    else if (r.status === 'counting' || county) out.line = `${lead}${where}${b && !plainBar(b) ? '' : bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
+    else if (live) out.line = `${lead}${where}${b && !plainBar(b) ? '' : bar}`.replace(/^([a-z])/, (m) => m.toUpperCase());
     else out.line = `The office marks the count complete.${bar}`;
     return out;
   }
@@ -482,15 +513,15 @@ export function resOpen(it: Item, r: ItemResult): ResOpen {
     return out;
   }
   if (!w && unknownLead(r)) { out.line = `${lead}A name in the office’s count isn’t in this guide, so we don’t say who’s ahead. See the office’s results.`.replace(/^In (.*?), A/, 'In $1, a'); return out; }
-  if (blockVote(it) && top.length === 1) { out.line = `${lead}${shortOf(it, top[0].name)} has ${pct0(top[0].pct)} so far.`; return out; }
+  if (blockVote(it) && top.length === 1) { out.line = `${lead}${shortOf(it, top[0].name)} has ${pct0(top[0].pct)}${sf}.`; return out; }
   if (w && !county) { out.line = `${w.map((n) => shortOf(it, n)).join(', ').replace(/, ([^,]*)$/, ' and $1')} won.`; return out; }
   if (isMultiSeat(c)) {
     const n = r.seats || c.winners || c.vote_for;
-    out.line = `Fills ${n} seats. ${lead}${low(r.status === 'counting' || county ? `The top ${n} so far` : `The top ${n}`)}: ${cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', ')}.`;
+    out.line = `Fills ${n} seats. ${lead}${low(live ? `The top ${n}${sf}` : `The top ${n}`)}: ${cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', ')}.`;
     return out;
   }
-  if (top.length > 1) out.line = `${lead}${top.map((k) => shortOf(it, k.name)).join(' and ')} are tied${r.status === 'counting' || county ? ' so far' : ''}.`;
-  else if (r.status === 'counting' || county) out.line = `${lead}${shortOf(it, top[0].name)} is ahead so far.`;
+  if (top.length > 1) out.line = `${lead}${top.map((k) => shortOf(it, k.name)).join(' and ')} are tied${live ? sf : ''}.`;
+  else if (live) out.line = `${lead}${shortOf(it, top[0].name)} is ahead${sf}.`;
   else out.line = `${shortOf(it, top[0].name)} has the most votes. The office marks the count complete.`;
   return out;
 }
@@ -665,7 +696,8 @@ export function footInfo(): FootInfo | null {
   // The office's own time: its day whenever it isn't today where the polls are, and its zone whenever the viewer is in
   // another one, so an old update never reads as today's (PR #139 review). fitFoot never drops it.
   const at = m.updated ? footTime(m.updated) : '';
-  return { ...base, word: f.word, who: shortCounty(officeShort(m.id)), prog: p ? shortProgress(p) : '', progShort: p ? shortProgress(p, true) : '', at, down };
+  // The bar's one line is short: "Last posted" beside the office's own time says the rest.
+  return { ...base, word: f.word === 'Last posted counts' ? 'Last posted' : f.word, who: shortCounty(officeShort(m.id)), prog: p ? shortProgress(p) : '', progShort: p ? shortProgress(p, true) : '', at, down };
 }
 /* "Hide races I've decided" only before the close (Opus review, Nov 4): after it, every row carries its count, so the
    switch (still saved as it was) hides nothing. */
@@ -750,7 +782,7 @@ export const selName = (sel: CmpSel): string => (sel.kind === 'mine' ? 'Your pic
 export type DotKind = 'up' | 'down' | 'wq' | 'wp' | 'po' | 'w' | 'ln';
 export interface Dot { id: string; sec: SectionKey; pick: boolean; cmp: Cmp; kind: DotKind; posted: boolean; why: '' | 'rcv' | 'multi' | 'span' | 'main' | 'part' | 'tie' | 'rule' | 'edge' | 'partial' | 'unknown' | 'block' }
 export interface Figure {
-  word: 'Counting' | 'Unofficial' | 'Official';
+  word: 'Counting' | 'Unofficial' | 'Official' | 'Last posted counts';
   explain: string;
   rows: { sec: SectionKey; dots: Dot[] }[];
   picks: number;
@@ -773,7 +805,7 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   const rows: Figure['rows'] = [];
   const counts: Record<Cmp, number> = { won: 0, lost: 0, ahead: 0, behind: 0, nc: 0 };
   const why = new Set<string>();
-  let others = 0, posted = 0, total = 0, links = 0, pending = 0, done = 0, official = 0, splits = 0;
+  let others = 0, posted = 0, total = 0, links = 0, pending = 0, done = 0, official = 0, lastPosted = 0, splits = 0;
   const kinds = { races: 0, measures: 0 };
   let qn = 0; let first: string | null = null;
   for (const x of walk) {
@@ -790,7 +822,7 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
     // A row the file has nothing for is a link to its office now (noResCol), so it counts as one.
     const link = isLink(r) || (!r && !!officeFor(it));
     total++;
-    if (num) { posted++; if (r!.status === 'complete' || r!.status === 'official') done++; if (r!.status === 'official') official++; }
+    if (num) { posted++; if (r!.status === 'complete' || r!.status === 'official') done++; if (r!.status === 'official') official++; if (r!.status === 'posted') lastPosted++; }
     else if (link) links++;
     else pending++;
     let w: Dot['why'] = '';
@@ -815,10 +847,13 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   if (sel && Object.values(counts).some((n) => n > 0)) for (const row of rows) for (const d of row.dots) if (!d.pick) d.kind = 'po';
   // "Unofficial" and "Official" only when every race on the ballot has a count here marked so; a race that links out or
   // isn't in the file may still be counting (adversarial pass, Nov 3).
-  const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : 'Counting';
+  // "Last posted counts" when every race is settled and some only by its office's date passing (settle): never a word
+  // stronger than the weakest count on the ballot.
+  const word: Figure['word'] = total && done === total ? (official === total ? 'Official' : 'Unofficial') : total && done + lastPosted === total ? 'Last posted counts' : 'Counting';
   // One short sentence under the status word, and nothing else: offices and times are in the bar and the menu.
   const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Offices post as they count.')
-    : word === 'Counting' ? (done === posted ? 'These results are unofficial. Other races may still be counting.' : 'Offices are still counting. Numbers may change.')
+    : word === 'Counting' ? (done + lastPosted === posted ? 'These results are unofficial. Other races may still be counting.' : 'Offices are still counting. Numbers may change.')
+    : word === 'Last posted counts' ? 'These are the offices’ last posted counts. Their certification dates have passed, but not every office marked its count official.'
     : word === 'Unofficial' ? 'Offices marked their counts complete. They become official later.'
     : 'Offices made these counts official.';
   // Why a pick with numbers reads "can't tell yet", one short line each, only for what this ballot has.

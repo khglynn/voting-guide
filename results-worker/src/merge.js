@@ -2,7 +2,7 @@
    The file's shape is DIRECTION.md's `ResultsFile`; three fields are added: `total_votes` on an item or slice (every
    vote in that contest, matched or not, so percentages can be rechecked), `reason` on a link_only item ("not matched",
    "not checked yet", "election mismatch", "source refused us", "map out of date"), and on each source `checked`,
-   `next_due` and `failing_since`. Nothing here sums slices: a race whose voters span sources (its map entry's
+   `next_due`, `failing_since` and `certify_by`. Nothing here sums slices: a race whose voters span sources (its map entry's
    `reaches` names more than one county, or two sources carry it) keeps one slice per source, the largest on top.
    A county map may carry a statewide race as that county's slice (`statewide: true`, reaches [county, "other
    counties"], Nov 4): beneath the state's own count while the state source has numbers, and on its own, named by
@@ -157,6 +157,9 @@ export function buildStateFile({ state, maps, srcs, mode, now }) {
     if (labels.length) entry.labels = labels;
     if (rec?.read?.feed_version) entry.feed_version = rec.read.feed_version; // which Clarity or Enhanced Voting version the numbers are from
     if (rec?.read?.next_update) entry.next_update = rec.read.next_update; // the source's own next scheduled update (King County: Nov 4, 4 PM PT)
+    // The day the office must certify by (its map's, from state law): past it, a count the office never marks official
+    // or complete reads as its last posted count on the guide, never "counting" (Kevin, Nov 21: "51 yes").
+    if (/^\d{4}-\d{2}-\d{2}$/.test(map.certify_by || '')) entry.certify_by = map.certify_by;
     // A source read from the Air (src/relay.js) moves only when the Air posts, so its planned time isn't the Worker's to
     // keep: left out, the results watch never takes one missed Air read for a stopped Worker. The Air tells its own trouble.
     if (sched.next_due && !String(sched.stopped || '').startsWith('fed')) entry.next_due = sched.next_due;

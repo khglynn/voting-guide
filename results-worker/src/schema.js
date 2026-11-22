@@ -34,6 +34,7 @@ export function validateResultsFile(f) {
     if (!isStr(s.id) || !isStr(s.name) || !isStr(s.url)) out.push(`source ${s.id}: id, name or url missing`);
     if (!SRC_STATUS.includes(s.status)) out.push(`source ${s.id}: status ${s.status}`);
     if (!isIsoOrNull(s.updated) || !isIsoOrNull(s.fetched)) out.push(`source ${s.id}: a time is unreadable`);
+    if (s.certify_by !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(String(s.certify_by))) out.push(`source ${s.id}: certify_by ${s.certify_by} isn't a date`);
   }
   if (!f.items || typeof f.items !== 'object' || Array.isArray(f.items)) out.push('items is not an object');
   else for (const [id, x] of Object.entries(f.items)) {

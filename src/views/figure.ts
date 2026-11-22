@@ -154,8 +154,10 @@ function keyHTML(f: Figure): string {
   const c = f.counts;
   const two = (now: number, done: number, a: string, b: string): string => (now && done ? `${a} or ${b.toLowerCase()}` : done ? b : a);
   const mine = !!f.sel && f.sel.kind === 'mine';
+  // Last posted counts aren't moving any more, so a pick is ahead or behind in them, never "winning".
+  const settled = f.word === 'Last posted counts';
   const bits: [Dot['kind'], string][] = f.picks
-    ? [['up', two(c.ahead, c.won, 'Winning', 'Won')], ['down', two(c.behind, c.lost, 'Losing', 'Lost')], ['wq', 'Can’t tell yet'], ['wp', 'Not posted here'],
+    ? [['up', two(c.ahead, c.won, settled ? 'Ahead' : 'Winning', 'Won')], ['down', two(c.behind, c.lost, settled ? 'Behind' : 'Losing', 'Lost')], ['wq', 'Can’t tell yet'], ['wp', 'Not posted here'],
       ['po', mine ? 'You didn’t pick' : f.sel && f.sel.kind === 'party' ? 'No candidate' : 'No pick']]
     : [['po', 'Numbers posted'], ['w', 'No numbers yet'], ['ln', 'On the office’s site']];
   return `<p class="vz-key">${bits.filter(([k]) => has(k)).map(([k, t]) => `<span>${dot(k)}${esc(t)}</span>`).join('')}</p>`;

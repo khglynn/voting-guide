@@ -171,6 +171,13 @@ test('clarity: a banner that carries a progress count is dropped (Travis 0/201, 
   const read = { election: { date: '2026-11-03' }, source_updated: '2026-11-04T03:46:01.000Z', labels: ['Unofficial Results 0/201 Vote Centers Reporting'], contests: [] };
   const file = buildStateFile({ state: 'TX', maps: [map], srcs: { t: { record: { read, fetched: '2026-11-04T03:47:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T03:47:00.000Z' });
   assert.equal(file.sources[0].labels, undefined);
+  assert.equal(file.sources[0].certify_by, undefined, 'no date in the map, none in the file');
+  // The map's certification date goes out with the source (the guide's "last posted count", Nov 21).
+  const dated = buildStateFile({ state: 'TX', maps: [{ ...map, certify_by: '2026-11-17' }], srcs: { t: { record: { read, fetched: '2026-11-04T03:47:00.000Z' }, checked: true, sched: {} } }, mode: 'public', now: '2026-11-04T03:47:00.000Z' });
+  assert.equal(dated.sources[0].certify_by, '2026-11-17');
+  const { validateResultsFile } = await import('../src/schema.js');
+  assert.deepEqual(validateResultsFile(dated), []);
+  assert.match(validateResultsFile({ ...dated, sources: [{ ...dated.sources[0], certify_by: 'soon' }] }).join(' '), /certify_by soon/);
 });
 
 test('tx_sos: the SOS page parses; a race cut off mid-table (Nov 3, 8:58 PM) is dropped, never read as finished', async () => {

@@ -1858,6 +1858,43 @@ function roundTrip(name, stCode, places, mutate) {
     check('results column: an item the file doesn’t hold is the office’s page once the polls close, never the sources’ tally', col('tx-3rd-coa-chief') === 'Travis County results' && led.resColOf(st.S.ballot.byId.get('tx-3rd-coa-chief')).kind === 'link' && !/vd (agree|split|done)/.test(led.rowHTML(st.S.ballot.byId.get('tx-3rd-coa-chief'))));
     const ob = (id) => txt(op.resultsHTML(st.S.ballot.byId.get(id), rm.R.file.items[id]));
     check('results open row: counting says "is ahead so far", the table ticks your pick, the office’s time and words, its link', /^Counting\. Casar is ahead so far\./.test(ob('tx-us-house-37')) && /Peña .*Your pick/.test(ob('tx-us-house-37')) && /Travis County last posted 9:35 PM CT\. “128 of 186 vote centers reporting\.” Travis County results/.test(ob('tx-us-house-37')) && !/\bwon\b/.test(ob('tx-us-house-37')), ob('tx-us-house-37'));
+    {
+      // Kevin, Nov 21 ("51 yes"): once an office's certification date has passed and its page still never says
+      // official or complete (Dallas and Bexar finished but kept "Unofficial Results"; NYC's page is election night's),
+      // a race reads as its last posted count: no "counting" weeks on, no winner, and the office's own mark still wins.
+      const keepF = rm.R.file;
+      const dated = JSON.parse(JSON.stringify(keepF));
+      dated.sources = dated.sources.map((x) => (x.id === 'travis-tx' ? { ...x, certify_by: '2026-11-17' } : x));
+      rm.R.file = dated;
+      const before = col('tx-us-house-37');
+      at('?today=2026-11-17&now=12:00');
+      const onTheDay = col('tx-us-house-37');
+      at('?today=2026-11-21&now=12:00');
+      const v = rm.resultOf(st.S.ballot.byId.get('tx-us-house-37'));
+      const obp = txt(op.resultsHTML(st.S.ballot.byId.get('tx-us-house-37'), v));
+      check('results, past certification: a counting race reads "last posted count" in the column, the open row says why and names no winner; before or on the date it is still counting',
+        before === 'Casar 71% counting Your pick: Peña' && onTheDay === before && v.status === 'posted' && col('tx-us-house-37') === 'Casar 71% last posted count Your pick: Peña'
+        && /^Last posted count\. Casar is ahead in it\. The certification date has passed, but the office’s results page never marked this count official\./.test(obp) && !/\bwon\b|Official\./.test(obp), `${col('tx-us-house-37')} | ${obp.slice(0, 200)}`);
+      check('results, past certification: the office’s own complete or official mark still wins', col('tx-house-49') === 'Garibay 60% unofficial Your pick' && rm.resultOf(st.S.ballot.byId.get('tx-house-49')).status === 'complete', col('tx-house-49'));
+      check('results, past certification: a measure reads "in it", never "passed"', /^No 59% last posted count/.test(col('tx-austin-prop-c')) && /is ahead in it\./.test(txt(op.resultsHTML(st.S.ballot.byId.get('tx-austin-prop-c'), rm.resultOf(st.S.ballot.byId.get('tx-austin-prop-c'))))) , col('tx-austin-prop-c'));
+      const accOpen = () => txt(op.resultsHTML(st.S.ballot.byId.get('tx-acc-trustee-1'), rm.resultOf(st.S.ballot.byId.get('tx-acc-trustee-1'))));
+      const accOne = col('tx-acc-trustee-1'), accOneOpen = accOpen();
+      rm.R.file = { ...dated, sources: dated.sources.map((x) => (x.id === 'williamson-tx' ? { ...x, certify_by: '2026-11-17' } : x)) };
+      const accBoth = col('tx-acc-trustee-1'), accBothOpen = accOpen();
+      rm.R.file = dated;
+      check('results, past certification: a race across counties stays counting while one county’s date hasn’t passed; once both have, each slice keeps its own mark (Travis unofficial) and the counting one reads as its last posted count',
+        accOne === 'Walker 56% counting Travis votes only' && /Williamson County: [^.]*\(counting\)/.test(accOneOpen)
+        && accBoth === 'Walker 56% last posted count Travis votes only' && /Travis County: [^.]*\(unofficial\)/.test(accBothOpen) && /Williamson County: [^.]*\(last posted count\)/.test(accBothOpen) && /The certification dates have passed, but the offices’ results pages never marked these counts official\./.test(accBothOpen),
+        `${accOne} | ${accBoth} | ${accBothOpen.slice(0, 300)}`);
+      check('results, past certification: the figure never says more than its weakest race (links and counts still out keep it "Counting")', rm.figure().word === 'Counting', rm.figure().word);
+      // An office we can't reach: its numbers are our last read, not its last post, so it stays counting.
+      rm.R.file = { ...dated, sources: dated.sources.map((x) => (x.id === 'travis-tx' ? { ...x, failing_since: '2026-11-20T00:00:00Z' } : x)) };
+      check('results, past certification: never for an office we can’t reach', col('tx-us-house-37') === 'Casar 71% counting Your pick: Peña', col('tx-us-house-37'));
+      // A file can't claim the page's own word.
+      check('results, past certification: "posted" is the page’s word, never a file’s', !rm.readable({ ...tx, items: { x: { ...tx.items['tx-us-house-37'], status: 'posted' } } }, 'TX'));
+      rm.R.file = keepF;
+      at('?today=2026-11-03&now=21:42');
+    }
     check('results open row: "won" only with the file’s final', /^Unofficial\. Garibay won\./.test(ob('tx-house-49')) && /^Unofficial\. It passed\./.test(ob('tx-austin-prop-b')), ob('tx-house-49'));
     check('results open row: a race across counties: one county’s count, each slice with its own time, the county we don’t hold named', /^Counting\. In Travis County’s count, yes is ahead so far\./.test(ob('tx-austin-prop-a')) && /Travis County: Yes 56% \(counting\), last posted 9:35 PM CT/.test(ob('tx-austin-prop-a')) && /Williamson County: Yes 40%/.test(ob('tx-austin-prop-a')) && /Hays County: not in this guide’s results/.test(ob('tx-austin-prop-a')) && !/100,000|59,000/.test(ob('tx-austin-prop-a')), ob('tx-austin-prop-a'));
     check('results open row: unmatched says why in plain words, then the office’s page', /^Travis County lists this race under another name, so we link to its count instead\. Travis County results/.test(ob('tx-aisd-at-large-9')), ob('tx-aisd-at-large-9'));

@@ -1874,17 +1874,22 @@ function roundTrip(name, stCode, places, mutate) {
       const obp = txt(op.resultsHTML(st.S.ballot.byId.get('tx-us-house-37'), v));
       check('results, past certification: a counting race reads "last posted count" in the column, the open row says why and names no winner; before or on the date it is still counting',
         before === 'Casar 71% counting Your pick: Peña' && onTheDay === before && v.status === 'posted' && col('tx-us-house-37') === 'Casar 71% last posted count Your pick: Peña'
-        && /^Last posted count\. Casar is ahead in it\. The certification date has passed, but the office’s results page never marked this count official\./.test(obp) && !/\bwon\b|Official\./.test(obp), `${col('tx-us-house-37')} | ${obp.slice(0, 200)}`);
+        && /^Last posted count\. Casar is ahead in it\. The certification date has passed, and this guide hasn’t seen the office mark this count official\./.test(obp) && !/\bwon\b|Official\./.test(obp), `${col('tx-us-house-37')} | ${obp.slice(0, 200)}`);
       check('results, past certification: the office’s own complete or official mark still wins', col('tx-house-49') === 'Garibay 60% unofficial Your pick' && rm.resultOf(st.S.ballot.byId.get('tx-house-49')).status === 'complete', col('tx-house-49'));
       check('results, past certification: a measure reads "in it", never "passed"', /^No 59% last posted count/.test(col('tx-austin-prop-c')) && /is ahead in it\./.test(txt(op.resultsHTML(st.S.ballot.byId.get('tx-austin-prop-c'), rm.resultOf(st.S.ballot.byId.get('tx-austin-prop-c'))))) , col('tx-austin-prop-c'));
+      // A race across counties, as the fetcher writes it: an office's races share its status, so Travis finished is a
+      // Travis office marked complete (review, Nov 21: a county that finished must never hold the race back).
       const accOpen = () => txt(op.resultsHTML(st.S.ballot.byId.get('tx-acc-trustee-1'), rm.resultOf(st.S.ballot.byId.get('tx-acc-trustee-1'))));
+      const travisDone = (x) => (x.id === 'travis-tx' ? { ...x, status: 'complete' } : x);
+      rm.R.file = { ...dated, sources: dated.sources.map(travisDone) };
       const accOne = col('tx-acc-trustee-1'), accOneOpen = accOpen();
-      rm.R.file = { ...dated, sources: dated.sources.map((x) => (x.id === 'williamson-tx' ? { ...x, certify_by: '2026-11-17' } : x)) };
+      rm.R.file = { ...dated, sources: dated.sources.map((x) => travisDone(x.id === 'williamson-tx' ? { ...x, certify_by: '2026-11-17' } : x)) };
       const accBoth = col('tx-acc-trustee-1'), accBothOpen = accOpen();
       rm.R.file = dated;
-      check('results, past certification: a race across counties stays counting while one county’s date hasn’t passed; once both have, each slice keeps its own mark (Travis unofficial) and the counting one reads as its last posted count',
+      check('results, past certification: a race across counties stays counting while one county’s date hasn’t passed; once it has, the race settles though the other county already finished, and each slice keeps its own word',
         accOne === 'Walker 56% counting Travis votes only' && /Williamson County: [^.]*\(counting\)/.test(accOneOpen)
-        && accBoth === 'Walker 56% last posted count Travis votes only' && /Travis County: [^.]*\(unofficial\)/.test(accBothOpen) && /Williamson County: [^.]*\(last posted count\)/.test(accBothOpen) && /The certification dates have passed, but the offices’ results pages never marked these counts official\./.test(accBothOpen),
+        && accBoth === 'Walker 56% last posted count Travis votes only' && /Travis County: [^.]*\(unofficial\)/.test(accBothOpen) && /Williamson County: [^.]*\(last posted count\)/.test(accBothOpen)
+        && /^Last posted count\. In Travis County’s count, Walker is ahead\. The certification dates have passed, and this guide hasn’t seen the offices mark these counts official\./.test(accBothOpen),
         `${accOne} | ${accBoth} | ${accBothOpen.slice(0, 300)}`);
       check('results, past certification: the figure never says more than its weakest race (links and counts still out keep it "Counting")', rm.figure().word === 'Counting', rm.figure().word);
       // An office we can't reach: its numbers are our last read, not its last post, so it stays counting.

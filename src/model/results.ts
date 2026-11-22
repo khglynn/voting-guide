@@ -82,14 +82,19 @@ export function pastCert(id: string): boolean {
   const s = R.file?.sources.find((x) => x.id === id);
   return !!s && s.status === 'counting' && !sourceDown(s) && /^\d{4}-\d{2}-\d{2}$/.test(s.certify_by || '') && todayISO() > s.certify_by!;
 }
-/* A counting result (and each counting slice) whose offices are all past their dates becomes `posted`. A race across
-   counties settles only when every county's slice does and none is missing: one still counting keeps it counting. */
+/* A counting result (and each counting slice) whose office is past its date becomes `posted`. A race across counties
+   is judged by its counties' own words once mapped: settled when none is missing, every one is posted, complete or
+   official, and at least one is posted (a county that finished never holds back the others); one still counting, or
+   one with nothing posted, keeps it counting. */
+const SETTLED = new Set(['posted', 'complete', 'official']);
 export function settle(r: ItemResult): ItemResult {
   const slices = r.slices?.map((s) => (s.status === 'counting' && pastCert(s.source) ? { ...s, status: 'posted' as const } : s));
   const out = slices ? { ...r, slices } : r;
   if (r.status !== 'counting') return out;
-  const ids = spans(r) ? ((r.missing || []).length ? [] : (r.slices || []).map((s) => s.source)) : [r.source];
-  return ids.length && ids.every(pastCert) ? { ...out, status: 'posted' } : out;
+  if (!spans(r)) return pastCert(r.source) ? { ...out, status: 'posted' } : out;
+  const sl = slices || [];
+  const done = !(r.missing || []).length && sl.length > 0 && sl.every((s) => SETTLED.has(s.status)) && sl.some((s) => s.status === 'posted');
+  return done ? { ...out, status: 'posted' } : out;
 }
 /* Still waiting on the first read of this state's file (nothing to say yet, not even "not posted"). */
 export const resultsWaiting = (): boolean => resultsMode() && !!(S.ballot!.howto.results?.sources || []).length
@@ -458,9 +463,10 @@ export interface ResOpen {
 }
 const isWriteIn = (it: Item, name: string): boolean => it.kind === 'contest' && !!it.candidates.find((k) => k.name === name && (k.parties.includes('Write-in') || /^write-?in$/i.test(k.party || '')));
 const WORD: Record<string, string> = { counting: 'Counting.', complete: 'Unofficial.', official: 'Official.', posted: 'Last posted count.' };
-/* Why a count reads "Last posted count.", after whatever the open row says about it. */
-export const POSTED_WHY = 'The certification date has passed, but the office’s results page never marked this count official.';
-const POSTED_WHY_MANY = 'The certification dates have passed, but the offices’ results pages never marked these counts official.';
+/* Why a count reads "Last posted count.", after whatever the open row says about it: what this guide has seen, never a
+   claim about the office's page (several readers can't see an official mark at all: St. Louis County's file has none). */
+export const POSTED_WHY = 'The certification date has passed, and this guide hasn’t seen the office mark this count official.';
+const POSTED_WHY_MANY = 'The certification dates have passed, and this guide hasn’t seen the offices mark these counts official.';
 export function resOpen(it: Item, r: ItemResult): ResOpen {
   const o = openLines(it, r);
   if (r.status === 'posted') o.line = `${o.line} ${spans(r) ? POSTED_WHY_MANY : POSTED_WHY}`.trim();
@@ -471,7 +477,8 @@ function openLines(it: Item, r: ItemResult): ResOpen {
   const county = shownCounty(r);
   // Still moving, in the voter's words: "so far" while counting; a last posted count is done moving, so "in it".
   const live = r.status === 'counting' || r.status === 'posted' || !!county;
-  const sf = r.status !== 'posted' ? ' so far' : county ? ' in its last posted count' : ' in it';
+  // A county's last posted count is already named by the lead ("In Travis County’s count, "), so nothing more.
+  const sf = r.status !== 'posted' ? ' so far' : county ? '' : ' in it';
   // A race across counties speaks for one county's count only, and says so first (rule 9).
   const lead = county ? `In ${county}’s count, ` : '';
   const low = (t: string): string => (lead ? t.charAt(0).toLowerCase() + t.slice(1) : t);
@@ -517,7 +524,7 @@ function openLines(it: Item, r: ItemResult): ResOpen {
   if (w && !county) { out.line = `${w.map((n) => shortOf(it, n)).join(', ').replace(/, ([^,]*)$/, ' and $1')} won.`; return out; }
   if (isMultiSeat(c)) {
     const n = r.seats || c.winners || c.vote_for;
-    out.line = `Fills ${n} seats. ${lead}${low(live ? `The top ${n}${sf}` : `The top ${n}`)}: ${cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', ')}.`;
+    out.line = `Fills ${n} seats. ${lead}${low(live && r.status !== 'posted' ? `The top ${n}${sf}` : `The top ${n}`)}: ${cs.slice(0, n).map((k) => shortOf(it, k.name)).join(', ')}.`;
     return out;
   }
   if (top.length > 1) out.line = `${lead}${top.map((k) => shortOf(it, k.name)).join(' and ')} are tied${live ? sf : ''}.`;
@@ -853,7 +860,7 @@ export function figure(sel: CmpSel | null = cmpSel()): Figure | null {
   // One short sentence under the status word, and nothing else: offices and times are in the bar and the menu.
   const explain = !posted ? (links && !pending ? 'Results for these races are on the election offices’ own sites.' : 'No numbers posted yet. Offices post as they count.')
     : word === 'Counting' ? (done + lastPosted === posted ? 'These results are unofficial. Other races may still be counting.' : 'Offices are still counting. Numbers may change.')
-    : word === 'Last posted counts' ? 'These are the offices’ last posted counts. Their certification dates have passed, but not every office marked its count official.'
+    : word === 'Last posted counts' ? 'These are the offices’ last posted counts. Their certification dates have passed, and this guide hasn’t seen every office mark its count official.'
     : word === 'Unofficial' ? 'Offices marked their counts complete. They become official later.'
     : 'Offices made these counts official.';
   // Why a pick with numbers reads "can't tell yet", one short line each, only for what this ballot has.

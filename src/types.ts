@@ -434,8 +434,10 @@ export interface Index {
 /* ---------- election results (Nov 3, results Phase 1) ----------
    The results Worker's file for one state, read through the site's /results/ rewrite (src/results.ts): DIRECTION.md's
    `ResultsFile` in the workbench, plus the Worker's own additions (results-worker/src/merge.js): `total_votes`, a
-   link_only item's `reason`, and on each source `next_due`, `failing_since` and `note`. Nothing from it is ever saved. */
-export type ResultStatus = 'pending' | 'counting' | 'complete' | 'official' | 'link_only';
+   link_only item's `reason`, and on each source `next_due`, `failing_since`, `note` and `certify_by`. Nothing from it is
+   ever saved. `posted` is the page's own and never in a file (model/results.ts `settle`): a count still "counting" once
+   its office's certification date has passed, shown as the office's last posted count (Kevin, Nov 21). */
+export type ResultStatus = 'pending' | 'counting' | 'complete' | 'official' | 'link_only' | 'posted';
 export interface ResultCand { name: string; votes: number; pct: number }
 export interface ResultMeasure { yes: number; no: number; yes_pct: number; threshold?: number | null }
 export interface ResultSlice {
@@ -476,6 +478,9 @@ export interface ResultsSourceEntry {
   next_due?: string; failing_since?: string; note?: string; checked?: boolean;
   /* the source's own banner words, as it shows them ("Early Voting Totals Only", "Unofficial Results") */
   labels?: string[];
+  /* the day the office must certify by (YYYY-MM-DD, from state law): past it, a count it never marks official or
+     complete reads as its last posted count */
+  certify_by?: string;
 }
 export interface ResultsFile {
   election: string;

@@ -5,6 +5,7 @@
   "description": "The voting guide's results fetcher: a Cloudflare Worker that reads official results feeds on a one-minute cron and serves one file per state.",
   "scripts": {
     "test": "node --test 'test/*.test.mjs'",
+    "coverage": "mkdir -p coverage && node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info 'test/*.test.mjs'",
     "map-check": "node bin/map-check.mjs",
     "dev": "wrangler dev --test-scheduled"
   },

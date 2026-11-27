@@ -9,3 +9,4 @@ shots/*.pdf
 .env*
 results-worker/.wrangler/
 results-worker/.local/
+results-worker/coverage/
